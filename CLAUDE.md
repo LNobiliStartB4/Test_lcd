@@ -1,0 +1,2 @@
+Il template fatto da raver per la scheda nucleo C è al percorso C:\TouchGFXProjects\Prova_display. Gli schematici della nucleo C e della mia nucleo F4O1RE sono ai percorsi: "C:\Users\Lorenzo Nobili\Downloads\schema_elettrico_F401RE.pdf" e "C:\Users\Lorenzo Nobili\Downloads\mb2046-c092rc-b03-schematic.pdf". 
+Verifica sempre i risultati di quello che hai fatto alla fine, ricordati che io compilo da stm32ide. 

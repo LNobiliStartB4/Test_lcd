@@ -1,0 +1,17 @@
+../Core/Src/RVA15MD_DisplayDriver.c:27:6:setVSYNC	1
+../Core/Src/RVA15MD_DisplayDriver.c:28:6:clearVSYNC	1
+../Core/Src/RVA15MD_DisplayDriver.c:34:13:SPI_SetDataWidth16	2
+../Core/Src/RVA15MD_DisplayDriver.c:43:13:SPI_SetDataWidth8	2
+../Core/Src/RVA15MD_DisplayDriver.c:55:13:DisplaySendCommandDataArray	3
+../Core/Src/RVA15MD_DisplayDriver.c:68:13:DisplaySendCommand	1
+../Core/Src/RVA15MD_DisplayDriver.c:73:13:DisplaySendCommandData	1
+../Core/Src/RVA15MD_DisplayDriver.c:81:6:DisplayDriver_DisplayOn	1
+../Core/Src/RVA15MD_DisplayDriver.c:87:6:Display_OFF	1
+../Core/Src/RVA15MD_DisplayDriver.c:93:6:Display_Set_Area	5
+../Core/Src/RVA15MD_DisplayDriver.c:124:6:DisplayDriver_DisplayInit	1
+../Core/Src/RVA15MD_DisplayDriver.c:172:6:DisplayDriver_DisplayReset	1
+../Core/Src/RVA15MD_DisplayDriver.c:180:6:DisplayDriver_Init	1
+../Core/Src/RVA15MD_DisplayDriver.c:186:5:touchgfxDisplayDriverTransmitActive	1
+../Core/Src/RVA15MD_DisplayDriver.c:191:6:touchgfxDisplayDriverTransmitBlock	1
+../Core/Src/RVA15MD_DisplayDriver.c:219:6:DisplayDriver_DMACallback	1
+../Core/Src/RVA15MD_DisplayDriver.c:224:5:touchgfxDisplayDriverShouldTransferBlock	1
