@@ -94,6 +94,13 @@ SECTIONS
     . = ALIGN(4);
   } >FLASH
 
+  IntFlashSection :
+  {
+    . = ALIGN(4);
+    KEEP(*(IntFlashSection))
+    . = ALIGN(4);
+  } >FLASH
+
   FontFlashSection :
   {
     . = ALIGN(4);

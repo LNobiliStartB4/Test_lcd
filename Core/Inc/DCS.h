@@ -16,20 +16,20 @@
 #define DCS_ENTER_INVERT_MODE   0x21
 #define DCS_EXIT_INVERT_MODE    0x20
 
-/* ST7789 specific commands */
-#define DCS_PORCH_SETTING       0xB2
-#define DCS_GATE_CONTROL        0xB7
-#define DCS_VCOMS_SETTING       0xBB
-#define DCS_LCM_CONTROL         0xC0
-#define DCS_VRH_COMMAND_ENABLE  0xC2
-#define DCS_VRH_SET             0xC3
-#define DCS_FRAME_RATE_CONTROL  0xC6
-#define DCS_POWER_CONTROL_1     0xD0
-#define DCS_POSITIVE_GAMMA      0xE0
-#define DCS_NEGATIVE_GAMMA      0xE1
+/* ILI9488 specific commands */
+#define ILI9488_INTERFACE_MODE  0xB0
+#define ILI9488_FRAME_RATE      0xB1
+#define ILI9488_DISPLAY_FUNC    0xB6
+#define ILI9488_POWER_CTRL1     0xC0
+#define ILI9488_POWER_CTRL2     0xC1
+#define ILI9488_VCOM_CTRL       0xC5
+#define ILI9488_IMAGE_FUNC      0xE9
+#define ILI9488_ADJUST_CTRL3    0xF7
+#define ILI9488_POSITIVE_GAMMA  0xE0
+#define ILI9488_NEGATIVE_GAMMA  0xE1
 
 /* Display dimensions */
-#define DCS_DISPLAY_WIDTH       240
-#define DCS_DISPLAY_HEIGHT      240
+#define DCS_DISPLAY_WIDTH       320
+#define DCS_DISPLAY_HEIGHT      480
 
 #endif /* DCS_H */

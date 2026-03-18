@@ -21,6 +21,8 @@
 /* USER CODE END Header */
 
 #include <TouchGFXHAL.hpp>
+#include <platform/driver/lcd/LCD16bpp.hpp>
+#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 
 /* USER CODE BEGIN TouchGFXHAL.cpp */
 
@@ -38,8 +40,6 @@ using namespace touchgfx;
  *  E.g. if using DMA to transfer the block, this could be called in the "Transfer Completed" interrupt handler.
  *
  */
-#warning "A user must call touchgfx::startNewTransfer(); once touchgfxDisplayDriverTransmitBlock() has succesfully sent a block."
-#warning "A user must implement C-methods touchgfxDisplayDriverTransmitActive() and touchgfxDisplayDriverTransmitBlock() used by the Partial Framebuffer Strategy."
 
 void TouchGFXHAL::initialize()
 {
@@ -50,6 +50,13 @@ void TouchGFXHAL::initialize()
     // Please note, HAL::initialize() must be called to initialize the framework.
 
     TouchGFXGeneratedHAL::initialize();
+
+    /* Enable TextureMapper rendering for ARGB8888 images (needed for Gauge needle) */
+    static_cast<LCD16bpp&>(HAL::lcd()).enableTextureMapperARGB8888();
+
+    /* Canvas widget rendering buffer (needed for Circle gauge arcs) */
+    static uint8_t canvasBuffer[6000];
+    touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, sizeof(canvasBuffer));
 }
 
 /**

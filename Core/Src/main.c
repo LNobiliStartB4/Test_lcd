@@ -43,6 +43,8 @@
 /* Private variables ---------------------------------------------------------*/
 CRC_HandleTypeDef hcrc;
 
+I2C_HandleTypeDef hi2c1;
+
 SPI_HandleTypeDef hspi1;
 
 TIM_HandleTypeDef htim11;
@@ -50,13 +52,14 @@ TIM_HandleTypeDef htim11;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
+DMA_HandleTypeDef hdma_spi1_tx;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_CRC_Init(void);
+static void MX_I2C1_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_TIM11_Init(void);
 static void MX_USART2_UART_Init(void);
@@ -99,19 +102,49 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_CRC_Init();
+  MX_I2C1_Init();
   MX_SPI1_Init();
   MX_TIM11_Init();
   MX_USART2_UART_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
-  /* Initialize and reset the display before TouchGFX starts */
+
+  /* Display init sequence: Reset → Init → DisplayInit → DisplayOn */
   DisplayDriver_DisplayReset();
   DisplayDriver_Init();
   DisplayDriver_DisplayInit();
   DisplayDriver_DisplayOn();
 
-  /* Start TIM11 interrupt for VSync (~60 Hz).
-   * Was in USER CODE BEGIN TouchGFX_Start but CubeMX removed that section. */
+  /* --- TEST: Fill entire screen with RED --- */
+  {
+    Display_Set_Area(0, 0, 319, 479);
+
+    /* Send RAMWR command */
+    HAL_GPIO_WritePin(DISP_CS_GPIO_Port, DISP_CS_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(DISP_DC_GPIO_Port, DISP_DC_Pin, GPIO_PIN_RESET);
+    uint8_t cmd = 0x2C; /* RAMWR */
+    HAL_SPI_Transmit(&hspi1, &cmd, 1, HAL_MAX_DELAY);
+    HAL_GPIO_WritePin(DISP_DC_GPIO_Port, DISP_DC_Pin, GPIO_PIN_SET);
+
+    /* Test RGB666: green pure {0x00, 0xFF, 0x00} — 3 bytes/pixel */
+    uint8_t line_buf[960]; /* 320 pixels * 3 bytes */
+    for (uint32_t i = 0; i < 320; i++)
+    {
+      line_buf[i * 3 + 0] = 0xFF; /* Red */
+      line_buf[i * 3 + 1] = 0x00;
+      line_buf[i * 3 + 2] = 0x00;
+    }
+    for (uint32_t line = 0; line < 480; line++)
+    {
+      HAL_SPI_Transmit(&hspi1, line_buf, 960, HAL_MAX_DELAY);
+    }
+
+    HAL_GPIO_WritePin(DISP_CS_GPIO_Port, DISP_CS_Pin, GPIO_PIN_SET);
+  }
+
+  while(1); /* Stop here to see red screen — remove after test */
+
+  /* Start TIM11 interrupt for VSync (~60 Hz). Must be AFTER MX_TouchGFX_Init(). */
   HAL_TIM_Base_Start_IT(&htim11);
   /* USER CODE END 2 */
 
@@ -200,6 +233,40 @@ static void MX_CRC_Init(void)
 }
 
 /**
+  * @brief I2C1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C1_Init(void)
+{
+
+  /* USER CODE BEGIN I2C1_Init 0 */
+
+  /* USER CODE END I2C1_Init 0 */
+
+  /* USER CODE BEGIN I2C1_Init 1 */
+
+  /* USER CODE END I2C1_Init 1 */
+  hi2c1.Instance = I2C1;
+  hi2c1.Init.ClockSpeed = 400000;
+  hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
+  hi2c1.Init.OwnAddress1 = 0;
+  hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c1.Init.OwnAddress2 = 0;
+  hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C1_Init 2 */
+
+  /* USER CODE END I2C1_Init 2 */
+
+}
+
+/**
   * @brief SPI1 Initialization Function
   * @param None
   * @retval None
@@ -232,9 +299,11 @@ static void MX_SPI1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN SPI1_Init 2 */
-  /* Override prescaler: 84MHz / 8 = 10.5MHz (ST7789 max ~15-20MHz) */
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
-  HAL_SPI_Init(&hspi1);
+  /* Override prescaler to /16 = 5.25MHz (safe for breadboard wiring) */
+  __HAL_SPI_DISABLE(&hspi1);
+  MODIFY_REG(hspi1.Instance->CR1, SPI_CR1_BR_Msk, SPI_BAUDRATEPRESCALER_16);
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
+  __HAL_SPI_ENABLE(&hspi1);
   /* USER CODE END SPI1_Init 2 */
 
 }
@@ -257,7 +326,7 @@ static void MX_TIM11_Init(void)
   htim11.Instance = TIM11;
   htim11.Init.Prescaler = 8399;
   htim11.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim11.Init.Period = 65535;
+  htim11.Init.Period = 165;
   htim11.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim11.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim11) != HAL_OK)
@@ -325,10 +394,16 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOA, DISP_RST_Pin|DISP_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, DISP_DC_Pin|DISP_CSB6_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LCD_BACKLIGHT_GPIO_Port, LCD_BACKLIGHT_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(DISP_DCC7_GPIO_Port, DISP_DCC7_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(DISP_DC_GPIO_Port, DISP_DC_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(TOUCH_RST_GPIO_Port, TOUCH_RST_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin | LED2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
@@ -336,51 +411,59 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : DISP_RST_Pin */
+  /*Configure GPIO pin : DISP_RST_Pin (PA1) */
   GPIO_InitStruct.Pin = DISP_RST_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(DISP_RST_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : DISP_DC_Pin */
-  GPIO_InitStruct.Pin = DISP_DC_Pin;
+  /*Configure GPIO pin : LCD_BACKLIGHT_Pin (PA8) */
+  GPIO_InitStruct.Pin = LCD_BACKLIGHT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(DISP_DC_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(LCD_BACKLIGHT_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : DISP_DCC7_Pin */
-  GPIO_InitStruct.Pin = DISP_DCC7_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  HAL_GPIO_Init(DISP_DCC7_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : DISP_CS_Pin */
+  /*Configure GPIO pin : DISP_CS_Pin (PA9) */
   GPIO_InitStruct.Pin = DISP_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(DISP_CS_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : DISP_CSB6_Pin */
-  GPIO_InitStruct.Pin = DISP_CSB6_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  HAL_GPIO_Init(DISP_CSB6_GPIO_Port, &GPIO_InitStruct);
-
-  /* USER CODE BEGIN MX_GPIO_Init_2 */
-  /* PB4 (Arduino D5) = LCD backlight control.
-   * The template (C092RC) sets this HIGH at startup to enable the backlight. */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_SET);
-  GPIO_InitStruct.Pin = GPIO_PIN_4;
+  /*Configure GPIO pin : TOUCH_RST_Pin (PB5) */
+  GPIO_InitStruct.Pin = TOUCH_RST_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_Init(TOUCH_RST_GPIO_Port, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : DISP_DC_Pin (PB10) */
+  GPIO_InitStruct.Pin = DISP_DC_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(DISP_DC_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : LED_Pin (PC8) and LED2_Pin (PC6) */
+  GPIO_InitStruct.Pin = LED_Pin | LED2_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
+  HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : TOUCH_IRQ_Pin (PA10) */
+  GPIO_InitStruct.Pin = TOUCH_IRQ_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(TOUCH_IRQ_GPIO_Port, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 1, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
   /* Deselect display (CS idle = HIGH) */
   HAL_GPIO_WritePin(DISP_CS_GPIO_Port, DISP_CS_Pin, GPIO_PIN_SET);
   /* USER CODE END MX_GPIO_Init_2 */

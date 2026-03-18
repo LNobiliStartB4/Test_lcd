@@ -53,32 +53,38 @@ extern "C" {
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+extern DMA_HandleTypeDef hdma_spi1_tx;
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
 #define B1_Pin GPIO_PIN_13
 #define B1_GPIO_Port GPIOC
+#define B1_EXTI_IRQn EXTI15_10_IRQn
 #define DISP_RST_Pin GPIO_PIN_1
 #define DISP_RST_GPIO_Port GPIOA
 #define USART_TX_Pin GPIO_PIN_2
 #define USART_TX_GPIO_Port GPIOA
 #define USART_RX_Pin GPIO_PIN_3
 #define USART_RX_GPIO_Port GPIOA
-#define DISP_DC_Pin GPIO_PIN_10
-#define DISP_DC_GPIO_Port GPIOB
-#define DISP_DCC7_Pin GPIO_PIN_7
-#define DISP_DCC7_GPIO_Port GPIOC
+#define LCD_BACKLIGHT_Pin GPIO_PIN_8
+#define LCD_BACKLIGHT_GPIO_Port GPIOA
 #define DISP_CS_Pin GPIO_PIN_9
 #define DISP_CS_GPIO_Port GPIOA
+#define TOUCH_IRQ_Pin GPIO_PIN_10
+#define TOUCH_IRQ_GPIO_Port GPIOA
+#define TOUCH_IRQ_EXTI_IRQn EXTI15_10_IRQn
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
-#define SWO_Pin GPIO_PIN_3
-#define SWO_GPIO_Port GPIOB
-#define DISP_CSB6_Pin GPIO_PIN_6
-#define DISP_CSB6_GPIO_Port GPIOB
+#define TOUCH_RST_Pin GPIO_PIN_5
+#define TOUCH_RST_GPIO_Port GPIOB
+#define DISP_DC_Pin GPIO_PIN_10
+#define DISP_DC_GPIO_Port GPIOB
+#define LED_Pin GPIO_PIN_8
+#define LED_GPIO_Port GPIOC
+#define LED2_Pin GPIO_PIN_6
+#define LED2_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
 

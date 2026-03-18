@@ -213,7 +213,31 @@ void TIM1_TRG_COM_TIM11_IRQHandler(void)
   /* USER CODE END TIM1_TRG_COM_TIM11_IRQn 1 */
 }
 
+/**
+  * @brief This function handles EXTI line[15:10] interrupts.
+  */
+void EXTI15_10_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI15_10_IRQn 0 */
+
+  /* USER CODE END EXTI15_10_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(TOUCH_IRQ_Pin);
+  HAL_GPIO_EXTI_IRQHandler(B1_Pin);
+  /* USER CODE BEGIN EXTI15_10_IRQn 1 */
+
+  /* USER CODE END EXTI15_10_IRQn 1 */
+}
+
 /* USER CODE BEGIN 1 */
+/**
+  * @brief DMA2 Stream3 IRQ handler - SPI1 TX DMA transfer complete.
+  */
+extern DMA_HandleTypeDef hdma_spi1_tx;
+void DMA2_Stream3_IRQHandler(void)
+{
+    HAL_DMA_IRQHandler(&hdma_spi1_tx);
+}
+
 /**
   * @brief TIM11 period-elapsed callback - drives TouchGFX VSync at ~60 Hz.
   */
@@ -222,6 +246,18 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     if (htim->Instance == TIM11)
     {
         touchgfxSignalVSync();
+    }
+}
+
+/**
+  * @brief GPIO EXTI callback - sets newTouch flag for touch controller.
+  */
+extern volatile uint32_t newTouch;
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    if (GPIO_Pin == TOUCH_IRQ_Pin)
+    {
+        newTouch = 1;
     }
 }
 /* USER CODE END 1 */

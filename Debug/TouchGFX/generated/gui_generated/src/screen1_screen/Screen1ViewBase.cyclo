@@ -1,6 +1,5 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:91:5:touchgfx::colortype::colortype(uint32_t)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:127:5:touchgfx::Rect::Rect()	1
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:136:5:touchgfx::Bitmap::Bitmap(touchgfx::BitmapId)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:62:13:touchgfx::Drawable::~Drawable()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:62:13:virtual touchgfx::Drawable::~Drawable()	1
@@ -39,15 +38,12 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:virtual touchgfx::Widget::~Widget()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:62:10:void touchgfx::Box::setColor(touchgfx::colortype)	1
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen1Presenter>::~View()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen1Presenter>::~View()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:touchgfx::Box::~Box()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:virtual touchgfx::Box::~Box()	1
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:touchgfx::Image::~Image()	1
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:38:7:virtual touchgfx::Image::~Image()	1
-../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:8:1:Screen1ViewBase::Screen1ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:19:1:Screen1ViewBase::~Screen1ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:19:1:virtual Screen1ViewBase::~Screen1ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:24:6:virtual void Screen1ViewBase::setupScreen()	1
+../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:7:1:Screen1ViewBase::Screen1ViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:14:1:Screen1ViewBase::~Screen1ViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:14:1:virtual Screen1ViewBase::~Screen1ViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:19:6:virtual void Screen1ViewBase::setupScreen()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = Screen1Presenter]	1

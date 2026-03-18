@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell.exe -NoProfile -Command 'Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"\"c:\\\\Progetti_display\\\\Display_test\\\\TouchGFX\\\\assets\\\\images\\\\__generated\\\\alternate_theme_images_widgets_swipecontainer_large_on_action.png\"\"\\); Write-Host \"\"$\\($img.Width\\) x $\\($img.Height\\)\"\"')"
+    ]
+  }
+}

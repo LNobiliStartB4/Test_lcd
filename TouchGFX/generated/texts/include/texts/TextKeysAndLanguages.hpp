@@ -12,6 +12,9 @@ enum LANGUAGES
 
 enum TEXTS
 {
+    T___SINGLEUSE_I9XK,
+    T_GAUGEVALUE,
+    T_DEMOLABEL,
     NUMBER_OF_TEXT_KEYS
 };
 

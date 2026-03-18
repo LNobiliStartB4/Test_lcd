@@ -23,27 +23,37 @@
 /* USER CODE BEGIN STM32TouchController */
 
 #include <STM32TouchController.hpp>
+#include "main.h"
+
+volatile uint32_t newTouch = 0;
+extern "C" I2C_HandleTypeDef hi2c1;
 
 void STM32TouchController::init()
 {
-    /**
-     * Initialize touch controller and driver
-     *
-     */
+    HAL_GPIO_WritePin(TOUCH_RST_GPIO_Port, TOUCH_RST_Pin, GPIO_PIN_RESET);
+    HAL_Delay(10);
+    HAL_GPIO_WritePin(TOUCH_RST_GPIO_Port, TOUCH_RST_Pin, GPIO_PIN_SET);
+    HAL_Delay(10);
 }
 
 bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
 {
-    /**
-     * By default sampleTouch returns false,
-     * return true if a touch has been detected, otherwise false.
-     *
-     * Coordinates are passed to the caller by reference by x and y.
-     *
-     * This function is called by the TouchGFX framework.
-     * By default sampleTouch is called every tick, this can be adjusted by HAL::setTouchSampleRate(int8_t);
-     *
-     */
+    if (newTouch)
+    {
+        HAL_StatusTypeDef status;
+        uint8_t rx_buf[5];
+
+        newTouch = 0;
+
+        /* read x/y coordinates from touch controller (I2C addr 0x83 = 0x41 << 1 | 1) */
+        status = HAL_I2C_Master_Receive(&hi2c1, 0x83, rx_buf, sizeof(rx_buf), 10);
+        if (status == HAL_OK)
+        {
+            x = rx_buf[2];
+            y = rx_buf[4];
+            return true;
+        }
+    }
     return false;
 }
 
