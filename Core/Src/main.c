@@ -115,35 +115,6 @@ int main(void)
   DisplayDriver_DisplayInit();
   DisplayDriver_DisplayOn();
 
-  /* --- TEST: Fill entire screen with RED --- */
-  {
-    Display_Set_Area(0, 0, 319, 479);
-
-    /* Send RAMWR command */
-    HAL_GPIO_WritePin(DISP_CS_GPIO_Port, DISP_CS_Pin, GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(DISP_DC_GPIO_Port, DISP_DC_Pin, GPIO_PIN_RESET);
-    uint8_t cmd = 0x2C; /* RAMWR */
-    HAL_SPI_Transmit(&hspi1, &cmd, 1, HAL_MAX_DELAY);
-    HAL_GPIO_WritePin(DISP_DC_GPIO_Port, DISP_DC_Pin, GPIO_PIN_SET);
-
-    /* Test RGB666: green pure {0x00, 0xFF, 0x00} — 3 bytes/pixel */
-    uint8_t line_buf[960]; /* 320 pixels * 3 bytes */
-    for (uint32_t i = 0; i < 320; i++)
-    {
-      line_buf[i * 3 + 0] = 0xFF; /* Red */
-      line_buf[i * 3 + 1] = 0x00;
-      line_buf[i * 3 + 2] = 0x00;
-    }
-    for (uint32_t line = 0; line < 480; line++)
-    {
-      HAL_SPI_Transmit(&hspi1, line_buf, 960, HAL_MAX_DELAY);
-    }
-
-    HAL_GPIO_WritePin(DISP_CS_GPIO_Port, DISP_CS_Pin, GPIO_PIN_SET);
-  }
-
-  while(1); /* Stop here to see red screen — remove after test */
-
   /* Start TIM11 interrupt for VSync (~60 Hz). Must be AFTER MX_TouchGFX_Init(). */
   HAL_TIM_Base_Start_IT(&htim11);
   /* USER CODE END 2 */

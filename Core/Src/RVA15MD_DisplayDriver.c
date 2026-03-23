@@ -130,8 +130,8 @@ void DisplayDriver_DisplayInit(void)
     /* Pixel format: 18-bit (RGB666) for SPI interface */
     DisplaySendCommandData(DCS_SET_PIXEL_FORMAT, 0x66);
 
-    /* Memory access control: normal orientation, BGR order */
-    DisplaySendCommandData(DCS_SET_ADDRESS_MODE, 0x48);
+    /* Memory access control: landscape mapping validated during display bring-up */
+    DisplaySendCommandData(DCS_SET_ADDRESS_MODE, 0x28);
 
     /* ILI9488 requires invert mode ON for correct colors */
     DisplaySendCommand(DCS_ENTER_INVERT_MODE);

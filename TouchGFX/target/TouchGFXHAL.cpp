@@ -22,41 +22,213 @@
 
 #include <TouchGFXHAL.hpp>
 #include <platform/driver/lcd/LCD16bpp.hpp>
-#include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
+#include <touchgfx/hal/OSWrappers.hpp>
+#include "RVA15MD_DisplayDriver.h"
 
 /* USER CODE BEGIN TouchGFXHAL.cpp */
 
 using namespace touchgfx;
 
-/* ******************************************************
- * Functions required by Partial Frame Buffer Strategy
- * ******************************************************
- *
- *  int touchgfxDisplayDriverTransmitActive() must return whether or not data is currently being transmitted, over e.g. SPI.
- *  void touchgfxDisplayDriverTransmitBlock(const uint8_t* pixels, uint16_t x, uint16_t y, uint16_t w, uint16_t h) will be called
- *  when the framework wants to send a block. The user must then transfer the data represented by the arguments.
- *
- *  A user must call touchgfx::startNewTransfer(); once touchgfxDisplayDriverTransmitBlock() has successfully sent a block.
- *  E.g. if using DMA to transfer the block, this could be called in the "Transfer Completed" interrupt handler.
- *
- */
+namespace
+{
+void kickTransferFromTask();
+void startNextTransfer();
+
+template <uint32_t blockSize, uint32_t blockCount, uint32_t bytesPerPixel>
+class DmaManyBlockAllocator : public touchgfx::FrameBufferAllocator
+{
+public:
+    DmaManyBlockAllocator()
+        : sendingBlock(-1),
+          drawingBlock(-1)
+    {
+        for (uint32_t i = 0; i < blockCount; i++)
+        {
+            state[i] = EMPTY;
+        }
+    }
+
+    virtual uint16_t allocateBlock(const uint16_t x, const uint16_t y, const uint16_t width, const uint16_t height, uint8_t** block)
+    {
+        int index = findNextBlockAfter(drawingBlock, EMPTY);
+
+        while (index < 0)
+        {
+            kickTransferFromTask();
+            touchgfx::OSWrappers::taskYield();
+            index = findNextBlockAfter(drawingBlock, EMPTY);
+        }
+
+        drawingBlock = index;
+        state[index] = ALLOCATED;
+
+        const uint32_t stride = static_cast<uint32_t>(width) * bytesPerPixel;
+        const uint16_t lines = (stride == 0U) ? 0U : static_cast<uint16_t>(blockSize / stride);
+
+        *block = reinterpret_cast<uint8_t*>(&memory[index][0]);
+        blockRect[index].x = x;
+        blockRect[index].y = y;
+        blockRect[index].width = width;
+        blockRect[index].height = (height < lines) ? height : lines;
+
+        return blockRect[index].height;
+    }
+
+    virtual void markBlockReadyForTransfer()
+    {
+        if (drawingBlock >= 0 && state[drawingBlock] == ALLOCATED)
+        {
+            state[drawingBlock] = DRAWN;
+        }
+    }
+
+    virtual bool hasBlockReadyForTransfer()
+    {
+        return findNextBlockWithState(DRAWN) >= 0;
+    }
+
+    virtual const uint8_t* getBlockForTransfer(Rect& rect)
+    {
+        int index = findNextBlockAfter(sendingBlock, DRAWN);
+
+        if (index < 0)
+        {
+            return 0;
+        }
+
+        sendingBlock = index;
+        rect = blockRect[index];
+        state[index] = SENDING;
+
+        return reinterpret_cast<const uint8_t*>(&memory[index][0]);
+    }
+
+    virtual const Rect& peekBlockForTransfer()
+    {
+        int index = findNextBlockAfter(sendingBlock, DRAWN);
+        return (index >= 0) ? blockRect[index] : emptyRect;
+    }
+
+    virtual bool hasEmptyBlock()
+    {
+        return findNextBlockWithState(EMPTY) >= 0;
+    }
+
+    virtual void freeBlockAfterTransfer()
+    {
+        if (sendingBlock >= 0 && state[sendingBlock] == SENDING)
+        {
+            state[sendingBlock] = EMPTY;
+        }
+    }
+
+private:
+    int findNextBlockWithState(BlockState desiredState) const
+    {
+        for (uint32_t i = 0; i < blockCount; i++)
+        {
+            if (state[i] == desiredState)
+            {
+                return static_cast<int>(i);
+            }
+        }
+
+        return -1;
+    }
+
+    int findNextBlockAfter(int startIndex, BlockState desiredState) const
+    {
+        for (uint32_t offset = 1; offset <= blockCount; offset++)
+        {
+            int index = (startIndex + static_cast<int>(offset)) % static_cast<int>(blockCount);
+
+            if (state[index] == desiredState)
+            {
+                return index;
+            }
+        }
+
+        return -1;
+    }
+
+    volatile BlockState state[blockCount];
+    uint32_t memory[blockCount][blockSize / 4];
+    Rect blockRect[blockCount];
+    Rect emptyRect;
+    int sendingBlock;
+    int drawingBlock;
+};
+
+static const uint16_t partialFrameBufferMaxLines = 13;
+static DmaManyBlockAllocator<12800, 2, 2> blockAllocator;
+
+touchgfx::FrameBufferAllocator* currentAllocator()
+{
+    touchgfx::HAL* hal = touchgfx::HAL::getInstance();
+    return hal ? hal->getFrameBufferAllocator() : 0;
+}
+
+void startNextTransfer()
+{
+    touchgfx::FrameBufferAllocator* allocator = currentAllocator();
+
+    if (!allocator)
+    {
+        return;
+    }
+
+    while (!touchgfxDisplayDriverTransmitActive() && allocator->hasBlockReadyForTransfer())
+    {
+        touchgfx::Rect rect;
+        const uint8_t* pixels = allocator->getBlockForTransfer(rect);
+
+        if (!pixels)
+        {
+            return;
+        }
+
+        touchgfxDisplayDriverTransmitBlock(pixels, rect.x, rect.y, rect.width, rect.height);
+
+        if (!touchgfxDisplayDriverTransmitActive())
+        {
+            allocator->freeBlockAfterTransfer();
+        }
+        else
+        {
+            return;
+        }
+    }
+}
+
+void kickTransferFromTask()
+{
+    startNextTransfer();
+}
+
+void handleTransferComplete()
+{
+    touchgfx::FrameBufferAllocator* allocator = currentAllocator();
+
+    if (!allocator)
+    {
+        return;
+    }
+
+    allocator->freeBlockAfterTransfer();
+    startNextTransfer();
+}
+}
+
+extern "C" void TouchGFXHAL_TransferCompleteCallback(void)
+{
+    handleTransferComplete();
+}
 
 void TouchGFXHAL::initialize()
 {
-    // Calling parent implementation of initialize().
-    //
-    // To overwrite the generated implementation, omit the call to the parent function
-    // and implement the needed functionality here.
-    // Please note, HAL::initialize() must be called to initialize the framework.
-
     TouchGFXGeneratedHAL::initialize();
-
-    /* Enable TextureMapper rendering for ARGB8888 images (needed for Gauge needle) */
-    static_cast<LCD16bpp&>(HAL::lcd()).enableTextureMapperARGB8888();
-
-    /* Canvas widget rendering buffer (needed for Circle gauge arcs) */
-    static uint8_t canvasBuffer[6000];
-    touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, sizeof(canvasBuffer));
+    setFrameBufferAllocator(&blockAllocator);
+    setMaxBlockLines(partialFrameBufferMaxLines);
 }
 
 /**
@@ -96,19 +268,16 @@ void TouchGFXHAL::setTFTFrameBuffer(uint16_t* address)
  *
  * @see flushFrameBuffer().
  */
+void TouchGFXHAL::flushFrameBuffer()
+{
+    flushFrameBuffer(touchgfx::Rect(0, 0, getDisplayWidth(), getDisplayHeight()));
+}
+
 void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect& rect)
 {
-    // Calling parent implementation of flushFrameBuffer(const touchgfx::Rect& rect).
-    //
-    // To overwrite the generated implementation, omit the call to the parent function
-    // and implement the needed functionality here.
-    // Please note, HAL::flushFrameBuffer(const touchgfx::Rect& rect) must
-    // be called to notify the touchgfx framework that flush has been performed.
-    // To calculate the start address of rect,
-    // use advanceFrameBufferToRect(uint8_t* fbPtr, const touchgfx::Rect& rect)
-    // defined in TouchGFXGeneratedHAL.cpp
-
-    TouchGFXGeneratedHAL::flushFrameBuffer(rect);
+    HAL::flushFrameBuffer(rect);
+    frameBufferAllocator->markBlockReadyForTransfer();
+    kickTransferFromTask();
 }
 
 bool TouchGFXHAL::blockCopy(void* RESTRICT dest, const void* RESTRICT src, uint32_t numBytes)
@@ -177,7 +346,14 @@ bool TouchGFXHAL::beginFrame()
 
 void TouchGFXHAL::endFrame()
 {
-    TouchGFXGeneratedHAL::endFrame();
+    while (touchgfxDisplayDriverTransmitActive() || frameBufferAllocator->hasBlockReadyForTransfer())
+    {
+        kickTransferFromTask();
+        touchgfx::OSWrappers::taskYield();
+    }
+
+    HAL::endFrame();
+    touchgfx::OSWrappers::signalRenderingDone();
 }
 
 /* USER CODE END TouchGFXHAL.cpp */

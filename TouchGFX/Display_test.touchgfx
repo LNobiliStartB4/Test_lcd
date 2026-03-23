@@ -3,15 +3,26 @@
     "Screens": [
       {
         "Name": "Screen1",
-        "Components": [],
+        "Components": [
+          {
+            "Type": "ScalableImage",
+            "Name": "scalableImage1",
+            "X": 123,
+            "Y": 72,
+            "Width": 234,
+            "Height": 176,
+            "Filename": "A1.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          }
+        ],
         "Interactions": []
       }
     ],
     "CustomContainerDefinitions": [],
-    "Name": "Display_test",
+    "Name": "Display_test_prova",
     "Resolution": {
-      "Width": 480,
-      "Height": 320
+      "Width": 320,
+      "Height": 480
     },
     "SelectedColorDepth": 16,
     "StartupScreenName": "Screen1",
@@ -30,15 +41,15 @@
     ],
     "AvailableResolutions": [
       {
-        "Width": 480,
-        "Height": 320
+        "Width": 320,
+        "Height": 480
       }
     ],
     "PhysicalButtons": [],
     "FrameworkFeatures": {
       "LCD16bpp": {
         "Id": "LCD16bpp",
-        "IsEnabled": false
+        "IsEnabled": true
       }
     },
     "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
@@ -50,12 +61,12 @@
     "LandscapeSkinY": 0,
     "PortraitSkinX": 0,
     "PortraitSkinY": 0,
-    "DisplayOrientation": "Portrait",
+    "DisplayOrientation": "Landscape",
     "Family": "STM32F4",
     "SubFamily": "STM32F401",
     "Toolchain": "STM32CubeIDE",
     "Platform": "m4",
-    "ProjectFile": "../Display_test.ioc",
+    "ProjectFile": "../Display_test_prova.ioc",
     "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
     "OptionalComponents": [],
     "AdditionalFeatures": []

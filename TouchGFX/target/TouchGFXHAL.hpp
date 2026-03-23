@@ -105,10 +105,7 @@ public:
      * Rect version.
      * @see HAL::flushFrameBuffer
      */
-    virtual void flushFrameBuffer()
-    {
-        TouchGFXGeneratedHAL::flushFrameBuffer();
-    }
+    virtual void flushFrameBuffer();
 
     /**
      * @fn virtual void TouchGFXHAL::flushFrameBuffer(const Rect& rect);

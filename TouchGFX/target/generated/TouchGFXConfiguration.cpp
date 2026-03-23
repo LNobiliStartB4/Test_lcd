@@ -37,7 +37,7 @@ static LCD16bpp display;
 
 static ApplicationFontProvider fontProvider;
 static Texts texts;
-static TouchGFXHAL hal(dma, display, tc, 240, 240);
+static TouchGFXHAL hal(dma, display, tc, 480, 320);
 
 void touchgfx_init()
 {
@@ -69,7 +69,7 @@ void touchgfx_taskEntry()
      * Main event loop will check for VSYNC signal, and then process next frame.
      *
      * Note This function returns immediately if there is no VSYNC signal.
-     */
+    */
     if (OSWrappers::isVSyncAvailable())
     {
         hal.backPorchExited();
