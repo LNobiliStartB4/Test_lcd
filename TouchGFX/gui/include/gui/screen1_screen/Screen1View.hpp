@@ -11,12 +11,13 @@ public:
     Screen1View();
     virtual ~Screen1View() {}
     virtual void setupScreen();
-    virtual void handleTickEvent();
     virtual void tearDownScreen();
+    virtual void touchTestClicked();
 
 private:
-    uint16_t splashTickCount;
-    bool transitionRequested;
+    void applyTouchState();
+
+    bool touchActive;
 };
 
 #endif // SCREEN1VIEW_HPP

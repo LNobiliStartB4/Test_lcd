@@ -8,8 +8,9 @@
 #include <mvp/View.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -17,6 +18,14 @@ public:
     Screen1ViewBase();
     virtual ~Screen1ViewBase();
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void touchTestClicked()
+    {
+        // Override and implement this function in Screen1
+    }
 
 protected:
     FrontendApplication& application() {
@@ -27,12 +36,25 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Box splashBackground;
-    touchgfx::Image splashLogo;
-    touchgfx::TextArea splashTitle;
-    touchgfx::TextArea splashSubtitle;
+    touchgfx::Box touchBackground;
+    touchgfx::TextArea touchTitle;
+    touchgfx::BoxWithBorder touchStatusPanel;
+    touchgfx::TextArea touchStatusLabel;
+    touchgfx::TextArea touchStatusValue;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  touchTestButton;
+    touchgfx::TextArea touchButtonLabel;
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

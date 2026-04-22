@@ -6,27 +6,23 @@
         "Components": [
           {
             "Type": "Box",
-            "Name": "splashBackground",
+            "Name": "touchBackground",
             "Width": 480,
-            "Height": 320
-          },
-          {
-            "Type": "Image",
-            "Name": "splashLogo",
-            "X": 129,
-            "Y": 28,
-            "Width": 222,
-            "Height": 200,
-            "RelativeFilename": "A1.png"
+            "Height": 320,
+            "Color": {
+              "Red": 7,
+              "Green": 18,
+              "Blue": 35
+            }
           },
           {
             "Type": "TextArea",
-            "Name": "splashTitle",
+            "Name": "touchTitle",
             "X": 90,
-            "Y": 235,
+            "Y": 26,
             "Width": 300,
             "Height": 28,
-            "TextId": "Text_SplashTitle",
+            "TextId": "Text_TouchTestTitle",
             "TextRotation": "0",
             "Color": {
               "Red": 242,
@@ -35,22 +31,120 @@
             }
           },
           {
+            "Type": "BoxWithBorder",
+            "Name": "touchStatusPanel",
+            "X": 90,
+            "Y": 72,
+            "Width": 300,
+            "Height": 46,
+            "Color": {
+              "Red": 12,
+              "Green": 31,
+              "Blue": 56
+            },
+            "BorderColor": {
+              "Red": 60,
+              "Green": 101,
+              "Blue": 148
+            },
+            "BorderSize": 2
+          },
+          {
             "Type": "TextArea",
-            "Name": "splashSubtitle",
-            "X": 60,
-            "Y": 269,
-            "Width": 360,
-            "Height": 18,
-            "TextId": "Text_SplashSubtitle",
+            "Name": "touchStatusLabel",
+            "X": 110,
+            "Y": 86,
+            "Width": 86,
+            "Height": 14,
+            "TextId": "Text_TouchStatusLabel",
             "TextRotation": "0",
             "Color": {
-              "Red": 145,
-              "Green": 164,
-              "Blue": 182
+              "Red": 158,
+              "Green": 177,
+              "Blue": 194
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "touchStatusValue",
+            "X": 205,
+            "Y": 81,
+            "Width": 165,
+            "Height": 22,
+            "TextId": "Text_TouchStatusOff",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 240,
+              "Green": 185,
+              "Blue": 96
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "touchTestButton",
+            "X": 90,
+            "Y": 146,
+            "Width": 300,
+            "Height": 108,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 3,
+                "ColorReleased": {
+                  "Red": 19,
+                  "Green": 61,
+                  "Blue": 92
+                },
+                "ColorPressed": {
+                  "Red": 34,
+                  "Green": 96,
+                  "Blue": 136
+                },
+                "ColorBorderReleased": {
+                  "Red": 92,
+                  "Green": 157,
+                  "Blue": 205
+                },
+                "ColorBorderPressed": {
+                  "Red": 152,
+                  "Green": 205,
+                  "Blue": 243
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "touchButtonLabel",
+            "X": 90,
+            "Y": 188,
+            "Width": 300,
+            "Height": 22,
+            "TextId": "Text_TouchPressHere",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
             }
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "touchTestClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "touchTestButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "touchTestClicked"
+            }
+          }
+        ]
       },
       {
         "Name": "Screen2",

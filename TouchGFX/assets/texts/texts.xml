@@ -11,6 +11,21 @@
       <Text Id="Text_SplashSubtitle" Alignment="Center" TypographyId="Subtitle">
         <Translation Language="GB">CONTROLLO ASPIRAZIONE E PROCEDURA</Translation>
       </Text>
+      <Text Id="Text_TouchTestTitle" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">TOUCH TEST</Translation>
+      </Text>
+      <Text Id="Text_TouchStatusLabel" Alignment="Left" TypographyId="Caption">
+        <Translation Language="GB">STATUS</Translation>
+      </Text>
+      <Text Id="Text_TouchStatusOff" Alignment="Left" TypographyId="Body">
+        <Translation Language="GB">NOT PRESSED</Translation>
+      </Text>
+      <Text Id="Text_TouchStatusOn" Alignment="Left" TypographyId="Body">
+        <Translation Language="GB">PRESSED</Translation>
+      </Text>
+      <Text Id="Text_TouchPressHere" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">PRESS HERE</Translation>
+      </Text>
       <Text Id="Text_BrandTitle" Alignment="Left" TypographyId="Title">
         <Translation Language="GB">THD BANDY</Translation>
       </Text>

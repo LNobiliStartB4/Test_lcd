@@ -3,34 +3,55 @@
 /*********************************************************************************/
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
-Screen1ViewBase::Screen1ViewBase()
+Screen1ViewBase::Screen1ViewBase() :
+    flexButtonCallback(this, &Screen1ViewBase::flexButtonCallbackHandler)
 {
     __background.setPosition(0, 0, 480, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    splashBackground.setPosition(0, 0, 480, 320);
-    splashBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    add(splashBackground);
+    touchBackground.setPosition(0, 0, 480, 320);
+    touchBackground.setColor(touchgfx::Color::getColorFromRGB(7, 18, 35));
+    add(touchBackground);
 
-    splashLogo.setXY(129, 28);
-    splashLogo.setBitmap(touchgfx::Bitmap(BITMAP_A1_ID));
-    add(splashLogo);
+    touchTitle.setPosition(90, 26, 300, 28);
+    touchTitle.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
+    touchTitle.setLinespacing(0);
+    touchTitle.setTypedText(touchgfx::TypedText(T_TEXT_TOUCHTESTTITLE));
+    add(touchTitle);
 
-    splashTitle.setPosition(90, 235, 300, 28);
-    splashTitle.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
-    splashTitle.setLinespacing(0);
-    splashTitle.setTypedText(touchgfx::TypedText(T_TEXT_SPLASHTITLE));
-    add(splashTitle);
+    touchStatusPanel.setPosition(90, 72, 300, 46);
+    touchStatusPanel.setColor(touchgfx::Color::getColorFromRGB(12, 31, 56));
+    touchStatusPanel.setBorderColor(touchgfx::Color::getColorFromRGB(60, 101, 148));
+    touchStatusPanel.setBorderSize(2);
+    add(touchStatusPanel);
 
-    splashSubtitle.setPosition(60, 269, 360, 18);
-    splashSubtitle.setColor(touchgfx::Color::getColorFromRGB(145, 164, 182));
-    splashSubtitle.setLinespacing(0);
-    splashSubtitle.setTypedText(touchgfx::TypedText(T_TEXT_SPLASHSUBTITLE));
-    add(splashSubtitle);
+    touchStatusLabel.setPosition(110, 86, 86, 14);
+    touchStatusLabel.setColor(touchgfx::Color::getColorFromRGB(158, 177, 194));
+    touchStatusLabel.setLinespacing(0);
+    touchStatusLabel.setTypedText(touchgfx::TypedText(T_TEXT_TOUCHSTATUSLABEL));
+    add(touchStatusLabel);
+
+    touchStatusValue.setPosition(205, 81, 165, 22);
+    touchStatusValue.setColor(touchgfx::Color::getColorFromRGB(240, 185, 96));
+    touchStatusValue.setLinespacing(0);
+    touchStatusValue.setTypedText(touchgfx::TypedText(T_TEXT_TOUCHSTATUSOFF));
+    add(touchStatusValue);
+
+    touchTestButton.setBoxWithBorderPosition(0, 0, 0, 0);
+    touchTestButton.setBorderSize(3);
+    touchTestButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(19, 61, 92), touchgfx::Color::getColorFromRGB(34, 96, 136), touchgfx::Color::getColorFromRGB(92, 157, 205), touchgfx::Color::getColorFromRGB(152, 205, 243));
+    touchTestButton.setAction(flexButtonCallback);
+    touchTestButton.setPosition(90, 146, 300, 108);
+    add(touchTestButton);
+
+    touchButtonLabel.setPosition(90, 188, 300, 22);
+    touchButtonLabel.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
+    touchButtonLabel.setLinespacing(0);
+    touchButtonLabel.setTypedText(touchgfx::TypedText(T_TEXT_TOUCHPRESSHERE));
+    add(touchButtonLabel);
 }
 
 Screen1ViewBase::~Screen1ViewBase()
@@ -41,4 +62,15 @@ Screen1ViewBase::~Screen1ViewBase()
 void Screen1ViewBase::setupScreen()
 {
 
+}
+
+void Screen1ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &touchTestButton)
+    {
+        //touchTestClicked
+        //When touchTestButton clicked call virtual function
+        //Call touchTestClicked
+        touchTestClicked();
+    }
 }
