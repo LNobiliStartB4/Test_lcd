@@ -9,15 +9,33 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
 {
     switch (typography)
     {
-    case Typography::DEFAULT:
-        // verdana_20_4bpp
+    case Typography::TITLE:
+        // verdana_24_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[0]);
-    case Typography::LARGE:
-        // verdana_40_4bpp
+    case Typography::SUBTITLE:
+        // verdana_12_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[1]);
-    case Typography::SMALL:
-        // verdana_10_4bpp
+    case Typography::BODY:
+        // verdana_16_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[2]);
+    case Typography::CAPTION:
+        // verdana_13_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[3]);
+    case Typography::STEP:
+        // verdana_11_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[4]);
+    case Typography::BUTTON:
+        // verdana_15_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[5]);
+    case Typography::STATUS:
+        // verdana_15_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[5]);
+    case Typography::METRIC:
+        // verdana_26_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[6]);
+    case Typography::HERO:
+        // verdana_54_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[7]);
     default:
         return 0;
     }

@@ -5,93 +5,132 @@
       <UniqueIdentifier>{4D1BFFCC-9CEB-4ABF-A951-582870FE71FD}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="Header Files\gui">
+      <UniqueIdentifier>{8ED714ED-BFE4-4B08-94E9-F988A242BE7F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui_generated">
+      <UniqueIdentifier>{1D672768-DFFD-4700-BFEB-48A0BEB94C53}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Header Files\TouchGFX">
-      <UniqueIdentifier>{29C60541-803D-4F43-8683-028D9DA5E0CB}</UniqueIdentifier>
+      <UniqueIdentifier>{5997B4C6-A0BA-4871-8600-EBA89C097060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\common">
+      <UniqueIdentifier>{B792B78E-A762-44FC-A6C7-E5DE9C25FDAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\model">
+      <UniqueIdentifier>{AEF92939-C46A-41AB-A7CE-0B9DC5A83BA8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen1_screen">
+      <UniqueIdentifier>{5BABECFD-9167-46B2-86CC-63552623A3A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen2_screen">
+      <UniqueIdentifier>{70DE3D9D-F607-4B27-9659-C8F543A3B470}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui_generated\common">
+      <UniqueIdentifier>{46F5E630-8F72-4DA0-88EC-065C136A5852}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui_generated\screen1_screen">
+      <UniqueIdentifier>{A0B000F1-AB3F-42CA-A104-6D0D260CE53E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui_generated\screen2_screen">
+      <UniqueIdentifier>{C47F6E77-05D4-4F96-8EB9-E1F411CD6C5A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\common">
-      <UniqueIdentifier>{AF2BF67C-89EC-4545-B0D2-5BD6803628D4}</UniqueIdentifier>
+      <UniqueIdentifier>{23F4D089-68F8-4D2E-AA7D-CCC07EC69344}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\mvp">
-      <UniqueIdentifier>{A8F51E02-A400-49F1-AC86-371872A7E5E6}</UniqueIdentifier>
+      <UniqueIdentifier>{D6F7AD18-E49A-4752-9DBF-6851F002356B}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\platform">
-      <UniqueIdentifier>{493CF637-721C-4516-8638-3EE4790FB455}</UniqueIdentifier>
+      <UniqueIdentifier>{A002680B-9AEE-4708-A6C5-3C158044D570}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx">
-      <UniqueIdentifier>{7187028B-6482-4EB3-8556-EECD38E0636B}</UniqueIdentifier>
+      <UniqueIdentifier>{DBFD2A50-0219-4040-BDBC-F102742077D0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\platform\driver">
-      <UniqueIdentifier>{D2E6B448-6B79-434F-A8EB-C8F8415957E9}</UniqueIdentifier>
+      <UniqueIdentifier>{CAC993C7-2219-44C0-82EF-B79490A1D36F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\platform\hal">
-      <UniqueIdentifier>{07737357-9365-4A8F-B2F6-908B5FC4E808}</UniqueIdentifier>
+      <UniqueIdentifier>{609BA9B3-C861-4AB2-88A8-9EE4175DEC51}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx\canvas_widget_renderer">
-      <UniqueIdentifier>{085B248B-6BE1-4BF8-9913-35526BAEE4C7}</UniqueIdentifier>
+      <UniqueIdentifier>{64EF10B0-B38B-4A38-9862-D63A30A41990}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx\containers">
-      <UniqueIdentifier>{E08C6B18-2F0E-4861-87D5-80FB0411017E}</UniqueIdentifier>
+      <UniqueIdentifier>{E399E84D-7CDE-44CC-BC24-D362B3225A60}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx\events">
-      <UniqueIdentifier>{29D72404-E5CB-472C-B00F-3784DF3CCD1E}</UniqueIdentifier>
+      <UniqueIdentifier>{F43E7D76-6C0A-4439-B3EE-F018EF37F462}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx\hal">
-      <UniqueIdentifier>{09561B72-532B-45EB-8E32-CAA31C349F83}</UniqueIdentifier>
+      <UniqueIdentifier>{B1BC7F97-7349-4975-994E-51CFB4C9A720}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx\lcd">
-      <UniqueIdentifier>{A89B6308-CBC1-48EC-BF14-B3C6106FACCE}</UniqueIdentifier>
+      <UniqueIdentifier>{E1CF582C-8D48-4312-80DB-3BCA214ECD0A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx\mixins">
-      <UniqueIdentifier>{DB82A963-BE52-4494-BD5E-358C5E79C081}</UniqueIdentifier>
+      <UniqueIdentifier>{9E8B345E-0FFE-49A9-963A-18A3E741B9B7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx\transforms">
-      <UniqueIdentifier>{509E01BB-FBF4-4198-B748-936C1B67839A}</UniqueIdentifier>
+      <UniqueIdentifier>{83B2C4BE-46C6-48ED-9BC9-EC99E1F5715F}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx\transitions">
-      <UniqueIdentifier>{3F023E56-225A-4D4C-9D20-74447A23BAD9}</UniqueIdentifier>
+      <UniqueIdentifier>{F077B860-D1A3-40DD-90CD-6F690724BF6A}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx\widgets">
-      <UniqueIdentifier>{0E9A8FD3-B71B-46B9-B1F6-3A18292FFAC4}</UniqueIdentifier>
+      <UniqueIdentifier>{AF148778-83D3-4DED-9E29-79B0A60B8C8C}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\platform\driver\lcd">
-      <UniqueIdentifier>{9B32A742-EBA9-4EBA-832E-0421D7E68BC5}</UniqueIdentifier>
+      <UniqueIdentifier>{60A84B82-3EDF-42EF-A954-B7C8989CD9EE}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\platform\driver\touch">
-      <UniqueIdentifier>{8C31441B-2191-4B32-869D-7B253AECB28F}</UniqueIdentifier>
+      <UniqueIdentifier>{175BF841-6F83-49E6-879E-F87D7796554B}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\platform\hal\simulator">
-      <UniqueIdentifier>{464CC9FB-AFF6-4FFA-B4D8-BCAC4B2B8898}</UniqueIdentifier>
+      <UniqueIdentifier>{C12DFB19-E3AB-42E7-8809-39DEFF594565}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TouchGFX\touchgfx\containers\buttons">
+      <UniqueIdentifier>{B27C7FFA-6B92-45CC-B937-8812107BC036}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx\containers\clock">
-      <UniqueIdentifier>{B7237C13-DD69-4F78-8446-9A554431E3F8}</UniqueIdentifier>
+      <UniqueIdentifier>{FC06A614-18FB-4C3F-A97A-A9B0637025F1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx\containers\progress_indicators">
-      <UniqueIdentifier>{5E0E884F-0059-4306-94BA-3197219750E3}</UniqueIdentifier>
+      <UniqueIdentifier>{B3B15446-66EC-4339-88E1-95B9CDB8235F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TouchGFX\touchgfx\containers\scrollers">
+      <UniqueIdentifier>{0A2DFCE1-7D46-4902-B792-15F73D7F9169}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\touchgfx\widgets\canvas">
-      <UniqueIdentifier>{DBFF640A-BD63-40BC-A0A5-2468BC461037}</UniqueIdentifier>
+      <UniqueIdentifier>{276DECB1-92CE-4B6F-84AB-092C6F410E09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TouchGFX\touchgfx\widgets\graph">
+      <UniqueIdentifier>{06F79A0D-652B-4D78-9840-F359A45299A7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TouchGFX\touchgfx\widgets\utils">
+      <UniqueIdentifier>{EC5894B1-B4A1-4920-9798-5217547B3393}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\TouchGFX\platform\hal\simulator\sdl2">
-      <UniqueIdentifier>{EA3962C0-553C-4CFD-A89B-A116A9493818}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated">
-      <UniqueIdentifier>{29C60541-803D-4F44-8783-028D9DA5E0CC}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\simulator">
-      <UniqueIdentifier>{29C60541-803D-4F43-8683-028D9DA5E0CC}</UniqueIdentifier>
+      <UniqueIdentifier>{D08FC007-8E77-4CE9-AAB2-91AA76F1F428}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{92BBFF14-FBDB-4755-BA47-A830D863D92B}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;ttf;otf;bdf;png;wav;xml;props;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Resource Files\assets">
-      <UniqueIdentifier>{AF899B0F-78BE-47F9-A912-E92CB9156E40}</UniqueIdentifier>
+      <UniqueIdentifier>{33FF976A-563D-4055-88C3-97A774E23934}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\config">
       <UniqueIdentifier>{29E8A9F8-6504-4625-AB47-671A3F665E51}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\assets\fonts">
+      <UniqueIdentifier>{D39BF66B-1586-4A4C-BBE0-242CA765F3B5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\assets\images">
+      <UniqueIdentifier>{587A37D8-647F-48BC-B459-77F15035D97D}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Resource Files\assets\texts">
-      <UniqueIdentifier>{382278FD-2B19-4E89-AE4F-24AF77E7A270}</UniqueIdentifier>
+      <UniqueIdentifier>{0039D999-DB77-4F4E-BA61-551F45D58420}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files\config\msvs">
       <UniqueIdentifier>{C24EAEDB-9A3F-43DC-87FB-C7AC2729A078}</UniqueIdentifier>
@@ -100,89 +139,101 @@
       <UniqueIdentifier>{2F3FC0AA-97C4-4366-9939-94A0FF4E028C}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Source Files\TouchGFX">
-      <UniqueIdentifier>{C07B02A9-A55E-47AA-AD61-59A6AAD754E6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\TouchGFX\platform">
-      <UniqueIdentifier>{33EDC2DB-AF72-480C-92E5-2A2833BCAB6F}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\TouchGFX\platform\driver">
-      <UniqueIdentifier>{1D8EFD90-430A-4539-9080-16A38861D20A}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\TouchGFX\platform\hal">
-      <UniqueIdentifier>{E8DECBF2-0C8E-4397-8603-3101D6F922D6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\TouchGFX\platform\driver\touch">
-      <UniqueIdentifier>{40F0D55D-79D9-488A-AF83-ADC96179EADF}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\TouchGFX\platform\hal\simulator">
-      <UniqueIdentifier>{3FB50DD5-31DA-4042-B7FD-2151C58CDA80}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\TouchGFX\platform\hal\simulator\sdl2">
-      <UniqueIdentifier>{B48CB42B-0F9E-4815-BFE1-1ACC1150ED8A}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\simulator">
-      <UniqueIdentifier>{C07B03A9-A55E-47AA-AD61-59A6AAD754E6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated">
-      <UniqueIdentifier>{C07B02B9-A55E-47AB-AD61-59A6AAD754E6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\simulator">
-      <UniqueIdentifier>{C07B02B9-A55E-47AA-AD61-59A6AAD754E6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui">
-      <UniqueIdentifier>1D2DA3B6-6CF5-568B-8C88-6704DD0BF3DD</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\gui">
-      <UniqueIdentifier>674C84B1-6C93-6654-5482-B979F6F3E685</UniqueIdentifier>
+      <UniqueIdentifier>{6175AE7E-2820-446F-9E57-E8423C655C81}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\model">
-      <UniqueIdentifier>20DF71DE-3DD1-3EA7-59E3-55F194EDD34A</UniqueIdentifier>
+    <Filter Include="Source Files\gui_generated">
+      <UniqueIdentifier>{7442C0C2-DB3B-44EA-8273-C5C8D6E56224}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\gui\model">
-      <UniqueIdentifier>DBB0EA7A-5B98-FB31-E1D6-4D2F5CA0A41D</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\screen1_screen">
-      <UniqueIdentifier>780F50AC-66A0-CC85-B7A5-C7920ABEA309</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated">
-      <UniqueIdentifier>5E47C90E-3525-72E3-37DB-85514342AAA4</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\common">
-      <UniqueIdentifier>23F4F56F-DCF8-BA05-3381-06ACC1BFC337</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\gui\screen1_screen">
-      <UniqueIdentifier>78DDA57F-E0D6-952E-41FE-E6D44EEC1B65</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated">
-      <UniqueIdentifier>602E0093-7813-2B8E-360C-0B90E67CCDD2</UniqueIdentifier>
+    <Filter Include="Source Files\TouchGFX">
+      <UniqueIdentifier>{8064519A-CC9E-4BAE-A000-71E5D387C085}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\gui\common">
-      <UniqueIdentifier>C6D55A58-099B-27D3-5CBC-E57046FF88B7</UniqueIdentifier>
+      <UniqueIdentifier>{32A4D24A-A47E-4138-9138-81796B9FA89F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>B30DE215-1DF0-A0A1-174A-8F89EBC97C39</UniqueIdentifier>
+    <Filter Include="Source Files\gui\model">
+      <UniqueIdentifier>{CFD0E5B9-511A-4C80-A983-B2306DA8FA22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen1_screen">
+      <UniqueIdentifier>{02778820-7456-47CF-A6F2-C3534CD8F8AB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen2_screen">
+      <UniqueIdentifier>{0E836564-79E3-4527-A212-26AAB5F3C955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui_generated\common">
+      <UniqueIdentifier>{C161E743-71F6-40E1-A016-000BA01BD81D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui_generated\screen1_screen">
+      <UniqueIdentifier>{D4344B71-E09A-4D20-AB11-C6F6BC12D23B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui_generated\screen2_screen">
+      <UniqueIdentifier>{E0510617-2BB7-41E0-BAC5-D8D00BD3D253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TouchGFX\platform">
+      <UniqueIdentifier>{B9DE43BA-5150-4DFC-8F7E-3CFA0D4BA728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TouchGFX\platform\driver">
+      <UniqueIdentifier>{BCD763BA-8A93-448F-A1D9-4D83543A1BE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TouchGFX\platform\hal">
+      <UniqueIdentifier>{7B5D569C-1AFB-43BF-9273-19B652506375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TouchGFX\platform\driver\touch">
+      <UniqueIdentifier>{69E30B23-E8C9-44FD-8B6A-0DB30B613521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TouchGFX\platform\hal\simulator">
+      <UniqueIdentifier>{A021E5CF-A4F1-429E-A364-93D4DC3C4764}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\TouchGFX\platform\hal\simulator\sdl2">
+      <UniqueIdentifier>{54BBF864-38AE-4921-84E1-1E77BE345C3D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated">
+      <UniqueIdentifier>3D3CE10C-BD95-00E3-0C01-CFBBFE931278</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated">
+      <UniqueIdentifier>30D30DF3-DAE2-7979-9BD9-1C6D6808C6E9</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated">
+      <UniqueIdentifier>133E8EEC-AAEA-1C18-39EB-4B4039AE1631</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\simulator">
+      <UniqueIdentifier>34533830-8EE3-71B6-FFF7-F67B1FE73C28</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated">
+      <UniqueIdentifier>67166388-3ACC-F27E-BD36-032E5F047588</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\simulator">
+      <UniqueIdentifier>33817924-155A-3907-36BD-84D4359CD896</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen2_screen">
+      <UniqueIdentifier>437FFA70-BB0E-0073-B528-73F02B646F56</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\generated\gui_generated\screen1_screen">
-      <UniqueIdentifier>EB6142D4-320A-E46D-8144-7FBF27E5C4EB</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\simulator\include">
-      <UniqueIdentifier>9F8D35D3-E1E0-B714-2D5A-8C6EFE981312</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\common">
-      <UniqueIdentifier>1ADEEED8-6AA7-0BC6-F231-62122AE7785D</UniqueIdentifier>
+      <UniqueIdentifier>28A6672E-5613-F325-936A-DEC1A06A7D03</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\generated\gui_generated\common">
-      <UniqueIdentifier>7A23F4AF-4E52-F46F-4C98-ECBE8ACA4907</UniqueIdentifier>
+      <UniqueIdentifier>C882F53B-20A1-C51D-A100-4C00ABC34594</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen2_screen">
+      <UniqueIdentifier>715FAD31-E555-FEA2-D575-21337A56B1B1</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\simulator\include">
+      <UniqueIdentifier>25E46301-BD89-29B1-F72E-0043FF283382</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\common">
+      <UniqueIdentifier>D5C32E32-FE07-FF9A-6168-7FDD678FA61F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen1_screen">
+      <UniqueIdentifier>CF6F2F2C-CF8D-F9F4-32B1-0D6524469112</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\generated\simulator\video">
-      <UniqueIdentifier>5E703AAB-23FB-76B3-D2D2-2C61D2CA2B78</UniqueIdentifier>
+      <UniqueIdentifier>CCA790BC-C8E5-5654-BD51-3A21D2897643</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\generated\simulator\include\simulator">
-      <UniqueIdentifier>2E93E9E1-D1F8-7DFA-1939-75439B0E8D70</UniqueIdentifier>
+      <UniqueIdentifier>DE5D4902-6965-63BB-795E-847A5F94B46B</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
-      <UniqueIdentifier>7E145860-DEFC-E94D-EB04-8411AADF5A67</UniqueIdentifier>
+      <UniqueIdentifier>C20BA723-77CC-4F24-963A-6C546ABD667F</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -198,17 +249,23 @@
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\hal\simulator\sdl2\OSWrappers.cpp">
       <Filter>Source Files\TouchGFX\platform\hal\simulator\sdl2</Filter>
     </ClCompile>
-    <ClCompile Include="$(ApplicationRoot)\simulator\main.cpp">
-      <Filter>Source Files\simulator</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp">
+      <Filter>Source Files\gui_generated\common</Filter>
     </ClCompile>
-    <ClCompile Include="$(ApplicationRoot)\generated\simulator\src\mainBase.cpp">
-      <Filter>Source Files\generated\simulator</Filter>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen1_screen\Screen1ViewBase.cpp">
+      <Filter>Source Files\gui_generated\screen1_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen2_screen\Screen2ViewBase.cpp">
+      <Filter>Source Files\gui_generated\screen2_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\simulator\src\mainBase.cpp">
+      <Filter>Source Files\gui\generated\simulator\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
+      <Filter>Source Files\gui\generated\simulator\src\video</Filter>
     </ClCompile>
     <ClCompile Include="..\..\gui\src\common\FrontendApplication.cpp">
       <Filter>Source Files\gui\common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp">
-      <Filter>Source Files\generated\gui_generated\common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\gui\src\model\Model.cpp">
       <Filter>Source Files\gui\model</Filter>
@@ -219,18 +276,27 @@
     <ClCompile Include="..\..\gui\src\screen1_screen\Screen1View.cpp">
       <Filter>Source Files\gui\screen1_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen1_screen\Screen1ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen1_screen</Filter>
+    <ClCompile Include="..\..\gui\src\screen2_screen\Screen2Presenter.cpp">
+      <Filter>Source Files\gui\screen2_screen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
-      <Filter>Source Files\generated\simulator\video</Filter>
+    <ClCompile Include="..\..\gui\src\screen2_screen\Screen2View.cpp">
+      <Filter>Source Files\gui\screen2_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\simulator\main.cpp">
+      <Filter>Source Files\gui\simulator</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(ApplicationRoot)\assets\texts\texts.xml">
+    <None Include="..\..\assets\fonts\verdana.ttf">
+      <Filter>Resource Files\assets\fonts</Filter>
+    </None>
+    <None Include="..\..\assets\images\A1.png">
+      <Filter>Resource Files\assets\images</Filter>
+    </None>
+    <None Include="..\..\assets\texts\texts.xml">
       <Filter>Resource Files\assets\texts</Filter>
     </None>
-    <None Include="$(ApplicationRoot)\config\msvs\Application.props">
+    <None Include="..\..\config\msvs\Application.props">
       <Filter>Resource Files\config\msvs</Filter>
     </None>
   </ItemGroup>
@@ -262,6 +328,9 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\lcd\LCD16bpp.hpp">
       <Filter>Header Files\TouchGFX\platform\driver\lcd</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\lcd\LCD16bppSerialFlash.hpp">
+      <Filter>Header Files\TouchGFX\platform\driver\lcd</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\lcd\LCD1bpp.hpp">
       <Filter>Header Files\TouchGFX\platform\driver\lcd</Filter>
     </ClInclude>
@@ -271,7 +340,28 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\lcd\LCD2bpp.hpp">
       <Filter>Header Files\TouchGFX\platform\driver\lcd</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\lcd\LCD32bpp.hpp">
+      <Filter>Header Files\TouchGFX\platform\driver\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\lcd\LCD32bpp_XRGB8888.hpp">
+      <Filter>Header Files\TouchGFX\platform\driver\lcd</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\lcd\LCD4bpp.hpp">
+      <Filter>Header Files\TouchGFX\platform\driver\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\lcd\LCD8bpp_ABGR2222.hpp">
+      <Filter>Header Files\TouchGFX\platform\driver\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\lcd\LCD8bpp_ARGB2222.hpp">
+      <Filter>Header Files\TouchGFX\platform\driver\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\lcd\LCD8bpp_BGRA2222.hpp">
+      <Filter>Header Files\TouchGFX\platform\driver\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\lcd\LCD8bpp_RGBA2222.hpp">
+      <Filter>Header Files\TouchGFX\platform\driver\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\lcd\LCDDMA2D3_CMDList.hpp">
       <Filter>Header Files\TouchGFX\platform\driver\lcd</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\platform\driver\touch\SDL2TouchController.hpp">
@@ -301,23 +391,56 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\canvas_widget_renderer\Rasterizer.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\canvas_widget_renderer</Filter>
     </ClInclude>
-    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\canvas_widget_renderer\Renderer.hpp">
-      <Filter>Header Files\TouchGFX\touchgfx\canvas_widget_renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\canvas_widget_renderer\RenderingBuffer.hpp">
-      <Filter>Header Files\TouchGFX\touchgfx\canvas_widget_renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\canvas_widget_renderer\RGBA8.hpp">
-      <Filter>Header Files\TouchGFX\touchgfx\canvas_widget_renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\canvas_widget_renderer\Scanline.hpp">
-      <Filter>Header Files\TouchGFX\touchgfx\canvas_widget_renderer</Filter>
-    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\Color.hpp">
       <Filter>Header Files\TouchGFX\touchgfx</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\ConstFont.hpp">
       <Filter>Header Files\TouchGFX\touchgfx</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\AbstractButtonContainer.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\AnimatedImageButtonStyle.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\BoxWithBorderButtonStyle.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\Buttons.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\ClickButtonTrigger.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\IconButtonStyle.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\ImageButtonStyle.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\RepeatButtonTrigger.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\TextButtonStyle.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\TiledImageButtonStyle.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\ToggleButtonTrigger.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\TouchButtonTrigger.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\TwoWildcardTextButtonStyle.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\buttons\WildcardTextButtonStyle.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\CacheableContainer.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\clock\AbstractClock.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\containers\clock</Filter>
@@ -361,10 +484,31 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\ScrollableContainer.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\containers</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\scrollers\DrawableList.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\scrollers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\scrollers\ScrollBase.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\scrollers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\scrollers\ScrollList.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\scrollers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\scrollers\ScrollWheel.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\scrollers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\scrollers\ScrollWheelBase.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\scrollers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\scrollers\ScrollWheelWithSelectionStyle.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers\scrollers</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\SlideMenu.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\containers</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\Slider.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\SwipeContainer.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\containers</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\containers\ZoomAnimationImage.hpp">
@@ -412,6 +556,15 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\DMA.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\FlashDataReader.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\FrameBufferAllocator.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\FrameBufferListener.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\Gestures.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
     </ClInclude>
@@ -421,16 +574,43 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\HAL.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
     </ClInclude>
-    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\LED.hpp">
-      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
-    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\NoDMA.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\OSWrappers.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\Paint.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\PaintARGB8888Impl.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\PaintImpl.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\PaintRGB565Impl.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\PaintRGB888Impl.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\PartialFrameBufferManager.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\Types.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\VectorFontRenderer.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\VectorRenderer.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\VGData.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\hal\VideoController.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\hal</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\InternalFlashFont.hpp">
@@ -439,10 +619,49 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\JSMOCHelper.hpp">
       <Filter>Header Files\TouchGFX\touchgfx</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\DebugPrinter.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\LCD.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\LCD16DebugPrinter.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\LCD1DebugPrinter.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\LCD24DebugPrinter.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\LCD2DebugPrinter.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\LCD32DebugPrinter.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\LCD4DebugPrinter.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\LCD8ABGR2222DebugPrinter.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\LCD8ARGB2222DebugPrinter.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\LCD8BGRA2222DebugPrinter.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\LCD8DebugPrinterBase.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\lcd\LCD8RGBA2222DebugPrinter.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\lcd</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\Math3D.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\Matrix3x3.hpp">
       <Filter>Header Files\TouchGFX\touchgfx</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\mixins\ClickListener.hpp">
@@ -455,9 +674,6 @@
       <Filter>Header Files\TouchGFX\touchgfx\mixins</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\mixins\MoveAnimator.hpp">
-      <Filter>Header Files\TouchGFX\touchgfx\mixins</Filter>
-    </ClInclude>
-    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\mixins\PreRenderable.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\mixins</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\mixins\Snapper.hpp">
@@ -481,6 +697,12 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\transforms\TouchCalibration.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\transforms</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\transitions\BlockTransition.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\transitions</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\transitions\CoverTransition.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\transitions</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\transitions\NoTransition.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\transitions</Filter>
     </ClInclude>
@@ -488,6 +710,9 @@
       <Filter>Header Files\TouchGFX\touchgfx\transitions</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\transitions\Transition.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\transitions</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\transitions\WipeTransition.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\transitions</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\TypedText.hpp">
@@ -502,6 +727,12 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\Utils.hpp">
       <Filter>Header Files\TouchGFX\touchgfx</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\VectorFontRendererImpl.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\Version.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\AbstractButton.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
     </ClInclude>
@@ -512,6 +743,9 @@
       <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\Box.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\BoxWithBorder.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\Button.hpp">
@@ -526,7 +760,25 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainter.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterABGR2222.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterARGB2222.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterARGB8888.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterBGRA2222.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterBitmap.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterBW.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterColor.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterGRAY2.hpp">
@@ -535,10 +787,16 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterGRAY4.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterLinearGradient.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterRGB565.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterRGB888.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractPainterRGBA2222.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\AbstractShape.hpp">
@@ -556,10 +814,46 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\CWRUtil.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\CWRVectorRenderer.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\Line.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterABGR2222.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterABGR2222Bitmap.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterARGB2222.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterARGB2222Bitmap.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterARGB8888.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterARGB8888Bitmap.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterARGB8888L8Bitmap.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterARGB8888LinearGradient.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterBGRA2222.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterBGRA2222Bitmap.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterBW.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterBWBitmap.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterGRAY2.hpp">
@@ -580,14 +874,65 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterRGB565Bitmap.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterRGB565L8Bitmap.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterRGB565LinearGradient.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterRGB888.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterRGB888Bitmap.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterRGB888L8Bitmap.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterRGB888LinearGradient.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterRGBA2222.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterRGBA2222Bitmap.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterXRGB8888.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterXRGB8888Bitmap.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\PainterXRGB8888L8Bitmap.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\canvas\Shape.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\Gauge.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\graph\AbstractDataGraph.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\graph\Graph.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\graph\GraphElements.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\graph\GraphLabels.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\graph\GraphScroll.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\graph\GraphWrapAndClear.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\graph\GraphWrapAndOverwrite.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\graph</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\Image.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
@@ -596,6 +941,9 @@
       <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\PixelDataWidget.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\QRCode.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\RadioButton.hpp">
@@ -611,6 +959,9 @@
       <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\SnapshotWidget.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\SVGImage.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
     </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\TextArea.hpp">
@@ -631,29 +982,47 @@
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\TouchArea.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
     </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\utils\qrcodegen.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\VideoWidget.hpp">
+      <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
+    </ClInclude>
     <ClInclude Include="$(TouchGFXReleasePath)\framework\include\touchgfx\widgets\Widget.hpp">
       <Filter>Header Files\TouchGFX\touchgfx\widgets</Filter>
     </ClInclude>
-    <ClInclude Include="$(ApplicationRoot)\generated\simulator\include\simulator\mainBase.hpp">
-      <Filter>Header Files\generated\simulator</Filter>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendApplicationBase.hpp">
+      <Filter>Header Files\gui_generated\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendHeapBase.hpp">
+      <Filter>Header Files\gui_generated\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp">
+      <Filter>Header Files\gui_generated\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp">
+      <Filter>Header Files\gui_generated\screen1_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen2_screen\Screen2ViewBase.hpp">
+      <Filter>Header Files\gui_generated\screen2_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\simulator\include\simulator\mainBase.hpp">
+      <Filter>Header Files\gui\generated\simulator\include\simulator</Filter>
     </ClInclude>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\DirectFrameBufferVideoController.hpp">
-      <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+      <Filter>Header Files\gui\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\simulator\include\simulator\video\MJPEGDecoder.hpp">
+      <Filter>Header Files\gui\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
+      <Filter>Header Files\gui\generated\simulator\include\simulator\video</Filter>
     </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\common\FrontendApplication.hpp">
       <Filter>Header Files\gui\common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendApplicationBase.hpp">
-      <Filter>Header Files\generated\gui_generated\common</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\common\FrontendHeap.hpp">
       <Filter>Header Files\gui\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendHeapBase.hpp">
-      <Filter>Header Files\generated\gui_generated\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\simulator\include\simulator\video\MJPEGDecoder.hpp">
-      <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
     </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\model\Model.hpp">
       <Filter>Header Files\gui\model</Filter>
@@ -667,14 +1036,14 @@
     <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1View.hpp">
       <Filter>Header Files\gui\screen1_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen1_screen</Filter>
+    <ClInclude Include="..\..\gui\include\gui\screen2_screen\Screen2Presenter.hpp">
+      <Filter>Header Files\gui\screen2_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp">
-      <Filter>Header Files\generated\gui_generated\common</Filter>
+    <ClInclude Include="..\..\gui\include\gui\screen2_screen\Screen2View.hpp">
+      <Filter>Header Files\gui\screen2_screen</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
-      <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    <ClInclude Include="..\..\gui\include\gui\model\DashboardTypes.hpp">
+      <Filter>Header Files\gui\model</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

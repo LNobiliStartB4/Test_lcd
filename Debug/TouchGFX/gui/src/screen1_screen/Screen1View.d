@@ -44,10 +44,15 @@ TouchGFX/gui/src/screen1_screen/Screen1View.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
+ ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp
 ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -92,7 +97,12 @@ TouchGFX/gui/src/screen1_screen/Screen1View.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../TouchGFX/gui/include/gui/model/Model.hpp:
+../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:

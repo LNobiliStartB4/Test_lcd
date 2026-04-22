@@ -5,17 +5,935 @@
         "Name": "Screen1",
         "Components": [
           {
-            "Type": "ScalableImage",
-            "Name": "scalableImage1",
-            "X": 123,
-            "Y": 72,
-            "Width": 234,
-            "Height": 176,
-            "Filename": "A1.png",
-            "ScalingAlgorithm": "Nearest-neighbor"
+            "Type": "Box",
+            "Name": "splashBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "Image",
+            "Name": "splashLogo",
+            "X": 129,
+            "Y": 28,
+            "Width": 222,
+            "Height": 200,
+            "RelativeFilename": "A1.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "splashTitle",
+            "X": 90,
+            "Y": 235,
+            "Width": 300,
+            "Height": 28,
+            "TextId": "Text_SplashTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "splashSubtitle",
+            "X": 60,
+            "Y": 269,
+            "Width": 360,
+            "Height": 18,
+            "TextId": "Text_SplashSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 145,
+              "Green": 164,
+              "Blue": 182
+            }
           }
         ],
         "Interactions": []
+      },
+      {
+        "Name": "Screen2",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "background",
+            "Width": 480,
+            "Height": 320,
+            "Color": {
+              "Red": 8,
+              "Green": 18,
+              "Blue": 36
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "headerPanel",
+            "X": 12,
+            "Y": 12,
+            "Width": 456,
+            "Height": 41,
+            "Color": {
+              "Red": 12,
+              "Green": 28,
+              "Blue": 50
+            },
+            "BorderColor": {
+              "Red": 42,
+              "Green": 82,
+              "Blue": 120
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "Box",
+            "Name": "brandAccent",
+            "X": 20,
+            "Y": 18,
+            "Width": 4,
+            "Height": 30,
+            "Color": {
+              "Red": 234,
+              "Green": 167,
+              "Blue": 44
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "statusBadge",
+            "X": 330,
+            "Y": 18,
+            "Width": 126,
+            "Height": 26,
+            "Color": {
+              "Red": 24,
+              "Green": 80,
+              "Blue": 74
+            },
+            "BorderColor": {
+              "Red": 78,
+              "Green": 146,
+              "Blue": 136
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "heroCard",
+            "X": 12,
+            "Y": 62,
+            "Width": 244,
+            "Height": 108,
+            "Color": {
+              "Red": 12,
+              "Green": 26,
+              "Blue": 46
+            },
+            "BorderColor": {
+              "Red": 56,
+              "Green": 86,
+              "Blue": 124
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "metricsCard",
+            "X": 268,
+            "Y": 62,
+            "Width": 200,
+            "Height": 108,
+            "Color": {
+              "Red": 12,
+              "Green": 26,
+              "Blue": 46
+            },
+            "BorderColor": {
+              "Red": 56,
+              "Green": 86,
+              "Blue": 124
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "trendPanel",
+            "X": 12,
+            "Y": 178,
+            "Width": 288,
+            "Height": 52,
+            "Color": {
+              "Red": 10,
+              "Green": 24,
+              "Blue": 43
+            },
+            "BorderColor": {
+              "Red": 52,
+              "Green": 80,
+              "Blue": 116
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "warningCard",
+            "X": 312,
+            "Y": 178,
+            "Width": 156,
+            "Height": 52,
+            "Color": {
+              "Red": 16,
+              "Green": 28,
+              "Blue": 44
+            },
+            "BorderColor": {
+              "Red": 56,
+              "Green": 86,
+              "Blue": 124
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "stepLoadBox",
+            "X": 12,
+            "Y": 238,
+            "Width": 84,
+            "Height": 22,
+            "Color": {
+              "Red": 15,
+              "Green": 27,
+              "Blue": 43
+            },
+            "BorderColor": {
+              "Red": 40,
+              "Green": 64,
+              "Blue": 92
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "stepPositionBox",
+            "X": 105,
+            "Y": 238,
+            "Width": 84,
+            "Height": 22,
+            "Color": {
+              "Red": 15,
+              "Green": 27,
+              "Blue": 43
+            },
+            "BorderColor": {
+              "Red": 40,
+              "Green": 64,
+              "Blue": 92
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "stepAspirateBox",
+            "X": 198,
+            "Y": 238,
+            "Width": 84,
+            "Height": 22,
+            "Color": {
+              "Red": 15,
+              "Green": 27,
+              "Blue": 43
+            },
+            "BorderColor": {
+              "Red": 40,
+              "Green": 64,
+              "Blue": 92
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "stepReleaseBox",
+            "X": 291,
+            "Y": 238,
+            "Width": 77,
+            "Height": 22,
+            "Color": {
+              "Red": 15,
+              "Green": 27,
+              "Blue": 43
+            },
+            "BorderColor": {
+              "Red": 40,
+              "Green": 64,
+              "Blue": 92
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "stepVerifyBox",
+            "X": 384,
+            "Y": 238,
+            "Width": 84,
+            "Height": 22,
+            "Color": {
+              "Red": 15,
+              "Green": 27,
+              "Blue": 43
+            },
+            "BorderColor": {
+              "Red": 40,
+              "Green": 64,
+              "Blue": 92
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "decreaseTargetButton",
+            "X": 12,
+            "Y": 268,
+            "Width": 108,
+            "Height": 40,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorReleased": {
+                  "Red": 17,
+                  "Green": 41,
+                  "Blue": 72
+                },
+                "ColorPressed": {
+                  "Red": 30,
+                  "Green": 63,
+                  "Blue": 102
+                },
+                "ColorBorderReleased": {
+                  "Red": 68,
+                  "Green": 110,
+                  "Blue": 156
+                },
+                "ColorBorderPressed": {
+                  "Red": 116,
+                  "Green": 156,
+                  "Blue": 198
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "increaseTargetButton",
+            "X": 128,
+            "Y": 268,
+            "Width": 108,
+            "Height": 40,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorReleased": {
+                  "Red": 17,
+                  "Green": 41,
+                  "Blue": 72
+                },
+                "ColorPressed": {
+                  "Red": 30,
+                  "Green": 63,
+                  "Blue": 102
+                },
+                "ColorBorderReleased": {
+                  "Red": 68,
+                  "Green": 110,
+                  "Blue": 156
+                },
+                "ColorBorderPressed": {
+                  "Red": 116,
+                  "Green": 156,
+                  "Blue": 198
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "suctionToggleButton",
+            "X": 244,
+            "Y": 268,
+            "Width": 108,
+            "Height": 40,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorReleased": {
+                  "Red": 18,
+                  "Green": 69,
+                  "Blue": 74
+                },
+                "ColorPressed": {
+                  "Red": 28,
+                  "Green": 103,
+                  "Blue": 108
+                },
+                "ColorBorderReleased": {
+                  "Red": 74,
+                  "Green": 146,
+                  "Blue": 136
+                },
+                "ColorBorderPressed": {
+                  "Red": 122,
+                  "Green": 184,
+                  "Blue": 173
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "releaseConfirmButton",
+            "X": 360,
+            "Y": 268,
+            "Width": 108,
+            "Height": 40,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorReleased": {
+                  "Red": 88,
+                  "Green": 54,
+                  "Blue": 15
+                },
+                "ColorPressed": {
+                  "Red": 124,
+                  "Green": 76,
+                  "Blue": 18
+                },
+                "ColorBorderReleased": {
+                  "Red": 214,
+                  "Green": 148,
+                  "Blue": 45
+                },
+                "ColorBorderPressed": {
+                  "Red": 240,
+                  "Green": 185,
+                  "Blue": 96
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "brandTitle",
+            "X": 33,
+            "Y": 14,
+            "Width": 165,
+            "Height": 24,
+            "TextId": "Text_BrandTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "brandSubtitle",
+            "X": 30,
+            "Y": 38,
+            "Width": 180,
+            "Height": 15,
+            "TextId": "Text_BrandSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 145,
+              "Green": 164,
+              "Blue": 182
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "currentLabel",
+            "X": 28,
+            "Y": 76,
+            "Width": 150,
+            "Height": 18,
+            "TextId": "Text_CurrentLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 180,
+              "Green": 197,
+              "Blue": 214
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "targetLabel",
+            "X": 282,
+            "Y": 76,
+            "Width": 80,
+            "Height": 14,
+            "TextId": "Text_TargetLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 180,
+              "Green": 197,
+              "Blue": 214
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stabilityLabel",
+            "X": 278,
+            "Y": 122,
+            "Width": 90,
+            "Height": 17,
+            "TextId": "Text_StabilityLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 180,
+              "Green": 197,
+              "Blue": 214
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "ligaturesLabel",
+            "X": 374,
+            "Y": 122,
+            "Width": 78,
+            "Height": 21,
+            "TextId": "Text_LigaturesLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 180,
+              "Green": 197,
+              "Blue": 214
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "trendTitle",
+            "X": 24,
+            "Y": 186,
+            "Width": 120,
+            "Height": 14,
+            "TextId": "Text_TrendTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 158,
+              "Green": 177,
+              "Blue": 194
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "warningLabel",
+            "X": 324,
+            "Y": 186,
+            "Width": 120,
+            "Height": 14,
+            "TextId": "Text_WarningLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 158,
+              "Green": 177,
+              "Blue": 194
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "currentUnit",
+            "X": 174,
+            "Y": 144,
+            "Width": 56,
+            "Height": 14,
+            "TextId": "Text_Mbar",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 145,
+              "Green": 164,
+              "Blue": 182
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "targetUnit",
+            "X": 368,
+            "Y": 102,
+            "Width": 42,
+            "Height": 14,
+            "TextId": "Text_Mbar",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 145,
+              "Green": 164,
+              "Blue": 182
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stepLoadText",
+            "X": 12,
+            "Y": 243,
+            "Width": 84,
+            "Height": 17,
+            "TextId": "Text_StepLoad",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 160,
+              "Green": 178,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stepPositionText",
+            "X": 105,
+            "Y": 243,
+            "Width": 84,
+            "Height": 17,
+            "TextId": "Text_StepPosition",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 160,
+              "Green": 178,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stepAspirateText",
+            "X": 198,
+            "Y": 243,
+            "Width": 84,
+            "Height": 17,
+            "TextId": "Text_StepAspirate",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 160,
+              "Green": 178,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stepReleaseText",
+            "X": 291,
+            "Y": 243,
+            "Width": 77,
+            "Height": 17,
+            "TextId": "Text_StepRelease",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 160,
+              "Green": 178,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stepVerifyText",
+            "X": 384,
+            "Y": 243,
+            "Width": 84,
+            "Height": 17,
+            "TextId": "Text_StepVerify",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 160,
+              "Green": 178,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "decreaseTargetLabel",
+            "X": 12,
+            "Y": 280,
+            "Width": 108,
+            "Height": 15,
+            "TextId": "Text_BtnMinus",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "increaseTargetLabel",
+            "X": 128,
+            "Y": 280,
+            "Width": 108,
+            "Height": 15,
+            "TextId": "Text_BtnPlus",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "releaseConfirmLabel",
+            "X": 360,
+            "Y": 280,
+            "Width": 108,
+            "Height": 15,
+            "TextId": "Text_BtnRelease",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "DynamicGraph",
+            "Name": "trendGraph",
+            "X": 24,
+            "Y": 200,
+            "Width": 264,
+            "Height": 20,
+            "DataSeed": 20260324,
+            "NumberOfValues": 80,
+            "MaxY": 280.0,
+            "Precision": "1",
+            "UseCustomVisibleDataPointRange": true,
+            "LastIndex": 80,
+            "XAxisScale": 1.0,
+            "PaddingTop": 2,
+            "PaddingBottom": 2,
+            "GraphType": "GraphScroll",
+            "GraphDrawers": [
+              {
+                "Type": "LineDrawer",
+                "LineWidth": 2,
+                "FileNameImage": "",
+                "Color": {
+                  "Red": 52,
+                  "Green": 181,
+                  "Blue": 199
+                }
+              }
+            ],
+            "YAxisGrid": {
+              "Type": "GraphGrid",
+              "Color": {
+                "Red": 30,
+                "Green": 54,
+                "Blue": 80
+              },
+              "Interval": 70.0,
+              "LineWidth": 1
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "statusValue",
+            "X": 334,
+            "Y": 22,
+            "Width": 118,
+            "Height": 16,
+            "TextId": "Value_Status",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Status",
+              "UseBuffer": true,
+              "BufferSize": 24
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "currentValue",
+            "X": 18,
+            "Y": 92,
+            "Width": 190,
+            "Height": 54,
+            "TextId": "Value_Hero",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Hero",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "targetValue",
+            "X": 282,
+            "Y": 92,
+            "Width": 78,
+            "Height": 28,
+            "TextId": "Value_Metric",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Metric",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "stabilityValue",
+            "X": 282,
+            "Y": 139,
+            "Width": 84,
+            "Height": 31,
+            "TextId": "Value_Metric",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 205,
+              "Green": 241,
+              "Blue": 217
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Metric",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "ligaturesValue",
+            "X": 375,
+            "Y": 139,
+            "Width": 77,
+            "Height": 31,
+            "TextId": "Value_Metric",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Metric",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "warningValue",
+            "X": 322,
+            "Y": 202,
+            "Width": 136,
+            "Height": 14,
+            "TextId": "Value_Warning",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Warning",
+              "UseBuffer": true,
+              "BufferSize": 28
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "suctionToggleLabel",
+            "X": 244,
+            "Y": 280,
+            "Width": 108,
+            "Height": 15,
+            "TextId": "Value_Button",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Button",
+              "UseBuffer": true,
+              "BufferSize": 16
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "decreaseTargetClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "decreaseTargetButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "decreaseTargetClicked"
+            }
+          },
+          {
+            "InteractionName": "increaseTargetClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "increaseTargetButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "increaseTargetClicked"
+            }
+          },
+          {
+            "InteractionName": "suctionToggleClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "suctionToggleButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "suctionToggleClicked"
+            }
+          },
+          {
+            "InteractionName": "releaseConfirmedClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "releaseConfirmButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "releaseConfirmedClicked"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],

@@ -4,22 +4,105 @@
     <Language Id="GB" />
   </Languages>
   <Texts>
-    <TextGroup Id="Group1" />
-    <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_I9XK" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">MENU</Translation>
+    <TextGroup Id="Dashboard">
+      <Text Id="Text_SplashTitle" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">THD BANDY</Translation>
       </Text>
-      <Text Id="GaugeValue" Alignment="Center" TypographyId="Large">
+      <Text Id="Text_SplashSubtitle" Alignment="Center" TypographyId="Subtitle">
+        <Translation Language="GB">CONTROLLO ASPIRAZIONE E PROCEDURA</Translation>
+      </Text>
+      <Text Id="Text_BrandTitle" Alignment="Left" TypographyId="Title">
+        <Translation Language="GB">THD BANDY</Translation>
+      </Text>
+      <Text Id="Text_BrandSubtitle" Alignment="Left" TypographyId="Subtitle">
+        <Translation Language="GB">CONSOLE OPERATORE</Translation>
+      </Text>
+      <Text Id="Text_CurrentLabel" Alignment="Left" TypographyId="Body">
+        <Translation Language="GB">VUOTO ATTUALE</Translation>
+      </Text>
+      <Text Id="Text_TargetLabel" Alignment="Left" TypographyId="Caption">
+        <Translation Language="GB">TARGET</Translation>
+      </Text>
+      <Text Id="Text_StabilityLabel" Alignment="Left" TypographyId="Caption">
+        <Translation Language="GB">STABILITA</Translation>
+      </Text>
+      <Text Id="Text_LigaturesLabel" Alignment="Left" TypographyId="Caption">
+        <Translation Language="GB">LEGATURE</Translation>
+      </Text>
+      <Text Id="Text_TrendTitle" Alignment="Left" TypographyId="Caption">
+        <Translation Language="GB">ANDAMENTO</Translation>
+      </Text>
+      <Text Id="Text_WarningLabel" Alignment="Left" TypographyId="Caption">
+        <Translation Language="GB">MESSAGGIO</Translation>
+      </Text>
+      <Text Id="Text_Mbar" Alignment="Center" TypographyId="Caption">
+        <Translation Language="GB">MBAR</Translation>
+      </Text>
+      <Text Id="Text_StepLoad" Alignment="Center" TypographyId="Step">
+        <Translation Language="GB">CARICA</Translation>
+      </Text>
+      <Text Id="Text_StepPosition" Alignment="Center" TypographyId="Step">
+        <Translation Language="GB">POSIZ.</Translation>
+      </Text>
+      <Text Id="Text_StepAspirate" Alignment="Center" TypographyId="Step">
+        <Translation Language="GB">ASPIRA</Translation>
+      </Text>
+      <Text Id="Text_StepRelease" Alignment="Center" TypographyId="Step">
+        <Translation Language="GB">RILASCIA</Translation>
+      </Text>
+      <Text Id="Text_StepVerify" Alignment="Center" TypographyId="Step">
+        <Translation Language="GB">VERIFICA</Translation>
+      </Text>
+      <Text Id="Text_BtnMinus" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">-10 MBAR</Translation>
+      </Text>
+      <Text Id="Text_BtnPlus" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">+10 MBAR</Translation>
+      </Text>
+      <Text Id="Text_BtnRelease" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">RILASCIO OK</Translation>
+      </Text>
+      <Text Id="Value_Hero" Alignment="Center" TypographyId="Hero">
         <Translation Language="GB">&lt;&gt;</Translation>
       </Text>
-      <Text Id="DemoLabel" Alignment="Center" TypographyId="Default">
+      <Text Id="Buffer_Hero" Alignment="Center" TypographyId="Hero">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="Value_Metric" Alignment="Left" TypographyId="Metric">
         <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="Buffer_Metric" Alignment="Left" TypographyId="Metric">
+        <Translation Language="GB">100%</Translation>
+      </Text>
+      <Text Id="Value_Status" Alignment="Center" TypographyId="Status">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="Buffer_Status" Alignment="Center" TypographyId="Status">
+        <Translation Language="GB">PRONTO</Translation>
+      </Text>
+      <Text Id="Value_Warning" Alignment="Center" TypographyId="Caption">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="Buffer_Warning" Alignment="Center" TypographyId="Caption">
+        <Translation Language="GB">IN ATTESA</Translation>
+      </Text>
+      <Text Id="Value_Button" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="Buffer_Button" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">AVVIA</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x41-0x47,0x49,0x4C-0x50,0x52-0x57" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x25,0x2D-0x2E,0x30-0x39,0x41,0x43,0x45,0x47,0x4B,0x4C,0x4F,0x50,0x52-0x57,0x61,0x66,0x6E,0x6F" />
-    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Title" Font="verdana.ttf" Size="24" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Subtitle" Font="verdana.ttf" Size="12" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Body" Font="verdana.ttf" Size="16" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Caption" Font="verdana.ttf" Size="13" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x41-0x5A" />
+    <Typography Id="Step" Font="verdana.ttf" Size="11" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Button" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2B-0x2D,0x30-0x39,0x41-0x5A" />
+    <Typography Id="Status" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x41-0x5A" />
+    <Typography Id="Metric" Font="verdana.ttf" Size="26" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x25,0x2D,0x30-0x39" />
+    <Typography Id="Hero" Font="verdana.ttf" Size="54" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
   </Typographies>
 </TextDatabase>

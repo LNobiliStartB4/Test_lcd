@@ -1,0 +1,22 @@
+../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:32:5:DashboardState::DashboardState()	1
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:5:ModelListener::ModelListener()	1
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:ModelListener::~ModelListener()	1
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:virtual ModelListener::~ModelListener()	1
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::dashboardStateUpdated(const DashboardState&)	1
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	1
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	1
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	1
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	1
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	1
+../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:27:13:Screen2Presenter::~Screen2Presenter()	1
+../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:27:13:virtual Screen2Presenter::~Screen2Presenter()	1
+../TouchGFX/gui/include/gui/model/Model.hpp:27:20:DashboardState Model::getDashboardState() const	1
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:4:1:Screen2Presenter::Screen2Presenter(Screen2View&)	1
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:9:6:virtual void Screen2Presenter::activate()	2
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:18:6:virtual void Screen2Presenter::deactivate()	1
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:22:6:virtual void Screen2Presenter::dashboardStateUpdated(const DashboardState&)	1
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:27:16:DashboardState Screen2Presenter::getDashboardState() const	2
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:32:6:void Screen2Presenter::decreaseTarget()	2
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:40:6:void Screen2Presenter::increaseTarget()	2
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:48:6:void Screen2Presenter::toggleSuction()	2
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:57:6:void Screen2Presenter::confirmRelease()	2

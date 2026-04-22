@@ -14,7 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Critical Rule — IOC Synchronization
 
-Any hardware change in `main.c` (timers, GPIO, peripherals) **must also be applied to `Display_test.ioc`**. CubeMX re-generation overwrites all generated code (`MX_*_Init`, `GPIO_Init`, etc.) but preserves `USER CODE BEGIN/END` blocks. If the `.ioc` is out of sync, the next re-generation reverts the hardware settings.
+Any hardware change in `main.c` (timers, GPIO, peripherals) **must also be applied to `Display_test_prova.ioc`**. CubeMX re-generation overwrites all generated code (`MX_*_Init`, `GPIO_Init`, etc.) but preserves `USER CODE BEGIN/END` blocks. If the `.ioc` is out of sync, the next re-generation reverts the hardware settings.
 
 - Peripheral parameters (TIM, SPI, UART...): update the matching section in `.ioc`
 - GPIO additions/removals: update `Mcu.PinN=`, `Mcu.PinsNb`, and the `PXx.*` entries in `.ioc`
@@ -90,4 +90,4 @@ All signals use **Morpho connectors (CN7/CN10)**, not Arduino headers.
 | `TouchGFX/target/TouchGFXHAL.cpp` | TouchGFX HAL overrides (user-editable, generated once) |
 | `TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp` | Generated HAL: `DisplayDriver_TransferCompleteCallback`, `touchgfxSignalVSync` |
 | `TouchGFX/target/STM32TouchController.cpp` | Touch IC driver (I2C read, coordinate mapping) |
-| `Display_test.ioc` | CubeMX project — must stay in sync with `main.c` |
+| `Display_test_prova.ioc` | CubeMX project — must stay in sync with `main.c` |

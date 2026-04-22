@@ -1,19 +1,32 @@
 #ifndef MODELLISTENER_HPP
 #define MODELLISTENER_HPP
 
-#include <gui/model/Model.hpp>
+#include <gui/model/DashboardTypes.hpp>
+
+class Model;
 
 class ModelListener
 {
 public:
-    ModelListener() : model(0) {}
-    
-    virtual ~ModelListener() {}
+    ModelListener()
+        : model(0)
+    {
+    }
+
+    virtual ~ModelListener()
+    {
+    }
 
     void bind(Model* m)
     {
         model = m;
     }
+
+    virtual void dashboardStateUpdated(const DashboardState& state)
+    {
+        (void)state;
+    }
+
 protected:
     Model* model;
 };

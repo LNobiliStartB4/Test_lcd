@@ -1,2 +1,14 @@
-../TouchGFX/gui/src/model/Model.cpp:4:1:Model::Model()	1
-../TouchGFX/gui/src/model/Model.cpp:9:6:void Model::tick()	1
+../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:32:5:DashboardState::DashboardState()	1
+../TouchGFX/gui/src/model/Model.cpp:15:9:int32_t {anonymous}::absoluteValue(int32_t)	1
+../TouchGFX/gui/src/model/Model.cpp:21:1:Model::Model()	1
+../TouchGFX/gui/src/model/Model.cpp:32:6:void Model::tick()	4
+../TouchGFX/gui/src/model/Model.cpp:57:6:void Model::initializeDashboard()	1
+../TouchGFX/gui/src/model/Model.cpp:71:6:void Model::setSuctionEnabled(bool)	5
+../TouchGFX/gui/src/model/Model.cpp:100:6:void Model::adjustTargetPressure(int32_t)	3
+../TouchGFX/gui/src/model/Model.cpp:117:6:void Model::markBandReleased()	4
+../TouchGFX/gui/src/model/Model.cpp:141:6:void Model::resetProcedure()	1
+../TouchGFX/gui/src/model/Model.cpp:146:6:void Model::notifyDashboardState()	2
+../TouchGFX/gui/src/model/Model.cpp:154:6:void Model::updateSimulationStep()	16
+../TouchGFX/gui/src/model/Model.cpp:225:6:void Model::updateDerivedState()	13
+../TouchGFX/gui/src/model/Model.cpp:299:6:bool Model::hasStateChanged(const DashboardState&) const	9
+../TouchGFX/gui/src/model/Model.cpp:311:9:int32_t Model::clampTargetPressure(int32_t) const	3

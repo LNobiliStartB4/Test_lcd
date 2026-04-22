@@ -1,0 +1,29 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:91:5:touchgfx::colortype::colortype(uint32_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:114:5:touchgfx::colortype::operator uint32_t() const	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:62:10:void touchgfx::Box::setColor(touchgfx::colortype)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:61:10:void touchgfx::BoxWithBorder::setBorderColor(touchgfx::colortype)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:57:18:virtual void touchgfx::AbstractPainterColor::setColor(touchgfx::colortype)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:47:18:virtual void touchgfx::PainterRGB565::setColor(touchgfx::colortype)	1
+../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:12:13:Screen2View::~Screen2View()	1
+../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:12:13:virtual Screen2View::~Screen2View()	1
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:7:10:uint16_t {anonymous}::rgb(uint8_t, uint8_t, uint8_t)	1
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:12:5:int {anonymous}::clampTrendValue(int)	3
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:28:1:Screen2View::Screen2View()	1
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:40:6:virtual void Screen2View::setupScreen()	2
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:53:6:virtual void Screen2View::tearDownScreen()	1
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:60:6:virtual void Screen2View::decreaseTargetClicked()	2
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:68:6:virtual void Screen2View::increaseTargetClicked()	2
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:76:6:virtual void Screen2View::suctionToggleClicked()	2
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:84:6:virtual void Screen2View::releaseConfirmedClicked()	2
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:92:6:void Screen2View::applyDashboardState(const DashboardState&)	1
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:118:6:void Screen2View::updateStatusAppearance(const DashboardState&)	4
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:158:6:void Screen2View::updateWarningAppearance(const DashboardState&)	4
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:191:6:void Screen2View::updateProcedureAppearance(ProcedureStep)	9
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:202:6:void Screen2View::applyStepVisual(touchgfx::BoxWithBorder&, touchgfx::TextArea&, uint8_t)	3
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:229:13:const char* Screen2View::getStatusText(const DashboardState&) const	5
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:245:13:const char* Screen2View::getWarningText(const DashboardState&) const	6
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:276:13:const char* Screen2View::getSuctionLabel(const DashboardState&) const	2

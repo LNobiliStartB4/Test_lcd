@@ -4,6 +4,7 @@
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen1ViewBase::Screen1ViewBase()
 {
@@ -11,9 +12,25 @@ Screen1ViewBase::Screen1ViewBase()
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_A1_ID));
-    image1.setXY(129, 60);
-    add(image1);
+    splashBackground.setPosition(0, 0, 480, 320);
+    splashBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    add(splashBackground);
+
+    splashLogo.setXY(129, 28);
+    splashLogo.setBitmap(touchgfx::Bitmap(BITMAP_A1_ID));
+    add(splashLogo);
+
+    splashTitle.setPosition(90, 235, 300, 28);
+    splashTitle.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
+    splashTitle.setLinespacing(0);
+    splashTitle.setTypedText(touchgfx::TypedText(T_TEXT_SPLASHTITLE));
+    add(splashTitle);
+
+    splashSubtitle.setPosition(60, 269, 360, 18);
+    splashSubtitle.setColor(touchgfx::Color::getColorFromRGB(145, 164, 182));
+    splashSubtitle.setLinespacing(0);
+    splashSubtitle.setTypedText(touchgfx::TypedText(T_TEXT_SPLASHSUBTITLE));
+    add(splashSubtitle);
 }
 
 Screen1ViewBase::~Screen1ViewBase()

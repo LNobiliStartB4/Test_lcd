@@ -43,23 +43,15 @@ build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1Presenter.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
- gui/include/gui/model/Model.hpp \
+ gui/include/gui/model/Model.hpp gui/include/gui/model/DashboardTypes.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  gui/include/gui/screen1_screen/Screen1Presenter.hpp \
  gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SlideMenu.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp
 gui/include/gui/screen1_screen/Screen1View.hpp:
 generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
 gui/include/gui/common/FrontendApplication.hpp:
@@ -104,19 +96,12 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 gui/include/gui/model/Model.hpp:
+gui/include/gui/model/DashboardTypes.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 gui/include/gui/screen1_screen/Screen1Presenter.hpp:
 gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/SlideMenu.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
