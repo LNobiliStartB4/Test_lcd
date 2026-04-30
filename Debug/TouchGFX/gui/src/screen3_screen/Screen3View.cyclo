@@ -1,0 +1,24 @@
+../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:15:5:BandyState::BandyState()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:140:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:179:13:touchgfx::GenericCallback<void>::~GenericCallback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:179:13:virtual touchgfx::GenericCallback<void>::~GenericCallback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
+../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp:26:26:FrontendApplication& Screen3ViewBase::application()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:touchgfx::Callback<Screen3View>::~Callback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:virtual touchgfx::Callback<Screen3View>::~Callback()	1
+../TouchGFX/gui/include/gui/screen3_screen/Screen3View.hpp:14:13:Screen3View::~Screen3View()	1
+../TouchGFX/gui/include/gui/screen3_screen/Screen3View.hpp:14:13:virtual Screen3View::~Screen3View()	1
+../TouchGFX/gui/src/screen3_screen/Screen3View.cpp:9:1:Screen3View::Screen3View()	1
+../TouchGFX/gui/src/screen3_screen/Screen3View.cpp:19:6:virtual void Screen3View::setupScreen()	2
+../TouchGFX/gui/src/screen3_screen/Screen3View.cpp:36:6:virtual void Screen3View::tearDownScreen()	1
+../TouchGFX/gui/src/screen3_screen/Screen3View.cpp:42:6:virtual void Screen3View::handleTickEvent()	6
+../TouchGFX/gui/src/screen3_screen/Screen3View.cpp:57:6:void Screen3View::decreaseTargetClicked()	2
+../TouchGFX/gui/src/screen3_screen/Screen3View.cpp:65:6:void Screen3View::increaseTargetClicked()	2
+../TouchGFX/gui/src/screen3_screen/Screen3View.cpp:73:6:void Screen3View::startClicked()	2
+../TouchGFX/gui/src/screen3_screen/Screen3View.cpp:81:6:void Screen3View::applyBandyState(const BandyState&)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:175:7:constexpr touchgfx::GenericCallback<void>::GenericCallback()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:440:5:touchgfx::Callback<dest_type, void, void, void>::Callback(dest_type*, void (dest_type::*)()) [with dest_type = Screen3View]	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = Screen3View]	2
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = Screen3View]	5

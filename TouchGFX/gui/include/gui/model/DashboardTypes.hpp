@@ -3,52 +3,29 @@
 
 #include <stdint.h>
 
-enum VacuumState
+enum BandyVacuumState
 {
-    VacuumStateReady = 0,
-    VacuumStatePulling,
-    VacuumStateTissueReady,
-    VacuumStateWarning
+    BandyVacuumStateReady = 0,
+    BandyVacuumStatePulling,
+    BandyVacuumStateTarget
 };
 
-enum WarningCode
+struct BandyState
 {
-    WarningCodeNone = 0,
-    WarningCodeLeak,
-    WarningCodeSensorMissing
-};
-
-enum ProcedureStep
-{
-    ProcedureStepLoadRing = 0,
-    ProcedureStepPosition,
-    ProcedureStepAspirate,
-    ProcedureStepRelease,
-    ProcedureStepVerify
-};
-
-struct DashboardState
-{
-    DashboardState()
-        : currentPressureMbar(0),
-          targetPressureMbar(200),
-          stabilityPercent(0),
-          ligatureCount(0),
-          suctionEnabled(false),
-          procedureStep(ProcedureStepLoadRing),
-          vacuumState(VacuumStateReady),
-          warningCode(WarningCodeNone)
+    BandyState()
+        : currentVacuumMbar(0),
+          targetVacuumMbar(450),
+          running(false),
+          targetReached(false),
+          vacuumState(BandyVacuumStateReady)
     {
     }
 
-    int32_t currentPressureMbar;
-    int32_t targetPressureMbar;
-    uint8_t stabilityPercent;
-    uint16_t ligatureCount;
-    bool suctionEnabled;
-    ProcedureStep procedureStep;
-    VacuumState vacuumState;
-    WarningCode warningCode;
+    int32_t currentVacuumMbar;
+    int32_t targetVacuumMbar;
+    bool running;
+    bool targetReached;
+    BandyVacuumState vacuumState;
 };
 
 #endif // DASHBOARDTYPES_HPP

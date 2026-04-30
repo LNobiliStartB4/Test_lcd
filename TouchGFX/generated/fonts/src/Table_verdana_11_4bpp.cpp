@@ -4,20 +4,7 @@
 
 FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_verdana_11_4bpp[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE = {
-    {     0, 0x002E,   2,   2,   2,   1,   4,   0,   3, 0x00 },
-    {     2, 0x003F,   6,   8,   8,   0,   6,   0,   0, 0x00 },
-    {    26, 0x0041,   8,   8,   8,   0,   8,   0,   0, 0x00 },
-    {    58, 0x0043,   8,   8,   8,   0,   8,   0,   0, 0x00 },
-    {    90, 0x0045,   6,   8,   8,   1,   7,   0,   0, 0x00 },
-    {   114, 0x0046,   6,   8,   8,   1,   6,   0,   0, 0x00 },
-    {   138, 0x0049,   4,   8,   8,   0,   5,   0,   0, 0x00 },
-    {   154, 0x004C,   6,   8,   8,   1,   6,   0,   0, 0x00 },
-    {   178, 0x004F,   8,   8,   8,   0,   9,   0,   0, 0x00 },
-    {   210, 0x0050,   6,   8,   8,   1,   7,   0,   0, 0x00 },
-    {   234, 0x0052,   7,   8,   8,   1,   8,   0,   0, 0x00 },
-    {   266, 0x0053,   7,   8,   8,   0,   8,   0,   0, 0x00 },
-    {   298, 0x0056,   8,   8,   8,   0,   8,   0,   0, 0x00 },
-    {   330, 0x005A,   7,   8,   8,   0,   8,   0,   0, 0x00 }
+    {     0, 0x003F,   6,   8,   8,   0,   6,   0,   0, 0x00 }
 };
 
 // verdana_11_4bpp
@@ -35,6 +22,6 @@ touchgfx::GeneratedFont& getFont_verdana_11_4bpp();
 
 touchgfx::GeneratedFont& getFont_verdana_11_4bpp()
 {
-    static touchgfx::GeneratedFont verdana_11_4bpp(glyphs_verdana_11_4bpp, 14, 11, 11, 0, 0, 4, 1, 0, 1, unicodes_verdana_11_4bpp, kerning_verdana_11_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont verdana_11_4bpp(glyphs_verdana_11_4bpp, 1, 11, 11, 0, 0, 4, 1, 0, 0, unicodes_verdana_11_4bpp, kerning_verdana_11_4bpp, 63, 0, 0, 0);
     return verdana_11_4bpp;
 }

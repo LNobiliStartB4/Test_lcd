@@ -1,0 +1,10 @@
+../Core/Src/display_bridge_rx.c:19:13:DisplayBridgeRx_Rearm	8	static
+../Core/Src/display_bridge_rx.c:27:13:DisplayBridgeRx_ResetFrame	4	static
+../Core/Src/display_bridge_rx.c:32:13:DisplayBridgeRx_ParseLongField	24	static
+../Core/Src/display_bridge_rx.c:48:13:DisplayBridgeRx_ParseFrame	24	static
+../Core/Src/display_bridge_rx.c:75:13:DisplayBridgeRx_ProcessByte	16	static
+../Core/Src/display_bridge_rx.c:99:6:DisplayBridgeRx_Init	16	static
+../Core/Src/display_bridge_rx.c:110:6:DisplayBridgeRx_GetLatestSnapshot	24	static,ignoring_inline_asm
+../Core/Src/display_bridge_rx.c:137:6:DisplayBridgeRx_GetLatestPressureMbar	32	static
+../Core/Src/display_bridge_rx.c:155:6:HAL_UART_RxCpltCallback	16	static
+../Core/Src/display_bridge_rx.c:166:6:HAL_UART_ErrorCallback	16	static

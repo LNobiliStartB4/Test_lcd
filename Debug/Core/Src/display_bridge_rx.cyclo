@@ -1,0 +1,10 @@
+../Core/Src/display_bridge_rx.c:19:13:DisplayBridgeRx_Rearm	2
+../Core/Src/display_bridge_rx.c:27:13:DisplayBridgeRx_ResetFrame	1
+../Core/Src/display_bridge_rx.c:32:13:DisplayBridgeRx_ParseLongField	2
+../Core/Src/display_bridge_rx.c:48:13:DisplayBridgeRx_ParseFrame	3
+../Core/Src/display_bridge_rx.c:75:13:DisplayBridgeRx_ProcessByte	4
+../Core/Src/display_bridge_rx.c:99:6:DisplayBridgeRx_Init	1
+../Core/Src/display_bridge_rx.c:110:6:DisplayBridgeRx_GetLatestSnapshot	2
+../Core/Src/display_bridge_rx.c:137:6:DisplayBridgeRx_GetLatestPressureMbar	3
+../Core/Src/display_bridge_rx.c:155:6:HAL_UART_RxCpltCallback	3
+../Core/Src/display_bridge_rx.c:166:6:HAL_UART_ErrorCallback	3

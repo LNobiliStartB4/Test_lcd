@@ -1,314 +1,190 @@
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
+#include "display_bridge_rx.h"
 
 namespace
 {
-const int32_t kDefaultTargetMbar = 200;
-const int32_t kMinTargetMbar = 120;
-const int32_t kMaxTargetMbar = 260;
-const uint8_t kTickDividerLimit = 6; // 60 Hz / 6 = 10 Hz dashboard updates
-const uint8_t kLeakThresholdTicks = 25;
-const uint8_t kVerifyFeedbackTicks = 12;
-
-const int8_t kPressureWavePattern[] = { 0, 1, 2, 3, 2, 1, 0, -1, -2, -3, -2, -1 };
-
-int32_t absoluteValue(int32_t value)
-{
-    return (value >= 0) ? value : -value;
-}
+const int32_t kDefaultTargetMbar = 450;
+const int32_t kMinTargetMbar = 0;
+const int32_t kMaxTargetMbar = 500;
+const int32_t kTargetStepMbar = 10;
+const uint8_t kTickDividerLimit = 6; // 60 Hz / 6 = 10 Hz UI updates
 }
 
 Model::Model()
     : modelListener(0),
-      dashboardState(),
+      bandyState(),
       tickDivider(0),
-      waveIndex(0),
-      leakTicks(0),
-      releaseFeedbackTicks(0),
-      dashboardInitialized(false)
+      bandyInitialized(false),
+      bridgeSnapshotValid(false),
+      bridgeVacuumState(0),
+      bridgeFault(0),
+      bridgePressureMbar(0)
 {
 }
 
 void Model::tick()
 {
-    if (!dashboardInitialized)
-    {
-        return;
-    }
-
     if (++tickDivider < kTickDividerLimit)
     {
         return;
     }
 
     tickDivider = 0;
+    updateBridgeSnapshot();
 
-    DashboardState previousState = dashboardState;
-
-    updateSimulationStep();
-    updateDerivedState();
-
-    if (hasStateChanged(previousState))
+    if (!bandyInitialized)
     {
-        notifyDashboardState();
+        return;
+    }
+
+    const BandyState previousState = bandyState;
+    updateBandyFromInput();
+    updateBandyDerivedState();
+
+    if (hasBandyStateChanged(previousState))
+    {
+        notifyBandyState();
     }
 }
 
-void Model::initializeDashboard()
+void Model::initializeBandyDemo()
 {
-    dashboardState = DashboardState();
-    dashboardState.targetPressureMbar = kDefaultTargetMbar;
-    dashboardInitialized = true;
+    if (bandyInitialized)
+    {
+        return;
+    }
+
+    bandyState = BandyState();
+    bandyState.targetVacuumMbar = kDefaultTargetMbar;
+    bandyInitialized = true;
     tickDivider = 0;
-    waveIndex = 0;
-    leakTicks = 0;
-    releaseFeedbackTicks = 0;
 
-    updateDerivedState();
-    notifyDashboardState();
+    updateBandyDerivedState();
+    notifyBandyState();
 }
 
-void Model::setSuctionEnabled(bool enabled)
+void Model::startBandyDemo()
 {
-    if (!dashboardInitialized)
+    if (!bandyInitialized)
     {
-        initializeDashboard();
+        initializeBandyDemo();
     }
 
-    if (dashboardState.suctionEnabled == enabled)
+    if (bandyState.running)
     {
         return;
     }
 
-    dashboardState.suctionEnabled = enabled;
-    dashboardState.warningCode = WarningCodeNone;
-    leakTicks = 0;
-
-    if (enabled)
-    {
-        releaseFeedbackTicks = 0;
-    }
-    else if (releaseFeedbackTicks == 0)
-    {
-        dashboardState.procedureStep = ProcedureStepLoadRing;
-    }
-
-    updateDerivedState();
-    notifyDashboardState();
+    bandyState.running = true;
+    bandyState.targetReached = false;
+    updateBandyDerivedState();
+    notifyBandyState();
 }
 
-void Model::adjustTargetPressure(int32_t deltaMbar)
+void Model::increaseBandyTarget()
 {
-    if (!dashboardInitialized)
+    if (!bandyInitialized)
     {
-        initializeDashboard();
+        initializeBandyDemo();
     }
 
-    DashboardState previousState = dashboardState;
-    dashboardState.targetPressureMbar = clampTargetPressure(dashboardState.targetPressureMbar + deltaMbar);
-    updateDerivedState();
-
-    if (hasStateChanged(previousState))
+    const BandyState previousState = bandyState;
+    bandyState.targetVacuumMbar = clampTarget(bandyState.targetVacuumMbar + kTargetStepMbar);
+    if (bandyState.currentVacuumMbar < bandyState.targetVacuumMbar)
     {
-        notifyDashboardState();
+        bandyState.targetReached = false;
+    }
+
+    updateBandyDerivedState();
+    if (hasBandyStateChanged(previousState))
+    {
+        notifyBandyState();
     }
 }
 
-void Model::markBandReleased()
+void Model::decreaseBandyTarget()
 {
-    if (!dashboardInitialized)
+    if (!bandyInitialized)
     {
-        initializeDashboard();
+        initializeBandyDemo();
     }
 
-    if (dashboardState.warningCode != WarningCodeNone || dashboardState.vacuumState != VacuumStateTissueReady)
+    const BandyState previousState = bandyState;
+    bandyState.targetVacuumMbar = clampTarget(bandyState.targetVacuumMbar - kTargetStepMbar);
+    if (bandyState.currentVacuumMbar > bandyState.targetVacuumMbar)
     {
-        return;
+        bandyState.targetReached = false;
     }
 
-    dashboardState.ligatureCount++;
-    dashboardState.suctionEnabled = false;
-    dashboardState.warningCode = WarningCodeNone;
-    dashboardState.procedureStep = ProcedureStepVerify;
-
-    releaseFeedbackTicks = kVerifyFeedbackTicks;
-    leakTicks = 0;
-
-    updateDerivedState();
-    notifyDashboardState();
+    updateBandyDerivedState();
+    if (hasBandyStateChanged(previousState))
+    {
+        notifyBandyState();
+    }
 }
 
-void Model::resetProcedure()
+bool Model::isVacuumCycleRunning() const
 {
-    initializeDashboard();
+    return bridgeSnapshotValid && (bridgeVacuumState == 1U);
 }
 
-void Model::notifyDashboardState()
+void Model::notifyBandyState()
 {
     if (modelListener != 0)
     {
-        modelListener->dashboardStateUpdated(dashboardState);
+        modelListener->bandyStateUpdated(bandyState);
     }
 }
 
-void Model::updateSimulationStep()
+void Model::updateBridgeSnapshot()
 {
-    const int32_t previousPressure = dashboardState.currentPressureMbar;
+    display_bridge_snapshot_t snapshot;
 
-    if (dashboardState.suctionEnabled)
+    if (!DisplayBridgeRx_GetLatestSnapshot(&snapshot))
     {
-        int32_t desiredPressure = dashboardState.targetPressureMbar;
-        if (dashboardState.currentPressureMbar >= (dashboardState.targetPressureMbar - 18))
-        {
-            desiredPressure += kPressureWavePattern[waveIndex];
-            waveIndex = static_cast<uint8_t>((waveIndex + 1U) % (sizeof(kPressureWavePattern) / sizeof(kPressureWavePattern[0])));
-        }
-
-        int32_t delta = desiredPressure - dashboardState.currentPressureMbar;
-        int32_t step = delta / 3;
-
-        if (step == 0 && delta != 0)
-        {
-            step = (delta > 0) ? 1 : -1;
-        }
-
-        dashboardState.currentPressureMbar += step;
-        if (dashboardState.currentPressureMbar < 0)
-        {
-            dashboardState.currentPressureMbar = 0;
-        }
-    }
-    else if (dashboardState.currentPressureMbar > 0)
-    {
-        int32_t decayStep = dashboardState.currentPressureMbar / 4;
-        if (decayStep < 4)
-        {
-            decayStep = 4;
-        }
-
-        dashboardState.currentPressureMbar -= decayStep;
-        if (dashboardState.currentPressureMbar < 0)
-        {
-            dashboardState.currentPressureMbar = 0;
-        }
+        return;
     }
 
-    if (dashboardState.suctionEnabled)
-    {
-        const int32_t targetPressure = dashboardState.targetPressureMbar;
-        const int32_t pressureDrop = previousPressure - dashboardState.currentPressureMbar;
-        const bool underTarget = dashboardState.currentPressureMbar < ((targetPressure * 8) / 10);
-
-        if (underTarget || pressureDrop > 20)
-        {
-            if (leakTicks < 255)
-            {
-                leakTicks++;
-            }
-        }
-        else
-        {
-            leakTicks = 0;
-        }
-    }
-    else
-    {
-        leakTicks = 0;
-    }
-
-    if (releaseFeedbackTicks > 0)
-    {
-        releaseFeedbackTicks--;
-    }
+    bridgeSnapshotValid = snapshot.valid;
+    bridgeVacuumState = snapshot.vacuumState;
+    bridgeFault = snapshot.fault;
+    bridgePressureMbar = snapshot.pressureMbar;
 }
 
-void Model::updateDerivedState()
+void Model::updateBandyFromInput()
 {
-    const int32_t currentPressure = dashboardState.currentPressureMbar;
-    const int32_t targetPressure = dashboardState.targetPressureMbar;
-    const int32_t pressureError = absoluteValue(targetPressure - currentPressure);
-
-    if (!dashboardState.suctionEnabled)
+    if (!bridgeSnapshotValid)
     {
-        dashboardState.stabilityPercent = 0;
-    }
-    else
-    {
-        int32_t stability = 100 - (pressureError * 3);
-        if (stability < 0)
-        {
-            stability = 0;
-        }
-        else if (stability > 100)
-        {
-            stability = 100;
-        }
-
-        dashboardState.stabilityPercent = static_cast<uint8_t>(stability);
+        return;
     }
 
-    if (dashboardState.warningCode == WarningCodeSensorMissing)
-    {
-        dashboardState.vacuumState = VacuumStateWarning;
-    }
-    else if (dashboardState.suctionEnabled && leakTicks >= kLeakThresholdTicks)
-    {
-        dashboardState.warningCode = WarningCodeLeak;
-        dashboardState.vacuumState = VacuumStateWarning;
-    }
-    else
-    {
-        dashboardState.warningCode = WarningCodeNone;
-
-        if (!dashboardState.suctionEnabled)
-        {
-            dashboardState.vacuumState = VacuumStateReady;
-        }
-        else if (pressureError <= 10)
-        {
-            dashboardState.vacuumState = VacuumStateTissueReady;
-        }
-        else
-        {
-            dashboardState.vacuumState = VacuumStatePulling;
-        }
-    }
-
-    if (releaseFeedbackTicks > 0)
-    {
-        dashboardState.procedureStep = ProcedureStepVerify;
-    }
-    else if (!dashboardState.suctionEnabled)
-    {
-        dashboardState.procedureStep = ProcedureStepLoadRing;
-    }
-    else if (currentPressure < (targetPressure / 3))
-    {
-        dashboardState.procedureStep = ProcedureStepPosition;
-    }
-    else if (dashboardState.vacuumState == VacuumStateTissueReady)
-    {
-        dashboardState.procedureStep = ProcedureStepRelease;
-    }
-    else
-    {
-        dashboardState.procedureStep = ProcedureStepAspirate;
-    }
+    bandyState.currentVacuumMbar = clampTarget(bridgePressureMbar);
+    bandyState.running = (bridgeVacuumState == 1U);
+    bandyState.targetReached =
+        (bandyState.currentVacuumMbar >= (bandyState.targetVacuumMbar - 20)) &&
+        (bandyState.currentVacuumMbar <= (bandyState.targetVacuumMbar + 20));
 }
 
-bool Model::hasStateChanged(const DashboardState& previousState) const
+void Model::updateBandyDerivedState()
 {
-    return (dashboardState.currentPressureMbar != previousState.currentPressureMbar) ||
-           (dashboardState.targetPressureMbar != previousState.targetPressureMbar) ||
-           (dashboardState.stabilityPercent != previousState.stabilityPercent) ||
-           (dashboardState.ligatureCount != previousState.ligatureCount) ||
-           (dashboardState.suctionEnabled != previousState.suctionEnabled) ||
-           (dashboardState.procedureStep != previousState.procedureStep) ||
-           (dashboardState.vacuumState != previousState.vacuumState) ||
-           (dashboardState.warningCode != previousState.warningCode);
+    if (!bandyState.running)
+    {
+        bandyState.vacuumState = BandyVacuumStateReady;
+        return;
+    }
+
+    if (bandyState.targetReached)
+    {
+        bandyState.vacuumState = BandyVacuumStateTarget;
+    }
+    else
+    {
+        bandyState.vacuumState = BandyVacuumStatePulling;
+    }
 }
 
-int32_t Model::clampTargetPressure(int32_t requestedTarget) const
+int32_t Model::clampTarget(int32_t requestedTarget) const
 {
     if (requestedTarget < kMinTargetMbar)
     {
@@ -321,4 +197,13 @@ int32_t Model::clampTargetPressure(int32_t requestedTarget) const
     }
 
     return requestedTarget;
+}
+
+bool Model::hasBandyStateChanged(const BandyState& previousState) const
+{
+    return previousState.currentVacuumMbar != bandyState.currentVacuumMbar ||
+           previousState.targetVacuumMbar != bandyState.targetVacuumMbar ||
+           previousState.running != bandyState.running ||
+           previousState.targetReached != bandyState.targetReached ||
+           previousState.vacuumState != bandyState.vacuumState;
 }

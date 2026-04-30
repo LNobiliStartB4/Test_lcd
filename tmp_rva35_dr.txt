@@ -1,0 +1,100 @@
+                                                                                                                                           Revision:                          Changes:                                        Date:
+                                                                                                                                                1.0                           Initial Case                                2024.06.19
+
+                                                                                                                                                1.1                           PCB Update                                  2024.11.07
+
+                                                                                                                                                1.2                    Part Number Update                                 2025.01.14
+
+
+
+                                                 70.40 [2.772](PCB O.D.)                                                    18.80 [0.740](MODULE O.D.)
+
+                                 12.75 [0.502]
+                                 14.65 [0.577]
+                                 14.95 [0.589]
+                                 5.00 [0.197]
+                                                  59.56 [2.345](CG O.D.)           5.45 [0.214]                             10.26 [0.404](CTP+TFT+GASKET+PCB LAMINATE)
+                                                  54.46 [2.144](TFT O.D.)          8.00 [0.315]                             5.66 [0.223](CTP+TFT)
+                                                    49.56 [1.951](CG V.A.)         10.45 [0.411]                            1.10 [0.043](CG)
+                                                    48.96 [1.928](TFT A.A.)        10.75 [0.423]                            6.00 [0.236](GOLDPINS HEIGHT)
+
+                                                                                                                                                                        1
+
+
+
+                                                                                                                                                                                                              1
+
+                                                 (0.0)
+                                                                                                    CG                                 CN7
+                 73.70 [2.902](PCB O.D.)
+
+                 82.94 [3.265])TFT O.D.)
+
+                 73.44 [2.891](TFT A.A.)
+                  93.34 [3.675](CG O.D.)
+
+
+
+
+                                                                                                                                                                                                                        CN8
+                  74.04 [2.915](CG V.A.)
+
+
+
+
+                                                                                    (T=1.1mm[0.043inch])
+                                                                                                                                                                        1
+
+
+                                                                                                    SCA                                                                                                       1
+
+
+                                                                                     (T=0.2mm[0.008inch])
+                                                                                                                                      CN10                                    1                  50
+                                                                                                SENSOR
+                                                                                    (T=0.55mm[0.022inch])                                                                                                               CN9
+
+                                                                                                    OCA
+                                                                                                                                                                                    1        6
+                                                                                   (T=0.175mm[0.007inch])
+
+                                                                                                                                3mm RUBBER GASKET
+
+
+
+
+                                                                                                                                                                                                  COMPONENT
+                                                                                                                                                                                        IC
+
+
+
+
+                                                                                                                                                                                                    AREA
+                                                                                                                                                                        K A
+
+
+                                                                                                                                 2.54mm GOLDPINS
+                                                                                                                               FOR NUCLEO BOARD
+                 24.64 [0.970]
+
+
+
+
+                                                                                         LEDA                                      LEDK
+
+                                                                                               Backlight Circuit Diagram
+
+
+
+
+TFT NOTES:                                               TP NOTES:                                    GENERAL NOTES:
+1. DISPLAY TYPE: TFT, TRANSMISSIVE, NORMALLY             1. TP STRUCTURE: G+G                         1. OPERATING TEMPERATURE: -20°C ~ 70°C
+   BLACK                                                 2. DRIVER IC: ILI2130                        2. STORAGE TEMPERATURE: -30°C ~ 80°C             PN: RVA35HI-NUC144A
+2. RESOLUTION: 320x480                                   3. SURFACE HARDNESS:>6H                      3. WITHOUT INDIVIDUAL TOLERANCE: ±0.3mm
+3. VIEWING ANGLE: FREE                                                                                4. RoHS COMPLIANT                                SN:
+4. SURFACE LUMINANCE: 1200cd/m2
+5. BACKLIGHT: 10 LEDS
+                                                                                                                                                       DRAWN:    M.Natywa                                 2024.11.07   1:1.00
+                                                                                                                                                       CHECKED: M.Wierzbowski                             2025.01.14   [mm]
+                                                                                                                                                       APPR:                                                           ISO A3    P. 1 of 1
+

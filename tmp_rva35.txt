@@ -1,0 +1,582 @@
+TFT MODULE SPECIFICATION
+
+
+
+                                                                  RVA35HI-NUC144A
+
+
+
+                                       HB, IPS 3.5” LCD TFT DATASHEET
+                                                                                               Rev.1.3
+                                                                                            2025-01-14
+
+                           ITEM                                           CONTENTS                  UNIT
+                           LCD Type                         TFT/Transmissive/Normally black/IPS        /
+                           Size                             3.5                                      Inch
+                           Viewing Direction                Free                                       /
+                           Outside Dimensions (W x H x D)   98.34 x 70.40 x 18.80                    mm
+                           Active Area (W x H)              73.44 x 48.96                            mm
+                           Pixel Pitch (W x H)              0.153 x 0.153                            mm
+                           Resolution                       320 (RGB) x 480                            /
+                           Brightness                       1200                                    cd/m2
+                           LCD Interface Type               RGB / SPI                                  /
+                           LCD Driver                       ILI9488
+                           Color Depth                      262K                                     /
+                           Pixel Arrangement                RGB Vertical Stripe                      /
+                           With/Without Touch               With Projected Capacitive Touch Panel    /
+                           CTP Driver                       ILI2130                                  /
+                           Touch Interface Type             I2C                                      /
+                           Bonding Technology               Optical Bonding                          /
+                           Weight                           170                                      g
+
+                           Note 1. RoHS3 compliant
+
+                           Note 2. LCM weight tolerance: ± 5%.
+RVA35HI-NUC144A
+
+  REVISION RECORD
+  REV NO.        REV DATE                     CONTENTS            REMARKS
+    1.0          2024-06-19   First Release
+     1.1         2024-08-26   Corrected the schematic
+    1.2          2024-11-07   PCB Update
+    1.3          2025-01-14   Part Number Update
+
+
+
+
+© 2025 Riverdi                 Page 2 of 14              www.riverdi.com
+RVA35HI-NUC144A
+
+  CONTENTS
+     REVISION RECORD ............................................................................................................................. 2
+     CONTENTS ................................................................................................................................................ 3
+     MODULE CLASSIFICATION INFORMATION ......................................................................... 4
+     MODULE DRAWING ........................................................................................................................... 5
+     ABSOLUTE MAXIMUM RATINGS ................................................................................................. 6
+     ELECTRICAL CHARACTERISTICS ................................................................................................ 6
+     BACKLIGHT ELECTRICAL CHARACTERISTICS .................................................................... 6
+     ELECTRO-OPTICAL CHARACTERISTICS ................................................................................. 7
+     INTERFACES DESCRIPTION ........................................................................................................... 9
+
+
+
+
+     EXTERNAL MEMORY ..........................................................................................................................11
+     CAPACITIVE TOUCH SCREEN PANEL SPECIFICATIONS .............................................11
+
+
+
+
+     INSPECTION ............................................................................................................................................12
+
+
+
+
+     LEGAL INFORMATION ..................................................................................................................... 14
+
+
+
+
+© 2025 Riverdi                                                Page 3 of 14                                                www.riverdi.com
+RVA35HI-NUC144A
+
+  MODULE CLASSIFICATION INFORMATION
+
+  RV       A          35         H          I            NUC            144         A
+  1.       2.         3.         4.        5.              6.            7.         8.
+
+
+
+ NO.             PARAMETER                SYMBOL
+  1.                 BRAND                  RV – Riverdi
+  2.             PRODUCT TYPE               A – Accessories
+  3.              DISPLAY SIZE              35 – 3.5’’
+  4.            MODEL SERIAL NO.            H – High Brightness, IPS
+  5.              RESOLUTION                I – 320 x 480 px
+  6.                                       NUC – goldpins for Nucleo board, RGB -
+                   INTERFACE
+                                          display, I2C – touch panel
+  7.             NUMBER OF PINS             144
+  8.                VERSION                 A – 8MB NOR Flash memory
+
+
+
+
+© 2025 Riverdi                        Page 4 of 14                     www.riverdi.com
+                                                                                                                                           Revision:                          Changes:                                        Date:
+                                                                                                                                                1.0                           Initial Case                                2024.06.19
+
+                                                                                                                                                1.1                           PCB Update                                  2024.11.07
+
+                                                                                                                                                1.2                    Part Number Update                                 2025.01.14
+
+
+
+                                                 70.40 [2.772](PCB O.D.)                                                    18.80 [0.740](MODULE O.D.)
+
+                                 12.75 [0.502]
+                                 14.65 [0.577]
+                                 14.95 [0.589]
+                                 5.00 [0.197]
+                                                  59.56 [2.345](CG O.D.)           5.45 [0.214]                             10.26 [0.404](CTP+TFT+GASKET+PCB LAMINATE)
+                                                  54.46 [2.144](TFT O.D.)          8.00 [0.315]                             5.66 [0.223](CTP+TFT)
+                                                    49.56 [1.951](CG V.A.)         10.45 [0.411]                            1.10 [0.043](CG)
+                                                    48.96 [1.928](TFT A.A.)        10.75 [0.423]                            6.00 [0.236](GOLDPINS HEIGHT)
+
+                                                                                                                                                                        1
+
+
+
+                                                                                                                                                                                                              1
+
+                                                 (0.0)
+                                                                                                    CG                                 CN7
+                 73.70 [2.902](PCB O.D.)
+
+                 82.94 [3.265])TFT O.D.)
+
+                 73.44 [2.891](TFT A.A.)
+                  93.34 [3.675](CG O.D.)
+
+
+
+
+                                                                                                                                                                                                                        CN8
+                  74.04 [2.915](CG V.A.)
+
+
+
+
+                                                                                    (T=1.1mm[0.043inch])
+                                                                                                                                                                        1
+
+
+                                                                                                    SCA                                                                                                       1
+
+
+                                                                                     (T=0.2mm[0.008inch])
+                                                                                                                                      CN10                                    1                  50
+                                                                                                SENSOR
+                                                                                    (T=0.55mm[0.022inch])                                                                                                               CN9
+
+                                                                                                    OCA
+                                                                                                                                                                                    1        6
+                                                                                   (T=0.175mm[0.007inch])
+
+                                                                                                                                3mm RUBBER GASKET
+
+
+
+
+                                                                                                                                                                                                  COMPONENT
+                                                                                                                                                                                        IC
+
+
+
+
+                                                                                                                                                                                                    AREA
+                                                                                                                                                                        K A
+
+
+                                                                                                                                 2.54mm GOLDPINS
+                                                                                                                               FOR NUCLEO BOARD
+                 24.64 [0.970]
+
+
+
+
+                                                                                         LEDA                                      LEDK
+
+                                                                                               Backlight Circuit Diagram
+
+
+
+
+TFT NOTES:                                               TP NOTES:                                    GENERAL NOTES:
+1. DISPLAY TYPE: TFT, TRANSMISSIVE, NORMALLY             1. TP STRUCTURE: G+G                         1. OPERATING TEMPERATURE: -20°C ~ 70°C
+   BLACK                                                 2. DRIVER IC: ILI2130                        2. STORAGE TEMPERATURE: -30°C ~ 80°C             PN: RVA35HI-NUC144A
+2. RESOLUTION: 320x480                                   3. SURFACE HARDNESS:>6H                      3. WITHOUT INDIVIDUAL TOLERANCE: ±0.3mm
+3. VIEWING ANGLE: FREE                                                                                4. RoHS COMPLIANT                                SN:
+4. SURFACE LUMINANCE: 1200cd/m2
+5. BACKLIGHT: 10 LEDS
+                                                                                                                                                       DRAWN:    M.Natywa                                 2024.11.07   1:1.00
+                                                                                                                                                       CHECKED: M.Wierzbowski                             2025.01.14   [mm]
+                                                                                                                                                       APPR:                                                           ISO A3    P. 1 of 1
+    RVA35HI-NUC144A
+
+        ABSOLUTE MAXIMUM RATINGS
+
+PARAMETER                                         SYMBOL         MIN     MAX    UNIT     NOTE
+Supply Voltage for Module                            VDD          -0.3    3.3             Note 1
+Digital I/O signals (SPI/QSPI/GPIO) Voltage         IOVCC         -0.3    3.3       V
+Supply voltage for Backlight                        BLVDD         -0.3    6.0
+Operating Temperature                                 TOP          -20    70       °C
+Storage Temperature                                   TST          -30    80       °C
+Storage Humidity (@ 25 ± 5°C)                         HST           10     -     % RH
+Operating Ambient Humidity (@ 25 ± 5°C)               HOP           10     -     % RH
+    Note 1. The absolute maximum rating values must not be exceeded at any times. The
+    module MUST NOT be used when any of the absolute maximum ratings is exceeded.
+    The characteristics of the module may not be recovered, or in an extreme case, the module
+    may be permanently destroyed.
+
+        ELECTRICAL CHARACTERISTICS
+
+PARAMETER                       SYMBOL          MIN           TYP             MAX       UNIT
+Supply Voltage                     VCC             2.5         2.8            3.3          V
+Supply Current                      ICC             -          50              -          mA
+Interface Supply Voltage          IOVCC            1.7         1.8            3.3          V
+Input High Voltage for LCD          VIH       0.7*IOVCC         -           IOVCC          V
+Input Low Voltage for LCD           VIL           -0.3          -        0.3*IOVCC         V
+Output High Voltage for LCD        VOH        08*IOVCC          -           IOVCC          V
+Output Low Voltage for LCD         VOL            -0.3          -         0.3*IOVCC        V
+
+
+        BACKLIGHT ELECTRICAL CHARACTERISTICS
+
+PARAMETER                       SYMBOL          MIN        TYP          MAX     UNIT      NOTE
+Backlight Driving Voltage         VLED          2.7          5          5.5       V
+Backlight Driving Current         ILED           -         200           -       mA       Note 3
+LED Lifetime                        -            -        30,000         -      hours     Note 1,2
+    Note 1. Optical performance should be evaluated at Ta=25 °C only.
+
+    Note 2. Operating life means the period in which the LED brightness goes down to 50% of
+    the initial brightness. Typical operating lifetime is the estimated parameter.
+
+    Note 3. Current measured with 100% backlight intensity.
+
+
+
+
+    © 2025 Riverdi                        Page 6 of 14                    www.riverdi.com
+   RVA35HI-NUC144A
+
+       ELECTRO-OPTICAL CHARACTERISTICS
+
+ITEM              SYMBOL           CONDITION           MIN       TYP      MAX       UNIT      RMK       NOTE
+Response Time         Tr+Tf                               -       30         -        ms       FIG 1.    4
+                                        θ=0°
+Contrast Ratio         Cr                                 -      700         -        ---                1
+                                        ∅=0°
+Surface                                                                                        FIG 2
+                       Lv             Ta=25 °C            -      1200        -      cd/m2                2
+Luminance
+                                       ∅ = 90°   -        80        -     deg
+Viewing Angle                          ∅ = 270°  -        80        -     deg
+                       θ                                                          FIG 3.    6
+Range                                   ∅ = 0°   -        80        -     deg
+                                       ∅ = 180°  -        80        -     deg
+                      Rx                         -      0.660       -       -
+                      Ry                         -      0.325       -       -
+                                      θ=0°
+CIE (x, y)            Gx                         -      0.277       -       -
+                                      ∅=0°                                        FIG 2.    5
+Chromaticity          Gy                         -      0.568       -       -
+                                    Ta=25 °C
+                      Bx                         -      0.145       -       -
+                      By                         -      0.072       -       -
+   Note 1. Contrast Ratio (CR) is defined mathematically as below, for more information see
+   Figure 2.
+
+                               Average Surface Luminance with all white pixels (P1, P2, P3, P4, P5)
+            Contrast Ratio =
+                               Average Surface Luminance with all black pixels (P1, P2, P3, P4, P5)
+
+   Note 2. Surface luminance is the LCD surface from the surface with all pixels displaying
+   white. For more information see Figure 2.
+
+             Lv = Average Surface Luminance with all white pixels (P1, P2, P3, P4, P5)
+
+   Note 3. The uniformity in surface luminance δ WHITE is determined by measuring
+   luminance at each test position 1 through 5, and then dividing the minimum luminance of
+   5 points luminance by maximum luminance of 5 points luminance. For more information
+   see Figure 2.
+
+                         Minimum Surface Luminance with all white pixels (P1, P2, P3, P4, P5)
+             δ WHITE =
+                         Maximum Surface Luminance with all white pixels (P1, P2, P3, P4, P5)
+
+   Note 4. Response time is the time required for the display to transition from white to black
+   (Rise Time, Tr) and from black to white (Decay Time, Tf). For additional information see
+   Figure 1. The test equipment is BM-7A.
+
+   Note 5. CIE (x, y) chromaticity, the x, y value is determined by measuring luminance at each
+   test position 1 through 5, and then make average value.
+
+   Note 6. For TFT module the contrast ratio is greater than 10. The angles are determined for
+   the horizontal or x axis and the vertical or y axis with respect to the z axis which is normal to
+   LCD surface. For more information see Figure 3.
+
+   Note 7. Viewing angle is measured at the center point of the LCD by CONOSCOPE (ergo-
+   80). For response time testing, the testing data is based on BM-7A. Instruments for Contrast
+   Ratio, Surface Luminance, Luminance Uniformity, Chromaticity the test data is based on
+   SR-3A.
+
+
+
+
+   © 2025 Riverdi                              Page 7 of 14                          www.riverdi.com
+RVA35HI-NUC144A
+
+
+
+
+                                   Figure 1. The definition of response time
+
+
+
+                                                            A: 5mm
+
+                                                            B: 5mm
+
+                                                            H, V: Active Area
+
+                                                            Light spot size ∅=5mm, 500mm distance
+                                                            from the LCD surface to detector lens.
+
+                                                            Measurement instrument is TOPCON’S
+                                                            luminance meter BM-5
+
+
+Figure 2. Measuring method for Contrast ratio, surface luminance, Luminance uniformity, CIE (x, y) chromaticity
+
+
+
+                                   Figure 3. The definition of viewing angle
+
+
+
+
+© 2025 Riverdi                                Page 8 of 14                            www.riverdi.com
+RVA35HI-NUC144A
+
+  INTERFACES DESCRIPTION
+
+
+
+
+© 2025 Riverdi       Page 9 of 14   www.riverdi.com
+RVA35HI-NUC144A
+
+
+
+    CN7
+     NO.         SYMBOL                 DESCRIPTION                 I/O
+           2     LCD_BCLK_PWM           Backlight PWM               I
+           8     GND                    Ground                      P
+          10     LCD_SPI_SCK            SPI serial clock            I
+          12     LCD_SDO                SPI serial data output      O
+          14     LCD_SDA                SPI serial data             I/O
+          16     LCD_DB0                Data bus                    I/O
+          18     LCD_DB1                Data bus 1                  I/O
+    CN8
+     NO.         SYMBOL                 DESCRIPTION                 I/O
+          7      VCC                    Power Supply 3.3V           P
+          9      VLED                   Backlight Power Supply      P
+          11     GND                    Ground                      P
+          13     GND                    Ground                      P
+    CN9
+     NO.         SYMBOL                 DESCRIPTION                  I/O
+          2      LCD_CS                 LCD chip select signal       I
+          6      LCD_WR                 LCD WRITE ENALBE             I
+          8      LCD_RD                 LCD OUTPUT ENABLE            I
+         12      GND                    Ground                       P
+         14      MEM_IO2                OCTOSPI data 2               I/O
+         15      LCD_DB6                Data bus 6                   I/O
+         16      LCD_RS                 LCD Data/Command             I
+         18      CTP_INT                CTP Interrupt                O
+         19      CTP_SCL                CTP Serial clock             I
+         20      CTP_RST                CTP Reset                    I
+         21      CTP_SDA                CTP Serial data              I/O
+         23      GND                    Ground                       P
+         25      LCD_DB2                Data bus 2                   I/O
+         27      LCD_DB3                Data bus 3                   I/O
+
+
+
+
+© 2025 Riverdi                  Page 10 of 14                    www.riverdi.com
+RVA35HI-NUC144A
+
+       CN10
+NO.           SYMBOL                DESCRIPTION           I/O
+       4      LCD_DB6               Data bus 6            I/O
+       5      GND                   Ground                P
+       6      LCD_RESET             LCD reset             I
+      10      LCD_TE                LCD Tearing Effect    O
+      13      MEM_CS                OCTOSPI chip select   I
+      15      MEM_CLK               OCTOSPI clock         I/O
+      17      GND                   Ground                P
+      18      LCD_DB5               Data bus 5            I/O
+      19      MEM_IO3               OCTOSPI data 3        I/O
+      20      LCD_DB4               Data bus 4            I/O
+      21      MEM_IO1               OCTOSPI data 1        I/O
+      22      GND                   Ground                P
+      23      MEM_IO0               OCTOSPI data          I/O
+      24      LCD_DB7               Data bus 7            I/O
+      25      MEM_IO2               OCTOSPI data 2        I/O
+      27      GND                   Ground                P
+
+
+
+            EXTERNAL MEMORY
+
+ITEM                                 DESCRIPTION
+Flash                                NOR Flash
+Size                                 64Mbit/8Mbyte
+Interface                            OCTOSPI
+
+
+
+      CAPACITIVE TOUCH SCREEN PANEL SPECIFICATIONS
+       Mechanical characteristics
+DESCRIPTION                     SPECIFICATION                   REMARK
+Touch Panel Size                3.5 inch
+Outline Dimension of CTP        59.56 mm x 93.34 mm
+Glass Thickness                 1.1 mm
+CTP View Area                   49.56 mm x 74.04 mm
+Sensor Active Area              48.96mm x 73.44 mm
+Surface Hardness                6H
+       Electrical characteristics
+DESCRIPTION                         SPECIFICATION               REMARK
+Controller                          ILI2130
+Resolution                          320 x 480
+Device address 7-bit                0x41
+
+
+
+
+© 2025 Riverdi                 Page 11 of 14              www.riverdi.com
+RVA35HI-NUC144A
+
+
+
+     INSPECTION
+Standard acceptance/rejection criteria for TFT module
+
+     Inspection condition
+    Ambient conditions:
+
+          •   Temperature: 25 ± 2°C
+          •   Humidity: (60 ± 10) %RH
+          •   Illumination: Single fluorescent lamp non-directive (300 to 700 lux)
+
+    Viewing distance: 35 ± 5cm between inspector bare eye and LCD.
+
+   Viewing Angle: U/D: 45°/45°, L/R: 45°/45°
+
+
+
+
+© 2025 Riverdi                       Page 12 of 14                     www.riverdi.com
+RVA35HI-NUC144A
+
+     Inspection standard
+The LCD TFT has zero bad pixels. Please refer the item “Bright/Dark dots”.
+
+ ITEM                                             CRITERION
+
+                                                                     Size < 5”
+
+ Black spots,                                   Average Diameter                 Qualified Qty
+ white spots,
+ light leakage,                                 D ≤ 0.2 mm                       Ignored
+ Foreign Particle
+ (round Type)                                   0.2 mm < D ≤ 0.3 mm              N=0
+                    D=(x+y)/2
+                    Spots density: 10 mm        0.5mm < D                        N=0
+
+
+                                                                     Size < 5”
+ LCD black spots,
+ white spots,
+                                                    Length            Width          Qualified Qty
+ light leakage
+ (line Type)
+                                                      L ≤ 1.8        W ≤ 0.05           Ignored
+
+
+                                                      L ≤ 0.8      0.05< W ≤ 0.1           N≤3
+
+
+                    Spots density: 10 mm                 -           W > 0.1           Not allowed
+
+                                                       Size < 5”
+                                   Item                                Qualified Qty
+ Bright/Dark
+                                Bright dots                                   1
+ Dots
+                                 Dark dots                                    1
+                        Total Bright and Dark Dots                            1
+                                                       Size < 5”
+                            Average Diameter                           Qualified Qty
+                                D < 0.2 mm                               Ignored
+ Clear spots               0.2 mm < D < 0.3 mm                               4
+                           0.3 mm < D < 0.5 mm                               2
+                                0.5 mm < D                                   0
+                    Spots density: 10 mm
+                                                       Size < 5”
+                             Average Diameter                          Qualified Qty
+ Touch panel
+                               D < 0.025 mm                               N≤ 2
+ spots
+                          0.025 mm < D < 0.5 mm                            N≤ 1
+                                0.5 mm < D                             Not allowed
+                                                       Size < 5”
+ Touch panel            Length              Width                      Qualified Qty
+ white line                 -              W ≤ 0.025                      N≤2
+ scratch                 L ≤ 5.0       0.025 < W < 0.05                    N≤1
+                            -              0.05 < W                     Not allowed
+
+
+
+
+© 2025 Riverdi                        Page 13 of 14                      www.riverdi.com
+RVA35HI-NUC144A
+
+   LEGAL INFORMATION
+CE marking is usually obligatory only for a complete end product. Riverdi display modules
+are semi-finished goods which are used as inputs to become part of the finished products.
+
+Therefore, Riverdi display modules are not CE marked.
+
+Riverdi grants the guarantee for the proper operation of the goods for a period of 12 months
+from the date of possession of the goods. If in a consequence of this guaranteed execution
+the customer has received the defects-free item as replacement for the defective item, the
+effectiveness period of this guarantee shall start anew from the moment the customer
+receives the defects-free item.
+
+Information about device is the property of Riverdi and may be the subject of patents
+pending or granted. It is not allowed to copy or disclosed this document without prior
+written permission.
+
+Riverdi endeavors to ensure that all contained information in this document is correct but
+does not accept liability for any error or omission. Riverdi products are in developing process
+and published information may be not up to date. Riverdi reserves the right to update and
+makes changes to Specifications or written material without prior notice at any time. It is
+important to check the current position with Riverdi.
+
+Images and graphics used in this document are only for illustrative the purpose. All images
+and graphics are possible to be displayed on the range products of Riverdi, however the
+quality may vary. Riverdi is no liable to the buyer or to any third party for any indirect,
+incidental, special, consequential, punitive or exemplary damages (including without
+limitation lost profits, lost savings, or loss of business opportunity) relating to any product,
+service provided or to be provided by Riverdi, or the use or inability to use the same, even if
+Riverdi has been advised of the possibility of such damages.
+
+Riverdi products are not fault tolerant nor designed, manufactured or intended for use or
+resale as on line control equipment in hazardous environments requiring fail–safe
+performance, such as in the operation of nuclear facilities, aircraft navigation or
+communication systems, air traffic control, direct life support machines or weapons
+systems in which the failure of the product could lead directly to death, personal injury or
+severe physical or environmental damage (‘High-Risk Activities’). Riverdi and its suppliers
+specifically disclaim any expressed or implied warranty of fitness for High-Risk Activities.
+Using Riverdi products and devices in 'High-Risk Activities' and in any other application is
+entirely at the buyer’s risk, and the buyer agrees to defend, indemnify and hold harmless
+Riverdi from all damages, claims or expenses resulting from such use. No licenses are
+conveyed, implicitly or otherwise, under any Riverdi intellectual property rights.
+
+
+
+
+© 2025 Riverdi                         Page 14 of 14                      www.riverdi.com
+

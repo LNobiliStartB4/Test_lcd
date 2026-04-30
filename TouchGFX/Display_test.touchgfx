@@ -6,23 +6,28 @@
         "Components": [
           {
             "Type": "Box",
-            "Name": "touchBackground",
+            "Name": "splashBackground",
             "Width": 480,
-            "Height": 320,
-            "Color": {
-              "Red": 7,
-              "Green": 18,
-              "Blue": 35
-            }
+            "Height": 320
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "splashLogo",
+            "X": 129,
+            "Y": 46,
+            "Width": 222,
+            "Height": 200,
+            "Filename": "A1.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "TextArea",
-            "Name": "touchTitle",
-            "X": 90,
-            "Y": 26,
-            "Width": 300,
+            "Name": "splashTitle",
+            "X": 70,
+            "Y": 252,
+            "Width": 340,
             "Height": 28,
-            "TextId": "Text_TouchTestTitle",
+            "TextId": "Text_SplashTitle",
             "TextRotation": "0",
             "Color": {
               "Red": 242,
@@ -31,61 +36,100 @@
             }
           },
           {
-            "Type": "BoxWithBorder",
-            "Name": "touchStatusPanel",
-            "X": 90,
-            "Y": 72,
-            "Width": 300,
-            "Height": 46,
+            "Type": "TextArea",
+            "Name": "splashSubtitle",
+            "X": 95,
+            "Y": 284,
+            "Width": 290,
+            "Height": 18,
+            "TextId": "Text_SplashSubtitle",
+            "TextRotation": "0",
             "Color": {
-              "Red": 12,
-              "Green": 31,
-              "Blue": 56
+              "Red": 134,
+              "Green": 160,
+              "Blue": 181
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Screen2",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "productBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "Box",
+            "Name": "productAccent",
+            "X": 24,
+            "Y": 26,
+            "Width": 5,
+            "Height": 36,
+            "Color": {
+              "Red": 238,
+              "Green": 191,
+              "Blue": 72
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "productTitle",
+            "X": 40,
+            "Y": 20,
+            "Width": 360,
+            "Height": 30,
+            "TextId": "Text_ProductTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "productSubtitle",
+            "X": 40,
+            "Y": 52,
+            "Width": 380,
+            "Height": 18,
+            "TextId": "Text_ProductSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "bandyHighlightFrame",
+            "X": 28,
+            "Y": 88,
+            "Width": 204,
+            "Height": 162,
+            "Color": {
+              "Green": 6,
+              "Blue": 10
             },
             "BorderColor": {
-              "Red": 60,
-              "Green": 101,
-              "Blue": 148
+              "Red": 238,
+              "Green": 191,
+              "Blue": 72
             },
             "BorderSize": 2
           },
           {
-            "Type": "TextArea",
-            "Name": "touchStatusLabel",
-            "X": 110,
-            "Y": 86,
-            "Width": 86,
-            "Height": 14,
-            "TextId": "Text_TouchStatusLabel",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 158,
-              "Green": 177,
-              "Blue": 194
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "touchStatusValue",
-            "X": 205,
-            "Y": 81,
-            "Width": 165,
-            "Height": 22,
-            "TextId": "Text_TouchStatusOff",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 240,
-              "Green": 185,
-              "Blue": 96
-            }
-          },
-          {
             "Type": "FlexButton",
-            "Name": "touchTestButton",
-            "X": 90,
-            "Y": 146,
-            "Width": 300,
-            "Height": 108,
+            "Name": "bandyButton",
+            "X": 32,
+            "Y": 92,
+            "Width": 196,
+            "Height": 154,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -94,451 +138,160 @@
                 "Type": "BoxWithBorderButtonStyle",
                 "BorderSize": 3,
                 "ColorReleased": {
-                  "Red": 19,
-                  "Green": 61,
-                  "Blue": 92
+                  "Green": 7,
+                  "Blue": 13
                 },
                 "ColorPressed": {
-                  "Red": 34,
-                  "Green": 96,
-                  "Blue": 136
+                  "Red": 1,
+                  "Green": 8,
+                  "Blue": 13
                 },
                 "ColorBorderReleased": {
-                  "Red": 92,
-                  "Green": 157,
-                  "Blue": 205
+                  "Red": 238,
+                  "Green": 191,
+                  "Blue": 72
                 },
                 "ColorBorderPressed": {
-                  "Red": 152,
-                  "Green": 205,
-                  "Blue": 243
+                  "Red": 255,
+                  "Green": 220,
+                  "Blue": 112
                 }
               }
             ]
           },
           {
             "Type": "TextArea",
-            "Name": "touchButtonLabel",
-            "X": 90,
-            "Y": 188,
-            "Width": 300,
-            "Height": 22,
-            "TextId": "Text_TouchPressHere",
+            "Name": "bandyName",
+            "X": 54,
+            "Y": 160,
+            "Width": 152,
+            "Height": 30,
+            "TextId": "Text_ProductBandy",
             "TextRotation": "0",
             "Color": {
               "Red": 242,
               "Green": 247,
               "Blue": 250
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "emerflowCard",
+            "X": 252,
+            "Y": 92,
+            "Width": 202,
+            "Height": 154,
+            "Color": {
+              "Red": 22,
+              "Green": 28,
+              "Blue": 36
+            },
+            "BorderColor": {
+              "Red": 72,
+              "Green": 82,
+              "Blue": 93
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "TextArea",
+            "Name": "emerflowName",
+            "X": 274,
+            "Y": 160,
+            "Width": 160,
+            "Height": 30,
+            "TextId": "Text_ProductEmerflow",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 154,
+              "Green": 164,
+              "Blue": 174
             }
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "touchTestClicked",
+            "InteractionName": "bandySelected",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "touchTestButton"
+              "TriggerComponent": "bandyButton"
             },
             "Action": {
               "Type": "ActionCustom",
-              "FunctionName": "touchTestClicked"
+              "FunctionName": "bandySelected"
             }
           }
         ]
       },
       {
-        "Name": "Screen2",
-        "CanvasBufferSize": 7200,
+        "Name": "Screen4",
         "Components": [
           {
             "Type": "Box",
-            "Name": "background",
+            "Name": "rfidBackground",
             "Width": 480,
-            "Height": 320,
-            "Color": {
-              "Red": 8,
-              "Green": 18,
-              "Blue": 36
-            }
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "headerPanel",
-            "X": 12,
-            "Y": 12,
-            "Width": 456,
-            "Height": 41,
-            "Color": {
-              "Red": 12,
-              "Green": 28,
-              "Blue": 50
-            },
-            "BorderColor": {
-              "Red": 42,
-              "Green": 82,
-              "Blue": 120
-            },
-            "BorderSize": 2
+            "Height": 320
           },
           {
             "Type": "Box",
-            "Name": "brandAccent",
-            "X": 20,
-            "Y": 18,
-            "Width": 4,
-            "Height": 30,
+            "Name": "rfidAccent",
+            "X": 24,
+            "Y": 26,
+            "Width": 5,
+            "Height": 36,
             "Color": {
-              "Red": 234,
-              "Green": 167,
-              "Blue": 44
+              "Red": 238,
+              "Green": 191,
+              "Blue": 72
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "rfidTitle",
+            "X": 40,
+            "Y": 20,
+            "Width": 360,
+            "Height": 30,
+            "TextId": "Text_BandyTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
             }
           },
           {
             "Type": "BoxWithBorder",
-            "Name": "statusBadge",
-            "X": 330,
-            "Y": 18,
-            "Width": 126,
-            "Height": 26,
-            "Color": {
-              "Red": 24,
-              "Green": 80,
-              "Blue": 74
-            },
+            "Name": "rfidCard",
+            "X": 48,
+            "Y": 74,
+            "Width": 384,
+            "Height": 188,
             "BorderColor": {
-              "Red": 78,
-              "Green": 146,
-              "Blue": 136
-            },
-            "BorderSize": 2
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "heroCard",
-            "X": 12,
-            "Y": 62,
-            "Width": 244,
-            "Height": 108,
-            "Color": {
-              "Red": 12,
-              "Green": 26,
-              "Blue": 46
-            },
-            "BorderColor": {
-              "Red": 56,
+              "Red": 54,
               "Green": 86,
-              "Blue": 124
-            },
-            "BorderSize": 2
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "metricsCard",
-            "X": 268,
-            "Y": 62,
-            "Width": 200,
-            "Height": 108,
-            "Color": {
-              "Red": 12,
-              "Green": 26,
-              "Blue": 46
-            },
-            "BorderColor": {
-              "Red": 56,
-              "Green": 86,
-              "Blue": 124
-            },
-            "BorderSize": 2
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "trendPanel",
-            "X": 12,
-            "Y": 178,
-            "Width": 288,
-            "Height": 52,
-            "Color": {
-              "Red": 10,
-              "Green": 24,
-              "Blue": 43
-            },
-            "BorderColor": {
-              "Red": 52,
-              "Green": 80,
               "Blue": 116
             },
             "BorderSize": 2
           },
           {
-            "Type": "BoxWithBorder",
-            "Name": "warningCard",
-            "X": 312,
-            "Y": 178,
-            "Width": 156,
-            "Height": 52,
-            "Color": {
-              "Red": 16,
-              "Green": 28,
-              "Blue": 44
-            },
-            "BorderColor": {
-              "Red": 56,
-              "Green": 86,
-              "Blue": 124
-            },
-            "BorderSize": 2
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "stepLoadBox",
-            "X": 12,
-            "Y": 238,
-            "Width": 84,
-            "Height": 22,
-            "Color": {
-              "Red": 15,
-              "Green": 27,
-              "Blue": 43
-            },
-            "BorderColor": {
-              "Red": 40,
-              "Green": 64,
-              "Blue": 92
-            },
-            "BorderSize": 1
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "stepPositionBox",
-            "X": 105,
-            "Y": 238,
-            "Width": 84,
-            "Height": 22,
-            "Color": {
-              "Red": 15,
-              "Green": 27,
-              "Blue": 43
-            },
-            "BorderColor": {
-              "Red": 40,
-              "Green": 64,
-              "Blue": 92
-            },
-            "BorderSize": 1
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "stepAspirateBox",
-            "X": 198,
-            "Y": 238,
-            "Width": 84,
-            "Height": 22,
-            "Color": {
-              "Red": 15,
-              "Green": 27,
-              "Blue": 43
-            },
-            "BorderColor": {
-              "Red": 40,
-              "Green": 64,
-              "Blue": 92
-            },
-            "BorderSize": 1
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "stepReleaseBox",
-            "X": 291,
-            "Y": 238,
-            "Width": 77,
-            "Height": 22,
-            "Color": {
-              "Red": 15,
-              "Green": 27,
-              "Blue": 43
-            },
-            "BorderColor": {
-              "Red": 40,
-              "Green": 64,
-              "Blue": 92
-            },
-            "BorderSize": 1
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "stepVerifyBox",
-            "X": 384,
-            "Y": 238,
-            "Width": 84,
-            "Height": 22,
-            "Color": {
-              "Red": 15,
-              "Green": 27,
-              "Blue": 43
-            },
-            "BorderColor": {
-              "Red": 40,
-              "Green": 64,
-              "Blue": 92
-            },
-            "BorderSize": 1
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "decreaseTargetButton",
-            "X": 12,
-            "Y": 268,
-            "Width": 108,
-            "Height": 40,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Red": 17,
-                  "Green": 41,
-                  "Blue": 72
-                },
-                "ColorPressed": {
-                  "Red": 30,
-                  "Green": 63,
-                  "Blue": 102
-                },
-                "ColorBorderReleased": {
-                  "Red": 68,
-                  "Green": 110,
-                  "Blue": 156
-                },
-                "ColorBorderPressed": {
-                  "Red": 116,
-                  "Green": 156,
-                  "Blue": 198
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "increaseTargetButton",
-            "X": 128,
-            "Y": 268,
-            "Width": 108,
-            "Height": 40,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Red": 17,
-                  "Green": 41,
-                  "Blue": 72
-                },
-                "ColorPressed": {
-                  "Red": 30,
-                  "Green": 63,
-                  "Blue": 102
-                },
-                "ColorBorderReleased": {
-                  "Red": 68,
-                  "Green": 110,
-                  "Blue": 156
-                },
-                "ColorBorderPressed": {
-                  "Red": 116,
-                  "Green": 156,
-                  "Blue": 198
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "suctionToggleButton",
-            "X": 244,
-            "Y": 268,
-            "Width": 108,
-            "Height": 40,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Red": 18,
-                  "Green": 69,
-                  "Blue": 74
-                },
-                "ColorPressed": {
-                  "Red": 28,
-                  "Green": 103,
-                  "Blue": 108
-                },
-                "ColorBorderReleased": {
-                  "Red": 74,
-                  "Green": 146,
-                  "Blue": 136
-                },
-                "ColorBorderPressed": {
-                  "Red": 122,
-                  "Green": 184,
-                  "Blue": 173
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "releaseConfirmButton",
-            "X": 360,
-            "Y": 268,
-            "Width": 108,
-            "Height": 40,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "BorderSize": 2,
-                "ColorReleased": {
-                  "Red": 88,
-                  "Green": 54,
-                  "Blue": 15
-                },
-                "ColorPressed": {
-                  "Red": 124,
-                  "Green": 76,
-                  "Blue": 18
-                },
-                "ColorBorderReleased": {
-                  "Red": 214,
-                  "Green": 148,
-                  "Blue": 45
-                },
-                "ColorBorderPressed": {
-                  "Red": 240,
-                  "Green": 185,
-                  "Blue": 96
-                }
-              }
-            ]
+            "Type": "ScalableImage",
+            "Name": "rfidIcon",
+            "X": 164,
+            "Y": 96,
+            "Width": 152,
+            "Height": 72,
+            "Filename": "rfid_contactless.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
           },
           {
             "Type": "TextArea",
-            "Name": "brandTitle",
-            "X": 33,
-            "Y": 14,
-            "Width": 165,
+            "Name": "rfidInstruction",
+            "X": 86,
+            "Y": 188,
+            "Width": 308,
             "Height": 24,
-            "TextId": "Text_BrandTitle",
+            "TextId": "Text_RfidInsertCard",
             "TextRotation": "0",
             "Color": {
               "Red": 242,
@@ -548,307 +301,81 @@
           },
           {
             "Type": "TextArea",
-            "Name": "brandSubtitle",
-            "X": 30,
-            "Y": 38,
+            "Name": "rfidStatus",
+            "X": 86,
+            "Y": 224,
+            "Width": 308,
+            "Height": 24,
+            "TextId": "Text_RfidWaiting",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Screen3",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "bandyBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "vacuumPanel",
+            "X": 20,
+            "Y": 9,
+            "Width": 436,
+            "Height": 177,
+            "CustomContainerDefinitionName": "BandyVacuumPanel"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "timeRemainingPanel",
+            "X": 148,
+            "Y": 201,
             "Width": 180,
-            "Height": 15,
-            "TextId": "Text_BrandSubtitle",
-            "TextRotation": "0",
+            "Height": 28,
             "Color": {
-              "Red": 145,
-              "Green": 164,
-              "Blue": 182
-            }
+              "Green": 7,
+              "Blue": 13
+            },
+            "BorderColor": {
+              "Red": 54,
+              "Green": 86,
+              "Blue": 116
+            },
+            "BorderSize": 1
           },
           {
             "Type": "TextArea",
-            "Name": "currentLabel",
-            "X": 28,
-            "Y": 76,
-            "Width": 150,
-            "Height": 18,
-            "TextId": "Text_CurrentLabel",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 180,
-              "Green": 197,
-              "Blue": 214
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "targetLabel",
-            "X": 282,
-            "Y": 76,
-            "Width": 80,
-            "Height": 14,
-            "TextId": "Text_TargetLabel",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 180,
-              "Green": 197,
-              "Blue": 214
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "stabilityLabel",
-            "X": 278,
-            "Y": 122,
-            "Width": 90,
-            "Height": 17,
-            "TextId": "Text_StabilityLabel",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 180,
-              "Green": 197,
-              "Blue": 214
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "ligaturesLabel",
-            "X": 374,
-            "Y": 122,
+            "Name": "timeLeftLabel",
+            "X": 162,
+            "Y": 206,
             "Width": 78,
-            "Height": 21,
-            "TextId": "Text_LigaturesLabel",
+            "Height": 18,
+            "TextId": "Text_TimeLeft",
             "TextRotation": "0",
             "Color": {
-              "Red": 180,
-              "Green": 197,
-              "Blue": 214
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "trendTitle",
-            "X": 24,
-            "Y": 186,
-            "Width": 120,
-            "Height": 14,
-            "TextId": "Text_TrendTitle",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 158,
-              "Green": 177,
-              "Blue": 194
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "warningLabel",
-            "X": 324,
-            "Y": 186,
-            "Width": 120,
-            "Height": 14,
-            "TextId": "Text_WarningLabel",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 158,
-              "Green": 177,
-              "Blue": 194
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "currentUnit",
-            "X": 174,
-            "Y": 144,
-            "Width": 56,
-            "Height": 14,
-            "TextId": "Text_Mbar",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 145,
+              "Red": 142,
               "Green": 164,
-              "Blue": 182
+              "Blue": 184
             }
           },
           {
             "Type": "TextArea",
-            "Name": "targetUnit",
-            "X": 368,
-            "Y": 102,
-            "Width": 42,
-            "Height": 14,
-            "TextId": "Text_Mbar",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 145,
-              "Green": 164,
-              "Blue": 182
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "stepLoadText",
-            "X": 12,
-            "Y": 243,
-            "Width": 84,
-            "Height": 17,
-            "TextId": "Text_StepLoad",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 160,
-              "Green": 178,
-              "Blue": 196
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "stepPositionText",
-            "X": 105,
-            "Y": 243,
-            "Width": 84,
-            "Height": 17,
-            "TextId": "Text_StepPosition",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 160,
-              "Green": 178,
-              "Blue": 196
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "stepAspirateText",
-            "X": 198,
-            "Y": 243,
-            "Width": 84,
-            "Height": 17,
-            "TextId": "Text_StepAspirate",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 160,
-              "Green": 178,
-              "Blue": 196
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "stepReleaseText",
-            "X": 291,
-            "Y": 243,
-            "Width": 77,
-            "Height": 17,
-            "TextId": "Text_StepRelease",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 160,
-              "Green": 178,
-              "Blue": 196
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "stepVerifyText",
-            "X": 384,
-            "Y": 243,
-            "Width": 84,
-            "Height": 17,
-            "TextId": "Text_StepVerify",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 160,
-              "Green": 178,
-              "Blue": 196
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "decreaseTargetLabel",
-            "X": 12,
-            "Y": 280,
-            "Width": 108,
-            "Height": 15,
-            "TextId": "Text_BtnMinus",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "increaseTargetLabel",
-            "X": 128,
-            "Y": 280,
-            "Width": 108,
-            "Height": 15,
-            "TextId": "Text_BtnPlus",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "releaseConfirmLabel",
-            "X": 360,
-            "Y": 280,
-            "Width": 108,
-            "Height": 15,
-            "TextId": "Text_BtnRelease",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
-            }
-          },
-          {
-            "Type": "DynamicGraph",
-            "Name": "trendGraph",
-            "X": 24,
-            "Y": 200,
-            "Width": 264,
-            "Height": 20,
-            "DataSeed": 20260324,
-            "NumberOfValues": 80,
-            "MaxY": 280.0,
-            "Precision": "1",
-            "UseCustomVisibleDataPointRange": true,
-            "LastIndex": 80,
-            "XAxisScale": 1.0,
-            "PaddingTop": 2,
-            "PaddingBottom": 2,
-            "GraphType": "GraphScroll",
-            "GraphDrawers": [
-              {
-                "Type": "LineDrawer",
-                "LineWidth": 2,
-                "FileNameImage": "",
-                "Color": {
-                  "Red": 52,
-                  "Green": 181,
-                  "Blue": 199
-                }
-              }
-            ],
-            "YAxisGrid": {
-              "Type": "GraphGrid",
-              "Color": {
-                "Red": 30,
-                "Green": 54,
-                "Blue": 80
-              },
-              "Interval": 70.0,
-              "LineWidth": 1
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "statusValue",
-            "X": 334,
-            "Y": 22,
-            "Width": 118,
-            "Height": 16,
-            "TextId": "Value_Status",
+            "Name": "timeRemainingValue",
+            "X": 244,
+            "Y": 206,
+            "Width": 72,
+            "Height": 18,
+            "TextId": "Value_TimeRemaining",
             "TextRotation": "0",
             "Color": {
               "Red": 242,
@@ -856,18 +383,73 @@
               "Blue": 250
             },
             "Wildcard1": {
-              "TextId": "Buffer_Status",
+              "TextId": "Buffer_TimeRemaining",
               "UseBuffer": true,
-              "BufferSize": 24
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "targetPanel",
+            "X": 20,
+            "Y": 242,
+            "Width": 318,
+            "Height": 62,
+            "CustomContainerDefinitionName": "BandyTargetPanel"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "startPanel",
+            "X": 346,
+            "Y": 242,
+            "Width": 110,
+            "Height": 62,
+            "CustomContainerDefinitionName": "BandyStartPanel"
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "BandyVacuumPanel",
+        "Width": 436,
+        "Height": 177,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "gaugeCard",
+            "Width": 436,
+            "Height": 177,
+            "BorderColor": {
+              "Red": 54,
+              "Green": 86,
+              "Blue": 116
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "TextArea",
+            "Name": "vacuumLabel",
+            "X": 152,
+            "Y": 115,
+            "Width": 169,
+            "Height": 17,
+            "TextId": "Text_VacuumLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
             }
           },
           {
             "Type": "TextArea",
-            "Name": "currentValue",
-            "X": 18,
-            "Y": 92,
-            "Width": 190,
-            "Height": 54,
+            "Name": "vacuumValue",
+            "X": 74,
+            "Y": 9,
+            "Width": 220,
+            "Height": 60,
             "TextId": "Value_Hero",
             "TextRotation": "0",
             "Color": {
@@ -883,92 +465,127 @@
           },
           {
             "Type": "TextArea",
-            "Name": "targetValue",
-            "X": 282,
-            "Y": 92,
-            "Width": 78,
-            "Height": 28,
-            "TextId": "Value_Metric",
+            "Name": "mbarLabel",
+            "X": 250,
+            "Y": 39,
+            "Width": 71,
+            "Height": 22,
+            "TextId": "Text_Mbar",
             "TextRotation": "0",
             "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "vacuumTrack",
+            "X": 29,
+            "Y": 76,
+            "Width": 364,
+            "Height": 27,
+            "Color": {
+              "Red": 18,
+              "Green": 35,
+              "Blue": 52
             },
-            "Wildcard1": {
-              "TextId": "Buffer_Metric",
-              "UseBuffer": true,
-              "BufferSize": 8
+            "BorderColor": {
+              "Red": 42,
+              "Green": 68,
+              "Blue": 92
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "Box",
+            "Name": "vacuumFill",
+            "X": 33,
+            "Y": 84,
+            "Height": 11,
+            "Color": {
+              "Red": 62,
+              "Green": 158,
+              "Blue": 205
             }
           },
           {
             "Type": "TextArea",
-            "Name": "stabilityValue",
-            "X": 282,
-            "Y": 139,
-            "Width": 84,
-            "Height": 31,
-            "TextId": "Value_Metric",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 205,
-              "Green": 241,
-              "Blue": 217
-            },
-            "Wildcard1": {
-              "TextId": "Buffer_Metric",
-              "UseBuffer": true,
-              "BufferSize": 8
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "ligaturesValue",
-            "X": 375,
-            "Y": 139,
-            "Width": 77,
-            "Height": 31,
-            "TextId": "Value_Metric",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
-            },
-            "Wildcard1": {
-              "TextId": "Buffer_Metric",
-              "UseBuffer": true,
-              "BufferSize": 8
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "warningValue",
-            "X": 322,
-            "Y": 202,
-            "Width": 136,
-            "Height": 14,
-            "TextId": "Value_Warning",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
-            },
-            "Wildcard1": {
-              "TextId": "Buffer_Warning",
-              "UseBuffer": true,
-              "BufferSize": 28
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "suctionToggleLabel",
-            "X": 244,
-            "Y": 280,
-            "Width": 108,
+            "Name": "scaleZeroLabel",
+            "X": 29,
+            "Y": 116,
+            "Width": 60,
             "Height": 15,
-            "TextId": "Value_Button",
+            "TextId": "Text_ZeroScale",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 104,
+              "Green": 126,
+              "Blue": 146
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scaleMaxLabel",
+            "X": 363,
+            "Y": 117,
+            "Width": 60,
+            "Height": 13,
+            "TextId": "Text_MaxScale",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 104,
+              "Green": 126,
+              "Blue": 146
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "BandyTargetPanel",
+        "Width": 318,
+        "Height": 62,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "targetCard",
+            "Width": 318,
+            "Height": 62,
+            "Color": {
+              "Green": 5,
+              "Blue": 10
+            },
+            "BorderColor": {
+              "Red": 224,
+              "Green": 208,
+              "Blue": 22
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "TextArea",
+            "Name": "targetLabel",
+            "X": 10,
+            "Y": 10,
+            "Width": 92,
+            "Height": 14,
+            "TextId": "Text_TargetLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "targetValue",
+            "X": 10,
+            "Y": 29,
+            "Width": 70,
+            "Height": 26,
+            "TextId": "Value_Metric",
             "TextRotation": "0",
             "Color": {
               "Red": 242,
@@ -976,9 +593,144 @@
               "Blue": 250
             },
             "Wildcard1": {
-              "TextId": "Buffer_Button",
+              "TextId": "Buffer_Metric",
               "UseBuffer": true,
-              "BufferSize": 16
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "targetMbarLabel",
+            "X": 74,
+            "Y": 37,
+            "Width": 42,
+            "Height": 13,
+            "TextId": "Text_Mbar",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "targetMinusButton",
+            "X": 154,
+            "Y": 5,
+            "Width": 72,
+            "Height": 52,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "ColorReleased": {
+                  "Green": 5,
+                  "Blue": 10
+                },
+                "ColorPressed": {
+                  "Red": 18,
+                  "Green": 28,
+                  "Blue": 36
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              }
+            ]
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "targetMinusRing",
+            "X": 164,
+            "Y": 5,
+            "Width": 52,
+            "Height": 52,
+            "Filename": "target_button_ring_white.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "targetMinusLabel",
+            "X": 154,
+            "Y": 22,
+            "Width": 72,
+            "Height": 35,
+            "TextId": "Text_Minus",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "targetPlusButton",
+            "X": 236,
+            "Y": 5,
+            "Width": 72,
+            "Height": 52,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "ColorReleased": {
+                  "Green": 5,
+                  "Blue": 10
+                },
+                "ColorPressed": {
+                  "Red": 18,
+                  "Green": 28,
+                  "Blue": 36
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                }
+              }
+            ]
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "targetPlusRing",
+            "X": 246,
+            "Y": 5,
+            "Width": 52,
+            "Height": 52,
+            "Filename": "target_button_ring_white.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "targetPlusLabel",
+            "X": 236,
+            "Y": 22,
+            "Width": 72,
+            "Height": 35,
+            "TextId": "Text_Plus",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
             }
           }
         ],
@@ -987,7 +739,7 @@
             "InteractionName": "decreaseTargetClicked",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "decreaseTargetButton"
+              "TriggerComponent": "targetMinusButton"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -998,39 +750,101 @@
             "InteractionName": "increaseTargetClicked",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "increaseTargetButton"
+              "TriggerComponent": "targetPlusButton"
             },
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "increaseTargetClicked"
             }
+          }
+        ]
+      },
+      {
+        "Name": "BandyStartPanel",
+        "Width": 110,
+        "Height": 62,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "startFrame",
+            "Width": 110,
+            "Height": 62,
+            "Color": {
+              "Green": 3,
+              "Blue": 1
+            },
+            "BorderColor": {
+              "Red": 43,
+              "Green": 255,
+              "Blue": 79
+            },
+            "BorderSize": 1
           },
           {
-            "InteractionName": "suctionToggleClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "suctionToggleButton"
+            "Type": "FlexButton",
+            "Name": "startButton",
+            "Width": 110,
+            "Height": 62,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
             },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "suctionToggleClicked"
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 3,
+                "ColorReleased": {
+                  "Red": 20,
+                  "Green": 71,
+                  "Blue": 62
+                },
+                "ColorPressed": {
+                  "Red": 29,
+                  "Green": 100,
+                  "Blue": 86
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 15,
+                  "Blue": 63
+                },
+                "ColorBorderPressed": {
+                  "Red": 139,
+                  "Green": 229,
+                  "Blue": 200
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "startLabel",
+            "Y": 21,
+            "Width": 110,
+            "Height": 35,
+            "TextId": "Text_Start",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
             }
-          },
+          }
+        ],
+        "Interactions": [
           {
-            "InteractionName": "releaseConfirmedClicked",
+            "InteractionName": "startClicked",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "releaseConfirmButton"
+              "TriggerComponent": "startButton"
             },
             "Action": {
               "Type": "ActionCustom",
-              "FunctionName": "releaseConfirmedClicked"
+              "FunctionName": "startClicked"
             }
           }
         ]
       }
     ],
-    "CustomContainerDefinitions": [],
     "Name": "Display_test_prova",
     "Resolution": {
       "Width": 320,

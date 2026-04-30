@@ -1,0 +1,792 @@
+TFT MODULE SPECIFICATION
+
+
+RVA15MD-NUC64A
+
+HB, IPS 1.54’’ display datasheet
+Rev. 1.2
+2025-10-10
+
+
+
+
+Riverdi Sp. z o.o.                                          +48 587 703 116
+Nowy Swiat 36                           Office hours: 9:00 to 17:30 CET (Mon-Fri)
+80-299 Gdansk, Poland
+VAT ID: PL5842767153
+                                                      contact@riverdi.com
+Registration number (KRS): 0000923967                             riverdi.com
+                                                                     RVA15MD-NUC64A
+
+
+
+
+ ITEM                              CONTENTS                                     UNIT
+
+
+ LCD Type                          TFT/Transmissive/Normally Black/IPS             /
+
+ Size                              1.54                                          inch
+
+ Viewing Direction                 Free                                            /
+
+ Outside Dimensions (W x H x D)    66.30 x 48.40 x 12.22                         mm
+
+ Active Area (W x H)               27.72 x 27.72                                 mm
+
+ Pixel Pitch (W x H)               0.1155 x 0.1155                               mm
+
+ Resolution                        240 x 240 (RGB)                                 /
+
+ Brightness                        500                                          cd/m2
+
+ LCD Interface Type                SPI                                             /
+
+ Color Depth                       262K                                            /
+
+ Pixel Arrangement                 RGB Vertical Stripe                             /
+
+ LCD Driver                        ST7789                                          /
+
+ With/Without Touch                With Projected Capacitve Touch Panel            /
+
+ CTP Driver                        ILI2130                                         /
+
+ Touch Interface Type              I2C                                             /
+
+ Bonding Technology                Optical Bonding                                 /
+
+ Weight                            29                                             g
+
+
+
+
+ Note 1. RoHS3 compliant
+
+ Note 2. LCM weight tolerance: ± 5%.
+
+
+
+
+© 2025 Riverdi                           Page 2 of 19                     www.riverdi.com
+                                                                  RVA15MD-NUC64A
+
+
+
+
+   REVISION RECORD
+
+
+ REV NO.         REV DATE        CONTENTS                                 REMARKS
+
+
+     1.0            2024-10-21                Initial Release
+
+
+     1.1            2025-01-14              Part number update.
+
+
+     1.2            2025-10-10               Schematic update
+
+
+
+
+© 2025 Riverdi                     Page 3 of 19                     www.riverdi.com
+                                                                                                                                                       RVA15MD-NUC64A
+
+
+
+
+2. CONTENTS
+        REVISION RECORD ................................................................................................................................................. 3
+
+2.      CONTENTS .................................................................................................................................................................... 4
+
+3.      MODULE CLASSIFICATION INFORMATION .............................................................................................. 5
+
+4.      MODULE DRAWING................................................................................................................................................. 6
+
+5.      ABSOLUTE MAXIMUM RATINGS ....................................................................................................................... 7
+
+6.      ELECTRICAL CHARACTERISTICS ..................................................................................................................... 7
+
+7.      BACKLIGHT ELECTRICAL CHARACTERISTICS ......................................................................................... 8
+
+8.      ELECTRO-OPTICAL CHARACTERISTICS....................................................................................................... 9
+
+9.      INTERFACES DESCRIPTION ............................................................................................................................. 12
+
+     9.1         CN7 ....................................................................................................................................................................... 12
+
+     9.2         CN10 ..................................................................................................................................................................... 13
+
+10.          EXTERNAL MEMORY .......................................................................................................................................14
+
+11.          CAPACITIVE TOUCH SCREEN PANEL SPECIFICATIONS ............................................................14
+
+     11.1        Mechanical characteristics .......................................................................................................................14
+     11.2        Electrical characteristics ...........................................................................................................................14
+
+12.          INSPECTION ....................................................................................................................................................... 15
+
+     12.1        Inspection condition .................................................................................................................................... 15
+     12.2        Inspection standard..................................................................................................................................... 16
+
+13.          LEGAL INFORMATION...................................................................................................................................18
+
+14.          CONTACT ............................................................................................................................................................... 19
+
+
+
+
+© 2025 Riverdi                                                                   Page 4 of 19                                                                 www.riverdi.com
+                                                                         RVA15MD-NUC64A
+
+
+
+
+3. MODULE CLASSIFICATION INFORMATION
+
+       RV        A           15           M             D          NUC          64      A
+
+
+       1.        2.           3.          4.            5.          6.          7.      8.
+
+
+
+
+ NO.         PARAMETER                         SYMBOL
+
+
+       1.                  BRAND                 RV – Riverdi
+
+       2.              PRODUCT TYPE              A – Accessories
+
+       3.               DISPLAY SIZE             15 – 1.54”
+
+       4.             MODEL SERIAL NO.           M – Standard Brightness, IPS
+
+       5.               RESOLUTION               D – 240 x 240 px
+
+       6.                INTERFACE               NUC – goldpins for Nucleo board
+
+       7.             NUMBER OF PINS             64
+
+       8.                 VERSION                A – 8MB NOR Flash memory
+
+
+
+
+© 2025 Riverdi                           Page 5 of 19                       www.riverdi.com
+                                                                                                                                                                                                                                                                Revision:                           Changes:                             Date:
+                                                                                                                                                                                                                                                                     1.0                            Initial Case                     2024.10.21
+
+                                                                                                                                                                                                                                                                     1.1                     Part Number Update                      2025.01.14
+
+                                                                                                                                                                                                                                                                     1.2              Changed Pin Headers, PCBA Changes              2025.10.10
+
+
+
+
+                                                                                                                                                             66.30 [2.610](PCB O.D.)
+                                                                                                                                                              36.00 [1.417](CG O.D.)              14.96 [0.589]
+                                                                                                                                                            35.60 [1.402](SENSOR O.D.)            15.16 [0.597]                            16.37 [0.644](MODULE O.D.)
+                                                                                15.04 [0.592]
+                                                                                                          16.43 [0.647]
+                                                                                                                                   16.74 [0.659]
+
+
+
+
+                                                                                                                                                              31.52 [1.241](TFT O.D.)             17.21 [0.677]                            5.37 [0.211](CTP+TFT+PCB LAMINATE)
+                          9.10 [0.358]
+                                                   9.30 [0.366]
+
+
+
+
+                                                                                                                                                              28.34 [1.116](CG V.A.)              18.79 [0.740]                            1.45 [0.057](CG+SENSOR)
+                                                                                                                                                              27.72 [1.091](TFT A.A.)             19.11 [0.752]                            1.10 [0.043](CG)
+                                                                                                                                                                                                                                                                                     CN10                                                         CN7
+50.10 [1.972](PCB O.D.)
+
+
+                                                   42.60 [1.677](SENSOR O.D.)
+                          43.00 [1.693](CG O.D.)
+
+
+
+
+                                                                                                                                   27.72 [1.091](TFT A.A)
+                                                                                                          28.34 [1.116](CG V.A.)
+                                                                                33.72 [1.328](TFT O.D.)
+
+
+
+
+                                                                                                                                                                                                                                                                                          2.54mm
+                                                                                                                                                                                                                                                                                     CONNECTORS
+                                                                                                                                                                                                                     LEDA           LEDK
+
+
+                                                                                                                                                                                                                  BACKLIGHT CIRCUIT DIAGRAM
+
+
+
+
+     TFT NOTES:                                                                                                                                                         TP NOTES:                                      GENERAL NOTES:
+     1. DISPLAY TYPE: TFT, TRANSMISSIVE, NORMALLY                                                                                                                       1. TP STRUCTURE: G+G                           1. OPERATING TEMPERATURE: -20°C ~ 70°C
+        BLACK                                                                                                                                                           2. DRIVER IC: ILI2130                          2. STORAGE TEMPERATURE: -30°C ~ 80°C                 PN: RVA15MD-NUC64A
+     2. RESOLUTION: 240*240                                                                                                                                             3. SURFACE HARDNESS:≥6H                        3. WITHOUT INDIVIDUAL TOLERANCE: ±0.2mm
+     3. VIEWING ANGLE: FREE                                                                                                                                             4. TRANSMITTANCE: >85%                         4. RoHS COMPLIANT                                    SN:
+     4. DRIVER IC: ST7789
+     5. OPERATING VOLTAGE: Vcc=2.8V
+                                                                                                                                                                                                                                                                            DRAWN:    M.Stabinski                    2025.10.10   1:0.63
+     6. SURFACE LUMINANCE: 500cd/m2                                                                                                                                                                                                                                         CHECKED: M.Wierzbowski                   2025.10.13   [mm]
+     7. BACKLIGHT: 3LEDS, Vf=3.2V, If=60mA
+                                                                                                                                                                                                                                                                            APPR:                                                 ISO A3    P. 1 of 1
+                                                                               RVA15MD-NUC64A
+
+
+
+
+5. ABSOLUTE MAXIMUM RATINGS
+
+                PARAMETER                  SYMBOL           MIN              MAX          UNIT
+
+
+Supply Voltage (Logic)                     IOVCC               -0.3           4.6           V
+
+System Voltage                             VCC2.8              -0.3           4.6           V
+
+Input Voltage                               VIN                -0.3         VDD+0.3         V
+
+Operating temperature                       T OP               -20            70            o
+                                                                                                C
+
+Storage temperature                         T ST               -30            80            o
+                                                                                                C
+
+ Note. The above are maximum values. If exceeded, they may cause permanent damage to
+ the unit.
+
+
+
+6. ELECTRICAL CHARACTERISTICS
+
+          PARAMETER               SYMBOL              MIN             TYP           MAX         UNIT
+
+
+Interface operation voltage       IOVCC               1.7             1.8           3.3             V
+
+System voltage                      Vcc               2.5             2.8           3.3             V
+
+System power supply current         IVCC               -              44              -             mA
+
+Input High Voltage for LCD          VIH             0.7IOVCC           -        IOVCC               V
+
+Input Low Voltage for LCD           VIL               VSS              -       0.3IOVCC             V
+
+Output High Voltage for LCD         VOH             0.8IOVCC           -        IOVCC               V
+
+Output Low Voltage for LCD          VOL               VSS              -       0.2IOVCC             V
+
+
+
+
+ © 2025 Riverdi                      Page 7 of 19                                   www.riverdi.com
+                                                                            RVA15MD-NUC64A
+
+
+
+
+7. BACKLIGHT ELECTRICAL CHARACTERISTICS
+
+PARAMETER                       SYMBOL             MIN      TYP      MAX       UNIT      NOTE
+
+
+Backlight Driving Voltage            VLED              4       5        6         V       Notes 1,
+                                                                                             2
+Backlight Driving Current             ILED             -       60       -        mA
+
+Backlight Lifetime                     -               -    30,000      -       hours     Note 3
+
+ Note 1. Unless specified, the ambient temperature T a = 25℃
+ Note 2. The recommended operating conditions refer to a range in which operation of this
+ product is guaranteed. The operation cannot be guaranteed if the absolute maximum values
+ exceed.
+ Note 3. If LED is driven by high current, high ambient temperature and humidity condition,
+ the lifetime of LED will be reduced. Operating life means brightness goes down to 50% initial
+ brightness. Typical operating lifetime is estimated data.
+
+
+
+
+ © 2025 Riverdi                              Page 8 of 19                      www.riverdi.com
+                                                                                         RVA15MD-NUC64A
+
+
+
+
+8. ELECTRO-OPTICAL CHARACTERISTICS
+
+ITEM                 SYMBOL        CONDITION         MIN         TYP         MAX       UNIT       RMK      NOTE
+
+
+Response Time          Tr+Tf            θ=0°              -         30          -        ms       FIG 1.    4, 7
+
+                                        ∅=0°
+Contrast Ratio          Cr                                -         900         -        ---                1, 7
+                                      Ta=25 °C
+                                                                                                  FIG 2.
+Surface                 Lv                                -         500         -      cd/m2                2, 7
+Luminance
+
+Viewing Angle            θ             ∅ = 90°            -         80          -        deg                 6
+Range
+                                                                                                  FIG 3.
+                                      ∅ = 270°            -         80          -        deg
+
+                                        ∅ = 0°            -         80          -        deg
+
+                                      ∅ = 180°            -         80          -        deg
+
+CIE (x, y)              Rx              θ=0°                       0.608                  -       FIG 2.    5,7
+
+Chromaticity                            ∅=0°
+                        Ry                                         0.323                  -
+                                      Ta=25 °C
+                        Gx                                         0.317                  -
+
+                        Gy                                         0.549                  -
+
+                        Bx                                         0.145                  -
+
+                        By                                         0.138                  -
+
+  Note 1. Contrast Ratio (CR) is defined mathematically as below, for more information see
+  Figure 2.
+                                 Average Surface Luminance with all white pixels (P1, P2, P3, P4, P5)
+              Contrast Ratio =
+                                 Average Surface Luminance with all black pixels (P1, P2, P3, P4, P5)
+  Note 2. Surface luminance is the LCD surface from the surface with all pixels displaying white.
+  For more information see Figure 2.
+
+               Lv = Average Surface Luminance with all white pixels (P1, P2, P3, P4, P5)
+
+
+
+
+  © 2025 Riverdi                                  Page 9 of 19                                 www.riverdi.com
+                                                                                RVA15MD-NUC64A
+
+
+
+
+Note 3. The uniformity in surface luminance δ WHITE is determined by measuring luminance
+at each test position 1 through 5, and then dividing the minimum luminance of 5 points
+luminance by maximum luminance of 5 points luminance. For more information see Figure 2.
+
+                      Minimum Surface Luminance with all white pixels (P1, P2, P3, P4, P5)
+          δ WHITE =
+                      Maximum Surface Luminance with all white pixels (P1, P2, P3, P4, P5)
+Note 4. Response time is the time required for the display to transition from white to black
+(Rise Time, Tr) and from black to white (Decay Time, Tf). For additional information see Figure
+1. The test equipment is BM-7A.
+
+Note 5. CIE (x, y) chromaticity, the x, y value is determined by measuring luminance at each
+test position 1 through 5, and then make average value.
+
+Note 6. For TFT module, viewing angle is the angle at which the contrast ratio is greater 10.
+The angles are determined for the horizontal or x axis and the vertical or y axis with respect
+to the z axis which is normal to LCD surface. For more information see Figure 3.
+
+Note 7. Viewing angle is measured at the center point of the LCD by CONOSCOPE (ergo -80).
+For response time testing, the testing data is based on BM-7A. Instruments for Contrast
+Ratio, Surface Luminance, Luminance Uniformity, Chromaticity the test data is based on SR-
+3A.
+
+
+
+
+                           Figure 1. The definition of response time
+
+
+
+
+© 2025 Riverdi                            Page 10 of 19                             www.riverdi.com
+                                                                         RVA15MD-NUC64A
+
+
+
+
+                                                   A: 5mm
+                                                   B: 5mm
+                                                   H, V: Active Area
+                                                   Light spot size ∅=5mm, 500mm distance
+                                                   from the LCD surface to detector lens.
+                                                   Measurement instrument is SR-3A
+
+
+
+
+Figure 2. Measuring method for Contrast ratio, surface luminance, Luminance uniformity, CIE
+                                    (x, y) chromaticity
+
+
+
+
+                          Figure 3. The definition of viewing angle
+
+
+
+
+© 2025 Riverdi                         Page 11 of 19                        www.riverdi.com
+                                                      RVA15MD-NUC64A
+
+
+
+
+9. INTERFACES DESCRIPTION
+
+
+
+
+ 9.1       CN7
+
+PIN          SYMBOL      DESCRIPTION                         I/O/P
+
+
+      8      GND         Ground                                  P
+
+      12     VCC         I/O reference power supply              P
+
+      16     VCC         Power supply 3.3V                       P
+
+      18     VLED        Backlight power supply                  P
+
+      19     GND         Ground                                  P
+
+      20     GND         Ground                                  P
+
+      22     GND         Ground                                  P
+
+      28     LCD_TEAR    Tear effect signal                      O
+
+      30     LCD_RESET   LCD Reset                               I
+
+      35     SPIB_MISO   SPI data output                         O
+
+      37     SPIB_MOSI   SPI data input                          I
+
+      38     CTP_RST     CTP Reset                               I
+
+
+
+
+ © 2025 Riverdi                       Page 12 of 19     www.riverdi.com
+                                                          RVA15MD-NUC64A
+
+
+
+
+ 9.2 CN10
+
+PIN        SYMBOL      DESCRIPTION                               I/O/P
+
+
+      1    SPIB_MOSI   SPI data input (Not connected)                 I
+
+      3    CTP_SCL     CTP serial clock                               I
+
+      5    CTP_SDA     CTP serial data                               I/O
+
+      9    GND         Ground                                         P
+
+      11   SPIA_SCK    SPI serial clock                               I
+
+      13   SPIA_MISO   SPI data output                                O
+
+      15   SPIA_MOSI   SPI data input                                 I
+
+      17   SPIB_MISO   SPI data output (Not connected)                O
+
+      20   GND         Ground                                         P
+
+      21   LCD_CS      LCD chip select                                I
+
+      22   SPIB_SCK    SPI serial clock (Not connected)               I
+
+      23   M_CS        Memory chip select                             I
+
+      25   WRX         LCD command/data select                        I
+
+      26   SPIB_MOSI   SPI data input (Not connected)                 I
+
+      27   BKL_PWM     Backlight PWM control                          I
+
+      28   SPIB_MISO   SPI data output (Not connected)                O
+
+      30   SPIB_SCK    SPI serial clock                               I
+
+      32   GND         Ground                                         P
+
+      33   CTP_INT     CTP interrupt                                  I
+
+
+
+
+ © 2025 Riverdi                     Page 13 of 19           www.riverdi.com
+                                                                  RVA15MD-NUC64A
+
+
+
+
+10. EXTERNAL MEMORY
+
+                     ITEM                               DESCRIPTION
+
+
+                     Flash              NOR Flash
+
+                      Size              64Mbit/8Mbyte
+
+                   Interface            SPI
+
+
+
+
+11. CAPACITIVE TOUCH SCREEN PANEL
+    SPECIFICATIONS
+
+ 11.1 Mechanical characteristics
+
+                  DESCRIPTION                           SPECIFICATION
+
+
+             Touch Panel Size           1.54 inch
+
+         Outline Dimension of CTP       43.00mm x 36.00mm
+
+              Glass Thickness           1.1 mm
+
+              CTP View Area             28.34mm x 28.34mm
+
+            Sensor Active Area          27.72mm x 27.72mm
+
+             Surface Hardness           6H
+
+
+
+
+ 11.2 Electrical characteristics
+
+                  DESCRIPTION                           SPECIFICATION
+
+
+                   Controller           ILI2130
+
+                   Resolution           240x240
+
+           Device address 7-bit         0x41
+
+
+
+
+ © 2025 Riverdi                     Page 14 of 19                       www.riverdi.com
+                                                                              RVA15MD-NUC64A
+
+
+
+
+12. INSPECTION
+ Standard acceptance/rejection criteria for TFT module
+
+ 12.1 Inspection condition
+     Ambient conditions:
+           •      Temperature: 25 ± 2°C
+           •      Humidity: (60 ± 10) %RH
+           •      Illumination: Single fluorescent lamp non-directive (300 to 700 lux)
+
+     Viewing distance: 35 ± 5cm between inspector bare eye and LCD.
+     Viewing Angle: U/D: 45°/45°, L/R: 45°/45°
+
+
+
+
+ © 2025 Riverdi                            Page 15 of 19                          www.riverdi.com
+                                                                             RVA15MD-NUC64A
+
+
+
+
+12.2 Inspection standard
+
+ ITEM                 CRITERION
+
+
+ Black spots,                                                          Size < 5”
+ white spots, light
+ leakage, Foreign                                Average Diameter                  Qualified Qty
+ Particle (round
+ Type)                                           D ≤ 0.2 mm                        Ignored
+
+
+                                                 0.2 mm < D ≤ 0.3 mm               N=0
+                      D=(x+y)/2
+
+                                                 0.5 mm < D                        N=0
+                      Spots density: 10 mm
+
+ LCD black spots,                                                      Size < 5”
+ white spots, light
+ leakage (line
+                                                   Length               Width          Qualified Qty
+ Type)
+
+                                                       L ≤ 1.8        W ≤ 0.05            Ignored
+
+
+                                                   L ≤ 0.8          0.05 < W ≤ 0.1           N≤3
+
+
+                                                          -            W > 0.1           Not allowed
+
+
+
+                      Spots density: 10 mm
+
+ Bright/Dark                                            Size < 5”
+ Dots
+                                     Item                                 Qualified Qty
+
+                                  Bright dots                                      1
+
+                                  Dark dots                                        1
+
+                          Total Bright and Dark Dots                               1
+
+ Clear spots                                            Size ≤ 5”
+
+                              Average Diameter                            Qualified Qty
+
+                                  D < 0.2 mm                                 Ignored
+
+
+
+
+© 2025 Riverdi                          Page 16 of 19                              www.riverdi.com
+                                                                          RVA15MD-NUC64A
+
+
+
+
+                                 0.2 mm < D < 0.3 mm                        4
+
+                                 0.3 mm < D < 0.5 mm                         2
+
+                                     0.5 mm < D                             0
+
+                      Spots density: 10 mm
+
+                                                           Size ≤ 5”
+
+                                  Avarage Diameter                     Qualified Qty
+ Touch panel
+ spots                              D < 0.025 mm                           N≤2
+
+                                0.025 mm < D < 0.5 mm                      N≤1
+
+                                     0.5 mm < D                        Not allowed
+
+                                                           Size ≤ 5”
+
+                      Length                       Width                Qualified Qty
+ Touch panel
+ while line scratch   -                            W ≤ 0.025            N≤2
+
+                      L ≤ 5.0                      0.025 < W < 0.05     N≤1
+
+                      -                            0.05 < W             Not allowed
+
+
+
+
+© 2025 Riverdi                             Page 17 of 19                      www.riverdi.com
+                                                                              RVA15MD-NUC64A
+
+
+
+
+13. LEGAL INFORMATION
+ CE marking is usually obligatory only for a complete end product. Riverdi display modules are
+ semi-finished goods which are used as inputs to become part of the finished products.
+
+ Therefore, Riverdi display modules are not CE marked.
+
+ This is not a standalone product. It was designed as an electronic component. It needs
+ integration with a whole system to be fully functional.
+
+ Riverdi grants the guarantee for the proper operation of the goods for a period of 12 months
+ from the date of possession of the goods. If in a consequence of this guaranteed execution
+ the customer has received the defects-free item as replacement for the defective item, the
+ effectiveness period of this guarantee shall start anew from the moment the customer receives
+ the defects-free item.
+
+ Information about device is the property of Riverdi and may be the subject of patents pending
+ or granted. It is not allowed to copy or disclosed this document without prior written
+ permission.
+
+ Riverdi endeavors to ensure that all contained information in this document is correct but does
+ not accept liability for any error or omission. Riverdi products are in developing process and
+ published information may be not up to date. Riverdi reserves the right to update and make s
+ changes to Specifications or written material without prior notice at any time. It is important
+ to check the current position with Riverdi.
+
+ Images and graphics used in this document are only for illustrative the purpose. All images
+ and graphics are possible to be displayed on the range products of Riverdi, however the
+ quality may vary. Riverdi is no liable to the buyer or to any third party for any indirect,
+ incidental, special, consequential, punitive, or exemplary damages (including without
+ limitation lost profits, lost savings, or loss of business opportunity) relating to any product,
+ service provided or to be provided by Riverdi, or the use or inability to use the same, even if
+ Riverdi has been advised of the possibility of such damages.
+
+ Riverdi products are not fault tolerant nor designed, manufactured or intended for use or
+ resale as on line control equipment in hazardous environments requiring fail–safe
+ performance, such as in the operation of nuclear facilities, aircraft navigation or
+ communication systems, air traffic control, direct life support machines or weapons systems
+ in which the failure of the product could lead directly to death, personal injury or severe
+ physical or environmental damage (‘High-Risk Activities’). Riverdi and its suppliers specifically
+ disclaim any expressed or implied warranty of fitness for High-Risk Activities. Using Riverdi
+ products and devices in 'High-Risk Activities' and in any other application is entirely at the
+ buyer’s risk, and the buyer agrees to defend, indemnify and hold harmless Riverdi from all
+ damages, claims or expenses resulting from such use. No licenses are conveyed, implicitly or
+ otherwise, under any Riverdi intellectual property rights.
+
+
+
+
+ © 2025 Riverdi                           Page 18 of 19                          www.riverdi.com
+                                                                       RVA15MD-NUC64A
+
+
+
+
+14. CONTACT
+
+ Your Success is Our Priority
+
+ Stuck on a technical challenge? Need expert guidance?
+ Our dedicated support team is just a message away.
+
+
+ Contact us at
+ contact@riverdi.com
+
+ We're here to ensure your project's success, every step of the way!
+
+
+
+
+ © 2025 Riverdi                          Page 19 of 19                   www.riverdi.com
+

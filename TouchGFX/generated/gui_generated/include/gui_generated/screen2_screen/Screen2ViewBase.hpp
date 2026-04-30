@@ -8,13 +8,9 @@
 #include <mvp/View.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/graph/GraphScroll.hpp>
-#include <touchgfx/widgets/graph/GraphElements.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
 {
@@ -26,19 +22,7 @@ public:
     /*
      * Virtual Action Handlers
      */
-    virtual void decreaseTargetClicked()
-    {
-        // Override and implement this function in Screen2
-    }
-    virtual void increaseTargetClicked()
-    {
-        // Override and implement this function in Screen2
-    }
-    virtual void suctionToggleClicked()
-    {
-        // Override and implement this function in Screen2
-    }
-    virtual void releaseConfirmedClicked()
+    virtual void bandySelected()
     {
         // Override and implement this function in Screen2
     }
@@ -52,78 +36,17 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Box background;
-    touchgfx::BoxWithBorder headerPanel;
-    touchgfx::Box brandAccent;
-    touchgfx::BoxWithBorder statusBadge;
-    touchgfx::BoxWithBorder heroCard;
-    touchgfx::BoxWithBorder metricsCard;
-    touchgfx::BoxWithBorder trendPanel;
-    touchgfx::BoxWithBorder warningCard;
-    touchgfx::BoxWithBorder stepLoadBox;
-    touchgfx::BoxWithBorder stepPositionBox;
-    touchgfx::BoxWithBorder stepAspirateBox;
-    touchgfx::BoxWithBorder stepReleaseBox;
-    touchgfx::BoxWithBorder stepVerifyBox;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  decreaseTargetButton;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  increaseTargetButton;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  suctionToggleButton;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  releaseConfirmButton;
-    touchgfx::TextArea brandTitle;
-    touchgfx::TextArea brandSubtitle;
-    touchgfx::TextArea currentLabel;
-    touchgfx::TextArea targetLabel;
-    touchgfx::TextArea stabilityLabel;
-    touchgfx::TextArea ligaturesLabel;
-    touchgfx::TextArea trendTitle;
-    touchgfx::TextArea warningLabel;
-    touchgfx::TextArea currentUnit;
-    touchgfx::TextArea targetUnit;
-    touchgfx::TextArea stepLoadText;
-    touchgfx::TextArea stepPositionText;
-    touchgfx::TextArea stepAspirateText;
-    touchgfx::TextArea stepReleaseText;
-    touchgfx::TextArea stepVerifyText;
-    touchgfx::TextArea decreaseTargetLabel;
-    touchgfx::TextArea increaseTargetLabel;
-    touchgfx::TextArea releaseConfirmLabel;
-    touchgfx::GraphScroll<80> trendGraph;
-    touchgfx::GraphElementGridY trendGraphMajorYAxisGrid;
-    touchgfx::GraphElementLine trendGraphLine1;
-    touchgfx::PainterRGB565 trendGraphLine1Painter;
-    touchgfx::TextAreaWithOneWildcard statusValue;
-    touchgfx::TextAreaWithOneWildcard currentValue;
-    touchgfx::TextAreaWithOneWildcard targetValue;
-    touchgfx::TextAreaWithOneWildcard stabilityValue;
-    touchgfx::TextAreaWithOneWildcard ligaturesValue;
-    touchgfx::TextAreaWithOneWildcard warningValue;
-    touchgfx::TextAreaWithOneWildcard suctionToggleLabel;
-
-    /*
-     * Wildcard Buffers
-     */
-    static const uint16_t STATUSVALUE_SIZE = 24;
-    touchgfx::Unicode::UnicodeChar statusValueBuffer[STATUSVALUE_SIZE];
-    static const uint16_t CURRENTVALUE_SIZE = 8;
-    touchgfx::Unicode::UnicodeChar currentValueBuffer[CURRENTVALUE_SIZE];
-    static const uint16_t TARGETVALUE_SIZE = 8;
-    touchgfx::Unicode::UnicodeChar targetValueBuffer[TARGETVALUE_SIZE];
-    static const uint16_t STABILITYVALUE_SIZE = 8;
-    touchgfx::Unicode::UnicodeChar stabilityValueBuffer[STABILITYVALUE_SIZE];
-    static const uint16_t LIGATURESVALUE_SIZE = 8;
-    touchgfx::Unicode::UnicodeChar ligaturesValueBuffer[LIGATURESVALUE_SIZE];
-    static const uint16_t WARNINGVALUE_SIZE = 28;
-    touchgfx::Unicode::UnicodeChar warningValueBuffer[WARNINGVALUE_SIZE];
-    static const uint16_t SUCTIONTOGGLELABEL_SIZE = 16;
-    touchgfx::Unicode::UnicodeChar suctionToggleLabelBuffer[SUCTIONTOGGLELABEL_SIZE];
+    touchgfx::Box productBackground;
+    touchgfx::Box productAccent;
+    touchgfx::TextArea productTitle;
+    touchgfx::TextArea productSubtitle;
+    touchgfx::BoxWithBorder bandyHighlightFrame;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  bandyButton;
+    touchgfx::TextArea bandyName;
+    touchgfx::BoxWithBorder emerflowCard;
+    touchgfx::TextArea emerflowName;
 
 private:
-
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

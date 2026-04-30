@@ -18,31 +18,33 @@ public:
 
     void tick();
 
-    void initializeDashboard();
-    void setSuctionEnabled(bool enabled);
-    void adjustTargetPressure(int32_t deltaMbar);
-    void markBandReleased();
-    void resetProcedure();
+    void initializeBandyDemo();
+    void startBandyDemo();
+    void increaseBandyTarget();
+    void decreaseBandyTarget();
+    bool isVacuumCycleRunning() const;
 
-    DashboardState getDashboardState() const
+    BandyState getBandyState() const
     {
-        return dashboardState;
+        return bandyState;
     }
 
 private:
-    void notifyDashboardState();
-    void updateSimulationStep();
-    void updateDerivedState();
-    bool hasStateChanged(const DashboardState& previousState) const;
-    int32_t clampTargetPressure(int32_t requestedTarget) const;
+    void notifyBandyState();
+    void updateBridgeSnapshot();
+    void updateBandyFromInput();
+    void updateBandyDerivedState();
+    int32_t clampTarget(int32_t requestedTarget) const;
+    bool hasBandyStateChanged(const BandyState& previousState) const;
 
     ModelListener* modelListener;
-    DashboardState dashboardState;
+    BandyState bandyState;
     uint8_t tickDivider;
-    uint8_t waveIndex;
-    uint8_t leakTicks;
-    uint8_t releaseFeedbackTicks;
-    bool dashboardInitialized;
+    bool bandyInitialized;
+    bool bridgeSnapshotValid;
+    uint8_t bridgeVacuumState;
+    uint8_t bridgeFault;
+    int32_t bridgePressureMbar;
 };
 
 #endif // MODEL_HPP

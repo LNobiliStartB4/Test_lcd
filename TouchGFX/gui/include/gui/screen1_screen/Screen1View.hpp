@@ -10,14 +10,14 @@ class Screen1View : public Screen1ViewBase
 public:
     Screen1View();
     virtual ~Screen1View() {}
+
     virtual void setupScreen();
     virtual void tearDownScreen();
-    virtual void touchTestClicked();
+    virtual void handleTickEvent();
 
 private:
-    void applyTouchState();
-
-    bool touchActive;
+    uint8_t splashTicks;
+    bool transitionRequested;
 };
 
 #endif // SCREEN1VIEW_HPP

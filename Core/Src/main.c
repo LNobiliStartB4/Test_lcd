@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "RVA15MD_DisplayDriver.h"
+#include "display_bridge_rx.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -114,6 +115,7 @@ int main(void)
   DisplayDriver_Init();
   DisplayDriver_DisplayInit();
   DisplayDriver_DisplayOn();
+  DisplayBridgeRx_Init(&huart2);
 
   /* Start TIM11 interrupt for VSync (~60 Hz). Must be AFTER MX_TouchGFX_Init(). */
   HAL_TIM_Base_Start_IT(&htim11);

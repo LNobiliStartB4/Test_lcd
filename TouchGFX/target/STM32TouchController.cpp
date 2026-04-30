@@ -28,6 +28,23 @@
 volatile uint32_t newTouch = 0;
 extern "C" I2C_HandleTypeDef hi2c1;
 
+namespace
+{
+const uint16_t kIli2130ReadAddress = 0x83;
+const uint8_t kIli2130ReportId = 0x48;
+const uint8_t kIli2130ReportSize = 64;
+const uint8_t kIli2130ContactCountIndex = 61;
+const uint8_t kIli2130MaxTouches = 10;
+const uint8_t kIli2130TouchTipMask = 0x40;
+const int32_t kTouchMaxX = 479;
+const int32_t kTouchMaxY = 319;
+
+bool coordinatesAreValid(int32_t x, int32_t y)
+{
+    return x >= 0 && x <= kTouchMaxX && y >= 0 && y <= kTouchMaxY;
+}
+}
+
 void STM32TouchController::init()
 {
     HAL_GPIO_WritePin(TOUCH_RST_GPIO_Port, TOUCH_RST_Pin, GPIO_PIN_RESET);
@@ -40,20 +57,40 @@ bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
 {
     if (newTouch)
     {
-        HAL_StatusTypeDef status;
-        uint8_t rx_buf[5];
+        uint8_t report[kIli2130ReportSize];
 
         newTouch = 0;
 
-        /* read x/y coordinates from touch controller (I2C addr 0x83 = 0x41 << 1 | 1) */
-        status = HAL_I2C_Master_Receive(&hi2c1, 0x83, rx_buf, sizeof(rx_buf), 10);
-        if (status == HAL_OK)
+        if (HAL_I2C_Master_Receive(&hi2c1, kIli2130ReadAddress, report, sizeof(report), 20) != HAL_OK)
         {
-            x = rx_buf[2];
-            y = rx_buf[4];
-            return true;
+            return false;
+        }
+
+        if (report[0] != kIli2130ReportId || report[kIli2130ContactCountIndex] == 0U)
+        {
+            return false;
+        }
+
+        for (uint8_t touchIndex = 0; touchIndex < kIli2130MaxTouches; touchIndex++)
+        {
+            const uint8_t offset = static_cast<uint8_t>(1U + (5U * touchIndex));
+            if ((report[offset] & kIli2130TouchTipMask) == 0U)
+            {
+                continue;
+            }
+
+            const int32_t touchX = static_cast<int32_t>((static_cast<uint16_t>(report[offset + 2]) << 8) | report[offset + 1]);
+            const int32_t touchY = static_cast<int32_t>((static_cast<uint16_t>(report[offset + 4]) << 8) | report[offset + 3]);
+
+            if (coordinatesAreValid(touchX, touchY))
+            {
+                x = touchX;
+                y = touchY;
+                return true;
+            }
         }
     }
+
     return false;
 }
 

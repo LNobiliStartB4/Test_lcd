@@ -22,7 +22,7 @@ public:
         model = m;
     }
 
-    virtual void dashboardStateUpdated(const DashboardState& state)
+    virtual void bandyStateUpdated(const BandyState& state)
     {
         (void)state;
     }
