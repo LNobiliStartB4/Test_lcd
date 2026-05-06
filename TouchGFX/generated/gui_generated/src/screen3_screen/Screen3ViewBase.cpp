@@ -3,7 +3,6 @@
 /*********************************************************************************/
 #include <gui_generated/screen3_screen/Screen3ViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 
 Screen3ViewBase::Screen3ViewBase()
 {
@@ -15,33 +14,20 @@ Screen3ViewBase::Screen3ViewBase()
     bandyBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(bandyBackground);
 
-    vacuumPanel.setXY(20, 9);
+    vacuumPanel.setXY(20, 16);
     add(vacuumPanel);
 
-    timeRemainingPanel.setPosition(148, 201, 180, 28);
-    timeRemainingPanel.setColor(touchgfx::Color::getColorFromRGB(0, 7, 13));
-    timeRemainingPanel.setBorderColor(touchgfx::Color::getColorFromRGB(54, 86, 116));
-    timeRemainingPanel.setBorderSize(1);
-    add(timeRemainingPanel);
+    timePanel.setXY(150, 158);
+    add(timePanel);
 
-    timeLeftLabel.setPosition(162, 206, 78, 18);
-    timeLeftLabel.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
-    timeLeftLabel.setLinespacing(0);
-    timeLeftLabel.setTypedText(touchgfx::TypedText(T_TEXT_TIMELEFT));
-    add(timeLeftLabel);
+    lowerDivider.setPosition(20, 232, 440, 1);
+    lowerDivider.setColor(touchgfx::Color::getColorFromRGB(64, 64, 58));
+    add(lowerDivider);
 
-    timeRemainingValue.setPosition(244, 206, 72, 18);
-    timeRemainingValue.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
-    timeRemainingValue.setLinespacing(0);
-    Unicode::snprintf(timeRemainingValueBuffer, TIMEREMAININGVALUE_SIZE, "%s", touchgfx::TypedText(T_BUFFER_TIMEREMAINING).getText());
-    timeRemainingValue.setWildcard(timeRemainingValueBuffer);
-    timeRemainingValue.setTypedText(touchgfx::TypedText(T_VALUE_TIMEREMAINING));
-    add(timeRemainingValue);
-
-    targetPanel.setXY(20, 242);
+    targetPanel.setXY(20, 248);
     add(targetPanel);
 
-    startPanel.setXY(346, 242);
+    startPanel.setXY(350, 248);
     add(startPanel);
 }
 
@@ -53,6 +39,7 @@ Screen3ViewBase::~Screen3ViewBase()
 void Screen3ViewBase::setupScreen()
 {
     vacuumPanel.initialize();
+    timePanel.initialize();
     targetPanel.initialize();
     startPanel.initialize();
 }

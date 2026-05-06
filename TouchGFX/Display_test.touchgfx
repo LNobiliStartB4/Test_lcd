@@ -330,78 +330,47 @@
             "Type": "CustomContainerInstance",
             "Name": "vacuumPanel",
             "X": 20,
-            "Y": 9,
-            "Width": 436,
-            "Height": 177,
+            "Y": 16,
+            "Width": 440,
+            "Height": 140,
             "CustomContainerDefinitionName": "BandyVacuumPanel"
           },
           {
-            "Type": "BoxWithBorder",
-            "Name": "timeRemainingPanel",
-            "X": 148,
-            "Y": 201,
+            "Type": "CustomContainerInstance",
+            "Name": "timePanel",
+            "X": 150,
+            "Y": 158,
             "Width": 180,
-            "Height": 28,
-            "Color": {
-              "Green": 7,
-              "Blue": 13
-            },
-            "BorderColor": {
-              "Red": 54,
-              "Green": 86,
-              "Blue": 116
-            },
-            "BorderSize": 1
+            "Height": 64,
+            "CustomContainerDefinitionName": "BandyTimePanel"
           },
           {
-            "Type": "TextArea",
-            "Name": "timeLeftLabel",
-            "X": 162,
-            "Y": 206,
-            "Width": 78,
-            "Height": 18,
-            "TextId": "Text_TimeLeft",
-            "TextRotation": "0",
+            "Type": "Box",
+            "Name": "lowerDivider",
+            "X": 20,
+            "Y": 232,
+            "Width": 440,
+            "Height": 1,
             "Color": {
-              "Red": 142,
-              "Green": 164,
-              "Blue": 184
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "timeRemainingValue",
-            "X": 244,
-            "Y": 206,
-            "Width": 72,
-            "Height": 18,
-            "TextId": "Value_TimeRemaining",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
-            },
-            "Wildcard1": {
-              "TextId": "Buffer_TimeRemaining",
-              "UseBuffer": true,
-              "BufferSize": 6
+              "Red": 64,
+              "Green": 64,
+              "Blue": 58
             }
           },
           {
             "Type": "CustomContainerInstance",
             "Name": "targetPanel",
             "X": 20,
-            "Y": 242,
-            "Width": 318,
+            "Y": 248,
+            "Width": 310,
             "Height": 62,
             "CustomContainerDefinitionName": "BandyTargetPanel"
           },
           {
             "Type": "CustomContainerInstance",
             "Name": "startPanel",
-            "X": 346,
-            "Y": 242,
+            "X": 350,
+            "Y": 248,
             "Width": 110,
             "Height": 62,
             "CustomContainerDefinitionName": "BandyStartPanel"
@@ -413,41 +382,28 @@
     "CustomContainerDefinitions": [
       {
         "Name": "BandyVacuumPanel",
-        "Width": 436,
-        "Height": 177,
+        "Width": 440,
+        "Height": 140,
         "Components": [
-          {
-            "Type": "BoxWithBorder",
-            "Name": "gaugeCard",
-            "Width": 436,
-            "Height": 177,
-            "BorderColor": {
-              "Red": 54,
-              "Green": 86,
-              "Blue": 116
-            },
-            "BorderSize": 2
-          },
           {
             "Type": "TextArea",
             "Name": "vacuumLabel",
-            "X": 152,
-            "Y": 115,
-            "Width": 169,
-            "Height": 17,
+            "X": 42,
+            "Y": 70,
+            "Width": 356,
+            "Height": 20,
             "TextId": "Text_VacuumLabel",
             "TextRotation": "0",
             "Color": {
-              "Red": 142,
-              "Green": 164,
+              "Red": 196,
+              "Green": 192,
               "Blue": 184
             }
           },
           {
             "Type": "TextArea",
             "Name": "vacuumValue",
-            "X": 74,
-            "Y": 9,
+            "X": 110,
             "Width": 220,
             "Height": 60,
             "TextId": "Value_Hero",
@@ -464,55 +420,39 @@
             }
           },
           {
-            "Type": "TextArea",
-            "Name": "mbarLabel",
-            "X": 250,
-            "Y": 39,
-            "Width": 71,
-            "Height": 22,
-            "TextId": "Text_Mbar",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 142,
-              "Green": 164,
-              "Blue": 184
-            }
-          },
-          {
             "Type": "BoxWithBorder",
             "Name": "vacuumTrack",
-            "X": 29,
-            "Y": 76,
-            "Width": 364,
-            "Height": 27,
+            "X": 20,
+            "Y": 104,
+            "Width": 400,
+            "Height": 5,
             "Color": {
-              "Red": 18,
-              "Green": 35,
-              "Blue": 52
+              "Red": 82,
+              "Green": 82,
+              "Blue": 76
             },
             "BorderColor": {
-              "Red": 42,
-              "Green": 68,
-              "Blue": 92
-            },
-            "BorderSize": 1
+              "Red": 82,
+              "Green": 82,
+              "Blue": 76
+            }
           },
           {
             "Type": "Box",
             "Name": "vacuumFill",
-            "X": 33,
-            "Y": 84,
-            "Height": 11,
+            "X": 20,
+            "Y": 104,
+            "Height": 5,
             "Color": {
-              "Red": 62,
-              "Green": 158,
-              "Blue": 205
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
             }
           },
           {
             "Type": "TextArea",
             "Name": "scaleZeroLabel",
-            "X": 29,
+            "X": 20,
             "Y": 116,
             "Width": 60,
             "Height": 15,
@@ -527,8 +467,8 @@
           {
             "Type": "TextArea",
             "Name": "scaleMaxLabel",
-            "X": 363,
-            "Y": 117,
+            "X": 360,
+            "Y": 116,
             "Width": 60,
             "Height": 13,
             "TextId": "Text_MaxScale",
@@ -543,25 +483,66 @@
         "Interactions": []
       },
       {
+        "Name": "BandyTimePanel",
+        "Width": 180,
+        "Height": 64,
+        "Components": [
+          {
+            "Type": "ScalableImage",
+            "Name": "timeIcon",
+            "X": 39,
+            "Width": 22,
+            "Height": 22,
+            "Filename": "time_left_icon_white.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "timeLeftLabel",
+            "X": 66,
+            "Y": 3,
+            "Width": 90,
+            "Height": 18,
+            "TextId": "Text_TimeLeft",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 192,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "timeRemainingValue",
+            "Y": 25,
+            "Width": 180,
+            "Height": 38,
+            "TextId": "Value_TimeRemaining",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_TimeRemaining",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
         "Name": "BandyTargetPanel",
-        "Width": 318,
+        "Width": 310,
         "Height": 62,
         "Components": [
           {
             "Type": "BoxWithBorder",
             "Name": "targetCard",
-            "Width": 318,
-            "Height": 62,
-            "Color": {
-              "Green": 5,
-              "Blue": 10
-            },
-            "BorderColor": {
-              "Red": 224,
-              "Green": 208,
-              "Blue": 22
-            },
-            "BorderSize": 1
+            "Width": 310,
+            "Height": 62
           },
           {
             "Type": "TextArea",
@@ -582,9 +563,9 @@
             "Type": "TextArea",
             "Name": "targetValue",
             "X": 10,
-            "Y": 29,
-            "Width": 70,
-            "Height": 26,
+            "Y": 24,
+            "Width": 90,
+            "Height": 34,
             "TextId": "Value_Metric",
             "TextRotation": "0",
             "Color": {
@@ -601,10 +582,10 @@
           {
             "Type": "TextArea",
             "Name": "targetMbarLabel",
-            "X": 74,
-            "Y": 37,
-            "Width": 42,
-            "Height": 13,
+            "X": 102,
+            "Y": 42,
+            "Width": 46,
+            "Height": 16,
             "TextId": "Text_Mbar",
             "TextRotation": "0",
             "Color": {
@@ -616,7 +597,7 @@
           {
             "Type": "FlexButton",
             "Name": "targetMinusButton",
-            "X": 154,
+            "X": 150,
             "Y": 5,
             "Width": 72,
             "Height": 52,
@@ -626,24 +607,21 @@
             "ButtonStyles": [
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "ColorReleased": {
-                  "Green": 5,
-                  "Blue": 10
-                },
+                "BorderSize": 2,
                 "ColorPressed": {
-                  "Red": 18,
-                  "Green": 28,
-                  "Blue": 36
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
                 },
                 "ColorBorderReleased": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
                 },
                 "ColorBorderPressed": {
                   "Red": 255,
                   "Green": 255,
-                  "Blue": 255
+                  "Blue": 248
                 }
               }
             ]
@@ -651,7 +629,7 @@
           {
             "Type": "ScalableImage",
             "Name": "targetMinusRing",
-            "X": 164,
+            "X": 160,
             "Y": 5,
             "Width": 52,
             "Height": 52,
@@ -661,7 +639,7 @@
           {
             "Type": "TextArea",
             "Name": "targetMinusLabel",
-            "X": 154,
+            "X": 150,
             "Y": 22,
             "Width": 72,
             "Height": 35,
@@ -676,7 +654,7 @@
           {
             "Type": "FlexButton",
             "Name": "targetPlusButton",
-            "X": 236,
+            "X": 232,
             "Y": 5,
             "Width": 72,
             "Height": 52,
@@ -686,24 +664,21 @@
             "ButtonStyles": [
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "ColorReleased": {
-                  "Green": 5,
-                  "Blue": 10
-                },
+                "BorderSize": 2,
                 "ColorPressed": {
-                  "Red": 18,
-                  "Green": 28,
-                  "Blue": 36
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
                 },
                 "ColorBorderReleased": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 255
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
                 },
                 "ColorBorderPressed": {
                   "Red": 255,
                   "Green": 255,
-                  "Blue": 255
+                  "Blue": 248
                 }
               }
             ]
@@ -711,7 +686,7 @@
           {
             "Type": "ScalableImage",
             "Name": "targetPlusRing",
-            "X": 246,
+            "X": 242,
             "Y": 5,
             "Width": 52,
             "Height": 52,
@@ -721,7 +696,7 @@
           {
             "Type": "TextArea",
             "Name": "targetPlusLabel",
-            "X": 236,
+            "X": 232,
             "Y": 22,
             "Width": 72,
             "Height": 35,
@@ -769,16 +744,12 @@
             "Name": "startFrame",
             "Width": 110,
             "Height": 62,
-            "Color": {
-              "Green": 3,
-              "Blue": 1
-            },
             "BorderColor": {
-              "Red": 43,
-              "Green": 255,
-              "Blue": 79
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
             },
-            "BorderSize": 1
+            "BorderSize": 2
           },
           {
             "Type": "FlexButton",
@@ -792,34 +763,40 @@
               {
                 "Type": "BoxWithBorderButtonStyle",
                 "BorderSize": 3,
-                "ColorReleased": {
-                  "Red": 20,
-                  "Green": 71,
-                  "Blue": 62
-                },
                 "ColorPressed": {
-                  "Red": 29,
-                  "Green": 100,
-                  "Blue": 86
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
                 },
                 "ColorBorderReleased": {
-                  "Red": 255,
-                  "Green": 15,
-                  "Blue": 63
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
                 },
                 "ColorBorderPressed": {
-                  "Red": 139,
-                  "Green": 229,
-                  "Blue": 200
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
                 }
               }
             ]
           },
           {
+            "Type": "ScalableImage",
+            "Name": "startIcon",
+            "X": 13,
+            "Y": 13,
+            "Width": 18,
+            "Height": 18,
+            "Filename": "start_play_icon_white.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
             "Type": "TextArea",
             "Name": "startLabel",
-            "Y": 21,
-            "Width": 110,
+            "X": 38,
+            "Y": 19,
+            "Width": 72,
             "Height": 35,
             "TextId": "Text_Start",
             "TextRotation": "0",

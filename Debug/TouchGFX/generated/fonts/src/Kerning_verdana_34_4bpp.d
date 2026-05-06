@@ -1,5 +1,5 @@
-TouchGFX/generated/fonts/src/Kerning_verdana_26_4bpp.o: \
- ../TouchGFX/generated/fonts/src/Kerning_verdana_26_4bpp.cpp \
+TouchGFX/generated/fonts/src/Kerning_verdana_34_4bpp.o: \
+ ../TouchGFX/generated/fonts/src/Kerning_verdana_34_4bpp.cpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

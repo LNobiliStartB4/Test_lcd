@@ -9,9 +9,7 @@
 #include <gui/screen3_screen/Screen3Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <gui/containers/BandyVacuumPanel.hpp>
-#include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <gui/containers/BandyTimePanel.hpp>
 #include <gui/containers/BandyTargetPanel.hpp>
 #include <gui/containers/BandyStartPanel.hpp>
 
@@ -33,17 +31,10 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box bandyBackground;
     BandyVacuumPanel vacuumPanel;
-    touchgfx::BoxWithBorder timeRemainingPanel;
-    touchgfx::TextArea timeLeftLabel;
-    touchgfx::TextAreaWithOneWildcard timeRemainingValue;
+    BandyTimePanel timePanel;
+    touchgfx::Box lowerDivider;
     BandyTargetPanel targetPanel;
     BandyStartPanel startPanel;
-
-    /*
-     * Wildcard Buffers
-     */
-    static const uint16_t TIMEREMAININGVALUE_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar timeRemainingValueBuffer[TIMEREMAININGVALUE_SIZE];
 
 private:
 

@@ -11,8 +11,7 @@ Screen3View::Screen3View()
       fullRedrawTicks(0),
       decreaseTargetCallback(this, &Screen3View::decreaseTargetClicked),
       increaseTargetCallback(this, &Screen3View::increaseTargetClicked),
-      startCallback(this, &Screen3View::startClicked),
-      returnToWaitRequested(false)
+      startCallback(this, &Screen3View::startClicked)
 {
 }
 
@@ -24,7 +23,6 @@ void Screen3View::setupScreen()
     startPanel.setStartCallback(startCallback);
 
     fullRedrawTicks = kInitialFullRedrawTicks;
-    returnToWaitRequested = false;
     touchgfx::Application::getInstance()->invalidateArea(touchgfx::Rect(0, 0, 480, 320));
 
     if (presenter != 0)
@@ -35,7 +33,6 @@ void Screen3View::setupScreen()
 
 void Screen3View::tearDownScreen()
 {
-    returnToWaitRequested = false;
     Screen3ViewBase::tearDownScreen();
 }
 
@@ -47,11 +44,6 @@ void Screen3View::handleTickEvent()
         fullRedrawTicks--;
     }
 
-    if (!returnToWaitRequested && (presenter != 0) && !presenter->isVacuumCycleRunning())
-    {
-        returnToWaitRequested = true;
-        application().gotoRfidWaitScreenNoTransition();
-    }
 }
 
 void Screen3View::decreaseTargetClicked()
@@ -74,7 +66,14 @@ void Screen3View::startClicked()
 {
     if (presenter != 0)
     {
-        presenter->startDemo();
+        if (latestState.running)
+        {
+            presenter->stopDemo();
+        }
+        else
+        {
+            presenter->startDemo();
+        }
     }
 }
 
@@ -84,4 +83,6 @@ void Screen3View::applyBandyState(const BandyState& state)
 
     vacuumPanel.setVacuumMbar(state.currentVacuumMbar);
     targetPanel.setTargetMbar(state.targetVacuumMbar);
+    timePanel.setRemainingSeconds(state.remainingSeconds);
+    startPanel.setRunning(state.running);
 }

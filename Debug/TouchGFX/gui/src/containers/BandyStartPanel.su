@@ -1,3 +1,5 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:91:5:touchgfx::colortype::colortype(uint32_t)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:136:5:touchgfx::Bitmap::Bitmap(touchgfx::BitmapId)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	16	static
@@ -10,9 +12,19 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:62:10:void touchgfx::Box::setColor(touchgfx::colortype)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:61:10:void touchgfx::BoxWithBorder::setBorderColor(touchgfx::colortype)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:59:5:touchgfx::TypedText::TypedText(touchgfx::TypedTextId)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	16	static
 ../TouchGFX/gui/include/gui/containers/BandyStartPanel.hpp:11:13:BandyStartPanel::~BandyStartPanel()	16	static
 ../TouchGFX/gui/include/gui/containers/BandyStartPanel.hpp:11:13:virtual BandyStartPanel::~BandyStartPanel()	16	static
-../TouchGFX/gui/src/containers/BandyStartPanel.cpp:3:1:BandyStartPanel::BandyStartPanel()	16	static
-../TouchGFX/gui/src/containers/BandyStartPanel.cpp:9:6:virtual void BandyStartPanel::initialize()	16	static
-../TouchGFX/gui/src/containers/BandyStartPanel.cpp:14:6:virtual void BandyStartPanel::startClicked()	16	static
-../TouchGFX/gui/src/containers/BandyStartPanel.cpp:22:6:void BandyStartPanel::setStartCallback(touchgfx::GenericCallback<void>&)	16	static
+../TouchGFX/gui/src/containers/BandyStartPanel.cpp:22:1:BandyStartPanel::BandyStartPanel()	16	static
+../TouchGFX/gui/src/containers/BandyStartPanel.cpp:29:6:virtual void BandyStartPanel::initialize()	16	static
+../TouchGFX/gui/src/containers/BandyStartPanel.cpp:35:6:virtual void BandyStartPanel::startClicked()	16	static
+../TouchGFX/gui/src/containers/BandyStartPanel.cpp:43:6:void BandyStartPanel::setStartCallback(touchgfx::GenericCallback<void>&)	16	static
+../TouchGFX/gui/src/containers/BandyStartPanel.cpp:48:6:void BandyStartPanel::setRunning(bool)	32	static
+../TouchGFX/gui/src/containers/BandyStartPanel.cpp:60:6:void BandyStartPanel::applyVisualState()	40	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:94:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBoxWithBorderColors(touchgfx::colortype, touchgfx::colortype, touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::ClickButtonTrigger]	24	static
+../TouchGFX/gui/src/containers/BandyStartPanel.cpp:87:1:void __static_initialization_and_destruction_0()	88	static
+../TouchGFX/gui/src/containers/BandyStartPanel.cpp:87:1:cpp)	8	static

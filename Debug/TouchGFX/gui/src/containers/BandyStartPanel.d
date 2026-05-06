@@ -67,7 +67,11 @@ TouchGFX/gui/src/containers/BandyStartPanel.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
+ ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
+ ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
 ../TouchGFX/gui/include/gui/containers/BandyStartPanel.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyStartPanelBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -136,3 +140,7 @@ TouchGFX/gui/src/containers/BandyStartPanel.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
+../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
+../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:

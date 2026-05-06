@@ -35,10 +35,9 @@ void Screen4View::handleTickEvent()
         fullRedrawTicks--;
     }
 
-    if (!transitionRequested && (presenter != 0) && presenter->isVacuumCycleRunning())
+    if (!transitionRequested && (presenter != 0) && presenter->isRfidApproved())
     {
         transitionRequested = true;
-        presenter->startBandyDemo();
         application().gotoBandyScreenNoTransition();
     }
 }

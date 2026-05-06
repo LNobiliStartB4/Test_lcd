@@ -37,6 +37,14 @@ void Screen3Presenter::startDemo()
     }
 }
 
+void Screen3Presenter::stopDemo()
+{
+    if (model != 0)
+    {
+        model->stopBandyDemo();
+    }
+}
+
 void Screen3Presenter::increaseTarget()
 {
     if (model != 0)

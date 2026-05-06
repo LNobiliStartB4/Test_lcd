@@ -8,6 +8,7 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 
 class BandyStartPanelBase : public touchgfx::Container
@@ -35,6 +36,7 @@ protected:
      */
     touchgfx::BoxWithBorder startFrame;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  startButton;
+    touchgfx::ScalableImage startIcon;
     touchgfx::TextArea startLabel;
 
 private:

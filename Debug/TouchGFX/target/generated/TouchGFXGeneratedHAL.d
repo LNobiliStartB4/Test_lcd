@@ -90,6 +90,8 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp \
  ../TouchGFX/gui/include/gui/containers/BandyVacuumPanel.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyVacuumPanelBase.hpp \
+ ../TouchGFX/gui/include/gui/containers/BandyTimePanel.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyTimePanelBase.hpp \
  ../TouchGFX/gui/include/gui/containers/BandyTargetPanel.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyTargetPanelBase.hpp \
  ../TouchGFX/gui/include/gui/containers/BandyStartPanel.hpp \
@@ -220,6 +222,8 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:
 ../TouchGFX/gui/include/gui/containers/BandyVacuumPanel.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyVacuumPanelBase.hpp:
+../TouchGFX/gui/include/gui/containers/BandyTimePanel.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyTimePanelBase.hpp:
 ../TouchGFX/gui/include/gui/containers/BandyTargetPanel.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyTargetPanelBase.hpp:
 ../TouchGFX/gui/include/gui/containers/BandyStartPanel.hpp:

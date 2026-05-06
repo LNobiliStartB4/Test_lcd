@@ -9,12 +9,12 @@
 BandyTargetPanelBase::BandyTargetPanelBase() :
     flexButtonCallback(this, &BandyTargetPanelBase::flexButtonCallbackHandler)
 {
-    setWidth(318);
+    setWidth(310);
     setHeight(62);
-    targetCard.setPosition(0, 0, 318, 62);
-    targetCard.setColor(touchgfx::Color::getColorFromRGB(0, 5, 10));
-    targetCard.setBorderColor(touchgfx::Color::getColorFromRGB(224, 208, 22));
-    targetCard.setBorderSize(1);
+    targetCard.setPosition(0, 0, 310, 62);
+    targetCard.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    targetCard.setBorderColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    targetCard.setBorderSize(0);
     add(targetCard);
 
     targetLabel.setPosition(10, 10, 92, 14);
@@ -23,7 +23,7 @@ BandyTargetPanelBase::BandyTargetPanelBase() :
     targetLabel.setTypedText(touchgfx::TypedText(T_TEXT_TARGETLABEL));
     add(targetLabel);
 
-    targetValue.setPosition(10, 29, 70, 26);
+    targetValue.setPosition(10, 24, 90, 34);
     targetValue.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
     targetValue.setLinespacing(0);
     Unicode::snprintf(targetValueBuffer, TARGETVALUE_SIZE, "%s", touchgfx::TypedText(T_BUFFER_METRIC).getText());
@@ -31,43 +31,43 @@ BandyTargetPanelBase::BandyTargetPanelBase() :
     targetValue.setTypedText(touchgfx::TypedText(T_VALUE_METRIC));
     add(targetValue);
 
-    targetMbarLabel.setPosition(74, 37, 42, 13);
+    targetMbarLabel.setPosition(102, 42, 46, 16);
     targetMbarLabel.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
     targetMbarLabel.setLinespacing(0);
     targetMbarLabel.setTypedText(touchgfx::TypedText(T_TEXT_MBAR));
     add(targetMbarLabel);
 
     targetMinusButton.setBoxWithBorderPosition(0, 0, 0, 0);
-    targetMinusButton.setBorderSize(0);
-    targetMinusButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 5, 10), touchgfx::Color::getColorFromRGB(18, 28, 36), touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    targetMinusButton.setBorderSize(2);
+    targetMinusButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     targetMinusButton.setAction(flexButtonCallback);
-    targetMinusButton.setPosition(154, 5, 72, 52);
+    targetMinusButton.setPosition(150, 5, 72, 52);
     add(targetMinusButton);
 
     targetMinusRing.setBitmap(touchgfx::Bitmap(BITMAP_TARGET_BUTTON_RING_WHITE_ID));
-    targetMinusRing.setPosition(164, 5, 52, 52);
+    targetMinusRing.setPosition(160, 5, 52, 52);
     targetMinusRing.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
     add(targetMinusRing);
 
-    targetMinusLabel.setPosition(154, 22, 72, 35);
+    targetMinusLabel.setPosition(150, 22, 72, 35);
     targetMinusLabel.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
     targetMinusLabel.setLinespacing(0);
     targetMinusLabel.setTypedText(touchgfx::TypedText(T_TEXT_MINUS));
     add(targetMinusLabel);
 
     targetPlusButton.setBoxWithBorderPosition(0, 0, 0, 0);
-    targetPlusButton.setBorderSize(0);
-    targetPlusButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 5, 10), touchgfx::Color::getColorFromRGB(18, 28, 36), touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    targetPlusButton.setBorderSize(2);
+    targetPlusButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     targetPlusButton.setAction(flexButtonCallback);
-    targetPlusButton.setPosition(236, 5, 72, 52);
+    targetPlusButton.setPosition(232, 5, 72, 52);
     add(targetPlusButton);
 
     targetPlusRing.setBitmap(touchgfx::Bitmap(BITMAP_TARGET_BUTTON_RING_WHITE_ID));
-    targetPlusRing.setPosition(246, 5, 52, 52);
+    targetPlusRing.setPosition(242, 5, 52, 52);
     targetPlusRing.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
     add(targetPlusRing);
 
-    targetPlusLabel.setPosition(236, 22, 72, 35);
+    targetPlusLabel.setPosition(232, 22, 72, 35);
     targetPlusLabel.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
     targetPlusLabel.setLinespacing(0);
     targetPlusLabel.setTypedText(touchgfx::TypedText(T_TEXT_PLUS));

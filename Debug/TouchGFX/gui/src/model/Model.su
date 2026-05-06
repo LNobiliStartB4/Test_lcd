@@ -1,14 +1,18 @@
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:15:5:BandyState::BandyState()	16	static
-../TouchGFX/gui/src/model/Model.cpp:14:1:Model::Model()	16	static
-../TouchGFX/gui/src/model/Model.cpp:26:6:void Model::tick()	32	static
-../TouchGFX/gui/src/model/Model.cpp:51:6:void Model::initializeBandyDemo()	32	static
-../TouchGFX/gui/src/model/Model.cpp:67:6:void Model::startBandyDemo()	16	static
-../TouchGFX/gui/src/model/Model.cpp:85:6:void Model::increaseBandyTarget()	32	static
-../TouchGFX/gui/src/model/Model.cpp:106:6:void Model::decreaseBandyTarget()	32	static
-../TouchGFX/gui/src/model/Model.cpp:127:6:bool Model::isVacuumCycleRunning() const	16	static
-../TouchGFX/gui/src/model/Model.cpp:132:6:void Model::notifyBandyState()	16	static
-../TouchGFX/gui/src/model/Model.cpp:140:6:void Model::updateBridgeSnapshot()	32	static
-../TouchGFX/gui/src/model/Model.cpp:155:6:void Model::updateBandyFromInput()	16	static
-../TouchGFX/gui/src/model/Model.cpp:169:6:void Model::updateBandyDerivedState()	16	static
-../TouchGFX/gui/src/model/Model.cpp:187:9:int32_t Model::clampTarget(int32_t) const	16	static
-../TouchGFX/gui/src/model/Model.cpp:202:6:bool Model::hasBandyStateChanged(const BandyState&) const	16	static
+../TouchGFX/gui/src/model/Model.cpp:17:1:Model::Model()	16	static
+../TouchGFX/gui/src/model/Model.cpp:32:6:void Model::tick()	40	static
+../TouchGFX/gui/src/model/Model.cpp:58:6:void Model::initializeBandyDemo()	40	static
+../TouchGFX/gui/src/model/Model.cpp:76:6:void Model::startBandyDemo()	40	static
+../TouchGFX/gui/src/model/Model.cpp:104:6:void Model::stopBandyDemo()	40	static
+../TouchGFX/gui/src/model/Model.cpp:127:6:void Model::increaseBandyTarget()	40	static
+../TouchGFX/gui/src/model/Model.cpp:148:6:void Model::decreaseBandyTarget()	40	static
+../TouchGFX/gui/src/model/Model.cpp:169:6:bool Model::isVacuumCycleRunning() const	16	static
+../TouchGFX/gui/src/model/Model.cpp:174:6:bool Model::isRfidApproved() const	16	static
+../TouchGFX/gui/src/model/Model.cpp:179:6:void Model::notifyBandyState()	16	static
+../TouchGFX/gui/src/model/Model.cpp:187:6:void Model::updateBridgeSnapshot()	32	static
+../TouchGFX/gui/src/model/Model.cpp:203:6:void Model::updateBandyFromInput()	16	static
+../TouchGFX/gui/src/model/Model.cpp:220:6:void Model::updateBandyDerivedState()	16	static
+../TouchGFX/gui/src/model/Model.cpp:238:9:int32_t Model::clampTarget(int32_t) const	16	static
+../TouchGFX/gui/src/model/Model.cpp:253:6:void Model::updateCountdown()	16	static
+../TouchGFX/gui/src/model/Model.cpp:280:6:void Model::updateSimulatedVacuum()	16	static
+../TouchGFX/gui/src/model/Model.cpp:305:6:bool Model::hasBandyStateChanged(const BandyState&) const	16	static

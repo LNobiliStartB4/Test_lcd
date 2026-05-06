@@ -14,8 +14,12 @@ public:
     virtual void startClicked();
 
     void setStartCallback(touchgfx::GenericCallback<>& callback);
+    void setRunning(bool running);
 protected:
+    void applyVisualState();
+
     touchgfx::GenericCallback<>* startCallback;
+    bool runningState;
 };
 
 #endif // BANDYSTARTPANEL_HPP

@@ -45,13 +45,13 @@
         <Translation Language="GB">BANDY VACUUM</Translation>
       </Text>
       <Text Id="Text_VacuumLabel" Alignment="Left" TypographyId="Caption">
-        <Translation Language="GB">CURRENT VACUUM</Translation>
+        <Translation Language="GB">MBAR · CURRENT VACUUM</Translation>
       </Text>
       <Text Id="Text_TargetLabel" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">TARGET</Translation>
       </Text>
       <Text Id="Text_Mbar" Alignment="Center" TypographyId="Caption">
-        <Translation Language="GB">MBAR</Translation>
+        <Translation Language="GB">mbar</Translation>
       </Text>
       <Text Id="Text_ZeroScale" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">0</Translation>
@@ -68,6 +68,9 @@
       <Text Id="Text_Start" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">START</Translation>
       </Text>
+      <Text Id="Text_Stop" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">STOP</Translation>
+      </Text>
       <Text Id="Text_RfidInsertCard" Alignment="Center" TypographyId="Status">
         <Translation Language="GB">INSERT RFID CARD</Translation>
       </Text>
@@ -77,10 +80,10 @@
       <Text Id="Text_TimeLeft" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">TIME LEFT</Translation>
       </Text>
-      <Text Id="Value_TimeRemaining" Alignment="Center" TypographyId="Status">
+      <Text Id="Value_TimeRemaining" Alignment="Center" TypographyId="TimeValue">
         <Translation Language="GB">&lt;&gt;</Translation>
       </Text>
-      <Text Id="Buffer_TimeRemaining" Alignment="Center" TypographyId="Status">
+      <Text Id="Buffer_TimeRemaining" Alignment="Center" TypographyId="TimeValue">
         <Translation Language="GB">00:00</Translation>
       </Text>
       <Text Id="Value_Hero" Alignment="Center" TypographyId="Hero">
@@ -111,7 +114,8 @@
     <Typography Id="Step" Font="verdana.ttf" Size="11" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Button" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2B-0x2D,0x30-0x39,0x41-0x5A" />
     <Typography Id="Status" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x3A,0x41-0x5A" />
-    <Typography Id="Metric" Font="verdana.ttf" Size="26" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
+    <Typography Id="TimeValue" Font="verdana.ttf" Size="32" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x30-0x39,0x3A" />
+    <Typography Id="Metric" Font="verdana.ttf" Size="34" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
     <Typography Id="Hero" Font="verdana.ttf" Size="54" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
   </Typographies>
 </TextDatabase>

@@ -6,9 +6,9 @@
 
 #include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/Box.hpp>
 
 class BandyVacuumPanelBase : public touchgfx::Container
@@ -26,10 +26,8 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::BoxWithBorder gaugeCard;
     touchgfx::TextArea vacuumLabel;
     touchgfx::TextAreaWithOneWildcard vacuumValue;
-    touchgfx::TextArea mbarLabel;
     touchgfx::BoxWithBorder vacuumTrack;
     touchgfx::Box vacuumFill;
     touchgfx::TextArea scaleZeroLabel;

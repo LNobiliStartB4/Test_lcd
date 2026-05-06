@@ -1,5 +1,5 @@
-TouchGFX/generated/fonts/src/Table_verdana_26_4bpp.o: \
- ../TouchGFX/generated/fonts/src/Table_verdana_26_4bpp.cpp \
+TouchGFX/generated/fonts/src/Table_verdana_32_4bpp.o: \
+ ../TouchGFX/generated/fonts/src/Table_verdana_32_4bpp.cpp \
  ../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/ConstFont.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \

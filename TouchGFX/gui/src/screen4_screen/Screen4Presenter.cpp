@@ -20,15 +20,7 @@ void Screen4Presenter::deactivate()
 
 }
 
-bool Screen4Presenter::isVacuumCycleRunning() const
+bool Screen4Presenter::isRfidApproved() const
 {
-    return (model != 0) && model->isVacuumCycleRunning();
-}
-
-void Screen4Presenter::startBandyDemo()
-{
-    if (model != 0)
-    {
-        model->startBandyDemo();
-    }
+    return (model != 0) && model->isRfidApproved();
 }

@@ -20,9 +20,11 @@ public:
 
     void initializeBandyDemo();
     void startBandyDemo();
+    void stopBandyDemo();
     void increaseBandyTarget();
     void decreaseBandyTarget();
     bool isVacuumCycleRunning() const;
+    bool isRfidApproved() const;
 
     BandyState getBandyState() const
     {
@@ -34,16 +36,21 @@ private:
     void updateBridgeSnapshot();
     void updateBandyFromInput();
     void updateBandyDerivedState();
+    void updateCountdown();
+    void updateSimulatedVacuum();
     int32_t clampTarget(int32_t requestedTarget) const;
     bool hasBandyStateChanged(const BandyState& previousState) const;
 
     ModelListener* modelListener;
     BandyState bandyState;
     uint8_t tickDivider;
+    uint8_t countdownDivider;
     bool bandyInitialized;
+    bool countdownActive;
     bool bridgeSnapshotValid;
     uint8_t bridgeVacuumState;
     uint8_t bridgeFault;
+    uint8_t bridgeRfidApproved;
     int32_t bridgePressureMbar;
 };
 

@@ -7,16 +7,19 @@
 CPP_SRCS += \
 ../TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.cpp \
 ../TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.cpp \
+../TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.cpp \
 ../TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cpp 
 
 OBJS += \
 ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.o \
 ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.o \
+./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.o \
 ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.o 
 
 CPP_DEPS += \
 ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.d \
 ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.d \
+./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.d \
 ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.d 
 
 
@@ -27,7 +30,7 @@ TouchGFX/generated/gui_generated/src/containers/%.o TouchGFX/generated/gui_gener
 clean: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-containers
 
 clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-containers:
-	-$(RM) ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.su ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.su ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.su
+	-$(RM) ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.su ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.su ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.su ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.su
 
 .PHONY: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-containers
 

@@ -6,6 +6,7 @@
 #define DISPLAY_BRIDGE_RX_FRAME_MAX 64U
 #define DISPLAY_BRIDGE_RX_PREFIX "BANDY,"
 #define DISPLAY_BRIDGE_RX_PREFIX_LEN 6U
+#define DISPLAY_BRIDGE_TX_TIMEOUT_MS 50U
 
 static UART_HandleTypeDef *displayBridgeUart;
 static uint8_t displayBridgeRxByte;
@@ -13,6 +14,7 @@ static char displayBridgeFrame[DISPLAY_BRIDGE_RX_FRAME_MAX];
 static uint8_t displayBridgeFrameLength;
 static volatile uint8_t displayBridgeVacuumState;
 static volatile uint8_t displayBridgeFault;
+static volatile uint8_t displayBridgeRfidApproved;
 static volatile int32_t displayBridgePressureMbar;
 static volatile bool displayBridgeSnapshotValid;
 
@@ -49,6 +51,7 @@ static void DisplayBridgeRx_ParseFrame(void)
 {
   long vacuumState = 0;
   long fault = 0;
+  long rfidApproved = 0;
   long pressure;
 
   displayBridgeFrame[displayBridgeFrameLength] = '\0';
@@ -65,11 +68,26 @@ static void DisplayBridgeRx_ParseFrame(void)
 
   (void)DisplayBridgeRx_ParseLongField("S=", &vacuumState);
   (void)DisplayBridgeRx_ParseLongField("F=", &fault);
+  (void)DisplayBridgeRx_ParseLongField("R=", &rfidApproved);
 
   displayBridgeVacuumState = (uint8_t)vacuumState;
   displayBridgeFault = (uint8_t)fault;
+  displayBridgeRfidApproved = (uint8_t)rfidApproved;
   displayBridgePressureMbar = (int32_t)pressure;
   displayBridgeSnapshotValid = true;
+}
+
+static bool DisplayBridgeRx_SendCommandFrame(const char *frame)
+{
+  if ((displayBridgeUart == NULL) || (frame == NULL))
+  {
+    return false;
+  }
+
+  return HAL_UART_Transmit(displayBridgeUart,
+                           (uint8_t *)frame,
+                           (uint16_t)strlen(frame),
+                           DISPLAY_BRIDGE_TX_TIMEOUT_MS) == HAL_OK;
 }
 
 static void DisplayBridgeRx_ProcessByte(uint8_t byte)
@@ -101,6 +119,7 @@ void DisplayBridgeRx_Init(UART_HandleTypeDef *huart)
   displayBridgeUart = huart;
   displayBridgeVacuumState = 0U;
   displayBridgeFault = 0U;
+  displayBridgeRfidApproved = 0U;
   displayBridgePressureMbar = 0;
   displayBridgeSnapshotValid = false;
   DisplayBridgeRx_ResetFrame();
@@ -112,6 +131,7 @@ bool DisplayBridgeRx_GetLatestSnapshot(display_bridge_snapshot_t *snapshot)
   bool valid;
   uint8_t vacuumState;
   uint8_t fault;
+  uint8_t rfidApproved;
   int32_t pressure;
 
   if (snapshot == NULL)
@@ -123,11 +143,13 @@ bool DisplayBridgeRx_GetLatestSnapshot(display_bridge_snapshot_t *snapshot)
   valid = displayBridgeSnapshotValid;
   vacuumState = displayBridgeVacuumState;
   fault = displayBridgeFault;
+  rfidApproved = displayBridgeRfidApproved;
   pressure = displayBridgePressureMbar;
   __enable_irq();
 
   snapshot->vacuumState = vacuumState;
   snapshot->fault = fault;
+  snapshot->rfidApproved = rfidApproved;
   snapshot->pressureMbar = pressure;
   snapshot->valid = valid;
 
@@ -150,6 +172,16 @@ bool DisplayBridgeRx_GetLatestPressureMbar(int32_t *pressureMbar)
 
   *pressureMbar = snapshot.pressureMbar;
   return true;
+}
+
+bool DisplayBridgeRx_SendVacuumStartCommand(void)
+{
+  return DisplayBridgeRx_SendCommandFrame("CMD,VAC1\n");
+}
+
+bool DisplayBridgeRx_SendVacuumStopCommand(void)
+{
+  return DisplayBridgeRx_SendCommandFrame("CMD,VAC0\n");
 }
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)

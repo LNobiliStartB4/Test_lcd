@@ -9,21 +9,30 @@ CPP_SRCS += \
 ../TouchGFX/generated/images/src/SVGDatabase.cpp \
 ../TouchGFX/generated/images/src/image_A1.cpp \
 ../TouchGFX/generated/images/src/image_rfid_contactless.cpp \
-../TouchGFX/generated/images/src/image_target_button_ring_white.cpp 
+../TouchGFX/generated/images/src/image_start_play_icon_white.cpp \
+../TouchGFX/generated/images/src/image_start_stop_icon_white.cpp \
+../TouchGFX/generated/images/src/image_target_button_ring_white.cpp \
+../TouchGFX/generated/images/src/image_time_left_icon_white.cpp 
 
 OBJS += \
 ./TouchGFX/generated/images/src/BitmapDatabase.o \
 ./TouchGFX/generated/images/src/SVGDatabase.o \
 ./TouchGFX/generated/images/src/image_A1.o \
 ./TouchGFX/generated/images/src/image_rfid_contactless.o \
-./TouchGFX/generated/images/src/image_target_button_ring_white.o 
+./TouchGFX/generated/images/src/image_start_play_icon_white.o \
+./TouchGFX/generated/images/src/image_start_stop_icon_white.o \
+./TouchGFX/generated/images/src/image_target_button_ring_white.o \
+./TouchGFX/generated/images/src/image_time_left_icon_white.o 
 
 CPP_DEPS += \
 ./TouchGFX/generated/images/src/BitmapDatabase.d \
 ./TouchGFX/generated/images/src/SVGDatabase.d \
 ./TouchGFX/generated/images/src/image_A1.d \
 ./TouchGFX/generated/images/src/image_rfid_contactless.d \
-./TouchGFX/generated/images/src/image_target_button_ring_white.d 
+./TouchGFX/generated/images/src/image_start_play_icon_white.d \
+./TouchGFX/generated/images/src/image_start_stop_icon_white.d \
+./TouchGFX/generated/images/src/image_target_button_ring_white.d \
+./TouchGFX/generated/images/src/image_time_left_icon_white.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -33,7 +42,7 @@ TouchGFX/generated/images/src/%.o TouchGFX/generated/images/src/%.su TouchGFX/ge
 clean: clean-TouchGFX-2f-generated-2f-images-2f-src
 
 clean-TouchGFX-2f-generated-2f-images-2f-src:
-	-$(RM) ./TouchGFX/generated/images/src/BitmapDatabase.cyclo ./TouchGFX/generated/images/src/BitmapDatabase.d ./TouchGFX/generated/images/src/BitmapDatabase.o ./TouchGFX/generated/images/src/BitmapDatabase.su ./TouchGFX/generated/images/src/SVGDatabase.cyclo ./TouchGFX/generated/images/src/SVGDatabase.d ./TouchGFX/generated/images/src/SVGDatabase.o ./TouchGFX/generated/images/src/SVGDatabase.su ./TouchGFX/generated/images/src/image_A1.cyclo ./TouchGFX/generated/images/src/image_A1.d ./TouchGFX/generated/images/src/image_A1.o ./TouchGFX/generated/images/src/image_A1.su ./TouchGFX/generated/images/src/image_rfid_contactless.cyclo ./TouchGFX/generated/images/src/image_rfid_contactless.d ./TouchGFX/generated/images/src/image_rfid_contactless.o ./TouchGFX/generated/images/src/image_rfid_contactless.su ./TouchGFX/generated/images/src/image_target_button_ring_white.cyclo ./TouchGFX/generated/images/src/image_target_button_ring_white.d ./TouchGFX/generated/images/src/image_target_button_ring_white.o ./TouchGFX/generated/images/src/image_target_button_ring_white.su
+	-$(RM) ./TouchGFX/generated/images/src/BitmapDatabase.cyclo ./TouchGFX/generated/images/src/BitmapDatabase.d ./TouchGFX/generated/images/src/BitmapDatabase.o ./TouchGFX/generated/images/src/BitmapDatabase.su ./TouchGFX/generated/images/src/SVGDatabase.cyclo ./TouchGFX/generated/images/src/SVGDatabase.d ./TouchGFX/generated/images/src/SVGDatabase.o ./TouchGFX/generated/images/src/SVGDatabase.su ./TouchGFX/generated/images/src/image_A1.cyclo ./TouchGFX/generated/images/src/image_A1.d ./TouchGFX/generated/images/src/image_A1.o ./TouchGFX/generated/images/src/image_A1.su ./TouchGFX/generated/images/src/image_rfid_contactless.cyclo ./TouchGFX/generated/images/src/image_rfid_contactless.d ./TouchGFX/generated/images/src/image_rfid_contactless.o ./TouchGFX/generated/images/src/image_rfid_contactless.su ./TouchGFX/generated/images/src/image_start_play_icon_white.cyclo ./TouchGFX/generated/images/src/image_start_play_icon_white.d ./TouchGFX/generated/images/src/image_start_play_icon_white.o ./TouchGFX/generated/images/src/image_start_play_icon_white.su ./TouchGFX/generated/images/src/image_start_stop_icon_white.cyclo ./TouchGFX/generated/images/src/image_start_stop_icon_white.d ./TouchGFX/generated/images/src/image_start_stop_icon_white.o ./TouchGFX/generated/images/src/image_start_stop_icon_white.su ./TouchGFX/generated/images/src/image_target_button_ring_white.cyclo ./TouchGFX/generated/images/src/image_target_button_ring_white.d ./TouchGFX/generated/images/src/image_target_button_ring_white.o ./TouchGFX/generated/images/src/image_target_button_ring_white.su ./TouchGFX/generated/images/src/image_time_left_icon_white.cyclo ./TouchGFX/generated/images/src/image_time_left_icon_white.d ./TouchGFX/generated/images/src/image_time_left_icon_white.o ./TouchGFX/generated/images/src/image_time_left_icon_white.su
 
 .PHONY: clean-TouchGFX-2f-generated-2f-images-2f-src
 

@@ -4,7 +4,7 @@
 namespace
 {
 const int32_t kGaugeMaxMbar = 500;
-const int16_t kMeterMaxWidth = 356;
+const int16_t kMeterMaxWidth = 400;
 
 int16_t meterWidthForValue(int32_t vacuumMbar)
 {

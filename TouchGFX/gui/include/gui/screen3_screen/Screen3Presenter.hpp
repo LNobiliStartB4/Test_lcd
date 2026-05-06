@@ -21,6 +21,7 @@ public:
 
     BandyState getBandyState() const;
     void startDemo();
+    void stopDemo();
     void increaseTarget();
     void decreaseTarget();
     bool isVacuumCycleRunning() const;

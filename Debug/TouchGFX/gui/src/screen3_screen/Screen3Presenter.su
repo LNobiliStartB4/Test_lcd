@@ -10,13 +10,14 @@
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	16	static
 ../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:16:13:Screen3Presenter::~Screen3Presenter()	16	static
 ../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:16:13:virtual Screen3Presenter::~Screen3Presenter()	16	static
-../TouchGFX/gui/include/gui/model/Model.hpp:27:16:BandyState Model::getBandyState() const	16	static
+../TouchGFX/gui/include/gui/model/Model.hpp:29:16:BandyState Model::getBandyState() const	16	static
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:4:1:Screen3Presenter::Screen3Presenter(Screen3View&)	16	static
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:9:6:virtual void Screen3Presenter::activate()	40	static
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:18:6:virtual void Screen3Presenter::deactivate()	16	static
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:22:6:virtual void Screen3Presenter::bandyStateUpdated(const BandyState&)	16	static
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:27:12:BandyState Screen3Presenter::getBandyState() const	16	static
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:32:6:void Screen3Presenter::startDemo()	16	static
-../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:40:6:void Screen3Presenter::increaseTarget()	16	static
-../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:48:6:void Screen3Presenter::decreaseTarget()	16	static
-../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:56:6:bool Screen3Presenter::isVacuumCycleRunning() const	16	static
+../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:40:6:void Screen3Presenter::stopDemo()	16	static
+../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:48:6:void Screen3Presenter::increaseTarget()	16	static
+../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:56:6:void Screen3Presenter::decreaseTarget()	16	static
+../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:64:6:bool Screen3Presenter::isVacuumCycleRunning() const	16	static

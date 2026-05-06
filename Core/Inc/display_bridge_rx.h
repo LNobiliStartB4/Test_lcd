@@ -13,6 +13,7 @@ typedef struct
 {
   uint8_t vacuumState;
   uint8_t fault;
+  uint8_t rfidApproved;
   int32_t pressureMbar;
   bool valid;
 } display_bridge_snapshot_t;
@@ -20,6 +21,8 @@ typedef struct
 void DisplayBridgeRx_Init(UART_HandleTypeDef *huart);
 bool DisplayBridgeRx_GetLatestSnapshot(display_bridge_snapshot_t *snapshot);
 bool DisplayBridgeRx_GetLatestPressureMbar(int32_t *pressureMbar);
+bool DisplayBridgeRx_SendVacuumStartCommand(void);
+bool DisplayBridgeRx_SendVacuumStopCommand(void);
 
 #ifdef __cplusplus
 }

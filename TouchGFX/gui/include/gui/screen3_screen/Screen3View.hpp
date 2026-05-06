@@ -28,7 +28,6 @@ private:
     touchgfx::Callback<Screen3View> decreaseTargetCallback;
     touchgfx::Callback<Screen3View> increaseTargetCallback;
     touchgfx::Callback<Screen3View> startCallback;
-    bool returnToWaitRequested;
 };
 
 #endif // SCREEN3VIEW_HPP

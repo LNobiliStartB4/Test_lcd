@@ -12,5 +12,4 @@
 ../TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp:4:1:Screen4Presenter::Screen4Presenter(Screen4View&)	1
 ../TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp:10:6:virtual void Screen4Presenter::activate()	2
 ../TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp:18:6:virtual void Screen4Presenter::deactivate()	1
-../TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp:23:6:bool Screen4Presenter::isVacuumCycleRunning() const	3
-../TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp:28:6:void Screen4Presenter::startBandyDemo()	2
+../TouchGFX/gui/src/screen4_screen/Screen4Presenter.cpp:23:6:bool Screen4Presenter::isRfidApproved() const	3

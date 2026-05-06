@@ -3,6 +3,7 @@
 /*********************************************************************************/
 #include <gui_generated/containers/BandyStartPanelBase.hpp>
 #include <touchgfx/Color.hpp>
+#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
 BandyStartPanelBase::BandyStartPanelBase() :
@@ -11,19 +12,24 @@ BandyStartPanelBase::BandyStartPanelBase() :
     setWidth(110);
     setHeight(62);
     startFrame.setPosition(0, 0, 110, 62);
-    startFrame.setColor(touchgfx::Color::getColorFromRGB(0, 3, 1));
-    startFrame.setBorderColor(touchgfx::Color::getColorFromRGB(43, 255, 79));
-    startFrame.setBorderSize(1);
+    startFrame.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    startFrame.setBorderColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
+    startFrame.setBorderSize(2);
     add(startFrame);
 
     startButton.setBoxWithBorderPosition(0, 0, 0, 0);
     startButton.setBorderSize(3);
-    startButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(20, 71, 62), touchgfx::Color::getColorFromRGB(29, 100, 86), touchgfx::Color::getColorFromRGB(255, 15, 63), touchgfx::Color::getColorFromRGB(139, 229, 200));
+    startButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     startButton.setAction(flexButtonCallback);
     startButton.setPosition(0, 0, 110, 62);
     add(startButton);
 
-    startLabel.setPosition(0, 21, 110, 35);
+    startIcon.setBitmap(touchgfx::Bitmap(BITMAP_START_PLAY_ICON_WHITE_ID));
+    startIcon.setPosition(13, 13, 18, 18);
+    startIcon.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    add(startIcon);
+
+    startLabel.setPosition(38, 19, 72, 35);
     startLabel.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
     startLabel.setLinespacing(0);
     startLabel.setTypedText(touchgfx::TypedText(T_TEXT_START));

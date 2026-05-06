@@ -30,12 +30,15 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
     case Typography::STATUS:
         // verdana_15_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[5]);
-    case Typography::METRIC:
-        // verdana_26_4bpp
+    case Typography::TIMEVALUE:
+        // verdana_32_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[6]);
+    case Typography::METRIC:
+        // verdana_34_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[7]);
     case Typography::HERO:
         // verdana_54_4bpp
-        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[7]);
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[8]);
     default:
         return 0;
     }

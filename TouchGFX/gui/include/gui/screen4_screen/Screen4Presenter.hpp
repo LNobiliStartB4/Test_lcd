@@ -27,8 +27,7 @@ public:
 
     virtual ~Screen4Presenter() {}
 
-    bool isVacuumCycleRunning() const;
-    void startBandyDemo();
+    bool isRfidApproved() const;
 
 private:
     Screen4Presenter();
