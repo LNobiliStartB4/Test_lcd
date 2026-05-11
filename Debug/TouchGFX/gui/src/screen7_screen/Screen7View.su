@@ -13,4 +13,4 @@
 ../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:38:6:virtual void Screen7View::cancelClicked()	16	static
 ../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:43:6:virtual void Screen7View::confirmClicked()	16	static
 ../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:51:6:void Screen7View::applyBandyState(const BandyState&)	16	static
-../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:65:6:void Screen7View::updateTimeValue(uint16_t)	16	static
+../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:73:6:void Screen7View::updateTimeValue(uint16_t)	16	static

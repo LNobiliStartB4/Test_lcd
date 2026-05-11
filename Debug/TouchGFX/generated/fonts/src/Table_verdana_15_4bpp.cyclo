@@ -4,5 +4,5 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/ConstFont.hpp:35:7:virtual touchgfx::ConstFont::~ConstFont()	1
 ../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp:11:7:touchgfx::GeneratedFont::~GeneratedFont()	1
 ../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp:11:7:virtual touchgfx::GeneratedFont::~GeneratedFont()	1
-../TouchGFX/generated/fonts/src/Table_verdana_15_4bpp.cpp:74:168:void __tcf_0()	1
-../TouchGFX/generated/fonts/src/Table_verdana_15_4bpp.cpp:72:26:touchgfx::GeneratedFont& getFont_verdana_15_4bpp()	3
+../TouchGFX/generated/fonts/src/Table_verdana_15_4bpp.cpp:86:168:void __tcf_0()	1
+../TouchGFX/generated/fonts/src/Table_verdana_15_4bpp.cpp:84:26:touchgfx::GeneratedFont& getFont_verdana_15_4bpp()	3

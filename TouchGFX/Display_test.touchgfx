@@ -1138,24 +1138,10 @@
             }
           },
           {
-            "Type": "BoxWithBorder",
-            "Name": "timeBoxBorder",
-            "X": 16,
-            "Y": 140,
-            "Width": 448,
-            "Height": 73,
-            "BorderColor": {
-              "Red": 226,
-              "Green": 75,
-              "Blue": 74
-            },
-            "BorderSize": 1
-          },
-          {
             "Type": "TextArea",
             "Name": "timeLabel",
             "X": 38,
-            "Y": 175,
+            "Y": 170,
             "Width": 240,
             "Height": 14,
             "TextId": "Text_TimeYoullLose",
@@ -1169,7 +1155,7 @@
           {
             "Type": "TextArea",
             "Name": "timeValue",
-            "X": 160,
+            "X": 166,
             "Y": 159,
             "Width": 240,
             "Height": 36,
@@ -1327,6 +1313,55 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "confirmClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen8",
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "outerBorder",
+            "Width": 480,
+            "Height": 320,
+            "BorderSize": 2
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "holdTagIcon",
+            "X": 164,
+            "Y": 70,
+            "Width": 152,
+            "Height": 72,
+            "Filename": "rfid_contactless.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "holdTagText",
+            "X": 16,
+            "Y": 177,
+            "Width": 448,
+            "Height": 40,
+            "TextId": "Text_HoldTagNearReader",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 216,
+              "Green": 178,
+              "Blue": 71
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "cancelEnding",
+            "Trigger": {
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "cancelClicked"
             }
           }
         ]

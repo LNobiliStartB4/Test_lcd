@@ -28,16 +28,16 @@ struct Typography
 struct TypographyFontIndex
 {
     static const touchgfx::FontId TITLE = 0;     // verdana_24_4bpp
-    static const touchgfx::FontId SUBTITLE = 1;  // verdana_12_4bpp
+    static const touchgfx::FontId SUBTITLE = 1;  // verdana_15_4bpp
     static const touchgfx::FontId BODY = 2;      // verdana_16_4bpp
     static const touchgfx::FontId CAPTION = 3;   // verdana_13_4bpp
     static const touchgfx::FontId STEP = 4;      // verdana_11_4bpp
-    static const touchgfx::FontId BUTTON = 5;    // verdana_15_4bpp
-    static const touchgfx::FontId STATUS = 5;    // verdana_15_4bpp
-    static const touchgfx::FontId TIMEVALUE = 6; // verdana_32_4bpp
-    static const touchgfx::FontId METRIC = 7;    // verdana_34_4bpp
-    static const touchgfx::FontId HERO = 8;      // verdana_54_4bpp
-    static const uint16_t NUMBER_OF_FONTS = 9;
+    static const touchgfx::FontId BUTTON = 1;    // verdana_15_4bpp
+    static const touchgfx::FontId STATUS = 1;    // verdana_15_4bpp
+    static const touchgfx::FontId TIMEVALUE = 5; // verdana_32_4bpp
+    static const touchgfx::FontId METRIC = 6;    // verdana_34_4bpp
+    static const touchgfx::FontId HERO = 7;      // verdana_54_4bpp
+    static const uint16_t NUMBER_OF_FONTS = 8;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider

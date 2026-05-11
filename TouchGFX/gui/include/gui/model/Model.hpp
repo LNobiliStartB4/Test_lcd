@@ -23,6 +23,7 @@ public:
     void stopBandyDemo();
     void resumeBandyDemo();
     void endBandyDemo();
+    void cancelEndBandyDemo();
     void startRfidScan();
     void stopRfidScan();
     void increaseBandyTarget();

@@ -1,0 +1,24 @@
+Start testing: May 11 15:51 ora legale Europa occidentale
+----------------------------------------------------------
+1/1 Testing: model_unit_tests
+1/1 Test: model_unit_tests
+Command: "C:/TouchGFXProjects/Display_test_prova/tests/build/test_model.exe"
+Directory: C:/TouchGFXProjects/Display_test_prova/tests/build
+"model_unit_tests" start time: May 11 15:51 ora legale Europa occidentale
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.4.11"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases: 15 | 15 passed | 0 failed | 0 skipped
+[doctest] assertions: 41 | 41 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"model_unit_tests" end time: May 11 15:51 ora legale Europa occidentale
+"model_unit_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 11 15:51 ora legale Europa occidentale

@@ -1,0 +1,14 @@
+C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/test_model.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/test.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/edit_cache.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/rebuild_cache.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/list_install_components.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/install.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/install/local.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/_deps/doctest-build/CMakeFiles/doctest_with_main.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/_deps/doctest-build/CMakeFiles/test.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/_deps/doctest-build/CMakeFiles/edit_cache.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/_deps/doctest-build/CMakeFiles/rebuild_cache.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/_deps/doctest-build/CMakeFiles/list_install_components.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/_deps/doctest-build/CMakeFiles/install.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/_deps/doctest-build/CMakeFiles/install/local.dir

@@ -51,7 +51,6 @@ protected:
     touchgfx::TextArea titleText;
     touchgfx::TextArea subtitleText;
     touchgfx::Box timeBoxFill;
-    touchgfx::BoxWithBorder timeBoxBorder;
     touchgfx::TextArea timeLabel;
     touchgfx::TextAreaWithOneWildcard timeValue;
     touchgfx::ScalableImage trashIcon;

@@ -1,0 +1,11 @@
+# ninja log v7
+6	80	8002090995722139	CMakeFiles/test_model.dir/C_/TouchGFXProjects/Display_test_prova/TouchGFX/gui/src/model/Model.cpp.obj	d692d53da9226c22
+10	90	8002090995788695	CMakeFiles/test_model.dir/stubs/display_bridge_rx_stub.cpp.obj	37ee57e53950d52f
+2	1095	8002090995722139	CMakeFiles/test_model.dir/test_model.cpp.obj	c379d439ef4a4d64
+1096	1584	8002091006648442	test_model.exe	2340b2427ca0fcc7
+5	548	8002106418401307	build.ninja	e2c5734e05af5c48
+5	548	8002106418401307	C:/TouchGFXProjects/Display_test_prova/tests/build/cmake_install.cmake	e2c5734e05af5c48
+5	548	8002106418401307	C:/TouchGFXProjects/Display_test_prova/tests/build/_deps/doctest-build/cmake_install.cmake	e2c5734e05af5c48
+5	548	8002106418401307	C:/TouchGFXProjects/Display_test_prova/tests/build/CTestTestfile.cmake	e2c5734e05af5c48
+1	475	8002106418636445	CMakeFiles/test_model.dir/test_tag_program.cpp.obj	26770b86041fa31f
+480	746	8002106423411925	test_model.exe	7f901958dbdf6f5c

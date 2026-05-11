@@ -1,19 +1,20 @@
-../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:23:5:BandyState::BandyState()	16	static
+../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:24:5:BandyState::BandyState()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	16	static
-../TouchGFX/gui/include/gui/model/Model.hpp:35:16:BandyState Model::getBandyState() const	16	static
+../TouchGFX/gui/include/gui/model/Model.hpp:36:16:BandyState Model::getBandyState() const	16	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:5:ModelListener::ModelListener()	16	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:ModelListener::~ModelListener()	16	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:virtual ModelListener::~ModelListener()	16	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	16	static
-../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp:33:13:Screen7Presenter::~Screen7Presenter()	16	static
-../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp:33:13:virtual Screen7Presenter::~Screen7Presenter()	16	static
+../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp:34:13:Screen7Presenter::~Screen7Presenter()	16	static
+../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp:34:13:virtual Screen7Presenter::~Screen7Presenter()	16	static
 ../TouchGFX/gui/src/screen7_screen/Screen7Presenter.cpp:4:1:Screen7Presenter::Screen7Presenter(Screen7View&)	16	static
 ../TouchGFX/gui/src/screen7_screen/Screen7Presenter.cpp:10:6:virtual void Screen7Presenter::activate()	40	static
 ../TouchGFX/gui/src/screen7_screen/Screen7Presenter.cpp:19:6:virtual void Screen7Presenter::deactivate()	16	static
 ../TouchGFX/gui/src/screen7_screen/Screen7Presenter.cpp:24:6:virtual void Screen7Presenter::bandyStateUpdated(const BandyState&)	16	static
 ../TouchGFX/gui/src/screen7_screen/Screen7Presenter.cpp:29:12:BandyState Screen7Presenter::getBandyState() const	16	static
 ../TouchGFX/gui/src/screen7_screen/Screen7Presenter.cpp:34:6:void Screen7Presenter::endDemo()	16	static
+../TouchGFX/gui/src/screen7_screen/Screen7Presenter.cpp:42:6:void Screen7Presenter::cancelEndDemo()	16	static

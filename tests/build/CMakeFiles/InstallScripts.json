@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/TouchGFXProjects/Display_test_prova/tests/build/cmake_install.cmake",
+		"C:/TouchGFXProjects/Display_test_prova/tests/build/_deps/doctest-build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

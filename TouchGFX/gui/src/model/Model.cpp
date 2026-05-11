@@ -103,6 +103,11 @@ void Model::endBandyDemo()
     (void)DisplayBridgeRx_SendVacuumEndCommand();
 }
 
+void Model::cancelEndBandyDemo()
+{
+    (void)DisplayBridgeRx_SendVacuumEndCancelCommand();
+}
+
 void Model::startRfidScan()
 {
     (void)DisplayBridgeRx_SendRfidScanStartCommand();

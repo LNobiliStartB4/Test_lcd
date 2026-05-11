@@ -1,10 +1,10 @@
-../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:23:5:BandyState::BandyState()	16	static
+../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:24:5:BandyState::BandyState()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	16	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	16	static
-../TouchGFX/gui/include/gui/model/Model.hpp:35:16:BandyState Model::getBandyState() const	16	static
+../TouchGFX/gui/include/gui/model/Model.hpp:36:16:BandyState Model::getBandyState() const	16	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:5:ModelListener::ModelListener()	16	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:ModelListener::~ModelListener()	16	static
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:virtual ModelListener::~ModelListener()	16	static

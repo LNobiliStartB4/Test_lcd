@@ -268,6 +268,11 @@ bool DisplayBridgeRx_SendRfidScanStopCommand(void)
   return DisplayBridgeRx_SendCommandFrame("CMD,SCAN0\n");
 }
 
+bool DisplayBridgeRx_SendVacuumEndCancelCommand(void)
+{
+  return DisplayBridgeRx_SendCommandFrame("CMD,VACENDCANCEL\n");
+}
+
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   if ((displayBridgeUart == NULL) || (huart != displayBridgeUart))

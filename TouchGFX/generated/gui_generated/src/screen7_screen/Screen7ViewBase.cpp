@@ -63,19 +63,13 @@ Screen7ViewBase::Screen7ViewBase() :
     timeBoxFill.setColor(touchgfx::Color::getColorFromRGB(27, 9, 9));
     add(timeBoxFill);
 
-    timeBoxBorder.setPosition(16, 140, 448, 73);
-    timeBoxBorder.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    timeBoxBorder.setBorderColor(touchgfx::Color::getColorFromRGB(226, 75, 74));
-    timeBoxBorder.setBorderSize(1);
-    add(timeBoxBorder);
-
-    timeLabel.setPosition(38, 175, 240, 14);
+    timeLabel.setPosition(38, 170, 240, 14);
     timeLabel.setColor(touchgfx::Color::getColorFromRGB(247, 193, 193));
     timeLabel.setLinespacing(0);
     timeLabel.setTypedText(touchgfx::TypedText(T_TEXT_TIMEYOULLLOSE));
     add(timeLabel);
 
-    timeValue.setPosition(160, 159, 240, 36);
+    timeValue.setPosition(166, 159, 240, 36);
     timeValue.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     timeValue.setLinespacing(0);
     Unicode::snprintf(timeValueBuffer, TIMEVALUE_SIZE, "%s", touchgfx::TypedText(T_BUFFER_TIMEREMAINING).getText());
