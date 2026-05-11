@@ -1,0 +1,14 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen5_screen/Screen5ViewBase.hpp:39:26:FrontendApplication& Screen5ViewBase::application()	16	static
+../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp:13:13:Screen5View::~Screen5View()	16	static
+../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp:13:13:virtual Screen5View::~Screen5View()	16	static
+../TouchGFX/gui/src/screen5_screen/Screen5View.cpp:4:1:Screen5View::Screen5View()	16	static
+../TouchGFX/gui/src/screen5_screen/Screen5View.cpp:9:6:virtual void Screen5View::setupScreen()	32	static
+../TouchGFX/gui/src/screen5_screen/Screen5View.cpp:19:6:virtual void Screen5View::tearDownScreen()	16	static
+../TouchGFX/gui/src/screen5_screen/Screen5View.cpp:24:6:virtual void Screen5View::backClicked()	16	static
+../TouchGFX/gui/src/screen5_screen/Screen5View.cpp:29:6:virtual void Screen5View::decreaseTargetClicked()	16	static
+../TouchGFX/gui/src/screen5_screen/Screen5View.cpp:37:6:virtual void Screen5View::increaseTargetClicked()	16	static
+../TouchGFX/gui/src/screen5_screen/Screen5View.cpp:45:6:void Screen5View::applyBandyState(const BandyState&)	16	static

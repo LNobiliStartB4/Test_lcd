@@ -29,7 +29,6 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box splashBackground;
     touchgfx::ScalableImage splashLogo;
-    touchgfx::TextArea splashTitle;
     touchgfx::TextArea splashSubtitle;
 
 private:

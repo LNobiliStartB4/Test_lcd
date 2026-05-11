@@ -20,7 +20,7 @@ void Screen4Presenter::deactivate()
 
 }
 
-bool Screen4Presenter::isRfidApproved() const
+bool Screen4Presenter::canOpenBandyScreen() const
 {
-    return (model != 0) && model->isRfidApproved();
+    return (model != 0) && model->canOpenBandyScreen();
 }

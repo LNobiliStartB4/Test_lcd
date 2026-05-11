@@ -10,8 +10,10 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <gui/containers/BandyVacuumPanel.hpp>
 #include <gui/containers/BandyTimePanel.hpp>
-#include <gui/containers/BandyTargetPanel.hpp>
-#include <gui/containers/BandyStartPanel.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
 
 class Screen3ViewBase : public touchgfx::View<Screen3Presenter>
 {
@@ -19,6 +21,18 @@ public:
     Screen3ViewBase();
     virtual ~Screen3ViewBase();
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void openSetpointClicked()
+    {
+        // Override and implement this function in Screen3
+    }
+    virtual void startClicked()
+    {
+        // Override and implement this function in Screen3
+    }
 
 protected:
     FrontendApplication& application() {
@@ -33,10 +47,32 @@ protected:
     BandyVacuumPanel vacuumPanel;
     BandyTimePanel timePanel;
     touchgfx::Box lowerDivider;
-    BandyTargetPanel targetPanel;
-    BandyStartPanel startPanel;
+    touchgfx::TextArea screen3TargetLabel;
+    touchgfx::TextAreaWithOneWildcard screen3TargetValue;
+    touchgfx::TextArea screen3TargetMbarLabel;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setTargetButton;
+    touchgfx::TextArea setTargetButtonLabel;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  screen3StartButton;
+    touchgfx::ScalableImage screen3StartIcon;
+    touchgfx::TextArea screen3StartLabel;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t SCREEN3TARGETVALUE_SIZE = 8;
+    touchgfx::Unicode::UnicodeChar screen3TargetValueBuffer[SCREEN3TARGETVALUE_SIZE];
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<Screen3ViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

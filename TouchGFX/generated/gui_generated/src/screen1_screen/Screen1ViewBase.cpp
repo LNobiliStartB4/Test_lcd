@@ -17,18 +17,12 @@ Screen1ViewBase::Screen1ViewBase()
     add(splashBackground);
 
     splashLogo.setBitmap(touchgfx::Bitmap(BITMAP_A1_ID));
-    splashLogo.setPosition(129, 46, 222, 200);
-    splashLogo.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    splashLogo.setPosition(151, 56, 178, 160);
+    splashLogo.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
     add(splashLogo);
 
-    splashTitle.setPosition(70, 252, 340, 28);
-    splashTitle.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
-    splashTitle.setLinespacing(0);
-    splashTitle.setTypedText(touchgfx::TypedText(T_TEXT_SPLASHTITLE));
-    add(splashTitle);
-
-    splashSubtitle.setPosition(95, 284, 290, 18);
-    splashSubtitle.setColor(touchgfx::Color::getColorFromRGB(134, 160, 181));
+    splashSubtitle.setPosition(95, 237, 290, 18);
+    splashSubtitle.setColor(touchgfx::Color::getColorFromRGB(150, 148, 140));
     splashSubtitle.setLinespacing(0);
     splashSubtitle.setTypedText(touchgfx::TypedText(T_TEXT_SPLASHSUBTITLE));
     add(splashSubtitle);

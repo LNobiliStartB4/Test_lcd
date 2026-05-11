@@ -16,35 +16,35 @@ Screen4ViewBase::Screen4ViewBase()
     rfidBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(rfidBackground);
 
-    rfidAccent.setPosition(24, 26, 5, 36);
-    rfidAccent.setColor(touchgfx::Color::getColorFromRGB(238, 191, 72));
+    rfidAccent.setPosition(32, 28, 3, 28);
+    rfidAccent.setColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
     add(rfidAccent);
 
-    rfidTitle.setPosition(40, 20, 360, 30);
-    rfidTitle.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
+    rfidTitle.setPosition(44, 28, 320, 28);
+    rfidTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     rfidTitle.setLinespacing(0);
     rfidTitle.setTypedText(touchgfx::TypedText(T_TEXT_BANDYTITLE));
     add(rfidTitle);
 
-    rfidCard.setPosition(48, 74, 384, 188);
+    rfidCard.setPosition(72, 82, 336, 178);
     rfidCard.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    rfidCard.setBorderColor(touchgfx::Color::getColorFromRGB(54, 86, 116));
-    rfidCard.setBorderSize(2);
+    rfidCard.setBorderColor(touchgfx::Color::getColorFromRGB(46, 54, 63));
+    rfidCard.setBorderSize(0);
     add(rfidCard);
 
     rfidIcon.setBitmap(touchgfx::Bitmap(BITMAP_RFID_CONTACTLESS_ID));
-    rfidIcon.setPosition(164, 96, 152, 72);
+    rfidIcon.setPosition(168, 105, 144, 68);
     rfidIcon.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
     add(rfidIcon);
 
-    rfidInstruction.setPosition(86, 188, 308, 24);
-    rfidInstruction.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
+    rfidInstruction.setPosition(86, 188, 308, 22);
+    rfidInstruction.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     rfidInstruction.setLinespacing(0);
     rfidInstruction.setTypedText(touchgfx::TypedText(T_TEXT_RFIDINSERTCARD));
     add(rfidInstruction);
 
-    rfidStatus.setPosition(86, 224, 308, 24);
-    rfidStatus.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
+    rfidStatus.setPosition(86, 222, 308, 18);
+    rfidStatus.setColor(touchgfx::Color::getColorFromRGB(124, 137, 148));
     rfidStatus.setLinespacing(0);
     rfidStatus.setTypedText(touchgfx::TypedText(T_TEXT_RFIDWAITING));
     add(rfidStatus);

@@ -9,8 +9,8 @@
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
 {
@@ -40,11 +40,13 @@ protected:
     touchgfx::Box productAccent;
     touchgfx::TextArea productTitle;
     touchgfx::TextArea productSubtitle;
-    touchgfx::BoxWithBorder bandyHighlightFrame;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  bandyButton;
+    touchgfx::BoxWithBorder bandyVisibleFrame;
     touchgfx::TextArea bandyName;
+    touchgfx::TextArea bandyStatus;
     touchgfx::BoxWithBorder emerflowCard;
     touchgfx::TextArea emerflowName;
+    touchgfx::TextArea emerflowStatus;
 
 private:
 

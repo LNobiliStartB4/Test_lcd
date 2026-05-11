@@ -4,13 +4,13 @@
 
 namespace
 {
-const int32_t kDefaultTargetMbar = 450;
-const int32_t kMinTargetMbar = 0;
-const int32_t kMaxTargetMbar = 500;
+const int32_t kDefaultTargetMbar = 490;
+const int32_t kMinTargetMbar = 290;
+const int32_t kMaxTargetMbar = 490;
+const int32_t kMinVacuumMbar = 0;
+const int32_t kMaxVacuumMbar = 500;
 const int32_t kTargetStepMbar = 10;
 const uint8_t kTickDividerLimit = 6; // 60 Hz / 6 = 10 Hz UI updates
-const uint8_t kCountdownDividerLimit = 10; // 10 Hz / 10 = 1 Hz countdown
-const uint16_t kCountdownStartSeconds = 60;
 const int32_t kSimulationStepMbar = 8;
 }
 
@@ -18,14 +18,19 @@ Model::Model()
     : modelListener(0),
       bandyState(),
       tickDivider(0),
-      countdownDivider(0),
       bandyInitialized(false),
-      countdownActive(false),
       bridgeSnapshotValid(false),
       bridgeVacuumState(0),
       bridgeFault(0),
       bridgeRfidApproved(0),
-      bridgePressureMbar(0)
+      bridgeBandyState(0),
+      bridgeDurationMinutes(15),
+      bridgeRemainingSeconds(0),
+      bridgePauseRemainingSeconds(0),
+      bridgeTargetMbar(kDefaultTargetMbar),
+      bridgePressureMbar(0),
+      targetCommandPending(false),
+      pendingTargetMbar(kDefaultTargetMbar)
 {
 }
 
@@ -45,7 +50,6 @@ void Model::tick()
     }
 
     const BandyState previousState = bandyState;
-    updateCountdown();
     updateBandyFromInput();
     updateBandyDerivedState();
 
@@ -64,11 +68,12 @@ void Model::initializeBandyDemo()
 
     bandyState = BandyState();
     bandyState.targetVacuumMbar = kDefaultTargetMbar;
+    targetCommandPending = false;
+    pendingTargetMbar = kDefaultTargetMbar;
     bandyInitialized = true;
     tickDivider = 0;
-    countdownDivider = 0;
-    countdownActive = false;
 
+    updateBandyFromInput();
     updateBandyDerivedState();
     notifyBandyState();
 }
@@ -80,48 +85,22 @@ void Model::startBandyDemo()
         initializeBandyDemo();
     }
 
-    if (isVacuumCycleRunning())
-    {
-        return;
-    }
-
-    const BandyState previousState = bandyState;
-    bandyState.remainingSeconds = kCountdownStartSeconds;
-    bandyState.running = true;
-    bandyState.targetReached = false;
-    countdownDivider = 0;
-    countdownActive = true;
-
     (void)DisplayBridgeRx_SendVacuumStartCommand();
-
-    updateBandyDerivedState();
-    if (hasBandyStateChanged(previousState))
-    {
-        notifyBandyState();
-    }
 }
 
 void Model::stopBandyDemo()
 {
-    if (!isVacuumCycleRunning() && !countdownActive && (bandyState.remainingSeconds == 0U))
-    {
-        return;
-    }
+    (void)DisplayBridgeRx_SendVacuumPauseCommand();
+}
 
-    const BandyState previousState = bandyState;
-    countdownActive = false;
-    countdownDivider = 0;
-    bandyState.remainingSeconds = 0;
-    bandyState.running = false;
-    bandyState.targetReached = false;
+void Model::resumeBandyDemo()
+{
+    (void)DisplayBridgeRx_SendVacuumResumeCommand();
+}
 
-    (void)DisplayBridgeRx_SendVacuumStopCommand();
-
-    updateBandyDerivedState();
-    if (hasBandyStateChanged(previousState))
-    {
-        notifyBandyState();
-    }
+void Model::endBandyDemo()
+{
+    (void)DisplayBridgeRx_SendVacuumEndCommand();
 }
 
 void Model::increaseBandyTarget()
@@ -131,18 +110,7 @@ void Model::increaseBandyTarget()
         initializeBandyDemo();
     }
 
-    const BandyState previousState = bandyState;
-    bandyState.targetVacuumMbar = clampTarget(bandyState.targetVacuumMbar + kTargetStepMbar);
-    if (bandyState.currentVacuumMbar < bandyState.targetVacuumMbar)
-    {
-        bandyState.targetReached = false;
-    }
-
-    updateBandyDerivedState();
-    if (hasBandyStateChanged(previousState))
-    {
-        notifyBandyState();
-    }
+    requestBandyTarget(bandyState.targetVacuumMbar + kTargetStepMbar);
 }
 
 void Model::decreaseBandyTarget()
@@ -152,28 +120,29 @@ void Model::decreaseBandyTarget()
         initializeBandyDemo();
     }
 
-    const BandyState previousState = bandyState;
-    bandyState.targetVacuumMbar = clampTarget(bandyState.targetVacuumMbar - kTargetStepMbar);
-    if (bandyState.currentVacuumMbar > bandyState.targetVacuumMbar)
-    {
-        bandyState.targetReached = false;
-    }
-
-    updateBandyDerivedState();
-    if (hasBandyStateChanged(previousState))
-    {
-        notifyBandyState();
-    }
+    requestBandyTarget(bandyState.targetVacuumMbar - kTargetStepMbar);
 }
 
 bool Model::isVacuumCycleRunning() const
 {
-    return countdownActive || bandyState.running || (bridgeSnapshotValid && (bridgeVacuumState == 1U));
+    return bridgeSnapshotValid && (bridgeBandyState == static_cast<uint8_t>(BandySessionRunning));
 }
 
 bool Model::isRfidApproved() const
 {
-  return bridgeSnapshotValid && (bridgeRfidApproved == 1U);
+    return bridgeSnapshotValid && (bridgeBandyState == static_cast<uint8_t>(BandySessionAuthorized));
+}
+
+bool Model::canOpenBandyScreen() const
+{
+    return bridgeSnapshotValid &&
+           ((bridgeBandyState == static_cast<uint8_t>(BandySessionAuthorized)) ||
+            (bridgeBandyState == static_cast<uint8_t>(BandySessionRunning)));
+}
+
+bool Model::canOpenPauseScreen() const
+{
+    return bridgeSnapshotValid && (bridgeBandyState == static_cast<uint8_t>(BandySessionPaused));
 }
 
 void Model::notifyBandyState()
@@ -193,25 +162,47 @@ void Model::updateBridgeSnapshot()
         return;
     }
 
-  bridgeSnapshotValid = snapshot.valid;
-  bridgeVacuumState = snapshot.vacuumState;
-  bridgeFault = snapshot.fault;
-  bridgeRfidApproved = snapshot.rfidApproved;
-  bridgePressureMbar = snapshot.pressureMbar;
+    bridgeSnapshotValid = snapshot.valid;
+    bridgeVacuumState = snapshot.vacuumState;
+    bridgeFault = snapshot.fault;
+    bridgeRfidApproved = snapshot.rfidApproved;
+    bridgeBandyState = snapshot.bandyState;
+    bridgeDurationMinutes = snapshot.durationMinutes;
+    bridgeRemainingSeconds = snapshot.remainingSeconds;
+    bridgePauseRemainingSeconds = snapshot.pauseRemainingSeconds;
+    bridgeTargetMbar = snapshot.targetMbar;
+    bridgePressureMbar = snapshot.pressureMbar;
+
+    if (targetCommandPending && (clampTarget(bridgeTargetMbar) == pendingTargetMbar))
+    {
+        targetCommandPending = false;
+    }
 }
 
 void Model::updateBandyFromInput()
 {
     if (bridgeSnapshotValid)
     {
-        bandyState.currentVacuumMbar = clampTarget(bridgePressureMbar);
+        const int32_t receivedTargetMbar = clampTarget(bridgeTargetMbar);
+
+        bandyState.currentVacuumMbar = clampVacuum(bridgePressureMbar);
+        bandyState.targetVacuumMbar = targetCommandPending ? pendingTargetMbar : receivedTargetMbar;
+        bandyState.remainingSeconds = bridgeRemainingSeconds;
+        bandyState.pauseRemainingSeconds = bridgePauseRemainingSeconds;
+        bandyState.sessionState = static_cast<BandySessionState>(bridgeBandyState);
+        bandyState.running = bridgeBandyState == static_cast<uint8_t>(BandySessionRunning);
+
+        if (bandyState.sessionState == BandySessionWaitRfid)
+        {
+            targetCommandPending = false;
+            pendingTargetMbar = kDefaultTargetMbar;
+        }
     }
     else
     {
         updateSimulatedVacuum();
     }
 
-    bandyState.running = countdownActive || (bridgeSnapshotValid && (bridgeVacuumState == 1U));
     bandyState.targetReached =
         (bandyState.currentVacuumMbar >= (bandyState.targetVacuumMbar - 20)) &&
         (bandyState.currentVacuumMbar <= (bandyState.targetVacuumMbar + 20));
@@ -235,6 +226,37 @@ void Model::updateBandyDerivedState()
     }
 }
 
+void Model::requestBandyTarget(int32_t targetMbar)
+{
+    if (!bandyInitialized)
+    {
+        initializeBandyDemo();
+    }
+
+    const BandyState previousState = bandyState;
+    const int32_t requestedTargetMbar = clampTarget(targetMbar);
+
+    if (requestedTargetMbar == bandyState.targetVacuumMbar)
+    {
+        return;
+    }
+
+    if (!DisplayBridgeRx_SendBandyTargetCommand(requestedTargetMbar))
+    {
+        return;
+    }
+
+    pendingTargetMbar = requestedTargetMbar;
+    targetCommandPending = true;
+    bandyState.targetVacuumMbar = pendingTargetMbar;
+
+    updateBandyDerivedState();
+    if (hasBandyStateChanged(previousState))
+    {
+        notifyBandyState();
+    }
+}
+
 int32_t Model::clampTarget(int32_t requestedTarget) const
 {
     if (requestedTarget < kMinTargetMbar)
@@ -250,36 +272,24 @@ int32_t Model::clampTarget(int32_t requestedTarget) const
     return requestedTarget;
 }
 
-void Model::updateCountdown()
+int32_t Model::clampVacuum(int32_t measuredVacuum) const
 {
-    if (!countdownActive)
+    if (measuredVacuum < kMinVacuumMbar)
     {
-        return;
+        return kMinVacuumMbar;
     }
 
-    if (++countdownDivider < kCountdownDividerLimit)
+    if (measuredVacuum > kMaxVacuumMbar)
     {
-        return;
+        return kMaxVacuumMbar;
     }
 
-    countdownDivider = 0;
-
-    if (bandyState.remainingSeconds > 0U)
-    {
-        bandyState.remainingSeconds--;
-    }
-
-    if (bandyState.remainingSeconds == 0U)
-    {
-        countdownActive = false;
-        bandyState.running = false;
-        (void)DisplayBridgeRx_SendVacuumStopCommand();
-    }
+    return measuredVacuum;
 }
 
 void Model::updateSimulatedVacuum()
 {
-    if (!countdownActive)
+    if (!bandyState.running)
     {
         return;
     }
@@ -307,7 +317,9 @@ bool Model::hasBandyStateChanged(const BandyState& previousState) const
     return previousState.currentVacuumMbar != bandyState.currentVacuumMbar ||
            previousState.targetVacuumMbar != bandyState.targetVacuumMbar ||
            previousState.remainingSeconds != bandyState.remainingSeconds ||
+           previousState.pauseRemainingSeconds != bandyState.pauseRemainingSeconds ||
            previousState.running != bandyState.running ||
            previousState.targetReached != bandyState.targetReached ||
-           previousState.vacuumState != bandyState.vacuumState;
+           previousState.vacuumState != bandyState.vacuumState ||
+           previousState.sessionState != bandyState.sessionState;
 }

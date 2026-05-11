@@ -3,8 +3,11 @@
 /*********************************************************************************/
 #include <gui_generated/screen3_screen/Screen3ViewBase.hpp>
 #include <touchgfx/Color.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
-Screen3ViewBase::Screen3ViewBase()
+Screen3ViewBase::Screen3ViewBase() :
+    flexButtonCallback(this, &Screen3ViewBase::flexButtonCallbackHandler)
 {
     __background.setPosition(0, 0, 480, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -24,11 +27,56 @@ Screen3ViewBase::Screen3ViewBase()
     lowerDivider.setColor(touchgfx::Color::getColorFromRGB(64, 64, 58));
     add(lowerDivider);
 
-    targetPanel.setXY(20, 248);
-    add(targetPanel);
+    screen3TargetLabel.setPosition(30, 258, 92, 14);
+    screen3TargetLabel.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
+    screen3TargetLabel.setLinespacing(0);
+    screen3TargetLabel.setTypedText(touchgfx::TypedText(T_TEXT_TARGETLABEL));
+    add(screen3TargetLabel);
 
-    startPanel.setXY(350, 248);
-    add(startPanel);
+    screen3TargetValue.setPosition(30, 272, 90, 34);
+    screen3TargetValue.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
+    screen3TargetValue.setLinespacing(0);
+    Unicode::snprintf(screen3TargetValueBuffer, SCREEN3TARGETVALUE_SIZE, "%s", touchgfx::TypedText(T_BUFFER_METRIC).getText());
+    screen3TargetValue.setWildcard(screen3TargetValueBuffer);
+    screen3TargetValue.setTypedText(touchgfx::TypedText(T_VALUE_METRIC));
+    add(screen3TargetValue);
+
+    screen3TargetMbarLabel.setPosition(122, 290, 46, 16);
+    screen3TargetMbarLabel.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
+    screen3TargetMbarLabel.setLinespacing(0);
+    screen3TargetMbarLabel.setTypedText(touchgfx::TypedText(T_TEXT_MBAR));
+    add(screen3TargetMbarLabel);
+
+    setTargetButton.setBoxWithBorderPosition(0, 0, 0, 0);
+    setTargetButton.setBorderSize(3);
+    setTargetButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
+    setTargetButton.setAction(flexButtonCallback);
+    setTargetButton.setPosition(176, 248, 164, 62);
+    add(setTargetButton);
+
+    setTargetButtonLabel.setPosition(176, 267, 164, 24);
+    setTargetButtonLabel.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
+    setTargetButtonLabel.setLinespacing(0);
+    setTargetButtonLabel.setTypedText(touchgfx::TypedText(T_TEXT_SETTARGETBUTTON));
+    add(setTargetButtonLabel);
+
+    screen3StartButton.setBoxWithBorderPosition(0, 0, 0, 0);
+    screen3StartButton.setBorderSize(3);
+    screen3StartButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
+    screen3StartButton.setAction(flexButtonCallback);
+    screen3StartButton.setPosition(350, 248, 110, 62);
+    add(screen3StartButton);
+
+    screen3StartIcon.setBitmap(touchgfx::Bitmap(BITMAP_START_PLAY_ICON_WHITE_ID));
+    screen3StartIcon.setPosition(363, 261, 18, 18);
+    screen3StartIcon.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    add(screen3StartIcon);
+
+    screen3StartLabel.setPosition(388, 267, 72, 35);
+    screen3StartLabel.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
+    screen3StartLabel.setLinespacing(0);
+    screen3StartLabel.setTypedText(touchgfx::TypedText(T_TEXT_START));
+    add(screen3StartLabel);
 }
 
 Screen3ViewBase::~Screen3ViewBase()
@@ -40,6 +88,22 @@ void Screen3ViewBase::setupScreen()
 {
     vacuumPanel.initialize();
     timePanel.initialize();
-    targetPanel.initialize();
-    startPanel.initialize();
+}
+
+void Screen3ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &setTargetButton)
+    {
+        //openSetpointClicked
+        //When setTargetButton clicked call virtual function
+        //Call openSetpointClicked
+        openSetpointClicked();
+    }
+    if (&src == &screen3StartButton)
+    {
+        //startClicked
+        //When screen3StartButton clicked call virtual function
+        //Call startClicked
+        startClicked();
+    }
 }

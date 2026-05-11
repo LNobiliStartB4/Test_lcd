@@ -1,9 +1,14 @@
 #include <gui/containers/BandyTargetPanel.hpp>
 #include <touchgfx/Unicode.hpp>
 
+namespace
+{
+const int16_t kSetTargetTouchStartX = 150;
+const int16_t kSetTargetTouchEndX = 320;
+}
+
 BandyTargetPanel::BandyTargetPanel()
-    : decreaseCallback(0),
-      increaseCallback(0)
+    : openCallback(0)
 {
 
 }
@@ -11,22 +16,26 @@ BandyTargetPanel::BandyTargetPanel()
 void BandyTargetPanel::initialize()
 {
     BandyTargetPanelBase::initialize();
+    setTouchable(true);
+    targetOpenButton.setTouchable(false);
     setTargetMbar(0);
 }
 
-void BandyTargetPanel::decreaseTargetClicked()
+void BandyTargetPanel::handleClickEvent(const touchgfx::ClickEvent& event)
 {
-    if ((decreaseCallback != 0) && decreaseCallback->isValid())
+    if (event.getType() == touchgfx::ClickEvent::RELEASED &&
+        event.getX() >= kSetTargetTouchStartX &&
+        event.getX() < kSetTargetTouchEndX)
     {
-        decreaseCallback->execute();
+        openSetpointClicked();
     }
 }
 
-void BandyTargetPanel::increaseTargetClicked()
+void BandyTargetPanel::openSetpointClicked()
 {
-    if ((increaseCallback != 0) && increaseCallback->isValid())
+    if ((openCallback != 0) && openCallback->isValid())
     {
-        increaseCallback->execute();
+        openCallback->execute();
     }
 }
 
@@ -36,12 +45,7 @@ void BandyTargetPanel::setTargetMbar(int32_t targetMbar)
     targetValue.invalidate();
 }
 
-void BandyTargetPanel::setDecreaseCallback(touchgfx::GenericCallback<>& callback)
+void BandyTargetPanel::setOpenCallback(touchgfx::GenericCallback<>& callback)
 {
-    decreaseCallback = &callback;
-}
-
-void BandyTargetPanel::setIncreaseCallback(touchgfx::GenericCallback<>& callback)
-{
-    increaseCallback = &callback;
+    openCallback = &callback;
 }

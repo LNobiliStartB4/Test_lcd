@@ -61,12 +61,12 @@ build/MINGW32_NT-6.2/gui/src/common/FrontendApplication.o: \
  gui/include/gui/screen2_screen/Screen2View.hpp \
  generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp \
  gui/include/gui/screen2_screen/Screen2Presenter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp \
@@ -87,10 +87,15 @@ build/MINGW32_NT-6.2/gui/src/common/FrontendApplication.o: \
  gui/include/gui/screen3_screen/Screen3Presenter.hpp \
  gui/include/gui/containers/BandyVacuumPanel.hpp \
  generated/gui_generated/include/gui_generated/containers/BandyVacuumPanelBase.hpp \
+ gui/include/gui/containers/BandyTimePanel.hpp \
+ generated/gui_generated/include/gui_generated/containers/BandyTimePanelBase.hpp \
  gui/include/gui/containers/BandyTargetPanel.hpp \
  generated/gui_generated/include/gui_generated/containers/BandyTargetPanelBase.hpp \
  gui/include/gui/containers/BandyStartPanel.hpp \
- generated/gui_generated/include/gui_generated/containers/BandyStartPanelBase.hpp
+ generated/gui_generated/include/gui_generated/containers/BandyStartPanelBase.hpp \
+ gui/include/gui/screen5_screen/Screen5View.hpp \
+ generated/gui_generated/include/gui_generated/screen5_screen/Screen5ViewBase.hpp \
+ gui/include/gui/screen5_screen/Screen5Presenter.hpp
 gui/include/gui/common/FrontendApplication.hpp:
 generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
@@ -153,12 +158,12 @@ gui/include/gui/model/ModelListener.hpp:
 gui/include/gui/screen2_screen/Screen2View.hpp:
 generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:
 gui/include/gui/screen2_screen/Screen2Presenter.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:
@@ -179,7 +184,12 @@ generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp
 gui/include/gui/screen3_screen/Screen3Presenter.hpp:
 gui/include/gui/containers/BandyVacuumPanel.hpp:
 generated/gui_generated/include/gui_generated/containers/BandyVacuumPanelBase.hpp:
+gui/include/gui/containers/BandyTimePanel.hpp:
+generated/gui_generated/include/gui_generated/containers/BandyTimePanelBase.hpp:
 gui/include/gui/containers/BandyTargetPanel.hpp:
 generated/gui_generated/include/gui_generated/containers/BandyTargetPanelBase.hpp:
 gui/include/gui/containers/BandyStartPanel.hpp:
 generated/gui_generated/include/gui_generated/containers/BandyStartPanelBase.hpp:
+gui/include/gui/screen5_screen/Screen5View.hpp:
+generated/gui_generated/include/gui_generated/screen5_screen/Screen5ViewBase.hpp:
+gui/include/gui/screen5_screen/Screen5Presenter.hpp:

@@ -21,10 +21,14 @@ public:
     void initializeBandyDemo();
     void startBandyDemo();
     void stopBandyDemo();
+    void resumeBandyDemo();
+    void endBandyDemo();
     void increaseBandyTarget();
     void decreaseBandyTarget();
     bool isVacuumCycleRunning() const;
     bool isRfidApproved() const;
+    bool canOpenBandyScreen() const;
+    bool canOpenPauseScreen() const;
 
     BandyState getBandyState() const
     {
@@ -36,22 +40,28 @@ private:
     void updateBridgeSnapshot();
     void updateBandyFromInput();
     void updateBandyDerivedState();
-    void updateCountdown();
     void updateSimulatedVacuum();
+    void requestBandyTarget(int32_t targetMbar);
     int32_t clampTarget(int32_t requestedTarget) const;
+    int32_t clampVacuum(int32_t measuredVacuum) const;
     bool hasBandyStateChanged(const BandyState& previousState) const;
 
     ModelListener* modelListener;
     BandyState bandyState;
     uint8_t tickDivider;
-    uint8_t countdownDivider;
     bool bandyInitialized;
-    bool countdownActive;
     bool bridgeSnapshotValid;
     uint8_t bridgeVacuumState;
     uint8_t bridgeFault;
     uint8_t bridgeRfidApproved;
+    uint8_t bridgeBandyState;
+    uint16_t bridgeDurationMinutes;
+    uint16_t bridgeRemainingSeconds;
+    uint16_t bridgePauseRemainingSeconds;
+    int32_t bridgeTargetMbar;
     int32_t bridgePressureMbar;
+    bool targetCommandPending;
+    int32_t pendingTargetMbar;
 };
 
 #endif // MODEL_HPP

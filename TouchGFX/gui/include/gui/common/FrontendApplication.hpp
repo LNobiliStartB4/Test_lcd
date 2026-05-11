@@ -16,6 +16,9 @@ public:
     void gotoProductSelectScreenNoTransition();
     void gotoRfidWaitScreenNoTransition();
     void gotoBandyScreenNoTransition();
+    void gotoSetpointEditScreenNoTransition();
+    void gotoPauseScreenNoTransition();
+    void gotoEndConfirmScreenNoTransition();
 
     virtual void handleTickEvent()
     {
@@ -27,10 +30,16 @@ private:
     void gotoProductSelectScreenNoTransitionImpl();
     void gotoRfidWaitScreenNoTransitionImpl();
     void gotoBandyScreenNoTransitionImpl();
+    void gotoSetpointEditScreenNoTransitionImpl();
+    void gotoPauseScreenNoTransitionImpl();
+    void gotoEndConfirmScreenNoTransitionImpl();
 
     touchgfx::Callback<FrontendApplication> productSelectTransitionCallback;
     touchgfx::Callback<FrontendApplication> rfidWaitTransitionCallback;
     touchgfx::Callback<FrontendApplication> bandyTransitionCallback;
+    touchgfx::Callback<FrontendApplication> setpointEditTransitionCallback;
+    touchgfx::Callback<FrontendApplication> pauseTransitionCallback;
+    touchgfx::Callback<FrontendApplication> endConfirmTransitionCallback;
 };
 
 #endif // FRONTENDAPPLICATION_HPP

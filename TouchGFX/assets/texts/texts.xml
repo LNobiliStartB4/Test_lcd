@@ -9,7 +9,7 @@
         <Translation Language="GB">THD</Translation>
       </Text>
       <Text Id="Text_SplashSubtitle" Alignment="Center" TypographyId="Subtitle">
-        <Translation Language="GB">SUCTION UNIT</Translation>
+        <Translation Language="GB">PRESSURE STABILIZER</Translation>
       </Text>
       <Text Id="Text_ProductTitle" Alignment="Left" TypographyId="Title">
         <Translation Language="GB">SELECT PRODUCT</Translation>
@@ -26,7 +26,7 @@
       <Text Id="Text_ProductAvailable" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">AVAILABLE</Translation>
       </Text>
-      <Text Id="Text_ProductEmerflow" Alignment="Left" TypographyId="Title">
+      <Text Id="Text_ProductEmerflow" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">HEMORFLOW</Translation>
       </Text>
       <Text Id="Text_ProductEmerflowDesc" Alignment="Left" TypographyId="Caption">
@@ -50,6 +50,18 @@
       <Text Id="Text_TargetLabel" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">TARGET</Translation>
       </Text>
+      <Text Id="Text_SetpointTitle" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">SETPOINT</Translation>
+      </Text>
+      <Text Id="Text_SetpointMinus" Alignment="Center" TypographyId="Hero">
+        <Translation Language="GB">-</Translation>
+      </Text>
+      <Text Id="Text_SetpointPlus" Alignment="Center" TypographyId="Hero">
+        <Translation Language="GB">+</Translation>
+      </Text>
+      <Text Id="Text_SetTargetButton" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">SET TARGET</Translation>
+      </Text>
       <Text Id="Text_Mbar" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">mbar</Translation>
       </Text>
@@ -70,6 +82,39 @@
       </Text>
       <Text Id="Text_Stop" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">STOP</Translation>
+      </Text>
+      <Text Id="Text_Pause" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">PAUSE</Translation>
+      </Text>
+      <Text Id="Text_Resume" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">RESUME</Translation>
+      </Text>
+      <Text Id="Text_End" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">END</Translation>
+      </Text>
+      <Text Id="Text_No" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">NO</Translation>
+      </Text>
+      <Text Id="Text_Yes" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">YES</Translation>
+      </Text>
+      <Text Id="Text_EndConfirmTitle" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">END SESSION?</Translation>
+      </Text>
+      <Text Id="Text_EndConfirmSubtitle" Alignment="Center" TypographyId="Caption">
+        <Translation Language="GB">Remaining time will be lost</Translation>
+      </Text>
+      <Text Id="Text_EndConfirmWarning" Alignment="Center" TypographyId="Caption">
+        <Translation Language="GB">CONFIRM END</Translation>
+      </Text>
+      <Text Id="Text_PauseTitle" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">PAUSED</Translation>
+      </Text>
+      <Text Id="Text_PauseSubtitle" Alignment="Center" TypographyId="Caption">
+        <Translation Language="GB">Resume before pause time expires</Translation>
+      </Text>
+      <Text Id="Text_PauseRemaining" Alignment="Center" TypographyId="Caption">
+        <Translation Language="GB">PAUSE TIME</Translation>
       </Text>
       <Text Id="Text_RfidInsertCard" Alignment="Center" TypographyId="Status">
         <Translation Language="GB">INSERT RFID CARD</Translation>

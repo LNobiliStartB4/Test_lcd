@@ -13,41 +13,26 @@
           {
             "Type": "ScalableImage",
             "Name": "splashLogo",
-            "X": 129,
-            "Y": 46,
-            "Width": 222,
-            "Height": 200,
+            "X": 151,
+            "Y": 56,
+            "Width": 178,
+            "Height": 160,
             "Filename": "A1.png",
-            "ScalingAlgorithm": "Nearest-neighbor"
-          },
-          {
-            "Type": "TextArea",
-            "Name": "splashTitle",
-            "X": 70,
-            "Y": 252,
-            "Width": 340,
-            "Height": 28,
-            "TextId": "Text_SplashTitle",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
-            }
+            "ScalingAlgorithm": "BilinearInterpolation"
           },
           {
             "Type": "TextArea",
             "Name": "splashSubtitle",
             "X": 95,
-            "Y": 284,
+            "Y": 237,
             "Width": 290,
             "Height": 18,
             "TextId": "Text_SplashSubtitle",
             "TextRotation": "0",
             "Color": {
-              "Red": 134,
-              "Green": 160,
-              "Blue": 181
+              "Red": 150,
+              "Green": 148,
+              "Blue": 140
             }
           }
         ],
@@ -65,106 +50,98 @@
           {
             "Type": "Box",
             "Name": "productAccent",
-            "X": 24,
-            "Y": 26,
-            "Width": 5,
-            "Height": 36,
+            "X": 32,
+            "Y": 28,
+            "Width": 3,
+            "Height": 28,
             "Color": {
-              "Red": 238,
-              "Green": 191,
-              "Blue": 72
+              "Red": 216,
+              "Green": 178,
+              "Blue": 71
             }
           },
           {
             "Type": "TextArea",
             "Name": "productTitle",
-            "X": 40,
-            "Y": 20,
-            "Width": 360,
-            "Height": 30,
+            "X": 46,
+            "Y": 28,
+            "Width": 320,
+            "Height": 28,
             "TextId": "Text_ProductTitle",
             "TextRotation": "0",
             "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
             }
           },
           {
             "Type": "TextArea",
             "Name": "productSubtitle",
-            "X": 40,
-            "Y": 52,
-            "Width": 380,
-            "Height": 18,
+            "X": 46,
+            "Y": 63,
+            "Width": 360,
+            "Height": 16,
             "TextId": "Text_ProductSubtitle",
             "TextRotation": "0",
             "Color": {
-              "Red": 142,
-              "Green": 164,
-              "Blue": 184
+              "Red": 124,
+              "Green": 137,
+              "Blue": 148
             }
-          },
-          {
-            "Type": "BoxWithBorder",
-            "Name": "bandyHighlightFrame",
-            "X": 28,
-            "Y": 88,
-            "Width": 204,
-            "Height": 162,
-            "Color": {
-              "Green": 6,
-              "Blue": 10
-            },
-            "BorderColor": {
-              "Red": 238,
-              "Green": 191,
-              "Blue": 72
-            },
-            "BorderSize": 2
           },
           {
             "Type": "FlexButton",
             "Name": "bandyButton",
-            "X": 32,
-            "Y": 92,
-            "Width": 196,
-            "Height": 154,
+            "X": 44,
+            "Y": 118,
+            "Width": 176,
+            "Height": 112,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "BorderSize": 3,
-                "ColorReleased": {
-                  "Green": 7,
-                  "Blue": 13
-                },
+                "BorderSize": 2,
                 "ColorPressed": {
-                  "Red": 1,
-                  "Green": 8,
-                  "Blue": 13
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
                 },
                 "ColorBorderReleased": {
-                  "Red": 238,
-                  "Green": 191,
-                  "Blue": 72
+                  "Red": 245,
+                  "Green": 218,
+                  "Blue": 142
                 },
                 "ColorBorderPressed": {
                   "Red": 255,
-                  "Green": 220,
-                  "Blue": 112
+                  "Green": 232,
+                  "Blue": 166
                 }
               }
             ]
           },
           {
+            "Type": "BoxWithBorder",
+            "Name": "bandyVisibleFrame",
+            "X": 44,
+            "Y": 118,
+            "Width": 176,
+            "Height": 112,
+            "BorderColor": {
+              "Red": 245,
+              "Green": 218,
+              "Blue": 142
+            },
+            "BorderSize": 2
+          },
+          {
             "Type": "TextArea",
             "Name": "bandyName",
-            "X": 54,
-            "Y": 160,
-            "Width": 152,
+            "X": 44,
+            "Y": 150,
+            "Width": 176,
             "Height": 30,
             "TextId": "Text_ProductBandy",
             "TextRotation": "0",
@@ -175,37 +152,67 @@
             }
           },
           {
+            "Type": "TextArea",
+            "Name": "bandyStatus",
+            "X": 44,
+            "Y": 185,
+            "Width": 176,
+            "Height": 18,
+            "TextId": "Text_ProductAvailable",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 216,
+              "Green": 178,
+              "Blue": 71
+            }
+          },
+          {
             "Type": "BoxWithBorder",
             "Name": "emerflowCard",
-            "X": 252,
-            "Y": 92,
-            "Width": 202,
-            "Height": 154,
+            "X": 260,
+            "Y": 118,
+            "Width": 176,
+            "Height": 112,
             "Color": {
-              "Red": 22,
-              "Green": 28,
-              "Blue": 36
+              "Red": 7,
+              "Green": 10,
+              "Blue": 15
             },
             "BorderColor": {
-              "Red": 72,
-              "Green": 82,
-              "Blue": 93
+              "Red": 46,
+              "Green": 54,
+              "Blue": 63
             },
             "BorderSize": 2
           },
           {
             "Type": "TextArea",
             "Name": "emerflowName",
-            "X": 274,
-            "Y": 160,
-            "Width": 160,
+            "X": 260,
+            "Y": 150,
+            "Width": 176,
             "Height": 30,
             "TextId": "Text_ProductEmerflow",
             "TextRotation": "0",
             "Color": {
-              "Red": 154,
-              "Green": 164,
-              "Blue": 174
+              "Red": 135,
+              "Green": 142,
+              "Blue": 150
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "emerflowStatus",
+            "X": 260,
+            "Y": 185,
+            "Width": 176,
+            "Height": 18,
+            "TextId": "Text_ProductUnavailable",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 78,
+              "Green": 88,
+              "Blue": 99
             }
           }
         ],
@@ -235,52 +242,51 @@
           {
             "Type": "Box",
             "Name": "rfidAccent",
-            "X": 24,
-            "Y": 26,
-            "Width": 5,
-            "Height": 36,
+            "X": 32,
+            "Y": 28,
+            "Width": 3,
+            "Height": 28,
             "Color": {
-              "Red": 238,
-              "Green": 191,
-              "Blue": 72
+              "Red": 216,
+              "Green": 178,
+              "Blue": 71
             }
           },
           {
             "Type": "TextArea",
             "Name": "rfidTitle",
-            "X": 40,
-            "Y": 20,
-            "Width": 360,
-            "Height": 30,
+            "X": 44,
+            "Y": 28,
+            "Width": 320,
+            "Height": 28,
             "TextId": "Text_BandyTitle",
             "TextRotation": "0",
             "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
             }
           },
           {
             "Type": "BoxWithBorder",
             "Name": "rfidCard",
-            "X": 48,
-            "Y": 74,
-            "Width": 384,
-            "Height": 188,
+            "X": 72,
+            "Y": 82,
+            "Width": 336,
+            "Height": 178,
             "BorderColor": {
-              "Red": 54,
-              "Green": 86,
-              "Blue": 116
-            },
-            "BorderSize": 2
+              "Red": 46,
+              "Green": 54,
+              "Blue": 63
+            }
           },
           {
             "Type": "ScalableImage",
             "Name": "rfidIcon",
-            "X": 164,
-            "Y": 96,
-            "Width": 152,
-            "Height": 72,
+            "X": 168,
+            "Y": 105,
+            "Width": 144,
+            "Height": 68,
             "Filename": "rfid_contactless.png",
             "ScalingAlgorithm": "BilinearInterpolation"
           },
@@ -290,28 +296,28 @@
             "X": 86,
             "Y": 188,
             "Width": 308,
-            "Height": 24,
+            "Height": 22,
             "TextId": "Text_RfidInsertCard",
             "TextRotation": "0",
             "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
             }
           },
           {
             "Type": "TextArea",
             "Name": "rfidStatus",
             "X": 86,
-            "Y": 224,
+            "Y": 222,
             "Width": 308,
-            "Height": 24,
+            "Height": 18,
             "TextId": "Text_RfidWaiting",
             "TextRotation": "0",
             "Color": {
-              "Red": 142,
-              "Green": 164,
-              "Blue": 184
+              "Red": 124,
+              "Green": 137,
+              "Blue": 148
             }
           }
         ],
@@ -358,25 +364,884 @@
             }
           },
           {
-            "Type": "CustomContainerInstance",
-            "Name": "targetPanel",
-            "X": 20,
-            "Y": 248,
-            "Width": 310,
-            "Height": 62,
-            "CustomContainerDefinitionName": "BandyTargetPanel"
+            "Type": "TextArea",
+            "Name": "screen3TargetLabel",
+            "X": 30,
+            "Y": 258,
+            "Width": 92,
+            "Height": 14,
+            "TextId": "Text_TargetLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
           },
           {
-            "Type": "CustomContainerInstance",
-            "Name": "startPanel",
+            "Type": "TextArea",
+            "Name": "screen3TargetValue",
+            "X": 30,
+            "Y": 272,
+            "Width": 90,
+            "Height": 34,
+            "TextId": "Value_Metric",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Metric",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "screen3TargetMbarLabel",
+            "X": 122,
+            "Y": 290,
+            "Width": 46,
+            "Height": 16,
+            "TextId": "Text_Mbar",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "setTargetButton",
+            "X": 176,
+            "Y": 248,
+            "Width": 164,
+            "Height": 62,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 3,
+                "ColorPressed": {
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setTargetButtonLabel",
+            "X": 176,
+            "Y": 267,
+            "Width": 164,
+            "Height": 24,
+            "TextId": "Text_SetTargetButton",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "screen3StartButton",
             "X": 350,
             "Y": 248,
             "Width": 110,
             "Height": 62,
-            "CustomContainerDefinitionName": "BandyStartPanel"
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 3,
+                "ColorPressed": {
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "screen3StartIcon",
+            "X": 363,
+            "Y": 261,
+            "Width": 18,
+            "Height": 18,
+            "Filename": "start_play_icon_white.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "screen3StartLabel",
+            "X": 388,
+            "Y": 267,
+            "Width": 72,
+            "Height": 35,
+            "TextId": "Text_Start",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "openSetpointClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "setTargetButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "openSetpointClicked"
+            }
+          },
+          {
+            "InteractionName": "startClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "screen3StartButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "startClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen5",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "setpointBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "setpointBackButton",
+            "X": 12,
+            "Y": 14,
+            "Width": 96,
+            "Height": 48,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 1,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setpointBackLabel",
+            "X": 22,
+            "Y": 27,
+            "Width": 76,
+            "Height": 20,
+            "TextId": "Text_Back",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 148,
+              "Blue": 140
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setpointTitle",
+            "Y": 52,
+            "Width": 480,
+            "Height": 30,
+            "TextId": "Text_SetpointTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setpointValue",
+            "X": 100,
+            "Y": 92,
+            "Width": 220,
+            "Height": 68,
+            "TextId": "Value_Hero",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Hero",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setpointMbarLabel",
+            "X": 300,
+            "Y": 130,
+            "Width": 70,
+            "Height": 20,
+            "TextId": "Text_Mbar",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "setpointMinusButton",
+            "X": 40,
+            "Y": 168,
+            "Width": 160,
+            "Height": 104,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setpointMinusLabel",
+            "X": 40,
+            "Y": 188,
+            "Width": 160,
+            "Height": 70,
+            "TextId": "Text_SetpointMinus",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "setpointPlusButton",
+            "X": 280,
+            "Y": 168,
+            "Width": 160,
+            "Height": 104,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setpointPlusLabel",
+            "X": 280,
+            "Y": 188,
+            "Width": 160,
+            "Height": 70,
+            "TextId": "Text_SetpointPlus",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "backToBandy",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "setpointBackButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "backClicked"
+            }
+          },
+          {
+            "InteractionName": "decreaseSetpoint",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "setpointMinusButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "decreaseTargetClicked"
+            }
+          },
+          {
+            "InteractionName": "increaseSetpoint",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "setpointPlusButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "increaseTargetClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen6",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "pauseBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseTitle",
+            "Y": 28,
+            "Width": 480,
+            "Height": 32,
+            "TextId": "Text_PauseTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseSubtitle",
+            "X": 40,
+            "Y": 66,
+            "Width": 400,
+            "Height": 18,
+            "TextId": "Text_PauseSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "pauseCard",
+            "X": 72,
+            "Y": 101,
+            "Width": 336,
+            "Height": 118,
+            "BorderColor": {
+              "Red": 54,
+              "Green": 86,
+              "Blue": 116
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseRemainingLabel",
+            "X": 72,
+            "Y": 111,
+            "Width": 336,
+            "Height": 18,
+            "TextId": "Text_PauseRemaining",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseRemainingValue",
+            "X": 72,
+            "Y": 137,
+            "Width": 336,
+            "Height": 42,
+            "TextId": "Value_TimeRemaining",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_TimeRemaining",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseVisitLabel",
+            "X": 142,
+            "Y": 193,
+            "Width": 160,
+            "Height": 18,
+            "TextId": "Text_TimeLeft",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseVisitValue",
+            "X": 236,
+            "Y": 179,
+            "Width": 159,
+            "Height": 32,
+            "TextId": "Value_TimeRemaining",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_TimeRemaining",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "pauseResumeButton",
+            "X": 54,
+            "Y": 246,
+            "Width": 176,
+            "Height": 54,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseResumeLabel",
+            "X": 54,
+            "Y": 263,
+            "Width": 176,
+            "Height": 24,
+            "TextId": "Text_Resume",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "pauseEndButton",
+            "X": 250,
+            "Y": 246,
+            "Width": 176,
+            "Height": 54,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 35,
+                  "Green": 15,
+                  "Blue": 18
+                },
+                "ColorBorderReleased": {
+                  "Red": 218,
+                  "Green": 56,
+                  "Blue": 68
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 92,
+                  "Blue": 104
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseEndLabel",
+            "X": 250,
+            "Y": 263,
+            "Width": 176,
+            "Height": 24,
+            "TextId": "Text_End",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "resumeBandy",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "pauseResumeButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "resumeClicked"
+            }
+          },
+          {
+            "InteractionName": "endBandy",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "pauseEndButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "endClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen7",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "endBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "TextArea",
+            "Name": "endTitle",
+            "Y": 30,
+            "Width": 480,
+            "Height": 34,
+            "TextId": "Text_EndConfirmTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "endSubtitle",
+            "X": 40,
+            "Y": 70,
+            "Width": 400,
+            "Height": 20,
+            "TextId": "Text_EndConfirmSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "endCard",
+            "X": 72,
+            "Y": 106,
+            "Width": 336,
+            "Height": 112,
+            "BorderColor": {
+              "Red": 218,
+              "Green": 56,
+              "Blue": 68
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "TextArea",
+            "Name": "endWarningLabel",
+            "X": 72,
+            "Y": 124,
+            "Width": 336,
+            "Height": 20,
+            "TextId": "Text_EndConfirmWarning",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 218,
+              "Green": 56,
+              "Blue": 68
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "endVisitLabel",
+            "X": 108,
+            "Y": 168,
+            "Width": 140,
+            "Height": 18,
+            "TextId": "Text_TimeLeft",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "endVisitValue",
+            "X": 242,
+            "Y": 156,
+            "Width": 130,
+            "Height": 34,
+            "TextId": "Value_TimeRemaining",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_TimeRemaining",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "endNoButton",
+            "X": 54,
+            "Y": 246,
+            "Width": 176,
+            "Height": 54,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "endNoLabel",
+            "X": 54,
+            "Y": 263,
+            "Width": 176,
+            "Height": 24,
+            "TextId": "Text_No",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "endYesButton",
+            "X": 250,
+            "Y": 246,
+            "Width": 176,
+            "Height": 54,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 35,
+                  "Green": 15,
+                  "Blue": 18
+                },
+                "ColorBorderReleased": {
+                  "Red": 218,
+                  "Green": 56,
+                  "Blue": 68
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 92,
+                  "Blue": 104
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "endYesLabel",
+            "X": 250,
+            "Y": 263,
+            "Width": 176,
+            "Height": 24,
+            "TextId": "Text_Yes",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "cancelEndBandy",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "endNoButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "cancelClicked"
+            }
+          },
+          {
+            "InteractionName": "confirmEndBandy",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "endYesButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "confirmClicked"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [
@@ -535,14 +1400,47 @@
       },
       {
         "Name": "BandyTargetPanel",
-        "Width": 310,
+        "Width": 320,
         "Height": 62,
         "Components": [
           {
             "Type": "BoxWithBorder",
             "Name": "targetCard",
-            "Width": 310,
+            "Width": 320,
             "Height": 62
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "targetOpenButton",
+            "Width": 320,
+            "Height": 62,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "ColorPressed": {
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
+                }
+              }
+            ]
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "setTargetFrame",
+            "X": 176,
+            "Y": 8,
+            "Width": 134,
+            "Height": 46,
+            "BorderColor": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            },
+            "BorderSize": 3
           },
           {
             "Type": "TextArea",
@@ -595,141 +1493,31 @@
             }
           },
           {
-            "Type": "FlexButton",
-            "Name": "targetMinusButton",
-            "X": 150,
-            "Y": 5,
-            "Width": 72,
-            "Height": 52,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "BorderSize": 2,
-                "ColorPressed": {
-                  "Red": 22,
-                  "Green": 22,
-                  "Blue": 20
-                },
-                "ColorBorderReleased": {
-                  "Red": 245,
-                  "Green": 242,
-                  "Blue": 232
-                },
-                "ColorBorderPressed": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 248
-                }
-              }
-            ]
-          },
-          {
-            "Type": "ScalableImage",
-            "Name": "targetMinusRing",
-            "X": 160,
-            "Y": 5,
-            "Width": 52,
-            "Height": 52,
-            "Filename": "target_button_ring_white.png",
-            "ScalingAlgorithm": "BilinearInterpolation"
-          },
-          {
             "Type": "TextArea",
-            "Name": "targetMinusLabel",
-            "X": 150,
-            "Y": 22,
-            "Width": 72,
-            "Height": 35,
-            "TextId": "Text_Minus",
+            "Name": "setTargetButtonLabel",
+            "X": 176,
+            "Y": 20,
+            "Width": 134,
+            "Height": 24,
+            "TextId": "Text_SetTargetButton",
             "TextRotation": "0",
             "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
-            }
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "targetPlusButton",
-            "X": 232,
-            "Y": 5,
-            "Width": 72,
-            "Height": 52,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "BorderSize": 2,
-                "ColorPressed": {
-                  "Red": 22,
-                  "Green": 22,
-                  "Blue": 20
-                },
-                "ColorBorderReleased": {
-                  "Red": 245,
-                  "Green": 242,
-                  "Blue": 232
-                },
-                "ColorBorderPressed": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 248
-                }
-              }
-            ]
-          },
-          {
-            "Type": "ScalableImage",
-            "Name": "targetPlusRing",
-            "X": 242,
-            "Y": 5,
-            "Width": 52,
-            "Height": 52,
-            "Filename": "target_button_ring_white.png",
-            "ScalingAlgorithm": "BilinearInterpolation"
-          },
-          {
-            "Type": "TextArea",
-            "Name": "targetPlusLabel",
-            "X": 232,
-            "Y": 22,
-            "Width": 72,
-            "Height": 35,
-            "TextId": "Text_Plus",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
             }
           }
         ],
         "Interactions": [
           {
-            "InteractionName": "decreaseTargetClicked",
+            "InteractionName": "openSetpointClicked",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "targetMinusButton"
+              "TriggerComponent": "targetOpenButton"
             },
             "Action": {
               "Type": "ActionCustom",
-              "FunctionName": "decreaseTargetClicked"
-            }
-          },
-          {
-            "InteractionName": "increaseTargetClicked",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "targetPlusButton"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "increaseTargetClicked"
+              "FunctionName": "openSetpointClicked"
             }
           }
         ]

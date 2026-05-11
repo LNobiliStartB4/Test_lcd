@@ -7,10 +7,9 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
 
 class BandyTargetPanelBase : public touchgfx::Container
 {
@@ -22,11 +21,7 @@ public:
     /*
      * Virtual Action Handlers
      */
-    virtual void decreaseTargetClicked()
-    {
-        // Override and implement this function in BandyTargetPanel
-    }
-    virtual void increaseTargetClicked()
+    virtual void openSetpointClicked()
     {
         // Override and implement this function in BandyTargetPanel
     }
@@ -40,15 +35,12 @@ protected:
      * Member Declarations
      */
     touchgfx::BoxWithBorder targetCard;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  targetOpenButton;
+    touchgfx::BoxWithBorder setTargetFrame;
     touchgfx::TextArea targetLabel;
     touchgfx::TextAreaWithOneWildcard targetValue;
     touchgfx::TextArea targetMbarLabel;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  targetMinusButton;
-    touchgfx::ScalableImage targetMinusRing;
-    touchgfx::TextArea targetMinusLabel;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  targetPlusButton;
-    touchgfx::ScalableImage targetPlusRing;
-    touchgfx::TextArea targetPlusLabel;
+    touchgfx::TextArea setTargetButtonLabel;
 
     /*
      * Wildcard Buffers

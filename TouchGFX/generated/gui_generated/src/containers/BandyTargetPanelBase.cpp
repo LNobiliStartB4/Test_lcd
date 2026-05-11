@@ -4,18 +4,30 @@
 #include <gui_generated/containers/BandyTargetPanelBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include <images/BitmapDatabase.hpp>
 
 BandyTargetPanelBase::BandyTargetPanelBase() :
     flexButtonCallback(this, &BandyTargetPanelBase::flexButtonCallbackHandler)
 {
-    setWidth(310);
+    setWidth(320);
     setHeight(62);
-    targetCard.setPosition(0, 0, 310, 62);
+    targetCard.setPosition(0, 0, 320, 62);
     targetCard.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     targetCard.setBorderColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     targetCard.setBorderSize(0);
     add(targetCard);
+
+    targetOpenButton.setBoxWithBorderPosition(0, 0, 0, 0);
+    targetOpenButton.setBorderSize(0);
+    targetOpenButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
+    targetOpenButton.setAction(flexButtonCallback);
+    targetOpenButton.setPosition(0, 0, 320, 62);
+    add(targetOpenButton);
+
+    setTargetFrame.setPosition(176, 8, 134, 46);
+    setTargetFrame.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    setTargetFrame.setBorderColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
+    setTargetFrame.setBorderSize(3);
+    add(setTargetFrame);
 
     targetLabel.setPosition(10, 10, 92, 14);
     targetLabel.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
@@ -37,41 +49,11 @@ BandyTargetPanelBase::BandyTargetPanelBase() :
     targetMbarLabel.setTypedText(touchgfx::TypedText(T_TEXT_MBAR));
     add(targetMbarLabel);
 
-    targetMinusButton.setBoxWithBorderPosition(0, 0, 0, 0);
-    targetMinusButton.setBorderSize(2);
-    targetMinusButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
-    targetMinusButton.setAction(flexButtonCallback);
-    targetMinusButton.setPosition(150, 5, 72, 52);
-    add(targetMinusButton);
-
-    targetMinusRing.setBitmap(touchgfx::Bitmap(BITMAP_TARGET_BUTTON_RING_WHITE_ID));
-    targetMinusRing.setPosition(160, 5, 52, 52);
-    targetMinusRing.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(targetMinusRing);
-
-    targetMinusLabel.setPosition(150, 22, 72, 35);
-    targetMinusLabel.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
-    targetMinusLabel.setLinespacing(0);
-    targetMinusLabel.setTypedText(touchgfx::TypedText(T_TEXT_MINUS));
-    add(targetMinusLabel);
-
-    targetPlusButton.setBoxWithBorderPosition(0, 0, 0, 0);
-    targetPlusButton.setBorderSize(2);
-    targetPlusButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
-    targetPlusButton.setAction(flexButtonCallback);
-    targetPlusButton.setPosition(232, 5, 72, 52);
-    add(targetPlusButton);
-
-    targetPlusRing.setBitmap(touchgfx::Bitmap(BITMAP_TARGET_BUTTON_RING_WHITE_ID));
-    targetPlusRing.setPosition(242, 5, 52, 52);
-    targetPlusRing.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(targetPlusRing);
-
-    targetPlusLabel.setPosition(232, 22, 72, 35);
-    targetPlusLabel.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
-    targetPlusLabel.setLinespacing(0);
-    targetPlusLabel.setTypedText(touchgfx::TypedText(T_TEXT_PLUS));
-    add(targetPlusLabel);
+    setTargetButtonLabel.setPosition(176, 20, 134, 24);
+    setTargetButtonLabel.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
+    setTargetButtonLabel.setLinespacing(0);
+    setTargetButtonLabel.setTypedText(touchgfx::TypedText(T_TEXT_SETTARGETBUTTON));
+    add(setTargetButtonLabel);
 }
 
 BandyTargetPanelBase::~BandyTargetPanelBase()
@@ -86,18 +68,11 @@ void BandyTargetPanelBase::initialize()
 
 void BandyTargetPanelBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
 {
-    if (&src == &targetMinusButton)
+    if (&src == &targetOpenButton)
     {
-        //decreaseTargetClicked
-        //When targetMinusButton clicked call virtual function
-        //Call decreaseTargetClicked
-        decreaseTargetClicked();
-    }
-    if (&src == &targetPlusButton)
-    {
-        //increaseTargetClicked
-        //When targetPlusButton clicked call virtual function
-        //Call increaseTargetClicked
-        increaseTargetClicked();
+        //openSetpointClicked
+        //When targetOpenButton clicked call virtual function
+        //Call openSetpointClicked
+        openSetpointClicked();
     }
 }

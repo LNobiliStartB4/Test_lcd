@@ -6,6 +6,12 @@
 #include <gui/screen4_screen/Screen4View.hpp>
 #include <gui/screen3_screen/Screen3Presenter.hpp>
 #include <gui/screen3_screen/Screen3View.hpp>
+#include <gui/screen5_screen/Screen5Presenter.hpp>
+#include <gui/screen5_screen/Screen5View.hpp>
+#include <gui/screen6_screen/Screen6Presenter.hpp>
+#include <gui/screen6_screen/Screen6View.hpp>
+#include <gui/screen7_screen/Screen7Presenter.hpp>
+#include <gui/screen7_screen/Screen7View.hpp>
 #include <touchgfx/transitions/NoTransition.hpp>
 
 FrontendApplication::FrontendApplication(Model& m, FrontendHeap& heap)
@@ -31,6 +37,24 @@ void FrontendApplication::gotoRfidWaitScreenNoTransition()
     pendingScreenTransitionCallback = &rfidWaitTransitionCallback;
 }
 
+void FrontendApplication::gotoSetpointEditScreenNoTransition()
+{
+    setpointEditTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoSetpointEditScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &setpointEditTransitionCallback;
+}
+
+void FrontendApplication::gotoPauseScreenNoTransition()
+{
+    pauseTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoPauseScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &pauseTransitionCallback;
+}
+
+void FrontendApplication::gotoEndConfirmScreenNoTransition()
+{
+    endConfirmTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoEndConfirmScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &endConfirmTransitionCallback;
+}
+
 void FrontendApplication::gotoProductSelectScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<Screen2View, Screen2Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
@@ -44,4 +68,19 @@ void FrontendApplication::gotoRfidWaitScreenNoTransitionImpl()
 void FrontendApplication::gotoBandyScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<Screen3View, Screen3Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplication::gotoSetpointEditScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen5View, Screen5Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplication::gotoPauseScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen6View, Screen6Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplication::gotoEndConfirmScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen7View, Screen7Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

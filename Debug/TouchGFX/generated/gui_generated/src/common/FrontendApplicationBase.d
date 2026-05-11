@@ -62,12 +62,12 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
  ../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp \
@@ -90,10 +90,15 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
  ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyVacuumPanelBase.hpp \
  ../TouchGFX/gui/include/gui/containers/BandyTimePanel.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyTimePanelBase.hpp \
- ../TouchGFX/gui/include/gui/containers/BandyTargetPanel.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyTargetPanelBase.hpp \
- ../TouchGFX/gui/include/gui/containers/BandyStartPanel.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyStartPanelBase.hpp \
+ ../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen5_screen/Screen5ViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen5_screen/Screen5Presenter.hpp \
+ ../TouchGFX/gui/include/gui/screen6_screen/Screen6View.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen6_screen/Screen6ViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen6_screen/Screen6Presenter.hpp \
+ ../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen7_screen/Screen7ViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp \
  ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp
@@ -159,12 +164,12 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
 ../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimatedImage.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:
@@ -187,10 +192,15 @@ TouchGFX/generated/gui_generated/src/common/FrontendApplicationBase.o: \
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyVacuumPanelBase.hpp:
 ../TouchGFX/gui/include/gui/containers/BandyTimePanel.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyTimePanelBase.hpp:
-../TouchGFX/gui/include/gui/containers/BandyTargetPanel.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyTargetPanelBase.hpp:
-../TouchGFX/gui/include/gui/containers/BandyStartPanel.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyStartPanelBase.hpp:
+../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen5_screen/Screen5ViewBase.hpp:
+../TouchGFX/gui/include/gui/screen5_screen/Screen5Presenter.hpp:
+../TouchGFX/gui/include/gui/screen6_screen/Screen6View.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen6_screen/Screen6ViewBase.hpp:
+../TouchGFX/gui/include/gui/screen6_screen/Screen6Presenter.hpp:
+../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen7_screen/Screen7ViewBase.hpp:
+../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp:
 ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:

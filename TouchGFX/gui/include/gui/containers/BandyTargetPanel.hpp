@@ -3,6 +3,7 @@
 
 #include <gui_generated/containers/BandyTargetPanelBase.hpp>
 #include <touchgfx/Callback.hpp>
+#include <touchgfx/events/ClickEvent.hpp>
 #include <stdint.h>
 
 class BandyTargetPanel : public BandyTargetPanelBase
@@ -12,15 +13,13 @@ public:
     virtual ~BandyTargetPanel() {}
 
     virtual void initialize();
-    virtual void decreaseTargetClicked();
-    virtual void increaseTargetClicked();
+    virtual void handleClickEvent(const touchgfx::ClickEvent& event);
+    virtual void openSetpointClicked();
 
     void setTargetMbar(int32_t targetMbar);
-    void setDecreaseCallback(touchgfx::GenericCallback<>& callback);
-    void setIncreaseCallback(touchgfx::GenericCallback<>& callback);
+    void setOpenCallback(touchgfx::GenericCallback<>& callback);
 protected:
-    touchgfx::GenericCallback<>* decreaseCallback;
-    touchgfx::GenericCallback<>* increaseCallback;
+    touchgfx::GenericCallback<>* openCallback;
 };
 
 #endif // BANDYTARGETPANEL_HPP

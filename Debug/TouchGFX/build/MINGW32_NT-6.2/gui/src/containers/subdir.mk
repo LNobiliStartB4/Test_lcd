@@ -7,6 +7,7 @@
 O_SRCS += \
 ../TouchGFX/build/MINGW32_NT-6.2/gui/src/containers/BandyStartPanel.o \
 ../TouchGFX/build/MINGW32_NT-6.2/gui/src/containers/BandyTargetPanel.o \
+../TouchGFX/build/MINGW32_NT-6.2/gui/src/containers/BandyTimePanel.o \
 ../TouchGFX/build/MINGW32_NT-6.2/gui/src/containers/BandyVacuumPanel.o 
 
 

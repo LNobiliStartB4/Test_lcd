@@ -35,7 +35,7 @@ void Screen4View::handleTickEvent()
         fullRedrawTicks--;
     }
 
-    if (!transitionRequested && (presenter != 0) && presenter->isRfidApproved())
+    if (!transitionRequested && (presenter != 0) && presenter->canOpenBandyScreen())
     {
         transitionRequested = true;
         application().gotoBandyScreenNoTransition();

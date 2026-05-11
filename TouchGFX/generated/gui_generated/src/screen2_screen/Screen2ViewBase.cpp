@@ -16,52 +16,64 @@ Screen2ViewBase::Screen2ViewBase() :
     productBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(productBackground);
 
-    productAccent.setPosition(24, 26, 5, 36);
-    productAccent.setColor(touchgfx::Color::getColorFromRGB(238, 191, 72));
+    productAccent.setPosition(32, 28, 3, 28);
+    productAccent.setColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
     add(productAccent);
 
-    productTitle.setPosition(40, 20, 360, 30);
-    productTitle.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
+    productTitle.setPosition(46, 28, 320, 28);
+    productTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     productTitle.setLinespacing(0);
     productTitle.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTTITLE));
     add(productTitle);
 
-    productSubtitle.setPosition(40, 52, 380, 18);
-    productSubtitle.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
+    productSubtitle.setPosition(46, 63, 360, 16);
+    productSubtitle.setColor(touchgfx::Color::getColorFromRGB(124, 137, 148));
     productSubtitle.setLinespacing(0);
     productSubtitle.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTSUBTITLE));
     add(productSubtitle);
 
-    bandyHighlightFrame.setPosition(28, 88, 204, 162);
-    bandyHighlightFrame.setColor(touchgfx::Color::getColorFromRGB(0, 6, 10));
-    bandyHighlightFrame.setBorderColor(touchgfx::Color::getColorFromRGB(238, 191, 72));
-    bandyHighlightFrame.setBorderSize(2);
-    add(bandyHighlightFrame);
-
     bandyButton.setBoxWithBorderPosition(0, 0, 0, 0);
-    bandyButton.setBorderSize(3);
-    bandyButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 7, 13), touchgfx::Color::getColorFromRGB(1, 8, 13), touchgfx::Color::getColorFromRGB(238, 191, 72), touchgfx::Color::getColorFromRGB(255, 220, 112));
+    bandyButton.setBorderSize(2);
+    bandyButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 218, 142), touchgfx::Color::getColorFromRGB(255, 232, 166));
     bandyButton.setAction(flexButtonCallback);
-    bandyButton.setPosition(32, 92, 196, 154);
+    bandyButton.setPosition(44, 118, 176, 112);
     add(bandyButton);
 
-    bandyName.setPosition(54, 160, 152, 30);
+    bandyVisibleFrame.setPosition(44, 118, 176, 112);
+    bandyVisibleFrame.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    bandyVisibleFrame.setBorderColor(touchgfx::Color::getColorFromRGB(245, 218, 142));
+    bandyVisibleFrame.setBorderSize(2);
+    add(bandyVisibleFrame);
+
+    bandyName.setPosition(44, 150, 176, 30);
     bandyName.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
     bandyName.setLinespacing(0);
     bandyName.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTBANDY));
     add(bandyName);
 
-    emerflowCard.setPosition(252, 92, 202, 154);
-    emerflowCard.setColor(touchgfx::Color::getColorFromRGB(22, 28, 36));
-    emerflowCard.setBorderColor(touchgfx::Color::getColorFromRGB(72, 82, 93));
+    bandyStatus.setPosition(44, 185, 176, 18);
+    bandyStatus.setColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
+    bandyStatus.setLinespacing(0);
+    bandyStatus.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTAVAILABLE));
+    add(bandyStatus);
+
+    emerflowCard.setPosition(260, 118, 176, 112);
+    emerflowCard.setColor(touchgfx::Color::getColorFromRGB(7, 10, 15));
+    emerflowCard.setBorderColor(touchgfx::Color::getColorFromRGB(46, 54, 63));
     emerflowCard.setBorderSize(2);
     add(emerflowCard);
 
-    emerflowName.setPosition(274, 160, 160, 30);
-    emerflowName.setColor(touchgfx::Color::getColorFromRGB(154, 164, 174));
+    emerflowName.setPosition(260, 150, 176, 30);
+    emerflowName.setColor(touchgfx::Color::getColorFromRGB(135, 142, 150));
     emerflowName.setLinespacing(0);
     emerflowName.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTEMERFLOW));
     add(emerflowName);
+
+    emerflowStatus.setPosition(260, 185, 176, 18);
+    emerflowStatus.setColor(touchgfx::Color::getColorFromRGB(78, 88, 99));
+    emerflowStatus.setLinespacing(0);
+    emerflowStatus.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTUNAVAILABLE));
+    add(emerflowStatus);
 }
 
 Screen2ViewBase::~Screen2ViewBase()

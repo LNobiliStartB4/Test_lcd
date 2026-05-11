@@ -27,7 +27,7 @@ public:
 
     virtual ~Screen4Presenter() {}
 
-    bool isRfidApproved() const;
+    bool canOpenBandyScreen() const;
 
 private:
     Screen4Presenter();

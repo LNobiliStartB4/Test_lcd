@@ -1,0 +1,15 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen7_screen/Screen7ViewBase.hpp:36:26:FrontendApplication& Screen7ViewBase::application()	16	static
+../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp:12:13:Screen7View::~Screen7View()	16	static
+../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp:12:13:virtual Screen7View::~Screen7View()	16	static
+../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:6:6:void {anonymous}::formatSeconds(touchgfx::Unicode::UnicodeChar*, uint16_t, uint16_t)	32	static
+../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:14:1:Screen7View::Screen7View()	16	static
+../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:19:6:virtual void Screen7View::setupScreen()	32	static
+../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:29:6:virtual void Screen7View::tearDownScreen()	16	static
+../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:34:6:virtual void Screen7View::cancelClicked()	16	static
+../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:39:6:virtual void Screen7View::confirmClicked()	16	static
+../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:47:6:void Screen7View::applyBandyState(const BandyState&)	16	static
+../TouchGFX/gui/src/screen7_screen/Screen7View.cpp:61:6:void Screen7View::updateTimeValue(uint16_t)	16	static

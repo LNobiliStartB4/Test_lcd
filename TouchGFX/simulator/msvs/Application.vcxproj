@@ -41,6 +41,15 @@
     <ClCompile Include="..\..\generated\gui_generated\src\screen4_screen\Screen4ViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\BandyTimePanel.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\BandyTimePanelBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen5_screen\Screen5Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen5_screen\Screen5View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen5_screen\Screen5ViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen6_screen\Screen6Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen6_screen\Screen6View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen6_screen\Screen6ViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen7_screen\Screen7Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen7_screen\Screen7View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen7_screen\Screen7ViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\assets\fonts\verdana.ttf"/>
@@ -311,6 +320,15 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen4_screen\Screen4ViewBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\BandyTimePanel.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\BandyTimePanelBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen5_screen\Screen5Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen5_screen\Screen5View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen5_screen\Screen5ViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen6_screen\Screen6Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen6_screen\Screen6View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen6_screen\Screen6ViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen7_screen\Screen7Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen7_screen\Screen7View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen7_screen\Screen7ViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

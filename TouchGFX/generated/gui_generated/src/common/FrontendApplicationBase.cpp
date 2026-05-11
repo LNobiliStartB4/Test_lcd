@@ -17,6 +17,12 @@
 #include <gui/screen4_screen/Screen4Presenter.hpp>
 #include <gui/screen3_screen/Screen3View.hpp>
 #include <gui/screen3_screen/Screen3Presenter.hpp>
+#include <gui/screen5_screen/Screen5View.hpp>
+#include <gui/screen5_screen/Screen5Presenter.hpp>
+#include <gui/screen6_screen/Screen6View.hpp>
+#include <gui/screen6_screen/Screen6Presenter.hpp>
+#include <gui/screen7_screen/Screen7View.hpp>
+#include <gui/screen7_screen/Screen7Presenter.hpp>
 
 using namespace touchgfx;
 
