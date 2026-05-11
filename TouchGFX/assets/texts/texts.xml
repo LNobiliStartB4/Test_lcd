@@ -101,7 +101,7 @@
       <Text Id="Text_EndConfirmTitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">END SESSION?</Translation>
       </Text>
-      <Text Id="Text_EndConfirmSubtitle" Alignment="Center" TypographyId="Caption">
+      <Text Id="Text_EndConfirmSubtitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">Remaining time will be lost</Translation>
       </Text>
       <Text Id="Text_EndConfirmWarning" Alignment="Center" TypographyId="Caption">
@@ -148,6 +148,27 @@
       </Text>
       <Text Id="Buffer_Status" Alignment="Center" TypographyId="Status">
         <Translation Language="GB">READY</Translation>
+      </Text>
+      <Text Id="Text_PillIrreversible" Alignment="Center" TypographyId="Caption">
+        <Translation Language="GB">IRREVERSIBLE ACTION</Translation>
+      </Text>
+      <Text Id="Text_EndSessionQuestion" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">End session?</Translation>
+      </Text>
+      <Text Id="Text_EndSessionSubtitle" Alignment="Center" TypographyId="Subtitle">
+        <Translation Language="GB">The RFID tag will be burned&#10;and remaining time will be lost</Translation>
+      </Text>
+      <Text Id="Text_TimeYoullLose" Alignment="Left" TypographyId="Caption">
+        <Translation Language="GB">TIME YOU'LL LOSE</Translation>
+      </Text>
+      <Text Id="Text_ButtonContinue" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">Continue</Translation>
+      </Text>
+      <Text Id="Text_ButtonEnd" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">End</Translation>
+      </Text>
+      <Text Id="Text_HoldTagNearReader" Alignment="Center" TypographyId="Subtitle">
+        <Translation Language="GB">Hold tag near reader to end session</Translation>
       </Text>
     </TextGroup>
   </Texts>

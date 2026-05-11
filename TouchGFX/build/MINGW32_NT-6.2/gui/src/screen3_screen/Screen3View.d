@@ -60,8 +60,6 @@ build/MINGW32_NT-6.2/gui/src/screen3_screen/Screen3View.o: \
  generated/gui_generated/include/gui_generated/containers/BandyTimePanelBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
- gui/include/gui/containers/BandyTargetPanel.hpp \
- generated/gui_generated/include/gui_generated/containers/BandyTargetPanelBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
@@ -78,8 +76,9 @@ build/MINGW32_NT-6.2/gui/src/screen3_screen/Screen3View.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
- gui/include/gui/containers/BandyStartPanel.hpp \
- generated/gui_generated/include/gui_generated/containers/BandyStartPanelBase.hpp
+ generated/images/include/images/BitmapDatabase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
+ generated/texts/include/texts/TextKeysAndLanguages.hpp
 gui/include/gui/screen3_screen/Screen3View.hpp:
 gui/include/gui/model/DashboardTypes.hpp:
 generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp:
@@ -140,8 +139,6 @@ gui/include/gui/containers/BandyTimePanel.hpp:
 generated/gui_generated/include/gui_generated/containers/BandyTimePanelBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
-gui/include/gui/containers/BandyTargetPanel.hpp:
-generated/gui_generated/include/gui_generated/containers/BandyTargetPanelBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:
@@ -158,5 +155,6 @@ generated/gui_generated/include/gui_generated/containers/BandyTargetPanelBase.hp
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
-gui/include/gui/containers/BandyStartPanel.hpp:
-generated/gui_generated/include/gui_generated/containers/BandyStartPanelBase.hpp:
+generated/images/include/images/BitmapDatabase.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
+generated/texts/include/texts/TextKeysAndLanguages.hpp:

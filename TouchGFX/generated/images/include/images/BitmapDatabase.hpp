@@ -7,11 +7,15 @@
 #include <touchgfx/Bitmap.hpp>
 
 const uint16_t BITMAP_A1_ID = 0;
-const uint16_t BITMAP_RFID_CONTACTLESS_ID = 1;
-const uint16_t BITMAP_START_PLAY_ICON_WHITE_ID = 2;
-const uint16_t BITMAP_START_STOP_ICON_WHITE_ID = 3;
-const uint16_t BITMAP_TARGET_BUTTON_RING_WHITE_ID = 4;
-const uint16_t BITMAP_TIME_LEFT_ICON_WHITE_ID = 5;
+const uint16_t BITMAP_ALERT_TRIANGLE_WHITE_ID = 1;
+const uint16_t BITMAP_ARROW_LEFT_WHITE_ID = 2;
+const uint16_t BITMAP_PILL_RED_ID = 3;
+const uint16_t BITMAP_RFID_CONTACTLESS_ID = 4;
+const uint16_t BITMAP_START_PLAY_ICON_WHITE_ID = 5;
+const uint16_t BITMAP_START_STOP_ICON_WHITE_ID = 6;
+const uint16_t BITMAP_TARGET_BUTTON_RING_WHITE_ID = 7;
+const uint16_t BITMAP_TIME_LEFT_ICON_WHITE_ID = 8;
+const uint16_t BITMAP_TRASH_RED_ID = 9;
 
 namespace BitmapDatabase
 {

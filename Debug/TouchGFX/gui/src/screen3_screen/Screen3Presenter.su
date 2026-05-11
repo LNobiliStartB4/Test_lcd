@@ -10,7 +10,7 @@
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	16	static
 ../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:16:13:Screen3Presenter::~Screen3Presenter()	16	static
 ../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:16:13:virtual Screen3Presenter::~Screen3Presenter()	16	static
-../TouchGFX/gui/include/gui/model/Model.hpp:33:16:BandyState Model::getBandyState() const	16	static
+../TouchGFX/gui/include/gui/model/Model.hpp:35:16:BandyState Model::getBandyState() const	16	static
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:4:1:Screen3Presenter::Screen3Presenter(Screen3View&)	16	static
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:9:6:virtual void Screen3Presenter::activate()	40	static
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:18:6:virtual void Screen3Presenter::deactivate()	16	static

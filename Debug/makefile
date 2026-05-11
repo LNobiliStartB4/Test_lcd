@@ -33,6 +33,8 @@ RM := rm -rf
 -include TouchGFX/generated/gui_generated/src/containers/subdir.mk
 -include TouchGFX/generated/gui_generated/src/common/subdir.mk
 -include TouchGFX/generated/fonts/src/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen7_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen6_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen5_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen4_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen3_screen/subdir.mk
@@ -40,6 +42,8 @@ RM := rm -rf
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen1_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/containers/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/common/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen5_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/containers/subdir.mk
 -include TouchGFX/App/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk

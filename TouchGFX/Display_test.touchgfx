@@ -463,10 +463,10 @@
           {
             "Type": "FlexButton",
             "Name": "screen3StartButton",
-            "X": 350,
-            "Y": 248,
-            "Width": 110,
-            "Height": 62,
+            "X": 348,
+            "Y": 240,
+            "Width": 132,
+            "Height": 78,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -821,9 +821,9 @@
             "Type": "BoxWithBorder",
             "Name": "pauseCard",
             "X": 72,
-            "Y": 101,
+            "Y": 99,
             "Width": 336,
-            "Height": 118,
+            "Height": 126,
             "BorderColor": {
               "Red": 54,
               "Green": 86,
@@ -850,7 +850,7 @@
             "Type": "TextArea",
             "Name": "pauseRemainingValue",
             "X": 72,
-            "Y": 137,
+            "Y": 129,
             "Width": 336,
             "Height": 42,
             "TextId": "Value_TimeRemaining",
@@ -870,7 +870,7 @@
             "Type": "TextArea",
             "Name": "pauseVisitLabel",
             "X": 142,
-            "Y": 193,
+            "Y": 191,
             "Width": 160,
             "Height": 18,
             "TextId": "Text_TimeLeft",
@@ -884,9 +884,9 @@
           {
             "Type": "TextArea",
             "Name": "pauseVisitValue",
-            "X": 236,
-            "Y": 179,
-            "Width": 159,
+            "X": 230,
+            "Y": 177,
+            "Width": 137,
             "Height": 32,
             "TextId": "Value_TimeRemaining",
             "TextRotation": "0",
@@ -1025,97 +1025,160 @@
         "Name": "Screen7",
         "Components": [
           {
-            "Type": "Box",
-            "Name": "endBackground",
+            "Type": "BoxWithBorder",
+            "Name": "outerBorder",
             "Width": 480,
-            "Height": 320
-          },
-          {
-            "Type": "TextArea",
-            "Name": "endTitle",
-            "Y": 30,
-            "Width": 480,
-            "Height": 34,
-            "TextId": "Text_EndConfirmTitle",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 245,
-              "Green": 242,
-              "Blue": 232
-            }
-          },
-          {
-            "Type": "TextArea",
-            "Name": "endSubtitle",
-            "X": 40,
-            "Y": 70,
-            "Width": 400,
-            "Height": 20,
-            "TextId": "Text_EndConfirmSubtitle",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 142,
-              "Green": 164,
-              "Blue": 184
-            }
+            "Height": 320,
+            "BorderSize": 2
           },
           {
             "Type": "BoxWithBorder",
-            "Name": "endCard",
-            "X": 72,
-            "Y": 106,
-            "Width": 336,
-            "Height": 112,
+            "Name": "outerBorder_1",
+            "X": 278,
+            "Y": 243,
+            "Width": 178,
+            "Height": 57,
             "BorderColor": {
-              "Red": 218,
-              "Green": 56,
-              "Blue": 68
+              "Red": 212,
+              "Green": 23,
+              "Blue": 23
             },
             "BorderSize": 2
           },
           {
-            "Type": "TextArea",
-            "Name": "endWarningLabel",
-            "X": 72,
-            "Y": 124,
-            "Width": 336,
-            "Height": 20,
-            "TextId": "Text_EndConfirmWarning",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 218,
-              "Green": 56,
-              "Blue": 68
-            }
+            "Type": "BoxWithBorder",
+            "Name": "outerBorder_1_1",
+            "X": 27,
+            "Y": 243,
+            "Width": 178,
+            "Height": 57,
+            "BorderColor": {
+              "Red": 240,
+              "Green": 237,
+              "Blue": 237
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "pillBg",
+            "X": 140,
+            "Y": 20,
+            "Width": 200,
+            "Height": 22,
+            "Filename": "pill_red.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "pillIcon",
+            "X": 150,
+            "Y": 23,
+            "Width": 16,
+            "Height": 16,
+            "Filename": "alert_triangle_white.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
           },
           {
             "Type": "TextArea",
-            "Name": "endVisitLabel",
-            "X": 108,
-            "Y": 168,
-            "Width": 140,
+            "Name": "pillText",
+            "X": 170,
+            "Y": 22,
+            "Width": 168,
             "Height": 18,
-            "TextId": "Text_TimeLeft",
+            "TextId": "Text_PillIrreversible",
             "TextRotation": "0",
             "Color": {
-              "Red": 142,
-              "Green": 164,
-              "Blue": 184
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
             }
           },
           {
             "Type": "TextArea",
-            "Name": "endVisitValue",
-            "X": 242,
-            "Y": 156,
-            "Width": 130,
+            "Name": "titleText",
+            "X": 16,
+            "Y": 52,
+            "Width": 448,
             "Height": 34,
+            "TextId": "Text_EndSessionQuestion",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "subtitleText",
+            "X": 16,
+            "Y": 92,
+            "Width": 448,
+            "Height": 36,
+            "TextId": "Text_EndSessionSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 247,
+              "Green": 193,
+              "Blue": 193
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "timeBoxFill",
+            "X": 16,
+            "Y": 140,
+            "Width": 448,
+            "Height": 60,
+            "Color": {
+              "Red": 27,
+              "Green": 9,
+              "Blue": 9
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "timeBoxBorder",
+            "X": 16,
+            "Y": 140,
+            "Width": 448,
+            "Height": 73,
+            "BorderColor": {
+              "Red": 226,
+              "Green": 75,
+              "Blue": 74
+            },
+            "BorderSize": 1
+          },
+          {
+            "Type": "TextArea",
+            "Name": "timeLabel",
+            "X": 38,
+            "Y": 175,
+            "Width": 240,
+            "Height": 14,
+            "TextId": "Text_TimeYoullLose",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 247,
+              "Green": 193,
+              "Blue": 193
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "timeValue",
+            "X": 160,
+            "Y": 159,
+            "Width": 240,
+            "Height": 36,
             "TextId": "Value_TimeRemaining",
             "TextRotation": "0",
             "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
             },
             "Wildcard1": {
               "TextId": "Buffer_TimeRemaining",
@@ -1124,12 +1187,22 @@
             }
           },
           {
+            "Type": "ScalableImage",
+            "Name": "trashIcon",
+            "X": 428,
+            "Y": 158,
+            "Width": 24,
+            "Height": 24,
+            "Filename": "trash_red.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
             "Type": "FlexButton",
-            "Name": "endNoButton",
-            "X": 54,
-            "Y": 246,
-            "Width": 176,
-            "Height": 54,
+            "Name": "continueButton",
+            "X": 27,
+            "Y": 243,
+            "Width": 178,
+            "Height": 57,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -1137,46 +1210,61 @@
               {
                 "Type": "BoxWithBorderButtonStyle",
                 "BorderSize": 2,
+                "ColorReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
                 "ColorPressed": {
-                  "Red": 22,
-                  "Green": 22,
-                  "Blue": 20
+                  "Red": 221,
+                  "Green": 221,
+                  "Blue": 221
                 },
                 "ColorBorderReleased": {
-                  "Red": 245,
-                  "Green": 242,
-                  "Blue": 232
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
                 },
                 "ColorBorderPressed": {
                   "Red": 255,
                   "Green": 255,
-                  "Blue": 248
+                  "Blue": 255
                 }
               }
             ]
           },
           {
+            "Type": "ScalableImage",
+            "Name": "continueArrow",
+            "X": 48,
+            "Y": 261,
+            "Width": 18,
+            "Height": 18,
+            "Filename": "arrow_left_white.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
             "Type": "TextArea",
-            "Name": "endNoLabel",
-            "X": 54,
-            "Y": 263,
-            "Width": 176,
-            "Height": 24,
-            "TextId": "Text_No",
+            "Name": "continueLabel",
+            "X": 16,
+            "Y": 260,
+            "Width": 200,
+            "Height": 36,
+            "TextId": "Text_ButtonContinue",
             "TextRotation": "0",
             "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
             }
           },
           {
             "Type": "FlexButton",
-            "Name": "endYesButton",
-            "X": 250,
-            "Y": 246,
+            "Name": "endButton",
+            "X": 294,
+            "Y": 240,
             "Width": 176,
-            "Height": 54,
+            "Height": 60,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -1185,36 +1273,36 @@
                 "Type": "BoxWithBorderButtonStyle",
                 "BorderSize": 2,
                 "ColorPressed": {
-                  "Red": 35,
-                  "Green": 15,
-                  "Blue": 18
+                  "Red": 64,
+                  "Green": 24,
+                  "Blue": 24
                 },
                 "ColorBorderReleased": {
-                  "Red": 218,
-                  "Green": 56,
-                  "Blue": 68
+                  "Red": 226,
+                  "Green": 75,
+                  "Blue": 74
                 },
                 "ColorBorderPressed": {
-                  "Red": 255,
-                  "Green": 92,
-                  "Blue": 104
+                  "Red": 226,
+                  "Green": 75,
+                  "Blue": 74
                 }
               }
             ]
           },
           {
             "Type": "TextArea",
-            "Name": "endYesLabel",
-            "X": 250,
-            "Y": 263,
-            "Width": 176,
-            "Height": 24,
-            "TextId": "Text_Yes",
+            "Name": "endLabel",
+            "X": 278,
+            "Y": 260,
+            "Width": 174,
+            "Height": 36,
+            "TextId": "Text_ButtonEnd",
             "TextRotation": "0",
             "Color": {
-              "Red": 242,
-              "Green": 247,
-              "Blue": 250
+              "Red": 226,
+              "Green": 75,
+              "Blue": 74
             }
           }
         ],
@@ -1223,7 +1311,7 @@
             "InteractionName": "cancelEndBandy",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "endNoButton"
+              "TriggerComponent": "continueButton"
             },
             "Action": {
               "Type": "ActionCustom",
@@ -1234,7 +1322,7 @@
             "InteractionName": "confirmEndBandy",
             "Trigger": {
               "Type": "TriggerClicked",
-              "TriggerComponent": "endYesButton"
+              "TriggerComponent": "endButton"
             },
             "Action": {
               "Type": "ActionCustom",

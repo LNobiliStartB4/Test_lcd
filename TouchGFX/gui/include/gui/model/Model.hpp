@@ -23,6 +23,8 @@ public:
     void stopBandyDemo();
     void resumeBandyDemo();
     void endBandyDemo();
+    void startRfidScan();
+    void stopRfidScan();
     void increaseBandyTarget();
     void decreaseBandyTarget();
     bool isVacuumCycleRunning() const;

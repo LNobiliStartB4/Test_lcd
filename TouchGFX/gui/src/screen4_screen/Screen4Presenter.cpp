@@ -12,12 +12,16 @@ void Screen4Presenter::activate()
     if (model != 0)
     {
         model->initializeBandyDemo();
+        model->startRfidScan();
     }
 }
 
 void Screen4Presenter::deactivate()
 {
-
+    if (model != 0)
+    {
+        model->stopRfidScan();
+    }
 }
 
 bool Screen4Presenter::canOpenBandyScreen() const

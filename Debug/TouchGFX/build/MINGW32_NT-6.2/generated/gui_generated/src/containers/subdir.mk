@@ -7,7 +7,7 @@
 O_SRCS += \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/containers/BandyStartPanelBase.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/containers/BandyTargetPanelBase.o \
-../TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/containers/BandyVacuumPanelBase.o 
+../TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/containers/BandyTimePanelBase.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

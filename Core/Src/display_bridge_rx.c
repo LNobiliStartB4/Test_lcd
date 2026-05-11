@@ -258,6 +258,16 @@ bool DisplayBridgeRx_SendBandyTargetCommand(int32_t targetMbar)
   return DisplayBridgeRx_SendCommandFrame(frame);
 }
 
+bool DisplayBridgeRx_SendRfidScanStartCommand(void)
+{
+  return DisplayBridgeRx_SendCommandFrame("CMD,SCAN1\n");
+}
+
+bool DisplayBridgeRx_SendRfidScanStopCommand(void)
+{
+  return DisplayBridgeRx_SendCommandFrame("CMD,SCAN0\n");
+}
+
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   if ((displayBridgeUart == NULL) || (huart != displayBridgeUart))

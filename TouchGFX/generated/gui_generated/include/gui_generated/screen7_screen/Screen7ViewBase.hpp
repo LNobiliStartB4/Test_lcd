@@ -8,8 +8,9 @@
 #include <mvp/View.hpp>
 #include <gui/screen7_screen/Screen7Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 
@@ -41,23 +42,30 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Box endBackground;
-    touchgfx::TextArea endTitle;
-    touchgfx::TextArea endSubtitle;
-    touchgfx::BoxWithBorder endCard;
-    touchgfx::TextArea endWarningLabel;
-    touchgfx::TextArea endVisitLabel;
-    touchgfx::TextAreaWithOneWildcard endVisitValue;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  endNoButton;
-    touchgfx::TextArea endNoLabel;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  endYesButton;
-    touchgfx::TextArea endYesLabel;
+    touchgfx::BoxWithBorder outerBorder;
+    touchgfx::BoxWithBorder outerBorder_1;
+    touchgfx::BoxWithBorder outerBorder_1_1;
+    touchgfx::ScalableImage pillBg;
+    touchgfx::ScalableImage pillIcon;
+    touchgfx::TextArea pillText;
+    touchgfx::TextArea titleText;
+    touchgfx::TextArea subtitleText;
+    touchgfx::Box timeBoxFill;
+    touchgfx::BoxWithBorder timeBoxBorder;
+    touchgfx::TextArea timeLabel;
+    touchgfx::TextAreaWithOneWildcard timeValue;
+    touchgfx::ScalableImage trashIcon;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  continueButton;
+    touchgfx::ScalableImage continueArrow;
+    touchgfx::TextArea continueLabel;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  endButton;
+    touchgfx::TextArea endLabel;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t ENDVISITVALUE_SIZE = 6;
-    touchgfx::Unicode::UnicodeChar endVisitValueBuffer[ENDVISITVALUE_SIZE];
+    static const uint16_t TIMEVALUE_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar timeValueBuffer[TIMEVALUE_SIZE];
 
 private:
 

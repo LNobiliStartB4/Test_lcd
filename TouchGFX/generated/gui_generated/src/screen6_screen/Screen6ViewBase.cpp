@@ -28,7 +28,7 @@ Screen6ViewBase::Screen6ViewBase() :
     pauseSubtitle.setTypedText(touchgfx::TypedText(T_TEXT_PAUSESUBTITLE));
     add(pauseSubtitle);
 
-    pauseCard.setPosition(72, 101, 336, 118);
+    pauseCard.setPosition(72, 99, 336, 126);
     pauseCard.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     pauseCard.setBorderColor(touchgfx::Color::getColorFromRGB(54, 86, 116));
     pauseCard.setBorderSize(2);
@@ -40,7 +40,7 @@ Screen6ViewBase::Screen6ViewBase() :
     pauseRemainingLabel.setTypedText(touchgfx::TypedText(T_TEXT_PAUSEREMAINING));
     add(pauseRemainingLabel);
 
-    pauseRemainingValue.setPosition(72, 137, 336, 42);
+    pauseRemainingValue.setPosition(72, 129, 336, 42);
     pauseRemainingValue.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     pauseRemainingValue.setLinespacing(0);
     Unicode::snprintf(pauseRemainingValueBuffer, PAUSEREMAININGVALUE_SIZE, "%s", touchgfx::TypedText(T_BUFFER_TIMEREMAINING).getText());
@@ -48,13 +48,13 @@ Screen6ViewBase::Screen6ViewBase() :
     pauseRemainingValue.setTypedText(touchgfx::TypedText(T_VALUE_TIMEREMAINING));
     add(pauseRemainingValue);
 
-    pauseVisitLabel.setPosition(142, 193, 160, 18);
+    pauseVisitLabel.setPosition(142, 191, 160, 18);
     pauseVisitLabel.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
     pauseVisitLabel.setLinespacing(0);
     pauseVisitLabel.setTypedText(touchgfx::TypedText(T_TEXT_TIMELEFT));
     add(pauseVisitLabel);
 
-    pauseVisitValue.setPosition(236, 179, 159, 32);
+    pauseVisitValue.setPosition(230, 177, 137, 32);
     pauseVisitValue.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
     pauseVisitValue.setLinespacing(0);
     Unicode::snprintf(pauseVisitValueBuffer, PAUSEVISITVALUE_SIZE, "%s", touchgfx::TypedText(T_BUFFER_TIMEREMAINING).getText());

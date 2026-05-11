@@ -32,6 +32,8 @@ bool DisplayBridgeRx_SendVacuumResumeCommand(void);
 bool DisplayBridgeRx_SendVacuumEndCommand(void);
 bool DisplayBridgeRx_SendVacuumStopCommand(void);
 bool DisplayBridgeRx_SendBandyTargetCommand(int32_t targetMbar);
+bool DisplayBridgeRx_SendRfidScanStartCommand(void);
+bool DisplayBridgeRx_SendRfidScanStopCommand(void);
 
 #ifdef __cplusplus
 }

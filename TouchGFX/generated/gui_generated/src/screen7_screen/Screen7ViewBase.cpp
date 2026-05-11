@@ -3,6 +3,7 @@
 /*********************************************************************************/
 #include <gui_generated/screen7_screen/Screen7ViewBase.hpp>
 #include <touchgfx/Color.hpp>
+#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
 Screen7ViewBase::Screen7ViewBase() :
@@ -12,73 +13,111 @@ Screen7ViewBase::Screen7ViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    endBackground.setPosition(0, 0, 480, 320);
-    endBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    add(endBackground);
+    outerBorder.setPosition(0, 0, 480, 320);
+    outerBorder.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    outerBorder.setBorderColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    outerBorder.setBorderSize(2);
+    add(outerBorder);
 
-    endTitle.setPosition(0, 30, 480, 34);
-    endTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
-    endTitle.setLinespacing(0);
-    endTitle.setTypedText(touchgfx::TypedText(T_TEXT_ENDCONFIRMTITLE));
-    add(endTitle);
+    outerBorder_1.setPosition(278, 243, 178, 57);
+    outerBorder_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    outerBorder_1.setBorderColor(touchgfx::Color::getColorFromRGB(212, 23, 23));
+    outerBorder_1.setBorderSize(2);
+    add(outerBorder_1);
 
-    endSubtitle.setPosition(40, 70, 400, 20);
-    endSubtitle.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
-    endSubtitle.setLinespacing(0);
-    endSubtitle.setTypedText(touchgfx::TypedText(T_TEXT_ENDCONFIRMSUBTITLE));
-    add(endSubtitle);
+    outerBorder_1_1.setPosition(27, 243, 178, 57);
+    outerBorder_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    outerBorder_1_1.setBorderColor(touchgfx::Color::getColorFromRGB(240, 237, 237));
+    outerBorder_1_1.setBorderSize(1);
+    add(outerBorder_1_1);
 
-    endCard.setPosition(72, 106, 336, 112);
-    endCard.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    endCard.setBorderColor(touchgfx::Color::getColorFromRGB(218, 56, 68));
-    endCard.setBorderSize(2);
-    add(endCard);
+    pillBg.setBitmap(touchgfx::Bitmap(BITMAP_PILL_RED_ID));
+    pillBg.setPosition(140, 20, 200, 22);
+    pillBg.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    add(pillBg);
 
-    endWarningLabel.setPosition(72, 124, 336, 20);
-    endWarningLabel.setColor(touchgfx::Color::getColorFromRGB(218, 56, 68));
-    endWarningLabel.setLinespacing(0);
-    endWarningLabel.setTypedText(touchgfx::TypedText(T_TEXT_ENDCONFIRMWARNING));
-    add(endWarningLabel);
+    pillIcon.setBitmap(touchgfx::Bitmap(BITMAP_ALERT_TRIANGLE_WHITE_ID));
+    pillIcon.setPosition(150, 23, 16, 16);
+    pillIcon.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    add(pillIcon);
 
-    endVisitLabel.setPosition(108, 168, 140, 18);
-    endVisitLabel.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
-    endVisitLabel.setLinespacing(0);
-    endVisitLabel.setTypedText(touchgfx::TypedText(T_TEXT_TIMELEFT));
-    add(endVisitLabel);
+    pillText.setPosition(170, 22, 168, 18);
+    pillText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    pillText.setLinespacing(0);
+    pillText.setTypedText(touchgfx::TypedText(T_TEXT_PILLIRREVERSIBLE));
+    add(pillText);
 
-    endVisitValue.setPosition(242, 156, 130, 34);
-    endVisitValue.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
-    endVisitValue.setLinespacing(0);
-    Unicode::snprintf(endVisitValueBuffer, ENDVISITVALUE_SIZE, "%s", touchgfx::TypedText(T_BUFFER_TIMEREMAINING).getText());
-    endVisitValue.setWildcard(endVisitValueBuffer);
-    endVisitValue.setTypedText(touchgfx::TypedText(T_VALUE_TIMEREMAINING));
-    add(endVisitValue);
+    titleText.setPosition(16, 52, 448, 34);
+    titleText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    titleText.setLinespacing(0);
+    titleText.setTypedText(touchgfx::TypedText(T_TEXT_ENDSESSIONQUESTION));
+    add(titleText);
 
-    endNoButton.setBoxWithBorderPosition(0, 0, 0, 0);
-    endNoButton.setBorderSize(2);
-    endNoButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
-    endNoButton.setAction(flexButtonCallback);
-    endNoButton.setPosition(54, 246, 176, 54);
-    add(endNoButton);
+    subtitleText.setPosition(16, 92, 448, 36);
+    subtitleText.setColor(touchgfx::Color::getColorFromRGB(247, 193, 193));
+    subtitleText.setLinespacing(0);
+    subtitleText.setTypedText(touchgfx::TypedText(T_TEXT_ENDSESSIONSUBTITLE));
+    add(subtitleText);
 
-    endNoLabel.setPosition(54, 263, 176, 24);
-    endNoLabel.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
-    endNoLabel.setLinespacing(0);
-    endNoLabel.setTypedText(touchgfx::TypedText(T_TEXT_NO));
-    add(endNoLabel);
+    timeBoxFill.setPosition(16, 140, 448, 60);
+    timeBoxFill.setColor(touchgfx::Color::getColorFromRGB(27, 9, 9));
+    add(timeBoxFill);
 
-    endYesButton.setBoxWithBorderPosition(0, 0, 0, 0);
-    endYesButton.setBorderSize(2);
-    endYesButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(35, 15, 18), touchgfx::Color::getColorFromRGB(218, 56, 68), touchgfx::Color::getColorFromRGB(255, 92, 104));
-    endYesButton.setAction(flexButtonCallback);
-    endYesButton.setPosition(250, 246, 176, 54);
-    add(endYesButton);
+    timeBoxBorder.setPosition(16, 140, 448, 73);
+    timeBoxBorder.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    timeBoxBorder.setBorderColor(touchgfx::Color::getColorFromRGB(226, 75, 74));
+    timeBoxBorder.setBorderSize(1);
+    add(timeBoxBorder);
 
-    endYesLabel.setPosition(250, 263, 176, 24);
-    endYesLabel.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
-    endYesLabel.setLinespacing(0);
-    endYesLabel.setTypedText(touchgfx::TypedText(T_TEXT_YES));
-    add(endYesLabel);
+    timeLabel.setPosition(38, 175, 240, 14);
+    timeLabel.setColor(touchgfx::Color::getColorFromRGB(247, 193, 193));
+    timeLabel.setLinespacing(0);
+    timeLabel.setTypedText(touchgfx::TypedText(T_TEXT_TIMEYOULLLOSE));
+    add(timeLabel);
+
+    timeValue.setPosition(160, 159, 240, 36);
+    timeValue.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    timeValue.setLinespacing(0);
+    Unicode::snprintf(timeValueBuffer, TIMEVALUE_SIZE, "%s", touchgfx::TypedText(T_BUFFER_TIMEREMAINING).getText());
+    timeValue.setWildcard(timeValueBuffer);
+    timeValue.setTypedText(touchgfx::TypedText(T_VALUE_TIMEREMAINING));
+    add(timeValue);
+
+    trashIcon.setBitmap(touchgfx::Bitmap(BITMAP_TRASH_RED_ID));
+    trashIcon.setPosition(428, 158, 24, 24);
+    trashIcon.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    add(trashIcon);
+
+    continueButton.setBoxWithBorderPosition(0, 0, 0, 0);
+    continueButton.setBorderSize(2);
+    continueButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(221, 221, 221), touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    continueButton.setAction(flexButtonCallback);
+    continueButton.setPosition(27, 243, 178, 57);
+    add(continueButton);
+
+    continueArrow.setBitmap(touchgfx::Bitmap(BITMAP_ARROW_LEFT_WHITE_ID));
+    continueArrow.setPosition(48, 261, 18, 18);
+    continueArrow.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    add(continueArrow);
+
+    continueLabel.setPosition(16, 260, 200, 36);
+    continueLabel.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    continueLabel.setLinespacing(0);
+    continueLabel.setTypedText(touchgfx::TypedText(T_TEXT_BUTTONCONTINUE));
+    add(continueLabel);
+
+    endButton.setBoxWithBorderPosition(0, 0, 0, 0);
+    endButton.setBorderSize(2);
+    endButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(64, 24, 24), touchgfx::Color::getColorFromRGB(226, 75, 74), touchgfx::Color::getColorFromRGB(226, 75, 74));
+    endButton.setAction(flexButtonCallback);
+    endButton.setPosition(294, 240, 176, 60);
+    add(endButton);
+
+    endLabel.setPosition(278, 260, 174, 36);
+    endLabel.setColor(touchgfx::Color::getColorFromRGB(226, 75, 74));
+    endLabel.setLinespacing(0);
+    endLabel.setTypedText(touchgfx::TypedText(T_TEXT_BUTTONEND));
+    add(endLabel);
 }
 
 Screen7ViewBase::~Screen7ViewBase()
@@ -93,17 +132,17 @@ void Screen7ViewBase::setupScreen()
 
 void Screen7ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
 {
-    if (&src == &endNoButton)
+    if (&src == &continueButton)
     {
         //cancelEndBandy
-        //When endNoButton clicked call virtual function
+        //When continueButton clicked call virtual function
         //Call cancelClicked
         cancelClicked();
     }
-    if (&src == &endYesButton)
+    if (&src == &endButton)
     {
         //confirmEndBandy
-        //When endYesButton clicked call virtual function
+        //When endButton clicked call virtual function
         //Call confirmClicked
         confirmClicked();
     }

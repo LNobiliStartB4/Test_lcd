@@ -103,6 +103,16 @@ void Model::endBandyDemo()
     (void)DisplayBridgeRx_SendVacuumEndCommand();
 }
 
+void Model::startRfidScan()
+{
+    (void)DisplayBridgeRx_SendRfidScanStartCommand();
+}
+
+void Model::stopRfidScan()
+{
+    (void)DisplayBridgeRx_SendRfidScanStopCommand();
+}
+
 void Model::increaseBandyTarget()
 {
     if (!bandyInitialized)

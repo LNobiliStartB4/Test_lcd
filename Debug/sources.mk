@@ -42,6 +42,8 @@ Core/Src \
 Core/Startup \
 Drivers/STM32F4xx_HAL_Driver/Src \
 TouchGFX/App \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/containers \
+TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen5_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/common \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/containers \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen1_screen \
@@ -49,6 +51,8 @@ TouchGFX/build/MINGW32_NT-6.2/gui/src/screen2_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen3_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen4_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen5_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screen6_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screen7_screen \
 TouchGFX/generated/fonts/src \
 TouchGFX/generated/gui_generated/src/common \
 TouchGFX/generated/gui_generated/src/containers \

@@ -1,5 +1,7 @@
 #include <gui/screen7_screen/Screen7View.hpp>
+#include <touchgfx/Application.hpp>
 #include <touchgfx/Unicode.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 namespace
 {
@@ -13,17 +15,19 @@ void formatSeconds(touchgfx::Unicode::UnicodeChar* buffer, uint16_t bufferSize, 
 
 Screen7View::Screen7View()
 {
-
 }
 
 void Screen7View::setupScreen()
 {
     Screen7ViewBase::setupScreen();
+    subtitleText.setLinespacing(2);
 
     if (presenter != 0)
     {
         applyBandyState(presenter->getBandyState());
     }
+
+    touchgfx::Application::getInstance()->invalidateArea(touchgfx::Rect(0, 0, 480, 320));
 }
 
 void Screen7View::tearDownScreen()
@@ -54,12 +58,12 @@ void Screen7View::applyBandyState(const BandyState& state)
     }
     else if (state.sessionState == BandySessionWaitRfid)
     {
-        application().gotoRfidWaitScreenNoTransition();
+        application().gotoProductSelectScreenNoTransition();
     }
 }
 
 void Screen7View::updateTimeValue(uint16_t seconds)
 {
-    formatSeconds(endVisitValueBuffer, ENDVISITVALUE_SIZE, seconds);
-    endVisitValue.invalidate();
+    formatSeconds(timeValueBuffer, TIMEVALUE_SIZE, seconds);
+    timeValue.invalidate();
 }

@@ -16,6 +16,7 @@ public:
     virtual void confirmClicked();
 
     void applyBandyState(const BandyState& state);
+
 protected:
     void updateTimeValue(uint16_t seconds);
 };

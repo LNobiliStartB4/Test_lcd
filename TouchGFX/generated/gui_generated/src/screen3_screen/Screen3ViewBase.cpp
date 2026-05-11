@@ -64,7 +64,7 @@ Screen3ViewBase::Screen3ViewBase() :
     screen3StartButton.setBorderSize(3);
     screen3StartButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     screen3StartButton.setAction(flexButtonCallback);
-    screen3StartButton.setPosition(350, 248, 110, 62);
+    screen3StartButton.setPosition(348, 240, 132, 78);
     add(screen3StartButton);
 
     screen3StartIcon.setBitmap(touchgfx::Bitmap(BITMAP_START_PLAY_ICON_WHITE_ID));
