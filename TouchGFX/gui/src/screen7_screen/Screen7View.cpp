@@ -52,12 +52,6 @@ void Screen7View::applyBandyState(const BandyState& state)
 {
     updateTimeValue(state.remainingSeconds);
 
-    if (state.sessionState == BandySessionEnding)
-    {
-        application().gotoEndingScreenNoTransition();
-        return;
-    }
-
     if (state.sessionState == BandySessionWaitRfid)
     {
         application().gotoProductSelectScreenNoTransition();

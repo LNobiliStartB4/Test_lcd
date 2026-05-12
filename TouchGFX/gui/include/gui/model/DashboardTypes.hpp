@@ -15,8 +15,7 @@ enum BandySessionState
     BandySessionWaitRfid = 0,
     BandySessionAuthorized = 1,
     BandySessionRunning = 2,
-    BandySessionPaused = 3,
-    BandySessionEnding = 4
+    BandySessionPaused = 3
 };
 
 struct BandyState

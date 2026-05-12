@@ -1,10 +1,12 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:136:5:touchgfx::Bitmap::Bitmap(touchgfx::BitmapId)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:22:26:FrontendApplication& Screen1ViewBase::application()	16	static
 ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:12:13:Screen1View::~Screen1View()	16	static
 ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:12:13:virtual Screen1View::~Screen1View()	16	static
-../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:8:1:Screen1View::Screen1View()	16	static
-../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:14:6:virtual void Screen1View::setupScreen()	16	static
-../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:21:6:virtual void Screen1View::tearDownScreen()	16	static
-../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:28:6:virtual void Screen1View::handleTickEvent()	16	static
+../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:10:1:Screen1View::Screen1View()	16	static
+../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:16:6:virtual void Screen1View::setupScreen()	16	static
+../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:24:6:virtual void Screen1View::tearDownScreen()	16	static
+../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:31:6:virtual void Screen1View::handleTickEvent()	16	static
+../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:47:6:void Screen1View::updateDots(uint8_t)	24	static

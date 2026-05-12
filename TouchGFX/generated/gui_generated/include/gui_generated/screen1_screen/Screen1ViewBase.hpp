@@ -30,6 +30,10 @@ protected:
     touchgfx::Box splashBackground;
     touchgfx::ScalableImage splashLogo;
     touchgfx::TextArea splashSubtitle;
+    touchgfx::ScalableImage splashDot1;
+    touchgfx::ScalableImage splashDot2;
+    touchgfx::ScalableImage splashDot3;
+    touchgfx::TextArea splashInitText;
 
 private:
 

@@ -94,9 +94,6 @@ TEST_CASE("Lifecycle commands map to bridge sends")
     m.endBandyDemo();
     CHECK(TestStub_GetSendCount_VacuumEnd() == 1);
 
-    m.cancelEndBandyDemo();
-    CHECK(TestStub_GetSendCount_VacuumEndCancel() == 1);
-
     m.startRfidScan();
     CHECK(TestStub_GetSendCount_RfidScanStart() == 1);
 
@@ -129,11 +126,6 @@ TEST_CASE("canOpenBandyScreen only on AUTHORIZED or RUNNING")
     TestStub_SetSnapshot(&s);
     pumpModel(m);
     CHECK_FALSE(m.canOpenBandyScreen());
-
-    s = makeSnapshot(BandySessionEnding);
-    TestStub_SetSnapshot(&s);
-    pumpModel(m);
-    CHECK_FALSE(m.canOpenBandyScreen());
 }
 
 TEST_CASE("canOpenPauseScreen only on PAUSED")
@@ -153,15 +145,3 @@ TEST_CASE("canOpenPauseScreen only on PAUSED")
     CHECK_FALSE(m.canOpenPauseScreen());
 }
 
-TEST_CASE("Model maps snapshot bandyState=4 to BandySessionEnding")
-{
-    TestStub_Reset();
-    Model m;
-    m.initializeBandyDemo();
-
-    display_bridge_snapshot_t s = makeSnapshot(/*bandyState=*/4);
-    TestStub_SetSnapshot(&s);
-    pumpModel(m);
-
-    CHECK(m.getBandyState().sessionState == BandySessionEnding);
-}

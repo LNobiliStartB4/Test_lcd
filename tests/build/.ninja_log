@@ -9,3 +9,7 @@
 5	548	8002106418401307	C:/TouchGFXProjects/Display_test_prova/tests/build/CTestTestfile.cmake	e2c5734e05af5c48
 1	475	8002106418636445	CMakeFiles/test_model.dir/test_tag_program.cpp.obj	26770b86041fa31f
 480	746	8002106423411925	test_model.exe	7f901958dbdf6f5c
+5	73	8002700355345003	CMakeFiles/test_model.dir/C_/TouchGFXProjects/Display_test_prova/TouchGFX/gui/src/model/Model.cpp.obj	d692d53da9226c22
+8	80	8002700355430517	CMakeFiles/test_model.dir/stubs/display_bridge_rx_stub.cpp.obj	37ee57e53950d52f
+1	1151	8002700355345003	CMakeFiles/test_model.dir/test_model.cpp.obj	c379d439ef4a4d64
+1152	1443	8002700366837281	test_model.exe	7f901958dbdf6f5c

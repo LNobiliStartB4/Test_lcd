@@ -29,7 +29,6 @@ public:
 
     BandyState getBandyState() const;
     void endDemo();
-    void cancelEndDemo();
 
     virtual ~Screen7Presenter() {}
 

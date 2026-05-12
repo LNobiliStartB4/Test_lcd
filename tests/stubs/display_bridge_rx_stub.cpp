@@ -9,7 +9,6 @@ int g_sendVacuumStart = 0;
 int g_sendVacuumPause = 0;
 int g_sendVacuumResume = 0;
 int g_sendVacuumEnd = 0;
-int g_sendVacuumEndCancel = 0;
 int g_sendBandyTarget = 0;
 int32_t g_lastBandyTarget = 0;
 int g_sendRfidScanStart = 0;
@@ -46,7 +45,6 @@ bool DisplayBridgeRx_SendVacuumStopCommand(void)         { return true; }
 bool DisplayBridgeRx_SendBandyTargetCommand(int32_t t)   { g_sendBandyTarget++; g_lastBandyTarget = t; return true; }
 bool DisplayBridgeRx_SendRfidScanStartCommand(void)      { g_sendRfidScanStart++; return true; }
 bool DisplayBridgeRx_SendRfidScanStopCommand(void)       { g_sendRfidScanStop++; return true; }
-bool DisplayBridgeRx_SendVacuumEndCancelCommand(void)    { g_sendVacuumEndCancel++; return true; }
 
 void TestStub_Reset(void)
 {
@@ -55,7 +53,6 @@ void TestStub_Reset(void)
     g_sendVacuumPause = 0;
     g_sendVacuumResume = 0;
     g_sendVacuumEnd = 0;
-    g_sendVacuumEndCancel = 0;
     g_sendBandyTarget = 0;
     g_lastBandyTarget = 0;
     g_sendRfidScanStart = 0;
@@ -74,7 +71,6 @@ int TestStub_GetSendCount_VacuumStart(void)        { return g_sendVacuumStart; }
 int TestStub_GetSendCount_VacuumPause(void)        { return g_sendVacuumPause; }
 int TestStub_GetSendCount_VacuumResume(void)       { return g_sendVacuumResume; }
 int TestStub_GetSendCount_VacuumEnd(void)          { return g_sendVacuumEnd; }
-int TestStub_GetSendCount_VacuumEndCancel(void)    { return g_sendVacuumEndCancel; }
 int TestStub_GetSendCount_BandyTarget(void)        { return g_sendBandyTarget; }
 int32_t TestStub_GetLastBandyTarget(void)          { return g_lastBandyTarget; }
 int TestStub_GetSendCount_RfidScanStart(void)      { return g_sendRfidScanStart; }

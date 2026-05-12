@@ -1,4 +1,4 @@
-../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:24:5:BandyState::BandyState()	1
+../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:23:5:BandyState::BandyState()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:91:5:touchgfx::colortype::colortype(uint32_t)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:140:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Bitmap.hpp:136:5:touchgfx::Bitmap::Bitmap(touchgfx::BitmapId)	1

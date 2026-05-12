@@ -66,7 +66,7 @@ tests/
   (Start/Pause/Resume/End/EndCancel, Rfid Scan Start/Stop)
 - `canOpenBandyScreen()` true solo per AUTHORIZED o RUNNING
 - `canOpenPauseScreen()` true solo per PAUSED
-- Mapping numerico `snapshot.bandyState=4` → `BandySessionEnding`
+- Decisione logica `rfidProgramTag` su `TAG_PROGRAM_DEFAULT_EXAM_NUM` (test_tag_program.cpp)
 
 ## Cosa NON è coperto
 

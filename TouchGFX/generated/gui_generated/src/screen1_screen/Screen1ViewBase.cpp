@@ -26,6 +26,27 @@ Screen1ViewBase::Screen1ViewBase()
     splashSubtitle.setLinespacing(0);
     splashSubtitle.setTypedText(touchgfx::TypedText(T_TEXT_SPLASHSUBTITLE));
     add(splashSubtitle);
+
+    splashDot1.setBitmap(touchgfx::Bitmap(BITMAP_DOT_DIM_ID));
+    splashDot1.setPosition(214, 270, 12, 12);
+    splashDot1.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    add(splashDot1);
+
+    splashDot2.setBitmap(touchgfx::Bitmap(BITMAP_DOT_DIM_ID));
+    splashDot2.setPosition(234, 270, 12, 12);
+    splashDot2.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    add(splashDot2);
+
+    splashDot3.setBitmap(touchgfx::Bitmap(BITMAP_DOT_DIM_ID));
+    splashDot3.setPosition(254, 270, 12, 12);
+    splashDot3.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    add(splashDot3);
+
+    splashInitText.setPosition(90, 289, 300, 20);
+    splashInitText.setColor(touchgfx::Color::getColorFromRGB(110, 105, 96));
+    splashInitText.setLinespacing(0);
+    splashInitText.setTypedText(touchgfx::TypedText(T_TEXT_SPLASHINITIALIZING));
+    add(splashInitText);
 }
 
 Screen1ViewBase::~Screen1ViewBase()

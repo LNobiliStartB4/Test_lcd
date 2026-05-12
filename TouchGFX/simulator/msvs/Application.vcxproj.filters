@@ -307,18 +307,6 @@
     <Filter Include="Header Files\generated\gui_generated\screen7_screen">
       <UniqueIdentifier>32B3F4BA-DC2E-671E-9EA1-49453B2653F7</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\screen8_screen">
-      <UniqueIdentifier>934EC51C-0956-D5B8-558C-0BBEE5A6EBA0</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\gui\screen8_screen">
-      <UniqueIdentifier>DD5BCF95-159B-158F-C078-019010258830</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\generated\gui_generated\screen8_screen">
-      <UniqueIdentifier>08B3C5F9-80E4-EA44-9ACC-8FC408146A09</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\generated\gui_generated\screen8_screen">
-      <UniqueIdentifier>C7C971D6-EDE6-28F1-2DCE-32BAD8E9AB80</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -437,15 +425,6 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screen7_screen\Screen7ViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screen7_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen8_screen\Screen8Presenter.cpp">
-      <Filter>Source Files\gui\screen8_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\gui\src\screen8_screen\Screen8View.cpp">
-      <Filter>Source Files\gui\screen8_screen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen8_screen\Screen8ViewBase.cpp">
-      <Filter>Source Files\generated\gui_generated\screen8_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1275,15 +1254,6 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen7_screen\Screen7ViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screen7_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen8_screen\Screen8Presenter.hpp">
-      <Filter>Header Files\gui\screen8_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen8_screen\Screen8View.hpp">
-      <Filter>Header Files\gui\screen8_screen</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen8_screen\Screen8ViewBase.hpp">
-      <Filter>Header Files\generated\gui_generated\screen8_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

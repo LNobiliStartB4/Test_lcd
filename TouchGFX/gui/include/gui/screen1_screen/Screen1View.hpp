@@ -16,6 +16,8 @@ public:
     virtual void handleTickEvent();
 
 private:
+    void updateDots(uint8_t activeIndex);
+
     uint8_t splashTicks;
     bool transitionRequested;
 };

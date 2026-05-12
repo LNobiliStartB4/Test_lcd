@@ -35,7 +35,6 @@ bool DisplayBridgeRx_SendVacuumStopCommand(void);
 bool DisplayBridgeRx_SendBandyTargetCommand(int32_t targetMbar);
 bool DisplayBridgeRx_SendRfidScanStartCommand(void);
 bool DisplayBridgeRx_SendRfidScanStopCommand(void);
-bool DisplayBridgeRx_SendVacuumEndCancelCommand(void);
 
 /* Test-only helpers (not present in production header). */
 void TestStub_Reset(void);
@@ -44,7 +43,6 @@ int TestStub_GetSendCount_VacuumStart(void);
 int TestStub_GetSendCount_VacuumPause(void);
 int TestStub_GetSendCount_VacuumResume(void);
 int TestStub_GetSendCount_VacuumEnd(void);
-int TestStub_GetSendCount_VacuumEndCancel(void);
 int TestStub_GetSendCount_BandyTarget(void);
 int32_t TestStub_GetLastBandyTarget(void);
 int TestStub_GetSendCount_RfidScanStart(void);

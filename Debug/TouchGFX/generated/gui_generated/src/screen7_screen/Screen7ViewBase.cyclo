@@ -105,10 +105,10 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen7ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen7ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
 ../TouchGFX/generated/gui_generated/src/screen7_screen/Screen7ViewBase.cpp:9:1:Screen7ViewBase::Screen7ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen7_screen/Screen7ViewBase.cpp:123:1:Screen7ViewBase::~Screen7ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen7_screen/Screen7ViewBase.cpp:123:1:virtual Screen7ViewBase::~Screen7ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen7_screen/Screen7ViewBase.cpp:128:6:virtual void Screen7ViewBase::setupScreen()	1
-../TouchGFX/generated/gui_generated/src/screen7_screen/Screen7ViewBase.cpp:133:6:void Screen7ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	3
+../TouchGFX/generated/gui_generated/src/screen7_screen/Screen7ViewBase.cpp:117:1:Screen7ViewBase::~Screen7ViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen7_screen/Screen7ViewBase.cpp:117:1:virtual Screen7ViewBase::~Screen7ViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen7_screen/Screen7ViewBase.cpp:122:6:virtual void Screen7ViewBase::setupScreen()	1
+../TouchGFX/generated/gui_generated/src/screen7_screen/Screen7ViewBase.cpp:127:6:void Screen7ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	3
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = Screen7Presenter]	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::ClickButtonTrigger()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	1

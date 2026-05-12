@@ -38,11 +38,3 @@ void Screen7Presenter::endDemo()
         model->endBandyDemo();
     }
 }
-
-void Screen7Presenter::cancelEndDemo()
-{
-    if (model != 0)
-    {
-        model->cancelEndBandyDemo();
-    }
-}

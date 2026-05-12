@@ -15,6 +15,5 @@
 ../Core/Src/display_bridge_rx.c:247:6:DisplayBridgeRx_SendBandyTargetCommand	32	static
 ../Core/Src/display_bridge_rx.c:261:6:DisplayBridgeRx_SendRfidScanStartCommand	8	static
 ../Core/Src/display_bridge_rx.c:266:6:DisplayBridgeRx_SendRfidScanStopCommand	8	static
-../Core/Src/display_bridge_rx.c:271:6:DisplayBridgeRx_SendVacuumEndCancelCommand	8	static
-../Core/Src/display_bridge_rx.c:276:6:HAL_UART_RxCpltCallback	16	static
-../Core/Src/display_bridge_rx.c:287:6:HAL_UART_ErrorCallback	16	static
+../Core/Src/display_bridge_rx.c:271:6:HAL_UART_RxCpltCallback	16	static
+../Core/Src/display_bridge_rx.c:282:6:HAL_UART_ErrorCallback	16	static
