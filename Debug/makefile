@@ -11,6 +11,8 @@ RM := rm -rf
 -include sources.mk
 -include TouchGFX/target/generated/subdir.mk
 -include TouchGFX/target/subdir.mk
+-include TouchGFX/gui/src/screen9_screen/subdir.mk
+-include TouchGFX/gui/src/screen8_screen/subdir.mk
 -include TouchGFX/gui/src/screen7_screen/subdir.mk
 -include TouchGFX/gui/src/screen6_screen/subdir.mk
 -include TouchGFX/gui/src/screen5_screen/subdir.mk
@@ -23,6 +25,8 @@ RM := rm -rf
 -include TouchGFX/gui/src/common/subdir.mk
 -include TouchGFX/generated/texts/src/subdir.mk
 -include TouchGFX/generated/images/src/subdir.mk
+-include TouchGFX/generated/gui_generated/src/screen9_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/screen8_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen7_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen6_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen5_screen/subdir.mk

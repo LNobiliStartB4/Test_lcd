@@ -3,6 +3,13 @@
 
 #include <stdint.h>
 
+enum ActiveProduct
+{
+    ActiveProductNone = 0,
+    ActiveProductBandy = 1,
+    ActiveProductHemorflow = 2
+};
+
 enum BandyVacuumState
 {
     BandyVacuumStateReady = 0,
@@ -40,6 +47,20 @@ struct BandyState
     bool targetReached;
     BandyVacuumState vacuumState;
     BandySessionState sessionState;
+};
+
+struct HemorflowState
+{
+    HemorflowState()
+        : currentPressureMbar(0),
+          targetMbar(150),
+          running(false)
+    {
+    }
+
+    int32_t currentPressureMbar;
+    int32_t targetMbar;
+    bool running;
 };
 
 #endif // DASHBOARDTYPES_HPP

@@ -5,8 +5,12 @@
 #include <string.h>
 
 #define DISPLAY_BRIDGE_RX_FRAME_MAX 64U
-#define DISPLAY_BRIDGE_RX_PREFIX "BANDY,"
-#define DISPLAY_BRIDGE_RX_PREFIX_LEN 6U
+#define DISPLAY_BRIDGE_RX_BANDY_PREFIX "BANDY,"
+#define DISPLAY_BRIDGE_RX_BANDY_PREFIX_LEN 6U
+#define DISPLAY_BRIDGE_RX_HEMO_PREFIX "HEMO,"
+#define DISPLAY_BRIDGE_RX_HEMO_PREFIX_LEN 5U
+#define DISPLAY_BRIDGE_ACTIVE_PRODUCT_NONE 0U
+#define DISPLAY_BRIDGE_ACTIVE_PRODUCT_HEMORFLOW 2U
 #define DISPLAY_BRIDGE_TX_TIMEOUT_MS 50U
 #define DISPLAY_BRIDGE_DEFAULT_DURATION_MINUTES 15U
 #define DISPLAY_BRIDGE_DEFAULT_TARGET_MBAR 490
@@ -18,6 +22,7 @@ static uint8_t displayBridgeRxByte;
 static char displayBridgeFrame[DISPLAY_BRIDGE_RX_FRAME_MAX];
 static uint8_t displayBridgeFrameLength;
 static volatile uint8_t displayBridgeVacuumState;
+static volatile uint8_t displayBridgeActiveProduct;
 static volatile uint8_t displayBridgeFault;
 static volatile uint8_t displayBridgeRfidApproved;
 static volatile uint8_t displayBridgeBandyState;
@@ -60,6 +65,9 @@ static bool DisplayBridgeRx_ParseLongField(const char *fieldName, long *value)
 static void DisplayBridgeRx_ParseFrame(void)
 {
   long vacuumState = 0;
+  long activeProduct = DISPLAY_BRIDGE_ACTIVE_PRODUCT_NONE;
+  bool isBandyFrame;
+  bool isHemoFrame;
   long fault = 0;
   long rfidApproved = 0;
   long bandyState = 0;
@@ -71,7 +79,10 @@ static void DisplayBridgeRx_ParseFrame(void)
 
   displayBridgeFrame[displayBridgeFrameLength] = '\0';
 
-  if (strncmp(displayBridgeFrame, DISPLAY_BRIDGE_RX_PREFIX, DISPLAY_BRIDGE_RX_PREFIX_LEN) != 0)
+  isBandyFrame = strncmp(displayBridgeFrame, DISPLAY_BRIDGE_RX_BANDY_PREFIX, DISPLAY_BRIDGE_RX_BANDY_PREFIX_LEN) == 0;
+  isHemoFrame = strncmp(displayBridgeFrame, DISPLAY_BRIDGE_RX_HEMO_PREFIX, DISPLAY_BRIDGE_RX_HEMO_PREFIX_LEN) == 0;
+
+  if (!isBandyFrame && !isHemoFrame)
   {
     return;
   }
@@ -82,6 +93,11 @@ static void DisplayBridgeRx_ParseFrame(void)
   }
 
   (void)DisplayBridgeRx_ParseLongField("S=", &vacuumState);
+  if (isHemoFrame)
+  {
+    activeProduct = (vacuumState != 0) ? DISPLAY_BRIDGE_ACTIVE_PRODUCT_HEMORFLOW : DISPLAY_BRIDGE_ACTIVE_PRODUCT_NONE;
+    (void)DisplayBridgeRx_ParseLongField("A=", &activeProduct);
+  }
   (void)DisplayBridgeRx_ParseLongField("F=", &fault);
   (void)DisplayBridgeRx_ParseLongField("R=", &rfidApproved);
   (void)DisplayBridgeRx_ParseLongField("B=", &bandyState);
@@ -91,6 +107,7 @@ static void DisplayBridgeRx_ParseFrame(void)
   (void)DisplayBridgeRx_ParseLongField("T=", &targetMbar);
 
   displayBridgeVacuumState = (uint8_t)vacuumState;
+  displayBridgeActiveProduct = (uint8_t)activeProduct;
   displayBridgeFault = (uint8_t)fault;
   displayBridgeRfidApproved = (uint8_t)rfidApproved;
   displayBridgeBandyState = (uint8_t)bandyState;
@@ -143,6 +160,7 @@ void DisplayBridgeRx_Init(UART_HandleTypeDef *huart)
 {
   displayBridgeUart = huart;
   displayBridgeVacuumState = 0U;
+  displayBridgeActiveProduct = DISPLAY_BRIDGE_ACTIVE_PRODUCT_NONE;
   displayBridgeFault = 0U;
   displayBridgeRfidApproved = 0U;
   displayBridgeBandyState = 0U;
@@ -160,6 +178,7 @@ bool DisplayBridgeRx_GetLatestSnapshot(display_bridge_snapshot_t *snapshot)
 {
   bool valid;
   uint8_t vacuumState;
+  uint8_t activeProduct;
   uint8_t fault;
   uint8_t rfidApproved;
   uint8_t bandyState;
@@ -177,6 +196,7 @@ bool DisplayBridgeRx_GetLatestSnapshot(display_bridge_snapshot_t *snapshot)
   __disable_irq();
   valid = displayBridgeSnapshotValid;
   vacuumState = displayBridgeVacuumState;
+  activeProduct = displayBridgeActiveProduct;
   fault = displayBridgeFault;
   rfidApproved = displayBridgeRfidApproved;
   bandyState = displayBridgeBandyState;
@@ -188,6 +208,7 @@ bool DisplayBridgeRx_GetLatestSnapshot(display_bridge_snapshot_t *snapshot)
   __enable_irq();
 
   snapshot->vacuumState = vacuumState;
+  snapshot->activeProduct = activeProduct;
   snapshot->fault = fault;
   snapshot->rfidApproved = rfidApproved;
   snapshot->bandyState = bandyState;

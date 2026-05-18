@@ -69,6 +69,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:touchgfx::TextArea::~TextArea()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:40:7:virtual touchgfx::TextArea::~TextArea()	1
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:25:18:virtual void Screen2ViewBase::bandySelected()	1
+../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:29:18:virtual void Screen2ViewBase::hemorflowSelected()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen2Presenter>::~View()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen2Presenter>::~View()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	1
@@ -80,10 +81,10 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen2ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen2ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
 ../TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:8:1:Screen2ViewBase::Screen2ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:79:1:Screen2ViewBase::~Screen2ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:79:1:virtual Screen2ViewBase::~Screen2ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:84:6:virtual void Screen2ViewBase::setupScreen()	1
-../TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:89:6:void Screen2ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	2
+../TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:86:1:Screen2ViewBase::~Screen2ViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:86:1:virtual Screen2ViewBase::~Screen2ViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:91:6:virtual void Screen2ViewBase::setupScreen()	1
+../TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:96:6:void Screen2ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	3
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = Screen2Presenter]	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::ClickButtonTrigger()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	1

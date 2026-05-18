@@ -12,6 +12,7 @@ extern "C" {
 typedef struct
 {
   uint8_t vacuumState;
+  uint8_t activeProduct;
   uint8_t fault;
   uint8_t rfidApproved;
   uint8_t bandyState;

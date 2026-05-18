@@ -307,6 +307,30 @@
     <Filter Include="Header Files\generated\gui_generated\screen7_screen">
       <UniqueIdentifier>32B3F4BA-DC2E-671E-9EA1-49453B2653F7</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\screen9_screen">
+      <UniqueIdentifier>0BC89839-F31B-6EC9-12E2-A5158F4F707B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen9_screen">
+      <UniqueIdentifier>C13A250A-7019-E19E-0215-374C836212B3</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen8_screen">
+      <UniqueIdentifier>48CC47BB-A34D-41EA-CC40-9E0E13A8D0C7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen8_screen">
+      <UniqueIdentifier>39A15AC2-9148-D660-5F98-1C3BAA1C2A39</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen8_screen">
+      <UniqueIdentifier>3F3A6478-8658-839E-E00B-F30562F782F6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen8_screen">
+      <UniqueIdentifier>AA68AEA6-4B20-6293-10CF-EA2510ADA021</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen9_screen">
+      <UniqueIdentifier>E4642098-2125-EEDC-9C75-8E2F13DF4547</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen9_screen">
+      <UniqueIdentifier>2714D6DA-D839-2AF2-3DDC-71A2DA8968D4</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -425,6 +449,24 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\screen7_screen\Screen7ViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screen7_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen8_screen\Screen8Presenter.cpp">
+      <Filter>Source Files\gui\screen8_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen8_screen\Screen8View.cpp">
+      <Filter>Source Files\gui\screen8_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen8_screen\Screen8ViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen8_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen9_screen\Screen9Presenter.cpp">
+      <Filter>Source Files\gui\screen9_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen9_screen\Screen9View.cpp">
+      <Filter>Source Files\gui\screen9_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen9_screen\Screen9ViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen9_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1254,6 +1296,24 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen7_screen\Screen7ViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screen7_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen8_screen\Screen8Presenter.hpp">
+      <Filter>Header Files\gui\screen8_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen8_screen\Screen8View.hpp">
+      <Filter>Header Files\gui\screen8_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen8_screen\Screen8ViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen8_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen9_screen\Screen9Presenter.hpp">
+      <Filter>Header Files\gui\screen9_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen9_screen\Screen9View.hpp">
+      <Filter>Header Files\gui\screen9_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen9_screen\Screen9ViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen9_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

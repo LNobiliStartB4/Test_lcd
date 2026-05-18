@@ -20,3 +20,8 @@ void Screen2View::bandySelected()
 {
     application().gotoRfidWaitScreenNoTransition();
 }
+
+void Screen2View::hemorflowSelected()
+{
+    application().gotoHemorflowWaitScreenNoTransition();
+}

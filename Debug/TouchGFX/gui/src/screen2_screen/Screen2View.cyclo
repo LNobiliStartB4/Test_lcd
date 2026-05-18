@@ -3,10 +3,11 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:31:26:FrontendApplication& Screen2ViewBase::application()	1
+../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:35:26:FrontendApplication& Screen2ViewBase::application()	1
 ../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:11:13:Screen2View::~Screen2View()	1
 ../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:11:13:virtual Screen2View::~Screen2View()	1
 ../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:4:1:Screen2View::Screen2View()	1
 ../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:8:6:virtual void Screen2View::setupScreen()	1
 ../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:14:6:virtual void Screen2View::tearDownScreen()	1
 ../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:19:6:virtual void Screen2View::bandySelected()	1
+../TouchGFX/gui/src/screen2_screen/Screen2View.cpp:24:6:virtual void Screen2View::hemorflowSelected()	1

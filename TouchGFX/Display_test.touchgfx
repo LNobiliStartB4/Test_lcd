@@ -212,6 +212,38 @@
             }
           },
           {
+            "Type": "FlexButton",
+            "Name": "emerflowButton",
+            "X": 260,
+            "Y": 118,
+            "Width": 176,
+            "Height": 112,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 12,
+                  "Green": 18,
+                  "Blue": 24
+                },
+                "ColorBorderReleased": {
+                  "Red": 142,
+                  "Green": 164,
+                  "Blue": 184
+                },
+                "ColorBorderPressed": {
+                  "Red": 180,
+                  "Green": 204,
+                  "Blue": 224
+                }
+              }
+            ]
+          },
+          {
             "Type": "BoxWithBorder",
             "Name": "emerflowCard",
             "X": 260,
@@ -224,9 +256,9 @@
               "Blue": 15
             },
             "BorderColor": {
-              "Red": 46,
-              "Green": 54,
-              "Blue": 63
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
             },
             "BorderSize": 2
           },
@@ -240,9 +272,9 @@
             "TextId": "Text_ProductEmerflow",
             "TextRotation": "0",
             "Color": {
-              "Red": 135,
-              "Green": 142,
-              "Blue": 150
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
             }
           },
           {
@@ -252,12 +284,12 @@
             "Y": 185,
             "Width": 176,
             "Height": 18,
-            "TextId": "Text_ProductUnavailable",
+            "TextId": "Text_ProductAvailable",
             "TextRotation": "0",
             "Color": {
-              "Red": 78,
-              "Green": 88,
-              "Blue": 99
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
             }
           }
         ],
@@ -272,6 +304,17 @@
               "Type": "ActionCustom",
               "FunctionName": "bandySelected"
             }
+          },
+          {
+            "InteractionName": "hemorflowSelected",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "emerflowButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "hemorflowSelected"
+            }
           }
         ]
       },
@@ -285,9 +328,54 @@
             "Height": 320
           },
           {
+            "Type": "FlexButton",
+            "Name": "backButton",
+            "Width": 120,
+            "Height": 72,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 1,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "backLabel",
+            "X": 22,
+            "Y": 27,
+            "Width": 76,
+            "Height": 20,
+            "TextId": "Text_Back",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 148,
+              "Blue": 140
+            }
+          },
+          {
             "Type": "Box",
             "Name": "rfidAccent",
-            "X": 32,
+            "X": 136,
             "Y": 28,
             "Width": 3,
             "Height": 28,
@@ -300,9 +388,9 @@
           {
             "Type": "TextArea",
             "Name": "rfidTitle",
-            "X": 44,
+            "X": 148,
             "Y": 28,
-            "Width": 320,
+            "Width": 304,
             "Height": 28,
             "TextId": "Text_BandyTitle",
             "TextRotation": "0",
@@ -366,7 +454,19 @@
             }
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "backClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "backButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "backClicked"
+            }
+          }
+        ]
       },
       {
         "Name": "Screen3",
@@ -1361,6 +1461,291 @@
             }
           }
         ]
+      },
+      {
+        "Name": "Screen8",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "hemorflowWaitBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "backButton",
+            "Width": 120,
+            "Height": 72,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 1,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "backLabel",
+            "X": 22,
+            "Y": 27,
+            "Width": 76,
+            "Height": 20,
+            "TextId": "Text_Back",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 148,
+              "Blue": 140
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "hemorflowWaitAccent",
+            "X": 136,
+            "Y": 28,
+            "Width": 3,
+            "Height": 28,
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowWaitTitle",
+            "X": 148,
+            "Y": 28,
+            "Width": 304,
+            "Height": 30,
+            "TextId": "Text_HemorflowTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "hemorflowWaitCard",
+            "X": 86,
+            "Y": 82,
+            "Width": 308,
+            "Height": 178,
+            "BorderColor": {
+              "Red": 54,
+              "Green": 86,
+              "Blue": 116
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "hemorflowPcIcon",
+            "X": 204,
+            "Y": 104,
+            "Width": 72,
+            "Height": 72,
+            "Filename": "pc_wait_device.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowWaitLabel",
+            "X": 86,
+            "Y": 190,
+            "Width": 308,
+            "Height": 24,
+            "TextId": "Text_HemorflowWaitingPc",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowWaitSubtitle",
+            "X": 96,
+            "Y": 222,
+            "Width": 288,
+            "Height": 20,
+            "TextId": "Text_HemorflowPcSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "backClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "backButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "backClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen9",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "hemorflowBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowTitle",
+            "X": 30,
+            "Y": 16,
+            "Width": 300,
+            "Height": 28,
+            "TextId": "Text_HemorflowTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "hemorflowVacuumPanel",
+            "X": 20,
+            "Y": 50,
+            "Width": 440,
+            "Height": 140,
+            "CustomContainerDefinitionName": "BandyVacuumPanel"
+          },
+          {
+            "Type": "Box",
+            "Name": "hemorflowLowerDivider",
+            "X": 20,
+            "Y": 212,
+            "Width": 440,
+            "Height": 1,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 58
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowTargetLabel",
+            "X": 54,
+            "Y": 238,
+            "Width": 130,
+            "Height": 18,
+            "TextId": "Text_TargetLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowTargetValue",
+            "X": 54,
+            "Y": 258,
+            "Width": 95,
+            "Height": 38,
+            "TextId": "Value_Metric",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Metric",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowTargetMbarLabel",
+            "X": 150,
+            "Y": 278,
+            "Width": 50,
+            "Height": 18,
+            "TextId": "Text_Mbar",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowStatusLabel",
+            "X": 270,
+            "Y": 238,
+            "Width": 150,
+            "Height": 18,
+            "TextId": "Text_HemorflowStatusLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowStatusValue",
+            "X": 270,
+            "Y": 262,
+            "Width": 160,
+            "Height": 28,
+            "TextId": "Value_Status",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Status",
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          }
+        ],
+        "Interactions": []
       }
     ],
     "CustomContainerDefinitions": [

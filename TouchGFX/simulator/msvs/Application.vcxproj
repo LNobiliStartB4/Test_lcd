@@ -50,6 +50,12 @@
     <ClCompile Include="..\..\gui\src\screen7_screen\Screen7Presenter.cpp"/>
     <ClCompile Include="..\..\gui\src\screen7_screen\Screen7View.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\screen7_screen\Screen7ViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen8_screen\Screen8Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen8_screen\Screen8View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen8_screen\Screen8ViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen9_screen\Screen9Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen9_screen\Screen9View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen9_screen\Screen9ViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\assets\fonts\verdana.ttf"/>
@@ -329,6 +335,12 @@
     <ClInclude Include="..\..\gui\include\gui\screen7_screen\Screen7Presenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\screen7_screen\Screen7View.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen7_screen\Screen7ViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen8_screen\Screen8Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen8_screen\Screen8View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen8_screen\Screen8ViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen9_screen\Screen9Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen9_screen\Screen9View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen9_screen\Screen9ViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

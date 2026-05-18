@@ -12,6 +12,10 @@
 #include <gui/screen6_screen/Screen6View.hpp>
 #include <gui/screen7_screen/Screen7Presenter.hpp>
 #include <gui/screen7_screen/Screen7View.hpp>
+#include <gui/screen8_screen/Screen8Presenter.hpp>
+#include <gui/screen8_screen/Screen8View.hpp>
+#include <gui/screen9_screen/Screen9Presenter.hpp>
+#include <gui/screen9_screen/Screen9View.hpp>
 #include <touchgfx/transitions/NoTransition.hpp>
 
 FrontendApplication::FrontendApplication(Model& m, FrontendHeap& heap)
@@ -55,6 +59,18 @@ void FrontendApplication::gotoEndConfirmScreenNoTransition()
     pendingScreenTransitionCallback = &endConfirmTransitionCallback;
 }
 
+void FrontendApplication::gotoHemorflowWaitScreenNoTransition()
+{
+    hemorflowWaitTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoHemorflowWaitScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &hemorflowWaitTransitionCallback;
+}
+
+void FrontendApplication::gotoHemorflowScreenNoTransition()
+{
+    hemorflowTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoHemorflowScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &hemorflowTransitionCallback;
+}
+
 void FrontendApplication::gotoProductSelectScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<Screen2View, Screen2Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
@@ -83,4 +99,14 @@ void FrontendApplication::gotoPauseScreenNoTransitionImpl()
 void FrontendApplication::gotoEndConfirmScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<Screen7View, Screen7Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplication::gotoHemorflowWaitScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen8View, Screen8Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplication::gotoHemorflowScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen9View, Screen9Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

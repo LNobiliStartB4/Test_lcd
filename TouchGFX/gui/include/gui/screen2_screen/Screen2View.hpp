@@ -13,6 +13,7 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     virtual void bandySelected();
+    virtual void hemorflowSelected();
 };
 
 #endif // SCREEN2VIEW_HPP

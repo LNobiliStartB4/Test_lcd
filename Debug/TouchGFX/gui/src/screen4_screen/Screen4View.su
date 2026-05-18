@@ -2,10 +2,11 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen4_screen/Screen4ViewBase.hpp:23:26:FrontendApplication& Screen4ViewBase::application()	16	static
-../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:12:13:Screen4View::~Screen4View()	16	static
-../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:12:13:virtual Screen4View::~Screen4View()	16	static
-../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:9:1:Screen4View::Screen4View()	16	static
-../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:16:6:virtual void Screen4View::setupScreen()	40	static
-../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:24:6:virtual void Screen4View::tearDownScreen()	16	static
-../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:30:6:virtual void Screen4View::handleTickEvent()	40	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen4_screen/Screen4ViewBase.hpp:32:26:FrontendApplication& Screen4ViewBase::application()	16	static
+../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:11:13:Screen4View::~Screen4View()	16	static
+../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:11:13:virtual Screen4View::~Screen4View()	16	static
+../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:4:1:Screen4View::Screen4View()	16	static
+../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:10:6:virtual void Screen4View::setupScreen()	40	static
+../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:17:6:virtual void Screen4View::tearDownScreen()	16	static
+../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:23:6:virtual void Screen4View::backClicked()	16	static
+../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:29:6:virtual void Screen4View::handleTickEvent()	16	static

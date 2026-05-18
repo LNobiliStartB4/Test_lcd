@@ -1,0 +1,12 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp:140:5:touchgfx::Rect::Rect(int16_t, int16_t, int16_t, int16_t)	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen9_screen/Screen9ViewBase.hpp:23:26:FrontendApplication& Screen9ViewBase::application()	16	static
+../TouchGFX/gui/include/gui/screen9_screen/Screen9View.hpp:21:13:Screen9View::~Screen9View()	16	static
+../TouchGFX/gui/include/gui/screen9_screen/Screen9View.hpp:21:13:virtual Screen9View::~Screen9View()	16	static
+../TouchGFX/gui/src/screen9_screen/Screen9View.cpp:9:1:Screen9View::Screen9View()	16	static
+../TouchGFX/gui/src/screen9_screen/Screen9View.cpp:17:6:virtual void Screen9View::setupScreen()	40	static
+../TouchGFX/gui/src/screen9_screen/Screen9View.cpp:31:6:virtual void Screen9View::tearDownScreen()	16	static
+../TouchGFX/gui/src/screen9_screen/Screen9View.cpp:41:6:virtual void Screen9View::handleTickEvent()	16	static
+../TouchGFX/gui/src/screen9_screen/Screen9View.cpp:63:6:void Screen9View::applyHemorflowState()	32	static

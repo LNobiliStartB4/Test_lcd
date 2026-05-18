@@ -1,25 +1,30 @@
-../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:23:5:BandyState::BandyState()	1
-../TouchGFX/gui/src/model/Model.cpp:17:1:Model::Model()	1
-../TouchGFX/gui/src/model/Model.cpp:37:6:void Model::tick()	4
-../TouchGFX/gui/src/model/Model.cpp:62:6:void Model::initializeBandyDemo()	2
-../TouchGFX/gui/src/model/Model.cpp:81:6:void Model::startBandyDemo()	2
-../TouchGFX/gui/src/model/Model.cpp:91:6:void Model::stopBandyDemo()	1
-../TouchGFX/gui/src/model/Model.cpp:96:6:void Model::resumeBandyDemo()	1
-../TouchGFX/gui/src/model/Model.cpp:101:6:void Model::endBandyDemo()	1
-../TouchGFX/gui/src/model/Model.cpp:106:6:void Model::startRfidScan()	1
-../TouchGFX/gui/src/model/Model.cpp:111:6:void Model::stopRfidScan()	1
-../TouchGFX/gui/src/model/Model.cpp:116:6:void Model::increaseBandyTarget()	2
-../TouchGFX/gui/src/model/Model.cpp:126:6:void Model::decreaseBandyTarget()	2
-../TouchGFX/gui/src/model/Model.cpp:136:6:bool Model::isVacuumCycleRunning() const	3
-../TouchGFX/gui/src/model/Model.cpp:141:6:bool Model::isRfidApproved() const	3
-../TouchGFX/gui/src/model/Model.cpp:146:6:bool Model::canOpenBandyScreen() const	4
-../TouchGFX/gui/src/model/Model.cpp:153:6:bool Model::canOpenPauseScreen() const	3
-../TouchGFX/gui/src/model/Model.cpp:158:6:void Model::notifyBandyState()	2
-../TouchGFX/gui/src/model/Model.cpp:166:6:void Model::updateBridgeSnapshot()	5
-../TouchGFX/gui/src/model/Model.cpp:192:6:void Model::updateBandyFromInput()	6
-../TouchGFX/gui/src/model/Model.cpp:221:6:void Model::updateBandyDerivedState()	3
-../TouchGFX/gui/src/model/Model.cpp:239:6:void Model::requestBandyTarget(int32_t)	5
-../TouchGFX/gui/src/model/Model.cpp:270:9:int32_t Model::clampTarget(int32_t) const	3
-../TouchGFX/gui/src/model/Model.cpp:285:9:int32_t Model::clampVacuum(int32_t) const	3
-../TouchGFX/gui/src/model/Model.cpp:300:6:void Model::updateSimulatedVacuum()	6
-../TouchGFX/gui/src/model/Model.cpp:325:6:bool Model::hasBandyStateChanged(const BandyState&) const	9
+../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:30:5:BandyState::BandyState()	1
+../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:54:5:HemorflowState::HemorflowState()	1
+../TouchGFX/gui/src/model/Model.cpp:18:1:Model::Model()	1
+../TouchGFX/gui/src/model/Model.cpp:41:6:void Model::tick()	5
+../TouchGFX/gui/src/model/Model.cpp:71:6:void Model::initializeBandyDemo()	2
+../TouchGFX/gui/src/model/Model.cpp:90:6:void Model::startBandyDemo()	2
+../TouchGFX/gui/src/model/Model.cpp:100:6:void Model::stopBandyDemo()	1
+../TouchGFX/gui/src/model/Model.cpp:105:6:void Model::resumeBandyDemo()	1
+../TouchGFX/gui/src/model/Model.cpp:110:6:void Model::endBandyDemo()	1
+../TouchGFX/gui/src/model/Model.cpp:115:6:void Model::startRfidScan()	1
+../TouchGFX/gui/src/model/Model.cpp:120:6:void Model::stopRfidScan()	1
+../TouchGFX/gui/src/model/Model.cpp:125:6:void Model::increaseBandyTarget()	2
+../TouchGFX/gui/src/model/Model.cpp:135:6:void Model::decreaseBandyTarget()	2
+../TouchGFX/gui/src/model/Model.cpp:145:6:bool Model::isVacuumCycleRunning() const	3
+../TouchGFX/gui/src/model/Model.cpp:150:6:bool Model::isRfidApproved() const	3
+../TouchGFX/gui/src/model/Model.cpp:155:6:bool Model::canOpenBandyScreen() const	4
+../TouchGFX/gui/src/model/Model.cpp:162:6:bool Model::canOpenPauseScreen() const	3
+../TouchGFX/gui/src/model/Model.cpp:167:6:void Model::initializeHemorflowMonitor()	1
+../TouchGFX/gui/src/model/Model.cpp:176:6:bool Model::canOpenHemorflowMonitor() const	4
+../TouchGFX/gui/src/model/Model.cpp:183:6:bool Model::shouldReturnToHemorflowWait() const	4
+../TouchGFX/gui/src/model/Model.cpp:190:6:void Model::notifyBandyState()	2
+../TouchGFX/gui/src/model/Model.cpp:198:6:void Model::updateBridgeSnapshot()	5
+../TouchGFX/gui/src/model/Model.cpp:225:6:void Model::updateBandyFromInput()	6
+../TouchGFX/gui/src/model/Model.cpp:254:6:void Model::updateHemorflowFromInput()	4
+../TouchGFX/gui/src/model/Model.cpp:268:6:void Model::updateBandyDerivedState()	3
+../TouchGFX/gui/src/model/Model.cpp:286:6:void Model::requestBandyTarget(int32_t)	5
+../TouchGFX/gui/src/model/Model.cpp:317:9:int32_t Model::clampTarget(int32_t) const	3
+../TouchGFX/gui/src/model/Model.cpp:332:9:int32_t Model::clampVacuum(int32_t) const	3
+../TouchGFX/gui/src/model/Model.cpp:347:6:void Model::updateSimulatedVacuum()	6
+../TouchGFX/gui/src/model/Model.cpp:372:6:bool Model::hasBandyStateChanged(const BandyState&) const	9

@@ -34,6 +34,20 @@ void pumpModel(Model &m, int times = 8)
 }
 }
 
+display_bridge_snapshot_t makeHemorflowSnapshot(uint8_t activeProduct,
+                                                uint8_t vacuumState,
+                                                int32_t pressureMbar,
+                                                int32_t targetMbar)
+{
+    display_bridge_snapshot_t s = {};
+    s.valid = true;
+    s.activeProduct = activeProduct;
+    s.vacuumState = vacuumState;
+    s.pressureMbar = pressureMbar;
+    s.targetMbar = targetMbar;
+    return s;
+}
+
 TEST_CASE("Defaults after construction and initializeBandyDemo")
 {
     TestStub_Reset();
@@ -145,3 +159,54 @@ TEST_CASE("canOpenPauseScreen only on PAUSED")
     CHECK_FALSE(m.canOpenPauseScreen());
 }
 
+
+
+TEST_CASE("Hemorflow monitor opens only when active and running")
+{
+    TestStub_Reset();
+    Model m;
+    m.initializeHemorflowMonitor();
+
+    display_bridge_snapshot_t s = makeHemorflowSnapshot(0, 0, 0, 150);
+    TestStub_SetSnapshot(&s);
+    pumpModel(m);
+    CHECK_FALSE(m.canOpenHemorflowMonitor());
+
+    s = makeHemorflowSnapshot(2, 1, 82, 150);
+    TestStub_SetSnapshot(&s);
+    pumpModel(m);
+    CHECK(m.canOpenHemorflowMonitor());
+}
+
+TEST_CASE("Hemorflow snapshot updates pressure target and running state")
+{
+    TestStub_Reset();
+    Model m;
+    m.initializeHemorflowMonitor();
+
+    display_bridge_snapshot_t s = makeHemorflowSnapshot(2, 1, 123, 150);
+    TestStub_SetSnapshot(&s);
+    pumpModel(m);
+
+    const HemorflowState st = m.getHemorflowState();
+    CHECK(st.currentPressureMbar == 123);
+    CHECK(st.targetMbar == 150);
+    CHECK(st.running == true);
+}
+
+TEST_CASE("Hemorflow STOP returns to wait screen")
+{
+    TestStub_Reset();
+    Model m;
+    m.initializeHemorflowMonitor();
+
+    display_bridge_snapshot_t s = makeHemorflowSnapshot(2, 1, 100, 150);
+    TestStub_SetSnapshot(&s);
+    pumpModel(m);
+    CHECK_FALSE(m.shouldReturnToHemorflowWait());
+
+    s = makeHemorflowSnapshot(0, 0, 5, 150);
+    TestStub_SetSnapshot(&s);
+    pumpModel(m);
+    CHECK(m.shouldReturnToHemorflowWait());
+}

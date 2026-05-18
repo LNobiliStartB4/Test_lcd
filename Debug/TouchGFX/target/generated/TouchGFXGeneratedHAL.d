@@ -101,6 +101,12 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen7_screen/Screen7ViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp \
+ ../TouchGFX/gui/include/gui/screen8_screen/Screen8View.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen8_screen/Screen8ViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen8_screen/Screen8Presenter.hpp \
+ ../TouchGFX/gui/include/gui/screen9_screen/Screen9View.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen9_screen/Screen9ViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp \
@@ -238,6 +244,12 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen7_screen/Screen7ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp:
+../TouchGFX/gui/include/gui/screen8_screen/Screen8View.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen8_screen/Screen8ViewBase.hpp:
+../TouchGFX/gui/include/gui/screen8_screen/Screen8Presenter.hpp:
+../TouchGFX/gui/include/gui/screen9_screen/Screen9View.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen9_screen/Screen9ViewBase.hpp:
+../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp:

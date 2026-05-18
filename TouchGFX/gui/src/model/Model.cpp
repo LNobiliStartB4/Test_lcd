@@ -5,6 +5,7 @@
 namespace
 {
 const int32_t kDefaultTargetMbar = 490;
+const int32_t kDefaultHemorflowTargetMbar = 150;
 const int32_t kMinTargetMbar = 290;
 const int32_t kMaxTargetMbar = 490;
 const int32_t kMinVacuumMbar = 0;
@@ -17,10 +18,13 @@ const int32_t kSimulationStepMbar = 8;
 Model::Model()
     : modelListener(0),
       bandyState(),
+      hemorflowState(),
       tickDivider(0),
       bandyInitialized(false),
+      hemorflowInitialized(false),
       bridgeSnapshotValid(false),
       bridgeVacuumState(0),
+      bridgeActiveProduct(static_cast<uint8_t>(ActiveProductNone)),
       bridgeFault(0),
       bridgeRfidApproved(0),
       bridgeBandyState(0),
@@ -43,6 +47,11 @@ void Model::tick()
 
     tickDivider = 0;
     updateBridgeSnapshot();
+
+    if (hemorflowInitialized)
+    {
+        updateHemorflowFromInput();
+    }
 
     if (!bandyInitialized)
     {
@@ -155,6 +164,29 @@ bool Model::canOpenPauseScreen() const
     return bridgeSnapshotValid && (bridgeBandyState == static_cast<uint8_t>(BandySessionPaused));
 }
 
+void Model::initializeHemorflowMonitor()
+{
+    hemorflowState = HemorflowState();
+    hemorflowState.targetMbar = kDefaultHemorflowTargetMbar;
+    hemorflowInitialized = true;
+    tickDivider = 0;
+    updateHemorflowFromInput();
+}
+
+bool Model::canOpenHemorflowMonitor() const
+{
+    return bridgeSnapshotValid &&
+           (bridgeActiveProduct == static_cast<uint8_t>(ActiveProductHemorflow)) &&
+           (bridgeVacuumState != 0U);
+}
+
+bool Model::shouldReturnToHemorflowWait() const
+{
+    return hemorflowInitialized &&
+           bridgeSnapshotValid &&
+           (bridgeActiveProduct != static_cast<uint8_t>(ActiveProductHemorflow));
+}
+
 void Model::notifyBandyState()
 {
     if (modelListener != 0)
@@ -174,6 +206,7 @@ void Model::updateBridgeSnapshot()
 
     bridgeSnapshotValid = snapshot.valid;
     bridgeVacuumState = snapshot.vacuumState;
+    bridgeActiveProduct = snapshot.activeProduct;
     bridgeFault = snapshot.fault;
     bridgeRfidApproved = snapshot.rfidApproved;
     bridgeBandyState = snapshot.bandyState;
@@ -216,6 +249,20 @@ void Model::updateBandyFromInput()
     bandyState.targetReached =
         (bandyState.currentVacuumMbar >= (bandyState.targetVacuumMbar - 20)) &&
         (bandyState.currentVacuumMbar <= (bandyState.targetVacuumMbar + 20));
+}
+
+void Model::updateHemorflowFromInput()
+{
+    if (!bridgeSnapshotValid)
+    {
+        return;
+    }
+
+    hemorflowState.currentPressureMbar = clampVacuum(bridgePressureMbar);
+    hemorflowState.targetMbar = bridgeTargetMbar;
+    hemorflowState.running =
+        (bridgeActiveProduct == static_cast<uint8_t>(ActiveProductHemorflow)) &&
+        (bridgeVacuumState != 0U);
 }
 
 void Model::updateBandyDerivedState()

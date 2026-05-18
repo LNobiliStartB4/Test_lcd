@@ -6,7 +6,8 @@
 #include <texts/TextKeysAndLanguages.hpp>
 #include <images/BitmapDatabase.hpp>
 
-Screen4ViewBase::Screen4ViewBase()
+Screen4ViewBase::Screen4ViewBase() :
+    flexButtonCallback(this, &Screen4ViewBase::flexButtonCallbackHandler)
 {
     __background.setPosition(0, 0, 480, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -16,11 +17,24 @@ Screen4ViewBase::Screen4ViewBase()
     rfidBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(rfidBackground);
 
-    rfidAccent.setPosition(32, 28, 3, 28);
+    backButton.setBoxWithBorderPosition(0, 0, 0, 0);
+    backButton.setBorderSize(1);
+    backButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
+    backButton.setAction(flexButtonCallback);
+    backButton.setPosition(0, 0, 120, 72);
+    add(backButton);
+
+    backLabel.setPosition(22, 27, 76, 20);
+    backLabel.setColor(touchgfx::Color::getColorFromRGB(150, 148, 140));
+    backLabel.setLinespacing(0);
+    backLabel.setTypedText(touchgfx::TypedText(T_TEXT_BACK));
+    add(backLabel);
+
+    rfidAccent.setPosition(136, 28, 3, 28);
     rfidAccent.setColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
     add(rfidAccent);
 
-    rfidTitle.setPosition(44, 28, 320, 28);
+    rfidTitle.setPosition(148, 28, 304, 28);
     rfidTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     rfidTitle.setLinespacing(0);
     rfidTitle.setTypedText(touchgfx::TypedText(T_TEXT_BANDYTITLE));
@@ -58,4 +72,15 @@ Screen4ViewBase::~Screen4ViewBase()
 void Screen4ViewBase::setupScreen()
 {
 
+}
+
+void Screen4ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &backButton)
+    {
+        //backClicked
+        //When backButton clicked call virtual function
+        //Call backClicked
+        backClicked();
+    }
 }

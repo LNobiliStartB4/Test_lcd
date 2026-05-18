@@ -57,22 +57,29 @@ Screen2ViewBase::Screen2ViewBase() :
     bandyStatus.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTAVAILABLE));
     add(bandyStatus);
 
+    emerflowButton.setBoxWithBorderPosition(0, 0, 0, 0);
+    emerflowButton.setBorderSize(2);
+    emerflowButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(12, 18, 24), touchgfx::Color::getColorFromRGB(142, 164, 184), touchgfx::Color::getColorFromRGB(180, 204, 224));
+    emerflowButton.setAction(flexButtonCallback);
+    emerflowButton.setPosition(260, 118, 176, 112);
+    add(emerflowButton);
+
     emerflowCard.setPosition(260, 118, 176, 112);
     emerflowCard.setColor(touchgfx::Color::getColorFromRGB(7, 10, 15));
-    emerflowCard.setBorderColor(touchgfx::Color::getColorFromRGB(46, 54, 63));
+    emerflowCard.setBorderColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
     emerflowCard.setBorderSize(2);
     add(emerflowCard);
 
     emerflowName.setPosition(260, 150, 176, 30);
-    emerflowName.setColor(touchgfx::Color::getColorFromRGB(135, 142, 150));
+    emerflowName.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
     emerflowName.setLinespacing(0);
     emerflowName.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTEMERFLOW));
     add(emerflowName);
 
     emerflowStatus.setPosition(260, 185, 176, 18);
-    emerflowStatus.setColor(touchgfx::Color::getColorFromRGB(78, 88, 99));
+    emerflowStatus.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
     emerflowStatus.setLinespacing(0);
-    emerflowStatus.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTUNAVAILABLE));
+    emerflowStatus.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTAVAILABLE));
     add(emerflowStatus);
 }
 
@@ -94,5 +101,12 @@ void Screen2ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonCo
         //When bandyButton clicked call virtual function
         //Call bandySelected
         bandySelected();
+    }
+    if (&src == &emerflowButton)
+    {
+        //hemorflowSelected
+        //When emerflowButton clicked call virtual function
+        //Call hemorflowSelected
+        hemorflowSelected();
     }
 }

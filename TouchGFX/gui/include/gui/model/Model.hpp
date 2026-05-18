@@ -31,16 +31,25 @@ public:
     bool isRfidApproved() const;
     bool canOpenBandyScreen() const;
     bool canOpenPauseScreen() const;
+    void initializeHemorflowMonitor();
+    bool canOpenHemorflowMonitor() const;
+    bool shouldReturnToHemorflowWait() const;
 
     BandyState getBandyState() const
     {
         return bandyState;
     }
 
+    HemorflowState getHemorflowState() const
+    {
+        return hemorflowState;
+    }
+
 private:
     void notifyBandyState();
     void updateBridgeSnapshot();
     void updateBandyFromInput();
+    void updateHemorflowFromInput();
     void updateBandyDerivedState();
     void updateSimulatedVacuum();
     void requestBandyTarget(int32_t targetMbar);
@@ -50,10 +59,13 @@ private:
 
     ModelListener* modelListener;
     BandyState bandyState;
+    HemorflowState hemorflowState;
     uint8_t tickDivider;
     bool bandyInitialized;
+    bool hemorflowInitialized;
     bool bridgeSnapshotValid;
     uint8_t bridgeVacuumState;
+    uint8_t bridgeActiveProduct;
     uint8_t bridgeFault;
     uint8_t bridgeRfidApproved;
     uint8_t bridgeBandyState;

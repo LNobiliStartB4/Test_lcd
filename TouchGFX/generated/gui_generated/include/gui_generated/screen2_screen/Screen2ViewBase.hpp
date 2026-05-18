@@ -26,6 +26,10 @@ public:
     {
         // Override and implement this function in Screen2
     }
+    virtual void hemorflowSelected()
+    {
+        // Override and implement this function in Screen2
+    }
 
 protected:
     FrontendApplication& application() {
@@ -44,6 +48,7 @@ protected:
     touchgfx::BoxWithBorder bandyVisibleFrame;
     touchgfx::TextArea bandyName;
     touchgfx::TextArea bandyStatus;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  emerflowButton;
     touchgfx::BoxWithBorder emerflowCard;
     touchgfx::TextArea emerflowName;
     touchgfx::TextArea emerflowStatus;

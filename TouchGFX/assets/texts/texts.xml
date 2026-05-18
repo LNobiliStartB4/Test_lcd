@@ -170,6 +170,18 @@
       <Text Id="Text_ButtonEnd" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">End</Translation>
       </Text>
+      <Text Id="Text_HemorflowTitle" Alignment="Left" TypographyId="Title">
+        <Translation Language="GB">HEMORFLOW</Translation>
+      </Text>
+      <Text Id="Text_HemorflowWaitingPc" Alignment="Center" TypographyId="Status">
+        <Translation Language="GB">WAITING PC START</Translation>
+      </Text>
+      <Text Id="Text_HemorflowPcSubtitle" Alignment="Center" TypographyId="Caption">
+        <Translation Language="GB">Start Hemorflow from PC</Translation>
+      </Text>
+      <Text Id="Text_HemorflowStatusLabel" Alignment="Left" TypographyId="Caption">
+        <Translation Language="GB">STATUS</Translation>
+      </Text>
     </TextGroup>
   </Texts>
   <Typographies>
