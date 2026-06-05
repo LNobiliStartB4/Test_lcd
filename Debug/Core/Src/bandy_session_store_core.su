@@ -1,0 +1,7 @@
+../Core/Src/bandy_session_store_core.c:29:17:read_u32_le	0	static
+../Core/Src/bandy_session_store_core.c:37:10:BandySessionStoreCore_Crc16	12	static
+../Core/Src/bandy_session_store_core.c:65:35:BandySessionStoreCore_EncodeRecord	16	static
+../Core/Src/bandy_session_store_core.c:98:35:BandySessionStoreCore_DecodeRecord	16	static
+../Core/Src/bandy_session_store_core.c:147:6:BandySessionStoreCore_RecordFromSnapshot	0	static
+../Core/Src/bandy_session_store_core.c:168:6:BandySessionStoreCore_MakeInvalidRecord	8	static
+../Core/Src/bandy_session_store_core.c:181:30:BandySessionStoreCore_EvaluateSnapshot	8	static

@@ -54,6 +54,7 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 extern DMA_HandleTypeDef hdma_spi1_tx;
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -87,6 +88,8 @@ extern DMA_HandleTypeDef hdma_spi1_tx;
 #define LED2_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
+#define FRAM_CS_Pin GPIO_PIN_6
+#define FRAM_CS_GPIO_Port GPIOB
 
 /* USER CODE END Private defines */
 

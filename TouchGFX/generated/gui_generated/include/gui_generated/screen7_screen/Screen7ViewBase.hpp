@@ -9,10 +9,10 @@
 #include <gui/screen7_screen/Screen7Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
 
 class Screen7ViewBase : public touchgfx::View<Screen7Presenter>
 {
@@ -43,17 +43,11 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::BoxWithBorder outerBorder;
-    touchgfx::BoxWithBorder outerBorder_1;
-    touchgfx::BoxWithBorder outerBorder_1_1;
-    touchgfx::ScalableImage pillBg;
-    touchgfx::ScalableImage pillIcon;
-    touchgfx::TextArea pillText;
     touchgfx::TextArea titleText;
     touchgfx::TextArea subtitleText;
     touchgfx::Box timeBoxFill;
     touchgfx::TextArea timeLabel;
     touchgfx::TextAreaWithOneWildcard timeValue;
-    touchgfx::ScalableImage trashIcon;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  continueButton;
     touchgfx::ScalableImage continueArrow;
     touchgfx::TextArea continueLabel;

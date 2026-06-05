@@ -1,17 +1,8 @@
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:5:ModelListener::ModelListener()	16	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:ModelListener::~ModelListener()	16	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:virtual ModelListener::~ModelListener()	16	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	16	static
-../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp:27:13:Screen9Presenter::~Screen9Presenter()	16	static
-../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp:27:13:virtual Screen9Presenter::~Screen9Presenter()	16	static
-../TouchGFX/gui/include/gui/model/Model.hpp:43:20:HemorflowState Model::getHemorflowState() const	16	static
-../TouchGFX/gui/src/screen9_screen/Screen9Presenter.cpp:9:1:Screen9Presenter::Screen9Presenter(Screen9View&)	16	static
-../TouchGFX/gui/src/screen9_screen/Screen9Presenter.cpp:19:6:virtual void Screen9Presenter::activate()	16	static
-../TouchGFX/gui/src/screen9_screen/Screen9Presenter.cpp:27:6:virtual void Screen9Presenter::deactivate()	16	static
-../TouchGFX/gui/src/screen9_screen/Screen9Presenter.cpp:35:16:HemorflowState Screen9Presenter::getHemorflowState() const	16	static
-../TouchGFX/gui/src/screen9_screen/Screen9Presenter.cpp:45:6:bool Screen9Presenter::shouldReturnToHemorflowWait() const	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	0	static
+../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp:27:13:Screen9Presenter::~Screen9Presenter()	0	static
+../TouchGFX/gui/src/screen9_screen/Screen9Presenter.cpp:19:6:virtual void Screen9Presenter::activate()	0	static
+../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp:27:13:virtual Screen9Presenter::~Screen9Presenter()	8	static
+../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp:27:13:virtual void* Screen9Presenter::_ZThn4_N16Screen9PresenterD1Ev()	0	static
+../TouchGFX/gui/src/screen9_screen/Screen9Presenter.cpp:9:1:Screen9Presenter::Screen9Presenter(Screen9View&)	0	static
+../TouchGFX/gui/src/screen9_screen/Screen9Presenter.cpp:35:16:HemorflowState Screen9Presenter::getHemorflowState() const	0	static
+../TouchGFX/gui/src/screen9_screen/Screen9Presenter.cpp:45:6:bool Screen9Presenter::shouldReturnToHemorflowWait() const	0	static

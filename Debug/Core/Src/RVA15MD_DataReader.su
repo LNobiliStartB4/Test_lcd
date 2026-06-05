@@ -1,5 +1,5 @@
-../Core/Src/RVA15MD_DataReader.c:12:10:DataReader_IsReceivingData	4	static
-../Core/Src/RVA15MD_DataReader.c:17:6:DataReader_WaitForReceiveDone	4	static
-../Core/Src/RVA15MD_DataReader.c:22:6:DataReader_ReadData	24	static
-../Core/Src/RVA15MD_DataReader.c:30:6:DataReader_StartDMAReadData	24	static
-../Core/Src/RVA15MD_DataReader.c:38:6:DataReader_DMACallback	4	static
+../Core/Src/RVA15MD_DataReader.c:12:10:DataReader_IsReceivingData	0	static
+../Core/Src/RVA15MD_DataReader.c:17:6:DataReader_WaitForReceiveDone	0	static
+../Core/Src/RVA15MD_DataReader.c:22:6:DataReader_ReadData	0	static
+../Core/Src/RVA15MD_DataReader.c:30:6:DataReader_StartDMAReadData	0	static
+../Core/Src/RVA15MD_DataReader.c:38:6:DataReader_DMACallback	0	static

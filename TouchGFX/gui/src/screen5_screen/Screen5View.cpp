@@ -1,7 +1,19 @@
 #include <gui/screen5_screen/Screen5View.hpp>
 #include <touchgfx/Unicode.hpp>
 
+namespace
+{
+bool isCompletedBandyCycle(const BandyState& previousState, const BandyState& state)
+{
+    return (previousState.sessionState == BandySessionRunning) &&
+           (state.sessionState == BandySessionWaitRfid) &&
+           (state.remainingSeconds == 0U);
+}
+}
+
 Screen5View::Screen5View()
+    : latestState(),
+      screenTransitionRequested(false)
 {
 
 }
@@ -9,6 +21,7 @@ Screen5View::Screen5View()
 void Screen5View::setupScreen()
 {
     Screen5ViewBase::setupScreen();
+    screenTransitionRequested = false;
 
     if (presenter != 0)
     {
@@ -18,6 +31,7 @@ void Screen5View::setupScreen()
 
 void Screen5View::tearDownScreen()
 {
+    screenTransitionRequested = false;
     Screen5ViewBase::tearDownScreen();
 }
 
@@ -44,6 +58,16 @@ void Screen5View::increaseTargetClicked()
 
 void Screen5View::applyBandyState(const BandyState& state)
 {
+    const BandyState previousState = latestState;
+    latestState = state;
+
+    if (!screenTransitionRequested && isCompletedBandyCycle(previousState, state))
+    {
+        screenTransitionRequested = true;
+        application().gotoProductSelectScreenNoTransition();
+        return;
+    }
+
     touchgfx::Unicode::snprintf(setpointValueBuffer, SETPOINTVALUE_SIZE, "%d", static_cast<int>(state.targetVacuumMbar));
     setpointValue.invalidate();
 }

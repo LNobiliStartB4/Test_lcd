@@ -14,6 +14,7 @@ public:
     virtual void tearDownScreen();
     virtual void bandySelected();
     virtual void hemorflowSelected();
+    virtual void settingsClicked();
 };
 
 #endif // SCREEN2VIEW_HPP

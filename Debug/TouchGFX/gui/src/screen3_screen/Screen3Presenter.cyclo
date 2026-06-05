@@ -1,23 +1,13 @@
-../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:30:5:BandyState::BandyState()	1
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:5:ModelListener::ModelListener()	1
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:ModelListener::~ModelListener()	1
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:virtual ModelListener::~ModelListener()	1
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	1
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	1
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	1
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	1
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	1
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	1
 ../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:16:13:Screen3Presenter::~Screen3Presenter()	1
-../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:16:13:virtual Screen3Presenter::~Screen3Presenter()	1
-../TouchGFX/gui/include/gui/model/Model.hpp:38:16:BandyState Model::getBandyState() const	1
-../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:4:1:Screen3Presenter::Screen3Presenter(Screen3View&)	1
-../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:9:6:virtual void Screen3Presenter::activate()	2
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:18:6:virtual void Screen3Presenter::deactivate()	1
+../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:16:13:virtual Screen3Presenter::~Screen3Presenter()	1
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:22:6:virtual void Screen3Presenter::bandyStateUpdated(const BandyState&)	1
+../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:9:6:virtual void Screen3Presenter::activate()	2
+../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:16:13:virtual void* Screen3Presenter::_ZThn4_N16Screen3PresenterD1Ev()	1
+../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:4:1:Screen3Presenter::Screen3Presenter(Screen3View&)	1
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:27:12:BandyState Screen3Presenter::getBandyState() const	2
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:32:6:void Screen3Presenter::startDemo()	2
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:40:6:void Screen3Presenter::stopDemo()	2
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:48:6:void Screen3Presenter::increaseTarget()	2
 ../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:56:6:void Screen3Presenter::decreaseTarget()	2
-../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:64:6:bool Screen3Presenter::isVacuumCycleRunning() const	3
+../TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp:64:6:bool Screen3Presenter::isVacuumCycleRunning() const	2

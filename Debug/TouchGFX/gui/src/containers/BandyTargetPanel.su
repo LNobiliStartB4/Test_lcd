@@ -1,22 +1,19 @@
-../Middlewares/ST/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:73:13:int16_t touchgfx::ClickEvent::getX() const	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/events/ClickEvent.hpp:123:20:touchgfx::ClickEvent::ClickEventType touchgfx::ClickEvent::getType() const	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:368:18:virtual void touchgfx::Drawable::setHeight(int16_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:378:18:virtual void touchgfx::Drawable::childGeometryChanged()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:401:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:525:10:void touchgfx::Drawable::setTouchable(bool)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	16	static
-../TouchGFX/gui/include/gui/containers/BandyTargetPanel.hpp:13:13:BandyTargetPanel::~BandyTargetPanel()	16	static
-../TouchGFX/gui/include/gui/containers/BandyTargetPanel.hpp:13:13:virtual BandyTargetPanel::~BandyTargetPanel()	16	static
-../TouchGFX/gui/src/containers/BandyTargetPanel.cpp:10:1:BandyTargetPanel::BandyTargetPanel()	16	static
-../TouchGFX/gui/src/containers/BandyTargetPanel.cpp:16:6:virtual void BandyTargetPanel::initialize()	16	static
-../TouchGFX/gui/src/containers/BandyTargetPanel.cpp:24:6:virtual void BandyTargetPanel::handleClickEvent(const touchgfx::ClickEvent&)	16	static
-../TouchGFX/gui/src/containers/BandyTargetPanel.cpp:34:6:virtual void BandyTargetPanel::openSetpointClicked()	16	static
-../TouchGFX/gui/src/containers/BandyTargetPanel.cpp:42:6:void BandyTargetPanel::setTargetMbar(int32_t)	16	static
-../TouchGFX/gui/src/containers/BandyTargetPanel.cpp:48:6:void BandyTargetPanel::setOpenCallback(touchgfx::GenericCallback<void>&)	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:368:18:virtual void touchgfx::Drawable::setHeight(int16_t)	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:378:18:virtual void touchgfx::Drawable::childGeometryChanged()	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:401:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
+../TouchGFX/gui/include/gui/containers/BandyTargetPanel.hpp:13:13:BandyTargetPanel::~BandyTargetPanel()	8	static
+../TouchGFX/gui/include/gui/containers/BandyTargetPanel.hpp:13:13:virtual BandyTargetPanel::~BandyTargetPanel()	8	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
+../TouchGFX/gui/src/containers/BandyTargetPanel.cpp:24:6:virtual void BandyTargetPanel::handleClickEvent(const touchgfx::ClickEvent&)	0	static
+../TouchGFX/gui/src/containers/BandyTargetPanel.cpp:34:6:virtual void BandyTargetPanel::openSetpointClicked()	8	static
+../TouchGFX/gui/src/containers/BandyTargetPanel.cpp:10:1:BandyTargetPanel::BandyTargetPanel()	8	static
+../TouchGFX/gui/src/containers/BandyTargetPanel.cpp:42:6:void BandyTargetPanel::setTargetMbar(int32_t)	8	static
+../TouchGFX/gui/src/containers/BandyTargetPanel.cpp:48:6:void BandyTargetPanel::setOpenCallback(touchgfx::GenericCallback<void>&)	0	static
+../TouchGFX/gui/src/containers/BandyTargetPanel.cpp:16:6:virtual void BandyTargetPanel::initialize()	8	static

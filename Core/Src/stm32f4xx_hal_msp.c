@@ -287,7 +287,11 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* hspi)
   */
 void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
 {
-  if(htim_base->Instance==TIM11)
+  if(htim_base->Instance==TIM1)
+  {
+    __HAL_RCC_TIM1_CLK_ENABLE();
+  }
+  else if(htim_base->Instance==TIM11)
   {
     /* USER CODE BEGIN TIM11_MspInit 0 */
 
@@ -305,6 +309,23 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
 
 }
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+  if(htim->Instance==TIM1)
+  {
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+
+    GPIO_InitStruct.Pin = LCD_BACKLIGHT_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct.Alternate = GPIO_AF1_TIM1;
+    HAL_GPIO_Init(LCD_BACKLIGHT_GPIO_Port, &GPIO_InitStruct);
+  }
+}
+
 /**
   * @brief TIM_Base MSP De-Initialization
   * This function freeze the hardware resources used in this example
@@ -313,7 +334,12 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
   */
 void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
 {
-  if(htim_base->Instance==TIM11)
+  if(htim_base->Instance==TIM1)
+  {
+    __HAL_RCC_TIM1_CLK_DISABLE();
+    HAL_GPIO_DeInit(LCD_BACKLIGHT_GPIO_Port, LCD_BACKLIGHT_Pin);
+  }
+  else if(htim_base->Instance==TIM11)
   {
     /* USER CODE BEGIN TIM11_MspDeInit 0 */
 

@@ -23,6 +23,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "RVA15MD_DisplayDriver.h"
+#include "bandy_session_store.h"
+#include "display_backlight.h"
 #include "display_bridge_rx.h"
 /* USER CODE END Includes */
 
@@ -48,6 +50,8 @@ I2C_HandleTypeDef hi2c1;
 
 SPI_HandleTypeDef hspi1;
 
+TIM_HandleTypeDef htim1;
+
 TIM_HandleTypeDef htim11;
 
 UART_HandleTypeDef huart2;
@@ -62,6 +66,7 @@ static void MX_GPIO_Init(void);
 static void MX_CRC_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_SPI1_Init(void);
+static void MX_TIM1_Init(void);
 static void MX_TIM11_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
@@ -105,10 +110,13 @@ int main(void)
   MX_CRC_Init();
   MX_I2C1_Init();
   MX_SPI1_Init();
+  BandySessionStore_Init();
+  MX_TIM1_Init();
   MX_TIM11_Init();
   MX_USART2_UART_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
+  DisplayBacklight_Init(&htim1, TIM_CHANNEL_1);
 
   /* Display init sequence: Reset → Init → DisplayInit → DisplayOn */
   DisplayDriver_DisplayReset();
@@ -272,13 +280,82 @@ static void MX_SPI1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN SPI1_Init 2 */
-  /* Override prescaler to /16 = 5.25MHz (safe for breadboard wiring) */
+  /* Override prescaler to /16 = 5.25MHz for the display SPI bus. */
   __HAL_SPI_DISABLE(&hspi1);
   MODIFY_REG(hspi1.Instance->CR1, SPI_CR1_BR_Msk, SPI_BAUDRATEPRESCALER_16);
   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
   __HAL_SPI_ENABLE(&hspi1);
   /* USER CODE END SPI1_Init 2 */
 
+}
+
+/**
+  * @brief TIM1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM1_Init(void)
+{
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+  TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
+
+  htim1.Instance = TIM1;
+  htim1.Init.Prescaler = 0;
+  htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim1.Init.Period = 4199;
+  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim1.Init.RepetitionCounter = 0;
+  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
+  if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim1, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  if (HAL_TIM_PWM_Init(&htim1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 4199;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
+  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
+  if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
+  sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
+  sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
+  sBreakDeadTimeConfig.DeadTime = 0;
+  sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
+  sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
+  sBreakDeadTimeConfig.AutomaticOutput = TIM_AUTOMATICOUTPUT_DISABLE;
+  if (HAL_TIMEx_ConfigBreakDeadTime(&htim1, &sBreakDeadTimeConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  HAL_TIM_MspPostInit(&htim1);
 }
 
 /**
@@ -439,6 +516,14 @@ static void MX_GPIO_Init(void)
   /* USER CODE BEGIN MX_GPIO_Init_2 */
   /* Deselect display (CS idle = HIGH) */
   HAL_GPIO_WritePin(DISP_CS_GPIO_Port, DISP_CS_Pin, GPIO_PIN_SET);
+
+  /* Deselect FRAM on Arduino D10/PB6 (CS idle = HIGH). */
+  GPIO_InitStruct.Pin = FRAM_CS_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  HAL_GPIO_Init(FRAM_CS_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_WritePin(FRAM_CS_GPIO_Port, FRAM_CS_Pin, GPIO_PIN_SET);
   /* USER CODE END MX_GPIO_Init_2 */
 }
 

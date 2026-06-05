@@ -16,6 +16,12 @@
 #include <gui/screen8_screen/Screen8View.hpp>
 #include <gui/screen9_screen/Screen9Presenter.hpp>
 #include <gui/screen9_screen/Screen9View.hpp>
+#include <gui/screen10_screen/Screen10Presenter.hpp>
+#include <gui/screen10_screen/Screen10View.hpp>
+#include <gui/screen11_screen/Screen11Presenter.hpp>
+#include <gui/screen11_screen/Screen11View.hpp>
+#include <gui/screen12_screen/Screen12Presenter.hpp>
+#include <gui/screen12_screen/Screen12View.hpp>
 #include <touchgfx/transitions/NoTransition.hpp>
 
 FrontendApplication::FrontendApplication(Model& m, FrontendHeap& heap)
@@ -71,6 +77,24 @@ void FrontendApplication::gotoHemorflowScreenNoTransition()
     pendingScreenTransitionCallback = &hemorflowTransitionCallback;
 }
 
+void FrontendApplication::gotoSettingsScreenNoTransition()
+{
+    settingsTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoSettingsScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &settingsTransitionCallback;
+}
+
+void FrontendApplication::gotoBrightnessScreenNoTransition()
+{
+    brightnessTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoBrightnessScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &brightnessTransitionCallback;
+}
+
+void FrontendApplication::gotoLanguageScreenNoTransition()
+{
+    languageTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoLanguageScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &languageTransitionCallback;
+}
+
 void FrontendApplication::gotoProductSelectScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<Screen2View, Screen2Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
@@ -109,4 +133,19 @@ void FrontendApplication::gotoHemorflowWaitScreenNoTransitionImpl()
 void FrontendApplication::gotoHemorflowScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<Screen9View, Screen9Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplication::gotoSettingsScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen10View, Screen10Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplication::gotoBrightnessScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen11View, Screen11Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplication::gotoLanguageScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen12View, Screen12Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

@@ -10,10 +10,9 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <gui/containers/BandyVacuumPanel.hpp>
 #include <gui/containers/BandyTimePanel.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
 
 class Screen3ViewBase : public touchgfx::View<Screen3Presenter>
 {
@@ -47,13 +46,11 @@ protected:
     BandyVacuumPanel vacuumPanel;
     BandyTimePanel timePanel;
     touchgfx::Box lowerDivider;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setTargetButton;
     touchgfx::TextArea screen3TargetLabel;
     touchgfx::TextAreaWithOneWildcard screen3TargetValue;
     touchgfx::TextArea screen3TargetMbarLabel;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setTargetButton;
-    touchgfx::TextArea setTargetButtonLabel;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  screen3StartButton;
-    touchgfx::ScalableImage screen3StartIcon;
     touchgfx::TextArea screen3StartLabel;
 
     /*

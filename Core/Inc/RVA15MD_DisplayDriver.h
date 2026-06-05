@@ -1,6 +1,8 @@
 #ifndef __DISPLAY_H
 #define __DISPLAY_H
 
+#include <stdint.h>
+
 /**
   ******************************************************************************
   * @file           : main.h
@@ -22,6 +24,10 @@
 
 #ifdef __cplusplus
 extern "C" {
+#endif
+
+#ifndef DISPLAY_ROTATE_180
+#define DISPLAY_ROTATE_180 1U
 #endif
 
 void     touchgfxDisplayDriverTransmitBlock(const uint8_t* pixels, uint16_t x, uint16_t y, uint16_t w, uint16_t h);

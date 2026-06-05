@@ -20,6 +20,9 @@ RM := rm -rf
 -include TouchGFX/gui/src/screen3_screen/subdir.mk
 -include TouchGFX/gui/src/screen2_screen/subdir.mk
 -include TouchGFX/gui/src/screen1_screen/subdir.mk
+-include TouchGFX/gui/src/screen12_screen/subdir.mk
+-include TouchGFX/gui/src/screen11_screen/subdir.mk
+-include TouchGFX/gui/src/screen10_screen/subdir.mk
 -include TouchGFX/gui/src/model/subdir.mk
 -include TouchGFX/gui/src/containers/subdir.mk
 -include TouchGFX/gui/src/common/subdir.mk
@@ -34,9 +37,14 @@ RM := rm -rf
 -include TouchGFX/generated/gui_generated/src/screen3_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen2_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen1_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/screen12_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/screen11_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/screen10_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/containers/subdir.mk
 -include TouchGFX/generated/gui_generated/src/common/subdir.mk
 -include TouchGFX/generated/fonts/src/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen9_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen8_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen7_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen6_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen5_screen/subdir.mk
@@ -44,6 +52,8 @@ RM := rm -rf
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen3_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen2_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen1_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen12_screen/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen11_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/containers/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/common/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen5_screen/subdir.mk

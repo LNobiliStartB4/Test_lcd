@@ -8,7 +8,9 @@
 
 enum SVGImages
 {
-    NUMBER_OF_SVG_IMAGES = 0
+    SVG_OGO_ID = 0,
+    SVG_SETTINGS_ID = 1,
+    NUMBER_OF_SVG_IMAGES = 2
 };
 
 namespace SVGDatabase

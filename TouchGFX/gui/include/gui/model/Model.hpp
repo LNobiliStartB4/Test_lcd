@@ -45,6 +45,23 @@ public:
         return hemorflowState;
     }
 
+    UiLanguage getUiLanguage() const
+    {
+        return uiLanguage;
+    }
+
+    void setUiLanguage(UiLanguage language)
+    {
+        uiLanguage = language;
+    }
+
+    uint8_t getDisplayBrightnessPercent() const
+    {
+        return displayBrightnessPercent;
+    }
+
+    void setDisplayBrightnessPercent(uint8_t percent);
+
 private:
     void notifyBandyState();
     void updateBridgeSnapshot();
@@ -52,6 +69,7 @@ private:
     void updateHemorflowFromInput();
     void updateBandyDerivedState();
     void updateSimulatedVacuum();
+    void publishBandyStoreTelemetry();
     void requestBandyTarget(int32_t targetMbar);
     int32_t clampTarget(int32_t requestedTarget) const;
     int32_t clampVacuum(int32_t measuredVacuum) const;
@@ -60,7 +78,10 @@ private:
     ModelListener* modelListener;
     BandyState bandyState;
     HemorflowState hemorflowState;
+    UiLanguage uiLanguage;
+    uint8_t displayBrightnessPercent;
     uint8_t tickDivider;
+    uint8_t storeTelemetryDivider;
     bool bandyInitialized;
     bool hemorflowInitialized;
     bool bridgeSnapshotValid;
@@ -72,6 +93,8 @@ private:
     uint16_t bridgeDurationMinutes;
     uint16_t bridgeRemainingSeconds;
     uint16_t bridgePauseRemainingSeconds;
+    uint8_t bridgePausesUsed;
+    uint8_t bridgePausesMax;
     int32_t bridgeTargetMbar;
     int32_t bridgePressureMbar;
     bool targetCommandPending;

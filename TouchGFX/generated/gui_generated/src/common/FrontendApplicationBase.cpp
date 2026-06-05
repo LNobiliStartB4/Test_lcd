@@ -27,6 +27,12 @@
 #include <gui/screen8_screen/Screen8Presenter.hpp>
 #include <gui/screen9_screen/Screen9View.hpp>
 #include <gui/screen9_screen/Screen9Presenter.hpp>
+#include <gui/screen10_screen/Screen10View.hpp>
+#include <gui/screen10_screen/Screen10Presenter.hpp>
+#include <gui/screen11_screen/Screen11View.hpp>
+#include <gui/screen11_screen/Screen11Presenter.hpp>
+#include <gui/screen12_screen/Screen12View.hpp>
+#include <gui/screen12_screen/Screen12Presenter.hpp>
 
 using namespace touchgfx;
 

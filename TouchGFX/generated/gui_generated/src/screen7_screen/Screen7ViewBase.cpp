@@ -3,8 +3,8 @@
 /*********************************************************************************/
 #include <gui_generated/screen7_screen/Screen7ViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
 Screen7ViewBase::Screen7ViewBase() :
     flexButtonCallback(this, &Screen7ViewBase::flexButtonCallbackHandler)
@@ -19,34 +19,6 @@ Screen7ViewBase::Screen7ViewBase() :
     outerBorder.setBorderSize(2);
     add(outerBorder);
 
-    outerBorder_1.setPosition(278, 243, 178, 57);
-    outerBorder_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    outerBorder_1.setBorderColor(touchgfx::Color::getColorFromRGB(212, 23, 23));
-    outerBorder_1.setBorderSize(2);
-    add(outerBorder_1);
-
-    outerBorder_1_1.setPosition(27, 243, 178, 57);
-    outerBorder_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    outerBorder_1_1.setBorderColor(touchgfx::Color::getColorFromRGB(240, 237, 237));
-    outerBorder_1_1.setBorderSize(1);
-    add(outerBorder_1_1);
-
-    pillBg.setBitmap(touchgfx::Bitmap(BITMAP_PILL_RED_ID));
-    pillBg.setPosition(140, 20, 200, 22);
-    pillBg.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(pillBg);
-
-    pillIcon.setBitmap(touchgfx::Bitmap(BITMAP_ALERT_TRIANGLE_WHITE_ID));
-    pillIcon.setPosition(150, 23, 16, 16);
-    pillIcon.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(pillIcon);
-
-    pillText.setPosition(170, 22, 168, 18);
-    pillText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    pillText.setLinespacing(0);
-    pillText.setTypedText(touchgfx::TypedText(T_TEXT_PILLIRREVERSIBLE));
-    add(pillText);
-
     titleText.setPosition(16, 52, 448, 34);
     titleText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     titleText.setLinespacing(0);
@@ -59,17 +31,17 @@ Screen7ViewBase::Screen7ViewBase() :
     subtitleText.setTypedText(touchgfx::TypedText(T_TEXT_ENDSESSIONSUBTITLE));
     add(subtitleText);
 
-    timeBoxFill.setPosition(16, 140, 448, 60);
-    timeBoxFill.setColor(touchgfx::Color::getColorFromRGB(27, 9, 9));
+    timeBoxFill.setPosition(16, 140, 448, 69);
+    timeBoxFill.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(timeBoxFill);
 
-    timeLabel.setPosition(38, 170, 240, 14);
+    timeLabel.setPosition(96, 171, 240, 25);
     timeLabel.setColor(touchgfx::Color::getColorFromRGB(247, 193, 193));
     timeLabel.setLinespacing(0);
     timeLabel.setTypedText(touchgfx::TypedText(T_TEXT_TIMEYOULLLOSE));
     add(timeLabel);
 
-    timeValue.setPosition(166, 159, 240, 36);
+    timeValue.setPosition(198, 160, 240, 36);
     timeValue.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     timeValue.setLinespacing(0);
     Unicode::snprintf(timeValueBuffer, TIMEVALUE_SIZE, "%s", touchgfx::TypedText(T_BUFFER_TIMEREMAINING).getText());
@@ -77,16 +49,11 @@ Screen7ViewBase::Screen7ViewBase() :
     timeValue.setTypedText(touchgfx::TypedText(T_VALUE_TIMEREMAINING));
     add(timeValue);
 
-    trashIcon.setBitmap(touchgfx::Bitmap(BITMAP_TRASH_RED_ID));
-    trashIcon.setPosition(428, 158, 24, 24);
-    trashIcon.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(trashIcon);
-
     continueButton.setBoxWithBorderPosition(0, 0, 0, 0);
-    continueButton.setBorderSize(2);
-    continueButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(221, 221, 221), touchgfx::Color::getColorFromRGB(255, 255, 255), touchgfx::Color::getColorFromRGB(255, 255, 255));
+    continueButton.setBorderSize(0);
+    continueButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
     continueButton.setAction(flexButtonCallback);
-    continueButton.setPosition(27, 243, 178, 57);
+    continueButton.setPosition(16, 240, 200, 60);
     add(continueButton);
 
     continueArrow.setBitmap(touchgfx::Bitmap(BITMAP_ARROW_LEFT_WHITE_ID));
@@ -104,7 +71,7 @@ Screen7ViewBase::Screen7ViewBase() :
     endButton.setBorderSize(2);
     endButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(64, 24, 24), touchgfx::Color::getColorFromRGB(226, 75, 74), touchgfx::Color::getColorFromRGB(226, 75, 74));
     endButton.setAction(flexButtonCallback);
-    endButton.setPosition(294, 240, 176, 60);
+    endButton.setPosition(288, 240, 176, 60);
     add(endButton);
 
     endLabel.setPosition(278, 260, 174, 36);

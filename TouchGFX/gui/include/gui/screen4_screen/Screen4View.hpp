@@ -16,6 +16,9 @@ public:
 protected:
 private:
     bool transitionRequested;
+    uint8_t waitingPulseAlpha;
+    int8_t waitingPulseStep;
+    uint8_t waitingPulseTickDivider;
 };
 
 #endif // SCREEN4VIEW_HPP

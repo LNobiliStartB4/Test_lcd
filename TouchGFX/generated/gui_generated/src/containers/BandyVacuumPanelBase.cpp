@@ -7,8 +7,8 @@
 
 BandyVacuumPanelBase::BandyVacuumPanelBase()
 {
-    setWidth(440);
-    setHeight(140);
+    setWidth(451);
+    setHeight(154);
     vacuumLabel.setPosition(42, 70, 356, 20);
     vacuumLabel.setColor(touchgfx::Color::getColorFromRGB(196, 192, 184));
     vacuumLabel.setLinespacing(0);
@@ -33,13 +33,13 @@ BandyVacuumPanelBase::BandyVacuumPanelBase()
     vacuumFill.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     add(vacuumFill);
 
-    scaleZeroLabel.setPosition(20, 116, 60, 15);
+    scaleZeroLabel.setPosition(20, 116, 64, 21);
     scaleZeroLabel.setColor(touchgfx::Color::getColorFromRGB(104, 126, 146));
     scaleZeroLabel.setLinespacing(0);
     scaleZeroLabel.setTypedText(touchgfx::TypedText(T_TEXT_ZEROSCALE));
     add(scaleZeroLabel);
 
-    scaleMaxLabel.setPosition(360, 116, 60, 13);
+    scaleMaxLabel.setPosition(360, 116, 67, 21);
     scaleMaxLabel.setColor(touchgfx::Color::getColorFromRGB(104, 126, 146));
     scaleMaxLabel.setLinespacing(0);
     scaleMaxLabel.setTypedText(touchgfx::TypedText(T_TEXT_MAXSCALE));

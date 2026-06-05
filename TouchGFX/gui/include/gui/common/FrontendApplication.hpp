@@ -21,6 +21,9 @@ public:
     void gotoEndConfirmScreenNoTransition();
     void gotoHemorflowWaitScreenNoTransition();
     void gotoHemorflowScreenNoTransition();
+    void gotoSettingsScreenNoTransition();
+    void gotoBrightnessScreenNoTransition();
+    void gotoLanguageScreenNoTransition();
 
     virtual void handleTickEvent()
     {
@@ -37,6 +40,9 @@ private:
     void gotoEndConfirmScreenNoTransitionImpl();
     void gotoHemorflowWaitScreenNoTransitionImpl();
     void gotoHemorflowScreenNoTransitionImpl();
+    void gotoSettingsScreenNoTransitionImpl();
+    void gotoBrightnessScreenNoTransitionImpl();
+    void gotoLanguageScreenNoTransitionImpl();
 
     touchgfx::Callback<FrontendApplication> productSelectTransitionCallback;
     touchgfx::Callback<FrontendApplication> rfidWaitTransitionCallback;
@@ -46,6 +52,9 @@ private:
     touchgfx::Callback<FrontendApplication> endConfirmTransitionCallback;
     touchgfx::Callback<FrontendApplication> hemorflowWaitTransitionCallback;
     touchgfx::Callback<FrontendApplication> hemorflowTransitionCallback;
+    touchgfx::Callback<FrontendApplication> settingsTransitionCallback;
+    touchgfx::Callback<FrontendApplication> brightnessTransitionCallback;
+    touchgfx::Callback<FrontendApplication> languageTransitionCallback;
 };
 
 #endif // FRONTENDAPPLICATION_HPP

@@ -4,7 +4,6 @@
 #include <gui_generated/screen3_screen/Screen3ViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include <images/BitmapDatabase.hpp>
 
 Screen3ViewBase::Screen3ViewBase() :
     flexButtonCallback(this, &Screen3ViewBase::flexButtonCallbackHandler)
@@ -17,7 +16,7 @@ Screen3ViewBase::Screen3ViewBase() :
     bandyBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(bandyBackground);
 
-    vacuumPanel.setXY(20, 16);
+    vacuumPanel.setXY(20, 9);
     add(vacuumPanel);
 
     timePanel.setXY(150, 158);
@@ -27,7 +26,14 @@ Screen3ViewBase::Screen3ViewBase() :
     lowerDivider.setColor(touchgfx::Color::getColorFromRGB(64, 64, 58));
     add(lowerDivider);
 
-    screen3TargetLabel.setPosition(30, 258, 92, 14);
+    setTargetButton.setBoxWithBorderPosition(0, 0, 0, 0);
+    setTargetButton.setBorderSize(0);
+    setTargetButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
+    setTargetButton.setAction(flexButtonCallback);
+    setTargetButton.setPosition(20, 248, 156, 70);
+    add(setTargetButton);
+
+    screen3TargetLabel.setPosition(30, 251, 92, 21);
     screen3TargetLabel.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
     screen3TargetLabel.setLinespacing(0);
     screen3TargetLabel.setTypedText(touchgfx::TypedText(T_TEXT_TARGETLABEL));
@@ -47,32 +53,14 @@ Screen3ViewBase::Screen3ViewBase() :
     screen3TargetMbarLabel.setTypedText(touchgfx::TypedText(T_TEXT_MBAR));
     add(screen3TargetMbarLabel);
 
-    setTargetButton.setBoxWithBorderPosition(0, 0, 0, 0);
-    setTargetButton.setBorderSize(3);
-    setTargetButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
-    setTargetButton.setAction(flexButtonCallback);
-    setTargetButton.setPosition(176, 248, 164, 62);
-    add(setTargetButton);
-
-    setTargetButtonLabel.setPosition(176, 267, 164, 24);
-    setTargetButtonLabel.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
-    setTargetButtonLabel.setLinespacing(0);
-    setTargetButtonLabel.setTypedText(touchgfx::TypedText(T_TEXT_SETTARGETBUTTON));
-    add(setTargetButtonLabel);
-
     screen3StartButton.setBoxWithBorderPosition(0, 0, 0, 0);
     screen3StartButton.setBorderSize(3);
     screen3StartButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     screen3StartButton.setAction(flexButtonCallback);
-    screen3StartButton.setPosition(348, 240, 132, 78);
+    screen3StartButton.setPosition(262, 248, 206, 70);
     add(screen3StartButton);
 
-    screen3StartIcon.setBitmap(touchgfx::Bitmap(BITMAP_START_PLAY_ICON_WHITE_ID));
-    screen3StartIcon.setPosition(363, 261, 18, 18);
-    screen3StartIcon.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(screen3StartIcon);
-
-    screen3StartLabel.setPosition(388, 267, 72, 35);
+    screen3StartLabel.setPosition(278, 267, 127, 33);
     screen3StartLabel.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
     screen3StartLabel.setLinespacing(0);
     screen3StartLabel.setTypedText(touchgfx::TypedText(T_TEXT_START));

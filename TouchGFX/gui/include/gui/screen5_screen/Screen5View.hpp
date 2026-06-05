@@ -18,6 +18,10 @@ public:
     virtual void increaseTargetClicked();
 
     void applyBandyState(const BandyState& state);
+
+private:
+    BandyState latestState;
+    bool screenTransitionRequested;
 };
 
 #endif // SCREEN5VIEW_HPP

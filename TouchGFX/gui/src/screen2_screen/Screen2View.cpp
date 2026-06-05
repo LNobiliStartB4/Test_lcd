@@ -25,3 +25,8 @@ void Screen2View::hemorflowSelected()
 {
     application().gotoHemorflowWaitScreenNoTransition();
 }
+
+void Screen2View::settingsClicked()
+{
+    application().gotoSettingsScreenNoTransition();
+}

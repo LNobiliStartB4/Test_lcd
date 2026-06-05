@@ -2,198 +2,314 @@
 <TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.26.0">
   <Languages>
     <Language Id="GB" />
+    <Language Id="IT" />
   </Languages>
   <Texts>
     <TextGroup Id="Dashboard">
       <Text Id="Text_SplashTitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">THD</Translation>
+        <Translation Language="IT">THD</Translation>
       </Text>
       <Text Id="Text_SplashSubtitle" Alignment="Center" TypographyId="Subtitle">
-        <Translation Language="GB">PRESSURE STABILIZER</Translation>
+        <Translation Language="GB">PRESSURE STABILISER</Translation>
+        <Translation Language="IT">PRESSURE STABILISER</Translation>
       </Text>
       <Text Id="Text_SplashInitializing" Alignment="Center" TypographyId="Subtitle">
         <Translation Language="GB">Initializing the system...</Translation>
+        <Translation Language="IT">Avvio sistema...</Translation>
       </Text>
       <Text Id="Text_ProductTitle" Alignment="Left" TypographyId="Title">
-        <Translation Language="GB">SELECT PRODUCT</Translation>
+        <Translation Language="GB">SELECT APP</Translation>
+        <Translation Language="IT">SELEZIONA APP</Translation>
       </Text>
       <Text Id="Text_ProductSubtitle" Alignment="Left" TypographyId="Subtitle">
         <Translation Language="GB">Choose the connected prototype</Translation>
+        <Translation Language="IT">Scegli prototipo collegato</Translation>
+      </Text>
+      <Text Id="Text_Settings" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">SETTINGS</Translation>
+        <Translation Language="IT">IMPOSTAZIONI</Translation>
+      </Text>
+      <Text Id="Text_SettingsTitle" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">SETTINGS</Translation>
+        <Translation Language="IT">IMPOSTAZIONI</Translation>
+      </Text>
+      <Text Id="Text_SettingsSubtitle" Alignment="Center" TypographyId="Subtitle">
+        <Translation Language="GB">Choose an option</Translation>
+        <Translation Language="IT">Scegli un'opzione</Translation>
+      </Text>
+      <Text Id="Text_Brightness" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">BRIGHTNESS</Translation>
+        <Translation Language="IT">LUMINOSITA</Translation>
+      </Text>
+      <Text Id="Text_BrightnessSubtitle" Alignment="Center" TypographyId="Subtitle">
+        <Translation Language="GB">Adjust display brightness</Translation>
+        <Translation Language="IT">Regola luminosita display</Translation>
+      </Text>
+      <Text Id="Text_BrightnessHint" Alignment="Center" TypographyId="Caption">
+        <Translation Language="GB">Drag the slider to adjust</Translation>
+        <Translation Language="IT">Trascina la barra per regolare</Translation>
+      </Text>
+      <Text Id="Text_BrightnessPercent" Alignment="Center" TypographyId="Hero">
+        <Translation Language="GB">&lt;&gt;%</Translation>
+        <Translation Language="IT">&lt;&gt;%</Translation>
+      </Text>
+      <Text Id="Buffer_BrightnessPercent" Alignment="Center" TypographyId="Hero">
+        <Translation Language="GB">100</Translation>
+        <Translation Language="IT">100</Translation>
+      </Text>
+      <Text Id="Text_BrightnessMin" Alignment="Left" TypographyId="Caption">
+        <Translation Language="GB">10%</Translation>
+        <Translation Language="IT">10%</Translation>
+      </Text>
+      <Text Id="Text_BrightnessMax" Alignment="Right" TypographyId="Caption">
+        <Translation Language="GB">100%</Translation>
+        <Translation Language="IT">100%</Translation>
+      </Text>
+      <Text Id="Text_LanguageTitle" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">LANGUAGE</Translation>
+        <Translation Language="IT">LINGUA</Translation>
+      </Text>
+      <Text Id="Text_LanguageSubtitle" Alignment="Center" TypographyId="Subtitle">
+        <Translation Language="GB">Choose display language</Translation>
+        <Translation Language="IT">Scegli lingua display</Translation>
+      </Text>
+      <Text Id="Text_English" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">ENGLISH</Translation>
+        <Translation Language="IT">ENGLISH</Translation>
+      </Text>
+      <Text Id="Text_Italian" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">ITALIANO</Translation>
+        <Translation Language="IT">ITALIANO</Translation>
       </Text>
       <Text Id="Text_ProductBandy" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">BANDY</Translation>
+        <Translation Language="IT">BANDY</Translation>
       </Text>
       <Text Id="Text_ProductBandyDesc" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">Vacuum control prototype</Translation>
+        <Translation Language="IT">Prototipo controllo vuoto</Translation>
       </Text>
       <Text Id="Text_ProductAvailable" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">AVAILABLE</Translation>
+        <Translation Language="IT">DISPONIBILE</Translation>
       </Text>
       <Text Id="Text_ProductEmerflow" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">HEMORFLOW</Translation>
+        <Translation Language="IT">HEMORFLOW</Translation>
       </Text>
       <Text Id="Text_ProductEmerflowDesc" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">Not implemented on this PCB</Translation>
+        <Translation Language="IT">Non implementato su questa PCB</Translation>
       </Text>
       <Text Id="Text_ProductUnavailable" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">NOT AVAILABLE</Translation>
+        <Translation Language="IT">NON DISPONIBILE</Translation>
       </Text>
       <Text Id="Text_ProductHint" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">Touch BANDY to open the vacuum monitor</Translation>
+        <Translation Language="IT">Tocca BANDY per aprire monitor vuoto</Translation>
       </Text>
       <Text Id="Text_Back" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">BACK</Translation>
+        <Translation Language="IT">INDIETRO</Translation>
       </Text>
       <Text Id="Text_BandyTitle" Alignment="Left" TypographyId="Title">
         <Translation Language="GB">BANDY VACUUM</Translation>
+        <Translation Language="IT">VUOTO BANDY</Translation>
       </Text>
       <Text Id="Text_VacuumLabel" Alignment="Left" TypographyId="Caption">
-        <Translation Language="GB">MBAR · CURRENT VACUUM</Translation>
+        <Translation Language="GB">MBAR - CURRENT VACUUM</Translation>
+        <Translation Language="IT">MBAR - VUOTO ATTUALE</Translation>
       </Text>
       <Text Id="Text_TargetLabel" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">TARGET</Translation>
+        <Translation Language="IT">TARGET</Translation>
       </Text>
       <Text Id="Text_SetpointTitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">SETPOINT</Translation>
+        <Translation Language="IT">SETPOINT</Translation>
       </Text>
       <Text Id="Text_SetpointMinus" Alignment="Center" TypographyId="Hero">
         <Translation Language="GB">-</Translation>
+        <Translation Language="IT">-</Translation>
       </Text>
       <Text Id="Text_SetpointPlus" Alignment="Center" TypographyId="Hero">
         <Translation Language="GB">+</Translation>
+        <Translation Language="IT">+</Translation>
       </Text>
       <Text Id="Text_SetTargetButton" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">SET TARGET</Translation>
+        <Translation Language="IT">IMPOSTA TARGET</Translation>
       </Text>
       <Text Id="Text_Mbar" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">mbar</Translation>
+        <Translation Language="IT">mbar</Translation>
       </Text>
       <Text Id="Text_ZeroScale" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">0</Translation>
+        <Translation Language="IT">0</Translation>
       </Text>
       <Text Id="Text_MaxScale" Alignment="Right" TypographyId="Caption">
         <Translation Language="GB">500</Translation>
+        <Translation Language="IT">500</Translation>
       </Text>
       <Text Id="Text_Minus" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">-</Translation>
+        <Translation Language="IT">-</Translation>
       </Text>
       <Text Id="Text_Plus" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">+</Translation>
+        <Translation Language="IT">+</Translation>
       </Text>
       <Text Id="Text_Start" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">START</Translation>
+        <Translation Language="IT">START</Translation>
       </Text>
       <Text Id="Text_Stop" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">STOP</Translation>
+        <Translation Language="IT">STOP</Translation>
       </Text>
       <Text Id="Text_Pause" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">PAUSE</Translation>
+        <Translation Language="IT">PAUSA</Translation>
       </Text>
       <Text Id="Text_Resume" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">RESUME</Translation>
+        <Translation Language="IT">RIPRENDI</Translation>
       </Text>
       <Text Id="Text_End" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">END</Translation>
+        <Translation Language="IT">FINE</Translation>
       </Text>
       <Text Id="Text_No" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">NO</Translation>
+        <Translation Language="IT">NO</Translation>
       </Text>
       <Text Id="Text_Yes" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">YES</Translation>
+        <Translation Language="IT">SI</Translation>
       </Text>
       <Text Id="Text_EndConfirmTitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">END SESSION?</Translation>
+        <Translation Language="IT">TERMINARE?</Translation>
       </Text>
       <Text Id="Text_EndConfirmSubtitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">Remaining time will be lost</Translation>
+        <Translation Language="IT">Tempo residuo perso</Translation>
       </Text>
       <Text Id="Text_EndConfirmWarning" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">CONFIRM END</Translation>
+        <Translation Language="IT">CONFERMA FINE</Translation>
       </Text>
       <Text Id="Text_PauseTitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">PAUSED</Translation>
+        <Translation Language="IT">IN PAUSA</Translation>
       </Text>
       <Text Id="Text_PauseSubtitle" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">Resume before pause time expires</Translation>
+        <Translation Language="IT">Riprendi prima della fine pausa</Translation>
       </Text>
       <Text Id="Text_PauseRemaining" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">PAUSE TIME</Translation>
+        <Translation Language="IT">TEMPO PAUSA</Translation>
       </Text>
       <Text Id="Text_RfidInsertCard" Alignment="Center" TypographyId="Status">
         <Translation Language="GB">INSERT RFID CARD</Translation>
+        <Translation Language="IT">INSERIRE CARD RFID</Translation>
       </Text>
       <Text Id="Text_RfidWaiting" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">WAITING RFID</Translation>
+        <Translation Language="IT">ATTESA RFID</Translation>
       </Text>
       <Text Id="Text_TimeLeft" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">TIME LEFT</Translation>
+        <Translation Language="IT">TEMPO RESIDUO</Translation>
       </Text>
       <Text Id="Value_TimeRemaining" Alignment="Center" TypographyId="TimeValue">
         <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="IT">&lt;&gt;</Translation>
       </Text>
       <Text Id="Buffer_TimeRemaining" Alignment="Center" TypographyId="TimeValue">
         <Translation Language="GB">00:00</Translation>
+        <Translation Language="IT">00:00</Translation>
       </Text>
       <Text Id="Value_Hero" Alignment="Center" TypographyId="Hero">
         <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="IT">&lt;&gt;</Translation>
       </Text>
       <Text Id="Buffer_Hero" Alignment="Center" TypographyId="Hero">
         <Translation Language="GB">0</Translation>
+        <Translation Language="IT">0</Translation>
       </Text>
       <Text Id="Value_Metric" Alignment="Left" TypographyId="Metric">
         <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="IT">&lt;&gt;</Translation>
       </Text>
       <Text Id="Buffer_Metric" Alignment="Left" TypographyId="Metric">
         <Translation Language="GB">450</Translation>
+        <Translation Language="IT">450</Translation>
       </Text>
       <Text Id="Value_Status" Alignment="Center" TypographyId="Status">
         <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="IT">&lt;&gt;</Translation>
       </Text>
       <Text Id="Buffer_Status" Alignment="Center" TypographyId="Status">
         <Translation Language="GB">READY</Translation>
+        <Translation Language="IT">PRONTO</Translation>
       </Text>
       <Text Id="Text_PillIrreversible" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">IRREVERSIBLE ACTION</Translation>
+        <Translation Language="IT">AZIONE IRREVERSIBILE</Translation>
       </Text>
       <Text Id="Text_EndSessionQuestion" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">End session?</Translation>
+        <Translation Language="IT">Terminare sessione?</Translation>
       </Text>
       <Text Id="Text_EndSessionSubtitle" Alignment="Center" TypographyId="Subtitle">
         <Translation Language="GB">Remaining time will be lost</Translation>
+        <Translation Language="IT">Il tempo residuo andra perso</Translation>
       </Text>
       <Text Id="Text_TimeYoullLose" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">TIME YOU'LL LOSE</Translation>
+        <Translation Language="IT">TEMPO PERSO</Translation>
       </Text>
       <Text Id="Text_ButtonContinue" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">Continue</Translation>
+        <Translation Language="IT">Continua</Translation>
       </Text>
       <Text Id="Text_ButtonEnd" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">End</Translation>
+        <Translation Language="IT">Termina</Translation>
       </Text>
       <Text Id="Text_HemorflowTitle" Alignment="Left" TypographyId="Title">
         <Translation Language="GB">HEMORFLOW</Translation>
+        <Translation Language="IT">HEMORFLOW</Translation>
       </Text>
       <Text Id="Text_HemorflowWaitingPc" Alignment="Center" TypographyId="Status">
         <Translation Language="GB">WAITING PC START</Translation>
+        <Translation Language="IT">ATTESA START PC</Translation>
       </Text>
       <Text Id="Text_HemorflowPcSubtitle" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">Start Hemorflow from PC</Translation>
+        <Translation Language="IT">Avvia Hemorflow da PC</Translation>
       </Text>
       <Text Id="Text_HemorflowStatusLabel" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">STATUS</Translation>
+        <Translation Language="IT">STATO</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Title" Font="verdana.ttf" Size="24" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Subtitle" Font="verdana.ttf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Body" Font="verdana.ttf" Size="16" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Caption" Font="verdana.ttf" Size="13" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x41-0x5A" />
-    <Typography Id="Step" Font="verdana.ttf" Size="11" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Button" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2B-0x2D,0x30-0x39,0x41-0x5A" />
-    <Typography Id="Status" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x3A,0x41-0x5A" />
-    <Typography Id="TimeValue" Font="verdana.ttf" Size="32" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x30-0x39,0x3A" />
-    <Typography Id="Metric" Font="verdana.ttf" Size="34" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
-    <Typography Id="Hero" Font="verdana.ttf" Size="54" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
+    <Typography Id="Title" Font="verdana.ttf" Size="24" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Subtitle" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Body" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Caption" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x41-0x5A" />
+    <Typography Id="Step" Font="verdana.ttf" Size="11" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Button" Font="verdana.ttf" Size="15" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2B-0x2D,0x30-0x39,0x41-0x5A" />
+    <Typography Id="Status" Font="verdana.ttf" Size="17" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x3A,0x41-0x5A" />
+    <Typography Id="TimeValue" Font="verdana.ttf" Size="32" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x30-0x39,0x3A" />
+    <Typography Id="Metric" Font="verdana.ttf" Size="34" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
+    <Typography Id="Hero" Font="verdana.ttf" Size="54" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
   </Typographies>
 </TextDatabase>

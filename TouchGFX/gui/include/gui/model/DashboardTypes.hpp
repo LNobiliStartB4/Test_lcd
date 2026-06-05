@@ -10,6 +10,12 @@ enum ActiveProduct
     ActiveProductHemorflow = 2
 };
 
+enum UiLanguage
+{
+    UiLanguageEnglish = 0,
+    UiLanguageItalian = 1
+};
+
 enum BandyVacuumState
 {
     BandyVacuumStateReady = 0,

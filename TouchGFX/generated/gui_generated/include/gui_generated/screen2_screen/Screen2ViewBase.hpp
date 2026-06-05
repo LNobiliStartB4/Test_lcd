@@ -10,7 +10,8 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
 {
@@ -30,6 +31,10 @@ public:
     {
         // Override and implement this function in Screen2
     }
+    virtual void settingsClicked()
+    {
+        // Override and implement this function in Screen2
+    }
 
 protected:
     FrontendApplication& application() {
@@ -43,17 +48,37 @@ protected:
     touchgfx::Box productBackground;
     touchgfx::Box productAccent;
     touchgfx::TextArea productTitle;
-    touchgfx::TextArea productSubtitle;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  settingsButton;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  bandyButton;
-    touchgfx::BoxWithBorder bandyVisibleFrame;
-    touchgfx::TextArea bandyName;
-    touchgfx::TextArea bandyStatus;
+    touchgfx::Box bandyFrameTop;
+    touchgfx::Box bandyFrameBottom;
+    touchgfx::Box bandyFrameLeft;
+    touchgfx::Box bandyFrameRight;
+    touchgfx::ScalableImage bandyFrameTopLeft;
+    touchgfx::ScalableImage bandyFrameTopRight;
+    touchgfx::ScalableImage bandyFrameBottomLeft;
+    touchgfx::ScalableImage bandyFrameBottomRight;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  emerflowButton;
-    touchgfx::BoxWithBorder emerflowCard;
-    touchgfx::TextArea emerflowName;
-    touchgfx::TextArea emerflowStatus;
+    touchgfx::Box emerflowFrameTop;
+    touchgfx::Box emerflowFrameBottom;
+    touchgfx::Box emerflowFrameLeft;
+    touchgfx::Box emerflowFrameRight;
+    touchgfx::ScalableImage emerflowFrameTopLeft;
+    touchgfx::ScalableImage emerflowFrameTopRight;
+    touchgfx::ScalableImage emerflowFrameBottomLeft;
+    touchgfx::ScalableImage emerflowFrameBottomRight;
+    touchgfx::ScalableImage emerflowLogo;
+    touchgfx::SVGImage svgImage1;
+    touchgfx::SVGImage svgImage2;
+    touchgfx::SVGImage svgImage3;
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

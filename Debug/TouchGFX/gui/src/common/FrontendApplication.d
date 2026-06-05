@@ -80,6 +80,7 @@ TouchGFX/gui/src/common/FrontendApplication.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
  ../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen4_screen/Screen4ViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp \
@@ -104,7 +105,17 @@ TouchGFX/gui/src/common/FrontendApplication.o: \
  ../TouchGFX/gui/include/gui/screen8_screen/Screen8Presenter.hpp \
  ../TouchGFX/gui/include/gui/screen9_screen/Screen9View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen9_screen/Screen9ViewBase.hpp \
- ../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp
+ ../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp \
+ ../TouchGFX/gui/include/gui/screen10_screen/Screen10View.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen10_screen/Screen10ViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen10_screen/Screen10Presenter.hpp \
+ ../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen11_screen/Screen11ViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
+ ../TouchGFX/gui/include/gui/screen12_screen/Screen12View.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen12_screen/Screen12ViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen12_screen/Screen12Presenter.hpp
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
@@ -185,6 +196,7 @@ TouchGFX/gui/src/common/FrontendApplication.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
 ../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen4_screen/Screen4ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp:
@@ -210,3 +222,13 @@ TouchGFX/gui/src/common/FrontendApplication.o: \
 ../TouchGFX/gui/include/gui/screen9_screen/Screen9View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen9_screen/Screen9ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp:
+../TouchGFX/gui/include/gui/screen10_screen/Screen10View.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen10_screen/Screen10ViewBase.hpp:
+../TouchGFX/gui/include/gui/screen10_screen/Screen10Presenter.hpp:
+../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen11_screen/Screen11ViewBase.hpp:
+../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
+../TouchGFX/gui/include/gui/screen12_screen/Screen12View.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen12_screen/Screen12ViewBase.hpp:
+../TouchGFX/gui/include/gui/screen12_screen/Screen12Presenter.hpp:

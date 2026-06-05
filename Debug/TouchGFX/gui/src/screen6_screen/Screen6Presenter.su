@@ -1,20 +1,10 @@
-../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:30:5:BandyState::BandyState()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	16	static
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	16	static
-../TouchGFX/gui/include/gui/model/Model.hpp:38:16:BandyState Model::getBandyState() const	16	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:5:ModelListener::ModelListener()	16	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:ModelListener::~ModelListener()	16	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:virtual ModelListener::~ModelListener()	16	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	16	static
-../TouchGFX/gui/include/gui/screen6_screen/Screen6Presenter.hpp:34:13:Screen6Presenter::~Screen6Presenter()	16	static
-../TouchGFX/gui/include/gui/screen6_screen/Screen6Presenter.hpp:34:13:virtual Screen6Presenter::~Screen6Presenter()	16	static
-../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:4:1:Screen6Presenter::Screen6Presenter(Screen6View&)	16	static
-../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:10:6:virtual void Screen6Presenter::activate()	40	static
-../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:19:6:virtual void Screen6Presenter::deactivate()	16	static
-../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:24:6:virtual void Screen6Presenter::bandyStateUpdated(const BandyState&)	16	static
-../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:29:12:BandyState Screen6Presenter::getBandyState() const	16	static
-../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:34:6:void Screen6Presenter::resumeDemo()	16	static
-../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:42:6:void Screen6Presenter::endDemo()	16	static
+../TouchGFX/gui/include/gui/screen6_screen/Screen6Presenter.hpp:34:13:Screen6Presenter::~Screen6Presenter()	0	static
+../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:19:6:virtual void Screen6Presenter::deactivate()	0	static
+../TouchGFX/gui/include/gui/screen6_screen/Screen6Presenter.hpp:34:13:virtual Screen6Presenter::~Screen6Presenter()	8	static
+../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:24:6:virtual void Screen6Presenter::bandyStateUpdated(const BandyState&)	0	static
+../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:10:6:virtual void Screen6Presenter::activate()	32	static
+../TouchGFX/gui/include/gui/screen6_screen/Screen6Presenter.hpp:34:13:virtual void* Screen6Presenter::_ZThn4_N16Screen6PresenterD1Ev()	0	static
+../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:4:1:Screen6Presenter::Screen6Presenter(Screen6View&)	0	static
+../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:29:12:BandyState Screen6Presenter::getBandyState() const	8	static
+../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:34:6:void Screen6Presenter::resumeDemo()	0	static
+../TouchGFX/gui/src/screen6_screen/Screen6Presenter.cpp:42:6:void Screen6Presenter::endDemo()	0	static

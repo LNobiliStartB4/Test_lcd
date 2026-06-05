@@ -20,6 +20,12 @@ extern SPI_HandleTypeDef hspi1;
 
 volatile uint8_t isTransmittingBlock = 0;
 
+enum
+{
+    DISPLAY_ADDRESS_MODE_LANDSCAPE = 0x28,
+    DISPLAY_ADDRESS_MODE_LANDSCAPE_180 = 0xE8
+};
+
 /* RGB666 conversion buffer: 320 * 20 lines * 3 bytes = 19200 bytes */
 static uint8_t rgb666_buf[19200];
 
@@ -130,8 +136,12 @@ void DisplayDriver_DisplayInit(void)
     /* Pixel format: 18-bit (RGB666) for SPI interface */
     DisplaySendCommandData(DCS_SET_PIXEL_FORMAT, 0x66);
 
-    /* Memory access control: landscape mapping validated during display bring-up */
-    DisplaySendCommandData(DCS_SET_ADDRESS_MODE, 0x28);
+    /* Memory access control: keep TouchGFX landscape, optionally rotate panel 180 degrees. */
+#if DISPLAY_ROTATE_180
+    DisplaySendCommandData(DCS_SET_ADDRESS_MODE, DISPLAY_ADDRESS_MODE_LANDSCAPE_180);
+#else
+    DisplaySendCommandData(DCS_SET_ADDRESS_MODE, DISPLAY_ADDRESS_MODE_LANDSCAPE);
+#endif
 
     /* ILI9488 requires invert mode ON for correct colors */
     DisplaySendCommand(DCS_ENTER_INVERT_MODE);

@@ -42,7 +42,7 @@ Screen8ViewBase::Screen8ViewBase() :
 
     hemorflowWaitCard.setPosition(86, 82, 308, 178);
     hemorflowWaitCard.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    hemorflowWaitCard.setBorderColor(touchgfx::Color::getColorFromRGB(54, 86, 116));
+    hemorflowWaitCard.setBorderColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     hemorflowWaitCard.setBorderSize(2);
     add(hemorflowWaitCard);
 

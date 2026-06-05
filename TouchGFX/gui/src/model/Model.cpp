@@ -1,6 +1,10 @@
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
+#include "bandy_session_store.h"
 #include "display_bridge_rx.h"
+#ifndef WIN32
+#include "display_backlight.h"
+#endif
 
 namespace
 {
@@ -12,14 +16,20 @@ const int32_t kMinVacuumMbar = 0;
 const int32_t kMaxVacuumMbar = 500;
 const int32_t kTargetStepMbar = 10;
 const uint8_t kTickDividerLimit = 6; // 60 Hz / 6 = 10 Hz UI updates
+const uint8_t kStoreTelemetryDividerLimit = 10; // 10 Hz / 10 = 1 Hz FRAM diagnostic
 const int32_t kSimulationStepMbar = 8;
+const uint8_t kMinBrightnessPercent = 10U;
+const uint8_t kMaxBrightnessPercent = 100U;
 }
 
 Model::Model()
     : modelListener(0),
       bandyState(),
       hemorflowState(),
+      uiLanguage(UiLanguageEnglish),
+      displayBrightnessPercent(kMaxBrightnessPercent),
       tickDivider(0),
+      storeTelemetryDivider(0),
       bandyInitialized(false),
       hemorflowInitialized(false),
       bridgeSnapshotValid(false),
@@ -31,11 +41,31 @@ Model::Model()
       bridgeDurationMinutes(15),
       bridgeRemainingSeconds(0),
       bridgePauseRemainingSeconds(0),
+      bridgePausesUsed(0),
+      bridgePausesMax(3),
       bridgeTargetMbar(kDefaultTargetMbar),
       bridgePressureMbar(0),
       targetCommandPending(false),
       pendingTargetMbar(kDefaultTargetMbar)
 {
+}
+
+void Model::setDisplayBrightnessPercent(uint8_t percent)
+{
+    if (percent < kMinBrightnessPercent)
+    {
+        percent = kMinBrightnessPercent;
+    }
+    else if (percent > kMaxBrightnessPercent)
+    {
+        percent = kMaxBrightnessPercent;
+    }
+
+    displayBrightnessPercent = percent;
+
+#ifndef WIN32
+    DisplayBacklight_SetPercent(displayBrightnessPercent);
+#endif
 }
 
 void Model::tick()
@@ -47,6 +77,7 @@ void Model::tick()
 
     tickDivider = 0;
     updateBridgeSnapshot();
+    publishBandyStoreTelemetry();
 
     if (hemorflowInitialized)
     {
@@ -213,13 +244,49 @@ void Model::updateBridgeSnapshot()
     bridgeDurationMinutes = snapshot.durationMinutes;
     bridgeRemainingSeconds = snapshot.remainingSeconds;
     bridgePauseRemainingSeconds = snapshot.pauseRemainingSeconds;
+    bridgePausesUsed = snapshot.pausesUsed;
+    bridgePausesMax = snapshot.pausesMax;
     bridgeTargetMbar = snapshot.targetMbar;
     bridgePressureMbar = snapshot.pressureMbar;
+
+    bandy_session_store_snapshot_t storeSnapshot;
+    storeSnapshot.valid = snapshot.valid;
+    storeSnapshot.bandy_state = snapshot.bandyState;
+    storeSnapshot.remaining_seconds = snapshot.remainingSeconds;
+    storeSnapshot.duration_minutes = snapshot.durationMinutes;
+    storeSnapshot.pause_remaining_seconds = snapshot.pauseRemainingSeconds;
+    storeSnapshot.pauses_used = snapshot.pausesUsed;
+    storeSnapshot.pauses_max = snapshot.pausesMax;
+    storeSnapshot.target_mbar = snapshot.targetMbar;
+    (void)BandySessionStore_ProcessSnapshot(&storeSnapshot);
 
     if (targetCommandPending && (clampTarget(bridgeTargetMbar) == pendingTargetMbar))
     {
         targetCommandPending = false;
     }
+}
+
+void Model::publishBandyStoreTelemetry()
+{
+    if (++storeTelemetryDivider < kStoreTelemetryDividerLimit)
+    {
+        return;
+    }
+
+    storeTelemetryDivider = 0;
+
+    bandy_session_store_record_t record = {};
+    const bandy_session_store_status_t status = BandySessionStore_Read(&record);
+    const bool recordValid = (status == BANDY_SESSION_STORE_OK) && record.valid;
+
+    (void)DisplayBridgeRx_SendFramStatus(static_cast<int32_t>(status),
+                                         recordValid,
+                                         recordValid ? record.remaining_seconds : 0U,
+                                         recordValid ? record.duration_minutes : 0U,
+                                         recordValid ? record.bandy_state : 0U,
+                                         recordValid ? record.pauses_used : 0U,
+                                         recordValid ? record.pauses_max : 0U,
+                                         record.sequence);
 }
 
 void Model::updateBandyFromInput()

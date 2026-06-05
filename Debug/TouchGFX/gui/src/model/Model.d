@@ -2,6 +2,7 @@ TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
  ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
+ ../Core/Inc/bandy_session_store.h ../Core/Inc/bandy_session_store_core.h \
  ../Core/Inc/display_bridge_rx.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
@@ -34,10 +35,13 @@ TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
+ ../Core/Inc/display_backlight.h
 ../TouchGFX/gui/include/gui/model/Model.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
+../Core/Inc/bandy_session_store.h:
+../Core/Inc/bandy_session_store_core.h:
 ../Core/Inc/display_bridge_rx.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -71,3 +75,4 @@ TouchGFX/gui/src/model/Model.o: ../TouchGFX/gui/src/model/Model.cpp \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
+../Core/Inc/display_backlight.h:

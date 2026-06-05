@@ -1,0 +1,11 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+../TouchGFX/gui/src/screen10_screen/Screen10View.cpp:12:6:virtual void Screen10View::tearDownScreen()	0	static
+../TouchGFX/gui/src/screen10_screen/Screen10View.cpp:17:6:virtual void Screen10View::backClicked()	8	static
+../TouchGFX/gui/src/screen10_screen/Screen10View.cpp:22:6:virtual void Screen10View::languageClicked()	8	static
+../TouchGFX/gui/src/screen10_screen/Screen10View.cpp:27:6:virtual void Screen10View::brightnessClicked()	8	static
+../TouchGFX/gui/include/gui/screen10_screen/Screen10View.hpp:11:13:Screen10View::~Screen10View()	8	static
+../TouchGFX/gui/include/gui/screen10_screen/Screen10View.hpp:11:13:virtual Screen10View::~Screen10View()	8	static
+../TouchGFX/gui/src/screen10_screen/Screen10View.cpp:3:1:Screen10View::Screen10View()	8	static
+../TouchGFX/gui/src/screen10_screen/Screen10View.cpp:7:6:virtual void Screen10View::setupScreen()	0	static

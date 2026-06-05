@@ -46,6 +46,8 @@ TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/containers \
 TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen5_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/common \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/containers \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screen11_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screen12_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen1_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen2_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen3_screen \
@@ -53,9 +55,14 @@ TouchGFX/build/MINGW32_NT-6.2/gui/src/screen4_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen5_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen6_screen \
 TouchGFX/build/MINGW32_NT-6.2/gui/src/screen7_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screen8_screen \
+TouchGFX/build/MINGW32_NT-6.2/gui/src/screen9_screen \
 TouchGFX/generated/fonts/src \
 TouchGFX/generated/gui_generated/src/common \
 TouchGFX/generated/gui_generated/src/containers \
+TouchGFX/generated/gui_generated/src/screen10_screen \
+TouchGFX/generated/gui_generated/src/screen11_screen \
+TouchGFX/generated/gui_generated/src/screen12_screen \
 TouchGFX/generated/gui_generated/src/screen1_screen \
 TouchGFX/generated/gui_generated/src/screen2_screen \
 TouchGFX/generated/gui_generated/src/screen3_screen \
@@ -70,6 +77,9 @@ TouchGFX/generated/texts/src \
 TouchGFX/gui/src/common \
 TouchGFX/gui/src/containers \
 TouchGFX/gui/src/model \
+TouchGFX/gui/src/screen10_screen \
+TouchGFX/gui/src/screen11_screen \
+TouchGFX/gui/src/screen12_screen \
 TouchGFX/gui/src/screen1_screen \
 TouchGFX/gui/src/screen2_screen \
 TouchGFX/gui/src/screen3_screen \

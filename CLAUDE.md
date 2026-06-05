@@ -21,7 +21,7 @@ Any hardware change in `main.c` (timers, GPIO, peripherals) **must also be appli
 
 ## Architecture Overview
 
-**Stack:** TouchGFX 4.26.0 · Partial Framebuffer Strategy · 240×240 RGB565 · Bare metal (no FreeRTOS)
+**Stack:** TouchGFX 4.26.0 · Partial Framebuffer Strategy · 320×480 RGB565 · Bare metal (no FreeRTOS)
 
 **MCU:** STM32F401RE @ 84 MHz (HSI → PLL: PLLM=16, PLLN=336, PLLP=4)
 

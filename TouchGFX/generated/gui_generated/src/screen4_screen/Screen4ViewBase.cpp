@@ -57,7 +57,7 @@ Screen4ViewBase::Screen4ViewBase() :
     rfidInstruction.setTypedText(touchgfx::TypedText(T_TEXT_RFIDINSERTCARD));
     add(rfidInstruction);
 
-    rfidStatus.setPosition(86, 222, 308, 18);
+    rfidStatus.setPosition(86, 221, 308, 18);
     rfidStatus.setColor(touchgfx::Color::getColorFromRGB(124, 137, 148));
     rfidStatus.setLinespacing(0);
     rfidStatus.setTypedText(touchgfx::TypedText(T_TEXT_RFIDWAITING));
