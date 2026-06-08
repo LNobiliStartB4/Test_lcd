@@ -17,141 +17,94 @@ Screen2ViewBase::Screen2ViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    productBackground.setPosition(3, 0, 480, 320);
+    productBackground.setPosition(0, 6, 480, 320);
     productBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(productBackground);
 
-    productAccent.setPosition(32, 28, 3, 28);
-    productAccent.setColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
-    add(productAccent);
-
-    productTitle.setPosition(48, 28, 320, 28);
+    productTitle.setPosition(24, 22, 280, 28);
     productTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     productTitle.setLinespacing(0);
     productTitle.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTTITLE));
     add(productTitle);
 
     settingsButton.setBoxWithBorderPosition(0, 0, 0, 0);
-    settingsButton.setBorderSize(1);
-    settingsButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
+    settingsButton.setBorderSize(0);
+    settingsButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
     settingsButton.setAction(flexButtonCallback);
-    settingsButton.setPosition(368, 20, 100, 52);
+    settingsButton.setPosition(356, 4, 56, 56);
     add(settingsButton);
 
     bandyButton.setBoxWithBorderPosition(0, 0, 0, 0);
     bandyButton.setBorderSize(0);
-    bandyButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 218, 142), touchgfx::Color::getColorFromRGB(255, 232, 166));
+    bandyButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
     bandyButton.setAction(flexButtonCallback);
-    bandyButton.setPosition(12, 108, 225, 156);
+    bandyButton.setPosition(24, 96, 432, 82);
     add(bandyButton);
 
-    bandyFrameTop.setPosition(23, 108, 203, 2);
-    bandyFrameTop.setColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
-    add(bandyFrameTop);
+    bandyRowAccent.setPosition(24, 119, 4, 58);
+    bandyRowAccent.setColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
+    add(bandyRowAccent);
 
-    bandyFrameBottom.setPosition(23, 262, 203, 2);
-    bandyFrameBottom.setColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
-    add(bandyFrameBottom);
-
-    bandyFrameLeft.setPosition(12, 119, 2, 134);
-    bandyFrameLeft.setColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
-    add(bandyFrameLeft);
-
-    bandyFrameRight.setPosition(235, 119, 2, 134);
-    bandyFrameRight.setColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
-    add(bandyFrameRight);
-
-    bandyFrameTopLeft.setBitmap(touchgfx::Bitmap(BITMAP_SCREEN2_BANDY_CORNER_TL_ID));
-    bandyFrameTopLeft.setPosition(12, 108, 12, 12);
-    bandyFrameTopLeft.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(bandyFrameTopLeft);
-
-    bandyFrameTopRight.setBitmap(touchgfx::Bitmap(BITMAP_SCREEN2_BANDY_CORNER_TR_ID));
-    bandyFrameTopRight.setPosition(225, 108, 12, 12);
-    bandyFrameTopRight.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(bandyFrameTopRight);
-
-    bandyFrameBottomLeft.setBitmap(touchgfx::Bitmap(BITMAP_SCREEN2_BANDY_CORNER_BL_ID));
-    bandyFrameBottomLeft.setPosition(12, 252, 12, 12);
-    bandyFrameBottomLeft.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(bandyFrameBottomLeft);
-
-    bandyFrameBottomRight.setBitmap(touchgfx::Bitmap(BITMAP_SCREEN2_BANDY_CORNER_BR_ID));
-    bandyFrameBottomRight.setPosition(225, 252, 12, 12);
-    bandyFrameBottomRight.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(bandyFrameBottomRight);
+    bandyRowDivider.setPosition(40, 177, 400, 1);
+    bandyRowDivider.setColor(touchgfx::Color::getColorFromRGB(46, 54, 63));
+    add(bandyRowDivider);
 
     emerflowButton.setBoxWithBorderPosition(0, 0, 0, 0);
     emerflowButton.setBorderSize(0);
-    emerflowButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(12, 18, 24), touchgfx::Color::getColorFromRGB(142, 164, 184), touchgfx::Color::getColorFromRGB(180, 204, 224));
+    emerflowButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
     emerflowButton.setAction(flexButtonCallback);
-    emerflowButton.setPosition(244, 108, 225, 156);
+    emerflowButton.setPosition(24, 190, 432, 82);
     add(emerflowButton);
 
-    emerflowFrameTop.setPosition(254, 108, 203, 2);
-    emerflowFrameTop.setColor(touchgfx::Color::getColorFromRGB(86, 104, 116));
-    add(emerflowFrameTop);
+    emerflowRowAccent.setPosition(24, 213, 4, 58);
+    emerflowRowAccent.setColor(touchgfx::Color::getColorFromRGB(86, 104, 116));
+    add(emerflowRowAccent);
 
-    emerflowFrameBottom.setPosition(254, 262, 203, 2);
-    emerflowFrameBottom.setColor(touchgfx::Color::getColorFromRGB(86, 104, 116));
-    add(emerflowFrameBottom);
-
-    emerflowFrameLeft.setPosition(243, 119, 2, 134);
-    emerflowFrameLeft.setColor(touchgfx::Color::getColorFromRGB(86, 104, 116));
-    add(emerflowFrameLeft);
-
-    emerflowFrameRight.setPosition(466, 119, 2, 134);
-    emerflowFrameRight.setColor(touchgfx::Color::getColorFromRGB(86, 104, 116));
-    add(emerflowFrameRight);
-
-    emerflowFrameTopLeft.setBitmap(touchgfx::Bitmap(BITMAP_SCREEN2_HEMORFLOW_CORNER_TL_ID));
-    emerflowFrameTopLeft.setPosition(243, 108, 12, 12);
-    emerflowFrameTopLeft.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(emerflowFrameTopLeft);
-
-    emerflowFrameTopRight.setBitmap(touchgfx::Bitmap(BITMAP_SCREEN2_HEMORFLOW_CORNER_TR_ID));
-    emerflowFrameTopRight.setPosition(456, 108, 12, 12);
-    emerflowFrameTopRight.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(emerflowFrameTopRight);
-
-    emerflowFrameBottomLeft.setBitmap(touchgfx::Bitmap(BITMAP_SCREEN2_HEMORFLOW_CORNER_BL_ID));
-    emerflowFrameBottomLeft.setPosition(243, 252, 12, 12);
-    emerflowFrameBottomLeft.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(emerflowFrameBottomLeft);
-
-    emerflowFrameBottomRight.setBitmap(touchgfx::Bitmap(BITMAP_SCREEN2_HEMORFLOW_CORNER_BR_ID));
-    emerflowFrameBottomRight.setPosition(456, 252, 12, 12);
-    emerflowFrameBottomRight.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(emerflowFrameBottomRight);
+    emerflowRowDivider.setPosition(40, 271, 400, 1);
+    emerflowRowDivider.setColor(touchgfx::Color::getColorFromRGB(46, 54, 63));
+    add(emerflowRowDivider);
 
     emerflowLogo.setBitmap(touchgfx::Bitmap(BITMAP_THD_HEMORFLOW_LOGO_ID));
-    emerflowLogo.setPosition(266, 167, 190, 58);
+    emerflowLogo.setPosition(72, 213, 199, 55);
     emerflowLogo.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
     add(emerflowLogo);
 
-    svgImage1.setSVG(SVG_SETTINGS_ID);
-    svgImage1.setPosition(306, -92, 19, 15);
-    svgImage1.setScale(0.68f, 0.54f);
-    svgImage1.setImagePosition(0, 0);
-    svgImage1.setRotationCenter(0, 0);
-    svgImage1.setRotation(0.0f);
-    add(svgImage1);
+    thdCornerLogo.setBitmap(touchgfx::Bitmap(BITMAP_THD_CORNER_LOGO_ID));
+    thdCornerLogo.setPosition(428, 14, 36, 36);
+    thdCornerLogo.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    add(thdCornerLogo);
 
-    svgImage2.setSVG(SVG_SETTINGS_ID);
-    svgImage2.setPosition(412, 25, 34, 34);
-    svgImage2.setScale(1.21f, 1.21f);
-    svgImage2.setImagePosition(0, 0);
-    svgImage2.setRotationCenter(0, 0);
-    svgImage2.setRotation(0.0f);
-    add(svgImage2);
+    settingsIcon.setSVG(SVG_SETTINGS_ID);
+    settingsIcon.setPosition(370, 18, 28, 28);
+    settingsIcon.setScale(1.0f, 1.0f);
+    settingsIcon.setImagePosition(0, 0);
+    settingsIcon.setRotationCenter(0, 0);
+    settingsIcon.setRotation(0.0f);
+    add(settingsIcon);
 
-    svgImage3.setSVG(SVG_OGO_ID);
-    svgImage3.setPosition(32, 148, 176, 77);
-    svgImage3.setScale(0.22f, 0.4f);
-    svgImage3.setImagePosition(0, 0);
-    svgImage3.setRotationCenter(0, 0);
-    svgImage3.setRotation(0.0f);
-    add(svgImage3);
+    bandyLogo.setSVG(SVG_OGO_ID);
+    bandyLogo.setPosition(56, 108, 230, 57);
+    bandyLogo.setScale(0.273f, 0.273f);
+    bandyLogo.setImagePosition(0, 0);
+    bandyLogo.setRotationCenter(0, 0);
+    bandyLogo.setRotation(0.0f);
+    add(bandyLogo);
+
+    bandyChevron.setSVG(SVG_SETTINGS_CHEVRON_DIM_ID);
+    bandyChevron.setPosition(416, 125, 24, 24);
+    bandyChevron.setScale(1.0f, 1.0f);
+    bandyChevron.setImagePosition(0, 0);
+    bandyChevron.setRotationCenter(0, 0);
+    bandyChevron.setRotation(0.0f);
+    add(bandyChevron);
+
+    emerflowChevron.setSVG(SVG_SETTINGS_CHEVRON_DIM_ID);
+    emerflowChevron.setPosition(416, 219, 24, 24);
+    emerflowChevron.setScale(1.0f, 1.0f);
+    emerflowChevron.setImagePosition(0, 0);
+    emerflowChevron.setRotationCenter(0, 0);
+    emerflowChevron.setRotation(0.0f);
+    add(emerflowChevron);
 }
 
 Screen2ViewBase::~Screen2ViewBase()

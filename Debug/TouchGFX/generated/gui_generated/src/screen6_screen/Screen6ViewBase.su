@@ -27,15 +27,15 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:114:18:virtual void touchgfx::AbstractButtonContainer::handlePressedUpdated()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:119:18:virtual void touchgfx::AbstractButtonContainer::handleAlphaUpdated()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen6_screen/Screen6ViewBase.hpp:26:18:virtual void Screen6ViewBase::resumeClicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen6_screen/Screen6ViewBase.hpp:30:18:virtual void Screen6ViewBase::endClicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen6_screen/Screen6ViewBase.hpp:27:18:virtual void Screen6ViewBase::resumeClicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen6_screen/Screen6ViewBase.hpp:31:18:virtual void Screen6ViewBase::endClicked()	0	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen6Presenter>::~View()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen6ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	0	static
-../TouchGFX/generated/gui_generated/src/screen6_screen/Screen6ViewBase.cpp:92:1:Screen6ViewBase::~Screen6ViewBase()	0	static
-../TouchGFX/generated/gui_generated/src/screen6_screen/Screen6ViewBase.cpp:97:6:virtual void Screen6ViewBase::setupScreen()	0	static
+../TouchGFX/generated/gui_generated/src/screen6_screen/Screen6ViewBase.cpp:98:1:Screen6ViewBase::~Screen6ViewBase()	0	static
+../TouchGFX/generated/gui_generated/src/screen6_screen/Screen6ViewBase.cpp:103:6:virtual void Screen6ViewBase::setupScreen()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = Screen6ViewBase; T1 = const touchgfx::AbstractButtonContainer&]	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = Screen6ViewBase; T1 = const touchgfx::AbstractButtonContainer&]	0	static
@@ -47,11 +47,11 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen6ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
-../TouchGFX/generated/gui_generated/src/screen6_screen/Screen6ViewBase.cpp:92:1:virtual Screen6ViewBase::~Screen6ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen6_screen/Screen6ViewBase.cpp:98:1:virtual Screen6ViewBase::~Screen6ViewBase()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
-../TouchGFX/generated/gui_generated/src/screen6_screen/Screen6ViewBase.cpp:102:6:void Screen6ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
+../TouchGFX/generated/gui_generated/src/screen6_screen/Screen6ViewBase.cpp:108:6:void Screen6ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	16	static
@@ -62,4 +62,4 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
-../TouchGFX/generated/gui_generated/src/screen6_screen/Screen6ViewBase.cpp:8:1:Screen6ViewBase::Screen6ViewBase()	112	static
+../TouchGFX/generated/gui_generated/src/screen6_screen/Screen6ViewBase.cpp:9:1:Screen6ViewBase::Screen6ViewBase()	112	static

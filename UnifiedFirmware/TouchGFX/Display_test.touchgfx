@@ -1,0 +1,3102 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "splashBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "splashLogo",
+            "X": 151,
+            "Y": 56,
+            "Width": 178,
+            "Height": 160,
+            "Filename": "A1.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "splashSubtitle",
+            "X": 95,
+            "Y": 237,
+            "Width": 290,
+            "Height": 18,
+            "TextId": "Text_SplashSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 148,
+              "Blue": 140
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "splashDot1",
+            "X": 214,
+            "Y": 270,
+            "Width": 12,
+            "Height": 12,
+            "Filename": "dot_dim.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "splashDot2",
+            "X": 234,
+            "Y": 270,
+            "Width": 12,
+            "Height": 12,
+            "Filename": "dot_dim.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "splashDot3",
+            "X": 254,
+            "Y": 270,
+            "Width": 12,
+            "Height": 12,
+            "Filename": "dot_dim.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "splashInitText",
+            "X": 90,
+            "Y": 289,
+            "Width": 300,
+            "Height": 20,
+            "TextId": "Text_SplashInitializing",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 110,
+              "Green": 105,
+              "Blue": 96
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Screen2",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "productBackground",
+            "X": 3,
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "Box",
+            "Name": "productAccent",
+            "X": 32,
+            "Y": 28,
+            "Width": 3,
+            "Height": 28,
+            "Color": {
+              "Red": 216,
+              "Green": 178,
+              "Blue": 71
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "productTitle",
+            "X": 48,
+            "Y": 28,
+            "Width": 320,
+            "Height": 28,
+            "TextId": "Text_ProductTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "settingsButton",
+            "X": 320,
+            "Y": 20,
+            "Width": 100,
+            "Height": 52,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 1,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "bandyButton",
+            "X": 12,
+            "Y": 108,
+            "Width": 225,
+            "Height": 156,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 218,
+                  "Blue": 142
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 232,
+                  "Blue": 166
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Box",
+            "Name": "bandyFrameTop",
+            "X": 23,
+            "Y": 108,
+            "Width": 203,
+            "Height": 2,
+            "Color": {
+              "Red": 216,
+              "Green": 178,
+              "Blue": 71
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "bandyFrameBottom",
+            "X": 23,
+            "Y": 262,
+            "Width": 203,
+            "Height": 2,
+            "Color": {
+              "Red": 216,
+              "Green": 178,
+              "Blue": 71
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "bandyFrameLeft",
+            "X": 12,
+            "Y": 119,
+            "Width": 2,
+            "Height": 134,
+            "Color": {
+              "Red": 216,
+              "Green": 178,
+              "Blue": 71
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "bandyFrameRight",
+            "X": 235,
+            "Y": 119,
+            "Width": 2,
+            "Height": 134,
+            "Color": {
+              "Red": 216,
+              "Green": 178,
+              "Blue": 71
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "bandyFrameTopLeft",
+            "X": 12,
+            "Y": 108,
+            "Width": 12,
+            "Height": 12,
+            "Filename": "screen2_bandy_corner_tl.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "bandyFrameTopRight",
+            "X": 225,
+            "Y": 108,
+            "Width": 12,
+            "Height": 12,
+            "Filename": "screen2_bandy_corner_tr.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "bandyFrameBottomLeft",
+            "X": 12,
+            "Y": 252,
+            "Width": 12,
+            "Height": 12,
+            "Filename": "screen2_bandy_corner_bl.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "bandyFrameBottomRight",
+            "X": 225,
+            "Y": 252,
+            "Width": 12,
+            "Height": 12,
+            "Filename": "screen2_bandy_corner_br.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "emerflowButton",
+            "X": 244,
+            "Y": 108,
+            "Width": 225,
+            "Height": 156,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "ColorPressed": {
+                  "Red": 12,
+                  "Green": 18,
+                  "Blue": 24
+                },
+                "ColorBorderReleased": {
+                  "Red": 142,
+                  "Green": 164,
+                  "Blue": 184
+                },
+                "ColorBorderPressed": {
+                  "Red": 180,
+                  "Green": 204,
+                  "Blue": 224
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Box",
+            "Name": "emerflowFrameTop",
+            "X": 254,
+            "Y": 108,
+            "Width": 203,
+            "Height": 2,
+            "Color": {
+              "Red": 86,
+              "Green": 104,
+              "Blue": 116
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "emerflowFrameBottom",
+            "X": 254,
+            "Y": 262,
+            "Width": 203,
+            "Height": 2,
+            "Color": {
+              "Red": 86,
+              "Green": 104,
+              "Blue": 116
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "emerflowFrameLeft",
+            "X": 243,
+            "Y": 119,
+            "Width": 2,
+            "Height": 134,
+            "Color": {
+              "Red": 86,
+              "Green": 104,
+              "Blue": 116
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "emerflowFrameRight",
+            "X": 466,
+            "Y": 119,
+            "Width": 2,
+            "Height": 134,
+            "Color": {
+              "Red": 86,
+              "Green": 104,
+              "Blue": 116
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "emerflowFrameTopLeft",
+            "X": 243,
+            "Y": 108,
+            "Width": 12,
+            "Height": 12,
+            "Filename": "screen2_hemorflow_corner_tl.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "emerflowFrameTopRight",
+            "X": 456,
+            "Y": 108,
+            "Width": 12,
+            "Height": 12,
+            "Filename": "screen2_hemorflow_corner_tr.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "emerflowFrameBottomLeft",
+            "X": 243,
+            "Y": 252,
+            "Width": 12,
+            "Height": 12,
+            "Filename": "screen2_hemorflow_corner_bl.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "emerflowFrameBottomRight",
+            "X": 456,
+            "Y": 252,
+            "Width": 12,
+            "Height": 12,
+            "Filename": "screen2_hemorflow_corner_br.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "emerflowLogo",
+            "X": 266,
+            "Y": 167,
+            "Width": 190,
+            "Height": 58,
+            "Filename": "thd_hemorflow_logo.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "svgImage1",
+            "X": 306,
+            "Y": -92,
+            "Width": 19,
+            "Height": 15,
+            "Image": "settings.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.68,
+            "ImageVerticalScale": 0.54
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "svgImage2",
+            "X": 353,
+            "Y": 25,
+            "Width": 34,
+            "Height": 34,
+            "Image": "settings.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 1.21,
+            "ImageVerticalScale": 1.21
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "svgImage3",
+            "X": 32,
+            "Y": 148,
+            "Width": 176,
+            "Height": 77,
+            "Image": "ogo.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.22,
+            "ImageVerticalScale": 0.4
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "thdCornerLogo",
+            "X": 428,
+            "Y": 8,
+            "Width": 44,
+            "Height": 44,
+            "Filename": "thd_corner_logo.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "bandySelected",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "bandyButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "bandySelected"
+            }
+          },
+          {
+            "InteractionName": "hemorflowSelected",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "emerflowButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "hemorflowSelected"
+            }
+          },
+          {
+            "InteractionName": "settingsSelected",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "settingsButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "settingsClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen4",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "rfidBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "backButton",
+            "Width": 120,
+            "Height": 72,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 1,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "backLabel",
+            "X": 22,
+            "Y": 27,
+            "Width": 76,
+            "Height": 20,
+            "TextId": "Text_Back",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 148,
+              "Blue": 140
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "rfidAccent",
+            "X": 136,
+            "Y": 28,
+            "Width": 3,
+            "Height": 28,
+            "Color": {
+              "Red": 216,
+              "Green": 178,
+              "Blue": 71
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "rfidTitle",
+            "X": 148,
+            "Y": 28,
+            "Width": 268,
+            "Height": 28,
+            "TextId": "Text_BandyTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "rfidCard",
+            "X": 72,
+            "Y": 82,
+            "Width": 336,
+            "Height": 178,
+            "BorderColor": {
+              "Red": 46,
+              "Green": 54,
+              "Blue": 63
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "rfidIcon",
+            "X": 168,
+            "Y": 105,
+            "Width": 144,
+            "Height": 68,
+            "Filename": "rfid_contactless.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "rfidInstruction",
+            "X": 86,
+            "Y": 188,
+            "Width": 308,
+            "Height": 22,
+            "TextId": "Text_RfidInsertCard",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "rfidStatus",
+            "X": 86,
+            "Y": 221,
+            "Width": 308,
+            "Height": 18,
+            "TextId": "Text_RfidWaiting",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 124,
+              "Green": 137,
+              "Blue": 148
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "thdCornerLogo",
+            "X": 428,
+            "Y": 8,
+            "Width": 44,
+            "Height": 44,
+            "Filename": "thd_corner_logo.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "backClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "backButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "backClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen3",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "bandyBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "vacuumPanel",
+            "X": 20,
+            "Y": 9,
+            "Width": 451,
+            "Height": 154,
+            "CustomContainerDefinitionName": "BandyVacuumPanel"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "timePanel",
+            "X": 150,
+            "Y": 158,
+            "Width": 180,
+            "Height": 64,
+            "CustomContainerDefinitionName": "BandyTimePanel"
+          },
+          {
+            "Type": "Box",
+            "Name": "lowerDivider",
+            "X": 20,
+            "Y": 232,
+            "Width": 440,
+            "Height": 1,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 58
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "setTargetButton",
+            "X": 20,
+            "Y": 248,
+            "Width": 156,
+            "Height": 70,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "ColorPressed": {
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "screen3TargetLabel",
+            "X": 30,
+            "Y": 251,
+            "Width": 92,
+            "Height": 21,
+            "TextId": "Text_TargetLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "screen3TargetValue",
+            "X": 30,
+            "Y": 272,
+            "Width": 90,
+            "Height": 34,
+            "TextId": "Value_Metric",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Metric",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "screen3TargetMbarLabel",
+            "X": 122,
+            "Y": 290,
+            "Width": 46,
+            "Height": 16,
+            "TextId": "Text_Mbar",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "screen3StartButton",
+            "X": 262,
+            "Y": 248,
+            "Width": 206,
+            "Height": 70,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 3,
+                "ColorPressed": {
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "screen3StartLabel",
+            "X": 278,
+            "Y": 267,
+            "Width": 127,
+            "Height": 33,
+            "TextId": "Text_Start",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "thdCornerLogo",
+            "X": 428,
+            "Y": 8,
+            "Width": 44,
+            "Height": 44,
+            "Filename": "thd_corner_logo.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "openSetpointClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "setTargetButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "openSetpointClicked"
+            }
+          },
+          {
+            "InteractionName": "startClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "screen3StartButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "startClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen5",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "setpointBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "setpointBackButton",
+            "X": 12,
+            "Y": 14,
+            "Width": 96,
+            "Height": 48,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 1,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setpointBackLabel",
+            "X": 22,
+            "Y": 27,
+            "Width": 76,
+            "Height": 20,
+            "TextId": "Text_Back",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 148,
+              "Blue": 140
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setpointTitle",
+            "Y": 52,
+            "Width": 480,
+            "Height": 30,
+            "TextId": "Text_SetpointTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setpointValue",
+            "X": 100,
+            "Y": 92,
+            "Width": 220,
+            "Height": 68,
+            "TextId": "Value_Hero",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Hero",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setpointMbarLabel",
+            "X": 300,
+            "Y": 130,
+            "Width": 70,
+            "Height": 20,
+            "TextId": "Text_Mbar",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "setpointMinusButton",
+            "X": 40,
+            "Y": 168,
+            "Width": 160,
+            "Height": 104,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setpointMinusLabel",
+            "X": 40,
+            "Y": 188,
+            "Width": 160,
+            "Height": 70,
+            "TextId": "Text_SetpointMinus",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "setpointPlusButton",
+            "X": 280,
+            "Y": 168,
+            "Width": 160,
+            "Height": 104,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setpointPlusLabel",
+            "X": 280,
+            "Y": 188,
+            "Width": 160,
+            "Height": 70,
+            "TextId": "Text_SetpointPlus",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "thdCornerLogo",
+            "X": 428,
+            "Y": 8,
+            "Width": 44,
+            "Height": 44,
+            "Filename": "thd_corner_logo.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "backToBandy",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "setpointBackButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "backClicked"
+            }
+          },
+          {
+            "InteractionName": "decreaseSetpoint",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "setpointMinusButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "decreaseTargetClicked"
+            }
+          },
+          {
+            "InteractionName": "increaseSetpoint",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "setpointPlusButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "increaseTargetClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen6",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "pauseBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseTitle",
+            "Y": 28,
+            "Width": 480,
+            "Height": 32,
+            "TextId": "Text_PauseTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseSubtitle",
+            "X": 40,
+            "Y": 66,
+            "Width": 400,
+            "Height": 18,
+            "TextId": "Text_PauseSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "pauseCard",
+            "X": 72,
+            "Y": 99,
+            "Width": 336,
+            "Height": 126,
+            "BorderColor": {
+              "Red": 54,
+              "Green": 86,
+              "Blue": 116
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseRemainingLabel",
+            "X": 72,
+            "Y": 111,
+            "Width": 336,
+            "Height": 18,
+            "TextId": "Text_PauseRemaining",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseRemainingValue",
+            "X": 72,
+            "Y": 129,
+            "Width": 336,
+            "Height": 42,
+            "TextId": "Value_TimeRemaining",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_TimeRemaining",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseVisitLabel",
+            "X": 142,
+            "Y": 191,
+            "Width": 160,
+            "Height": 18,
+            "TextId": "Text_TimeLeft",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseVisitValue",
+            "X": 230,
+            "Y": 177,
+            "Width": 137,
+            "Height": 32,
+            "TextId": "Value_TimeRemaining",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_TimeRemaining",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "pauseResumeButton",
+            "X": 54,
+            "Y": 246,
+            "Width": 176,
+            "Height": 54,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseResumeLabel",
+            "X": 54,
+            "Y": 263,
+            "Width": 176,
+            "Height": 24,
+            "TextId": "Text_Resume",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "pauseEndButton",
+            "X": 250,
+            "Y": 246,
+            "Width": 176,
+            "Height": 54,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 35,
+                  "Green": 15,
+                  "Blue": 18
+                },
+                "ColorBorderReleased": {
+                  "Red": 218,
+                  "Green": 56,
+                  "Blue": 68
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 92,
+                  "Blue": 104
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "pauseEndLabel",
+            "X": 250,
+            "Y": 263,
+            "Width": 176,
+            "Height": 24,
+            "TextId": "Text_End",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "thdCornerLogo",
+            "X": 428,
+            "Y": 8,
+            "Width": 44,
+            "Height": 44,
+            "Filename": "thd_corner_logo.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "resumeBandy",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "pauseResumeButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "resumeClicked"
+            }
+          },
+          {
+            "InteractionName": "endBandy",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "pauseEndButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "endClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen7",
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "outerBorder",
+            "Width": 480,
+            "Height": 320,
+            "BorderSize": 2
+          },
+          {
+            "Type": "TextArea",
+            "Name": "titleText",
+            "X": 16,
+            "Y": 52,
+            "Width": 448,
+            "Height": 34,
+            "TextId": "Text_EndSessionQuestion",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "subtitleText",
+            "X": 16,
+            "Y": 92,
+            "Width": 448,
+            "Height": 36,
+            "TextId": "Text_EndSessionSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 247,
+              "Green": 193,
+              "Blue": 193
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "timeBoxFill",
+            "X": 16,
+            "Y": 140,
+            "Width": 448,
+            "Height": 69
+          },
+          {
+            "Type": "TextArea",
+            "Name": "timeLabel",
+            "X": 96,
+            "Y": 171,
+            "Width": 240,
+            "Height": 25,
+            "TextId": "Text_TimeYoullLose",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 247,
+              "Green": 193,
+              "Blue": 193
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "timeValue",
+            "X": 198,
+            "Y": 160,
+            "Width": 240,
+            "Height": 36,
+            "TextId": "Value_TimeRemaining",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_TimeRemaining",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "continueButton",
+            "X": 16,
+            "Y": 240,
+            "Width": 200,
+            "Height": 60,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "ColorPressed": {
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
+                }
+              }
+            ]
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "continueArrow",
+            "X": 48,
+            "Y": 261,
+            "Width": 18,
+            "Height": 18,
+            "Filename": "arrow_left_white.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "continueLabel",
+            "X": 16,
+            "Y": 260,
+            "Width": 200,
+            "Height": 36,
+            "TextId": "Text_ButtonContinue",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "endButton",
+            "X": 288,
+            "Y": 240,
+            "Width": 176,
+            "Height": 60,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 64,
+                  "Green": 24,
+                  "Blue": 24
+                },
+                "ColorBorderReleased": {
+                  "Red": 226,
+                  "Green": 75,
+                  "Blue": 74
+                },
+                "ColorBorderPressed": {
+                  "Red": 226,
+                  "Green": 75,
+                  "Blue": 74
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "endLabel",
+            "X": 278,
+            "Y": 260,
+            "Width": 174,
+            "Height": 36,
+            "TextId": "Text_ButtonEnd",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 226,
+              "Green": 75,
+              "Blue": 74
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "thdCornerLogo",
+            "X": 428,
+            "Y": 8,
+            "Width": 44,
+            "Height": 44,
+            "Filename": "thd_corner_logo.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "cancelEndBandy",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "continueButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "cancelClicked"
+            }
+          },
+          {
+            "InteractionName": "confirmEndBandy",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "endButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "confirmClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen8",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "hemorflowWaitBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "backButton",
+            "Width": 120,
+            "Height": 72,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 1,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "backLabel",
+            "X": 22,
+            "Y": 27,
+            "Width": 76,
+            "Height": 20,
+            "TextId": "Text_Back",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 148,
+              "Blue": 140
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "hemorflowWaitAccent",
+            "X": 136,
+            "Y": 28,
+            "Width": 3,
+            "Height": 28,
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowWaitTitle",
+            "X": 148,
+            "Y": 28,
+            "Width": 268,
+            "Height": 30,
+            "TextId": "Text_HemorflowTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "hemorflowWaitCard",
+            "X": 86,
+            "Y": 82,
+            "Width": 308,
+            "Height": 178,
+            "BorderSize": 2
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "hemorflowPcIcon",
+            "X": 204,
+            "Y": 104,
+            "Width": 72,
+            "Height": 72,
+            "Filename": "pc_wait_device.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowWaitLabel",
+            "X": 86,
+            "Y": 190,
+            "Width": 308,
+            "Height": 24,
+            "TextId": "Text_HemorflowWaitingPc",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowWaitSubtitle",
+            "X": 96,
+            "Y": 222,
+            "Width": 288,
+            "Height": 20,
+            "TextId": "Text_HemorflowPcSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "thdCornerLogo",
+            "X": 428,
+            "Y": 8,
+            "Width": 44,
+            "Height": 44,
+            "Filename": "thd_corner_logo.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "backClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "backButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "backClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen9",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "hemorflowBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowTitle",
+            "X": 30,
+            "Y": 16,
+            "Width": 300,
+            "Height": 28,
+            "TextId": "Text_HemorflowTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "hemorflowVacuumPanel",
+            "X": 20,
+            "Y": 50,
+            "Width": 451,
+            "Height": 154,
+            "CustomContainerDefinitionName": "BandyVacuumPanel"
+          },
+          {
+            "Type": "Box",
+            "Name": "hemorflowLowerDivider",
+            "X": 20,
+            "Y": 212,
+            "Width": 440,
+            "Height": 1,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 58
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowTargetLabel",
+            "X": 54,
+            "Y": 238,
+            "Width": 130,
+            "Height": 18,
+            "TextId": "Text_TargetLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowTargetValue",
+            "X": 54,
+            "Y": 258,
+            "Width": 95,
+            "Height": 38,
+            "TextId": "Value_Metric",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Metric",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowTargetMbarLabel",
+            "X": 150,
+            "Y": 278,
+            "Width": 50,
+            "Height": 18,
+            "TextId": "Text_Mbar",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowStatusLabel",
+            "X": 270,
+            "Y": 238,
+            "Width": 150,
+            "Height": 18,
+            "TextId": "Text_HemorflowStatusLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "hemorflowStatusValue",
+            "X": 270,
+            "Y": 262,
+            "Width": 160,
+            "Height": 28,
+            "TextId": "Value_Status",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Status",
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "thdCornerLogo",
+            "X": 428,
+            "Y": 8,
+            "Width": 44,
+            "Height": 44,
+            "Filename": "thd_corner_logo.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Screen10",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "settingsBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "settingsBackButton",
+            "Width": 120,
+            "Height": 72,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 1,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "settingsBackLabel",
+            "X": 16,
+            "Y": 27,
+            "Width": 96,
+            "Height": 20,
+            "TextId": "Text_Back",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 148,
+              "Blue": 140
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "settingsTitle",
+            "Y": 48,
+            "Width": 480,
+            "Height": 32,
+            "TextId": "Text_SettingsTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "settingsSubtitle",
+            "Y": 84,
+            "Width": 480,
+            "Height": 20,
+            "TextId": "Text_SettingsSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 124,
+              "Green": 137,
+              "Blue": 148
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "settingsRow0",
+            "X": 40,
+            "Y": 108,
+            "Width": 400,
+            "Height": 54,
+            "CustomContainerDefinitionName": "SettingsMenuRow"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "settingsRow1",
+            "X": 40,
+            "Y": 166,
+            "Width": 400,
+            "Height": 54,
+            "CustomContainerDefinitionName": "SettingsMenuRow"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "settingsRow2",
+            "X": 40,
+            "Y": 224,
+            "Width": 400,
+            "Height": 54,
+            "CustomContainerDefinitionName": "SettingsMenuRow"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "settingsPreviousButton",
+            "X": 40,
+            "Y": 282,
+            "Width": 120,
+            "Height": 36,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 1,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 86,
+                  "Green": 104,
+                  "Blue": 116
+                },
+                "ColorBorderPressed": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "settingsPreviousLabel",
+            "X": 40,
+            "Y": 291,
+            "Width": 120,
+            "Height": 20,
+            "TextId": "Text_SettingsPrevious",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "settingsPageIndicator",
+            "X": 180,
+            "Y": 291,
+            "Width": 120,
+            "Height": 20,
+            "TextId": "Text_SettingsPage",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 124,
+              "Green": 137,
+              "Blue": 148
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_SettingsPage",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "settingsNextButton",
+            "X": 320,
+            "Y": 282,
+            "Width": 120,
+            "Height": 36,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 1,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 86,
+                  "Green": 104,
+                  "Blue": 116
+                },
+                "ColorBorderPressed": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "settingsNextLabel",
+            "X": 320,
+            "Y": 291,
+            "Width": 120,
+            "Height": 20,
+            "TextId": "Text_SettingsNext",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "thdCornerLogo",
+            "X": 428,
+            "Y": 8,
+            "Width": 44,
+            "Height": 44,
+            "Filename": "thd_corner_logo.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "settingsBackClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "settingsBackButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "backClicked"
+            }
+          },
+          {
+            "InteractionName": "settingsPreviousClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "settingsPreviousButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "previousPageClicked"
+            }
+          },
+          {
+            "InteractionName": "settingsNextClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "settingsNextButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "nextPageClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen11",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "brightnessBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "brightnessBackButton",
+            "Width": 120,
+            "Height": 72,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 1,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "brightnessBackLabel",
+            "X": 16,
+            "Y": 27,
+            "Width": 96,
+            "Height": 20,
+            "TextId": "Text_Back",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 148,
+              "Blue": 140
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "brightnessTitle",
+            "Y": 48,
+            "Width": 480,
+            "Height": 32,
+            "TextId": "Text_Brightness",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "brightnessSubtitle",
+            "Y": 84,
+            "Width": 480,
+            "Height": 20,
+            "TextId": "Text_BrightnessSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 124,
+              "Green": 137,
+              "Blue": 148
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "brightnessValue",
+            "Y": 108,
+            "Width": 480,
+            "Height": 72,
+            "TextId": "Text_BrightnessPercent",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_BrightnessPercent",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "Slider",
+            "Name": "brightnessSlider",
+            "X": 56,
+            "Y": 184,
+            "Width": 352,
+            "Height": 368,
+            "BackgroundUnselected": "brightness_slider_track_dim.png",
+            "BackgroundSelected": "brightness_slider_track_gold.png",
+            "Indicator": "brightness_slider_knob.png",
+            "BackgroundX": 16,
+            "BackgroundY": 12,
+            "IndicatorMax": 336,
+            "ValueMax": 100,
+            "ValueMin": 10,
+            "InitValue": 100
+          },
+          {
+            "Type": "TextArea",
+            "Name": "brightnessMinLabel",
+            "X": 56,
+            "Y": 230,
+            "Width": 80,
+            "Height": 20,
+            "TextId": "Text_BrightnessMin",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 124,
+              "Green": 137,
+              "Blue": 148
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "brightnessMaxLabel",
+            "X": 344,
+            "Y": 230,
+            "Width": 80,
+            "Height": 20,
+            "TextId": "Text_BrightnessMax",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 124,
+              "Green": 137,
+              "Blue": 148
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "brightnessHint",
+            "Y": 266,
+            "Width": 480,
+            "Height": 20,
+            "TextId": "Text_BrightnessHint",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 148,
+              "Blue": 140
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "thdCornerLogo",
+            "X": 428,
+            "Y": 8,
+            "Width": 44,
+            "Height": 44,
+            "Filename": "thd_corner_logo.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "brightnessBackClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "brightnessBackButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "backClicked"
+            }
+          },
+          {
+            "InteractionName": "brightnessValueChanged",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "brightnessSlider"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "brightnessChanged"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen12",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "languageBackground",
+            "Width": 480,
+            "Height": 320
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "languageBackButton",
+            "Width": 120,
+            "Height": 72,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 1,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "TextArea",
+            "Name": "languageBackLabel",
+            "X": 16,
+            "Y": 27,
+            "Width": 96,
+            "Height": 20,
+            "TextId": "Text_Back",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 150,
+              "Green": 148,
+              "Blue": 140
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "languageTitle",
+            "Y": 58,
+            "Width": 480,
+            "Height": 32,
+            "TextId": "Text_LanguageTitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "languageSubtitle",
+            "Y": 94,
+            "Width": 480,
+            "Height": 20,
+            "TextId": "Text_LanguageSubtitle",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 124,
+              "Green": 137,
+              "Blue": 148
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "englishButton",
+            "X": 48,
+            "Y": 142,
+            "Width": 184,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 142,
+                  "Green": 164,
+                  "Blue": 184
+                },
+                "ColorBorderPressed": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "italianButton",
+            "X": 248,
+            "Y": 142,
+            "Width": 184,
+            "Height": 96,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 2,
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                },
+                "ColorBorderReleased": {
+                  "Red": 142,
+                  "Green": 164,
+                  "Blue": 184
+                },
+                "ColorBorderPressed": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                }
+              }
+            ]
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "englishFrame",
+            "X": 48,
+            "Y": 142,
+            "Width": 184,
+            "Height": 96,
+            "BorderColor": {
+              "Red": 216,
+              "Green": 178,
+              "Blue": 71
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "italianFrame",
+            "X": 248,
+            "Y": 142,
+            "Width": 184,
+            "Height": 96,
+            "BorderColor": {
+              "Red": 86,
+              "Green": 104,
+              "Blue": 116
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "TextArea",
+            "Name": "englishLabel",
+            "X": 48,
+            "Y": 176,
+            "Width": 184,
+            "Height": 28,
+            "TextId": "Text_English",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "italianLabel",
+            "X": 248,
+            "Y": 176,
+            "Width": 184,
+            "Height": 28,
+            "TextId": "Text_Italian",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "thdCornerLogo",
+            "X": 428,
+            "Y": 8,
+            "Width": 44,
+            "Height": 44,
+            "Filename": "thd_corner_logo.png",
+            "ScalingAlgorithm": "Bilinear Interpolation"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "languageBackClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "languageBackButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "backClicked"
+            }
+          },
+          {
+            "InteractionName": "englishClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "englishButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "englishClicked"
+            }
+          },
+          {
+            "InteractionName": "italianClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "italianButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "italianClicked"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "SettingsMenuRow",
+        "Width": 400,
+        "Height": 54,
+        "Components": [
+          {
+            "Type": "FlexButton",
+            "Name": "rowButton",
+            "Width": 400,
+            "Height": 54,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "ColorPressed": {
+                  "Red": 14,
+                  "Green": 14,
+                  "Blue": 12
+                }
+              }
+            ]
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "rowIcon",
+            "X": 12,
+            "Y": 15,
+            "Width": 24,
+            "Height": 24,
+            "Image": "settings_language_gold.svg",
+            "FitImageToSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "rowTitle",
+            "X": 56,
+            "Y": 5,
+            "Width": 276,
+            "Height": 20,
+            "TextId": "Text_SettingsLanguageItem",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "rowDescription",
+            "X": 56,
+            "Y": 28,
+            "Width": 276,
+            "Height": 17,
+            "TextId": "Text_SettingsLanguageDescription",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 124,
+              "Green": 137,
+              "Blue": 148
+            }
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "rowChevron",
+            "X": 360,
+            "Y": 15,
+            "Width": 24,
+            "Height": 24,
+            "Image": "settings_chevron_dim.svg",
+            "FitImageToSize": true
+          },
+          {
+            "Type": "Box",
+            "Name": "rowDivider",
+            "X": 56,
+            "Y": 53,
+            "Width": 344,
+            "Height": 1,
+            "Color": {
+              "Red": 46,
+              "Green": 54,
+              "Blue": 63
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "rowClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "rowButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "rowClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "BandyVacuumPanel",
+        "Width": 451,
+        "Height": 154,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "vacuumLabel",
+            "X": 42,
+            "Y": 70,
+            "Width": 356,
+            "Height": 20,
+            "TextId": "Text_VacuumLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 192,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "vacuumValue",
+            "X": 110,
+            "Width": 220,
+            "Height": 60,
+            "TextId": "Value_Hero",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Hero",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "vacuumTrack",
+            "X": 20,
+            "Y": 104,
+            "Width": 400,
+            "Height": 5,
+            "Color": {
+              "Red": 82,
+              "Green": 82,
+              "Blue": 76
+            },
+            "BorderColor": {
+              "Red": 82,
+              "Green": 82,
+              "Blue": 76
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "vacuumFill",
+            "X": 20,
+            "Y": 104,
+            "Height": 5,
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scaleZeroLabel",
+            "X": 20,
+            "Y": 116,
+            "Width": 64,
+            "Height": 21,
+            "TextId": "Text_ZeroScale",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 104,
+              "Green": 126,
+              "Blue": 146
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scaleMaxLabel",
+            "X": 360,
+            "Y": 116,
+            "Width": 67,
+            "Height": 21,
+            "TextId": "Text_MaxScale",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 104,
+              "Green": 126,
+              "Blue": 146
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "BandyTimePanel",
+        "Width": 180,
+        "Height": 64,
+        "Components": [
+          {
+            "Type": "ScalableImage",
+            "Name": "timeIcon",
+            "X": 39,
+            "Width": 22,
+            "Height": 22,
+            "Filename": "time_left_icon_white.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "timeLeftLabel",
+            "X": 66,
+            "Y": 3,
+            "Width": 90,
+            "Height": 18,
+            "TextId": "Text_TimeLeft",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 192,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "timeRemainingValue",
+            "Y": 25,
+            "Width": 180,
+            "Height": 38,
+            "TextId": "Value_TimeRemaining",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_TimeRemaining",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "BandyTargetPanel",
+        "Width": 320,
+        "Height": 62,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "targetCard",
+            "Width": 320,
+            "Height": 62
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "targetOpenButton",
+            "Width": 320,
+            "Height": 62,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "ColorPressed": {
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
+                }
+              }
+            ]
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "setTargetFrame",
+            "X": 176,
+            "Y": 8,
+            "Width": 134,
+            "Height": 46,
+            "BorderColor": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            },
+            "BorderSize": 3
+          },
+          {
+            "Type": "TextArea",
+            "Name": "targetLabel",
+            "X": 10,
+            "Y": 10,
+            "Width": 92,
+            "Height": 14,
+            "TextId": "Text_TargetLabel",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "targetValue",
+            "X": 10,
+            "Y": 24,
+            "Width": 90,
+            "Height": 34,
+            "TextId": "Value_Metric",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            },
+            "Wildcard1": {
+              "TextId": "Buffer_Metric",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "targetMbarLabel",
+            "X": 102,
+            "Y": 42,
+            "Width": 46,
+            "Height": 16,
+            "TextId": "Text_Mbar",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 142,
+              "Green": 164,
+              "Blue": 184
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "setTargetButtonLabel",
+            "X": 176,
+            "Y": 20,
+            "Width": 134,
+            "Height": 24,
+            "TextId": "Text_SetTargetButton",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "openSetpointClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "targetOpenButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "openSetpointClicked"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "BandyStartPanel",
+        "Width": 110,
+        "Height": 62,
+        "Components": [
+          {
+            "Type": "BoxWithBorder",
+            "Name": "startFrame",
+            "Width": 110,
+            "Height": 62,
+            "BorderColor": {
+              "Red": 245,
+              "Green": 242,
+              "Blue": 232
+            },
+            "BorderSize": 2
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "startButton",
+            "Width": 110,
+            "Height": 62,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 3,
+                "ColorPressed": {
+                  "Red": 22,
+                  "Green": 22,
+                  "Blue": 20
+                },
+                "ColorBorderReleased": {
+                  "Red": 245,
+                  "Green": 242,
+                  "Blue": 232
+                },
+                "ColorBorderPressed": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 248
+                }
+              }
+            ]
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "startIcon",
+            "X": 13,
+            "Y": 13,
+            "Width": 18,
+            "Height": 18,
+            "Filename": "start_play_icon_white.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "startLabel",
+            "X": 38,
+            "Y": 19,
+            "Width": 72,
+            "Height": 35,
+            "TextId": "Text_Start",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 247,
+              "Blue": 250
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "startClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "startButton"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "startClicked"
+            }
+          }
+        ]
+      }
+    ],
+    "Name": "Pressure_Stabiliser",
+    "Resolution": {
+      "Width": 320,
+      "Height": 480
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 320,
+        "Height": 480
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F4",
+    "SubFamily": "STM32F401",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../Pressure_Stabilizer.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": []
+  },
+  "Version": "4.26.0"
+}

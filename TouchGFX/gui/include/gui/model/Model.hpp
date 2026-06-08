@@ -2,6 +2,7 @@
 #define MODEL_HPP
 
 #include <stdint.h>
+#include <gui/model/AdminAccessController.hpp>
 #include <gui/model/DashboardTypes.hpp>
 
 class ModelListener;
@@ -62,6 +63,33 @@ public:
 
     void setDisplayBrightnessPercent(uint8_t percent);
 
+    AdminAuthResult authenticateAdminPin(uint16_t pin)
+    {
+        return adminAccess.authenticate(pin);
+    }
+
+    bool isAdminAuthenticated() const
+    {
+        return adminAccess.isAuthenticated();
+    }
+
+    void logoutAdmin()
+    {
+        adminAccess.logout();
+    }
+
+    uint8_t getAdminLockoutRemainingSeconds() const
+    {
+        return adminAccess.getLockoutRemainingSeconds();
+    }
+
+    AdminDiagnosticsSnapshot getAdminDiagnosticsSnapshot() const
+    {
+        return adminDiagnostics;
+    }
+
+    void refreshAdminMemoryDiagnostics();
+
 private:
     void notifyBandyState();
     void updateBridgeSnapshot();
@@ -74,6 +102,7 @@ private:
     int32_t clampTarget(int32_t requestedTarget) const;
     int32_t clampVacuum(int32_t measuredVacuum) const;
     bool hasBandyStateChanged(const BandyState& previousState) const;
+    void updateAdminDiagnostics();
 
     ModelListener* modelListener;
     BandyState bandyState;
@@ -99,6 +128,9 @@ private:
     int32_t bridgePressureMbar;
     bool targetCommandPending;
     int32_t pendingTargetMbar;
+    AdminAccessController adminAccess;
+    AdminDiagnosticsSnapshot adminDiagnostics;
+    uint32_t adminUptimeTicks100ms;
 };
 
 #endif // MODEL_HPP

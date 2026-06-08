@@ -52,6 +52,7 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
+ ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp \
  ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp \
  ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp \
@@ -112,6 +113,8 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../TouchGFX/gui/include/gui/screen10_screen/Screen10View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen10_screen/Screen10ViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen10_screen/Screen10Presenter.hpp \
+ ../TouchGFX/gui/include/gui/containers/SettingsMenuRow.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/SettingsMenuRowBase.hpp \
  ../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen11_screen/Screen11ViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp \
@@ -119,8 +122,11 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../TouchGFX/gui/include/gui/screen12_screen/Screen12View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen12_screen/Screen12ViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen12_screen/Screen12Presenter.hpp \
- ../TouchGFX/generated/images/include/BitmapDatabase.hpp \
+ ../TouchGFX/gui/include/gui/common/AdminScreens.hpp \
  ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
+ ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
+ ../TouchGFX/generated/images/include/BitmapDatabase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp \
@@ -212,6 +218,7 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../TouchGFX/gui/include/gui/model/Model.hpp:
+../TouchGFX/gui/include/gui/model/AdminAccessController.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
 ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
@@ -272,6 +279,8 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../TouchGFX/gui/include/gui/screen10_screen/Screen10View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen10_screen/Screen10ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen10_screen/Screen10Presenter.hpp:
+../TouchGFX/gui/include/gui/containers/SettingsMenuRow.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/containers/SettingsMenuRowBase.hpp:
 ../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen11_screen/Screen11ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp:
@@ -279,8 +288,11 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../TouchGFX/gui/include/gui/screen12_screen/Screen12View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen12_screen/Screen12ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen12_screen/Screen12Presenter.hpp:
-../TouchGFX/generated/images/include/BitmapDatabase.hpp:
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:
 ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
+../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
+../TouchGFX/generated/images/include/BitmapDatabase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp:

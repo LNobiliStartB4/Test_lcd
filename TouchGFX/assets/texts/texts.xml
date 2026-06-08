@@ -38,6 +38,274 @@
         <Translation Language="GB">Choose an option</Translation>
         <Translation Language="IT">Scegli un'opzione</Translation>
       </Text>
+      <Text Id="Text_SettingsLanguageItem" Alignment="Left" TypographyId="Button">
+        <Translation Language="GB">LANGUAGE</Translation>
+        <Translation Language="IT">LINGUA</Translation>
+      </Text>
+      <Text Id="Text_SettingsLanguageDescription" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">Choose display language</Translation>
+        <Translation Language="IT">Scegli lingua display</Translation>
+      </Text>
+      <Text Id="Text_SettingsBrightnessItem" Alignment="Left" TypographyId="Button">
+        <Translation Language="GB">BRIGHTNESS</Translation>
+        <Translation Language="IT">LUMINOSITA</Translation>
+      </Text>
+      <Text Id="Text_SettingsBrightnessDescription" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">Adjust display brightness</Translation>
+        <Translation Language="IT">Regola luminosita display</Translation>
+      </Text>
+      <Text Id="Text_SettingsAdminItem" Alignment="Left" TypographyId="Button">
+        <Translation Language="GB">ADMIN ACCESS</Translation>
+        <Translation Language="IT">ACCESSO ADMIN</Translation>
+      </Text>
+      <Text Id="Text_SettingsAdminDescription" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">Technical diagnostics</Translation>
+        <Translation Language="IT">Diagnostica tecnica</Translation>
+      </Text>
+      <Text Id="Text_SettingsPrevious" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">PREV</Translation>
+        <Translation Language="IT">PREC</Translation>
+      </Text>
+      <Text Id="Text_SettingsNext" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">NEXT</Translation>
+        <Translation Language="IT">SUCC</Translation>
+      </Text>
+      <Text Id="Text_SettingsPage" Alignment="Center" TypographyId="Step">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="IT">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="Buffer_SettingsPage" Alignment="Center" TypographyId="Step">
+        <Translation Language="GB">1/1</Translation>
+        <Translation Language="IT">1/1</Translation>
+      </Text>
+      <Text Id="Text_AdminPinTitle" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">ADMIN ACCESS</Translation>
+        <Translation Language="IT">ACCESSO ADMIN</Translation>
+      </Text>
+      <Text Id="Text_AdminPinSubtitle" Alignment="Center" TypographyId="Subtitle">
+        <Translation Language="GB">Enter the 4-digit PIN</Translation>
+        <Translation Language="IT">Inserisci il PIN di 4 cifre</Translation>
+      </Text>
+      <Text Id="Text_AdminPinValue" Alignment="Center" TypographyId="TimeValue">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="IT">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="Buffer_AdminPinValue" Alignment="Center" TypographyId="TimeValue">
+        <Translation Language="GB">----</Translation>
+        <Translation Language="IT">----</Translation>
+      </Text>
+      <Text Id="Text_AdminPinPromptStatus" Alignment="Center" TypographyId="Step">
+        <Translation Language="GB">ENTER PIN</Translation>
+        <Translation Language="IT">INSERISCI PIN</Translation>
+      </Text>
+      <Text Id="Text_AdminPinInvalidStatus" Alignment="Center" TypographyId="Step">
+        <Translation Language="GB">INVALID PIN</Translation>
+        <Translation Language="IT">PIN ERRATO</Translation>
+      </Text>
+      <Text Id="Text_AdminPinLockedStatus" Alignment="Center" TypographyId="Step">
+        <Translation Language="GB">LOCKED &lt;&gt; S</Translation>
+        <Translation Language="IT">BLOCCATO &lt;&gt; S</Translation>
+      </Text>
+      <Text Id="Buffer_AdminPinLockedStatus" Alignment="Center" TypographyId="Step">
+        <Translation Language="GB">30</Translation>
+        <Translation Language="IT">30</Translation>
+      </Text>
+      <Text Id="Text_AdminUnlock" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">UNLOCK</Translation>
+        <Translation Language="IT">SBLOCCA</Translation>
+      </Text>
+      <Text Id="Text_AdminDelete" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">DEL</Translation>
+        <Translation Language="IT">CANC</Translation>
+      </Text>
+      <Text Id="Text_Digit0" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">0</Translation>
+        <Translation Language="IT">0</Translation>
+      </Text>
+      <Text Id="Text_Digit1" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">1</Translation>
+        <Translation Language="IT">1</Translation>
+      </Text>
+      <Text Id="Text_Digit2" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">2</Translation>
+        <Translation Language="IT">2</Translation>
+      </Text>
+      <Text Id="Text_Digit3" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">3</Translation>
+        <Translation Language="IT">3</Translation>
+      </Text>
+      <Text Id="Text_Digit4" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">4</Translation>
+        <Translation Language="IT">4</Translation>
+      </Text>
+      <Text Id="Text_Digit5" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">5</Translation>
+        <Translation Language="IT">5</Translation>
+      </Text>
+      <Text Id="Text_Digit6" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">6</Translation>
+        <Translation Language="IT">6</Translation>
+      </Text>
+      <Text Id="Text_Digit7" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">7</Translation>
+        <Translation Language="IT">7</Translation>
+      </Text>
+      <Text Id="Text_Digit8" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">8</Translation>
+        <Translation Language="IT">8</Translation>
+      </Text>
+      <Text Id="Text_Digit9" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">9</Translation>
+        <Translation Language="IT">9</Translation>
+      </Text>
+      <Text Id="Text_AdminMenuTitle" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">ADMIN DIAGNOSTICS</Translation>
+        <Translation Language="IT">DIAGNOSTICA ADMIN</Translation>
+      </Text>
+      <Text Id="Text_AdminMenuSubtitle" Alignment="Center" TypographyId="Subtitle">
+        <Translation Language="GB">Read-only technical information</Translation>
+        <Translation Language="IT">Informazioni tecniche in sola lettura</Translation>
+      </Text>
+      <Text Id="Text_AdminSystemItem" Alignment="Left" TypographyId="Button">
+        <Translation Language="GB">SYSTEM INFO</Translation>
+        <Translation Language="IT">INFO SISTEMA</Translation>
+      </Text>
+      <Text Id="Text_AdminSystemDescription" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">Device, firmware and uptime</Translation>
+        <Translation Language="IT">Dispositivo, firmware e uptime</Translation>
+      </Text>
+      <Text Id="Text_AdminPressureItem" Alignment="Left" TypographyId="Button">
+        <Translation Language="GB">PRESSURE DIAGNOSTICS</Translation>
+        <Translation Language="IT">DIAGNOSTICA PRESSIONE</Translation>
+      </Text>
+      <Text Id="Text_AdminPressureDescription" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">Sensor, target, duty and faults</Translation>
+        <Translation Language="IT">Sensore, target, duty e guasti</Translation>
+      </Text>
+      <Text Id="Text_AdminMemoryItem" Alignment="Left" TypographyId="Button">
+        <Translation Language="GB">MEMORY STATUS</Translation>
+        <Translation Language="IT">STATO MEMORIE</Translation>
+      </Text>
+      <Text Id="Text_AdminMemoryDescription" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">FRAM, Winbond and asset package</Translation>
+        <Translation Language="IT">FRAM, Winbond e pacchetto asset</Translation>
+      </Text>
+      <Text Id="Text_AdminChevron" Alignment="Center" TypographyId="Button">
+        <Translation Language="GB">&gt;</Translation>
+        <Translation Language="IT">&gt;</Translation>
+      </Text>
+      <Text Id="Text_AdminSystemTitle" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">SYSTEM INFO</Translation>
+        <Translation Language="IT">INFO SISTEMA</Translation>
+      </Text>
+      <Text Id="Text_AdminPressureTitle" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">PRESSURE DIAGNOSTICS</Translation>
+        <Translation Language="IT">DIAGNOSTICA PRESSIONE</Translation>
+      </Text>
+      <Text Id="Text_AdminMemoryTitle" Alignment="Center" TypographyId="Title">
+        <Translation Language="GB">MEMORY STATUS</Translation>
+        <Translation Language="IT">STATO MEMORIE</Translation>
+      </Text>
+      <Text Id="Text_AdminValue" Alignment="Right" TypographyId="Step">
+        <Translation Language="GB">&lt;&gt;</Translation>
+        <Translation Language="IT">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="Buffer_AdminValue" Alignment="Right" TypographyId="Step">
+        <Translation Language="GB">N/A</Translation>
+        <Translation Language="IT">N/D</Translation>
+      </Text>
+      <Text Id="Text_FieldDevice" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">DEVICE</Translation>
+        <Translation Language="IT">DISPOSITIVO</Translation>
+      </Text>
+      <Text Id="Text_FieldFirmware" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">FIRMWARE</Translation>
+        <Translation Language="IT">FIRMWARE</Translation>
+      </Text>
+      <Text Id="Text_FieldUptime" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">UPTIME</Translation>
+        <Translation Language="IT">TEMPO ATTIVO</Translation>
+      </Text>
+      <Text Id="Text_FieldLanguage" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">LANGUAGE</Translation>
+        <Translation Language="IT">LINGUA</Translation>
+      </Text>
+      <Text Id="Text_FieldBrightness" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">BRIGHTNESS</Translation>
+        <Translation Language="IT">LUMINOSITA</Translation>
+      </Text>
+      <Text Id="Text_FieldSensor" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">SENSOR</Translation>
+        <Translation Language="IT">SENSORE</Translation>
+      </Text>
+      <Text Id="Text_FieldRelativePressure" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">RELATIVE PRESSURE</Translation>
+        <Translation Language="IT">PRESSIONE RELATIVA</Translation>
+      </Text>
+      <Text Id="Text_FieldRawPressure" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">RAW PRESSURE</Translation>
+        <Translation Language="IT">PRESSIONE RAW</Translation>
+      </Text>
+      <Text Id="Text_FieldZeroOffset" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">ZERO OFFSET</Translation>
+        <Translation Language="IT">OFFSET ZERO</Translation>
+      </Text>
+      <Text Id="Text_FieldAmbientAdc" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">AMBIENT ADC</Translation>
+        <Translation Language="IT">ADC AMBIENTE</Translation>
+      </Text>
+      <Text Id="Text_FieldChamberAdc" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">CHAMBER ADC</Translation>
+        <Translation Language="IT">ADC CAMERA</Translation>
+      </Text>
+      <Text Id="Text_FieldTarget" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">TARGET</Translation>
+        <Translation Language="IT">TARGET</Translation>
+      </Text>
+      <Text Id="Text_FieldDuty" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">PUMP DUTY</Translation>
+        <Translation Language="IT">DUTY POMPA</Translation>
+      </Text>
+      <Text Id="Text_FieldState" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">STATE</Translation>
+        <Translation Language="IT">STATO</Translation>
+      </Text>
+      <Text Id="Text_FieldFault" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">FAULT</Translation>
+        <Translation Language="IT">GUASTO</Translation>
+      </Text>
+      <Text Id="Text_FieldFram" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">FRAM</Translation>
+        <Translation Language="IT">FRAM</Translation>
+      </Text>
+      <Text Id="Text_FieldFramId" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">FRAM ID</Translation>
+        <Translation Language="IT">ID FRAM</Translation>
+      </Text>
+      <Text Id="Text_FieldFramSize" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">FRAM SIZE</Translation>
+        <Translation Language="IT">DIM. FRAM</Translation>
+      </Text>
+      <Text Id="Text_FieldSession" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">SAVED SESSION</Translation>
+        <Translation Language="IT">SESSIONE SALVATA</Translation>
+      </Text>
+      <Text Id="Text_FieldWinbond" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">WINBOND</Translation>
+        <Translation Language="IT">WINBOND</Translation>
+      </Text>
+      <Text Id="Text_FieldWinbondId" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">WINBOND ID</Translation>
+        <Translation Language="IT">ID WINBOND</Translation>
+      </Text>
+      <Text Id="Text_FieldWinbondSize" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">WINBOND SIZE</Translation>
+        <Translation Language="IT">DIM. WINBOND</Translation>
+      </Text>
+      <Text Id="Text_FieldAssetPackage" Alignment="Left" TypographyId="Step">
+        <Translation Language="GB">ASSET PACKAGE</Translation>
+        <Translation Language="IT">PACCHETTO ASSET</Translation>
+      </Text>
       <Text Id="Text_Brightness" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">BRIGHTNESS</Translation>
         <Translation Language="IT">LUMINOSITA</Translation>
@@ -305,10 +573,10 @@
     <Typography Id="Subtitle" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Body" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Caption" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x41-0x5A" />
-    <Typography Id="Step" Font="verdana.ttf" Size="11" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Step" Font="verdana.ttf" Size="11" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7E" />
     <Typography Id="Button" Font="verdana.ttf" Size="15" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2B-0x2D,0x30-0x39,0x41-0x5A" />
     <Typography Id="Status" Font="verdana.ttf" Size="17" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x3A,0x41-0x5A" />
-    <Typography Id="TimeValue" Font="verdana.ttf" Size="32" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x30-0x39,0x3A" />
+    <Typography Id="TimeValue" Font="verdana.ttf" Size="32" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2A,0x2D,0x30-0x39,0x3A" />
     <Typography Id="Metric" Font="verdana.ttf" Size="34" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
     <Typography Id="Hero" Font="verdana.ttf" Size="54" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
   </Typographies>

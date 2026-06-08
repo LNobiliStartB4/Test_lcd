@@ -46,31 +46,20 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box productBackground;
-    touchgfx::Box productAccent;
     touchgfx::TextArea productTitle;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  settingsButton;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  bandyButton;
-    touchgfx::Box bandyFrameTop;
-    touchgfx::Box bandyFrameBottom;
-    touchgfx::Box bandyFrameLeft;
-    touchgfx::Box bandyFrameRight;
-    touchgfx::ScalableImage bandyFrameTopLeft;
-    touchgfx::ScalableImage bandyFrameTopRight;
-    touchgfx::ScalableImage bandyFrameBottomLeft;
-    touchgfx::ScalableImage bandyFrameBottomRight;
+    touchgfx::Box bandyRowAccent;
+    touchgfx::Box bandyRowDivider;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  emerflowButton;
-    touchgfx::Box emerflowFrameTop;
-    touchgfx::Box emerflowFrameBottom;
-    touchgfx::Box emerflowFrameLeft;
-    touchgfx::Box emerflowFrameRight;
-    touchgfx::ScalableImage emerflowFrameTopLeft;
-    touchgfx::ScalableImage emerflowFrameTopRight;
-    touchgfx::ScalableImage emerflowFrameBottomLeft;
-    touchgfx::ScalableImage emerflowFrameBottomRight;
+    touchgfx::Box emerflowRowAccent;
+    touchgfx::Box emerflowRowDivider;
     touchgfx::ScalableImage emerflowLogo;
-    touchgfx::SVGImage svgImage1;
-    touchgfx::SVGImage svgImage2;
-    touchgfx::SVGImage svgImage3;
+    touchgfx::ScalableImage thdCornerLogo;
+    touchgfx::SVGImage settingsIcon;
+    touchgfx::SVGImage bandyLogo;
+    touchgfx::SVGImage bandyChevron;
+    touchgfx::SVGImage emerflowChevron;
 
 private:
 

@@ -3,6 +3,7 @@
 
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
+#include <gui/model/AdminAccessController.hpp>
 
 #include "display_bridge_rx.h"
 
@@ -209,4 +210,36 @@ TEST_CASE("Hemorflow STOP returns to wait screen")
     TestStub_SetSnapshot(&s);
     pumpModel(m);
     CHECK(m.shouldReturnToHemorflowWait());
+}
+
+TEST_CASE("Admin PIN authenticates and logout locks access again")
+{
+    AdminAccessController access;
+
+    CHECK(access.authenticate(1234U) == AdminAuthSuccess);
+    CHECK(access.isAuthenticated());
+
+    access.logout();
+    CHECK_FALSE(access.isAuthenticated());
+}
+
+TEST_CASE("Admin access locks for 30 seconds after three invalid PINs")
+{
+    AdminAccessController access;
+
+    CHECK(access.authenticate(1111U) == AdminAuthInvalidPin);
+    CHECK(access.authenticate(2222U) == AdminAuthInvalidPin);
+    CHECK(access.authenticate(3333U) == AdminAuthLocked);
+    CHECK(access.getLockoutRemainingSeconds() == 30U);
+    CHECK(access.authenticate(1234U) == AdminAuthLocked);
+
+    for (int i = 0; i < 299; ++i)
+    {
+        access.tick100ms();
+    }
+
+    CHECK(access.getLockoutRemainingSeconds() == 1U);
+    access.tick100ms();
+    CHECK(access.getLockoutRemainingSeconds() == 0U);
+    CHECK(access.authenticate(1234U) == AdminAuthSuccess);
 }

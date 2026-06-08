@@ -2,6 +2,7 @@
 #include <gui/model/ModelListener.hpp>
 #include "bandy_session_store.h"
 #include "display_bridge_rx.h"
+#include <string.h>
 #ifndef WIN32
 #include "display_backlight.h"
 #endif
@@ -46,8 +47,15 @@ Model::Model()
       bridgeTargetMbar(kDefaultTargetMbar),
       bridgePressureMbar(0),
       targetCommandPending(false),
-      pendingTargetMbar(kDefaultTargetMbar)
+      pendingTargetMbar(kDefaultTargetMbar),
+      adminAccess(),
+      adminDiagnostics(),
+      adminUptimeTicks100ms(0U)
 {
+    strncpy(adminDiagnostics.deviceName, "DISPLAY PROTOTYPE", sizeof(adminDiagnostics.deviceName) - 1U);
+    strncpy(adminDiagnostics.firmwareVersion, "SIMULATION", sizeof(adminDiagnostics.firmwareVersion) - 1U);
+    adminDiagnostics.framAvailable = true;
+    adminDiagnostics.framSizeBytes = 32768U;
 }
 
 void Model::setDisplayBrightnessPercent(uint8_t percent)
@@ -76,8 +84,11 @@ void Model::tick()
     }
 
     tickDivider = 0;
+    adminAccess.tick100ms();
+    ++adminUptimeTicks100ms;
     updateBridgeSnapshot();
     publishBandyStoreTelemetry();
+    updateAdminDiagnostics();
 
     if (hemorflowInitialized)
     {
@@ -446,4 +457,39 @@ bool Model::hasBandyStateChanged(const BandyState& previousState) const
            previousState.targetReached != bandyState.targetReached ||
            previousState.vacuumState != bandyState.vacuumState ||
            previousState.sessionState != bandyState.sessionState;
+}
+
+void Model::updateAdminDiagnostics()
+{
+    adminDiagnostics.uptimeSeconds = adminUptimeTicks100ms / 10U;
+    adminDiagnostics.language = uiLanguage;
+    adminDiagnostics.brightnessPercent = displayBrightnessPercent;
+    adminDiagnostics.pressureAvailable = bridgeSnapshotValid;
+    adminDiagnostics.pressureValid = bridgeSnapshotValid;
+    adminDiagnostics.relativePressureMbar = bridgePressureMbar;
+    adminDiagnostics.targetMbar = bridgeTargetMbar;
+    adminDiagnostics.pressureState = bridgeVacuumState;
+    adminDiagnostics.pressureFault = bridgeFault;
+}
+
+void Model::refreshAdminMemoryDiagnostics()
+{
+    bandy_session_store_record_t record = {};
+    const bandy_session_store_status_t status = BandySessionStore_Read(&record);
+
+    adminDiagnostics.framPresent =
+        (status == BANDY_SESSION_STORE_OK) ||
+        (status == BANDY_SESSION_STORE_EMPTY) ||
+        (status == BANDY_SESSION_STORE_INVALID);
+    adminDiagnostics.sessionRecordValid =
+        (status == BANDY_SESSION_STORE_OK) && record.valid;
+    strncpy(adminDiagnostics.framId,
+            adminDiagnostics.framPresent ? "MB85RS256B" : "N/A",
+            sizeof(adminDiagnostics.framId) - 1U);
+
+    adminDiagnostics.winbondAvailable = false;
+    adminDiagnostics.winbondPresent = false;
+    adminDiagnostics.winbondSizeBytes = 0U;
+    adminDiagnostics.assetPackageValid = false;
+    strncpy(adminDiagnostics.winbondId, "N/A", sizeof(adminDiagnostics.winbondId) - 1U);
 }

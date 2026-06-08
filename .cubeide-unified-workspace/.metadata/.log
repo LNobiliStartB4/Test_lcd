@@ -1,0 +1,30 @@
+!SESSION 2026-06-05 16:05:05.900 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -cleanBuild Pressure_Stabiliser/Release
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\TouchGFXProjects\Display_test_prova\.cubeide-unified-workspace -application org.eclipse.cdt.managedbuilder.core.headlessbuild -cleanBuild Pressure_Stabiliser/Release
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-06-05 16:05:38.888
+!MESSAGE Indexed 'Pressure_Stabiliser' (198 sources, 483 headers) in 26,2 sec: 37.923 declarations; 145.277 references; 2 unresolved inclusions; 92 syntax errors; 925 unresolved names (0,5%)
+!SESSION 2026-06-05 16:09:23.745 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -cleanBuild Pressure_Stabiliser/Release
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\TouchGFXProjects\Display_test_prova\.cubeide-unified-workspace -application org.eclipse.cdt.managedbuilder.core.headlessbuild -cleanBuild Pressure_Stabiliser/Release
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-06-05 16:09:47.285
+!MESSAGE Indexed 'Pressure_Stabiliser' (198 sources, 483 headers) in 18,4 sec: 37.942 declarations; 145.366 references; 2 unresolved inclusions; 92 syntax errors; 925 unresolved names (0,5%)
+!SESSION 2026-06-05 16:13:38.782 -----------------------------------------------
+eclipse.buildId=Version 2.0.0
+java.version=21.0.8
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Framework arguments:  -application org.eclipse.cdt.managedbuilder.core.headlessbuild -cleanBuild Pressure_Stabiliser/Release
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\TouchGFXProjects\Display_test_prova\.cubeide-unified-workspace -application org.eclipse.cdt.managedbuilder.core.headlessbuild -cleanBuild Pressure_Stabiliser/Release
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-06-05 16:14:11.971
+!MESSAGE Indexed 'Pressure_Stabiliser' (198 sources, 483 headers) in 26,1 sec: 37.888 declarations; 145.163 references; 2 unresolved inclusions; 92 syntax errors; 925 unresolved names (0,5%)

@@ -42,6 +42,7 @@ TouchGFX/gui/src/common/FrontendApplication.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
+ ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp \
  ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp \
  ../TouchGFX/gui/include/gui/common/FrontendHeap.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp \
@@ -109,13 +110,19 @@ TouchGFX/gui/src/common/FrontendApplication.o: \
  ../TouchGFX/gui/include/gui/screen10_screen/Screen10View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen10_screen/Screen10ViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen10_screen/Screen10Presenter.hpp \
+ ../TouchGFX/gui/include/gui/containers/SettingsMenuRow.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/SettingsMenuRowBase.hpp \
  ../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen11_screen/Screen11ViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
  ../TouchGFX/gui/include/gui/screen12_screen/Screen12View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen12_screen/Screen12ViewBase.hpp \
- ../TouchGFX/gui/include/gui/screen12_screen/Screen12Presenter.hpp
+ ../TouchGFX/gui/include/gui/screen12_screen/Screen12Presenter.hpp \
+ ../TouchGFX/gui/include/gui/common/AdminScreens.hpp \
+ ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
+ ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
@@ -158,6 +165,7 @@ TouchGFX/gui/src/common/FrontendApplication.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../TouchGFX/gui/include/gui/model/Model.hpp:
+../TouchGFX/gui/include/gui/model/AdminAccessController.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendHeap.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:
@@ -225,6 +233,8 @@ TouchGFX/gui/src/common/FrontendApplication.o: \
 ../TouchGFX/gui/include/gui/screen10_screen/Screen10View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen10_screen/Screen10ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen10_screen/Screen10Presenter.hpp:
+../TouchGFX/gui/include/gui/containers/SettingsMenuRow.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/containers/SettingsMenuRowBase.hpp:
 ../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen11_screen/Screen11ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp:
@@ -232,3 +242,7 @@ TouchGFX/gui/src/common/FrontendApplication.o: \
 ../TouchGFX/gui/include/gui/screen12_screen/Screen12View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen12_screen/Screen12ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen12_screen/Screen12Presenter.hpp:
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:
+../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
+../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
