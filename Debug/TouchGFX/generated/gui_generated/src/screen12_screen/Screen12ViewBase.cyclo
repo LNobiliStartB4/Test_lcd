@@ -27,8 +27,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen12ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
-../TouchGFX/generated/gui_generated/src/screen12_screen/Screen12ViewBase.cpp:89:1:Screen12ViewBase::~Screen12ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen12_screen/Screen12ViewBase.cpp:94:6:virtual void Screen12ViewBase::setupScreen()	1
+../TouchGFX/generated/gui_generated/src/screen12_screen/Screen12ViewBase.cpp:100:6:virtual void Screen12ViewBase::setupScreen()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	3
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = Screen12ViewBase; T1 = const touchgfx::AbstractButtonContainer&]	2
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = Screen12ViewBase; T1 = const touchgfx::AbstractButtonContainer&]	3
@@ -39,16 +38,17 @@
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen12Presenter>::~View()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen12ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
-../TouchGFX/generated/gui_generated/src/screen12_screen/Screen12ViewBase.cpp:89:1:virtual Screen12ViewBase::~Screen12ViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen12_screen/Screen12ViewBase.cpp:95:1:Screen12ViewBase::~Screen12ViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen12_screen/Screen12ViewBase.cpp:95:1:virtual Screen12ViewBase::~Screen12ViewBase()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	3
-../TouchGFX/generated/gui_generated/src/screen12_screen/Screen12ViewBase.cpp:99:6:void Screen12ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	4
+../TouchGFX/generated/gui_generated/src/screen12_screen/Screen12ViewBase.cpp:105:6:void Screen12ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	4
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	6
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	1
-../TouchGFX/generated/gui_generated/src/screen12_screen/Screen12ViewBase.cpp:9:1:Screen12ViewBase::Screen12ViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen12_screen/Screen12ViewBase.cpp:10:1:Screen12ViewBase::Screen12ViewBase()	1

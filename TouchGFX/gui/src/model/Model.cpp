@@ -184,6 +184,11 @@ void Model::decreaseBandyTarget()
     requestBandyTarget(bandyState.targetVacuumMbar - kTargetStepMbar);
 }
 
+void Model::setBandyTarget(int32_t targetMbar)
+{
+    requestBandyTarget(targetMbar);
+}
+
 bool Model::isVacuumCycleRunning() const
 {
     return bridgeSnapshotValid && (bridgeBandyState == static_cast<uint8_t>(BandySessionRunning));

@@ -1,2 +1,2 @@
-../TouchGFX/generated/images/src/SVGDatabase.cpp:1310:27:const touchgfx::VGObject* SVGDatabase::getInstance()	1
-../TouchGFX/generated/images/src/SVGDatabase.cpp:1315:10:uint16_t SVGDatabase::getInstanceSize()	1
+../TouchGFX/generated/images/src/SVGDatabase.cpp:2846:27:const touchgfx::VGObject* SVGDatabase::getInstance()	1
+../TouchGFX/generated/images/src/SVGDatabase.cpp:2851:10:uint16_t SVGDatabase::getInstanceSize()	1

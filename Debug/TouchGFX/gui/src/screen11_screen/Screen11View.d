@@ -73,7 +73,7 @@ TouchGFX/gui/src/screen11_screen/Screen11View.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp
 ../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen11_screen/Screen11ViewBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -147,4 +147,4 @@ TouchGFX/gui/src/screen11_screen/Screen11View.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:

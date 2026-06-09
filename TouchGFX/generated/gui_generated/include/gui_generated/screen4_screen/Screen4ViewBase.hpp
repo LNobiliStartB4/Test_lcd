@@ -12,6 +12,7 @@
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen4ViewBase : public touchgfx::View<Screen4Presenter>
 {
@@ -46,9 +47,15 @@ protected:
     touchgfx::ScalableImage rfidIcon;
     touchgfx::TextArea rfidInstruction;
     touchgfx::TextArea rfidStatus;
-    touchgfx::ScalableImage thdCornerLogo;
+    touchgfx::SVGImage svgImage1;
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

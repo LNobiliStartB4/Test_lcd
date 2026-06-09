@@ -75,7 +75,6 @@ TouchGFX/gui/src/screen10_screen/Screen10View.o: \
  ../TouchGFX/gui/include/gui/containers/SettingsMenuRow.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/containers/SettingsMenuRowBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  ../TouchGFX/generated/images/include/images/SVGDatabase.hpp \
  ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
 ../TouchGFX/gui/include/gui/screen10_screen/Screen10View.hpp:
@@ -153,6 +152,5 @@ TouchGFX/gui/src/screen10_screen/Screen10View.o: \
 ../TouchGFX/gui/include/gui/containers/SettingsMenuRow.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/SettingsMenuRowBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 ../TouchGFX/generated/images/include/images/SVGDatabase.hpp:
 ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:

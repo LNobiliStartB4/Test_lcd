@@ -27,7 +27,7 @@ struct Typography
 
 struct TypographyFontIndex
 {
-    static const touchgfx::FontId TITLE = 0;     // verdana_24_2bpp
+    static const touchgfx::FontId TITLE = 0;     // verdana_27_2bpp
     static const touchgfx::FontId SUBTITLE = 1;  // verdana_16_2bpp
     static const touchgfx::FontId BODY = 1;      // verdana_16_2bpp
     static const touchgfx::FontId CAPTION = 1;   // verdana_16_2bpp
@@ -36,7 +36,7 @@ struct TypographyFontIndex
     static const touchgfx::FontId STATUS = 4;    // verdana_17_2bpp
     static const touchgfx::FontId TIMEVALUE = 5; // verdana_32_2bpp
     static const touchgfx::FontId METRIC = 6;    // verdana_34_2bpp
-    static const touchgfx::FontId HERO = 7;      // verdana_54_2bpp
+    static const touchgfx::FontId HERO = 7;      // verdana_45_2bpp
     static const uint16_t NUMBER_OF_FONTS = 8;
 };
 

@@ -92,6 +92,25 @@ TEST_CASE("increaseBandyTarget cannot go above MAX 490 mbar")
     CHECK(TestStub_GetSendCount_BandyTarget() == 0);
 }
 
+TEST_CASE("setBandyTarget sends an exact value and clamps to the supported range")
+{
+    TestStub_Reset();
+    Model m;
+    m.initializeBandyDemo();
+
+    m.setBandyTarget(420);
+    CHECK(m.getBandyState().targetVacuumMbar == 420);
+    CHECK(TestStub_GetLastBandyTarget() == 420);
+
+    m.setBandyTarget(100);
+    CHECK(m.getBandyState().targetVacuumMbar == 290);
+    CHECK(TestStub_GetLastBandyTarget() == 290);
+
+    m.setBandyTarget(800);
+    CHECK(m.getBandyState().targetVacuumMbar == 490);
+    CHECK(TestStub_GetLastBandyTarget() == 490);
+}
+
 TEST_CASE("Lifecycle commands map to bridge sends")
 {
     TestStub_Reset();

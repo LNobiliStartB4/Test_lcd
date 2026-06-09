@@ -28,6 +28,7 @@ public:
     void stopRfidScan();
     void increaseBandyTarget();
     void decreaseBandyTarget();
+    void setBandyTarget(int32_t targetMbar);
     bool isVacuumCycleRunning() const;
     bool isRfidApproved() const;
     bool canOpenBandyScreen() const;

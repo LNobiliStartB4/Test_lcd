@@ -13,7 +13,7 @@
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen3ViewBase : public touchgfx::View<Screen3Presenter>
 {
@@ -53,7 +53,7 @@ protected:
     touchgfx::TextArea screen3TargetMbarLabel;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  screen3StartButton;
     touchgfx::TextArea screen3StartLabel;
-    touchgfx::ScalableImage thdCornerLogo;
+    touchgfx::SVGImage svgImage1;
 
     /*
      * Wildcard Buffers
@@ -62,6 +62,12 @@ protected:
     touchgfx::Unicode::UnicodeChar screen3TargetValueBuffer[SCREEN3TARGETVALUE_SIZE];
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

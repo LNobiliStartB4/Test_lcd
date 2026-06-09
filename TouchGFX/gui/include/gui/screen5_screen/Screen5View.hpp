@@ -4,7 +4,6 @@
 #include <gui/model/DashboardTypes.hpp>
 #include <gui_generated/screen5_screen/Screen5ViewBase.hpp>
 #include <gui/screen5_screen/Screen5Presenter.hpp>
-#include <stdint.h>
 
 class Screen5View : public Screen5ViewBase
 {
@@ -16,6 +15,7 @@ public:
     virtual void backClicked();
     virtual void decreaseTargetClicked();
     virtual void increaseTargetClicked();
+    virtual void openKeypadClicked();
 
     void applyBandyState(const BandyState& state);
 

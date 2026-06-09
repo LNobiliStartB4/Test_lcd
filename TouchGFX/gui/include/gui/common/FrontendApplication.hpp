@@ -17,6 +17,7 @@ public:
     void gotoRfidWaitScreenNoTransition();
     void gotoBandyScreenNoTransition();
     void gotoSetpointEditScreenNoTransition();
+    void gotoSetpointKeypadScreenNoTransition();
     void gotoPauseScreenNoTransition();
     void gotoEndConfirmScreenNoTransition();
     void gotoHemorflowWaitScreenNoTransition();
@@ -41,6 +42,7 @@ private:
     void gotoRfidWaitScreenNoTransitionImpl();
     void gotoBandyScreenNoTransitionImpl();
     void gotoSetpointEditScreenNoTransitionImpl();
+    void gotoSetpointKeypadScreenNoTransitionImpl();
     void gotoPauseScreenNoTransitionImpl();
     void gotoEndConfirmScreenNoTransitionImpl();
     void gotoHemorflowWaitScreenNoTransitionImpl();
@@ -58,6 +60,7 @@ private:
     touchgfx::Callback<FrontendApplication> rfidWaitTransitionCallback;
     touchgfx::Callback<FrontendApplication> bandyTransitionCallback;
     touchgfx::Callback<FrontendApplication> setpointEditTransitionCallback;
+    touchgfx::Callback<FrontendApplication> setpointKeypadTransitionCallback;
     touchgfx::Callback<FrontendApplication> pauseTransitionCallback;
     touchgfx::Callback<FrontendApplication> endConfirmTransitionCallback;
     touchgfx::Callback<FrontendApplication> hemorflowWaitTransitionCallback;

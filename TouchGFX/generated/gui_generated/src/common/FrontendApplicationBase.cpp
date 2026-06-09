@@ -33,6 +33,8 @@
 #include <gui/screen11_screen/Screen11Presenter.hpp>
 #include <gui/screen12_screen/Screen12View.hpp>
 #include <gui/screen12_screen/Screen12Presenter.hpp>
+#include <gui/screen18_screen/Screen18View.hpp>
+#include <gui/screen18_screen/Screen18Presenter.hpp>
 
 using namespace touchgfx;
 

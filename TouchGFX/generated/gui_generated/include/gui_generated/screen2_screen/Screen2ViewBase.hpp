@@ -10,7 +10,6 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
@@ -54,12 +53,12 @@ protected:
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  emerflowButton;
     touchgfx::Box emerflowRowAccent;
     touchgfx::Box emerflowRowDivider;
-    touchgfx::ScalableImage emerflowLogo;
-    touchgfx::ScalableImage thdCornerLogo;
     touchgfx::SVGImage settingsIcon;
-    touchgfx::SVGImage bandyLogo;
     touchgfx::SVGImage bandyChevron;
     touchgfx::SVGImage emerflowChevron;
+    touchgfx::SVGImage svgImage1;
+    touchgfx::SVGImage svgImage2;
+    touchgfx::SVGImage svgImage3;
 
 private:
 

@@ -11,7 +11,7 @@
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen5ViewBase : public touchgfx::View<Screen5Presenter>
 {
@@ -35,6 +35,10 @@ public:
     {
         // Override and implement this function in Screen5
     }
+    virtual void openKeypadClicked()
+    {
+        // Override and implement this function in Screen5
+    }
 
 protected:
     FrontendApplication& application() {
@@ -55,7 +59,9 @@ protected:
     touchgfx::TextArea setpointMinusLabel;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setpointPlusButton;
     touchgfx::TextArea setpointPlusLabel;
-    touchgfx::ScalableImage thdCornerLogo;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setpointKeypadButton;
+    touchgfx::SVGImage setpointKeypadIcon;
+    touchgfx::SVGImage svgImage1;
 
     /*
      * Wildcard Buffers
@@ -64,6 +70,12 @@ protected:
     touchgfx::Unicode::UnicodeChar setpointValueBuffer[SETPOINTVALUE_SIZE];
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

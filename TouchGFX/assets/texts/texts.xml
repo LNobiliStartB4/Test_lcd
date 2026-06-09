@@ -19,8 +19,8 @@
         <Translation Language="IT">Avvio sistema...</Translation>
       </Text>
       <Text Id="Text_ProductTitle" Alignment="Left" TypographyId="Title">
-        <Translation Language="GB">SELECT APP</Translation>
-        <Translation Language="IT">SELEZIONA APP</Translation>
+        <Translation Language="GB">S E L E C T   A P P</Translation>
+        <Translation Language="IT">S E L E Z I O N A   A P P</Translation>
       </Text>
       <Text Id="Text_ProductSubtitle" Alignment="Left" TypographyId="Subtitle">
         <Translation Language="GB">Choose the connected prototype</Translation>
@@ -398,6 +398,10 @@
         <Translation Language="GB">SETPOINT</Translation>
         <Translation Language="IT">SETPOINT</Translation>
       </Text>
+      <Text Id="Text_SetpointKeypadRange" Alignment="Center" TypographyId="Step">
+        <Translation Language="GB">VALID RANGE 290 - 490 MBAR</Translation>
+        <Translation Language="IT">INTERVALLO 290 - 490 MBAR</Translation>
+      </Text>
       <Text Id="Text_SetpointMinus" Alignment="Center" TypographyId="Hero">
         <Translation Language="GB">-</Translation>
         <Translation Language="IT">-</Translation>
@@ -569,7 +573,7 @@
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Title" Font="verdana.ttf" Size="24" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Title" Font="verdana.ttf" Size="27" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Subtitle" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Body" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Caption" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x41-0x5A" />
@@ -578,6 +582,6 @@
     <Typography Id="Status" Font="verdana.ttf" Size="17" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x3A,0x41-0x5A" />
     <Typography Id="TimeValue" Font="verdana.ttf" Size="32" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2A,0x2D,0x30-0x39,0x3A" />
     <Typography Id="Metric" Font="verdana.ttf" Size="34" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
-    <Typography Id="Hero" Font="verdana.ttf" Size="54" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
+    <Typography Id="Hero" Font="verdana.ttf" Size="45" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
   </Typographies>
 </TextDatabase>

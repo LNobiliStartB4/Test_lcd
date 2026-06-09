@@ -5,7 +5,7 @@
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include <images/BitmapDatabase.hpp>
+#include<images/SVGDatabase.hpp>
 
 Screen10ViewBase::Screen10ViewBase() :
     flexButtonCallback(this, &Screen10ViewBase::flexButtonCallbackHandler)
@@ -88,10 +88,13 @@ Screen10ViewBase::Screen10ViewBase() :
     settingsNextLabel.setTypedText(touchgfx::TypedText(T_TEXT_SETTINGSNEXT));
     add(settingsNextLabel);
 
-    thdCornerLogo.setBitmap(touchgfx::Bitmap(BITMAP_THD_CORNER_LOGO_ID));
-    thdCornerLogo.setPosition(428, 8, 44, 44);
-    thdCornerLogo.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(thdCornerLogo);
+    svgImage1.setSVG(SVG_LOGO_UFFICIALE_THD_2016_RGB_ID);
+    svgImage1.setPosition(391, 8, 80, 80);
+    svgImage1.setScale(0.58f, 0.66f);
+    svgImage1.setImagePosition(0, 0);
+    svgImage1.setRotationCenter(0, 0);
+    svgImage1.setRotation(0.0f);
+    add(svgImage1);
 }
 
 Screen10ViewBase::~Screen10ViewBase()

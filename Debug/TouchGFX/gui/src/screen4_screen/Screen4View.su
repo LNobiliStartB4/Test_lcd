@@ -6,4 +6,4 @@
 ../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:11:13:virtual Screen4View::~Screen4View()	8	static
 ../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:4:1:Screen4View::Screen4View()	8	static
 ../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:13:6:virtual void Screen4View::setupScreen()	16	static
-../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:37:6:virtual void Screen4View::handleTickEvent()	8	static
+../TouchGFX/gui/src/screen4_screen/Screen4View.cpp:37:6:virtual void Screen4View::handleTickEvent()	16	static

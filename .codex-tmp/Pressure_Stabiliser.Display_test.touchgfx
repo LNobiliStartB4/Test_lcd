@@ -90,17 +90,17 @@
           {
             "Type": "Box",
             "Name": "productBackground",
-            "X": 3,
+            "X": 0,
             "Width": 480,
             "Height": 320
           },
           {
             "Type": "Box",
             "Name": "productAccent",
-            "X": 32,
-            "Y": 28,
-            "Width": 3,
-            "Height": 28,
+            "X": 24,
+            "Y": 24,
+            "Width": 4,
+            "Height": 32,
             "Color": {
               "Red": 216,
               "Green": 178,
@@ -110,9 +110,9 @@
           {
             "Type": "TextArea",
             "Name": "productTitle",
-            "X": 48,
-            "Y": 28,
-            "Width": 320,
+            "X": 40,
+            "Y": 24,
+            "Width": 280,
             "Height": 28,
             "TextId": "Text_ProductTitle",
             "TextRotation": "0",
@@ -125,31 +125,36 @@
           {
             "Type": "FlexButton",
             "Name": "settingsButton",
-            "X": 320,
-            "Y": 20,
-            "Width": 100,
-            "Height": 52,
+            "X": 356,
+            "Y": 4,
+            "Width": 56,
+            "Height": 56,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "BorderSize": 1,
+                "BorderSize": 0,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
+                },
                 "ColorPressed": {
-                  "Red": 14,
-                  "Green": 14,
-                  "Blue": 12
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
                 },
                 "ColorBorderReleased": {
-                  "Red": 245,
-                  "Green": 242,
-                  "Blue": 232
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
                 },
                 "ColorBorderPressed": {
-                  "Red": 255,
-                  "Green": 255,
-                  "Blue": 248
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
                 }
               }
             ]
@@ -157,41 +162,47 @@
           {
             "Type": "FlexButton",
             "Name": "bandyButton",
-            "X": 12,
-            "Y": 108,
-            "Width": 225,
-            "Height": 156,
+            "X": 24,
+            "Y": 96,
+            "Width": 432,
+            "Height": 82,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 0,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
+                },
                 "ColorPressed": {
-                  "Red": 14,
-                  "Green": 14,
-                  "Blue": 12
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
                 },
                 "ColorBorderReleased": {
-                  "Red": 245,
-                  "Green": 218,
-                  "Blue": 142
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
                 },
                 "ColorBorderPressed": {
-                  "Red": 255,
-                  "Green": 232,
-                  "Blue": 166
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
                 }
               }
             ]
           },
           {
             "Type": "Box",
-            "Name": "bandyFrameTop",
-            "X": 23,
+            "Name": "bandyRowAccent",
+            "X": 24,
             "Y": 108,
-            "Width": 203,
-            "Height": 2,
+            "Width": 4,
+            "Height": 58,
             "Color": {
               "Red": 216,
               "Green": 178,
@@ -200,121 +211,61 @@
           },
           {
             "Type": "Box",
-            "Name": "bandyFrameBottom",
-            "X": 23,
-            "Y": 262,
-            "Width": 203,
-            "Height": 2,
+            "Name": "bandyRowDivider",
+            "X": 40,
+            "Y": 177,
+            "Width": 400,
+            "Height": 1,
             "Color": {
-              "Red": 216,
-              "Green": 178,
-              "Blue": 71
+              "Red": 46,
+              "Green": 54,
+              "Blue": 63
             }
-          },
-          {
-            "Type": "Box",
-            "Name": "bandyFrameLeft",
-            "X": 12,
-            "Y": 119,
-            "Width": 2,
-            "Height": 134,
-            "Color": {
-              "Red": 216,
-              "Green": 178,
-              "Blue": 71
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "bandyFrameRight",
-            "X": 235,
-            "Y": 119,
-            "Width": 2,
-            "Height": 134,
-            "Color": {
-              "Red": 216,
-              "Green": 178,
-              "Blue": 71
-            }
-          },
-          {
-            "Type": "ScalableImage",
-            "Name": "bandyFrameTopLeft",
-            "X": 12,
-            "Y": 108,
-            "Width": 12,
-            "Height": 12,
-            "Filename": "screen2_bandy_corner_tl.png",
-            "ScalingAlgorithm": "Bilinear Interpolation"
-          },
-          {
-            "Type": "ScalableImage",
-            "Name": "bandyFrameTopRight",
-            "X": 225,
-            "Y": 108,
-            "Width": 12,
-            "Height": 12,
-            "Filename": "screen2_bandy_corner_tr.png",
-            "ScalingAlgorithm": "Bilinear Interpolation"
-          },
-          {
-            "Type": "ScalableImage",
-            "Name": "bandyFrameBottomLeft",
-            "X": 12,
-            "Y": 252,
-            "Width": 12,
-            "Height": 12,
-            "Filename": "screen2_bandy_corner_bl.png",
-            "ScalingAlgorithm": "Bilinear Interpolation"
-          },
-          {
-            "Type": "ScalableImage",
-            "Name": "bandyFrameBottomRight",
-            "X": 225,
-            "Y": 252,
-            "Width": 12,
-            "Height": 12,
-            "Filename": "screen2_bandy_corner_br.png",
-            "ScalingAlgorithm": "Bilinear Interpolation"
           },
           {
             "Type": "FlexButton",
             "Name": "emerflowButton",
-            "X": 244,
-            "Y": 108,
-            "Width": 225,
-            "Height": 156,
+            "X": 24,
+            "Y": 190,
+            "Width": 432,
+            "Height": 82,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "BoxWithBorderButtonStyle",
+                "BorderSize": 0,
+                "ColorReleased": {
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
+                },
                 "ColorPressed": {
-                  "Red": 12,
-                  "Green": 18,
-                  "Blue": 24
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
                 },
                 "ColorBorderReleased": {
-                  "Red": 142,
-                  "Green": 164,
-                  "Blue": 184
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
                 },
                 "ColorBorderPressed": {
-                  "Red": 180,
-                  "Green": 204,
-                  "Blue": 224
+                  "Red": 0,
+                  "Green": 0,
+                  "Blue": 0
                 }
               }
             ]
           },
           {
             "Type": "Box",
-            "Name": "emerflowFrameTop",
-            "X": 254,
-            "Y": 108,
-            "Width": 203,
-            "Height": 2,
+            "Name": "emerflowRowAccent",
+            "X": 24,
+            "Y": 202,
+            "Width": 4,
+            "Height": 58,
             "Color": {
               "Red": 86,
               "Green": 104,
@@ -323,138 +274,84 @@
           },
           {
             "Type": "Box",
-            "Name": "emerflowFrameBottom",
-            "X": 254,
-            "Y": 262,
-            "Width": 203,
-            "Height": 2,
+            "Name": "emerflowRowDivider",
+            "X": 40,
+            "Y": 271,
+            "Width": 400,
+            "Height": 1,
             "Color": {
-              "Red": 86,
-              "Green": 104,
-              "Blue": 116
+              "Red": 46,
+              "Green": 54,
+              "Blue": 63
             }
-          },
-          {
-            "Type": "Box",
-            "Name": "emerflowFrameLeft",
-            "X": 243,
-            "Y": 119,
-            "Width": 2,
-            "Height": 134,
-            "Color": {
-              "Red": 86,
-              "Green": 104,
-              "Blue": 116
-            }
-          },
-          {
-            "Type": "Box",
-            "Name": "emerflowFrameRight",
-            "X": 466,
-            "Y": 119,
-            "Width": 2,
-            "Height": 134,
-            "Color": {
-              "Red": 86,
-              "Green": 104,
-              "Blue": 116
-            }
-          },
-          {
-            "Type": "ScalableImage",
-            "Name": "emerflowFrameTopLeft",
-            "X": 243,
-            "Y": 108,
-            "Width": 12,
-            "Height": 12,
-            "Filename": "screen2_hemorflow_corner_tl.png",
-            "ScalingAlgorithm": "Bilinear Interpolation"
-          },
-          {
-            "Type": "ScalableImage",
-            "Name": "emerflowFrameTopRight",
-            "X": 456,
-            "Y": 108,
-            "Width": 12,
-            "Height": 12,
-            "Filename": "screen2_hemorflow_corner_tr.png",
-            "ScalingAlgorithm": "Bilinear Interpolation"
-          },
-          {
-            "Type": "ScalableImage",
-            "Name": "emerflowFrameBottomLeft",
-            "X": 243,
-            "Y": 252,
-            "Width": 12,
-            "Height": 12,
-            "Filename": "screen2_hemorflow_corner_bl.png",
-            "ScalingAlgorithm": "Bilinear Interpolation"
-          },
-          {
-            "Type": "ScalableImage",
-            "Name": "emerflowFrameBottomRight",
-            "X": 456,
-            "Y": 252,
-            "Width": 12,
-            "Height": 12,
-            "Filename": "screen2_hemorflow_corner_br.png",
-            "ScalingAlgorithm": "Bilinear Interpolation"
           },
           {
             "Type": "ScalableImage",
             "Name": "emerflowLogo",
-            "X": 266,
-            "Y": 167,
-            "Width": 190,
-            "Height": 58,
+            "X": 56,
+            "Y": 216,
+            "Width": 148,
+            "Height": 31,
             "Filename": "thd_hemorflow_logo.png",
             "ScalingAlgorithm": "Bilinear Interpolation"
           },
           {
             "Type": "SvgImage",
-            "Name": "svgImage1",
-            "X": 306,
-            "Y": -92,
-            "Width": 19,
-            "Height": 15,
+            "Name": "settingsIcon",
+            "X": 370,
+            "Y": 18,
+            "Width": 28,
+            "Height": 28,
             "Image": "settings.svg",
             "FitImageToSize": true,
-            "ImageHorizontalScale": 0.68,
-            "ImageVerticalScale": 0.54
+            "ImageHorizontalScale": 1.0,
+            "ImageVerticalScale": 1.0
           },
           {
             "Type": "SvgImage",
-            "Name": "svgImage2",
-            "X": 353,
-            "Y": 25,
-            "Width": 34,
-            "Height": 34,
-            "Image": "settings.svg",
-            "FitImageToSize": true,
-            "ImageHorizontalScale": 1.21,
-            "ImageVerticalScale": 1.21
-          },
-          {
-            "Type": "SvgImage",
-            "Name": "svgImage3",
-            "X": 32,
-            "Y": 148,
-            "Width": 176,
-            "Height": 77,
+            "Name": "bandyLogo",
+            "X": 56,
+            "Y": 108,
+            "Width": 230,
+            "Height": 57,
             "Image": "ogo.svg",
             "FitImageToSize": true,
-            "ImageHorizontalScale": 0.22,
-            "ImageVerticalScale": 0.4
+            "ImageHorizontalScale": 0.273,
+            "ImageVerticalScale": 0.273
           },
           {
             "Type": "ScalableImage",
             "Name": "thdCornerLogo",
             "X": 428,
-            "Y": 8,
-            "Width": 44,
-            "Height": 44,
+            "Y": 14,
+            "Width": 36,
+            "Height": 36,
             "Filename": "thd_corner_logo.png",
             "ScalingAlgorithm": "Bilinear Interpolation"
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "bandyChevron",
+            "X": 416,
+            "Y": 125,
+            "Width": 24,
+            "Height": 24,
+            "Image": "settings_chevron_dim.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 1.0,
+            "ImageVerticalScale": 1.0
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "emerflowChevron",
+            "X": 416,
+            "Y": 219,
+            "Width": 24,
+            "Height": 24,
+            "Image": "settings_chevron_dim.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 1.0,
+            "ImageVerticalScale": 1.0
           }
         ],
         "Interactions": [

@@ -12,7 +12,7 @@
 #include <touchgfx/widgets/TextArea.hpp>
 #include <gui/containers/SettingsMenuRow.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen10ViewBase : public touchgfx::View<Screen10Presenter>
 {
@@ -59,7 +59,7 @@ protected:
     touchgfx::TextAreaWithOneWildcard settingsPageIndicator;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  settingsNextButton;
     touchgfx::TextArea settingsNextLabel;
-    touchgfx::ScalableImage thdCornerLogo;
+    touchgfx::SVGImage svgImage1;
 
     /*
      * Wildcard Buffers

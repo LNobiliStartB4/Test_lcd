@@ -12,6 +12,7 @@
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen8ViewBase : public touchgfx::View<Screen8Presenter>
 {
@@ -46,9 +47,15 @@ protected:
     touchgfx::ScalableImage hemorflowPcIcon;
     touchgfx::TextArea hemorflowWaitLabel;
     touchgfx::TextArea hemorflowWaitSubtitle;
-    touchgfx::ScalableImage thdCornerLogo;
+    touchgfx::SVGImage svgImage1;
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

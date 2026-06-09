@@ -67,6 +67,9 @@
     <ClCompile Include="..\..\generated\gui_generated\src\screen12_screen\Screen12ViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\SettingsMenuRow.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\SettingsMenuRowBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen18_screen\Screen18Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen18_screen\Screen18View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen18_screen\Screen18ViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\assets\fonts\verdana.ttf"/>
@@ -365,6 +368,9 @@
     <ClInclude Include="..\..\gui\include\gui\common\AdminScreens.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\SettingsMenuRow.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\SettingsMenuRowBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen18_screen\Screen18Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen18_screen\Screen18View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen18_screen\Screen18ViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

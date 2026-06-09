@@ -367,6 +367,18 @@
     <Filter Include="Source Files\generated\gui_generated\screen11_screen">
       <UniqueIdentifier>2A26F560-E542-E8CF-C678-A95FB2FE4F1E</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\screen18_screen">
+      <UniqueIdentifier>916488CD-95EE-48BE-C72B-E0946095926A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen18_screen">
+      <UniqueIdentifier>4E6CE5FC-C68B-86D9-E3FD-4876E56568BD</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen18_screen">
+      <UniqueIdentifier>2AC7CCA0-D1C6-E386-B543-7844FCCDB7DD</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen18_screen">
+      <UniqueIdentifier>8CF94230-5C64-9558-D014-939E77907D65</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -536,6 +548,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\SettingsMenuRowBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen18_screen\Screen18Presenter.cpp">
+      <Filter>Source Files\gui\screen18_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen18_screen\Screen18View.cpp">
+      <Filter>Source Files\gui\screen18_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen18_screen\Screen18ViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen18_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1422,6 +1443,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\SettingsMenuRowBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen18_screen\Screen18Presenter.hpp">
+      <Filter>Header Files\gui\screen18_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen18_screen\Screen18View.hpp">
+      <Filter>Header Files\gui\screen18_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen18_screen\Screen18ViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen18_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

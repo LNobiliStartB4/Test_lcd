@@ -5,28 +5,29 @@
 ../TouchGFX/gui/src/model/Model.cpp:152:6:void Model::endBandyDemo()	1
 ../TouchGFX/gui/src/model/Model.cpp:157:6:void Model::startRfidScan()	1
 ../TouchGFX/gui/src/model/Model.cpp:162:6:void Model::stopRfidScan()	1
-../TouchGFX/gui/src/model/Model.cpp:187:6:bool Model::isVacuumCycleRunning() const	2
-../TouchGFX/gui/src/model/Model.cpp:192:6:bool Model::isRfidApproved() const	2
-../TouchGFX/gui/src/model/Model.cpp:197:6:bool Model::canOpenBandyScreen() const	2
-../TouchGFX/gui/src/model/Model.cpp:204:6:bool Model::canOpenPauseScreen() const	2
-../TouchGFX/gui/src/model/Model.cpp:218:6:bool Model::canOpenHemorflowMonitor() const	3
-../TouchGFX/gui/src/model/Model.cpp:225:6:bool Model::shouldReturnToHemorflowWait() const	3
-../TouchGFX/gui/src/model/Model.cpp:232:6:void Model::notifyBandyState()	2
-../TouchGFX/gui/src/model/Model.cpp:240:6:void Model::updateBridgeSnapshot()	4
-../TouchGFX/gui/src/model/Model.cpp:280:6:void Model::publishBandyStoreTelemetry()	4
-../TouchGFX/gui/src/model/Model.cpp:332:6:void Model::updateHemorflowFromInput()	3
-../TouchGFX/gui/src/model/Model.cpp:209:6:void Model::initializeHemorflowMonitor()	1
-../TouchGFX/gui/src/model/Model.cpp:346:6:void Model::updateBandyDerivedState()	2
-../TouchGFX/gui/src/model/Model.cpp:395:9:int32_t Model::clampTarget(int32_t) const	1
-../TouchGFX/gui/src/model/Model.cpp:410:9:int32_t Model::clampVacuum(int32_t) const	1
-../TouchGFX/gui/src/model/Model.cpp:425:6:void Model::updateSimulatedVacuum()	4
-../TouchGFX/gui/src/model/Model.cpp:303:6:void Model::updateBandyFromInput()	5
+../TouchGFX/gui/src/model/Model.cpp:192:6:bool Model::isVacuumCycleRunning() const	2
+../TouchGFX/gui/src/model/Model.cpp:197:6:bool Model::isRfidApproved() const	2
+../TouchGFX/gui/src/model/Model.cpp:202:6:bool Model::canOpenBandyScreen() const	2
+../TouchGFX/gui/src/model/Model.cpp:209:6:bool Model::canOpenPauseScreen() const	2
+../TouchGFX/gui/src/model/Model.cpp:223:6:bool Model::canOpenHemorflowMonitor() const	3
+../TouchGFX/gui/src/model/Model.cpp:230:6:bool Model::shouldReturnToHemorflowWait() const	3
+../TouchGFX/gui/src/model/Model.cpp:237:6:void Model::notifyBandyState()	2
+../TouchGFX/gui/src/model/Model.cpp:245:6:void Model::updateBridgeSnapshot()	4
+../TouchGFX/gui/src/model/Model.cpp:285:6:void Model::publishBandyStoreTelemetry()	4
+../TouchGFX/gui/src/model/Model.cpp:337:6:void Model::updateHemorflowFromInput()	3
+../TouchGFX/gui/src/model/Model.cpp:214:6:void Model::initializeHemorflowMonitor()	1
+../TouchGFX/gui/src/model/Model.cpp:351:6:void Model::updateBandyDerivedState()	2
+../TouchGFX/gui/src/model/Model.cpp:400:9:int32_t Model::clampTarget(int32_t) const	1
+../TouchGFX/gui/src/model/Model.cpp:415:9:int32_t Model::clampVacuum(int32_t) const	1
+../TouchGFX/gui/src/model/Model.cpp:430:6:void Model::updateSimulatedVacuum()	4
+../TouchGFX/gui/src/model/Model.cpp:308:6:void Model::updateBandyFromInput()	5
 ../TouchGFX/gui/src/model/Model.cpp:113:6:void Model::initializeBandyDemo()	2
 ../TouchGFX/gui/src/model/Model.cpp:132:6:void Model::startBandyDemo()	2
-../TouchGFX/gui/src/model/Model.cpp:450:6:bool Model::hasBandyStateChanged(const BandyState&) const	4
-../TouchGFX/gui/src/model/Model.cpp:364:6:void Model::requestBandyTarget(int32_t)	5
+../TouchGFX/gui/src/model/Model.cpp:455:6:bool Model::hasBandyStateChanged(const BandyState&) const	4
+../TouchGFX/gui/src/model/Model.cpp:369:6:void Model::requestBandyTarget(int32_t)	5
 ../TouchGFX/gui/src/model/Model.cpp:167:6:void Model::increaseBandyTarget()	2
 ../TouchGFX/gui/src/model/Model.cpp:177:6:void Model::decreaseBandyTarget()	2
-../TouchGFX/gui/src/model/Model.cpp:462:6:void Model::updateAdminDiagnostics()	1
+../TouchGFX/gui/src/model/Model.cpp:187:6:void Model::setBandyTarget(int32_t)	1
+../TouchGFX/gui/src/model/Model.cpp:467:6:void Model::updateAdminDiagnostics()	1
 ../TouchGFX/gui/src/model/Model.cpp:79:6:void Model::tick()	6
-../TouchGFX/gui/src/model/Model.cpp:475:6:void Model::refreshAdminMemoryDiagnostics()	2
+../TouchGFX/gui/src/model/Model.cpp:480:6:void Model::refreshAdminMemoryDiagnostics()	2

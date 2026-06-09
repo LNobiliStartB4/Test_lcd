@@ -23,6 +23,8 @@
 #include <gui/screen11_screen/Screen11View.hpp>
 #include <gui/screen12_screen/Screen12Presenter.hpp>
 #include <gui/screen12_screen/Screen12View.hpp>
+#include <gui/screen18_screen/Screen18Presenter.hpp>
+#include <gui/screen18_screen/Screen18View.hpp>
 #include <touchgfx/transitions/NoTransition.hpp>
 
 FrontendApplication::FrontendApplication(Model& m, FrontendHeap& heap)
@@ -52,6 +54,12 @@ void FrontendApplication::gotoSetpointEditScreenNoTransition()
 {
     setpointEditTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoSetpointEditScreenNoTransitionImpl);
     pendingScreenTransitionCallback = &setpointEditTransitionCallback;
+}
+
+void FrontendApplication::gotoSetpointKeypadScreenNoTransition()
+{
+    setpointKeypadTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoSetpointKeypadScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &setpointKeypadTransitionCallback;
 }
 
 void FrontendApplication::gotoPauseScreenNoTransition()
@@ -144,6 +152,11 @@ void FrontendApplication::gotoBandyScreenNoTransitionImpl()
 void FrontendApplication::gotoSetpointEditScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<Screen5View, Screen5Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplication::gotoSetpointKeypadScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen18View, Screen18Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 void FrontendApplication::gotoPauseScreenNoTransitionImpl()

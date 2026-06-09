@@ -13,6 +13,7 @@
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen7ViewBase : public touchgfx::View<Screen7Presenter>
 {
@@ -53,7 +54,7 @@ protected:
     touchgfx::TextArea continueLabel;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  endButton;
     touchgfx::TextArea endLabel;
-    touchgfx::ScalableImage thdCornerLogo;
+    touchgfx::SVGImage svgImage1;
 
     /*
      * Wildcard Buffers
@@ -62,6 +63,12 @@ protected:
     touchgfx::Unicode::UnicodeChar timeValueBuffer[TIMEVALUE_SIZE];
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

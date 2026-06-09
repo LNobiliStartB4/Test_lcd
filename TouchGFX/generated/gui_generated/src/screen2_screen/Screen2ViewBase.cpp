@@ -5,7 +5,6 @@
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include <images/BitmapDatabase.hpp>
 #include<images/SVGDatabase.hpp>
 
 Screen2ViewBase::Screen2ViewBase() :
@@ -17,12 +16,12 @@ Screen2ViewBase::Screen2ViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    productBackground.setPosition(0, 6, 480, 320);
-    productBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    productBackground.setPosition(0, 0, 480, 320);
+    productBackground.setColor(touchgfx::Color::getColorFromRGB(250, 250, 250));
     add(productBackground);
 
-    productTitle.setPosition(24, 22, 280, 28);
-    productTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
+    productTitle.setPosition(24, 29, 280, 28);
+    productTitle.setColor(touchgfx::Color::getColorFromRGB(0, 60, 120));
     productTitle.setLinespacing(0);
     productTitle.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTTITLE));
     add(productTitle);
@@ -31,14 +30,14 @@ Screen2ViewBase::Screen2ViewBase() :
     settingsButton.setBorderSize(0);
     settingsButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
     settingsButton.setAction(flexButtonCallback);
-    settingsButton.setPosition(356, 4, 56, 56);
+    settingsButton.setPosition(275, 5, 121, 76);
     add(settingsButton);
 
     bandyButton.setBoxWithBorderPosition(0, 0, 0, 0);
     bandyButton.setBorderSize(0);
     bandyButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
     bandyButton.setAction(flexButtonCallback);
-    bandyButton.setPosition(24, 96, 432, 82);
+    bandyButton.setPosition(24, 96, 440, 94);
     add(bandyButton);
 
     bandyRowAccent.setPosition(24, 119, 4, 58);
@@ -53,7 +52,7 @@ Screen2ViewBase::Screen2ViewBase() :
     emerflowButton.setBorderSize(0);
     emerflowButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
     emerflowButton.setAction(flexButtonCallback);
-    emerflowButton.setPosition(24, 190, 432, 82);
+    emerflowButton.setPosition(24, 201, 440, 94);
     add(emerflowButton);
 
     emerflowRowAccent.setPosition(24, 213, 4, 58);
@@ -64,31 +63,13 @@ Screen2ViewBase::Screen2ViewBase() :
     emerflowRowDivider.setColor(touchgfx::Color::getColorFromRGB(46, 54, 63));
     add(emerflowRowDivider);
 
-    emerflowLogo.setBitmap(touchgfx::Bitmap(BITMAP_THD_HEMORFLOW_LOGO_ID));
-    emerflowLogo.setPosition(72, 213, 199, 55);
-    emerflowLogo.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(emerflowLogo);
-
-    thdCornerLogo.setBitmap(touchgfx::Bitmap(BITMAP_THD_CORNER_LOGO_ID));
-    thdCornerLogo.setPosition(428, 14, 36, 36);
-    thdCornerLogo.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(thdCornerLogo);
-
     settingsIcon.setSVG(SVG_SETTINGS_ID);
-    settingsIcon.setPosition(370, 18, 28, 28);
-    settingsIcon.setScale(1.0f, 1.0f);
+    settingsIcon.setPosition(326, 15, 70, 70);
+    settingsIcon.setScale(2.19f, 2.19f);
     settingsIcon.setImagePosition(0, 0);
     settingsIcon.setRotationCenter(0, 0);
     settingsIcon.setRotation(0.0f);
     add(settingsIcon);
-
-    bandyLogo.setSVG(SVG_OGO_ID);
-    bandyLogo.setPosition(56, 108, 230, 57);
-    bandyLogo.setScale(0.273f, 0.273f);
-    bandyLogo.setImagePosition(0, 0);
-    bandyLogo.setRotationCenter(0, 0);
-    bandyLogo.setRotation(0.0f);
-    add(bandyLogo);
 
     bandyChevron.setSVG(SVG_SETTINGS_CHEVRON_DIM_ID);
     bandyChevron.setPosition(416, 125, 24, 24);
@@ -105,6 +86,30 @@ Screen2ViewBase::Screen2ViewBase() :
     emerflowChevron.setRotationCenter(0, 0);
     emerflowChevron.setRotation(0.0f);
     add(emerflowChevron);
+
+    svgImage1.setSVG(SVG_SELFBANDY_ID);
+    svgImage1.setPosition(28, 43, 200, 152);
+    svgImage1.setScale(10.0f, 13.82f);
+    svgImage1.setImagePosition(0, 0);
+    svgImage1.setRotationCenter(0, 0);
+    svgImage1.setRotation(0.0f);
+    add(svgImage1);
+
+    svgImage2.setSVG(SVG_HEMORFLOW_V2_ID);
+    svgImage2.setPosition(51, 125, 200, 152);
+    svgImage2.setScale(9.09f, 15.2f);
+    svgImage2.setImagePosition(0, 0);
+    svgImage2.setRotationCenter(0, 0);
+    svgImage2.setRotation(0.0f);
+    add(svgImage2);
+
+    svgImage3.setSVG(SVG_LOGO_UFFICIALE_THD_2016_RGB_ID);
+    svgImage3.setPosition(396, 5, 80, 80);
+    svgImage3.setScale(0.58f, 0.66f);
+    svgImage3.setImagePosition(0, 0);
+    svgImage3.setRotationCenter(0, 0);
+    svgImage3.setRotation(0.0f);
+    add(svgImage3);
 }
 
 Screen2ViewBase::~Screen2ViewBase()

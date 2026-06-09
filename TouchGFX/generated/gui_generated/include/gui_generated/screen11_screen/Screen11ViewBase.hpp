@@ -12,7 +12,7 @@
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/Slider.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen11ViewBase : public touchgfx::View<Screen11Presenter>
 {
@@ -52,7 +52,7 @@ protected:
     touchgfx::TextArea brightnessMinLabel;
     touchgfx::TextArea brightnessMaxLabel;
     touchgfx::TextArea brightnessHint;
-    touchgfx::ScalableImage thdCornerLogo;
+    touchgfx::SVGImage svgImage1;
 
     /*
      * Wildcard Buffers
@@ -61,6 +61,12 @@ protected:
     touchgfx::Unicode::UnicodeChar brightnessValueBuffer[BRIGHTNESSVALUE_SIZE];
 
 private:
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations
