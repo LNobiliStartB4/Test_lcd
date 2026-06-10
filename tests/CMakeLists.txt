@@ -34,15 +34,31 @@ target_include_directories(test_model PRIVATE
 
 target_link_libraries(test_model PRIVATE doctest::doctest)
 
+# Touch-feedback logic is framework-free (header-only), so it links against
+# nothing but doctest.
+add_executable(test_touch_feedback
+  test_touch_feedback.cpp
+)
+target_include_directories(test_touch_feedback PRIVATE
+  ${DISPLAY_ROOT}/TouchGFX/gui/include
+)
+target_link_libraries(test_touch_feedback PRIVATE doctest::doctest)
+
 # MSVC: silence "non-standard extension" warnings on uninitialized POD fields
 if (MSVC)
   target_compile_options(test_model PRIVATE /W3 /permissive-)
+  target_compile_options(test_touch_feedback PRIVATE /W3 /permissive-)
 else()
   target_compile_options(test_model PRIVATE -Wall -Wextra)
+  target_compile_options(test_touch_feedback PRIVATE -Wall -Wextra)
 endif()
 
 enable_testing()
 add_test(NAME model_unit_tests COMMAND test_model)
 set_tests_properties(model_unit_tests PROPERTIES
+  TIMEOUT 30
+)
+add_test(NAME touch_feedback_unit_tests COMMAND test_touch_feedback)
+set_tests_properties(touch_feedback_unit_tests PROPERTIES
   TIMEOUT 30
 )
