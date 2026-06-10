@@ -28,6 +28,11 @@ struct TouchSample
 class TouchFeedbackState
 {
 public:
+    // Minimum finger travel (Manhattan, px) to count as a move. Filters out the
+    // capacitive touch jitter on the real device so a held-still finger does not
+    // keep the pointer alive.
+    static const int16_t kMoveThreshold = 5;
+
     TouchFeedbackState()
         : x(0), y(0), pressed(false), activitySequence(0U)
     {
@@ -49,8 +54,16 @@ public:
 
     void recordMove(int16_t px, int16_t py)
     {
-        // Only a real move counts as activity; a held-still finger does not.
-        if (pressed && ((px != x) || (py != y)))
+        // Only a real move (beyond the jitter threshold) counts as activity; a
+        // held-still finger, even with capacitive jitter, does not.
+        if (!pressed)
+        {
+            return;
+        }
+        const int16_t dx = static_cast<int16_t>(px - x);
+        const int16_t dy = static_cast<int16_t>(py - y);
+        const int32_t distance = (dx < 0 ? -dx : dx) + (dy < 0 ? -dy : dy);
+        if (distance >= kMoveThreshold)
         {
             x = px;
             y = py;

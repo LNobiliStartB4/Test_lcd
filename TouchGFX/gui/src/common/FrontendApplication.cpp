@@ -63,11 +63,15 @@ void FrontendApplication::handleDragEvent(const touchgfx::DragEvent& event)
 void FrontendApplication::handlePendingScreenTransition()
 {
 #if TOUCH_FEEDBACK_ENABLED
-    // If a screen change is about to happen this frame, kill the pointer now so
-    // it does not stay drawn on the old screen during the transition.
-    if ((pendingScreenTransitionCallback != 0) && pendingScreenTransitionCallback->isValid())
+    // A screen change redraws the whole display (slow over SPI). If the pointer
+    // is still visible, clear it this frame and defer the transition by one
+    // frame, so the dot is wiped from the framebuffer before the heavy redraw
+    // instead of lingering, "frozen", until overwritten.
+    if ((pendingScreenTransitionCallback != 0) && pendingScreenTransitionCallback->isValid() &&
+        touchfeedback::TouchFeedbackController::instance().isPointerVisible())
     {
         touchfeedback::TouchFeedbackController::instance().cancel();
+        return; // keep the pending transition; it runs next frame (pointer now hidden)
     }
 #endif
     FrontendApplicationBase::handlePendingScreenTransition();

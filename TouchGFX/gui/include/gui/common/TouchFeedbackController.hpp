@@ -77,6 +77,13 @@ public:
         }
     }
 
+    // True while the dot is currently shown (used to defer a screen transition
+    // by one frame so the dot is cleared before the slow full-screen redraw).
+    bool isPointerVisible() const
+    {
+        return animator.isVisible();
+    }
+
     // Called once per frame (from FrontendApplication::handleTickEvent).
     void tick()
     {

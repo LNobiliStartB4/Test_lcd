@@ -2,8 +2,10 @@
 #include <doctest/doctest.h>
 
 #include <gui/common/TouchFeedbackModel.hpp>
+#include <gui/common/TouchFeedbackController.hpp>
 
 using touchfeedback::TouchFeedbackAnimator;
+using touchfeedback::TouchFeedbackController;
 using touchfeedback::TouchFeedbackState;
 using touchfeedback::TouchSample;
 
@@ -63,6 +65,36 @@ TEST_CASE("TouchFeedbackState bumps activity on press and real moves only")
     s = state.sample();
     CHECK(s.x == 120);
     CHECK(s.activitySequence == a2);
+}
+
+TEST_CASE("Sub-threshold jitter is not treated as activity")
+{
+    TouchFeedbackState state;
+    state.recordPress(40, 50);
+    const uint32_t a = state.sample().activitySequence;
+
+    // Tiny capacitive jitter (below the movement threshold): no activity, no move.
+    state.recordMove(40 + (TouchFeedbackState::kMoveThreshold - 1), 50);
+    CHECK(state.sample().activitySequence == a);
+    CHECK(state.sample().x == 40);
+    CHECK(state.sample().y == 50);
+
+    // A real drag past the threshold counts and follows.
+    state.recordMove(40 + TouchFeedbackState::kMoveThreshold + 5, 50);
+    CHECK(state.sample().activitySequence == a + 1U);
+    CHECK(state.sample().x == 40 + TouchFeedbackState::kMoveThreshold + 5);
+}
+
+TEST_CASE("Controller exposes pointer visibility and can cancel it")
+{
+    TouchFeedbackController& c = TouchFeedbackController::instance();
+    c.recordPress(10, 10);
+    c.tick();
+    CHECK(c.isPointerVisible() == true);
+
+    // cancel() (used when a screen transition starts) hides it immediately.
+    c.cancel();
+    CHECK(c.isPointerVisible() == false);
 }
 
 TEST_CASE("Animator shows on activity and follows movement")
