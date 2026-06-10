@@ -11,12 +11,11 @@ using touchfeedback::TouchSample;
 
 namespace
 {
-TouchSample sample(int16_t x, int16_t y, bool pressed, uint32_t activity)
+TouchSample sample(int16_t x, int16_t y, uint32_t activity)
 {
     TouchSample s;
     s.x = x;
     s.y = y;
-    s.pressed = pressed;
     s.activitySequence = activity;
     return s;
 }
@@ -38,7 +37,6 @@ TEST_CASE("TouchFeedbackState bumps activity on press and real moves only")
 
     state.recordPress(40, 50);
     TouchSample s = state.sample();
-    CHECK(s.pressed == true);
     CHECK(s.x == 40);
     CHECK(s.y == 50);
     const uint32_t a1 = s.activitySequence;
@@ -56,11 +54,9 @@ TEST_CASE("TouchFeedbackState bumps activity on press and real moves only")
     state.recordMove(120, 200);
     CHECK(state.sample().activitySequence == a2);
 
-    // Release does not bump activity; a move while released is ignored.
+    // After release a move is ignored: no activity, position unchanged.
     state.recordRelease();
-    s = state.sample();
-    CHECK(s.pressed == false);
-    CHECK(s.activitySequence == a2);
+    CHECK(state.sample().activitySequence == a2);
     state.recordMove(5, 6);
     s = state.sample();
     CHECK(s.x == 120);
@@ -102,14 +98,14 @@ TEST_CASE("Animator shows on activity and follows movement")
     TouchFeedbackAnimator anim;
     CHECK(anim.isVisible() == false);
 
-    anim.update(sample(30, 40, true, 1));
+    anim.update(sample(30, 40, 1));
     CHECK(anim.isVisible() == true);
     CHECK(anim.getAlpha() == TouchFeedbackAnimator::kVisibleAlpha);
     CHECK(anim.getX() == 30);
     CHECK(anim.getY() == 40);
 
     // New activity (a move) re-energizes and follows.
-    anim.update(sample(33, 47, true, 2));
+    anim.update(sample(33, 47, 2));
     CHECK(anim.isVisible() == true);
     CHECK(anim.getAlpha() == TouchFeedbackAnimator::kVisibleAlpha);
     CHECK(anim.getX() == 33);
@@ -119,7 +115,7 @@ TEST_CASE("Animator shows on activity and follows movement")
 TEST_CASE("A held-still finger fades out instead of staying fixed")
 {
     TouchFeedbackAnimator anim;
-    anim.update(sample(100, 100, true, 1));
+    anim.update(sample(100, 100, 1));
     REQUIRE(anim.isVisible());
 
     // Same activity sequence (finger pressed but not moving): must fade away,
@@ -127,7 +123,7 @@ TEST_CASE("A held-still finger fades out instead of staying fixed")
     uint8_t prev = TouchFeedbackAnimator::kVisibleAlpha;
     for (uint8_t i = 0; i < TouchFeedbackAnimator::kFadeDurationTicks; ++i)
     {
-        anim.update(sample(100, 100, true, 1));
+        anim.update(sample(100, 100, 1));
         CHECK(anim.getAlpha() <= prev);
         prev = anim.getAlpha();
     }
@@ -143,20 +139,20 @@ TEST_CASE("Fade-out is short")
 TEST_CASE("reset() hides and prevents carry-over to the next screen")
 {
     TouchFeedbackAnimator anim;
-    anim.update(sample(50, 50, true, 3));
+    anim.update(sample(50, 50, 3));
     REQUIRE(anim.isVisible());
 
     // Screen change: reset acknowledges current activity.
-    anim.reset(sample(50, 50, true, 3));
+    anim.reset(sample(50, 50, 3));
     CHECK(anim.isVisible() == false);
 
     // Same activity (finger still down, not moving) must NOT re-show.
-    anim.update(sample(50, 50, true, 3));
+    anim.update(sample(50, 50, 3));
     CHECK(anim.isVisible() == false);
-    coast(anim, sample(50, 50, true, 3));
+    coast(anim, sample(50, 50, 3));
     CHECK(anim.isVisible() == false);
 
     // A genuinely new touch activity shows it again.
-    anim.update(sample(10, 20, true, 4));
+    anim.update(sample(10, 20, 4));
     CHECK(anim.isVisible() == true);
 }

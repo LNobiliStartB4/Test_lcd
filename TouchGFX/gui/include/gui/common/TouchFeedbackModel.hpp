@@ -21,7 +21,6 @@ struct TouchSample
 {
     int16_t x;
     int16_t y;
-    bool pressed;
     uint32_t activitySequence; // bumps on press and on each real move
 };
 
@@ -81,7 +80,6 @@ public:
         TouchSample s;
         s.x = x;
         s.y = y;
-        s.pressed = pressed;
         s.activitySequence = activitySequence;
         return s;
     }

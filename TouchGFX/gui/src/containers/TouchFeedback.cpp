@@ -32,14 +32,23 @@ void TouchFeedback::applyFeedback(bool visible, int16_t x, int16_t y, uint8_t al
         return;
     }
 
-    // Center the dot on the touch point; moveTo invalidates old + new areas.
+    // Position the dot relative to the touch point (kHalfSize offset).
+    const int16_t newX = static_cast<int16_t>(x - kHalfSize);
+    const int16_t newY = static_cast<int16_t>(y - kHalfSize);
+    const bool moved = (newX != getX()) || (newY != getY());
+
     if (!isVisible())
     {
         setVisible(true);
     }
     dot.setAlpha(alpha);
-    moveTo(static_cast<int16_t>(x - kHalfSize), static_cast<int16_t>(y - kHalfSize));
-    invalidate();
+    moveTo(newX, newY); // invalidates old + new areas when the position changes
+    if (!moved)
+    {
+        // Same position (e.g. a fade frame, alpha only): moveTo did nothing, so
+        // force a redraw to reflect the new alpha.
+        invalidate();
+    }
 #else
     (void)visible;
     (void)x;
