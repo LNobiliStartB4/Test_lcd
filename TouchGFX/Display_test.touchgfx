@@ -4584,10 +4584,14 @@
         "Height": 48,
         "Components": [
           {
-            "Type": "Image",
+            "Type": "ScalableImage",
             "Name": "dot",
+            "X": 0,
+            "Y": 0,
             "Width": 48,
-            "Height": 48
+            "Height": 48,
+            "Filename": "TouchDot.png",
+            "ScalingAlgorithm": "BilinearInterpolation"
           }
         ],
         "Interactions": []
