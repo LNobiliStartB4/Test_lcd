@@ -80,13 +80,24 @@ class TouchFeedbackAnimator
 {
 public:
     // Widget alpha shown while the finger is down (the dot asset itself carries
-    // the soft translucency). 250 ms fade-out at the 60 Hz tick rate.
+    // the soft translucency). Short fade-out (~80 ms at the 60 Hz tick rate).
     static const uint8_t kVisibleAlpha = 255U;
-    static const uint8_t kFadeDurationTicks = 15U;
+    static const uint8_t kFadeDurationTicks = 5U;
 
     TouchFeedbackAnimator()
         : phase(Hidden), x(0), y(0), alpha(0U), fadeRemaining(0U), lastPressSequence(0U)
     {
+    }
+
+    // Force the pointer hidden (e.g. on a screen change) and acknowledge the
+    // current press sequence so an already-seen, released press does not
+    // re-appear on the next screen.
+    void reset(const TouchSample& s)
+    {
+        phase = Hidden;
+        alpha = 0U;
+        fadeRemaining = 0U;
+        lastPressSequence = s.pressSequence;
     }
 
     // Call once per frame with the most recent touch sample.

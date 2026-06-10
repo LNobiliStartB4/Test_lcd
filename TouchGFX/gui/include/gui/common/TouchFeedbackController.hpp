@@ -36,9 +36,12 @@ public:
     }
 
     // Called by the active screen's widget when it is constructed / destroyed.
+    // Registering a new widget means a screen change: hide the pointer so a
+    // fading dot does not carry over onto the new screen.
     void setWidget(ITouchFeedbackWidget* w)
     {
         widget = w;
+        animator.reset(state.sample());
     }
     void clearWidget(const ITouchFeedbackWidget* w)
     {

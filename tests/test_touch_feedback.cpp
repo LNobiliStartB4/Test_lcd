@@ -104,6 +104,32 @@ TEST_CASE("Animator fades out after release and disappears")
     CHECK(anim.isVisible() == false);
 }
 
+TEST_CASE("Fade-out is short")
+{
+    // Much shorter than the previous 250 ms; keep it snappy.
+    CHECK(TouchFeedbackAnimator::kFadeDurationTicks <= 6);
+}
+
+TEST_CASE("reset() hides the pointer and prevents carry-over to the next screen")
+{
+    TouchFeedbackAnimator anim;
+    anim.update(press(50, 50, 3));
+    REQUIRE(anim.isVisible());
+
+    // Simulate a screen change while the pointer is still showing/fading.
+    anim.reset(press(50, 50, 3));
+    CHECK(anim.isVisible() == false);
+    CHECK(anim.getAlpha() == 0);
+
+    // The already-seen press (same sequence) must NOT re-show it on the new screen.
+    anim.update(release(50, 50, 3));
+    CHECK(anim.isVisible() == false);
+
+    // A genuinely new press still shows it.
+    anim.update(press(10, 20, 4));
+    CHECK(anim.isVisible() == true);
+}
+
 TEST_CASE("Animator catches a quick tap (press+release within one frame)")
 {
     TouchFeedbackAnimator anim;
