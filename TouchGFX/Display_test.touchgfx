@@ -16,8 +16,8 @@
             "Name": "splashSubtitle",
             "X": 95,
             "Y": 237,
-            "Width": 290,
-            "Height": 18,
+            "Width": 295,
+            "Height": 26,
             "TextId": "Text_SplashSubtitle",
             "TextRotation": "0",
             "Color": {
@@ -88,6 +88,13 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 1.31,
             "ImageVerticalScale": 1.49
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": []
@@ -122,7 +129,7 @@
             "Type": "FlexButton",
             "Name": "bandyButton",
             "X": 26,
-            "Y": 94,
+            "Y": 102,
             "Width": 440,
             "Height": 101,
             "ButtonTrigger": {
@@ -163,7 +170,7 @@
             "Type": "FlexButton",
             "Name": "emerflowButton",
             "X": 24,
-            "Y": 201,
+            "Y": 213,
             "Width": 440,
             "Height": 94,
             "ButtonTrigger": {
@@ -191,7 +198,7 @@
             "Type": "SvgImage",
             "Name": "settingsIcon",
             "X": 410,
-            "Y": 26,
+            "Y": 22,
             "Width": 60,
             "Height": 60,
             "Image": "settings.svg",
@@ -250,14 +257,21 @@
           {
             "Type": "SvgImage",
             "Name": "svgImage3",
-            "X": 12,
-            "Y": 13,
+            "X": 24,
+            "Y": 12,
             "Width": 80,
             "Height": 80,
             "Image": "logo-ufficiale-THD-2016-RGB.svg",
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
@@ -309,6 +323,8 @@
           {
             "Type": "FlexButton",
             "Name": "backButton",
+            "X": 2,
+            "Y": 15,
             "Width": 120,
             "Height": 72,
             "ButtonTrigger": {
@@ -346,7 +362,7 @@
             "Image": "arrow-back-up.svg",
             "FitImageToSize": true,
             "ImageHorizontalScale": 1.67,
-            "ImageVerticalScale": 1.67
+            "ImageVerticalScale": 1.82
           },
           {
             "Type": "BoxWithBorder",
@@ -412,6 +428,13 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
@@ -543,10 +566,10 @@
           {
             "Type": "FlexButton",
             "Name": "screen3StartButton",
-            "X": 262,
-            "Y": 248,
-            "Width": 206,
-            "Height": 70,
+            "X": 233,
+            "Y": 233,
+            "Width": 220,
+            "Height": 85,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -598,6 +621,13 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
@@ -638,10 +668,10 @@
           {
             "Type": "FlexButton",
             "Name": "setpointBackButton",
-            "X": 8,
+            "X": 2,
             "Y": 15,
-            "Width": 96,
-            "Height": 48,
+            "Width": 120,
+            "Height": 72,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -670,7 +700,7 @@
           {
             "Type": "SvgImage",
             "Name": "setpointBackIcon",
-            "X": 24,
+            "X": 28,
             "Y": 31,
             "Width": 40,
             "Height": 40,
@@ -877,6 +907,13 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
@@ -1017,9 +1054,9 @@
           {
             "Type": "TextArea",
             "Name": "pauseVisitLabel",
-            "X": 142,
+            "X": 94,
             "Y": 191,
-            "Width": 160,
+            "Width": 136,
             "Height": 18,
             "TextId": "Text_TimeLeft",
             "TextRotation": "0",
@@ -1154,6 +1191,13 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
@@ -1367,6 +1411,13 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
@@ -1407,6 +1458,7 @@
           {
             "Type": "FlexButton",
             "Name": "backButton",
+            "Y": 15,
             "Width": 120,
             "Height": 72,
             "ButtonTrigger": {
@@ -1437,8 +1489,8 @@
           {
             "Type": "SvgImage",
             "Name": "backIcon",
-            "X": 17,
-            "Y": 25,
+            "X": 28,
+            "Y": 31,
             "Width": 40,
             "Height": 40,
             "Image": "arrow-back-up.svg",
@@ -1449,8 +1501,8 @@
           {
             "Type": "Box",
             "Name": "hemorflowWaitAccent",
-            "X": 136,
-            "Y": 28,
+            "X": 154,
+            "Y": 37,
             "Width": 3,
             "Height": 28,
             "Color": {
@@ -1461,8 +1513,8 @@
           {
             "Type": "TextArea",
             "Name": "hemorflowWaitTitle",
-            "X": 148,
-            "Y": 26,
+            "X": 161,
+            "Y": 36,
             "Width": 268,
             "Height": 30,
             "TextId": "Text_HemorflowTitle",
@@ -1526,13 +1578,20 @@
             "Type": "SvgImage",
             "Name": "svgImage1",
             "X": 394,
-            "Y": 3,
+            "Y": 11,
             "Width": 80,
             "Height": 80,
             "Image": "logo-ufficiale-THD-2016-RGB.svg",
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
@@ -1692,6 +1751,13 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": []
@@ -1709,6 +1775,7 @@
           {
             "Type": "FlexButton",
             "Name": "settingsBackButton",
+            "Y": 14,
             "Width": 120,
             "Height": 72,
             "ButtonTrigger": {
@@ -1739,7 +1806,7 @@
           {
             "Type": "SvgImage",
             "Name": "settingsBackIcon",
-            "X": 24,
+            "X": 28,
             "Y": 30,
             "Width": 40,
             "Height": 40,
@@ -1752,7 +1819,7 @@
             "Type": "TextArea",
             "Name": "settingsTitle",
             "X": -9,
-            "Y": 40,
+            "Y": 38,
             "Width": 480,
             "Height": 32,
             "TextId": "Text_SettingsTitle",
@@ -1930,6 +1997,13 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
@@ -1981,6 +2055,7 @@
           {
             "Type": "FlexButton",
             "Name": "brightnessBackButton",
+            "Y": 15,
             "Width": 120,
             "Height": 72,
             "ButtonTrigger": {
@@ -2011,7 +2086,7 @@
           {
             "Type": "SvgImage",
             "Name": "brightnessBackIcon",
-            "X": 17,
+            "X": 28,
             "Y": 31,
             "Width": 40,
             "Height": 40,
@@ -2139,6 +2214,13 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
@@ -2179,6 +2261,7 @@
           {
             "Type": "FlexButton",
             "Name": "languageBackButton",
+            "Y": 15,
             "Width": 120,
             "Height": 72,
             "ButtonTrigger": {
@@ -2209,7 +2292,7 @@
           {
             "Type": "SvgImage",
             "Name": "languageBackIcon",
-            "X": 16,
+            "X": 28,
             "Y": 31,
             "Width": 40,
             "Height": 40,
@@ -2378,6 +2461,13 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
@@ -2429,10 +2519,10 @@
           {
             "Type": "FlexButton",
             "Name": "keypadBackButton",
-            "X": 12,
-            "Y": 10,
-            "Width": 96,
-            "Height": 44,
+            "X": 2,
+            "Y": 13,
+            "Width": 116,
+            "Height": 78,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -2462,7 +2552,7 @@
             "Type": "SvgImage",
             "Name": "keypadBackIcon",
             "X": 28,
-            "Y": 28,
+            "Y": 31,
             "Width": 40,
             "Height": 40,
             "Image": "arrow-back-up.svg",
@@ -3080,6 +3170,13 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
@@ -3241,10 +3338,9 @@
           {
             "Type": "FlexButton",
             "Name": "adminPinBackButton",
-            "X": 12,
             "Y": 14,
-            "Width": 96,
-            "Height": 48,
+            "Width": 106,
+            "Height": 72,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -3274,7 +3370,7 @@
             "Type": "SvgImage",
             "Name": "adminPinBackIcon",
             "X": 28,
-            "Y": 36,
+            "Y": 30,
             "Width": 40,
             "Height": 40,
             "Image": "arrow-back-up.svg",
@@ -3286,7 +3382,7 @@
             "Type": "TextArea",
             "Name": "adminPinTitle",
             "X": 78,
-            "Y": 22,
+            "Y": 30,
             "Width": 308,
             "Height": 32,
             "TextId": "Text_AdminPinTitle",
@@ -3869,6 +3965,13 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "touchFeedback",
+            "Width": 48,
+            "Height": 48,
+            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
@@ -4220,7 +4323,8 @@
           {
             "Type": "ScalableImage",
             "Name": "timeIcon",
-            "X": 39,
+            "X": 8,
+            "Y": 1,
             "Width": 22,
             "Height": 22,
             "Filename": "time_left_icon_white.png",
@@ -4229,10 +4333,10 @@
           {
             "Type": "TextArea",
             "Name": "timeLeftLabel",
-            "X": 66,
+            "X": 36,
             "Y": 3,
-            "Width": 90,
-            "Height": 18,
+            "Width": 138,
+            "Height": 20,
             "TextId": "Text_TimeLeft",
             "TextRotation": "0",
             "Color": {
@@ -4473,6 +4577,20 @@
             }
           }
         ]
+      },
+      {
+        "Name": "TouchFeedback",
+        "Width": 48,
+        "Height": 48,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "dot",
+            "Width": 48,
+            "Height": 48
+          }
+        ],
+        "Interactions": []
       }
     ],
     "Name": "Display_test_prova",

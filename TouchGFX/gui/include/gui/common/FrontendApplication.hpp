@@ -2,6 +2,7 @@
 #define FRONTENDAPPLICATION_HPP
 
 #include <gui_generated/common/FrontendApplicationBase.hpp>
+#include <gui/common/TouchFeedbackController.hpp>
 
 class FrontendHeap;
 
@@ -34,8 +35,14 @@ public:
     virtual void handleTickEvent()
     {
         model.tick();
+#if TOUCH_FEEDBACK_ENABLED
+        touchfeedback::TouchFeedbackController::instance().tick();
+#endif
         FrontendApplicationBase::handleTickEvent();
     }
+
+    virtual void handleClickEvent(const touchgfx::ClickEvent& event);
+    virtual void handleDragEvent(const touchgfx::DragEvent& event);
 
 private:
     void gotoProductSelectScreenNoTransitionImpl();

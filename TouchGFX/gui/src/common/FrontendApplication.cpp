@@ -28,10 +28,36 @@
 #include <gui/screen18_screen/Screen18Presenter.hpp>
 #include <gui/screen18_screen/Screen18View.hpp>
 #include <touchgfx/transitions/NoTransition.hpp>
+#include <touchgfx/events/ClickEvent.hpp>
+#include <touchgfx/events/DragEvent.hpp>
 
 FrontendApplication::FrontendApplication(Model& m, FrontendHeap& heap)
     : FrontendApplicationBase(m, heap)
 {
+}
+
+void FrontendApplication::handleClickEvent(const touchgfx::ClickEvent& event)
+{
+#if TOUCH_FEEDBACK_ENABLED
+    if (event.getType() == touchgfx::ClickEvent::PRESSED)
+    {
+        touchfeedback::TouchFeedbackController::instance().recordPress(event.getX(), event.getY());
+    }
+    else // RELEASED or CANCEL
+    {
+        touchfeedback::TouchFeedbackController::instance().recordRelease();
+    }
+#endif
+    // Preserve normal event routing to the active screen.
+    FrontendApplicationBase::handleClickEvent(event);
+}
+
+void FrontendApplication::handleDragEvent(const touchgfx::DragEvent& event)
+{
+#if TOUCH_FEEDBACK_ENABLED
+    touchfeedback::TouchFeedbackController::instance().recordMove(event.getNewX(), event.getNewY());
+#endif
+    FrontendApplicationBase::handleDragEvent(event);
 }
 
 void FrontendApplication::gotoProductSelectScreenNoTransition()
