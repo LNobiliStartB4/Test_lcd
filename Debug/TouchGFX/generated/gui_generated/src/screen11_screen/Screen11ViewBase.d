@@ -45,6 +45,8 @@ TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.o: \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
  ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp \
  ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -124,6 +126,8 @@ TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.o: \
 ../TouchGFX/gui/include/gui/model/Model.hpp:
 ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:

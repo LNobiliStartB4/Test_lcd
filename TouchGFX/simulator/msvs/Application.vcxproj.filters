@@ -579,6 +579,12 @@
     <ClCompile Include="..\..\generated\gui_generated\src\screen13_screen\Screen13ViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\screen13_screen</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\TouchFeedback.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\TouchFeedbackBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\assets\fonts\verdana.ttf">
@@ -1482,6 +1488,18 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen13_screen\Screen13ViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\screen13_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\TouchFeedbackModel.hpp">
+      <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\TouchFeedback.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\TouchFeedbackBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\common\TouchFeedbackController.hpp">
+      <Filter>Header Files\gui\common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

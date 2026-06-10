@@ -61,7 +61,7 @@ Screen3ViewBase::Screen3ViewBase() :
     screen3StartButton.setBorderSize(3);
     screen3StartButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     screen3StartButton.setAction(flexButtonCallback);
-    screen3StartButton.setPosition(262, 248, 206, 70);
+    screen3StartButton.setPosition(233, 233, 220, 85);
     add(screen3StartButton);
 
     screen3StartLabel.setPosition(278, 267, 127, 33);
@@ -77,6 +77,9 @@ Screen3ViewBase::Screen3ViewBase() :
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen3ViewBase::~Screen3ViewBase()
@@ -88,6 +91,7 @@ void Screen3ViewBase::setupScreen()
 {
     vacuumPanel.initialize();
     timePanel.initialize();
+    touchFeedback.initialize();
 }
 
 void Screen3ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

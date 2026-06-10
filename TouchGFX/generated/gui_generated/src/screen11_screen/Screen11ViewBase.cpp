@@ -26,11 +26,11 @@ Screen11ViewBase::Screen11ViewBase() :
     brightnessBackButton.setBorderSize(1);
     brightnessBackButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     brightnessBackButton.setAction(flexButtonCallback);
-    brightnessBackButton.setPosition(0, 0, 120, 72);
+    brightnessBackButton.setPosition(0, 15, 120, 72);
     add(brightnessBackButton);
 
     brightnessBackIcon.setSVG(SVG_ARROW_BACK_UP_ID);
-    brightnessBackIcon.setPosition(17, 31, 40, 40);
+    brightnessBackIcon.setPosition(28, 31, 40, 40);
     brightnessBackIcon.setScale(1.67f, 1.67f);
     brightnessBackIcon.setImagePosition(0, 0);
     brightnessBackIcon.setRotationCenter(0, 0);

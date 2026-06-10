@@ -46,6 +46,8 @@ TouchGFX/gui/src/screen3_screen/Screen3View.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
  ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -78,6 +80,8 @@ TouchGFX/gui/src/screen3_screen/Screen3View.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
+ ../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp \
  ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
@@ -127,6 +131,8 @@ TouchGFX/gui/src/screen3_screen/Screen3View.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../TouchGFX/gui/include/gui/model/Model.hpp:
 ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
@@ -159,6 +165,8 @@ TouchGFX/gui/src/screen3_screen/Screen3View.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
+../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp:
 ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:

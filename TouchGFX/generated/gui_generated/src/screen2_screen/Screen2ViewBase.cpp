@@ -30,7 +30,7 @@ Screen2ViewBase::Screen2ViewBase() :
     bandyButton.setBorderSize(0);
     bandyButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
     bandyButton.setAction(flexButtonCallback);
-    bandyButton.setPosition(26, 94, 440, 101);
+    bandyButton.setPosition(26, 102, 440, 101);
     add(bandyButton);
 
     bandyRowAccent.setPosition(24, 130, 4, 58);
@@ -45,7 +45,7 @@ Screen2ViewBase::Screen2ViewBase() :
     emerflowButton.setBorderSize(0);
     emerflowButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
     emerflowButton.setAction(flexButtonCallback);
-    emerflowButton.setPosition(24, 201, 440, 94);
+    emerflowButton.setPosition(24, 213, 440, 94);
     add(emerflowButton);
 
     emerflowRowAccent.setPosition(24, 228, 4, 58);
@@ -53,7 +53,7 @@ Screen2ViewBase::Screen2ViewBase() :
     add(emerflowRowAccent);
 
     settingsIcon.setSVG(SVG_SETTINGS_ID);
-    settingsIcon.setPosition(410, 26, 60, 60);
+    settingsIcon.setPosition(410, 22, 60, 60);
     settingsIcon.setScale(2.31f, 2.31f);
     settingsIcon.setImagePosition(0, 0);
     settingsIcon.setRotationCenter(0, 0);
@@ -93,12 +93,15 @@ Screen2ViewBase::Screen2ViewBase() :
     add(svgImage2);
 
     svgImage3.setSVG(SVG_LOGO_UFFICIALE_THD_2016_RGB_ID);
-    svgImage3.setPosition(12, 13, 80, 80);
+    svgImage3.setPosition(24, 12, 80, 80);
     svgImage3.setScale(0.58f, 0.66f);
     svgImage3.setImagePosition(0, 0);
     svgImage3.setRotationCenter(0, 0);
     svgImage3.setRotation(0.0f);
     add(svgImage3);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen2ViewBase::~Screen2ViewBase()
@@ -108,7 +111,7 @@ Screen2ViewBase::~Screen2ViewBase()
 
 void Screen2ViewBase::setupScreen()
 {
-
+    touchFeedback.initialize();
 }
 
 void Screen2ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

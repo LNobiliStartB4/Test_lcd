@@ -12,6 +12,7 @@
 #include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <gui/containers/TouchFeedback.hpp>
 
 class Screen5ViewBase : public touchgfx::View<Screen5Presenter>
 {
@@ -62,6 +63,7 @@ protected:
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setpointKeypadButton;
     touchgfx::SVGImage setpointKeypadIcon;
     touchgfx::SVGImage svgImage1;
+    TouchFeedback touchFeedback;
 
     /*
      * Wildcard Buffers

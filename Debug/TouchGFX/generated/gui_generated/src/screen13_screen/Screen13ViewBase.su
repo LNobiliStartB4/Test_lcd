@@ -27,25 +27,24 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:403:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextArea::getWildcard2() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:84:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:26:18:virtual void Screen13ViewBase::backClicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:30:18:virtual void Screen13ViewBase::digit0Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:34:18:virtual void Screen13ViewBase::digit1Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:38:18:virtual void Screen13ViewBase::digit2Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:42:18:virtual void Screen13ViewBase::digit3Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:46:18:virtual void Screen13ViewBase::digit4Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:50:18:virtual void Screen13ViewBase::digit5Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:54:18:virtual void Screen13ViewBase::digit6Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:58:18:virtual void Screen13ViewBase::digit7Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:62:18:virtual void Screen13ViewBase::digit8Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:66:18:virtual void Screen13ViewBase::digit9Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:70:18:virtual void Screen13ViewBase::deleteClicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:27:18:virtual void Screen13ViewBase::backClicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:31:18:virtual void Screen13ViewBase::digit0Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:35:18:virtual void Screen13ViewBase::digit1Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:39:18:virtual void Screen13ViewBase::digit2Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:43:18:virtual void Screen13ViewBase::digit3Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:47:18:virtual void Screen13ViewBase::digit4Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:51:18:virtual void Screen13ViewBase::digit5Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:55:18:virtual void Screen13ViewBase::digit6Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:59:18:virtual void Screen13ViewBase::digit7Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:63:18:virtual void Screen13ViewBase::digit8Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:67:18:virtual void Screen13ViewBase::digit9Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:71:18:virtual void Screen13ViewBase::deleteClicked()	0	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen13Presenter>::~View()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen13ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	0	static
-../TouchGFX/generated/gui_generated/src/screen13_screen/Screen13ViewBase.cpp:223:6:virtual void Screen13ViewBase::setupScreen()	0	static
-../TouchGFX/generated/gui_generated/src/screen13_screen/Screen13ViewBase.cpp:228:6:void Screen13ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
+../TouchGFX/generated/gui_generated/src/screen13_screen/Screen13ViewBase.cpp:231:6:void Screen13ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = Screen13ViewBase; T1 = const touchgfx::AbstractButtonContainer&]	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = Screen13ViewBase; T1 = const touchgfx::AbstractButtonContainer&]	0	static
@@ -57,8 +56,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen13ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
-../TouchGFX/generated/gui_generated/src/screen13_screen/Screen13ViewBase.cpp:218:1:Screen13ViewBase::~Screen13ViewBase()	8	static
-../TouchGFX/generated/gui_generated/src/screen13_screen/Screen13ViewBase.cpp:218:1:virtual Screen13ViewBase::~Screen13ViewBase()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
@@ -75,3 +72,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:94:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBoxWithBorderColors(touchgfx::colortype, touchgfx::colortype, touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::ClickButtonTrigger]	4	static
 ../TouchGFX/generated/gui_generated/src/screen13_screen/Screen13ViewBase.cpp:10:1:Screen13ViewBase::Screen13ViewBase()	192	static
+../TouchGFX/generated/gui_generated/src/screen13_screen/Screen13ViewBase.cpp:221:1:Screen13ViewBase::~Screen13ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen13_screen/Screen13ViewBase.cpp:221:1:virtual Screen13ViewBase::~Screen13ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen13_screen/Screen13ViewBase.cpp:226:6:virtual void Screen13ViewBase::setupScreen()	0	static

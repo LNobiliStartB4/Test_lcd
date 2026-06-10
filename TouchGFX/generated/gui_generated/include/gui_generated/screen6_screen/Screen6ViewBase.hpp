@@ -13,6 +13,7 @@
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/SVGImage.hpp>
+#include <gui/containers/TouchFeedback.hpp>
 
 class Screen6ViewBase : public touchgfx::View<Screen6Presenter>
 {
@@ -55,6 +56,7 @@ protected:
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  pauseEndButton;
     touchgfx::TextArea pauseEndLabel;
     touchgfx::SVGImage svgImage1;
+    TouchFeedback touchFeedback;
 
     /*
      * Wildcard Buffers

@@ -46,6 +46,8 @@ TouchGFX/gui/src/containers/BandyTimePanel.o: \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
  ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp \
  ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
@@ -98,6 +100,8 @@ TouchGFX/gui/src/containers/BandyTimePanel.o: \
 ../TouchGFX/gui/include/gui/model/Model.hpp:
 ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:

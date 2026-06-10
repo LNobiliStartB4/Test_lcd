@@ -24,18 +24,18 @@ Screen13ViewBase::Screen13ViewBase() :
     adminPinBackButton.setBorderSize(1);
     adminPinBackButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(245, 242, 232));
     adminPinBackButton.setAction(flexButtonCallback);
-    adminPinBackButton.setPosition(12, 14, 96, 48);
+    adminPinBackButton.setPosition(0, 14, 106, 72);
     add(adminPinBackButton);
 
     adminPinBackIcon.setSVG(SVG_ARROW_BACK_UP_ID);
-    adminPinBackIcon.setPosition(28, 36, 40, 40);
+    adminPinBackIcon.setPosition(28, 30, 40, 40);
     adminPinBackIcon.setScale(1.67f, 1.67f);
     adminPinBackIcon.setImagePosition(0, 0);
     adminPinBackIcon.setRotationCenter(0, 0);
     adminPinBackIcon.setRotation(0.0f);
     add(adminPinBackIcon);
 
-    adminPinTitle.setPosition(78, 22, 308, 32);
+    adminPinTitle.setPosition(78, 30, 308, 32);
     adminPinTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     adminPinTitle.setLinespacing(0);
     adminPinTitle.setTypedText(touchgfx::TypedText(T_TEXT_ADMINPINTITLE));
@@ -213,6 +213,9 @@ Screen13ViewBase::Screen13ViewBase() :
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen13ViewBase::~Screen13ViewBase()
@@ -222,7 +225,7 @@ Screen13ViewBase::~Screen13ViewBase()
 
 void Screen13ViewBase::setupScreen()
 {
-
+    touchFeedback.initialize();
 }
 
 void Screen13ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

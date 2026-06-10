@@ -13,6 +13,7 @@
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <gui/containers/TouchFeedback.hpp>
 
 class Screen4ViewBase : public touchgfx::View<Screen4Presenter>
 {
@@ -46,6 +47,7 @@ protected:
     touchgfx::TextArea rfidInstruction;
     touchgfx::TextArea rfidStatus;
     touchgfx::SVGImage svgImage1;
+    TouchFeedback touchFeedback;
 
 private:
 

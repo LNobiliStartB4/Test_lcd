@@ -73,6 +73,9 @@ Screen9ViewBase::Screen9ViewBase()
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen9ViewBase::~Screen9ViewBase()
@@ -83,4 +86,5 @@ Screen9ViewBase::~Screen9ViewBase()
 void Screen9ViewBase::setupScreen()
 {
     hemorflowVacuumPanel.initialize();
+    touchFeedback.initialize();
 }

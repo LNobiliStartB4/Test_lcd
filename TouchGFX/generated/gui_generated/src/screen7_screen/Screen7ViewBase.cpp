@@ -91,6 +91,9 @@ Screen7ViewBase::Screen7ViewBase() :
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen7ViewBase::~Screen7ViewBase()
@@ -100,7 +103,7 @@ Screen7ViewBase::~Screen7ViewBase()
 
 void Screen7ViewBase::setupScreen()
 {
-
+    touchFeedback.initialize();
 }
 
 void Screen7ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

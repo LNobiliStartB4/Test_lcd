@@ -1,6 +1,14 @@
 # ninja log v7
-11	86	8003823892744975	CMakeFiles/test_model.dir/C_/TouchGFXProjects/Display_test_prova/TouchGFX/gui/src/model/Model.cpp.obj	d692d53da9226c22
-16	90	8003823892791289	CMakeFiles/test_model.dir/stubs/display_bridge_rx_stub.cpp.obj	37ee57e53950d52f
+12	194	8028031715407189	CMakeFiles/test_model.dir/C_/TouchGFXProjects/Display_test_prova/TouchGFX/gui/src/model/Model.cpp.obj	d692d53da9226c22
+19	196	8028031715461562	CMakeFiles/test_model.dir/stubs/display_bridge_rx_stub.cpp.obj	37ee57e53950d52f
 6	109	8003823892685009	CMakeFiles/test_model.dir/test_tag_program.cpp.obj	26770b86041fa31f
-2	1074	8003823892637851	CMakeFiles/test_model.dir/test_model.cpp.obj	c379d439ef4a4d64
-1079	1603	8003823903417463	test_model.exe	7f901958dbdf6f5c
+4	1302	8028031715309712	CMakeFiles/test_model.dir/test_model.cpp.obj	c379d439ef4a4d64
+1302	1853	8028031728297808	test_model.exe	7f901958dbdf6f5c
+1	1028	8028033184684237	CMakeFiles/test_touch_feedback.dir/test_touch_feedback.cpp.obj	bd423fe7cd011de6
+1028	1473	8028033194981603	test_touch_feedback.exe	fc8eb662674fae50
+2	1368	8028048632633733	CMakeFiles/test_touch_feedback.dir/test_touch_feedback.cpp.obj	bd423fe7cd011de6
+1369	1645	8028048646297756	test_touch_feedback.exe	fc8eb662674fae50
+2	1018	8028059730907951	CMakeFiles/test_touch_feedback.dir/test_touch_feedback.cpp.obj	bd423fe7cd011de6
+1019	1367	8028059741108488	test_touch_feedback.exe	fc8eb662674fae50
+1	1600	8028074168559167	CMakeFiles/test_touch_feedback.dir/test_touch_feedback.cpp.obj	bd423fe7cd011de6
+1601	1879	8028074184555839	test_touch_feedback.exe	fc8eb662674fae50

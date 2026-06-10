@@ -12,6 +12,7 @@
 #include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <gui/containers/TouchFeedback.hpp>
 
 class Screen12ViewBase : public touchgfx::View<Screen12Presenter>
 {
@@ -57,6 +58,7 @@ protected:
     touchgfx::TextArea englishLabel;
     touchgfx::TextArea italianLabel;
     touchgfx::SVGImage svgImage1;
+    TouchFeedback touchFeedback;
 
 private:
 

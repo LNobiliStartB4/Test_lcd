@@ -25,12 +25,12 @@ Screen4ViewBase::Screen4ViewBase() :
     backButton.setBorderSize(1);
     backButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     backButton.setAction(flexButtonCallback);
-    backButton.setPosition(0, 0, 120, 72);
+    backButton.setPosition(2, 15, 120, 72);
     add(backButton);
 
     backIcon.setSVG(SVG_ARROW_BACK_UP_ID);
     backIcon.setPosition(28, 31, 40, 40);
-    backIcon.setScale(1.67f, 1.67f);
+    backIcon.setScale(1.67f, 1.82f);
     backIcon.setImagePosition(0, 0);
     backIcon.setRotationCenter(0, 0);
     backIcon.setRotation(0.0f);
@@ -66,6 +66,9 @@ Screen4ViewBase::Screen4ViewBase() :
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen4ViewBase::~Screen4ViewBase()
@@ -75,7 +78,7 @@ Screen4ViewBase::~Screen4ViewBase()
 
 void Screen4ViewBase::setupScreen()
 {
-
+    touchFeedback.initialize();
 }
 
 void Screen4ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

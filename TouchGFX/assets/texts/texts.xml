@@ -10,7 +10,7 @@
         <Translation Language="GB">THD</Translation>
         <Translation Language="IT">THD</Translation>
       </Text>
-      <Text Id="Text_SplashSubtitle" Alignment="Center" TypographyId="Subtitle">
+      <Text Id="Text_SplashSubtitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">PRESSURE STABILIZER</Translation>
         <Translation Language="IT">PRESSURE STABILISER</Translation>
       </Text>
@@ -534,7 +534,7 @@
         <Translation Language="GB">WAITING RFID</Translation>
         <Translation Language="IT">ATTESA RFID</Translation>
       </Text>
-      <Text Id="Text_TimeLeft" Alignment="Left" TypographyId="Caption">
+      <Text Id="Text_TimeLeft" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">TIME LEFT</Translation>
         <Translation Language="IT">TEMPO RESIDUO</Translation>
       </Text>
@@ -613,7 +613,7 @@
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Title" Font="trebucbd.ttf" Size="27" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Title" Font="trebucbd.ttf" Size="23" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Subtitle" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Body" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Caption" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x41-0x5A" />

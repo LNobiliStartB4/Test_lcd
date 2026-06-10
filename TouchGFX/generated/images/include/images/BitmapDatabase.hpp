@@ -20,7 +20,8 @@ const uint16_t BITMAP_START_STOP_ICON_WHITE_ID = 10;
 const uint16_t BITMAP_TARGET_BUTTON_RING_WHITE_ID = 11;
 const uint16_t BITMAP_THD_CORNER_LOGO_ID = 12;
 const uint16_t BITMAP_TIME_LEFT_ICON_WHITE_ID = 13;
-const uint16_t BITMAP_TRASH_RED_ID = 14;
+const uint16_t BITMAP_TOUCHDOT_ID = 14;
+const uint16_t BITMAP_TRASH_RED_ID = 15;
 
 namespace BitmapDatabase
 {

@@ -12,6 +12,7 @@
 #include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <gui/containers/TouchFeedback.hpp>
 
 class Screen18ViewBase : public touchgfx::View<Screen18Presenter>
 {
@@ -115,6 +116,7 @@ protected:
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  applyButton;
     touchgfx::TextArea applyLabel;
     touchgfx::SVGImage svgImage1;
+    TouchFeedback touchFeedback;
 
     /*
      * Wildcard Buffers

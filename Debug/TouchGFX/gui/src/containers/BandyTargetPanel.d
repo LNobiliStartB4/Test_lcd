@@ -46,6 +46,8 @@ TouchGFX/gui/src/containers/BandyTargetPanel.o: \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
  ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp \
  ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
@@ -115,6 +117,8 @@ TouchGFX/gui/src/containers/BandyTargetPanel.o: \
 ../TouchGFX/gui/include/gui/model/Model.hpp:
 ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:

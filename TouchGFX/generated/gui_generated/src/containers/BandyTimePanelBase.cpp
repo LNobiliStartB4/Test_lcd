@@ -11,11 +11,11 @@ BandyTimePanelBase::BandyTimePanelBase()
     setWidth(180);
     setHeight(64);
     timeIcon.setBitmap(touchgfx::Bitmap(BITMAP_TIME_LEFT_ICON_WHITE_ID));
-    timeIcon.setPosition(39, 0, 22, 22);
+    timeIcon.setPosition(8, 1, 22, 22);
     timeIcon.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
     add(timeIcon);
 
-    timeLeftLabel.setPosition(66, 3, 90, 18);
+    timeLeftLabel.setPosition(36, 3, 138, 20);
     timeLeftLabel.setColor(touchgfx::Color::getColorFromRGB(196, 192, 184));
     timeLeftLabel.setLinespacing(0);
     timeLeftLabel.setTypedText(touchgfx::TypedText(T_TEXT_TIMELEFT));

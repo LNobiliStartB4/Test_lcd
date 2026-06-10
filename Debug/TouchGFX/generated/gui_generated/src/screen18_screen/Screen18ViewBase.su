@@ -27,26 +27,25 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:403:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextArea::getWildcard2() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:84:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:26:18:virtual void Screen18ViewBase::cancelClicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:30:18:virtual void Screen18ViewBase::digit0Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:34:18:virtual void Screen18ViewBase::digit1Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:38:18:virtual void Screen18ViewBase::digit2Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:42:18:virtual void Screen18ViewBase::digit3Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:46:18:virtual void Screen18ViewBase::digit4Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:50:18:virtual void Screen18ViewBase::digit5Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:54:18:virtual void Screen18ViewBase::digit6Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:58:18:virtual void Screen18ViewBase::digit7Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:62:18:virtual void Screen18ViewBase::digit8Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:66:18:virtual void Screen18ViewBase::digit9Clicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:70:18:virtual void Screen18ViewBase::deleteClicked()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:74:18:virtual void Screen18ViewBase::applyClicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:27:18:virtual void Screen18ViewBase::cancelClicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:31:18:virtual void Screen18ViewBase::digit0Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:35:18:virtual void Screen18ViewBase::digit1Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:39:18:virtual void Screen18ViewBase::digit2Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:43:18:virtual void Screen18ViewBase::digit3Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:47:18:virtual void Screen18ViewBase::digit4Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:51:18:virtual void Screen18ViewBase::digit5Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:55:18:virtual void Screen18ViewBase::digit6Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:59:18:virtual void Screen18ViewBase::digit7Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:63:18:virtual void Screen18ViewBase::digit8Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:67:18:virtual void Screen18ViewBase::digit9Clicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:71:18:virtual void Screen18ViewBase::deleteClicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:75:18:virtual void Screen18ViewBase::applyClicked()	0	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen18Presenter>::~View()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen18ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	0	static
-../TouchGFX/generated/gui_generated/src/screen18_screen/Screen18ViewBase.cpp:222:6:virtual void Screen18ViewBase::setupScreen()	0	static
-../TouchGFX/generated/gui_generated/src/screen18_screen/Screen18ViewBase.cpp:227:6:void Screen18ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
+../TouchGFX/generated/gui_generated/src/screen18_screen/Screen18ViewBase.cpp:230:6:void Screen18ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = Screen18ViewBase; T1 = const touchgfx::AbstractButtonContainer&]	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = Screen18ViewBase; T1 = const touchgfx::AbstractButtonContainer&]	0	static
@@ -58,8 +57,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen18ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
-../TouchGFX/generated/gui_generated/src/screen18_screen/Screen18ViewBase.cpp:217:1:Screen18ViewBase::~Screen18ViewBase()	8	static
-../TouchGFX/generated/gui_generated/src/screen18_screen/Screen18ViewBase.cpp:217:1:virtual Screen18ViewBase::~Screen18ViewBase()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
@@ -75,4 +72,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:43:5:touchgfx::SVGImage::SVGImage()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:94:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBoxWithBorderColors(touchgfx::colortype, touchgfx::colortype, touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::ClickButtonTrigger]	4	static
-../TouchGFX/generated/gui_generated/src/screen18_screen/Screen18ViewBase.cpp:10:1:Screen18ViewBase::Screen18ViewBase()	184	static
+../TouchGFX/generated/gui_generated/src/screen18_screen/Screen18ViewBase.cpp:10:1:Screen18ViewBase::Screen18ViewBase()	192	static
+../TouchGFX/generated/gui_generated/src/screen18_screen/Screen18ViewBase.cpp:220:1:Screen18ViewBase::~Screen18ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen18_screen/Screen18ViewBase.cpp:220:1:virtual Screen18ViewBase::~Screen18ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen18_screen/Screen18ViewBase.cpp:225:6:virtual void Screen18ViewBase::setupScreen()	0	static

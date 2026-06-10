@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/SVGImage.hpp>
+#include <gui/containers/TouchFeedback.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
 {
@@ -56,6 +57,7 @@ protected:
     touchgfx::SVGImage svgImage1;
     touchgfx::SVGImage svgImage2;
     touchgfx::SVGImage svgImage3;
+    TouchFeedback touchFeedback;
 
 private:
 

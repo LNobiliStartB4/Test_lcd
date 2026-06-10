@@ -24,11 +24,11 @@ Screen18ViewBase::Screen18ViewBase() :
     keypadBackButton.setBorderSize(1);
     keypadBackButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     keypadBackButton.setAction(flexButtonCallback);
-    keypadBackButton.setPosition(12, 10, 96, 44);
+    keypadBackButton.setPosition(2, 13, 116, 78);
     add(keypadBackButton);
 
     keypadBackIcon.setSVG(SVG_ARROW_BACK_UP_ID);
-    keypadBackIcon.setPosition(28, 28, 40, 40);
+    keypadBackIcon.setPosition(28, 31, 40, 40);
     keypadBackIcon.setScale(1.67f, 1.67f);
     keypadBackIcon.setImagePosition(0, 0);
     keypadBackIcon.setRotationCenter(0, 0);
@@ -212,6 +212,9 @@ Screen18ViewBase::Screen18ViewBase() :
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen18ViewBase::~Screen18ViewBase()
@@ -221,7 +224,7 @@ Screen18ViewBase::~Screen18ViewBase()
 
 void Screen18ViewBase::setupScreen()
 {
-
+    touchFeedback.initialize();
 }
 
 void Screen18ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

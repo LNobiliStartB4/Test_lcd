@@ -1,24 +1,45 @@
-Start testing: May 13 15:33 ora legale Europa occidentale
+Start testing: Jun 10 17:10 ora legale Europa occidentale
 ----------------------------------------------------------
-1/1 Testing: model_unit_tests
-1/1 Test: model_unit_tests
+1/2 Testing: model_unit_tests
+1/2 Test: model_unit_tests
 Command: "C:/TouchGFXProjects/Display_test_prova/tests/build/test_model.exe"
 Directory: C:/TouchGFXProjects/Display_test_prova/tests/build
-"model_unit_tests" start time: May 13 15:33 ora legale Europa occidentale
+"model_unit_tests" start time: Jun 10 17:10 ora legale Europa occidentale
 Output:
 ----------------------------------------------------------
 [doctest] doctest version is "2.4.11"
 [doctest] run with "--help" for options
 ===============================================================================
-[doctest] test cases: 17 | 17 passed | 0 failed | 0 skipped
-[doctest] assertions: 45 | 45 passed | 0 failed |
+[doctest] test cases: 20 | 20 passed | 0 failed | 0 skipped
+[doctest] assertions: 62 | 62 passed | 0 failed |
 [doctest] Status: SUCCESS!
 <end of output>
 Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"model_unit_tests" end time: May 13 15:33 ora legale Europa occidentale
+"model_unit_tests" end time: Jun 10 17:10 ora legale Europa occidentale
 "model_unit_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 13 15:33 ora legale Europa occidentale
+2/2 Testing: touch_feedback_unit_tests
+2/2 Test: touch_feedback_unit_tests
+Command: "C:/TouchGFXProjects/Display_test_prova/tests/build/test_touch_feedback.exe"
+Directory: C:/TouchGFXProjects/Display_test_prova/tests/build
+"touch_feedback_unit_tests" start time: Jun 10 17:10 ora legale Europa occidentale
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.4.11"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases:  7 |  7 passed | 0 failed | 0 skipped
+[doctest] assertions: 42 | 42 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"touch_feedback_unit_tests" end time: Jun 10 17:10 ora legale Europa occidentale
+"touch_feedback_unit_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 10 17:10 ora legale Europa occidentale

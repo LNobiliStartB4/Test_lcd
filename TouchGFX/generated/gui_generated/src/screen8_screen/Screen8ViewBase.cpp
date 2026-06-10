@@ -25,22 +25,22 @@ Screen8ViewBase::Screen8ViewBase() :
     backButton.setBorderSize(1);
     backButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     backButton.setAction(flexButtonCallback);
-    backButton.setPosition(0, 0, 120, 72);
+    backButton.setPosition(0, 15, 120, 72);
     add(backButton);
 
     backIcon.setSVG(SVG_ARROW_BACK_UP_ID);
-    backIcon.setPosition(17, 25, 40, 40);
+    backIcon.setPosition(28, 31, 40, 40);
     backIcon.setScale(1.67f, 1.67f);
     backIcon.setImagePosition(0, 0);
     backIcon.setRotationCenter(0, 0);
     backIcon.setRotation(0.0f);
     add(backIcon);
 
-    hemorflowWaitAccent.setPosition(136, 28, 3, 28);
+    hemorflowWaitAccent.setPosition(154, 37, 3, 28);
     hemorflowWaitAccent.setColor(touchgfx::Color::getColorFromRGB(240, 170, 0));
     add(hemorflowWaitAccent);
 
-    hemorflowWaitTitle.setPosition(148, 26, 268, 30);
+    hemorflowWaitTitle.setPosition(161, 36, 268, 30);
     hemorflowWaitTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     hemorflowWaitTitle.setLinespacing(0);
     hemorflowWaitTitle.setTypedText(touchgfx::TypedText(T_TEXT_HEMORFLOWTITLE));
@@ -70,12 +70,15 @@ Screen8ViewBase::Screen8ViewBase() :
     add(hemorflowWaitSubtitle);
 
     svgImage1.setSVG(SVG_LOGO_UFFICIALE_THD_2016_RGB_ID);
-    svgImage1.setPosition(394, 3, 80, 80);
+    svgImage1.setPosition(394, 11, 80, 80);
     svgImage1.setScale(0.58f, 0.66f);
     svgImage1.setImagePosition(0, 0);
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen8ViewBase::~Screen8ViewBase()
@@ -85,7 +88,7 @@ Screen8ViewBase::~Screen8ViewBase()
 
 void Screen8ViewBase::setupScreen()
 {
-
+    touchFeedback.initialize();
 }
 
 void Screen8ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

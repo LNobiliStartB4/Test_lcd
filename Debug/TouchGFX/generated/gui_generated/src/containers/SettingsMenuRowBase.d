@@ -45,6 +45,8 @@ TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.o: \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
  ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp \
  ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
@@ -117,6 +119,8 @@ TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.o: \
 ../TouchGFX/gui/include/gui/model/Model.hpp:
 ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:

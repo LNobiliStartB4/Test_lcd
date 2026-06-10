@@ -24,11 +24,11 @@ Screen5ViewBase::Screen5ViewBase() :
     setpointBackButton.setBorderSize(1);
     setpointBackButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     setpointBackButton.setAction(flexButtonCallback);
-    setpointBackButton.setPosition(8, 15, 96, 48);
+    setpointBackButton.setPosition(2, 15, 120, 72);
     add(setpointBackButton);
 
     setpointBackIcon.setSVG(SVG_ARROW_BACK_UP_ID);
-    setpointBackIcon.setPosition(24, 31, 40, 40);
+    setpointBackIcon.setPosition(28, 31, 40, 40);
     setpointBackIcon.setScale(1.67f, 1.67f);
     setpointBackIcon.setImagePosition(0, 0);
     setpointBackIcon.setRotationCenter(0, 0);
@@ -103,6 +103,9 @@ Screen5ViewBase::Screen5ViewBase() :
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen5ViewBase::~Screen5ViewBase()
@@ -112,7 +115,7 @@ Screen5ViewBase::~Screen5ViewBase()
 
 void Screen5ViewBase::setupScreen()
 {
-
+    touchFeedback.initialize();
 }
 
 void Screen5ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

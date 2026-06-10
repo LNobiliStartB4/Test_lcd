@@ -13,6 +13,7 @@
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
+#include <gui/containers/TouchFeedback.hpp>
 
 class Screen8ViewBase : public touchgfx::View<Screen8Presenter>
 {
@@ -48,6 +49,7 @@ protected:
     touchgfx::TextArea hemorflowWaitLabel;
     touchgfx::TextArea hemorflowWaitSubtitle;
     touchgfx::SVGImage svgImage1;
+    TouchFeedback touchFeedback;
 
 private:
 

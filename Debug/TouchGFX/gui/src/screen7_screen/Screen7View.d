@@ -46,6 +46,8 @@ TouchGFX/gui/src/screen7_screen/Screen7View.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
  ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
@@ -74,6 +76,8 @@ TouchGFX/gui/src/screen7_screen/Screen7View.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
+ ../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp \
  ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
 ../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
@@ -121,6 +125,8 @@ TouchGFX/gui/src/screen7_screen/Screen7View.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../TouchGFX/gui/include/gui/model/Model.hpp:
 ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
@@ -149,4 +155,6 @@ TouchGFX/gui/src/screen7_screen/Screen7View.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
+../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp:
 ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:

@@ -19,7 +19,7 @@ Screen1ViewBase::Screen1ViewBase()
     splashBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(splashBackground);
 
-    splashSubtitle.setPosition(95, 237, 290, 18);
+    splashSubtitle.setPosition(95, 237, 295, 26);
     splashSubtitle.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     splashSubtitle.setLinespacing(0);
     splashSubtitle.setTypedText(touchgfx::TypedText(T_TEXT_SPLASHSUBTITLE));
@@ -62,6 +62,9 @@ Screen1ViewBase::Screen1ViewBase()
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen1ViewBase::~Screen1ViewBase()
@@ -71,5 +74,5 @@ Screen1ViewBase::~Screen1ViewBase()
 
 void Screen1ViewBase::setupScreen()
 {
-
+    touchFeedback.initialize();
 }

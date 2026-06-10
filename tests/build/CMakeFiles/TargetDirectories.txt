@@ -1,4 +1,5 @@
 C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/test_model.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/test_touch_feedback.dir
 C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/test.dir
 C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/edit_cache.dir
 C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/rebuild_cache.dir

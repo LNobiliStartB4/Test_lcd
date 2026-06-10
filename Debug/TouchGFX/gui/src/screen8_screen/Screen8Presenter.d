@@ -48,6 +48,8 @@ TouchGFX/gui/src/screen8_screen/Screen8Presenter.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
  ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp \
+ ../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
@@ -73,7 +75,9 @@ TouchGFX/gui/src/screen8_screen/Screen8Presenter.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
+ ../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp
 ../TouchGFX/gui/include/gui/screen8_screen/Screen8Presenter.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
@@ -122,6 +126,8 @@ TouchGFX/gui/src/screen8_screen/Screen8Presenter.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../TouchGFX/gui/include/gui/model/Model.hpp:
 ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp:
+../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
@@ -148,3 +154,5 @@ TouchGFX/gui/src/screen8_screen/Screen8Presenter.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
+../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp:

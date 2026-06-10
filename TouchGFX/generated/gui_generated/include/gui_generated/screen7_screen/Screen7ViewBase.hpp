@@ -14,6 +14,7 @@
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/SVGImage.hpp>
+#include <gui/containers/TouchFeedback.hpp>
 
 class Screen7ViewBase : public touchgfx::View<Screen7Presenter>
 {
@@ -55,6 +56,7 @@ protected:
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  endButton;
     touchgfx::TextArea endLabel;
     touchgfx::SVGImage svgImage1;
+    TouchFeedback touchFeedback;
 
     /*
      * Wildcard Buffers

@@ -12,6 +12,7 @@
 #include <gui/containers/BandyVacuumPanel.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/SVGImage.hpp>
+#include <gui/containers/TouchFeedback.hpp>
 
 class Screen9ViewBase : public touchgfx::View<Screen9Presenter>
 {
@@ -39,6 +40,7 @@ protected:
     touchgfx::TextArea hemorflowStatusLabel;
     touchgfx::TextAreaWithOneWildcard hemorflowStatusValue;
     touchgfx::SVGImage svgImage1;
+    TouchFeedback touchFeedback;
 
     /*
      * Wildcard Buffers

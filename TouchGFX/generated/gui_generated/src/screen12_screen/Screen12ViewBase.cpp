@@ -24,11 +24,11 @@ Screen12ViewBase::Screen12ViewBase() :
     languageBackButton.setBorderSize(1);
     languageBackButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     languageBackButton.setAction(flexButtonCallback);
-    languageBackButton.setPosition(0, 0, 120, 72);
+    languageBackButton.setPosition(0, 15, 120, 72);
     add(languageBackButton);
 
     languageBackIcon.setSVG(SVG_ARROW_BACK_UP_ID);
-    languageBackIcon.setPosition(16, 31, 40, 40);
+    languageBackIcon.setPosition(28, 31, 40, 40);
     languageBackIcon.setScale(1.67f, 1.67f);
     languageBackIcon.setImagePosition(0, 0);
     languageBackIcon.setRotationCenter(0, 0);
@@ -92,6 +92,9 @@ Screen12ViewBase::Screen12ViewBase() :
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen12ViewBase::~Screen12ViewBase()
@@ -101,7 +104,7 @@ Screen12ViewBase::~Screen12ViewBase()
 
 void Screen12ViewBase::setupScreen()
 {
-
+    touchFeedback.initialize();
 }
 
 void Screen12ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

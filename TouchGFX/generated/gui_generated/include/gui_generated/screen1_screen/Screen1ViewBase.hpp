@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/SVGImage.hpp>
+#include <gui/containers/TouchFeedback.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -34,6 +35,7 @@ protected:
     touchgfx::SVGImage splashDot3;
     touchgfx::TextArea splashInitText;
     touchgfx::SVGImage svgImage1;
+    TouchFeedback touchFeedback;
 
 private:
 

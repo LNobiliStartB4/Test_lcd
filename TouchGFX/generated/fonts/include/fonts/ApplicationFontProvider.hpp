@@ -29,7 +29,7 @@ struct Typography
 
 struct TypographyFontIndex
 {
-    static const touchgfx::FontId TITLE = 0;               // trebucbd_27_2bpp
+    static const touchgfx::FontId TITLE = 0;               // trebucbd_23_2bpp
     static const touchgfx::FontId SUBTITLE = 1;            // verdana_16_2bpp
     static const touchgfx::FontId BODY = 1;                // verdana_16_2bpp
     static const touchgfx::FontId CAPTION = 1;             // verdana_16_2bpp

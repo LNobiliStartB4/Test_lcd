@@ -24,18 +24,18 @@ Screen10ViewBase::Screen10ViewBase() :
     settingsBackButton.setBorderSize(1);
     settingsBackButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     settingsBackButton.setAction(flexButtonCallback);
-    settingsBackButton.setPosition(0, 0, 120, 72);
+    settingsBackButton.setPosition(0, 14, 120, 72);
     add(settingsBackButton);
 
     settingsBackIcon.setSVG(SVG_ARROW_BACK_UP_ID);
-    settingsBackIcon.setPosition(24, 30, 40, 40);
+    settingsBackIcon.setPosition(28, 30, 40, 40);
     settingsBackIcon.setScale(1.67f, 1.67f);
     settingsBackIcon.setImagePosition(0, 0);
     settingsBackIcon.setRotationCenter(0, 0);
     settingsBackIcon.setRotation(0.0f);
     add(settingsBackIcon);
 
-    settingsTitle.setPosition(-9, 40, 480, 32);
+    settingsTitle.setPosition(-9, 38, 480, 32);
     settingsTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     settingsTitle.setLinespacing(0);
     settingsTitle.setTypedText(touchgfx::TypedText(T_TEXT_SETTINGSTITLE));
@@ -97,6 +97,9 @@ Screen10ViewBase::Screen10ViewBase() :
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen10ViewBase::~Screen10ViewBase()
@@ -109,6 +112,7 @@ void Screen10ViewBase::setupScreen()
     settingsRow0.initialize();
     settingsRow1.initialize();
     settingsRow2.initialize();
+    touchFeedback.initialize();
 }
 
 void Screen10ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

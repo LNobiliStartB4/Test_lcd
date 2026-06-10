@@ -53,7 +53,7 @@ Screen6ViewBase::Screen6ViewBase() :
     pauseRemainingValue.setTypedText(touchgfx::TypedText(T_VALUE_TIMEREMAINING));
     add(pauseRemainingValue);
 
-    pauseVisitLabel.setPosition(142, 191, 160, 18);
+    pauseVisitLabel.setPosition(94, 191, 136, 18);
     pauseVisitLabel.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
     pauseVisitLabel.setLinespacing(0);
     pauseVisitLabel.setTypedText(touchgfx::TypedText(T_TEXT_TIMELEFT));
@@ -100,6 +100,9 @@ Screen6ViewBase::Screen6ViewBase() :
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
+
+    touchFeedback.setXY(0, 0);
+    add(touchFeedback);
 }
 
 Screen6ViewBase::~Screen6ViewBase()
@@ -109,7 +112,7 @@ Screen6ViewBase::~Screen6ViewBase()
 
 void Screen6ViewBase::setupScreen()
 {
-
+    touchFeedback.initialize();
 }
 
 void Screen6ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)

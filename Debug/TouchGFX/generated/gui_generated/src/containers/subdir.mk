@@ -9,21 +9,24 @@ CPP_SRCS += \
 ../TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.cpp \
 ../TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.cpp \
 ../TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cpp \
-../TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.cpp 
+../TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.cpp \
+../TouchGFX/generated/gui_generated/src/containers/TouchFeedbackBase.cpp 
 
 OBJS += \
 ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.o \
 ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.o \
 ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.o \
 ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.o \
-./TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.o 
+./TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.o \
+./TouchGFX/generated/gui_generated/src/containers/TouchFeedbackBase.o 
 
 CPP_DEPS += \
 ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.d \
 ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.d \
 ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.d \
 ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.d \
-./TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.d 
+./TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.d \
+./TouchGFX/generated/gui_generated/src/containers/TouchFeedbackBase.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -33,7 +36,7 @@ TouchGFX/generated/gui_generated/src/containers/%.o TouchGFX/generated/gui_gener
 clean: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-containers
 
 clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-containers:
-	-$(RM) ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.su ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.su ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.su ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.su ./TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.d ./TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.o ./TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.su
+	-$(RM) ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyStartPanelBase.su ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyTargetPanelBase.su ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyTimePanelBase.su ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.d ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.o ./TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.su ./TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.d ./TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.o ./TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.su ./TouchGFX/generated/gui_generated/src/containers/TouchFeedbackBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/TouchFeedbackBase.d ./TouchGFX/generated/gui_generated/src/containers/TouchFeedbackBase.o ./TouchGFX/generated/gui_generated/src/containers/TouchFeedbackBase.su
 
 .PHONY: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-containers
 

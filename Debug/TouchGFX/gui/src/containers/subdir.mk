@@ -9,21 +9,24 @@ CPP_SRCS += \
 ../TouchGFX/gui/src/containers/BandyTargetPanel.cpp \
 ../TouchGFX/gui/src/containers/BandyTimePanel.cpp \
 ../TouchGFX/gui/src/containers/BandyVacuumPanel.cpp \
-../TouchGFX/gui/src/containers/SettingsMenuRow.cpp 
+../TouchGFX/gui/src/containers/SettingsMenuRow.cpp \
+../TouchGFX/gui/src/containers/TouchFeedback.cpp 
 
 OBJS += \
 ./TouchGFX/gui/src/containers/BandyStartPanel.o \
 ./TouchGFX/gui/src/containers/BandyTargetPanel.o \
 ./TouchGFX/gui/src/containers/BandyTimePanel.o \
 ./TouchGFX/gui/src/containers/BandyVacuumPanel.o \
-./TouchGFX/gui/src/containers/SettingsMenuRow.o 
+./TouchGFX/gui/src/containers/SettingsMenuRow.o \
+./TouchGFX/gui/src/containers/TouchFeedback.o 
 
 CPP_DEPS += \
 ./TouchGFX/gui/src/containers/BandyStartPanel.d \
 ./TouchGFX/gui/src/containers/BandyTargetPanel.d \
 ./TouchGFX/gui/src/containers/BandyTimePanel.d \
 ./TouchGFX/gui/src/containers/BandyVacuumPanel.d \
-./TouchGFX/gui/src/containers/SettingsMenuRow.d 
+./TouchGFX/gui/src/containers/SettingsMenuRow.d \
+./TouchGFX/gui/src/containers/TouchFeedback.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -33,7 +36,7 @@ TouchGFX/gui/src/containers/%.o TouchGFX/gui/src/containers/%.su TouchGFX/gui/sr
 clean: clean-TouchGFX-2f-gui-2f-src-2f-containers
 
 clean-TouchGFX-2f-gui-2f-src-2f-containers:
-	-$(RM) ./TouchGFX/gui/src/containers/BandyStartPanel.cyclo ./TouchGFX/gui/src/containers/BandyStartPanel.d ./TouchGFX/gui/src/containers/BandyStartPanel.o ./TouchGFX/gui/src/containers/BandyStartPanel.su ./TouchGFX/gui/src/containers/BandyTargetPanel.cyclo ./TouchGFX/gui/src/containers/BandyTargetPanel.d ./TouchGFX/gui/src/containers/BandyTargetPanel.o ./TouchGFX/gui/src/containers/BandyTargetPanel.su ./TouchGFX/gui/src/containers/BandyTimePanel.cyclo ./TouchGFX/gui/src/containers/BandyTimePanel.d ./TouchGFX/gui/src/containers/BandyTimePanel.o ./TouchGFX/gui/src/containers/BandyTimePanel.su ./TouchGFX/gui/src/containers/BandyVacuumPanel.cyclo ./TouchGFX/gui/src/containers/BandyVacuumPanel.d ./TouchGFX/gui/src/containers/BandyVacuumPanel.o ./TouchGFX/gui/src/containers/BandyVacuumPanel.su ./TouchGFX/gui/src/containers/SettingsMenuRow.cyclo ./TouchGFX/gui/src/containers/SettingsMenuRow.d ./TouchGFX/gui/src/containers/SettingsMenuRow.o ./TouchGFX/gui/src/containers/SettingsMenuRow.su
+	-$(RM) ./TouchGFX/gui/src/containers/BandyStartPanel.cyclo ./TouchGFX/gui/src/containers/BandyStartPanel.d ./TouchGFX/gui/src/containers/BandyStartPanel.o ./TouchGFX/gui/src/containers/BandyStartPanel.su ./TouchGFX/gui/src/containers/BandyTargetPanel.cyclo ./TouchGFX/gui/src/containers/BandyTargetPanel.d ./TouchGFX/gui/src/containers/BandyTargetPanel.o ./TouchGFX/gui/src/containers/BandyTargetPanel.su ./TouchGFX/gui/src/containers/BandyTimePanel.cyclo ./TouchGFX/gui/src/containers/BandyTimePanel.d ./TouchGFX/gui/src/containers/BandyTimePanel.o ./TouchGFX/gui/src/containers/BandyTimePanel.su ./TouchGFX/gui/src/containers/BandyVacuumPanel.cyclo ./TouchGFX/gui/src/containers/BandyVacuumPanel.d ./TouchGFX/gui/src/containers/BandyVacuumPanel.o ./TouchGFX/gui/src/containers/BandyVacuumPanel.su ./TouchGFX/gui/src/containers/SettingsMenuRow.cyclo ./TouchGFX/gui/src/containers/SettingsMenuRow.d ./TouchGFX/gui/src/containers/SettingsMenuRow.o ./TouchGFX/gui/src/containers/SettingsMenuRow.su ./TouchGFX/gui/src/containers/TouchFeedback.cyclo ./TouchGFX/gui/src/containers/TouchFeedback.d ./TouchGFX/gui/src/containers/TouchFeedback.o ./TouchGFX/gui/src/containers/TouchFeedback.su
 
 .PHONY: clean-TouchGFX-2f-gui-2f-src-2f-containers
 

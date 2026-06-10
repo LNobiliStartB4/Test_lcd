@@ -10,7 +10,7 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
     switch (typography)
     {
     case Typography::TITLE:
-        // trebucbd_27_2bpp
+        // trebucbd_23_2bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[0]);
     case Typography::SUBTITLE:
         // verdana_16_2bpp
