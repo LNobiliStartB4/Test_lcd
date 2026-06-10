@@ -22,8 +22,9 @@ public:
     virtual void applyFeedback(bool visible, int16_t x, int16_t y, uint8_t alpha);
 
 private:
-    // Half of the 40x40 container, so the dot is centered on the touch point.
-    static const int16_t kHalfSize = 20;
+    // Touch-point offset for the 28x28 container (kept at the same ratio used
+    // for the previous 40x40 size).
+    static const int16_t kHalfSize = 7;
 };
 
 #endif // TOUCHFEEDBACK_HPP

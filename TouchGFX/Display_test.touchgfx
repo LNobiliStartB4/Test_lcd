@@ -92,8 +92,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -269,8 +269,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -432,8 +432,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -625,8 +625,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -911,8 +911,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -1195,8 +1195,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -1415,8 +1415,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -1589,8 +1589,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -1755,8 +1755,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -2001,8 +2001,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -2458,8 +2458,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -3167,8 +3167,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -3962,8 +3962,8 @@
           {
             "Type": "CustomContainerInstance",
             "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
@@ -4573,14 +4573,14 @@
       },
       {
         "Name": "TouchFeedback",
-        "Width": 40,
-        "Height": 40,
+        "Width": 28,
+        "Height": 28,
         "Components": [
           {
             "Type": "ScalableImage",
             "Name": "dot",
-            "Width": 40,
-            "Height": 40,
+            "Width": 28,
+            "Height": 28,
             "Filename": "TouchDot.png",
             "ScalingAlgorithm": "BilinearInterpolation"
           }
