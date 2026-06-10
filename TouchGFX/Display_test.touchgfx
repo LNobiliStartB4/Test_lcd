@@ -2214,13 +2214,6 @@
             "FitImageToSize": true,
             "ImageHorizontalScale": 0.58,
             "ImageVerticalScale": 0.66
-          },
-          {
-            "Type": "CustomContainerInstance",
-            "Name": "touchFeedback",
-            "Width": 40,
-            "Height": 40,
-            "CustomContainerDefinitionName": "TouchFeedback"
           }
         ],
         "Interactions": [
