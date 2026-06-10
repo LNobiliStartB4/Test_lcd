@@ -10,43 +10,43 @@ SettingsMenuRowBase::SettingsMenuRowBase() :
     flexButtonCallback(this, &SettingsMenuRowBase::flexButtonCallbackHandler)
 {
     setWidth(400);
-    setHeight(54);
+    setHeight(70);
     rowButton.setBoxWithBorderPosition(0, 0, 0, 0);
     rowButton.setBorderSize(0);
     rowButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
     rowButton.setAction(flexButtonCallback);
-    rowButton.setPosition(0, 0, 400, 54);
+    rowButton.setPosition(0, 0, 400, 70);
     add(rowButton);
 
     rowIcon.setSVG(SVG_SETTINGS_LANGUAGE_GOLD_ID);
-    rowIcon.setPosition(12, 15, 24, 24);
+    rowIcon.setPosition(12, 11, 48, 48);
     rowIcon.setScale(0.0f, 0.0f);
     rowIcon.setImagePosition(0, 0);
     rowIcon.setRotationCenter(0, 0);
     rowIcon.setRotation(0.0f);
     add(rowIcon);
 
-    rowTitle.setPosition(56, 5, 276, 20);
+    rowTitle.setPosition(72, 10, 280, 26);
     rowTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     rowTitle.setLinespacing(0);
     rowTitle.setTypedText(touchgfx::TypedText(T_TEXT_SETTINGSLANGUAGEITEM));
     add(rowTitle);
 
-    rowDescription.setPosition(56, 28, 276, 17);
+    rowDescription.setPosition(72, 40, 280, 22);
     rowDescription.setColor(touchgfx::Color::getColorFromRGB(124, 137, 148));
     rowDescription.setLinespacing(0);
     rowDescription.setTypedText(touchgfx::TypedText(T_TEXT_SETTINGSLANGUAGEDESCRIPTION));
     add(rowDescription);
 
     rowChevron.setSVG(SVG_SETTINGS_CHEVRON_DIM_ID);
-    rowChevron.setPosition(360, 15, 24, 24);
+    rowChevron.setPosition(356, 15, 40, 40);
     rowChevron.setScale(0.0f, 0.0f);
     rowChevron.setImagePosition(0, 0);
     rowChevron.setRotationCenter(0, 0);
     rowChevron.setRotation(0.0f);
     add(rowChevron);
 
-    rowDivider.setPosition(56, 53, 344, 1);
+    rowDivider.setPosition(56, 69, 344, 1);
     rowDivider.setColor(touchgfx::Color::getColorFromRGB(46, 54, 63));
     add(rowDivider);
 }

@@ -36,8 +36,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:119:18:virtual void touchgfx::AbstractButtonContainer::handleAlphaUpdated()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:84:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	0	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:33:18:virtual void Screen13Presenter::activate()	0	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:34:18:virtual void Screen13Presenter::deactivate()	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:63:18:virtual void Screen14Presenter::activate()	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:64:18:virtual void Screen14Presenter::deactivate()	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:85:18:virtual void Screen15Presenter::activate()	0	static
@@ -46,12 +44,9 @@
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:105:18:virtual void Screen16Presenter::deactivate()	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:123:18:virtual void Screen17Presenter::activate()	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:124:18:virtual void Screen17Presenter::deactivate()	0	static
-../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen13Presenter>::~View()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<adminui::AdminViewBase<Screen13Presenter>, const touchgfx::AbstractButtonContainer&, void, void>::~Callback()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen13View, const touchgfx::AbstractButtonContainer&>::~Callback()	0	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen14Presenter>::~View()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<adminui::AdminViewBase<Screen14Presenter>, const touchgfx::AbstractButtonContainer&, void, void>::~Callback()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen14View, const touchgfx::AbstractButtonContainer&>::~Callback()	0	static
@@ -62,18 +57,15 @@
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen17Presenter>::~View()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<adminui::AdminViewBase<Screen17Presenter>, const touchgfx::AbstractButtonContainer&, void, void>::~Callback()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	0	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:236:10:void adminui::AdminViewBase<PresenterType>::backCallbackHandler(const touchgfx::AbstractButtonContainer&) [with PresenterType = Screen13Presenter]	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:236:10:void adminui::AdminViewBase<PresenterType>::backCallbackHandler(const touchgfx::AbstractButtonContainer&) [with PresenterType = Screen14Presenter]	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:236:10:void adminui::AdminViewBase<PresenterType>::backCallbackHandler(const touchgfx::AbstractButtonContainer&) [with PresenterType = Screen15Presenter]	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:236:10:void adminui::AdminViewBase<PresenterType>::backCallbackHandler(const touchgfx::AbstractButtonContainer&) [with PresenterType = Screen16Presenter]	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:236:10:void adminui::AdminViewBase<PresenterType>::backCallbackHandler(const touchgfx::AbstractButtonContainer&) [with PresenterType = Screen17Presenter]	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:577:7:Screen14View::~Screen14View()	16	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:332:7:Screen13View::~Screen13View()	16	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:119:7:Screen17Presenter::~Screen17Presenter()	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:100:7:Screen16Presenter::~Screen16Presenter()	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:81:7:Screen15Presenter::~Screen15Presenter()	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:59:7:Screen14Presenter::~Screen14Presenter()	0	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:29:7:Screen13Presenter::~Screen13Presenter()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:31:7:touchgfx::NoTransition::~NoTransition()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = adminui::AdminViewBase<Screen17Presenter>; T1 = const touchgfx::AbstractButtonContainer&]	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = adminui::AdminViewBase<Screen17Presenter>; T1 = const touchgfx::AbstractButtonContainer&]	0	static
@@ -85,10 +77,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = Screen14View; T1 = const touchgfx::AbstractButtonContainer&]	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = adminui::AdminViewBase<Screen14Presenter>; T1 = const touchgfx::AbstractButtonContainer&]	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = adminui::AdminViewBase<Screen14Presenter>; T1 = const touchgfx::AbstractButtonContainer&]	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = Screen13View; T1 = const touchgfx::AbstractButtonContainer&]	8	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = Screen13View; T1 = const touchgfx::AbstractButtonContainer&]	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = adminui::AdminViewBase<Screen13Presenter>; T1 = const touchgfx::AbstractButtonContainer&]	8	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = adminui::AdminViewBase<Screen13Presenter>; T1 = const touchgfx::AbstractButtonContainer&]	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:131:18:void touchgfx::BoxWithBorderButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::ClickButtonTrigger]	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:449:18:void touchgfx::Callback<dest_type, void, void, void>::execute() [with dest_type = FrontendApplication]	4	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:459:18:bool touchgfx::Callback<dest_type, void, void, void>::isValid() const [with dest_type = FrontendApplication]	0	static
@@ -99,7 +87,6 @@
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:100:7:virtual Screen16Presenter::~Screen16Presenter()	8	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:81:7:virtual Screen15Presenter::~Screen15Presenter()	8	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:59:7:virtual Screen14Presenter::~Screen14Presenter()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:29:7:virtual Screen13Presenter::~Screen13Presenter()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:424:8:virtual touchgfx::Callback<FrontendApplication>::~Callback()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:virtual touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:virtual touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	8	static
@@ -107,7 +94,6 @@
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen16Presenter>::~View()	8	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen15Presenter>::~View()	8	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen14Presenter>::~View()	8	static
-../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen13Presenter>::~View()	8	static
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:14:13:virtual FrontendApplication::~FrontendApplication()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	8	static
@@ -117,14 +103,11 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen14View, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:577:7:virtual Screen14View::~Screen14View()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<adminui::AdminViewBase<Screen14Presenter>, const touchgfx::AbstractButtonContainer&, void, void>::~Callback()	8	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen13View, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:332:7:virtual Screen13View::~Screen13View()	8	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<adminui::AdminViewBase<Screen13Presenter>, const touchgfx::AbstractButtonContainer&, void, void>::~Callback()	8	static
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:34:18:virtual void FrontendApplication::handleTickEvent()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:89:18:virtual void touchgfx::Transition::invalidate()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:865:18:virtual void Screen17View::handleBack()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:783:18:virtual void Screen16View::handleBack()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:713:18:virtual void Screen15View::handleBack()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:864:18:virtual void Screen17View::handleBack()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:782:18:virtual void Screen16View::handleBack()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:712:18:virtual void Screen15View::handleBack()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
@@ -132,18 +115,14 @@
 ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:59:18:virtual void touchgfx::MVPApplication::handlePendingScreenTransition()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	16	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:852:18:virtual void Screen17View::setupScreen()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:413:18:virtual void Screen13View::setupScreen()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:650:10:void Screen14View::rowCallbackHandler(const touchgfx::AbstractButtonContainer&)	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:640:18:virtual void Screen14View::handleBack()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:631:18:virtual void Screen14View::setupScreen()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:50:13:uint8_t Screen13Presenter::getLockoutSeconds() const	0	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:433:18:virtual void Screen13View::handleBack()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:29:7:virtual void* Screen13Presenter::_ZThn4_N17Screen13PresenterD1Ev()	0	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:851:18:virtual void Screen17View::setupScreen()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:649:10:void Screen14View::rowCallbackHandler(const touchgfx::AbstractButtonContainer&)	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:639:18:virtual void Screen14View::handleBack()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:630:18:virtual void Screen14View::setupScreen()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:59:7:virtual void* Screen14Presenter::_ZThn4_N17Screen14PresenterD1Ev()	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:119:7:virtual void* Screen17Presenter::_ZThn4_N17Screen17PresenterD1Ev()	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:100:7:virtual void* Screen16Presenter::_ZThn4_N17Screen16PresenterD1Ev()	0	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:81:7:virtual void* Screen15Presenter::_ZThn4_N17Screen15PresenterD1Ev()	0	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:59:7:virtual void* Screen14Presenter::_ZThn4_N17Screen14PresenterD1Ev()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
@@ -152,63 +131,54 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:65:5:touchgfx::TextAreaWithOneWildcard::TextAreaWithOneWildcard()	8	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:157:13:void adminui::configureButton(OutlineButton&, int16_t, int16_t, int16_t, int16_t, touchgfx::colortype)	32	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:512:10:void Screen13View::updatePinDisplay()	0	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:527:10:void Screen13View::updateLockoutState()	24	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:423:18:virtual void Screen13View::handleTickEvent()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:443:10:void Screen13View::digitCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:413:18:virtual void Screen13View::setupScreen()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:463:10:void Screen13View::commandCallbackHandler(const touchgfx::AbstractButtonContainer&)	24	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:250:7:adminui::DiagnosticViewBase<Screen15Presenter>::~DiagnosticViewBase()	16	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:675:7:Screen15View::~Screen15View()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:675:7:virtual Screen15View::~Screen15View()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:674:7:Screen15View::~Screen15View()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:674:7:virtual Screen15View::~Screen15View()	8	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:250:7:virtual adminui::DiagnosticViewBase<Screen15Presenter>::~DiagnosticViewBase()	8	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:250:7:adminui::DiagnosticViewBase<Screen16Presenter>::~DiagnosticViewBase()	16	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:741:7:Screen16View::~Screen16View()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:741:7:virtual Screen16View::~Screen16View()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:740:7:Screen16View::~Screen16View()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:740:7:virtual Screen16View::~Screen16View()	8	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:250:7:virtual adminui::DiagnosticViewBase<Screen16Presenter>::~DiagnosticViewBase()	8	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:250:7:adminui::DiagnosticViewBase<Screen17Presenter>::~DiagnosticViewBase()	16	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:832:7:Screen17View::~Screen17View()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:832:7:virtual Screen17View::~Screen17View()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:831:7:Screen17View::~Screen17View()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:831:7:virtual Screen17View::~Screen17View()	8	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:250:7:virtual adminui::DiagnosticViewBase<Screen17Presenter>::~DiagnosticViewBase()	8	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:30:1:FrontendApplication::FrontendApplication(Model&, FrontendHeap&)	8	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:35:6:void FrontendApplication::gotoProductSelectScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:41:6:void FrontendApplication::gotoBandyScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:47:6:void FrontendApplication::gotoRfidWaitScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:53:6:void FrontendApplication::gotoSetpointEditScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:59:6:void FrontendApplication::gotoSetpointKeypadScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:65:6:void FrontendApplication::gotoPauseScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:71:6:void FrontendApplication::gotoEndConfirmScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:77:6:void FrontendApplication::gotoHemorflowWaitScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:83:6:void FrontendApplication::gotoHemorflowScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:89:6:void FrontendApplication::gotoSettingsScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:95:6:void FrontendApplication::gotoBrightnessScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:101:6:void FrontendApplication::gotoLanguageScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:107:6:void FrontendApplication::gotoAdminPinScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:113:6:void FrontendApplication::gotoAdminMenuScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:119:6:void FrontendApplication::gotoAdminSystemInfoScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:125:6:void FrontendApplication::gotoAdminPressureScreenNoTransition()	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:131:6:void FrontendApplication::gotoAdminMemoryScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:32:1:FrontendApplication::FrontendApplication(Model&, FrontendHeap&)	8	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:37:6:void FrontendApplication::gotoProductSelectScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:43:6:void FrontendApplication::gotoBandyScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:49:6:void FrontendApplication::gotoRfidWaitScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:55:6:void FrontendApplication::gotoSetpointEditScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:61:6:void FrontendApplication::gotoSetpointKeypadScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:67:6:void FrontendApplication::gotoPauseScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:73:6:void FrontendApplication::gotoEndConfirmScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:79:6:void FrontendApplication::gotoHemorflowWaitScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:85:6:void FrontendApplication::gotoHemorflowScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:91:6:void FrontendApplication::gotoSettingsScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:97:6:void FrontendApplication::gotoBrightnessScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:103:6:void FrontendApplication::gotoLanguageScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:109:6:void FrontendApplication::gotoAdminPinScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:115:6:void FrontendApplication::gotoAdminMenuScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:121:6:void FrontendApplication::gotoAdminSystemInfoScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:127:6:void FrontendApplication::gotoAdminPressureScreenNoTransition()	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:133:6:void FrontendApplication::gotoAdminMemoryScreenNoTransition()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:201:14:adminui::AdminViewBase<PresenterType>::AdminViewBase(uint16_t) [with PresenterType = Screen13Presenter]	56	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:335:5:Screen13View::Screen13View()	80	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:201:14:adminui::AdminViewBase<PresenterType>::AdminViewBase(uint16_t) [with PresenterType = Screen14Presenter]	56	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:580:5:Screen14View::Screen14View()	64	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:284:10:void adminui::DiagnosticViewBase<PresenterType>::setTextValue(uint8_t, const char*) [with PresenterType = Screen15Presenter]	16	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:719:10:void Screen15View::refresh()	176	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:703:18:virtual void Screen15View::handleTickEvent()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:693:18:virtual void Screen15View::setupScreen()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:718:10:void Screen15View::refresh()	176	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:702:18:virtual void Screen15View::handleTickEvent()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:692:18:virtual void Screen15View::setupScreen()	8	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:284:10:void adminui::DiagnosticViewBase<PresenterType>::setTextValue(uint8_t, const char*) [with PresenterType = Screen16Presenter]	16	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:296:10:void adminui::DiagnosticViewBase<PresenterType>::setIntValue(uint8_t, int32_t, const char*) [with PresenterType = Screen16Presenter]	24	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:310:10:void adminui::DiagnosticViewBase<PresenterType>::setUnsignedValue(uint8_t, uint32_t, const char*) [with PresenterType = Screen16Presenter]	24	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:789:10:void Screen16View::refresh()	152	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:773:18:virtual void Screen16View::handleTickEvent()	8	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:763:18:virtual void Screen16View::setupScreen()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:788:10:void Screen16View::refresh()	152	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:772:18:virtual void Screen16View::handleTickEvent()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:762:18:virtual void Screen16View::setupScreen()	8	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:284:10:void adminui::DiagnosticViewBase<PresenterType>::setTextValue(uint8_t, const char*) [with PresenterType = Screen17Presenter]	16	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:310:10:void adminui::DiagnosticViewBase<PresenterType>::setUnsignedValue(uint8_t, uint32_t, const char*) [with PresenterType = Screen17Presenter]	24	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:871:10:void Screen17View::refresh()	152	static
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:852:18:virtual void Screen17View::setupScreen()	8	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:870:10:void Screen17View::refresh()	152	static
+../TouchGFX/gui/include/gui/common/AdminScreens.hpp:851:18:virtual void Screen17View::setupScreen()	8	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:201:14:adminui::AdminViewBase<PresenterType>::AdminViewBase(uint16_t) [with PresenterType = Screen15Presenter]	56	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:253:14:adminui::DiagnosticViewBase<PresenterType>::DiagnosticViewBase(uint16_t) [with PresenterType = Screen15Presenter]	64	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:201:14:adminui::AdminViewBase<PresenterType>::AdminViewBase(uint16_t) [with PresenterType = Screen16Presenter]	56	static
@@ -216,21 +186,21 @@
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:201:14:adminui::AdminViewBase<PresenterType>::AdminViewBase(uint16_t) [with PresenterType = Screen17Presenter]	56	static
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:253:14:adminui::DiagnosticViewBase<PresenterType>::DiagnosticViewBase(uint16_t) [with PresenterType = Screen17Presenter]	64	static
 ../Middlewares/ST/touchgfx/framework/include/common/AbstractPartition.hpp:135:8:T& touchgfx::AbstractPartition::at(uint16_t) [with T = touchgfx::NoTransition]	0	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:217:6:void FrontendApplication::gotoAdminMemoryScreenNoTransitionImpl()	56	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:212:6:void FrontendApplication::gotoAdminPressureScreenNoTransitionImpl()	56	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:207:6:void FrontendApplication::gotoAdminSystemInfoScreenNoTransitionImpl()	56	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:202:6:void FrontendApplication::gotoAdminMenuScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:197:6:void FrontendApplication::gotoAdminPinScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:192:6:void FrontendApplication::gotoLanguageScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:187:6:void FrontendApplication::gotoBrightnessScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:182:6:void FrontendApplication::gotoSettingsScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:177:6:void FrontendApplication::gotoHemorflowScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:172:6:void FrontendApplication::gotoHemorflowWaitScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:167:6:void FrontendApplication::gotoEndConfirmScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:162:6:void FrontendApplication::gotoPauseScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:157:6:void FrontendApplication::gotoSetpointKeypadScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:152:6:void FrontendApplication::gotoSetpointEditScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:147:6:void FrontendApplication::gotoBandyScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:142:6:void FrontendApplication::gotoRfidWaitScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:137:6:void FrontendApplication::gotoProductSelectScreenNoTransitionImpl()	40	static
-../TouchGFX/gui/src/common/FrontendApplication.cpp:220:1:cpp)	0	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:219:6:void FrontendApplication::gotoAdminMemoryScreenNoTransitionImpl()	56	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:214:6:void FrontendApplication::gotoAdminPressureScreenNoTransitionImpl()	56	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:209:6:void FrontendApplication::gotoAdminSystemInfoScreenNoTransitionImpl()	56	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:204:6:void FrontendApplication::gotoAdminMenuScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:199:6:void FrontendApplication::gotoAdminPinScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:194:6:void FrontendApplication::gotoLanguageScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:189:6:void FrontendApplication::gotoBrightnessScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:184:6:void FrontendApplication::gotoSettingsScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:179:6:void FrontendApplication::gotoHemorflowScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:174:6:void FrontendApplication::gotoHemorflowWaitScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:169:6:void FrontendApplication::gotoEndConfirmScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:164:6:void FrontendApplication::gotoPauseScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:159:6:void FrontendApplication::gotoSetpointKeypadScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:154:6:void FrontendApplication::gotoSetpointEditScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:149:6:void FrontendApplication::gotoBandyScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:144:6:void FrontendApplication::gotoRfidWaitScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:139:6:void FrontendApplication::gotoProductSelectScreenNoTransitionImpl()	40	static
+../TouchGFX/gui/src/common/FrontendApplication.cpp:222:1:cpp)	0	static

@@ -9,9 +9,9 @@
 #include <gui/screen18_screen/Screen18Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen18ViewBase : public touchgfx::View<Screen18Presenter>
 {
@@ -87,7 +87,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box keypadBackground;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  keypadBackButton;
-    touchgfx::TextArea keypadBackLabel;
+    touchgfx::SVGImage keypadBackIcon;
     touchgfx::TextArea keypadTitle;
     touchgfx::TextAreaWithOneWildcard keypadValue;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  digit1Button;

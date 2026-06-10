@@ -4,9 +4,9 @@
 #include <gui_generated/screen4_screen/Screen4ViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
-#include <images/BitmapDatabase.hpp>
 #include<images/SVGDatabase.hpp>
+#include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen4ViewBase::Screen4ViewBase() :
     flexButtonCallback(this, &Screen4ViewBase::flexButtonCallbackHandler)
@@ -28,21 +28,13 @@ Screen4ViewBase::Screen4ViewBase() :
     backButton.setPosition(0, 0, 120, 72);
     add(backButton);
 
-    backLabel.setPosition(22, 27, 76, 20);
-    backLabel.setColor(touchgfx::Color::getColorFromRGB(150, 148, 140));
-    backLabel.setLinespacing(0);
-    backLabel.setTypedText(touchgfx::TypedText(T_TEXT_BACK));
-    add(backLabel);
-
-    rfidAccent.setPosition(136, 28, 3, 28);
-    rfidAccent.setColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
-    add(rfidAccent);
-
-    rfidTitle.setPosition(148, 28, 268, 28);
-    rfidTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
-    rfidTitle.setLinespacing(0);
-    rfidTitle.setTypedText(touchgfx::TypedText(T_TEXT_BANDYTITLE));
-    add(rfidTitle);
+    backIcon.setSVG(SVG_ARROW_BACK_UP_ID);
+    backIcon.setPosition(28, 31, 40, 40);
+    backIcon.setScale(1.67f, 1.67f);
+    backIcon.setImagePosition(0, 0);
+    backIcon.setRotationCenter(0, 0);
+    backIcon.setRotation(0.0f);
+    add(backIcon);
 
     rfidCard.setPosition(72, 82, 336, 178);
     rfidCard.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -51,7 +43,7 @@ Screen4ViewBase::Screen4ViewBase() :
     add(rfidCard);
 
     rfidIcon.setBitmap(touchgfx::Bitmap(BITMAP_RFID_CONTACTLESS_ID));
-    rfidIcon.setPosition(168, 105, 144, 68);
+    rfidIcon.setPosition(168, 103, 144, 68);
     rfidIcon.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
     add(rfidIcon);
 

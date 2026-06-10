@@ -9,9 +9,9 @@
 #include <gui/screen5_screen/Screen5Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen5ViewBase : public touchgfx::View<Screen5Presenter>
 {
@@ -51,7 +51,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box setpointBackground;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setpointBackButton;
-    touchgfx::TextArea setpointBackLabel;
+    touchgfx::SVGImage setpointBackIcon;
     touchgfx::TextArea setpointTitle;
     touchgfx::TextAreaWithOneWildcard setpointValue;
     touchgfx::TextArea setpointMbarLabel;

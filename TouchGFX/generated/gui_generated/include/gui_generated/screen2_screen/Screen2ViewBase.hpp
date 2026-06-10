@@ -8,7 +8,6 @@
 #include <mvp/View.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/SVGImage.hpp>
 
@@ -45,14 +44,12 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box productBackground;
-    touchgfx::TextArea productTitle;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  settingsButton;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  bandyButton;
     touchgfx::Box bandyRowAccent;
     touchgfx::Box bandyRowDivider;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  emerflowButton;
     touchgfx::Box emerflowRowAccent;
-    touchgfx::Box emerflowRowDivider;
     touchgfx::SVGImage settingsIcon;
     touchgfx::SVGImage bandyChevron;
     touchgfx::SVGImage emerflowChevron;

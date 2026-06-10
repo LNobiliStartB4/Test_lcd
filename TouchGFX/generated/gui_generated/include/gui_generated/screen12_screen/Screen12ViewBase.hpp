@@ -9,9 +9,9 @@
 #include <gui/screen12_screen/Screen12Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen12ViewBase : public touchgfx::View<Screen12Presenter>
 {
@@ -47,7 +47,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box languageBackground;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  languageBackButton;
-    touchgfx::TextArea languageBackLabel;
+    touchgfx::SVGImage languageBackIcon;
     touchgfx::TextArea languageTitle;
     touchgfx::TextArea languageSubtitle;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  englishButton;

@@ -1,6 +1,8 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/common/FrontendHeap.hpp>
 #include <gui/common/AdminScreens.hpp>
+#include <gui/screen13_screen/Screen13View.hpp>
+#include <gui/screen13_screen/Screen13Presenter.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <gui/screen2_screen/Screen2View.hpp>
 #include <gui/screen4_screen/Screen4Presenter.hpp>

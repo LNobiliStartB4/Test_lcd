@@ -34,8 +34,9 @@ Screen6ViewBase::Screen6ViewBase() :
 
     pauseCard.setPosition(72, 99, 336, 126);
     pauseCard.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    pauseCard.setBorderColor(touchgfx::Color::getColorFromRGB(54, 86, 116));
-    pauseCard.setBorderSize(2);
+    pauseCard.setBorderColor(touchgfx::Color::getColorFromRGB(240, 170, 0));
+    pauseCard.setBorderSize(1);
+    pauseCard.setAlpha(164);
     add(pauseCard);
 
     pauseRemainingLabel.setPosition(72, 111, 336, 18);

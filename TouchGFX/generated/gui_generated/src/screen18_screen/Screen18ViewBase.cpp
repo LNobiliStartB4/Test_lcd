@@ -4,8 +4,8 @@
 #include <gui_generated/screen18_screen/Screen18ViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include<images/SVGDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen18ViewBase::Screen18ViewBase() :
     flexButtonCallback(this, &Screen18ViewBase::flexButtonCallbackHandler)
@@ -27,11 +27,13 @@ Screen18ViewBase::Screen18ViewBase() :
     keypadBackButton.setPosition(12, 10, 96, 44);
     add(keypadBackButton);
 
-    keypadBackLabel.setPosition(22, 22, 76, 20);
-    keypadBackLabel.setColor(touchgfx::Color::getColorFromRGB(150, 148, 140));
-    keypadBackLabel.setLinespacing(0);
-    keypadBackLabel.setTypedText(touchgfx::TypedText(T_TEXT_BACK));
-    add(keypadBackLabel);
+    keypadBackIcon.setSVG(SVG_ARROW_BACK_UP_ID);
+    keypadBackIcon.setPosition(28, 28, 40, 40);
+    keypadBackIcon.setScale(1.67f, 1.67f);
+    keypadBackIcon.setImagePosition(0, 0);
+    keypadBackIcon.setRotationCenter(0, 0);
+    keypadBackIcon.setRotation(0.0f);
+    add(keypadBackIcon);
 
     keypadTitle.setPosition(110, 14, 260, 30);
     keypadTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));

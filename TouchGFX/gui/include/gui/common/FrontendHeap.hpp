@@ -8,21 +8,19 @@ class FrontendHeap : public FrontendHeapBase
 {
 public:
     /* List any user-defined view types here*/
-    typedef touchgfx::meta::TypeList< Screen13View,
-            touchgfx::meta::TypeList< Screen14View,
+    typedef touchgfx::meta::TypeList< Screen14View,
             touchgfx::meta::TypeList< Screen15View,
             touchgfx::meta::TypeList< Screen16View,
             touchgfx::meta::TypeList< Screen17View,
-                            touchgfx::meta::Nil > > > > >
+                            touchgfx::meta::Nil > > > >
                             UserDefinedViewTypes;
 
     /* List any user-defined presenter types here*/
-    typedef touchgfx::meta::TypeList< Screen13Presenter,
-            touchgfx::meta::TypeList< Screen14Presenter,
+    typedef touchgfx::meta::TypeList< Screen14Presenter,
             touchgfx::meta::TypeList< Screen15Presenter,
             touchgfx::meta::TypeList< Screen16Presenter,
             touchgfx::meta::TypeList< Screen17Presenter,
-                            touchgfx::meta::Nil > > > > >
+                            touchgfx::meta::Nil > > > >
                             UserDefinedPresenterTypes;
 
     /* List any user-defined transition types here*/

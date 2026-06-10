@@ -9,10 +9,10 @@
 #include <gui/screen8_screen/Screen8Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen8ViewBase : public touchgfx::View<Screen8Presenter>
 {
@@ -40,7 +40,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box hemorflowWaitBackground;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  backButton;
-    touchgfx::TextArea backLabel;
+    touchgfx::SVGImage backIcon;
     touchgfx::Box hemorflowWaitAccent;
     touchgfx::TextArea hemorflowWaitTitle;
     touchgfx::BoxWithBorder hemorflowWaitCard;

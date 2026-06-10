@@ -4,8 +4,8 @@
 #include <gui_generated/screen10_screen/Screen10ViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include<images/SVGDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen10ViewBase::Screen10ViewBase() :
     flexButtonCallback(this, &Screen10ViewBase::flexButtonCallbackHandler)
@@ -27,19 +27,21 @@ Screen10ViewBase::Screen10ViewBase() :
     settingsBackButton.setPosition(0, 0, 120, 72);
     add(settingsBackButton);
 
-    settingsBackLabel.setPosition(16, 27, 96, 20);
-    settingsBackLabel.setColor(touchgfx::Color::getColorFromRGB(150, 148, 140));
-    settingsBackLabel.setLinespacing(0);
-    settingsBackLabel.setTypedText(touchgfx::TypedText(T_TEXT_BACK));
-    add(settingsBackLabel);
+    settingsBackIcon.setSVG(SVG_ARROW_BACK_UP_ID);
+    settingsBackIcon.setPosition(24, 30, 40, 40);
+    settingsBackIcon.setScale(1.67f, 1.67f);
+    settingsBackIcon.setImagePosition(0, 0);
+    settingsBackIcon.setRotationCenter(0, 0);
+    settingsBackIcon.setRotation(0.0f);
+    add(settingsBackIcon);
 
-    settingsTitle.setPosition(0, 48, 480, 32);
+    settingsTitle.setPosition(-9, 40, 480, 32);
     settingsTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     settingsTitle.setLinespacing(0);
     settingsTitle.setTypedText(touchgfx::TypedText(T_TEXT_SETTINGSTITLE));
     add(settingsTitle);
 
-    settingsSubtitle.setPosition(0, 84, 480, 20);
+    settingsSubtitle.setPosition(-9, 76, 480, 20);
     settingsSubtitle.setColor(touchgfx::Color::getColorFromRGB(124, 137, 148));
     settingsSubtitle.setLinespacing(0);
     settingsSubtitle.setTypedText(touchgfx::TypedText(T_TEXT_SETTINGSSUBTITLE));
@@ -48,10 +50,10 @@ Screen10ViewBase::Screen10ViewBase() :
     settingsRow0.setXY(40, 108);
     add(settingsRow0);
 
-    settingsRow1.setXY(40, 166);
+    settingsRow1.setXY(40, 178);
     add(settingsRow1);
 
-    settingsRow2.setXY(40, 224);
+    settingsRow2.setXY(40, 248);
     add(settingsRow2);
 
     settingsPreviousButton.setBoxWithBorderPosition(0, 0, 0, 0);
@@ -89,7 +91,7 @@ Screen10ViewBase::Screen10ViewBase() :
     add(settingsNextLabel);
 
     svgImage1.setSVG(SVG_LOGO_UFFICIALE_THD_2016_RGB_ID);
-    svgImage1.setPosition(391, 8, 80, 80);
+    svgImage1.setPosition(391, 6, 80, 80);
     svgImage1.setScale(0.58f, 0.66f);
     svgImage1.setImagePosition(0, 0);
     svgImage1.setRotationCenter(0, 0);

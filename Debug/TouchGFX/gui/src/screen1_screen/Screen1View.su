@@ -4,6 +4,6 @@
 ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:12:13:Screen1View::~Screen1View()	8	static
 ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:12:13:virtual Screen1View::~Screen1View()	8	static
 ../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:10:1:Screen1View::Screen1View()	8	static
-../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:47:6:void Screen1View::updateDots(uint8_t)	32	static
+../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:47:6:void Screen1View::updateDots(uint8_t)	24	static
 ../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:16:6:virtual void Screen1View::setupScreen()	8	static
 ../TouchGFX/gui/src/screen1_screen/Screen1View.cpp:31:6:virtual void Screen1View::handleTickEvent()	8	static

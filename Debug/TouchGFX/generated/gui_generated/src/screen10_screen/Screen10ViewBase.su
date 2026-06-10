@@ -46,21 +46,22 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen10ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
-../TouchGFX/generated/gui_generated/src/screen10_screen/Screen10ViewBase.cpp:105:6:virtual void Screen10ViewBase::setupScreen()	8	static
+../TouchGFX/generated/gui_generated/src/screen10_screen/Screen10ViewBase.cpp:107:6:virtual void Screen10ViewBase::setupScreen()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
-../TouchGFX/generated/gui_generated/src/screen10_screen/Screen10ViewBase.cpp:112:6:void Screen10ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
+../TouchGFX/generated/gui_generated/src/screen10_screen/Screen10ViewBase.cpp:114:6:void Screen10ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	0	static
-../TouchGFX/generated/gui_generated/src/screen10_screen/Screen10ViewBase.cpp:100:1:Screen10ViewBase::~Screen10ViewBase()	16	static
-../TouchGFX/generated/gui_generated/src/screen10_screen/Screen10ViewBase.cpp:100:1:virtual Screen10ViewBase::~Screen10ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen10_screen/Screen10ViewBase.cpp:102:1:Screen10ViewBase::~Screen10ViewBase()	16	static
+../TouchGFX/generated/gui_generated/src/screen10_screen/Screen10ViewBase.cpp:102:1:virtual Screen10ViewBase::~Screen10ViewBase()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	8	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:43:5:touchgfx::SVGImage::SVGImage()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
-../TouchGFX/generated/gui_generated/src/screen10_screen/Screen10ViewBase.cpp:10:1:Screen10ViewBase::Screen10ViewBase()	128	static
+../TouchGFX/generated/gui_generated/src/screen10_screen/Screen10ViewBase.cpp:10:1:Screen10ViewBase::Screen10ViewBase()	120	static

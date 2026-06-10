@@ -1,0 +1,10 @@
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	0	static
+../TouchGFX/gui/include/gui/screen13_screen/Screen13Presenter.hpp:20:13:Screen13Presenter::~Screen13Presenter()	0	static
+../TouchGFX/gui/src/screen13_screen/Screen13Presenter.cpp:10:6:virtual void Screen13Presenter::activate()	0	static
+../TouchGFX/gui/include/gui/screen13_screen/Screen13Presenter.hpp:20:13:virtual Screen13Presenter::~Screen13Presenter()	8	static
+../TouchGFX/gui/include/gui/screen13_screen/Screen13Presenter.hpp:20:13:virtual void* Screen13Presenter::_ZThn4_N17Screen13PresenterD1Ev()	0	static
+../TouchGFX/gui/src/screen13_screen/Screen13Presenter.cpp:5:1:Screen13Presenter::Screen13Presenter(Screen13View&)	0	static
+../TouchGFX/gui/src/screen13_screen/Screen13Presenter.cpp:18:17:AdminAuthResult Screen13Presenter::authenticate(uint16_t)	0	static
+../TouchGFX/gui/src/screen13_screen/Screen13Presenter.cpp:23:6:bool Screen13Presenter::isAuthenticated() const	0	static
+../TouchGFX/gui/src/screen13_screen/Screen13Presenter.cpp:28:6:void Screen13Presenter::logout()	0	static
+../TouchGFX/gui/src/screen13_screen/Screen13Presenter.cpp:36:9:uint8_t Screen13Presenter::getLockoutSeconds() const	0	static

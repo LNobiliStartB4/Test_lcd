@@ -11,7 +11,7 @@
         <Translation Language="IT">THD</Translation>
       </Text>
       <Text Id="Text_SplashSubtitle" Alignment="Center" TypographyId="Subtitle">
-        <Translation Language="GB">PRESSURE STABILISER</Translation>
+        <Translation Language="GB">PRESSURE STABILIZER</Translation>
         <Translation Language="IT">PRESSURE STABILISER</Translation>
       </Text>
       <Text Id="Text_SplashInitializing" Alignment="Center" TypographyId="Subtitle">
@@ -38,27 +38,27 @@
         <Translation Language="GB">Choose an option</Translation>
         <Translation Language="IT">Scegli un'opzione</Translation>
       </Text>
-      <Text Id="Text_SettingsLanguageItem" Alignment="Left" TypographyId="Button">
+      <Text Id="Text_SettingsLanguageItem" Alignment="Left" TypographyId="SettingsItem">
         <Translation Language="GB">LANGUAGE</Translation>
         <Translation Language="IT">LINGUA</Translation>
       </Text>
-      <Text Id="Text_SettingsLanguageDescription" Alignment="Left" TypographyId="Step">
+      <Text Id="Text_SettingsLanguageDescription" Alignment="Left" TypographyId="SettingsDescription">
         <Translation Language="GB">Choose display language</Translation>
         <Translation Language="IT">Scegli lingua display</Translation>
       </Text>
-      <Text Id="Text_SettingsBrightnessItem" Alignment="Left" TypographyId="Button">
+      <Text Id="Text_SettingsBrightnessItem" Alignment="Left" TypographyId="SettingsItem">
         <Translation Language="GB">BRIGHTNESS</Translation>
         <Translation Language="IT">LUMINOSITA</Translation>
       </Text>
-      <Text Id="Text_SettingsBrightnessDescription" Alignment="Left" TypographyId="Step">
+      <Text Id="Text_SettingsBrightnessDescription" Alignment="Left" TypographyId="SettingsDescription">
         <Translation Language="GB">Adjust display brightness</Translation>
         <Translation Language="IT">Regola luminosita display</Translation>
       </Text>
-      <Text Id="Text_SettingsAdminItem" Alignment="Left" TypographyId="Button">
+      <Text Id="Text_SettingsAdminItem" Alignment="Left" TypographyId="SettingsItem">
         <Translation Language="GB">ADMIN ACCESS</Translation>
         <Translation Language="IT">ACCESSO ADMIN</Translation>
       </Text>
-      <Text Id="Text_SettingsAdminDescription" Alignment="Left" TypographyId="Step">
+      <Text Id="Text_SettingsAdminDescription" Alignment="Left" TypographyId="SettingsDescription">
         <Translation Language="GB">Technical diagnostics</Translation>
         <Translation Language="IT">Diagnostica tecnica</Translation>
       </Text>
@@ -117,6 +117,46 @@
       <Text Id="Text_AdminDelete" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">DEL</Translation>
         <Translation Language="IT">CANC</Translation>
+      </Text>
+      <Text Id="Text_KeypadDigit0" Alignment="Center" TypographyId="TimeValue">
+        <Translation Language="GB">0</Translation>
+        <Translation Language="IT">0</Translation>
+      </Text>
+      <Text Id="Text_KeypadDigit1" Alignment="Center" TypographyId="TimeValue">
+        <Translation Language="GB">1</Translation>
+        <Translation Language="IT">1</Translation>
+      </Text>
+      <Text Id="Text_KeypadDigit2" Alignment="Center" TypographyId="TimeValue">
+        <Translation Language="GB">2</Translation>
+        <Translation Language="IT">2</Translation>
+      </Text>
+      <Text Id="Text_KeypadDigit3" Alignment="Center" TypographyId="TimeValue">
+        <Translation Language="GB">3</Translation>
+        <Translation Language="IT">3</Translation>
+      </Text>
+      <Text Id="Text_KeypadDigit4" Alignment="Center" TypographyId="TimeValue">
+        <Translation Language="GB">4</Translation>
+        <Translation Language="IT">4</Translation>
+      </Text>
+      <Text Id="Text_KeypadDigit5" Alignment="Center" TypographyId="TimeValue">
+        <Translation Language="GB">5</Translation>
+        <Translation Language="IT">5</Translation>
+      </Text>
+      <Text Id="Text_KeypadDigit6" Alignment="Center" TypographyId="TimeValue">
+        <Translation Language="GB">6</Translation>
+        <Translation Language="IT">6</Translation>
+      </Text>
+      <Text Id="Text_KeypadDigit7" Alignment="Center" TypographyId="TimeValue">
+        <Translation Language="GB">7</Translation>
+        <Translation Language="IT">7</Translation>
+      </Text>
+      <Text Id="Text_KeypadDigit8" Alignment="Center" TypographyId="TimeValue">
+        <Translation Language="GB">8</Translation>
+        <Translation Language="IT">8</Translation>
+      </Text>
+      <Text Id="Text_KeypadDigit9" Alignment="Center" TypographyId="TimeValue">
+        <Translation Language="GB">9</Translation>
+        <Translation Language="IT">9</Translation>
       </Text>
       <Text Id="Text_Digit0" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">0</Translation>
@@ -573,7 +613,7 @@
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Title" Font="verdana.ttf" Size="27" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Title" Font="trebucbd.ttf" Size="27" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Subtitle" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Body" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Caption" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x41-0x5A" />
@@ -583,5 +623,7 @@
     <Typography Id="TimeValue" Font="verdana.ttf" Size="32" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2A,0x2D,0x30-0x39,0x3A" />
     <Typography Id="Metric" Font="verdana.ttf" Size="34" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
     <Typography Id="Hero" Font="verdana.ttf" Size="45" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
+    <Typography Id="SettingsItem" Font="verdana.ttf" Size="20" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="SettingsDescription" Font="verdana.ttf" Size="15" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

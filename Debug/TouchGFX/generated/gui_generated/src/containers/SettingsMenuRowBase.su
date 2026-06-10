@@ -42,4 +42,4 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:43:5:touchgfx::SVGImage::SVGImage()	8	static
-../TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.cpp:9:1:SettingsMenuRowBase::SettingsMenuRowBase()	88	static
+../TouchGFX/generated/gui_generated/src/containers/SettingsMenuRowBase.cpp:9:1:SettingsMenuRowBase::SettingsMenuRowBase()	80	static

@@ -35,7 +35,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen11ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:290:8:touchgfx::Callback<Screen11ViewBase, const touchgfx::Slider&, int>::~Callback()	0	static
-../TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.cpp:98:6:virtual void Screen11ViewBase::setupScreen()	0	static
+../TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.cpp:100:6:virtual void Screen11ViewBase::setupScreen()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:318:18:void touchgfx::Callback<dest_type, T1, T2, void>::execute(T1, T2) [with dest_type = Screen11ViewBase; T1 = const touchgfx::Slider&; T2 = int]	12	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:328:18:bool touchgfx::Callback<dest_type, T1, T2, void>::isValid() const [with dest_type = Screen11ViewBase; T1 = const touchgfx::Slider&; T2 = int]	0	static
@@ -50,13 +50,13 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen11ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:290:8:virtual touchgfx::Callback<Screen11ViewBase, const touchgfx::Slider&, int>::~Callback()	8	static
-../TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.cpp:93:1:Screen11ViewBase::~Screen11ViewBase()	8	static
-../TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.cpp:93:1:virtual Screen11ViewBase::~Screen11ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.cpp:95:1:Screen11ViewBase::~Screen11ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.cpp:95:1:virtual Screen11ViewBase::~Screen11ViewBase()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
-../TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.cpp:103:6:void Screen11ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	0	static
-../TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.cpp:114:6:void Screen11ViewBase::sliderValueChangedCallbackHandler(const touchgfx::Slider&, int)	4	static
+../TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.cpp:105:6:void Screen11ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	0	static
+../TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.cpp:116:6:void Screen11ViewBase::sliderValueChangedCallbackHandler(const touchgfx::Slider&, int)	4	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	16	static
@@ -66,4 +66,5 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	8	static
-../TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.cpp:11:1:Screen11ViewBase::Screen11ViewBase()	128	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:43:5:touchgfx::SVGImage::SVGImage()	8	static
+../TouchGFX/generated/gui_generated/src/screen11_screen/Screen11ViewBase.cpp:11:1:Screen11ViewBase::Screen11ViewBase()	120	static

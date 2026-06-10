@@ -9,10 +9,10 @@
 #include <gui/screen10_screen/Screen10Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <gui/containers/SettingsMenuRow.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen10ViewBase : public touchgfx::View<Screen10Presenter>
 {
@@ -48,7 +48,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box settingsBackground;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  settingsBackButton;
-    touchgfx::TextArea settingsBackLabel;
+    touchgfx::SVGImage settingsBackIcon;
     touchgfx::TextArea settingsTitle;
     touchgfx::TextArea settingsSubtitle;
     SettingsMenuRow settingsRow0;

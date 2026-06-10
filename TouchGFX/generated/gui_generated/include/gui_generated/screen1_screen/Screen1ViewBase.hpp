@@ -9,7 +9,6 @@
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
@@ -30,9 +29,9 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box splashBackground;
     touchgfx::TextArea splashSubtitle;
-    touchgfx::ScalableImage splashDot1;
-    touchgfx::ScalableImage splashDot2;
-    touchgfx::ScalableImage splashDot3;
+    touchgfx::SVGImage splashDot1;
+    touchgfx::SVGImage splashDot2;
+    touchgfx::SVGImage splashDot3;
     touchgfx::TextArea splashInitText;
     touchgfx::SVGImage svgImage1;
 

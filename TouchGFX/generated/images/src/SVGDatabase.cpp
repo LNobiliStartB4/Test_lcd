@@ -4,6 +4,140 @@
 
 using namespace touchgfx;
 
+static const uint8_t svg_arrow_back_up_shape_1_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE
+};
+
+static const float svg_arrow_back_up_shape_1_points[] = {
+    5.0000f, 10.0000f, 16.0000f, 17.4291f, 10.0000f, 18.7496f, 10.7624f, 19.4641f, 12.0000f, 20.1786f, 13.2376f, 20.1786f, 14.7624f, 19.4641f, 16.0000f,
+    18.7496f, 17.2376f, 17.4291f, 18.0000f, 16.0000f, 18.0000f, 15.0000f
+};
+
+static const VGFixedColor svg_arrow_back_up_shape_1_stroke = {
+    0xfff0aa00 // ARGB
+};
+
+static const VGShape svg_arrow_back_up_shape_1 = {
+    6, 22,                                                    // numCommands, numPoints
+    svg_arrow_back_up_shape_1_commands,                       // commands
+    svg_arrow_back_up_shape_1_points,                         // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_NONE,                                                  // fillMode
+    VG_FIXED_COLOR,                                           // strokeMode
+    0,                                                        // fillPaint
+    &svg_arrow_back_up_shape_1_stroke,                        // strokePaint
+    2.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_ROUND,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_ROUND,                                  // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 5.0000f, 10.0000f, 20.0000f, 18.0000f },                // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
+};
+
+static const uint8_t svg_arrow_back_up_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE
+};
+
+static const float svg_arrow_back_up_shape_0_points[] = {
+    9.0000f, 14.0000f, 5.0000f, 10.0000f, 9.0000f, 6.0000f
+};
+
+static const VGFixedColor svg_arrow_back_up_shape_0_stroke = {
+    0xfff0aa00 // ARGB
+};
+
+static const VGShape svg_arrow_back_up_shape_0 = {
+    3, 6,                                                     // numCommands, numPoints
+    svg_arrow_back_up_shape_0_commands,                       // commands
+    svg_arrow_back_up_shape_0_points,                         // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_NONE,                                                  // fillMode
+    VG_FIXED_COLOR,                                           // strokeMode
+    0,                                                        // fillPaint
+    &svg_arrow_back_up_shape_0_stroke,                        // strokePaint
+    2.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_ROUND,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_ROUND,                                  // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 5.0000f, 6.0000f, 9.0000f, 14.0000f },                  // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    &svg_arrow_back_up_shape_1                                // next
+};
+
+static const uint8_t svg_dot_active_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_dot_active_shape_0_points[] = {
+    11.5000f, 6.0000f, 11.5000f, 9.0376f, 9.0376f, 11.5000f, 6.0000f, 11.5000f, 2.9624f, 11.5000f, 0.5000f, 9.0376f, 0.5000f, 6.0000f, 0.5000f, 2.9624f, 2.9624f, 0.5000f, 6.0000f, 0.5000f,
+    9.0376f, 0.5000f, 11.5000f, 2.9624f, 11.5000f, 6.0000f,
+};
+
+static const VGFixedColor svg_dot_active_shape_0_fill = {
+    0xfff0aa00 // ARGB
+};
+
+static const VGShape svg_dot_active_shape_0 = {
+    6, 26,                                                    // numCommands, numPoints
+    svg_dot_active_shape_0_commands,                          // commands
+    svg_dot_active_shape_0_points,                            // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_dot_active_shape_0_fill,                             // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 0.5000f, 0.5000f, 11.5000f, 11.5000f },                 // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
+};
+
+static const uint8_t svg_dot_dim_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_dot_dim_shape_0_points[] = {
+    11.5000f, 6.0000f, 11.5000f, 9.0376f, 9.0376f, 11.5000f, 6.0000f, 11.5000f, 2.9624f, 11.5000f, 0.5000f, 9.0376f, 0.5000f, 6.0000f, 0.5000f, 2.9624f, 2.9624f, 0.5000f, 6.0000f, 0.5000f,
+    9.0376f, 0.5000f, 11.5000f, 2.9624f, 11.5000f, 6.0000f,
+};
+
+static const VGFixedColor svg_dot_dim_shape_0_fill = {
+    0xff4a3300 // ARGB
+};
+
+static const VGShape svg_dot_dim_shape_0 = {
+    6, 26,                                                    // numCommands, numPoints
+    svg_dot_dim_shape_0_commands,                             // commands
+    svg_dot_dim_shape_0_points,                               // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_dot_dim_shape_0_fill,                                // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 0.5000f, 0.5000f, 11.5000f, 11.5000f },                 // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
+};
+
 static const uint8_t svg_hemorflow_shape_8_commands[] = {
     VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
     VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
@@ -53,7 +187,7 @@ static const float svg_hemorflow_shape_8_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_shape_8_fill = {
-    0xff003a76 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_hemorflow_shape_8 = {
@@ -95,7 +229,7 @@ static const float svg_hemorflow_shape_7_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_shape_7_fill = {
-    0xff003a76 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_hemorflow_shape_7 = {
@@ -137,7 +271,7 @@ static const float svg_hemorflow_shape_6_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_shape_6_fill = {
-    0xff003a76 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_hemorflow_shape_6 = {
@@ -183,7 +317,7 @@ static const float svg_hemorflow_shape_5_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_shape_5_fill = {
-    0xff003a76 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_hemorflow_shape_5 = {
@@ -226,7 +360,7 @@ static const float svg_hemorflow_shape_4_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_shape_4_fill = {
-    0xff003a76 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_hemorflow_shape_4 = {
@@ -264,7 +398,7 @@ static const float svg_hemorflow_shape_3_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_shape_3_fill = {
-    0xff003a76 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_hemorflow_shape_3 = {
@@ -302,7 +436,7 @@ static const float svg_hemorflow_shape_2_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_shape_2_fill = {
-    0xff003a76 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_hemorflow_shape_2 = {
@@ -340,7 +474,7 @@ static const float svg_hemorflow_shape_1_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_shape_1_fill = {
-    0xff003a76 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_hemorflow_shape_1 = {
@@ -376,7 +510,7 @@ static const float svg_hemorflow_shape_0_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_shape_0_fill = {
-    0xff003a76 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_hemorflow_shape_0 = {
@@ -447,8 +581,156 @@ static const float svg_hemorflow_v2_shape_5_points[] = {
     20.1900f, 7.0500f, 20.1900f, 7.0500f, 20.1900f, 7.0500f, 20.3700f, 7.0100f, 20.5300f, 7.0300f, 20.6400f, 7.0500f,
 };
 
-static const VGFixedColor svg_hemorflow_v2_shape_5_fill = {
-    0xff003a76 // ARGB
+// Linear gradient
+// Stops:
+// 0 @ 121 = ffffffff
+// 1 @ 121 = ff003c78
+static const uint32_t linear_gradient_hemorflow_v2_flowsplit_palette[] = {
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff,
+    0xffffffff, 0xffffffff, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78,
+    0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78, 0xff003c78
+};
+
+const float linear_gradient_hemorflow_v2_flowsplit_stop_positions[] = {
+    0.1186f, 0.1190f
+};
+
+const uint32_t linear_gradient_hemorflow_v2_flowsplit_stop_colors[] = {
+    0xffffffff, 0xff003c78
+};
+
+static const VGLinearGradient svg_hemorflow_v2_shape_5_fill = {
+    linear_gradient_hemorflow_v2_flowsplit_palette,
+    2, // Number of stops
+    linear_gradient_hemorflow_v2_flowsplit_stop_positions,
+    linear_gradient_hemorflow_v2_flowsplit_stop_colors,
+    11.3400f, 6.5700f, 20.6816f, 6.5700f, // Start and end point
+    true // Is solid
 };
 
 static const VGShape svg_hemorflow_v2_shape_5 = {
@@ -456,7 +738,7 @@ static const VGShape svg_hemorflow_v2_shape_5 = {
     svg_hemorflow_v2_shape_5_commands,                        // commands
     svg_hemorflow_v2_shape_5_points,                          // points
     VG_FILL_NON_ZERO,                                         // drawingMode
-    VG_FIXED_COLOR,                                           // fillMode
+    VG_LINEAR_GRADIENT,                                       // fillMode
     VG_NONE,                                                  // strokeMode
     &svg_hemorflow_v2_shape_5_fill,                           // fillPaint
     0,                                                        // strokePaint
@@ -490,7 +772,7 @@ static const float svg_hemorflow_v2_shape_4_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_v2_shape_4_fill = {
-    0xff003a76 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_hemorflow_v2_shape_4 = {
@@ -532,7 +814,7 @@ static const float svg_hemorflow_v2_shape_3_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_v2_shape_3_fill = {
-    0xff003a76 // ARGB
+    0xffffffff // ARGB
 };
 
 static const VGShape svg_hemorflow_v2_shape_3 = {
@@ -578,7 +860,7 @@ static const float svg_hemorflow_v2_shape_2_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_v2_shape_2_fill = {
-    0xff003a76 // ARGB
+    0xffffffff // ARGB
 };
 
 static const VGShape svg_hemorflow_v2_shape_2 = {
@@ -621,7 +903,7 @@ static const float svg_hemorflow_v2_shape_1_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_v2_shape_1_fill = {
-    0xff003a76 // ARGB
+    0xffffffff // ARGB
 };
 
 static const VGShape svg_hemorflow_v2_shape_1 = {
@@ -659,7 +941,7 @@ static const float svg_hemorflow_v2_shape_0_points[] = {
 };
 
 static const VGFixedColor svg_hemorflow_v2_shape_0_fill = {
-    0xff003a76 // ARGB
+    0xffffffff // ARGB
 };
 
 static const VGShape svg_hemorflow_v2_shape_0 = {
@@ -1035,7 +1317,7 @@ static const float svg_ogo_shape_11_points[] = {
 };
 
 static const VGFixedColor svg_ogo_shape_11_fill = {
-    0xff003b71 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_ogo_shape_11 = {
@@ -1080,7 +1362,7 @@ static const float svg_ogo_shape_10_points[] = {
 };
 
 static const VGFixedColor svg_ogo_shape_10_fill = {
-    0xff003b71 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_ogo_shape_10 = {
@@ -1130,7 +1412,7 @@ static const float svg_ogo_shape_9_points[] = {
 };
 
 static const VGFixedColor svg_ogo_shape_9_fill = {
-    0xff003b71 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_ogo_shape_9 = {
@@ -1170,7 +1452,7 @@ static const float svg_ogo_shape_8_points[] = {
 };
 
 static const VGFixedColor svg_ogo_shape_8_fill = {
-    0xff003b71 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_ogo_shape_8 = {
@@ -1206,7 +1488,7 @@ static const float svg_ogo_shape_7_points[] = {
 };
 
 static const VGFixedColor svg_ogo_shape_7_fill = {
-    0xff003b71 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_ogo_shape_7 = {
@@ -1246,7 +1528,7 @@ static const float svg_ogo_shape_6_points[] = {
 };
 
 static const VGFixedColor svg_ogo_shape_6_fill = {
-    0xff003b71 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_ogo_shape_6 = {
@@ -1279,7 +1561,7 @@ static const float svg_ogo_shape_5_points[] = {
 };
 
 static const VGFixedColor svg_ogo_shape_5_fill = {
-    0xff003b71 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_ogo_shape_5 = {
@@ -1320,7 +1602,7 @@ static const float svg_ogo_shape_4_points[] = {
 };
 
 static const VGFixedColor svg_ogo_shape_4_fill = {
-    0xff003b71 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_ogo_shape_4 = {
@@ -1358,7 +1640,7 @@ static const float svg_ogo_shape_3_points[] = {
 };
 
 static const VGFixedColor svg_ogo_shape_3_fill = {
-    0xff003b71 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_ogo_shape_3 = {
@@ -1396,7 +1678,7 @@ static const float svg_ogo_shape_2_points[] = {
 };
 
 static const VGFixedColor svg_ogo_shape_2_fill = {
-    0xff003b71 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_ogo_shape_2 = {
@@ -1434,7 +1716,7 @@ static const float svg_ogo_shape_1_points[] = {
 };
 
 static const VGFixedColor svg_ogo_shape_1_fill = {
-    0xff003b71 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_ogo_shape_1 = {
@@ -1470,7 +1752,7 @@ static const float svg_ogo_shape_0_points[] = {
 };
 
 static const VGFixedColor svg_ogo_shape_0_fill = {
-    0xff003b71 // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_ogo_shape_0 = {
@@ -1632,7 +1914,7 @@ static const float svg_selfbandy_shape_8_points[] = {
 };
 
 static const VGFixedColor svg_selfbandy_shape_8_fill = {
-    0xff183d6c // ARGB
+    0xffffffff // ARGB
 };
 
 static const VGShape svg_selfbandy_shape_8 = {
@@ -1678,7 +1960,7 @@ static const float svg_selfbandy_shape_7_points[] = {
 };
 
 static const VGFixedColor svg_selfbandy_shape_7_fill = {
-    0xff183d6c // ARGB
+    0xffffffff // ARGB
 };
 
 static const VGShape svg_selfbandy_shape_7 = {
@@ -1729,7 +2011,7 @@ static const float svg_selfbandy_shape_6_points[] = {
 };
 
 static const VGFixedColor svg_selfbandy_shape_6_fill = {
-    0xff183d6c // ARGB
+    0xffffffff // ARGB
 };
 
 static const VGShape svg_selfbandy_shape_6 = {
@@ -1769,7 +2051,7 @@ static const float svg_selfbandy_shape_5_points[] = {
 };
 
 static const VGFixedColor svg_selfbandy_shape_5_fill = {
-    0xff183d6c // ARGB
+    0xffffffff // ARGB
 };
 
 static const VGShape svg_selfbandy_shape_5 = {
@@ -1806,7 +2088,7 @@ static const float svg_selfbandy_shape_4_points[] = {
 };
 
 static const VGFixedColor svg_selfbandy_shape_4_fill = {
-    0xff183d6c // ARGB
+    0xffffffff // ARGB
 };
 
 static const VGShape svg_selfbandy_shape_4 = {
@@ -1846,7 +2128,7 @@ static const float svg_selfbandy_shape_3_points[] = {
 };
 
 static const VGFixedColor svg_selfbandy_shape_3_fill = {
-    0xff183d6c // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_selfbandy_shape_3 = {
@@ -1879,7 +2161,7 @@ static const float svg_selfbandy_shape_2_points[] = {
 };
 
 static const VGFixedColor svg_selfbandy_shape_2_fill = {
-    0xff183d6c // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_selfbandy_shape_2 = {
@@ -1921,7 +2203,7 @@ static const float svg_selfbandy_shape_1_points[] = {
 };
 
 static const VGFixedColor svg_selfbandy_shape_1_fill = {
-    0xff183d6c // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_selfbandy_shape_1 = {
@@ -1960,7 +2242,7 @@ static const float svg_selfbandy_shape_0_points[] = {
 };
 
 static const VGFixedColor svg_selfbandy_shape_0_fill = {
-    0xff183d6c // ARGB
+    0xff003c78 // ARGB
 };
 
 static const VGShape svg_selfbandy_shape_0 = {
@@ -1996,7 +2278,7 @@ static const float svg_setpoint_keyboard_gold_shape_3_points[] = {
 };
 
 static const VGFixedColor svg_setpoint_keyboard_gold_shape_3_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_setpoint_keyboard_gold_shape_3 = {
@@ -2034,7 +2316,7 @@ static const float svg_setpoint_keyboard_gold_shape_2_points[] = {
 };
 
 static const VGFixedColor svg_setpoint_keyboard_gold_shape_2_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_setpoint_keyboard_gold_shape_2 = {
@@ -2072,7 +2354,7 @@ static const float svg_setpoint_keyboard_gold_shape_1_points[] = {
 };
 
 static const VGFixedColor svg_setpoint_keyboard_gold_shape_1_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_setpoint_keyboard_gold_shape_1 = {
@@ -2108,7 +2390,7 @@ static const float svg_setpoint_keyboard_gold_shape_0_points[] = {
 };
 
 static const VGFixedColor svg_setpoint_keyboard_gold_shape_0_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_setpoint_keyboard_gold_shape_0 = {
@@ -2142,7 +2424,7 @@ static const float svg_settings_shape_1_points[] = {
 };
 
 static const VGFixedColor svg_settings_shape_1_stroke = {
-    0xff000000 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_shape_1 = {
@@ -2184,7 +2466,7 @@ static const float svg_settings_shape_0_points[] = {
 };
 
 static const VGFixedColor svg_settings_shape_0_stroke = {
-    0xff000000 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_shape_0 = {
@@ -2216,7 +2498,7 @@ static const float svg_settings_admin_gold_shape_3_points[] = {
 };
 
 static const VGFixedColor svg_settings_admin_gold_shape_3_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_admin_gold_shape_3 = {
@@ -2250,7 +2532,7 @@ static const float svg_settings_admin_gold_shape_2_points[] = {
 };
 
 static const VGFixedColor svg_settings_admin_gold_shape_2_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_admin_gold_shape_2 = {
@@ -2284,7 +2566,7 @@ static const float svg_settings_admin_gold_shape_1_points[] = {
 };
 
 static const VGFixedColor svg_settings_admin_gold_shape_1_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_admin_gold_shape_1 = {
@@ -2320,7 +2602,7 @@ static const float svg_settings_admin_gold_shape_0_points[] = {
 };
 
 static const VGFixedColor svg_settings_admin_gold_shape_0_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_admin_gold_shape_0 = {
@@ -2352,7 +2634,7 @@ static const float svg_settings_brightness_gold_shape_8_points[] = {
 };
 
 static const VGFixedColor svg_settings_brightness_gold_shape_8_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_brightness_gold_shape_8 = {
@@ -2384,7 +2666,7 @@ static const float svg_settings_brightness_gold_shape_7_points[] = {
 };
 
 static const VGFixedColor svg_settings_brightness_gold_shape_7_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_brightness_gold_shape_7 = {
@@ -2416,7 +2698,7 @@ static const float svg_settings_brightness_gold_shape_6_points[] = {
 };
 
 static const VGFixedColor svg_settings_brightness_gold_shape_6_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_brightness_gold_shape_6 = {
@@ -2448,7 +2730,7 @@ static const float svg_settings_brightness_gold_shape_5_points[] = {
 };
 
 static const VGFixedColor svg_settings_brightness_gold_shape_5_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_brightness_gold_shape_5 = {
@@ -2480,7 +2762,7 @@ static const float svg_settings_brightness_gold_shape_4_points[] = {
 };
 
 static const VGFixedColor svg_settings_brightness_gold_shape_4_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_brightness_gold_shape_4 = {
@@ -2512,7 +2794,7 @@ static const float svg_settings_brightness_gold_shape_3_points[] = {
 };
 
 static const VGFixedColor svg_settings_brightness_gold_shape_3_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_brightness_gold_shape_3 = {
@@ -2544,7 +2826,7 @@ static const float svg_settings_brightness_gold_shape_2_points[] = {
 };
 
 static const VGFixedColor svg_settings_brightness_gold_shape_2_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_brightness_gold_shape_2 = {
@@ -2576,7 +2858,7 @@ static const float svg_settings_brightness_gold_shape_1_points[] = {
 };
 
 static const VGFixedColor svg_settings_brightness_gold_shape_1_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_brightness_gold_shape_1 = {
@@ -2610,7 +2892,7 @@ static const float svg_settings_brightness_gold_shape_0_points[] = {
 };
 
 static const VGFixedColor svg_settings_brightness_gold_shape_0_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_brightness_gold_shape_0 = {
@@ -2674,7 +2956,7 @@ static const float svg_settings_language_gold_shape_4_points[] = {
 };
 
 static const VGFixedColor svg_settings_language_gold_shape_4_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_language_gold_shape_4 = {
@@ -2706,7 +2988,7 @@ static const float svg_settings_language_gold_shape_3_points[] = {
 };
 
 static const VGFixedColor svg_settings_language_gold_shape_3_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_language_gold_shape_3 = {
@@ -2738,7 +3020,7 @@ static const float svg_settings_language_gold_shape_2_points[] = {
 };
 
 static const VGFixedColor svg_settings_language_gold_shape_2_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_language_gold_shape_2 = {
@@ -2770,7 +3052,7 @@ static const float svg_settings_language_gold_shape_1_points[] = {
 };
 
 static const VGFixedColor svg_settings_language_gold_shape_1_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_language_gold_shape_1 = {
@@ -2804,7 +3086,7 @@ static const float svg_settings_language_gold_shape_0_points[] = {
 };
 
 static const VGFixedColor svg_settings_language_gold_shape_0_stroke = {
-    0xffd8b247 // ARGB
+    0xfff0aa00 // ARGB
 };
 
 static const VGShape svg_settings_language_gold_shape_0 = {
@@ -2828,6 +3110,9 @@ static const VGShape svg_settings_language_gold_shape_0 = {
 };
 
 static const touchgfx::VGObject svg_database[] = {
+    { 4.0000f, 5.0000f, 17.0000f, 14.0000f, 24.0000f, 24.0000f, &svg_arrow_back_up_shape_0 },
+    { 0.5000f, 0.5000f, 11.0000f, 11.0000f, 12.0000f, 12.0000f, &svg_dot_active_shape_0 },
+    { 0.5000f, 0.5000f, 11.0000f, 11.0000f, 12.0000f, 12.0000f, &svg_dot_dim_shape_0 },
     { 1.5800f, 6.8300f, 19.2220f, 1.9500f, 19.6000f, 2.4000f, &svg_hemorflow_shape_0 },
     { 1.8200f, 6.5700f, 18.8616f, 2.2900f, 22.5000f, 15.6000f, &svg_hemorflow_v2_shape_0 },
     { 0.0000f, 0.0006f, 129.7184f, 114.6288f, 129.7300f, 114.6300f, &svg_logo_ufficiale_thd_2016_rgb_shape_0 },
@@ -2850,6 +3135,6 @@ const touchgfx::VGObject* getInstance()
 
 uint16_t getInstanceSize()
 {
-    return 11;
+    return 14;
 }
 } // namespace SVGDatabase

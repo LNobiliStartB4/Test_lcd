@@ -4,9 +4,9 @@
 #include <gui_generated/screen11_screen/Screen11ViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
+#include<images/SVGDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 #include <images/BitmapDatabase.hpp>
-#include<images/SVGDatabase.hpp>
 
 Screen11ViewBase::Screen11ViewBase() :
     flexButtonCallback(this, &Screen11ViewBase::flexButtonCallbackHandler),
@@ -29,11 +29,13 @@ Screen11ViewBase::Screen11ViewBase() :
     brightnessBackButton.setPosition(0, 0, 120, 72);
     add(brightnessBackButton);
 
-    brightnessBackLabel.setPosition(16, 27, 96, 20);
-    brightnessBackLabel.setColor(touchgfx::Color::getColorFromRGB(150, 148, 140));
-    brightnessBackLabel.setLinespacing(0);
-    brightnessBackLabel.setTypedText(touchgfx::TypedText(T_TEXT_BACK));
-    add(brightnessBackLabel);
+    brightnessBackIcon.setSVG(SVG_ARROW_BACK_UP_ID);
+    brightnessBackIcon.setPosition(17, 31, 40, 40);
+    brightnessBackIcon.setScale(1.67f, 1.67f);
+    brightnessBackIcon.setImagePosition(0, 0);
+    brightnessBackIcon.setRotationCenter(0, 0);
+    brightnessBackIcon.setRotation(0.0f);
+    add(brightnessBackIcon);
 
     brightnessTitle.setPosition(0, 48, 480, 32);
     brightnessTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));

@@ -9,10 +9,10 @@
 #include <gui/screen11_screen/Screen11Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/Slider.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
 
 class Screen11ViewBase : public touchgfx::View<Screen11Presenter>
 {
@@ -44,7 +44,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box brightnessBackground;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  brightnessBackButton;
-    touchgfx::TextArea brightnessBackLabel;
+    touchgfx::SVGImage brightnessBackIcon;
     touchgfx::TextArea brightnessTitle;
     touchgfx::TextArea brightnessSubtitle;
     touchgfx::TextAreaWithOneWildcard brightnessValue;

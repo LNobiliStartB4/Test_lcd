@@ -20,16 +20,16 @@
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
-class Screen13View;
+class AdminPinScreenView;
 class Screen14View;
 class Screen15View;
 class Screen16View;
 class Screen17View;
 
-class Screen13Presenter : public touchgfx::Presenter, public ModelListener
+class AdminPinScreenPresenter : public touchgfx::Presenter, public ModelListener
 {
 public:
-    explicit Screen13Presenter(Screen13View& v) : view(v) {}
+    explicit AdminPinScreenPresenter(AdminPinScreenView& v) : view(v) {}
     virtual void activate() {}
     virtual void deactivate() {}
     AdminAuthResult authenticate(uint16_t pin)
@@ -53,7 +53,7 @@ public:
     }
 
 private:
-    Screen13View& view;
+    AdminPinScreenView& view;
 };
 
 class Screen14Presenter : public touchgfx::Presenter, public ModelListener
@@ -258,7 +258,7 @@ public:
         {
             valueBuffers[i][0] = 0;
             labels[i].setPosition(36, static_cast<int16_t>(78 + (i * 24)), 220, 19);
-            labels[i].setColor(kDim);
+            labels[i].setColor(kGold);
             values[i].setPosition(252, static_cast<int16_t>(78 + (i * 24)), 192, 19);
             values[i].setColor(kIvory);
             values[i].setTypedText(touchgfx::TypedText(T_TEXT_ADMINVALUE));
@@ -329,13 +329,13 @@ private:
 };
 }
 
-class Screen13View : public adminui::AdminViewBase<Screen13Presenter>
+class AdminPinScreenView : public adminui::AdminViewBase<AdminPinScreenPresenter>
 {
 public:
-    Screen13View()
-        : adminui::AdminViewBase<Screen13Presenter>(T_TEXT_ADMINPINTITLE),
-          digitCallback(this, &Screen13View::digitCallbackHandler),
-          commandCallback(this, &Screen13View::commandCallbackHandler),
+    AdminPinScreenView()
+        : adminui::AdminViewBase<AdminPinScreenPresenter>(T_TEXT_ADMINPINTITLE),
+          digitCallback(this, &AdminPinScreenView::digitCallbackHandler),
+          commandCallback(this, &AdminPinScreenView::commandCallbackHandler),
           pinLength(0U),
           invalidPin(false),
           tickDivider(0U)
@@ -566,8 +566,8 @@ private:
     touchgfx::TextArea deleteLabel;
     adminui::OutlineButton unlockButton;
     touchgfx::TextArea unlockLabel;
-    touchgfx::Callback<Screen13View, const touchgfx::AbstractButtonContainer&> digitCallback;
-    touchgfx::Callback<Screen13View, const touchgfx::AbstractButtonContainer&> commandCallback;
+    touchgfx::Callback<AdminPinScreenView, const touchgfx::AbstractButtonContainer&> digitCallback;
+    touchgfx::Callback<AdminPinScreenView, const touchgfx::AbstractButtonContainer&> commandCallback;
     uint8_t pinDigits[4];
     uint8_t pinLength;
     bool invalidPin;
@@ -581,25 +581,24 @@ public:
         : adminui::AdminViewBase<Screen14Presenter>(T_TEXT_ADMINMENUTITLE),
           rowCallback(this, &Screen14View::rowCallbackHandler)
     {
+        static const uint8_t kRowCount = 2U;
         subtitle.setPosition(0, 62, 480, 20);
         subtitle.setColor(adminui::kDim);
         subtitle.setTypedText(touchgfx::TypedText(T_TEXT_ADMINMENUSUBTITLE));
         add(subtitle);
 
-        static const uint16_t titleIds[3] =
+        static const uint16_t titleIds[kRowCount] =
         {
             T_TEXT_ADMINSYSTEMITEM,
-            T_TEXT_ADMINPRESSUREITEM,
             T_TEXT_ADMINMEMORYITEM
         };
-        static const uint16_t descriptionIds[3] =
+        static const uint16_t descriptionIds[kRowCount] =
         {
             T_TEXT_ADMINSYSTEMDESCRIPTION,
-            T_TEXT_ADMINPRESSUREDESCRIPTION,
             T_TEXT_ADMINMEMORYDESCRIPTION
         };
 
-        for (uint8_t i = 0U; i < 3U; ++i)
+        for (uint8_t i = 0U; i < kRowCount; ++i)
         {
             const int16_t y = static_cast<int16_t>(88 + (i * 72));
             adminui::configureButton(rows[i], 40, y, 400, 62, adminui::kBorder);

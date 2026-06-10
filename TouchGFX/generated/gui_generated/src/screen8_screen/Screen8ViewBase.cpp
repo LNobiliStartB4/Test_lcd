@@ -4,9 +4,9 @@
 #include <gui_generated/screen8_screen/Screen8ViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
+#include<images/SVGDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 #include <images/BitmapDatabase.hpp>
-#include<images/SVGDatabase.hpp>
 
 Screen8ViewBase::Screen8ViewBase() :
     flexButtonCallback(this, &Screen8ViewBase::flexButtonCallbackHandler)
@@ -28,23 +28,25 @@ Screen8ViewBase::Screen8ViewBase() :
     backButton.setPosition(0, 0, 120, 72);
     add(backButton);
 
-    backLabel.setPosition(22, 27, 76, 20);
-    backLabel.setColor(touchgfx::Color::getColorFromRGB(150, 148, 140));
-    backLabel.setLinespacing(0);
-    backLabel.setTypedText(touchgfx::TypedText(T_TEXT_BACK));
-    add(backLabel);
+    backIcon.setSVG(SVG_ARROW_BACK_UP_ID);
+    backIcon.setPosition(17, 25, 40, 40);
+    backIcon.setScale(1.67f, 1.67f);
+    backIcon.setImagePosition(0, 0);
+    backIcon.setRotationCenter(0, 0);
+    backIcon.setRotation(0.0f);
+    add(backIcon);
 
     hemorflowWaitAccent.setPosition(136, 28, 3, 28);
-    hemorflowWaitAccent.setColor(touchgfx::Color::getColorFromRGB(142, 164, 184));
+    hemorflowWaitAccent.setColor(touchgfx::Color::getColorFromRGB(240, 170, 0));
     add(hemorflowWaitAccent);
 
-    hemorflowWaitTitle.setPosition(148, 28, 268, 30);
+    hemorflowWaitTitle.setPosition(148, 26, 268, 30);
     hemorflowWaitTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     hemorflowWaitTitle.setLinespacing(0);
     hemorflowWaitTitle.setTypedText(touchgfx::TypedText(T_TEXT_HEMORFLOWTITLE));
     add(hemorflowWaitTitle);
 
-    hemorflowWaitCard.setPosition(86, 82, 308, 178);
+    hemorflowWaitCard.setPosition(86, 83, 308, 178);
     hemorflowWaitCard.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     hemorflowWaitCard.setBorderColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     hemorflowWaitCard.setBorderSize(2);

@@ -1,5 +1,5 @@
 #include <gui/screen1_screen/Screen1View.hpp>
-#include <images/BitmapDatabase.hpp>
+#include <images/SVGDatabase.hpp>
 
 namespace
 {
@@ -46,12 +46,9 @@ void Screen1View::handleTickEvent()
 
 void Screen1View::updateDots(uint8_t activeIndex)
 {
-    const touchgfx::Bitmap dim(BITMAP_DOT_DIM_ID);
-    const touchgfx::Bitmap active(BITMAP_DOT_ACTIVE_ID);
-
-    splashDot1.setBitmap(activeIndex == 0U ? active : dim);
-    splashDot2.setBitmap(activeIndex == 1U ? active : dim);
-    splashDot3.setBitmap(activeIndex == 2U ? active : dim);
+    splashDot1.setSVG(activeIndex == 0U ? SVG_DOT_ACTIVE_ID : SVG_DOT_DIM_ID);
+    splashDot2.setSVG(activeIndex == 1U ? SVG_DOT_ACTIVE_ID : SVG_DOT_DIM_ID);
+    splashDot3.setSVG(activeIndex == 2U ? SVG_DOT_ACTIVE_ID : SVG_DOT_DIM_ID);
     splashDot1.invalidate();
     splashDot2.invalidate();
     splashDot3.invalidate();

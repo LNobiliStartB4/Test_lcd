@@ -4,8 +4,8 @@
 #include <gui_generated/screen12_screen/Screen12ViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include<images/SVGDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen12ViewBase::Screen12ViewBase() :
     flexButtonCallback(this, &Screen12ViewBase::flexButtonCallbackHandler)
@@ -27,11 +27,13 @@ Screen12ViewBase::Screen12ViewBase() :
     languageBackButton.setPosition(0, 0, 120, 72);
     add(languageBackButton);
 
-    languageBackLabel.setPosition(16, 27, 96, 20);
-    languageBackLabel.setColor(touchgfx::Color::getColorFromRGB(150, 148, 140));
-    languageBackLabel.setLinespacing(0);
-    languageBackLabel.setTypedText(touchgfx::TypedText(T_TEXT_BACK));
-    add(languageBackLabel);
+    languageBackIcon.setSVG(SVG_ARROW_BACK_UP_ID);
+    languageBackIcon.setPosition(16, 31, 40, 40);
+    languageBackIcon.setScale(1.67f, 1.67f);
+    languageBackIcon.setImagePosition(0, 0);
+    languageBackIcon.setRotationCenter(0, 0);
+    languageBackIcon.setRotation(0.0f);
+    add(languageBackIcon);
 
     languageTitle.setPosition(0, 58, 480, 32);
     languageTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
@@ -61,8 +63,8 @@ Screen12ViewBase::Screen12ViewBase() :
 
     englishFrame.setPosition(48, 142, 184, 96);
     englishFrame.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    englishFrame.setBorderColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
-    englishFrame.setBorderSize(3);
+    englishFrame.setBorderColor(touchgfx::Color::getColorFromRGB(240, 170, 0));
+    englishFrame.setBorderSize(2);
     add(englishFrame);
 
     italianFrame.setPosition(248, 142, 184, 96);

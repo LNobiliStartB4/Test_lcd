@@ -36,8 +36,8 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen5ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	0	static
-../TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:111:6:virtual void Screen5ViewBase::setupScreen()	0	static
-../TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:116:6:void Screen5ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
+../TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:113:6:virtual void Screen5ViewBase::setupScreen()	0	static
+../TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:118:6:void Screen5ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:123:18:void touchgfx::BoxWithBorderButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = Screen5ViewBase; T1 = const touchgfx::AbstractButtonContainer&]	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = Screen5ViewBase; T1 = const touchgfx::AbstractButtonContainer&]	0	static
@@ -49,8 +49,8 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:virtual touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen5ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
-../TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:106:1:Screen5ViewBase::~Screen5ViewBase()	8	static
-../TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:106:1:virtual Screen5ViewBase::~Screen5ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:108:1:Screen5ViewBase::~Screen5ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:108:1:virtual Screen5ViewBase::~Screen5ViewBase()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
@@ -66,4 +66,4 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:43:5:touchgfx::SVGImage::SVGImage()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:94:10:void touchgfx::BoxWithBorderButtonStyle<T>::setBoxWithBorderColors(touchgfx::colortype, touchgfx::colortype, touchgfx::colortype, touchgfx::colortype) [with T = touchgfx::ClickButtonTrigger]	4	static
-../TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:10:1:Screen5ViewBase::Screen5ViewBase()	112	static
+../TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:10:1:Screen5ViewBase::Screen5ViewBase()	120	static

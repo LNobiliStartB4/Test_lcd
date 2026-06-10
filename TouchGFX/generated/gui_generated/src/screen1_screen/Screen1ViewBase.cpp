@@ -5,7 +5,6 @@
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include <images/BitmapDatabase.hpp>
 #include<images/SVGDatabase.hpp>
 
 Screen1ViewBase::Screen1ViewBase()
@@ -17,28 +16,37 @@ Screen1ViewBase::Screen1ViewBase()
     add(__background);
 
     splashBackground.setPosition(0, 0, 480, 320);
-    splashBackground.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    splashBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(splashBackground);
 
     splashSubtitle.setPosition(95, 237, 290, 18);
-    splashSubtitle.setColor(touchgfx::Color::getColorFromRGB(5, 5, 5));
+    splashSubtitle.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     splashSubtitle.setLinespacing(0);
     splashSubtitle.setTypedText(touchgfx::TypedText(T_TEXT_SPLASHSUBTITLE));
     add(splashSubtitle);
 
-    splashDot1.setBitmap(touchgfx::Bitmap(BITMAP_DOT_DIM_ID));
+    splashDot1.setSVG(SVG_DOT_DIM_ID);
     splashDot1.setPosition(214, 270, 12, 12);
-    splashDot1.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    splashDot1.setScale(1.0f, 1.0f);
+    splashDot1.setImagePosition(0, 0);
+    splashDot1.setRotationCenter(0, 0);
+    splashDot1.setRotation(0.0f);
     add(splashDot1);
 
-    splashDot2.setBitmap(touchgfx::Bitmap(BITMAP_DOT_DIM_ID));
+    splashDot2.setSVG(SVG_DOT_DIM_ID);
     splashDot2.setPosition(234, 270, 12, 12);
-    splashDot2.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    splashDot2.setScale(1.0f, 1.0f);
+    splashDot2.setImagePosition(0, 0);
+    splashDot2.setRotationCenter(0, 0);
+    splashDot2.setRotation(0.0f);
     add(splashDot2);
 
-    splashDot3.setBitmap(touchgfx::Bitmap(BITMAP_DOT_DIM_ID));
+    splashDot3.setSVG(SVG_DOT_DIM_ID);
     splashDot3.setPosition(254, 270, 12, 12);
-    splashDot3.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    splashDot3.setScale(1.0f, 1.0f);
+    splashDot3.setImagePosition(0, 0);
+    splashDot3.setRotationCenter(0, 0);
+    splashDot3.setRotation(0.0f);
     add(splashDot3);
 
     splashInitText.setPosition(90, 289, 300, 20);

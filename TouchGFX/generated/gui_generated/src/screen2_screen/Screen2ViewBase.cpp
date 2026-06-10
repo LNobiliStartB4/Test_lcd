@@ -4,7 +4,6 @@
 #include <gui_generated/screen2_screen/Screen2ViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include<images/SVGDatabase.hpp>
 
 Screen2ViewBase::Screen2ViewBase() :
@@ -17,34 +16,28 @@ Screen2ViewBase::Screen2ViewBase() :
     add(__background);
 
     productBackground.setPosition(0, 0, 480, 320);
-    productBackground.setColor(touchgfx::Color::getColorFromRGB(250, 250, 250));
+    productBackground.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(productBackground);
-
-    productTitle.setPosition(24, 29, 280, 28);
-    productTitle.setColor(touchgfx::Color::getColorFromRGB(0, 60, 120));
-    productTitle.setLinespacing(0);
-    productTitle.setTypedText(touchgfx::TypedText(T_TEXT_PRODUCTTITLE));
-    add(productTitle);
 
     settingsButton.setBoxWithBorderPosition(0, 0, 0, 0);
     settingsButton.setBorderSize(0);
     settingsButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
     settingsButton.setAction(flexButtonCallback);
-    settingsButton.setPosition(275, 5, 121, 76);
+    settingsButton.setPosition(358, 13, 121, 76);
     add(settingsButton);
 
     bandyButton.setBoxWithBorderPosition(0, 0, 0, 0);
     bandyButton.setBorderSize(0);
     bandyButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(0, 0, 0));
     bandyButton.setAction(flexButtonCallback);
-    bandyButton.setPosition(24, 96, 440, 94);
+    bandyButton.setPosition(26, 94, 440, 101);
     add(bandyButton);
 
-    bandyRowAccent.setPosition(24, 119, 4, 58);
-    bandyRowAccent.setColor(touchgfx::Color::getColorFromRGB(216, 178, 71));
+    bandyRowAccent.setPosition(24, 130, 4, 58);
+    bandyRowAccent.setColor(touchgfx::Color::getColorFromRGB(240, 170, 0));
     add(bandyRowAccent);
 
-    bandyRowDivider.setPosition(40, 177, 400, 1);
+    bandyRowDivider.setPosition(40, 210, 400, 1);
     bandyRowDivider.setColor(touchgfx::Color::getColorFromRGB(46, 54, 63));
     add(bandyRowDivider);
 
@@ -55,56 +48,52 @@ Screen2ViewBase::Screen2ViewBase() :
     emerflowButton.setPosition(24, 201, 440, 94);
     add(emerflowButton);
 
-    emerflowRowAccent.setPosition(24, 213, 4, 58);
-    emerflowRowAccent.setColor(touchgfx::Color::getColorFromRGB(86, 104, 116));
+    emerflowRowAccent.setPosition(24, 228, 4, 58);
+    emerflowRowAccent.setColor(touchgfx::Color::getColorFromRGB(240, 170, 0));
     add(emerflowRowAccent);
 
-    emerflowRowDivider.setPosition(40, 271, 400, 1);
-    emerflowRowDivider.setColor(touchgfx::Color::getColorFromRGB(46, 54, 63));
-    add(emerflowRowDivider);
-
     settingsIcon.setSVG(SVG_SETTINGS_ID);
-    settingsIcon.setPosition(326, 15, 70, 70);
-    settingsIcon.setScale(2.19f, 2.19f);
+    settingsIcon.setPosition(410, 26, 60, 60);
+    settingsIcon.setScale(2.31f, 2.31f);
     settingsIcon.setImagePosition(0, 0);
     settingsIcon.setRotationCenter(0, 0);
     settingsIcon.setRotation(0.0f);
     add(settingsIcon);
 
     bandyChevron.setSVG(SVG_SETTINGS_CHEVRON_DIM_ID);
-    bandyChevron.setPosition(416, 125, 24, 24);
-    bandyChevron.setScale(1.0f, 1.0f);
+    bandyChevron.setPosition(416, 144, 24, 24);
+    bandyChevron.setScale(1.33f, 1.14f);
     bandyChevron.setImagePosition(0, 0);
     bandyChevron.setRotationCenter(0, 0);
     bandyChevron.setRotation(0.0f);
     add(bandyChevron);
 
     emerflowChevron.setSVG(SVG_SETTINGS_CHEVRON_DIM_ID);
-    emerflowChevron.setPosition(416, 219, 24, 24);
-    emerflowChevron.setScale(1.0f, 1.0f);
+    emerflowChevron.setPosition(416, 250, 24, 24);
+    emerflowChevron.setScale(1.33f, 1.14f);
     emerflowChevron.setImagePosition(0, 0);
     emerflowChevron.setRotationCenter(0, 0);
     emerflowChevron.setRotation(0.0f);
     add(emerflowChevron);
 
     svgImage1.setSVG(SVG_SELFBANDY_ID);
-    svgImage1.setPosition(28, 43, 200, 152);
-    svgImage1.setScale(10.0f, 13.82f);
+    svgImage1.setPosition(52, 28, 272, 188);
+    svgImage1.setScale(13.6f, 17.09f);
     svgImage1.setImagePosition(0, 0);
     svgImage1.setRotationCenter(0, 0);
     svgImage1.setRotation(0.0f);
     add(svgImage1);
 
     svgImage2.setSVG(SVG_HEMORFLOW_V2_ID);
-    svgImage2.setPosition(51, 125, 200, 152);
-    svgImage2.setScale(9.09f, 15.2f);
+    svgImage2.setPosition(86, 115, 272, 188);
+    svgImage2.setScale(12.36f, 18.8f);
     svgImage2.setImagePosition(0, 0);
     svgImage2.setRotationCenter(0, 0);
     svgImage2.setRotation(0.0f);
     add(svgImage2);
 
     svgImage3.setSVG(SVG_LOGO_UFFICIALE_THD_2016_RGB_ID);
-    svgImage3.setPosition(396, 5, 80, 80);
+    svgImage3.setPosition(12, 13, 80, 80);
     svgImage3.setScale(0.58f, 0.66f);
     svgImage3.setImagePosition(0, 0);
     svgImage3.setRotationCenter(0, 0);

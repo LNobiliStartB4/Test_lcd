@@ -23,21 +23,25 @@ struct Typography
     static const touchgfx::FontId TIMEVALUE = 7;
     static const touchgfx::FontId METRIC = 8;
     static const touchgfx::FontId HERO = 9;
+    static const touchgfx::FontId SETTINGSITEM = 10;
+    static const touchgfx::FontId SETTINGSDESCRIPTION = 11;
 };
 
 struct TypographyFontIndex
 {
-    static const touchgfx::FontId TITLE = 0;     // verdana_27_2bpp
-    static const touchgfx::FontId SUBTITLE = 1;  // verdana_16_2bpp
-    static const touchgfx::FontId BODY = 1;      // verdana_16_2bpp
-    static const touchgfx::FontId CAPTION = 1;   // verdana_16_2bpp
-    static const touchgfx::FontId STEP = 2;      // verdana_11_2bpp
-    static const touchgfx::FontId BUTTON = 3;    // verdana_15_2bpp
-    static const touchgfx::FontId STATUS = 4;    // verdana_17_2bpp
-    static const touchgfx::FontId TIMEVALUE = 5; // verdana_32_2bpp
-    static const touchgfx::FontId METRIC = 6;    // verdana_34_2bpp
-    static const touchgfx::FontId HERO = 7;      // verdana_45_2bpp
-    static const uint16_t NUMBER_OF_FONTS = 8;
+    static const touchgfx::FontId TITLE = 0;               // trebucbd_27_2bpp
+    static const touchgfx::FontId SUBTITLE = 1;            // verdana_16_2bpp
+    static const touchgfx::FontId BODY = 1;                // verdana_16_2bpp
+    static const touchgfx::FontId CAPTION = 1;             // verdana_16_2bpp
+    static const touchgfx::FontId STEP = 2;                // verdana_11_2bpp
+    static const touchgfx::FontId BUTTON = 3;              // verdana_15_2bpp
+    static const touchgfx::FontId STATUS = 4;              // verdana_17_2bpp
+    static const touchgfx::FontId TIMEVALUE = 5;           // verdana_32_2bpp
+    static const touchgfx::FontId METRIC = 6;              // verdana_34_2bpp
+    static const touchgfx::FontId HERO = 7;                // verdana_45_2bpp
+    static const touchgfx::FontId SETTINGSITEM = 8;        // verdana_20_2bpp
+    static const touchgfx::FontId SETTINGSDESCRIPTION = 3; // verdana_15_2bpp
+    static const uint16_t NUMBER_OF_FONTS = 9;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider

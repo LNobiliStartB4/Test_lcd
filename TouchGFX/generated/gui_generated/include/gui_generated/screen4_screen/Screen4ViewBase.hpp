@@ -9,10 +9,10 @@
 #include <gui/screen4_screen/Screen4Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 
 class Screen4ViewBase : public touchgfx::View<Screen4Presenter>
 {
@@ -40,9 +40,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box rfidBackground;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  backButton;
-    touchgfx::TextArea backLabel;
-    touchgfx::Box rfidAccent;
-    touchgfx::TextArea rfidTitle;
+    touchgfx::SVGImage backIcon;
     touchgfx::BoxWithBorder rfidCard;
     touchgfx::ScalableImage rfidIcon;
     touchgfx::TextArea rfidInstruction;

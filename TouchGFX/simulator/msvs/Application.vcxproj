@@ -70,6 +70,9 @@
     <ClCompile Include="..\..\gui\src\screen18_screen\Screen18Presenter.cpp"/>
     <ClCompile Include="..\..\gui\src\screen18_screen\Screen18View.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\screen18_screen\Screen18ViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen13_screen\Screen13Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen13_screen\Screen13View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen13_screen\Screen13ViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\assets\fonts\verdana.ttf"/>
@@ -371,6 +374,9 @@
     <ClInclude Include="..\..\gui\include\gui\screen18_screen\Screen18Presenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\screen18_screen\Screen18View.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen18_screen\Screen18ViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen13_screen\Screen13Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen13_screen\Screen13View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen13_screen\Screen13ViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

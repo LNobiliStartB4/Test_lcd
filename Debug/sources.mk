@@ -63,6 +63,7 @@ TouchGFX/generated/gui_generated/src/containers \
 TouchGFX/generated/gui_generated/src/screen10_screen \
 TouchGFX/generated/gui_generated/src/screen11_screen \
 TouchGFX/generated/gui_generated/src/screen12_screen \
+TouchGFX/generated/gui_generated/src/screen13_screen \
 TouchGFX/generated/gui_generated/src/screen18_screen \
 TouchGFX/generated/gui_generated/src/screen1_screen \
 TouchGFX/generated/gui_generated/src/screen2_screen \
@@ -81,6 +82,7 @@ TouchGFX/gui/src/model \
 TouchGFX/gui/src/screen10_screen \
 TouchGFX/gui/src/screen11_screen \
 TouchGFX/gui/src/screen12_screen \
+TouchGFX/gui/src/screen13_screen \
 TouchGFX/gui/src/screen18_screen \
 TouchGFX/gui/src/screen1_screen \
 TouchGFX/gui/src/screen2_screen \

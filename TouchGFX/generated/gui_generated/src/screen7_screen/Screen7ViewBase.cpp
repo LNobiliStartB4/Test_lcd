@@ -30,7 +30,7 @@ Screen7ViewBase::Screen7ViewBase() :
     add(titleText);
 
     subtitleText.setPosition(16, 92, 448, 36);
-    subtitleText.setColor(touchgfx::Color::getColorFromRGB(247, 193, 193));
+    subtitleText.setColor(touchgfx::Color::getColorFromRGB(240, 170, 0));
     subtitleText.setLinespacing(0);
     subtitleText.setTypedText(touchgfx::TypedText(T_TEXT_ENDSESSIONSUBTITLE));
     add(subtitleText);
@@ -40,7 +40,7 @@ Screen7ViewBase::Screen7ViewBase() :
     add(timeBoxFill);
 
     timeLabel.setPosition(96, 171, 240, 25);
-    timeLabel.setColor(touchgfx::Color::getColorFromRGB(247, 193, 193));
+    timeLabel.setColor(touchgfx::Color::getColorFromRGB(240, 170, 0));
     timeLabel.setLinespacing(0);
     timeLabel.setTypedText(touchgfx::TypedText(T_TEXT_TIMEYOULLLOSE));
     add(timeLabel);

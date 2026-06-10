@@ -38,6 +38,8 @@
 #include <gui/screen12_screen/Screen12Presenter.hpp>
 #include <gui/screen18_screen/Screen18View.hpp>
 #include <gui/screen18_screen/Screen18Presenter.hpp>
+#include <gui/screen13_screen/Screen13View.hpp>
+#include <gui/screen13_screen/Screen13Presenter.hpp>
 
 
 /**
@@ -73,7 +75,8 @@ public:
             touchgfx::meta::TypeList< Screen11View,
             touchgfx::meta::TypeList< Screen12View,
             touchgfx::meta::TypeList< Screen18View,
-            touchgfx::meta::Nil > > > > > > > > > > > >
+            touchgfx::meta::TypeList< Screen13View,
+            touchgfx::meta::Nil > > > > > > > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -98,7 +101,8 @@ public:
             touchgfx::meta::TypeList< Screen11Presenter,
             touchgfx::meta::TypeList< Screen12Presenter,
             touchgfx::meta::TypeList< Screen18Presenter,
-            touchgfx::meta::Nil > > > > > > > > > > > >
+            touchgfx::meta::TypeList< Screen13Presenter,
+            touchgfx::meta::Nil > > > > > > > > > > > > >
             > GeneratedPresenterTypes;
 
     /**

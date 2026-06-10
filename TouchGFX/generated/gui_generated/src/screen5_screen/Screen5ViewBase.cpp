@@ -4,8 +4,8 @@
 #include <gui_generated/screen5_screen/Screen5ViewBase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 #include<images/SVGDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen5ViewBase::Screen5ViewBase() :
     flexButtonCallback(this, &Screen5ViewBase::flexButtonCallbackHandler)
@@ -24,14 +24,16 @@ Screen5ViewBase::Screen5ViewBase() :
     setpointBackButton.setBorderSize(1);
     setpointBackButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     setpointBackButton.setAction(flexButtonCallback);
-    setpointBackButton.setPosition(12, 14, 96, 48);
+    setpointBackButton.setPosition(8, 15, 96, 48);
     add(setpointBackButton);
 
-    setpointBackLabel.setPosition(22, 27, 76, 20);
-    setpointBackLabel.setColor(touchgfx::Color::getColorFromRGB(150, 148, 140));
-    setpointBackLabel.setLinespacing(0);
-    setpointBackLabel.setTypedText(touchgfx::TypedText(T_TEXT_BACK));
-    add(setpointBackLabel);
+    setpointBackIcon.setSVG(SVG_ARROW_BACK_UP_ID);
+    setpointBackIcon.setPosition(24, 31, 40, 40);
+    setpointBackIcon.setScale(1.67f, 1.67f);
+    setpointBackIcon.setImagePosition(0, 0);
+    setpointBackIcon.setRotationCenter(0, 0);
+    setpointBackIcon.setRotation(0.0f);
+    add(setpointBackIcon);
 
     setpointTitle.setPosition(0, 52, 480, 30);
     setpointTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
@@ -88,7 +90,7 @@ Screen5ViewBase::Screen5ViewBase() :
 
     setpointKeypadIcon.setSVG(SVG_SETPOINT_KEYBOARD_GOLD_ID);
     setpointKeypadIcon.setPosition(204, 201, 56, 44);
-    setpointKeypadIcon.setScale(1.17f, 0.92f);
+    setpointKeypadIcon.setScale(1.27f, 1.13f);
     setpointKeypadIcon.setImagePosition(0, 0);
     setpointKeypadIcon.setRotationCenter(0, 0);
     setpointKeypadIcon.setRotation(0.0f);
