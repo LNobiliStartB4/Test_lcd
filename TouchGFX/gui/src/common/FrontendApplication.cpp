@@ -60,6 +60,19 @@ void FrontendApplication::handleDragEvent(const touchgfx::DragEvent& event)
     FrontendApplicationBase::handleDragEvent(event);
 }
 
+void FrontendApplication::handlePendingScreenTransition()
+{
+#if TOUCH_FEEDBACK_ENABLED
+    // If a screen change is about to happen this frame, kill the pointer now so
+    // it does not stay drawn on the old screen during the transition.
+    if ((pendingScreenTransitionCallback != 0) && pendingScreenTransitionCallback->isValid())
+    {
+        touchfeedback::TouchFeedbackController::instance().cancel();
+    }
+#endif
+    FrontendApplicationBase::handlePendingScreenTransition();
+}
+
 void FrontendApplication::gotoProductSelectScreenNoTransition()
 {
     productSelectTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoProductSelectScreenNoTransitionImpl);

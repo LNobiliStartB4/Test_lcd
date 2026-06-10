@@ -43,6 +43,7 @@ public:
 
     virtual void handleClickEvent(const touchgfx::ClickEvent& event);
     virtual void handleDragEvent(const touchgfx::DragEvent& event);
+    virtual void handlePendingScreenTransition();
 
 private:
     void gotoProductSelectScreenNoTransitionImpl();

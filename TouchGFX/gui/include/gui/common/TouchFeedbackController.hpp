@@ -65,6 +65,18 @@ public:
         state.recordRelease();
     }
 
+    // Hide the pointer immediately and suppress the in-progress touch (e.g. the
+    // instant a screen transition is requested), so the dot does not linger on
+    // the old screen during the change.
+    void cancel()
+    {
+        animator.reset(state.sample());
+        if (widget != 0)
+        {
+            widget->applyFeedback(false, 0, 0, 0U);
+        }
+    }
+
     // Called once per frame (from FrontendApplication::handleTickEvent).
     void tick()
     {
