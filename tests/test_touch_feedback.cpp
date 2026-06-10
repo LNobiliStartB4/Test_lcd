@@ -9,94 +9,93 @@ using touchfeedback::TouchSample;
 
 namespace
 {
-TouchSample press(int16_t x, int16_t y, uint32_t seq)
+TouchSample sample(int16_t x, int16_t y, bool pressed, uint32_t activity)
 {
     TouchSample s;
     s.x = x;
     s.y = y;
-    s.pressed = true;
-    s.pressSequence = seq;
+    s.pressed = pressed;
+    s.activitySequence = activity;
     return s;
 }
 
-TouchSample release(int16_t x, int16_t y, uint32_t seq)
+// Run the animator with no new activity for kFadeDurationTicks frames.
+void coast(TouchFeedbackAnimator& anim, const TouchSample& still)
 {
-    TouchSample s = press(x, y, seq);
-    s.pressed = false;
-    return s;
+    for (uint8_t i = 0; i < TouchFeedbackAnimator::kFadeDurationTicks; ++i)
+    {
+        anim.update(still);
+    }
 }
 }
 
-TEST_CASE("TouchFeedbackState records press/move/release")
+TEST_CASE("TouchFeedbackState bumps activity on press and real moves only")
 {
     TouchFeedbackState state;
-
-    const TouchSample idle = state.sample();
-    CHECK(idle.pressed == false);
+    const uint32_t a0 = state.sample().activitySequence;
 
     state.recordPress(40, 50);
     TouchSample s = state.sample();
     CHECK(s.pressed == true);
     CHECK(s.x == 40);
     CHECK(s.y == 50);
-    const uint32_t seqAfterPress = s.pressSequence;
-    CHECK(seqAfterPress == idle.pressSequence + 1U);
+    const uint32_t a1 = s.activitySequence;
+    CHECK(a1 == a0 + 1U);
 
-    // Move while pressed follows the finger.
+    // A real move bumps activity and follows.
     state.recordMove(120, 200);
     s = state.sample();
     CHECK(s.x == 120);
     CHECK(s.y == 200);
-    CHECK(s.pressSequence == seqAfterPress); // move does not start a new press
+    CHECK(s.activitySequence == a1 + 1U);
 
-    // Release clears pressed but keeps the sequence.
+    // A move to the same point does NOT count as activity.
+    const uint32_t a2 = state.sample().activitySequence;
+    state.recordMove(120, 200);
+    CHECK(state.sample().activitySequence == a2);
+
+    // Release does not bump activity; a move while released is ignored.
     state.recordRelease();
     s = state.sample();
     CHECK(s.pressed == false);
-    CHECK(s.pressSequence == seqAfterPress);
-
-    // Move while released is ignored.
+    CHECK(s.activitySequence == a2);
     state.recordMove(5, 6);
     s = state.sample();
     CHECK(s.x == 120);
-    CHECK(s.y == 200);
+    CHECK(s.activitySequence == a2);
 }
 
-TEST_CASE("Animator shows and follows while pressed")
+TEST_CASE("Animator shows on activity and follows movement")
 {
     TouchFeedbackAnimator anim;
     CHECK(anim.isVisible() == false);
-    CHECK(anim.getAlpha() == 0);
 
-    anim.update(press(30, 40, 1));
+    anim.update(sample(30, 40, true, 1));
     CHECK(anim.isVisible() == true);
     CHECK(anim.getAlpha() == TouchFeedbackAnimator::kVisibleAlpha);
     CHECK(anim.getX() == 30);
     CHECK(anim.getY() == 40);
 
-    // Dragging (same press sequence, still pressed) follows the point.
-    anim.update(press(33, 47, 1));
+    // New activity (a move) re-energizes and follows.
+    anim.update(sample(33, 47, true, 2));
     CHECK(anim.isVisible() == true);
+    CHECK(anim.getAlpha() == TouchFeedbackAnimator::kVisibleAlpha);
     CHECK(anim.getX() == 33);
     CHECK(anim.getY() == 47);
-    CHECK(anim.getAlpha() == TouchFeedbackAnimator::kVisibleAlpha);
 }
 
-TEST_CASE("Animator fades out after release and disappears")
+TEST_CASE("A held-still finger fades out instead of staying fixed")
 {
     TouchFeedbackAnimator anim;
-    anim.update(press(100, 100, 1));
+    anim.update(sample(100, 100, true, 1));
     REQUIRE(anim.isVisible());
 
-    anim.update(release(100, 100, 1)); // first released tick: start fading
-    CHECK(anim.isVisible() == true);
-    uint8_t prev = anim.getAlpha();
-    CHECK(prev < TouchFeedbackAnimator::kVisibleAlpha); // alpha started dropping
-
-    // Keep ticking with no touch; alpha must monotonically decrease to 0.
+    // Same activity sequence (finger pressed but not moving): must fade away,
+    // not stay fixed. This is the case that lingered before a screen change.
+    uint8_t prev = TouchFeedbackAnimator::kVisibleAlpha;
     for (uint8_t i = 0; i < TouchFeedbackAnimator::kFadeDurationTicks; ++i)
     {
-        anim.update(release(100, 100, 1));
+        anim.update(sample(100, 100, true, 1));
         CHECK(anim.getAlpha() <= prev);
         prev = anim.getAlpha();
     }
@@ -106,43 +105,26 @@ TEST_CASE("Animator fades out after release and disappears")
 
 TEST_CASE("Fade-out is short")
 {
-    // Much shorter than the previous 250 ms; keep it snappy.
     CHECK(TouchFeedbackAnimator::kFadeDurationTicks <= 6);
 }
 
-TEST_CASE("reset() hides the pointer and prevents carry-over to the next screen")
+TEST_CASE("reset() hides and prevents carry-over to the next screen")
 {
     TouchFeedbackAnimator anim;
-    anim.update(press(50, 50, 3));
+    anim.update(sample(50, 50, true, 3));
     REQUIRE(anim.isVisible());
 
-    // Simulate a screen change while the pointer is still showing/fading.
-    anim.reset(press(50, 50, 3));
-    CHECK(anim.isVisible() == false);
-    CHECK(anim.getAlpha() == 0);
-
-    // The already-seen press (same sequence) must NOT re-show it on the new screen.
-    anim.update(release(50, 50, 3));
+    // Screen change: reset acknowledges current activity.
+    anim.reset(sample(50, 50, true, 3));
     CHECK(anim.isVisible() == false);
 
-    // A genuinely new press still shows it.
-    anim.update(press(10, 20, 4));
+    // Same activity (finger still down, not moving) must NOT re-show.
+    anim.update(sample(50, 50, true, 3));
+    CHECK(anim.isVisible() == false);
+    coast(anim, sample(50, 50, true, 3));
+    CHECK(anim.isVisible() == false);
+
+    // A genuinely new touch activity shows it again.
+    anim.update(sample(10, 20, true, 4));
     CHECK(anim.isVisible() == true);
-}
-
-TEST_CASE("Animator catches a quick tap (press+release within one frame)")
-{
-    TouchFeedbackAnimator anim;
-    // New press sequence but already released by the time the animator ticks.
-    anim.update(release(70, 80, 5));
-    CHECK(anim.isVisible() == true); // the tap is shown for at least one frame
-    CHECK(anim.getX() == 70);
-    CHECK(anim.getY() == 80);
-
-    // Then it fades away.
-    for (uint8_t i = 0; i < TouchFeedbackAnimator::kFadeDurationTicks; ++i)
-    {
-        anim.update(release(70, 80, 5));
-    }
-    CHECK(anim.isVisible() == false);
 }

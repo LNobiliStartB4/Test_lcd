@@ -5,14 +5,16 @@
 
 // Framework-free logic for the touch feedback "ripple" pointer.
 //
-// Split in two pieces so it can be unit tested without TouchGFX:
-//  - TouchFeedbackState : records the latest touch event (written from the
-//    application event hooks, read once per frame).
-//  - TouchFeedbackAnimator : turns that state into a position + alpha for the
-//    on-screen widget, handling "follow the finger" and the fade-out on release.
+//  - TouchFeedbackState records the latest touch event. It exposes an
+//    "activity sequence" that bumps on a press and on each real finger move.
+//  - TouchFeedbackAnimator turns that into a position + alpha. The pointer is
+//    transient: any new activity shows it at full alpha; with no new activity
+//    it fades out quickly. So a finger held still (e.g. a tap that is about to
+//    change screen) does NOT stay fixed, while an active drag keeps it visible
+//    and following the finger.
 //
-// The widget itself (gui widget) only forwards ticks to the animator and maps
-// the result onto a Drawable; it owns no logic.
+// The widget (gui widget) only forwards ticks to the animator and maps the
+// result onto a Drawable; it owns no logic.
 namespace touchfeedback
 {
 struct TouchSample
@@ -20,14 +22,14 @@ struct TouchSample
     int16_t x;
     int16_t y;
     bool pressed;
-    uint32_t pressSequence; // incremented on every new press (catches quick taps)
+    uint32_t activitySequence; // bumps on press and on each real move
 };
 
 class TouchFeedbackState
 {
 public:
     TouchFeedbackState()
-        : x(0), y(0), pressed(false), pressSequence(0U)
+        : x(0), y(0), pressed(false), activitySequence(0U)
     {
     }
 
@@ -42,15 +44,17 @@ public:
         x = px;
         y = py;
         pressed = true;
-        ++pressSequence;
+        ++activitySequence;
     }
 
     void recordMove(int16_t px, int16_t py)
     {
-        if (pressed)
+        // Only a real move counts as activity; a held-still finger does not.
+        if (pressed && ((px != x) || (py != y)))
         {
             x = px;
             y = py;
+            ++activitySequence;
         }
     }
 
@@ -65,7 +69,7 @@ public:
         s.x = x;
         s.y = y;
         s.pressed = pressed;
-        s.pressSequence = pressSequence;
+        s.activitySequence = activitySequence;
         return s;
     }
 
@@ -73,57 +77,51 @@ private:
     int16_t x;
     int16_t y;
     bool pressed;
-    uint32_t pressSequence;
+    uint32_t activitySequence;
 };
 
 class TouchFeedbackAnimator
 {
 public:
-    // Widget alpha shown while the finger is down (the dot asset itself carries
-    // the soft translucency). Short fade-out (~80 ms at the 60 Hz tick rate).
+    // Widget alpha shown on activity (the dot asset carries the soft
+    // translucency). Short fade (~80 ms at the 60 Hz tick rate).
     static const uint8_t kVisibleAlpha = 255U;
     static const uint8_t kFadeDurationTicks = 5U;
 
     TouchFeedbackAnimator()
-        : phase(Hidden), x(0), y(0), alpha(0U), fadeRemaining(0U), lastPressSequence(0U)
+        : phase(Hidden), x(0), y(0), alpha(0U), fadeRemaining(0U), lastActivity(0U)
     {
     }
 
-    // Force the pointer hidden (e.g. on a screen change) and acknowledge the
-    // current press sequence so an already-seen, released press does not
-    // re-appear on the next screen.
+    // Force hidden (e.g. on a screen change) and acknowledge current activity so
+    // the in-progress touch does not re-show the dot on the next screen.
     void reset(const TouchSample& s)
     {
         phase = Hidden;
         alpha = 0U;
         fadeRemaining = 0U;
-        lastPressSequence = s.pressSequence;
+        lastActivity = s.activitySequence;
     }
 
     // Call once per frame with the most recent touch sample.
     void update(const TouchSample& s)
     {
-        const bool newPress = (s.pressSequence != lastPressSequence);
-        if (newPress)
+        if (s.activitySequence != lastActivity)
         {
-            lastPressSequence = s.pressSequence;
-            show(s.x, s.y);
-        }
-
-        if (s.pressed)
-        {
-            show(s.x, s.y);
+            // New activity (press or move): show at the point, full alpha.
+            lastActivity = s.activitySequence;
+            phase = Visible;
+            x = s.x;
+            y = s.y;
+            alpha = kVisibleAlpha;
+            fadeRemaining = kFadeDurationTicks;
             return;
         }
 
-        if (phase == Visible)
+        // No new activity this frame: fade out.
+        if (phase != Hidden)
         {
             phase = Fading;
-            fadeRemaining = kFadeDurationTicks;
-        }
-
-        if (phase == Fading)
-        {
             if (fadeRemaining > 0U)
             {
                 --fadeRemaining;
@@ -166,20 +164,12 @@ private:
         Fading
     };
 
-    void show(int16_t px, int16_t py)
-    {
-        phase = Visible;
-        x = px;
-        y = py;
-        alpha = kVisibleAlpha;
-    }
-
     Phase phase;
     int16_t x;
     int16_t y;
     uint8_t alpha;
     uint8_t fadeRemaining;
-    uint32_t lastPressSequence;
+    uint32_t lastActivity;
 };
 } // namespace touchfeedback
 
