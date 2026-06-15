@@ -62,6 +62,16 @@ target_include_directories(test_asset_manifest PRIVATE
 )
 target_link_libraries(test_asset_manifest PRIVATE doctest::doctest)
 
+# Pure (HAL-free) external-flash programming arithmetic (page/sector math).
+add_executable(test_asset_flash_layout
+  test_asset_flash_layout.cpp
+  ${DISPLAY_ROOT}/Core/Src/asset_flash_layout.c
+)
+target_include_directories(test_asset_flash_layout PRIVATE
+  ${DISPLAY_ROOT}/Core/Inc
+)
+target_link_libraries(test_asset_flash_layout PRIVATE doctest::doctest)
+
 # MSVC: silence "non-standard extension" warnings on uninitialized POD fields
 if (MSVC)
   target_compile_options(test_model PRIVATE /W3 /permissive-)
@@ -88,5 +98,9 @@ set_tests_properties(bandy_completion_unit_tests PROPERTIES
 )
 add_test(NAME asset_manifest_unit_tests COMMAND test_asset_manifest)
 set_tests_properties(asset_manifest_unit_tests PROPERTIES
+  TIMEOUT 30
+)
+add_test(NAME asset_flash_layout_unit_tests COMMAND test_asset_flash_layout)
+set_tests_properties(asset_flash_layout_unit_tests PROPERTIES
   TIMEOUT 30
 )
