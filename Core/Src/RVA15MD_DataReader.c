@@ -1,41 +1,42 @@
 /*
- * RVA15MD_DataReader.c - Stub for STM32F401RE
+ * RVA15MD_DataReader.c
  *
- * The original template used SPI2 to read from external flash.
- * This project has no external flash connected, so all functions are stubs.
- * TouchGFX fonts and bitmaps are stored in internal flash (generated .cpp files).
+ * TouchGFX FlashDataReader bridge to the external Winbond W25Q64 (SPI3).
+ * The TouchGFX framework (TouchGFXDataReader) calls these C entry points to
+ * fetch image assets that are linked at the virtual base 0x90000000
+ * (ExtFlashSection) but physically stored in the external flash.
  */
 
-#include "stm32f4xx_hal.h"
 #include "RVA15MD_DataReader.h"
+
+#include "w25q64.h"
 
 uint32_t DataReader_IsReceivingData(void)
 {
-    return 0;
+  return W25Q64_IsDmaReadActive() ? 1U : 0U;
 }
 
 void DataReader_WaitForReceiveDone(void)
 {
-    /* Nothing to wait for - no external flash */
+  W25Q64_WaitForDmaRead();
 }
 
 void DataReader_ReadData(uint32_t address24, uint8_t *buffer, uint32_t length)
 {
-    (void)address24;
-    (void)buffer;
-    (void)length;
-    /* No external flash - not implemented */
+  (void)W25Q64_Read(address24, buffer, length);
 }
 
 void DataReader_StartDMAReadData(uint32_t address24, uint8_t *buffer, uint32_t length)
 {
-    (void)address24;
-    (void)buffer;
-    (void)length;
-    /* No external flash - not implemented */
+  /* Fall back to a blocking read if DMA could not be started so the caller
+   * always gets its data. */
+  if (!W25Q64_StartDmaRead(address24, buffer, length))
+  {
+    (void)W25Q64_Read(address24, buffer, length);
+  }
 }
 
 void DataReader_DMACallback(void)
 {
-    /* No external flash - not implemented */
+  W25Q64_DmaCompleteCallback();
 }
