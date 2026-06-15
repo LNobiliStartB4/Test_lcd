@@ -178,3 +178,129 @@ il jitter del touch capacitivo non tiene vivo il pallino mentre si tiene premuto
 
 ### Decisione aperta
 - Il ritardo di 1 frame (~16 ms) sulla navigazione è accettabile? (Praticamente impercettibile.)
+
+---
+
+# Spec: Grafica (immagini) TouchGFX in flash esterna Winbond (SPI3)
+
+## Objective
+Spostare le **immagini** TouchGFX dalla flash interna dell'F401RE (512 KB, vicina al limite) alla
+**flash SPI esterna Winbond** integrata sul modulo display, per **liberare flash interna**. L'F401
+**non ha QUADSPI** → niente memory-mapping: si usa il modello TouchGFX **non-memory-mapped
+(FlashDataReader)** — i bitmap vengono letti **on-demand** dalla Winbond via **SPI3 + DMA** in una
+cache RAM. Esiste già un'implementazione di **riferimento sullo stesso MCU** in `UnifiedFirmware/` — ma il
+codice della memoria esterna lì è **presente e MAI verificato sul campo** (NON è garantito
+funzionante). Quindi questa feature è un **porting attento e tutto da validare** di quel setup,
+adattando il pin CS e il chip.
+
+Successo: il firmware entra in flash interna con ampio margine; le immagini appaiono identiche
+(lette dalla Winbond); la diagnostica admin mostra la Winbond presente e il pacchetto asset valido.
+
+## Tech stack / Hardware
+- STM32F401RE, TouchGFX 4.26, Partial Framebuffer (invariato). Display su **SPI1** (invariato).
+- Winbond **W25Qxx** su **SPI3** (bus separato dal display):
+  - SCK=**PC10**, MISO=**PC11**, MOSI=**PC12** (AF6), CS=**PC3** (GPIO out, attivo basso) — *scelta
+    utente; PC3 risulta libero nel `.ioc`*.
+  - DMA: **DMA1_Stream0** (SPI3_RX), **DMA1_Stream5** (SPI3_TX); prescaler /2 (~21 MHz).
+  - Base virtuale asset **0x90000000**; manifest in coda alla flash (magic "ADHT" + CRC32).
+- **Chip confermato: Winbond W25Q64 (8 MB)** → region `ASSET_FLASH LENGTH=8M`, base 0x90000000,
+  JEDEC capacità **0x17** (manufacturer 0xEF, memtype 0x40), manifest a offset **0x007FF000**
+  (8 MB − 4 KB). Il driver di UnifiedFirmware è per W25Q128JV (16 MB, 0x18): va **adattato** a
+  8 MB / 0x17 (dimensione + controllo JEDEC + offset manifest).
+
+## Commands
+- **TouchGFX Designer → Generate Code**: rigenera il DataReader, mette le immagini in
+  `ExtFlashSection` e produce il **binario asset** (es. `Artifacts/Winbond/*_assets.bin`).
+- **Build**: STM32CubeIDE (Debug). Flash firmware come ora (ST-Link).
+- **Flash asset sulla Winbond**: scrivere il `.bin` all'offset 0 della W25Q tramite
+  **STM32CubeProgrammer con external loader** (o programmatore SPI). Il firmware la **legge** soltanto.
+
+## Project Structure (file da portare/modificare da `UnifiedFirmware/` → progetto principale)
+- `Core/Inc/w25q*.h`, `Core/Src/w25q*.c` — driver Winbond (su `hspi3`, CS `ASSET_FLASH_CS`=PC3).
+- `Core/Src/RVA15MD_DataReader.c` (de-stub) — i `DataReader_*` chiamano il driver w25q.
+- `STM32F401RETX_FLASH.ld` — aggiungere region `ASSET_FLASH (rx): ORIGIN=0x90000000, LENGTH=<dim chip>`
+  e mappare `ExtFlashSection` (immagini) su `ASSET_FLASH`. (Font/testi restano in flash interna.)
+- `Core/Src/main.c` + `Display_test_prova.ioc` (sync obbligatorio): `MX_SPI3_Init` (PC10/11/12, /2),
+  GPIO **PC3** = output HIGH (ASSET_FLASH_CS), DMA1 Stream0/Stream5, IRQ `DMA1_Stream0_IRQHandler` →
+  `DataReader_DMACallback`. `main.h`: `ASSET_FLASH_CS_Pin=GPIO_PIN_3`, `ASSET_FLASH_CS_GPIO_Port=GPIOC`.
+- `TouchGFX/application.config`: `image_configuration.section` ed `extra_section` → `"ExtFlashSection"`
+  (font lasciati in `IntFlashSection`).
+- Generate produce `TouchGFXGeneratedDataReader.*` + `image_*.cpp` con `LOCATION_ATTRIBUTE("ExtFlashSection")`.
+- `Model.cpp` (opz.): popolare la diagnostica Winbond reale (winbondAvailable/Id/SizeBytes/assetPackageValid)
+  dal driver invece dei valori hardcoded `false`.
+
+## Code Style
+Conforme all'esistente: blocchi `USER CODE BEGIN/END` per il codice in `main.c`; **regola di sync
+`.ioc`** per ogni modifica HW; CS attivo basso, HIGH a riposo. Riusare i pattern del driver
+`UnifiedFirmware` adattando solo il pin CS (PB1→PC3) e la dimensione/JEDEC del chip.
+
+## Testing Strategy
+- **Build**: il `.map` mostra le immagini fuori dalla flash interna; nessun overflow, ampio margine.
+- **Funzionale (device)**: scrivere il `.bin` asset sulla Winbond → avvio → **immagini renderizzate
+  correttamente** su tutte le schermate; nessun asset mancante/glitch.
+- **Diagnostica admin "MEMORY STATUS"**: Winbond **PRESENTE**, ID corretto, asset **VALIDO**.
+- **Prestazioni**: rendering fluido (lettura SPI3 @21 MHz + DMA, cache); nessun rallentamento marcato.
+- Niente unit test (HW/integrazione); verifica sul dispositivo.
+
+## Boundaries
+- **Sempre**: sincronizzare il `.ioc` (SPI3/GPIO/DMA); tenere SPI3 e DMA1 **separati** dal display
+  (SPI1 / DMA2_Stream3); CS attivo basso, HIGH a riposo.
+- **Chiedi prima di**: spostare anche **font/testi** in esterna; cambiare la dimensione della region;
+  cambiare i pin scelti.
+- **Non fare mai**: usare il bus/DMA del display per la flash; rompere il rendering del display;
+  toccare i pin di display/touch già assegnati.
+
+## Success Criteria
+- Firmware entra in flash interna con margine (immagini spostate in esterna).
+- Immagini identiche a prima, lette dalla Winbond; diagnostica Winbond OK; nessun overflow.
+
+## Stato / Open Questions
+- ✅ **Chip**: Winbond **W25Q64 (8 MB)** — risolto (JEDEC 0xEF/0x40/0x17, manifest 0x007FF000).
+- ✅ **Pin + .ioc**: SPI3 PC10/11/12 + CS **PC3** cablati; il `Display_test_prova.ioc` è già stato
+  aggiornato (SPI3 + PC3 `ASSET_FLASH_CS` + DMA1_Stream0/Stream5 + NVIC, IPNb=11/PinsNb=30) →
+  **rigenerabile**. Verificare aprendolo in CubeMX prima di rigenerare il codice.
+- ⚠️ **Riferimento NON collaudato**: l'integrazione esterna di UnifiedFirmware non è mai stata
+  provata. Bring-up incrementale obbligatorio: 1) leggere JEDEC ID (atteso EF 40 17); 2) validare il
+  manifest; 3) renderizzare UNA immagine da flash esterna; 4) poi tutte. Prevedere fallback se il
+  manifest non valida.
+- ✅ **Programmazione `.bin`** sulla Winbond: risolto → **flasher UART nel firmware** (nessun
+  hardware extra). `Core/Src/asset_flasher.c` riceve il blob su USART2 e programma il chip; host =
+  `tools/flash_assets.py`. CRC host (zlib) == CRC firmware (`asset_crc32`), verificato (0xCBF43926).
+
+## Implementazione (in repo)
+Tutto committato sul branch corrente. Parti **verificate su host** (doctest, 5/5):
+- `Core/{Inc,Src}/asset_manifest.*` — CRC-32 + parse/validazione manifest (HAL-free, testato).
+- `Core/{Inc,Src}/asset_flash_layout.*` — aritmetica page/sector per la programmazione (testato).
+
+Parti **HAL-bound (non compilabili qui**, dipendono dai simboli generati da CubeMX — `hspi3`,
+`huart2`, `ASSET_FLASH_CS_*`):
+- `Core/{Inc,Src}/w25q64.*` — driver W25Q64: read (blocking+DMA) **e** write/erase.
+- `Core/Src/RVA15MD_DataReader.c` — de-stubbato, instrada `DataReader_*` → `W25Q64_*`.
+- `Core/{Inc,Src}/asset_flasher.*` — flasher UART (knock → erase → streaming → manifest → validate).
+- `STM32F401RETX_FLASH.ld` — region `ASSET_FLASH` @0x90000000 (8M); `ExtFlashSection` → ASSET_FLASH
+  (solo immagini; font e `IntFlashSection` restano in flash interna).
+- `TouchGFX/application.config` — sezione immagini → `ExtFlashSection` (font invariati).
+- `TouchGFX/Display_test.touchgfx` — `AvailableSections` include già `ExtFlashSection`.
+
+## Checklist bring-up on-device (passi manuali rimasti)
+1. **CubeMX**: apri il `.ioc`, verifica SPI3 (PC10/11/12) + `ASSET_FLASH_CS`=PC3 + DMA1, **Generate
+   Code**. Conferma che `main.h` ora definisca `ASSET_FLASH_CS_Pin`/`_GPIO_Port` e `main.c` crei
+   `hspi3`/`huart2`.
+2. **main.c (USER CODE)**: dopo `MX_SPI3_Init()` aggiungi `W25Q64_Init();` (atteso JEDEC EF 40 17);
+   poi, prima di `MX_TouchGFX_Init()`, chiama `AssetFlasher_RunIfRequested(3000);` (3 s di finestra
+   knock al boot). Include `w25q64.h` e `asset_flasher.h`.
+3. **TouchGFX Designer**: **Generate Code** (crea `TouchGFXGeneratedDataReader` che chiama le
+   `DataReader_*`, e il bridge `TouchGFXDataReader`).
+4. **Build** in STM32CubeIDE. Verifica che la flash interna ora **non** contenga più le immagini
+   (niente overflow) e che `ExtFlashSection` sia a 0x90000000.
+5. **Estrai il blob**: `arm-none-eabi-objcopy -O binary --only-section=ExtFlashSection
+   Debug/Display_test_prova.elf assets.bin`.
+6. **Flash firmware** sulla Nucleo (ST-Link).
+7. **Flash asset**: reset board, entro 3 s lancia `python tools/flash_assets.py --port COMxx
+   assets.bin` (USART2 = VCP ST-Link). Attendi `OK`.
+8. **Verifica**: reset → le immagini sono renderizzate leggendo dalla Winbond. (Opz.) diagnostica
+   admin "MEMORY STATUS" = Winbond presente + asset valido.
+
+> Nota: il flasher è **opzionale a runtime** — senza knock l'app parte normale. La validazione
+> manifest non blocca il rendering (TouchGFX legge comunque gli offset); serve solo da check di
+> integrità.
