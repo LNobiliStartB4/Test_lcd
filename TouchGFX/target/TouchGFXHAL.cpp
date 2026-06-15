@@ -21,13 +21,15 @@
 /* USER CODE END Header */
 
 #include <TouchGFXHAL.hpp>
+
+/* USER CODE BEGIN TouchGFXHAL.cpp */
+/* These includes must stay INSIDE the USER CODE block: TouchGFX "Generate"
+ * overwrites everything above this marker and would otherwise strip them. */
 #include <platform/driver/lcd/LCD16bpp.hpp>
 #include <touchgfx/hal/OSWrappers.hpp>
 #include <touchgfx/widgets/canvas/CWRVectorRenderer.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include "RVA15MD_DisplayDriver.h"
-
-/* USER CODE BEGIN TouchGFXHAL.cpp */
 
 using namespace touchgfx;
 
