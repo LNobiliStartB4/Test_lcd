@@ -283,9 +283,14 @@ Parti **HAL-bound (non compilabili qui**, dipendono dai simboli generati da Cube
 - `TouchGFX/Display_test.touchgfx` — `AvailableSections` include già `ExtFlashSection`.
 
 ## Checklist bring-up on-device (passi manuali rimasti)
-1. **CubeMX**: apri il `.ioc`, verifica SPI3 (PC10/11/12) + `ASSET_FLASH_CS`=PC3 + DMA1, **Generate
-   Code**. Conferma che `main.h` ora definisca `ASSET_FLASH_CS_Pin`/`_GPIO_Port` e `main.c` crei
-   `hspi3`/`huart2`.
+1. **CubeMX**: apri il `.ioc`, verifica SPI3 (PC10/11/12) + `ASSET_FLASH_CS`=PC3 + DMA1, e che la
+   sezione TouchGFX Generator abbia il **Data Reader = Enabled** (base 0x90000000) — già nel `.ioc`
+   (`tgfx_datareader=Enabled`). **Generate Code**. Conferma che `main.h` definisca
+   `ASSET_FLASH_CS_Pin`/`_GPIO_Port`, che `main.c` crei `hspi3`/`huart2`, e che ora esistano
+   `TouchGFX/target/generated/TouchGFXGeneratedDataReader.*` (chiamano le `DataReader_*`).
+   ⚠️ Gotcha verificato: gli `#include` extra in `TouchGFX/target/TouchGFXHAL.cpp` (LCD16bpp,
+   OSWrappers, CWRVectorRenderer, PainterRGB565, RVA15MD_DisplayDriver.h) **devono** stare DENTRO
+   `USER CODE BEGIN TouchGFXHAL.cpp`, altrimenti il Generate li cancella e il build rompe.
 2. **main.c (USER CODE)**: dopo `MX_SPI3_Init()` aggiungi `W25Q64_Init();` (atteso JEDEC EF 40 17);
    poi, prima di `MX_TouchGFX_Init()`, chiama `AssetFlasher_RunIfRequested(3000);` (3 s di finestra
    knock al boot). Include `w25q64.h` e `asset_flasher.h`.
