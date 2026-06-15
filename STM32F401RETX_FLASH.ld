@@ -46,6 +46,10 @@ MEMORY
 {
   RAM    (xrw)    : ORIGIN = 0x20000000,   LENGTH = 96K
   FLASH    (rx)    : ORIGIN = 0x8000000,   LENGTH = 512K
+  /* Virtual region for assets physically stored in the external Winbond W25Q64
+   * (8 MB). Not memory-mapped: TouchGFX's FlashDataReader fetches these bytes
+   * over SPI3 at runtime. The base must match W25Q64_VIRTUAL_BASE. */
+  ASSET_FLASH (r)  : ORIGIN = 0x90000000,   LENGTH = 8M
 }
 
 /* Sections */
@@ -86,13 +90,14 @@ SECTIONS
     . = ALIGN(4);
   } >FLASH
 
-  /* TouchGFX image/font data in internal FLASH (no external flash on F401RE) */
+  /* TouchGFX image data lives in the external Winbond flash (virtual address
+   * 0x90000000); only images move out, fonts stay in internal FLASH. */
   ExtFlashSection :
   {
     . = ALIGN(4);
     KEEP(*(ExtFlashSection))
     . = ALIGN(4);
-  } >FLASH
+  } >ASSET_FLASH
 
   IntFlashSection :
   {
