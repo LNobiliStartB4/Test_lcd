@@ -2,15 +2,23 @@
 
 #include "main.h"
 #include "asset_manifest.h"
+#include "asset_flash_layout.h"
 
 #include <stddef.h>
 
 #define W25Q64_CMD_READ          0x03U
 #define W25Q64_CMD_JEDEC_ID      0x9FU
+#define W25Q64_CMD_WRITE_ENABLE  0x06U
+#define W25Q64_CMD_READ_STATUS1  0x05U
+#define W25Q64_CMD_PAGE_PROGRAM  0x02U
+#define W25Q64_CMD_SECTOR_ERASE  0x20U  /* 4 KB sector erase */
+#define W25Q64_CMD_CHIP_ERASE    0xC7U
+#define W25Q64_STATUS_BUSY       0x01U  /* WIP bit in status register 1 */
 #define W25Q64_MANUFACTURER_ID   0xEFU
 #define W25Q64_MEMORY_TYPE       0x40U
 #define W25Q64_CAPACITY_ID       0x17U  /* W25Q64 = 8 MB (0x18 would be the 16 MB W25Q128) */
 #define W25Q64_TIMEOUT_MS        100U
+#define W25Q64_ERASE_TIMEOUT_MS  60000U /* chip erase can take tens of seconds */
 #define W25Q64_CRC_BUFFER_SIZE   256U
 
 extern SPI_HandleTypeDef hspi3;
@@ -200,6 +208,161 @@ void W25Q64_DmaCompleteCallback(void)
 {
   W25Q64_Deselect();
   dmaReadActive = false;
+}
+
+/* --- Programming path (UART asset flasher) ----------------------------- */
+
+static bool W25Q64_WriteEnable(void)
+{
+  uint8_t cmd = W25Q64_CMD_WRITE_ENABLE;
+  HAL_StatusTypeDef status;
+
+  W25Q64_Select();
+  status = HAL_SPI_Transmit(&hspi3, &cmd, 1U, W25Q64_TIMEOUT_MS);
+  W25Q64_Deselect();
+  return status == HAL_OK;
+}
+
+static bool W25Q64_WaitWhileBusy(uint32_t timeoutMs)
+{
+  uint8_t cmd = W25Q64_CMD_READ_STATUS1;
+  uint8_t statusReg = W25Q64_STATUS_BUSY;
+  uint32_t start = HAL_GetTick();
+
+  do
+  {
+    W25Q64_Select();
+    if ((HAL_SPI_Transmit(&hspi3, &cmd, 1U, W25Q64_TIMEOUT_MS) != HAL_OK) ||
+        (HAL_SPI_Receive(&hspi3, &statusReg, 1U, W25Q64_TIMEOUT_MS) != HAL_OK))
+    {
+      W25Q64_Deselect();
+      return false;
+    }
+    W25Q64_Deselect();
+
+    if ((statusReg & W25Q64_STATUS_BUSY) == 0U)
+    {
+      return true;
+    }
+  } while ((HAL_GetTick() - start) < timeoutMs);
+
+  return false;
+}
+
+bool W25Q64_EraseSector(uint32_t address)
+{
+  uint8_t header[4];
+  HAL_StatusTypeDef status;
+
+  address = W25Q64_NormalizeAddress(address);
+  if (!flashReady || (address >= W25Q64_SIZE_BYTES) || !W25Q64_WriteEnable())
+  {
+    return false;
+  }
+
+  header[0] = W25Q64_CMD_SECTOR_ERASE;
+  header[1] = (uint8_t)(address >> 16);
+  header[2] = (uint8_t)(address >> 8);
+  header[3] = (uint8_t)address;
+
+  W25Q64_Select();
+  status = HAL_SPI_Transmit(&hspi3, header, sizeof(header), W25Q64_TIMEOUT_MS);
+  W25Q64_Deselect();
+  if (status != HAL_OK)
+  {
+    return false;
+  }
+
+  return W25Q64_WaitWhileBusy(W25Q64_ERASE_TIMEOUT_MS);
+}
+
+bool W25Q64_EraseChip(void)
+{
+  uint8_t cmd = W25Q64_CMD_CHIP_ERASE;
+  HAL_StatusTypeDef status;
+
+  if (!flashReady || !W25Q64_WriteEnable())
+  {
+    return false;
+  }
+
+  W25Q64_Select();
+  status = HAL_SPI_Transmit(&hspi3, &cmd, 1U, W25Q64_TIMEOUT_MS);
+  W25Q64_Deselect();
+  if (status != HAL_OK)
+  {
+    return false;
+  }
+
+  return W25Q64_WaitWhileBusy(W25Q64_ERASE_TIMEOUT_MS);
+}
+
+bool W25Q64_ProgramPage(uint32_t address, const uint8_t *data, uint32_t length)
+{
+  uint8_t header[4];
+  HAL_StatusTypeDef status;
+
+  address = W25Q64_NormalizeAddress(address);
+  if (!flashReady || (data == NULL) || (length == 0U) ||
+      (length > ASSET_FLASH_PAGE_SIZE) ||
+      (address >= W25Q64_SIZE_BYTES) ||
+      (length > (W25Q64_SIZE_BYTES - address)) ||
+      /* must not cross a page boundary */
+      (asset_flash_page_chunk(address, length, ASSET_FLASH_PAGE_SIZE) != length))
+  {
+    return false;
+  }
+
+  if (!W25Q64_WriteEnable())
+  {
+    return false;
+  }
+
+  header[0] = W25Q64_CMD_PAGE_PROGRAM;
+  header[1] = (uint8_t)(address >> 16);
+  header[2] = (uint8_t)(address >> 8);
+  header[3] = (uint8_t)address;
+
+  W25Q64_Select();
+  status = HAL_SPI_Transmit(&hspi3, header, sizeof(header), W25Q64_TIMEOUT_MS);
+  if (status == HAL_OK)
+  {
+    /* data is const; HAL takes a non-const buffer but does not modify it. */
+    status = HAL_SPI_Transmit(&hspi3, (uint8_t *)data, (uint16_t)length, W25Q64_TIMEOUT_MS);
+  }
+  W25Q64_Deselect();
+  if (status != HAL_OK)
+  {
+    return false;
+  }
+
+  return W25Q64_WaitWhileBusy(W25Q64_TIMEOUT_MS);
+}
+
+bool W25Q64_Write(uint32_t address, const uint8_t *data, uint32_t length)
+{
+  uint32_t offset = 0U;
+
+  address = W25Q64_NormalizeAddress(address);
+  if (!flashReady || (data == NULL) || (length == 0U) ||
+      (address >= W25Q64_SIZE_BYTES) ||
+      (length > (W25Q64_SIZE_BYTES - address)))
+  {
+    return false;
+  }
+
+  while (offset < length)
+  {
+    uint32_t chunk = asset_flash_page_chunk(address + offset, length - offset,
+                                            ASSET_FLASH_PAGE_SIZE);
+    if (!W25Q64_ProgramPage(address + offset, &data[offset], chunk))
+    {
+      return false;
+    }
+    offset += chunk;
+  }
+
+  return true;
 }
 
 /* SPI3 is dedicated to the asset flash; SPI1 (display) defines only its own

@@ -31,6 +31,15 @@ bool W25Q64_IsDmaReadActive(void);
 void W25Q64_WaitForDmaRead(void);
 void W25Q64_DmaCompleteCallback(void);
 
+/* --- Programming (used by the UART asset flasher; not on the read path) --- */
+bool W25Q64_EraseSector(uint32_t address); /* erases the 4 KB sector containing address */
+bool W25Q64_EraseChip(void);               /* full chip erase (seconds) */
+/* Program up to one 256-byte page; the write must not cross a page boundary. */
+bool W25Q64_ProgramPage(uint32_t address, const uint8_t* data, uint32_t length);
+/* Program an arbitrary span, splitting into page-bounded ProgramPage calls.
+ * The target sectors must already be erased. */
+bool W25Q64_Write(uint32_t address, const uint8_t* data, uint32_t length);
+
 #ifdef __cplusplus
 }
 #endif
