@@ -53,10 +53,10 @@ Screen18ViewBase::Screen18ViewBase() :
     digit1Button.setBorderSize(1);
     digit1Button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit1Button.setAction(flexButtonCallback);
-    digit1Button.setPosition(28, 122, 132, 38);
+    digit1Button.setPosition(28, 146, 132, 42);
     add(digit1Button);
 
-    digit1Label.setPosition(28, 131, 132, 20);
+    digit1Label.setPosition(28, 149, 132, 36);
     digit1Label.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit1Label.setLinespacing(0);
     digit1Label.setTypedText(touchgfx::TypedText(T_TEXT_DIGIT1));
@@ -66,10 +66,10 @@ Screen18ViewBase::Screen18ViewBase() :
     digit2Button.setBorderSize(1);
     digit2Button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit2Button.setAction(flexButtonCallback);
-    digit2Button.setPosition(174, 122, 132, 38);
+    digit2Button.setPosition(174, 146, 132, 42);
     add(digit2Button);
 
-    digit2Label.setPosition(174, 131, 132, 20);
+    digit2Label.setPosition(174, 149, 132, 36);
     digit2Label.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit2Label.setLinespacing(0);
     digit2Label.setTypedText(touchgfx::TypedText(T_TEXT_DIGIT2));
@@ -79,10 +79,10 @@ Screen18ViewBase::Screen18ViewBase() :
     digit3Button.setBorderSize(1);
     digit3Button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit3Button.setAction(flexButtonCallback);
-    digit3Button.setPosition(320, 122, 132, 38);
+    digit3Button.setPosition(320, 146, 132, 42);
     add(digit3Button);
 
-    digit3Label.setPosition(320, 131, 132, 20);
+    digit3Label.setPosition(320, 149, 132, 36);
     digit3Label.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit3Label.setLinespacing(0);
     digit3Label.setTypedText(touchgfx::TypedText(T_TEXT_DIGIT3));
@@ -92,10 +92,10 @@ Screen18ViewBase::Screen18ViewBase() :
     digit4Button.setBorderSize(1);
     digit4Button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit4Button.setAction(flexButtonCallback);
-    digit4Button.setPosition(28, 166, 132, 38);
+    digit4Button.setPosition(28, 190, 132, 42);
     add(digit4Button);
 
-    digit4Label.setPosition(28, 175, 132, 20);
+    digit4Label.setPosition(28, 193, 132, 36);
     digit4Label.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit4Label.setLinespacing(0);
     digit4Label.setTypedText(touchgfx::TypedText(T_TEXT_DIGIT4));
@@ -105,10 +105,10 @@ Screen18ViewBase::Screen18ViewBase() :
     digit5Button.setBorderSize(1);
     digit5Button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit5Button.setAction(flexButtonCallback);
-    digit5Button.setPosition(174, 166, 132, 38);
+    digit5Button.setPosition(174, 190, 132, 42);
     add(digit5Button);
 
-    digit5Label.setPosition(174, 175, 132, 20);
+    digit5Label.setPosition(174, 193, 132, 36);
     digit5Label.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit5Label.setLinespacing(0);
     digit5Label.setTypedText(touchgfx::TypedText(T_TEXT_DIGIT5));
@@ -118,10 +118,10 @@ Screen18ViewBase::Screen18ViewBase() :
     digit6Button.setBorderSize(1);
     digit6Button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit6Button.setAction(flexButtonCallback);
-    digit6Button.setPosition(320, 166, 132, 38);
+    digit6Button.setPosition(320, 190, 132, 42);
     add(digit6Button);
 
-    digit6Label.setPosition(320, 175, 132, 20);
+    digit6Label.setPosition(320, 193, 132, 36);
     digit6Label.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit6Label.setLinespacing(0);
     digit6Label.setTypedText(touchgfx::TypedText(T_TEXT_DIGIT6));
@@ -131,10 +131,10 @@ Screen18ViewBase::Screen18ViewBase() :
     digit7Button.setBorderSize(1);
     digit7Button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit7Button.setAction(flexButtonCallback);
-    digit7Button.setPosition(28, 210, 132, 38);
+    digit7Button.setPosition(28, 234, 132, 42);
     add(digit7Button);
 
-    digit7Label.setPosition(28, 219, 132, 20);
+    digit7Label.setPosition(28, 237, 132, 36);
     digit7Label.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit7Label.setLinespacing(0);
     digit7Label.setTypedText(touchgfx::TypedText(T_TEXT_DIGIT7));
@@ -144,10 +144,10 @@ Screen18ViewBase::Screen18ViewBase() :
     digit8Button.setBorderSize(1);
     digit8Button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit8Button.setAction(flexButtonCallback);
-    digit8Button.setPosition(174, 210, 132, 38);
+    digit8Button.setPosition(174, 234, 132, 42);
     add(digit8Button);
 
-    digit8Label.setPosition(174, 219, 132, 20);
+    digit8Label.setPosition(174, 237, 132, 36);
     digit8Label.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit8Label.setLinespacing(0);
     digit8Label.setTypedText(touchgfx::TypedText(T_TEXT_DIGIT8));
@@ -157,10 +157,10 @@ Screen18ViewBase::Screen18ViewBase() :
     digit9Button.setBorderSize(1);
     digit9Button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit9Button.setAction(flexButtonCallback);
-    digit9Button.setPosition(320, 210, 132, 38);
+    digit9Button.setPosition(320, 234, 132, 42);
     add(digit9Button);
 
-    digit9Label.setPosition(320, 219, 132, 20);
+    digit9Label.setPosition(320, 237, 132, 36);
     digit9Label.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit9Label.setLinespacing(0);
     digit9Label.setTypedText(touchgfx::TypedText(T_TEXT_DIGIT9));
@@ -170,10 +170,10 @@ Screen18ViewBase::Screen18ViewBase() :
     deleteButton.setBorderSize(1);
     deleteButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     deleteButton.setAction(flexButtonCallback);
-    deleteButton.setPosition(28, 258, 132, 48);
+    deleteButton.setPosition(28, 278, 132, 42);
     add(deleteButton);
 
-    deleteLabel.setPosition(28, 272, 132, 20);
+    deleteLabel.setPosition(28, 289, 132, 20);
     deleteLabel.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     deleteLabel.setLinespacing(0);
     deleteLabel.setTypedText(touchgfx::TypedText(T_TEXT_ADMINDELETE));
@@ -183,10 +183,10 @@ Screen18ViewBase::Screen18ViewBase() :
     digit0Button.setBorderSize(1);
     digit0Button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit0Button.setAction(flexButtonCallback);
-    digit0Button.setPosition(174, 258, 132, 48);
+    digit0Button.setPosition(174, 278, 132, 42);
     add(digit0Button);
 
-    digit0Label.setPosition(174, 272, 132, 20);
+    digit0Label.setPosition(174, 281, 132, 36);
     digit0Label.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     digit0Label.setLinespacing(0);
     digit0Label.setTypedText(touchgfx::TypedText(T_TEXT_DIGIT0));
@@ -196,10 +196,10 @@ Screen18ViewBase::Screen18ViewBase() :
     applyButton.setBorderSize(2);
     applyButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(216, 178, 71), touchgfx::Color::getColorFromRGB(245, 242, 232));
     applyButton.setAction(flexButtonCallback);
-    applyButton.setPosition(320, 258, 132, 48);
+    applyButton.setPosition(320, 278, 132, 42);
     add(applyButton);
 
-    applyLabel.setPosition(320, 272, 132, 20);
+    applyLabel.setPosition(320, 289, 132, 20);
     applyLabel.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     applyLabel.setLinespacing(0);
     applyLabel.setTypedText(touchgfx::TypedText(T_TEXT_SETTARGETBUTTON));

@@ -10,10 +10,15 @@ enum ActiveProduct
     ActiveProductHemorflow = 2
 };
 
+// Values MUST match the order of <Language Id> in texts.xml (GB, IT, FR, DE, ES),
+// because touchgfx::LANGUAGES is enumerated in that order and the mapping is a cast.
 enum UiLanguage
 {
     UiLanguageEnglish = 0,
-    UiLanguageItalian = 1
+    UiLanguageItalian = 1,
+    UiLanguageFrench  = 2,
+    UiLanguageGerman  = 3,
+    UiLanguageSpanish = 4
 };
 
 enum BandyVacuumState
@@ -29,6 +34,51 @@ enum BandySessionState
     BandySessionAuthorized = 1,
     BandySessionRunning = 2,
     BandySessionPaused = 3
+};
+
+enum PneumaticPretestState
+{
+    PneumaticPretestIdle = 0,
+    PneumaticPretestPullDown,
+    PneumaticPretestHold,
+    PneumaticPretestReleasing,
+    PneumaticPretestPassed,
+    PneumaticPretestLeakFailed,
+    PneumaticPretestTechnicalFault,
+    PneumaticPretestCancelled
+};
+
+enum PneumaticPretestResult
+{
+    PneumaticPretestResultNone = 0,
+    PneumaticPretestResultPassed,
+    PneumaticPretestResultPullDownTimeout,
+    PneumaticPretestResultHoldLeak,
+    PneumaticPretestResultSensorFault,
+    PneumaticPretestResultActuatorFault,
+    PneumaticPretestResultCancelled
+};
+
+struct PneumaticPretestStatus
+{
+    PneumaticPretestStatus()
+        : product(ActiveProductNone),
+          state(PneumaticPretestIdle),
+          result(PneumaticPretestResultNone),
+          remainingSeconds(0),
+          pressureMbar(0),
+          controlTargetMbar(0),
+          holdMinimumMbar(0)
+    {
+    }
+
+    ActiveProduct product;
+    PneumaticPretestState state;
+    PneumaticPretestResult result;
+    uint16_t remainingSeconds;
+    int32_t pressureMbar;
+    int32_t controlTargetMbar;
+    int32_t holdMinimumMbar;
 };
 
 struct BandyState

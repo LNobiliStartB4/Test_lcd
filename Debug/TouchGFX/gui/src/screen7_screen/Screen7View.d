@@ -78,6 +78,7 @@ TouchGFX/gui/src/screen7_screen/Screen7View.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
  ../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp \
+ ../TouchGFX/gui/include/gui/model/BandyCompletion.hpp \
  ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
 ../TouchGFX/gui/include/gui/screen7_screen/Screen7View.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
@@ -157,4 +158,5 @@ TouchGFX/gui/src/screen7_screen/Screen7View.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
 ../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp:
+../TouchGFX/gui/include/gui/model/BandyCompletion.hpp:
 ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:

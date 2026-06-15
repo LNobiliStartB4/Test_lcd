@@ -1,4 +1,5 @@
 #include <gui/screen18_screen/Screen18View.hpp>
+#include <gui/model/BandyCompletion.hpp>
 #include <touchgfx/Color.hpp>
 #include <touchgfx/Unicode.hpp>
 
@@ -10,12 +11,6 @@ const touchgfx::colortype kIvory = touchgfx::Color::getColorFromRGB(245, 242, 23
 const touchgfx::colortype kDim = touchgfx::Color::getColorFromRGB(124, 137, 148);
 const touchgfx::colortype kError = touchgfx::Color::getColorFromRGB(216, 82, 72);
 
-bool isCompletedBandyCycle(const BandyState& previousState, const BandyState& state)
-{
-    return (previousState.sessionState == BandySessionRunning) &&
-           (state.sessionState == BandySessionWaitRfid) &&
-           (state.remainingSeconds == 0U);
-}
 }
 
 Screen18View::Screen18View()
@@ -138,10 +133,10 @@ void Screen18View::applyBandyState(const BandyState& state)
     const BandyState previousState = latestState;
     latestState = state;
 
-    if (!screenTransitionRequested && isCompletedBandyCycle(previousState, state))
+    if (!screenTransitionRequested && isNaturalBandyCompletion(previousState, state))
     {
         screenTransitionRequested = true;
-        application().gotoProductSelectScreenNoTransition();
+        application().gotoBandyCompletedScreenNoTransition();
         return;
     }
 

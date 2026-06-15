@@ -18,12 +18,18 @@ void Screen2View::tearDownScreen()
 
 void Screen2View::bandySelected()
 {
-    application().gotoRfidWaitScreenNoTransition();
+    if (presenter->startPneumaticPretest(ActiveProductBandy))
+    {
+        application().gotoPneumaticPretestScreenNoTransition();
+    }
 }
 
 void Screen2View::hemorflowSelected()
 {
-    application().gotoHemorflowWaitScreenNoTransition();
+    if (presenter->startPneumaticPretest(ActiveProductHemorflow))
+    {
+        application().gotoPneumaticPretestScreenNoTransition();
+    }
 }
 
 void Screen2View::settingsClicked()

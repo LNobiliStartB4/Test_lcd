@@ -24,6 +24,7 @@ extern "C" {
 
 bool W25Q64_Init(void);                 /* JEDEC ID check (EF 40 17); true if present */
 bool W25Q64_IsReady(void);
+void W25Q64_GetJedecId(uint8_t outId[3]);
 bool W25Q64_ValidateAssetPackage(void); /* CRC32-validates the asset blob via the manifest */
 bool W25Q64_Read(uint32_t address, uint8_t* data, uint32_t length);       /* blocking */
 bool W25Q64_StartDmaRead(uint32_t address, uint8_t* data, uint32_t length);/* non-blocking */

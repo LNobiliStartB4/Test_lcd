@@ -23,6 +23,8 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:1397:18:virtual void touchgfx::HAL::InvalidateCache()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:1407:18:virtual void touchgfx::HAL::FlushCache()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:1417:18:virtual void touchgfx::HAL::InvalidateTextureCache()	0	static
+../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:134:18:virtual void TouchGFXGeneratedHAL::setDataReader(touchgfx::FlashDataReader*)	0	static
+../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp:147:40:virtual touchgfx::FlashDataReader* TouchGFXGeneratedHAL::getDataReader()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:61:34:virtual touchgfx::HAL::RenderingMethod touchgfx::AbstractPainter::getRenderingMethod() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:78:18:virtual bool touchgfx::AbstractPainter::setup(const touchgfx::Rect&) const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:90:18:virtual void touchgfx::AbstractPainter::tearDown() const	0	static
@@ -40,33 +42,33 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:320:30:virtual touchgfx::AbstractPainter& touchgfx::CWRVectorRendererRGB565::getColorPainter()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:197:11:touchgfx::CWRVectorRenderer::CanvasWidgetProxy::~CanvasWidgetProxy()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:308:7:touchgfx::CWRVectorRendererRGB565::~CWRVectorRendererRGB565()	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:38:36:void __tcf_0()	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:282:6:virtual void TouchGFXHAL::flushFrameBuffer()	16	static
-../TouchGFX/target/TouchGFXHAL.cpp:49:7:{anonymous}::DmaManyBlockAllocator<12800, 2, 2>::~DmaManyBlockAllocator()	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:40:36:void __tcf_0()	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:284:6:virtual void TouchGFXHAL::flushFrameBuffer()	16	static
+../TouchGFX/target/TouchGFXHAL.cpp:51:7:{anonymous}::DmaManyBlockAllocator<12800, 2, 2>::~DmaManyBlockAllocator()	0	static
 ../TouchGFX/target/TouchGFXHAL.hpp:36:7:TouchGFXHAL::~TouchGFXHAL()	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:88:18:void {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::markBlockReadyForTransfer() [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:128:18:void {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::freeBlockAfterTransfer() [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:150:9:int {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::findNextBlockAfter(int, touchgfx::FrameBufferAllocator::BlockState) const [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	8	static
-../TouchGFX/target/TouchGFXHAL.cpp:117:25:const touchgfx::Rect& {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::peekBlockForTransfer() [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	8	static
-../TouchGFX/target/TouchGFXHAL.cpp:101:28:const uint8_t* {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::getBlockForTransfer(touchgfx::Rect&) [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	16	static
-../TouchGFX/target/TouchGFXHAL.cpp:123:18:bool {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::hasEmptyBlock() [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:49:7:virtual {anonymous}::DmaManyBlockAllocator<12800, 2, 2>::~DmaManyBlockAllocator()	8	static
+../TouchGFX/target/TouchGFXHAL.cpp:90:18:void {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::markBlockReadyForTransfer() [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:130:18:void {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::freeBlockAfterTransfer() [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:152:9:int {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::findNextBlockAfter(int, touchgfx::FrameBufferAllocator::BlockState) const [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	8	static
+../TouchGFX/target/TouchGFXHAL.cpp:119:25:const touchgfx::Rect& {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::peekBlockForTransfer() [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	8	static
+../TouchGFX/target/TouchGFXHAL.cpp:103:28:const uint8_t* {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::getBlockForTransfer(touchgfx::Rect&) [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	16	static
+../TouchGFX/target/TouchGFXHAL.cpp:125:18:bool {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::hasEmptyBlock() [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:51:7:virtual {anonymous}::DmaManyBlockAllocator<12800, 2, 2>::~DmaManyBlockAllocator()	8	static
 ../TouchGFX/target/TouchGFXHAL.hpp:36:7:virtual TouchGFXHAL::~TouchGFXHAL()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:197:11:virtual touchgfx::CWRVectorRenderer::CanvasWidgetProxy::~CanvasWidgetProxy()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp:308:7:virtual touchgfx::CWRVectorRendererRGB565::~CWRVectorRendererRGB565()	8	static
-../TouchGFX/target/TouchGFXHAL.cpp:182:6:void {anonymous}::startNextTransfer()	32	static
-../TouchGFX/target/TouchGFXHAL.cpp:238:6:virtual void TouchGFXHAL::initialize()	8	static
-../TouchGFX/target/TouchGFXHAL.cpp:250:11:virtual uint16_t* TouchGFXHAL::getTFTFrameBuffer() const	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:265:6:virtual void TouchGFXHAL::setTFTFrameBuffer(uint16_t*)	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:287:6:virtual void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect&)	8	static
-../TouchGFX/target/TouchGFXHAL.cpp:294:6:virtual bool TouchGFXHAL::blockCopy(void*, const void*, uint32_t)	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:303:6:virtual void TouchGFXHAL::configureInterrupts()	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:316:6:virtual void TouchGFXHAL::enableInterrupts()	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:329:6:virtual void TouchGFXHAL::disableInterrupts()	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:343:6:virtual void TouchGFXHAL::enableLCDControllerInterrupt()	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:353:6:virtual bool TouchGFXHAL::beginFrame()	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:62:22:uint16_t {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::allocateBlock(uint16_t, uint16_t, uint16_t, uint16_t, uint8_t**) [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	32	static
-../TouchGFX/target/TouchGFXHAL.cpp:358:6:virtual void TouchGFXHAL::endFrame()	8	static
+../TouchGFX/target/TouchGFXHAL.cpp:184:6:void {anonymous}::startNextTransfer()	32	static
+../TouchGFX/target/TouchGFXHAL.cpp:240:6:virtual void TouchGFXHAL::initialize()	8	static
+../TouchGFX/target/TouchGFXHAL.cpp:252:11:virtual uint16_t* TouchGFXHAL::getTFTFrameBuffer() const	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:267:6:virtual void TouchGFXHAL::setTFTFrameBuffer(uint16_t*)	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:289:6:virtual void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect&)	8	static
+../TouchGFX/target/TouchGFXHAL.cpp:296:6:virtual bool TouchGFXHAL::blockCopy(void*, const void*, uint32_t)	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:305:6:virtual void TouchGFXHAL::configureInterrupts()	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:318:6:virtual void TouchGFXHAL::enableInterrupts()	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:331:6:virtual void TouchGFXHAL::disableInterrupts()	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:345:6:virtual void TouchGFXHAL::enableLCDControllerInterrupt()	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:355:6:virtual bool TouchGFXHAL::beginFrame()	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:64:22:uint16_t {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::allocateBlock(uint16_t, uint16_t, uint16_t, uint16_t, uint8_t**) [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	32	static
+../TouchGFX/target/TouchGFXHAL.cpp:360:6:virtual void TouchGFXHAL::endFrame()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:685:18:virtual void touchgfx::HAL::backPorchExited()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:1370:18:virtual void touchgfx::HAL::performDisplayOrientationChange()	8	static
@@ -74,8 +76,8 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:767:18:virtual void touchgfx::HAL::setFrameBufferStartAddresses(void*, void*, void*)	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:358:28:virtual touchgfx::BlitOperations touchgfx::HAL::getBlitCaps()	0	static
-../TouchGFX/target/TouchGFXHAL.cpp:96:18:bool {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::hasBlockReadyForTransfer() [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:98:18:bool {anonymous}::DmaManyBlockAllocator<blockSize, blockCount, bytesPerPixel>::hasBlockReadyForTransfer() [with long unsigned int blockSize = 12800; long unsigned int blockCount = 2; long unsigned int bytesPerPixel = 2]	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	16	static
-../TouchGFX/target/TouchGFXHAL.cpp:36:17:static touchgfx::VectorRenderer* touchgfx::VectorRenderer::getInstance()	16	static
-../TouchGFX/target/TouchGFXHAL.cpp:233:17:void TouchGFXHAL_TransferCompleteCallback()	8	static
-../TouchGFX/target/TouchGFXHAL.cpp:368:1:cpp)	0	static
+../TouchGFX/target/TouchGFXHAL.cpp:38:17:static touchgfx::VectorRenderer* touchgfx::VectorRenderer::getInstance()	16	static
+../TouchGFX/target/TouchGFXHAL.cpp:235:17:void TouchGFXHAL_TransferCompleteCallback()	8	static
+../TouchGFX/target/TouchGFXHAL.cpp:370:1:cpp)	0	static

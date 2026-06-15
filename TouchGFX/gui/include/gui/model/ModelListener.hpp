@@ -27,6 +27,11 @@ public:
         (void)state;
     }
 
+    virtual void pneumaticPretestUpdated(const PneumaticPretestStatus& status)
+    {
+        (void)status;
+    }
+
 protected:
     Model* model;
 };

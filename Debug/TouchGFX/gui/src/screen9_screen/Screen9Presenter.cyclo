@@ -1,4 +1,5 @@
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	1
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:30:18:virtual void ModelListener::pneumaticPretestUpdated(const PneumaticPretestStatus&)	1
 ../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp:27:13:Screen9Presenter::~Screen9Presenter()	1
 ../TouchGFX/gui/src/screen9_screen/Screen9Presenter.cpp:19:6:virtual void Screen9Presenter::activate()	1
 ../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp:27:13:virtual Screen9Presenter::~Screen9Presenter()	1

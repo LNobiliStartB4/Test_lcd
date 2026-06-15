@@ -60,7 +60,7 @@ Screen10ViewBase::Screen10ViewBase() :
     settingsPreviousButton.setBorderSize(1);
     settingsPreviousButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     settingsPreviousButton.setAction(flexButtonCallback);
-    settingsPreviousButton.setPosition(40, 282, 120, 36);
+    settingsPreviousButton.setPosition(22, 282, 138, 36);
     add(settingsPreviousButton);
 
     settingsPreviousLabel.setPosition(40, 291, 120, 20);
@@ -81,7 +81,7 @@ Screen10ViewBase::Screen10ViewBase() :
     settingsNextButton.setBorderSize(1);
     settingsNextButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
     settingsNextButton.setAction(flexButtonCallback);
-    settingsNextButton.setPosition(320, 282, 120, 36);
+    settingsNextButton.setPosition(311, 281, 160, 39);
     add(settingsNextButton);
 
     settingsNextLabel.setPosition(320, 291, 120, 20);

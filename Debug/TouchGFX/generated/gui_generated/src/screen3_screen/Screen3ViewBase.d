@@ -58,10 +58,10 @@ TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
- ../TouchGFX/gui/include/gui/containers/BandyTimePanel.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyTimePanelBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ ../TouchGFX/gui/include/gui/containers/BandyTimePanel.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyTimePanelBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
@@ -144,10 +144,10 @@ TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
-../TouchGFX/gui/include/gui/containers/BandyTimePanel.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyTimePanelBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+../TouchGFX/gui/include/gui/containers/BandyTimePanel.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyTimePanelBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:

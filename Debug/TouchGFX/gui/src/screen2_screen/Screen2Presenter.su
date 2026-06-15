@@ -1,6 +1,8 @@
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	0	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:30:18:virtual void ModelListener::pneumaticPretestUpdated(const PneumaticPretestStatus&)	0	static
 ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:15:13:Screen2Presenter::~Screen2Presenter()	0	static
-../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:9:6:virtual void Screen2Presenter::activate()	0	static
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:10:6:virtual void Screen2Presenter::activate()	0	static
 ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:15:13:virtual Screen2Presenter::~Screen2Presenter()	8	static
 ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:15:13:virtual void* Screen2Presenter::_ZThn4_N16Screen2PresenterD1Ev()	0	static
-../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:4:1:Screen2Presenter::Screen2Presenter(Screen2View&)	0	static
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:5:1:Screen2Presenter::Screen2Presenter(Screen2View&)	0	static
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:18:6:bool Screen2Presenter::startPneumaticPretest(ActiveProduct)	0	static

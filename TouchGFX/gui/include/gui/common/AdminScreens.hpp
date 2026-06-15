@@ -167,31 +167,34 @@ inline void configureButton(OutlineButton& button,
     button.setPosition(x, y, width, height);
 }
 
-inline const char* yesNo(bool value, UiLanguage language)
+// State strings are now TouchGFX texts (translated automatically by the active
+// language via Texts::setLanguage), instead of per-language C++ literals.
+inline touchgfx::TypedTextId yesNoText(bool value)
 {
-    if (language == UiLanguageItalian)
-    {
-        return value ? "SI" : "NO";
-    }
-    return value ? "YES" : "NO";
+    return value ? T_TEXT_STATEYES : T_TEXT_STATENO;
 }
 
-inline const char* available(bool value, UiLanguage language)
+inline touchgfx::TypedTextId availableText(bool value)
 {
-    if (language == UiLanguageItalian)
-    {
-        return value ? "PRESENTE" : "ASSENTE";
-    }
-    return value ? "PRESENT" : "MISSING";
+    return value ? T_TEXT_STATEPRESENT : T_TEXT_STATEABSENT;
 }
 
-inline const char* valid(bool value, UiLanguage language)
+inline touchgfx::TypedTextId validText(bool value)
 {
-    if (language == UiLanguageItalian)
+    return value ? T_TEXT_STATEVALID : T_TEXT_STATEINVALID;
+}
+
+inline touchgfx::TypedTextId languageNameText(UiLanguage language)
+{
+    switch (language)
     {
-        return value ? "VALIDO" : "NON VALIDO";
+    case UiLanguageItalian: return T_TEXT_ITALIAN;
+    case UiLanguageFrench:  return T_TEXT_FRENCH;
+    case UiLanguageGerman:  return T_TEXT_GERMAN;
+    case UiLanguageSpanish: return T_TEXT_SPANISH;
+    case UiLanguageEnglish:
+    default:                return T_TEXT_ENGLISH;
     }
-    return value ? "VALID" : "INVALID";
 }
 
 template <typename PresenterType>
@@ -281,12 +284,24 @@ protected:
         }
     }
 
+    // Show a translated text (state strings) instead of a dynamic buffer.
+    void setTypedValue(uint8_t index, touchgfx::TypedTextId textId)
+    {
+        if (index >= lineCount)
+        {
+            return;
+        }
+        values[index].setTypedText(touchgfx::TypedText(textId));
+        values[index].invalidate();
+    }
+
     void setTextValue(uint8_t index, const char* value)
     {
         if ((index >= lineCount) || (value == 0))
         {
             return;
         }
+        rebindWildcard(index);
         touchgfx::Unicode::fromUTF8(reinterpret_cast<const uint8_t*>(value),
                                    valueBuffers[index],
                                    kValueBufferSize);
@@ -299,6 +314,7 @@ protected:
         {
             return;
         }
+        rebindWildcard(index);
         touchgfx::Unicode::snprintf(valueBuffers[index],
                                    kValueBufferSize,
                                    "%ld%s",
@@ -313,6 +329,7 @@ protected:
         {
             return;
         }
+        rebindWildcard(index);
         touchgfx::Unicode::snprintf(valueBuffers[index],
                                    kValueBufferSize,
                                    "%lu%s",
@@ -322,6 +339,14 @@ protected:
     }
 
 private:
+    // Re-bind a value field to its wildcard buffer (undo a previous setTypedValue
+    // so the field shows its dynamic buffer again).
+    void rebindWildcard(uint8_t index)
+    {
+        values[index].setTypedText(touchgfx::TypedText(T_TEXT_ADMINVALUE));
+        values[index].setWildcard(valueBuffers[index]);
+    }
+
     uint8_t lineCount;
     touchgfx::TextArea labels[kMaxLines];
     touchgfx::TextAreaWithOneWildcard values[kMaxLines];
@@ -718,8 +743,8 @@ private:
     void refresh()
     {
         const AdminDiagnosticsSnapshot snapshot = presenter->getDiagnostics();
-        setTextValue(0U, snapshot.deviceName[0] != 0 ? snapshot.deviceName : "N/A");
-        setTextValue(1U, snapshot.firmwareVersion[0] != 0 ? snapshot.firmwareVersion : "N/A");
+        if (snapshot.deviceName[0] != 0) { setTextValue(0U, snapshot.deviceName); } else { setTypedValue(0U, T_TEXT_STATENA); }
+        if (snapshot.firmwareVersion[0] != 0) { setTextValue(1U, snapshot.firmwareVersion); } else { setTypedValue(1U, T_TEXT_STATENA); }
 
         const uint32_t hours = snapshot.uptimeSeconds / 3600U;
         const uint32_t minutes = (snapshot.uptimeSeconds / 60U) % 60U;
@@ -730,7 +755,7 @@ private:
                  static_cast<unsigned long>(minutes),
                  static_cast<unsigned long>(seconds));
         setTextValue(2U, uptime);
-        setTextValue(3U, snapshot.language == UiLanguageItalian ? "ITALIANO" : "ENGLISH");
+        setTypedValue(3U, adminui::languageNameText(snapshot.language));
         setUnsignedValue(4U, snapshot.brightnessPercent, " %");
     }
 
@@ -788,14 +813,10 @@ private:
     void refresh()
     {
         const AdminDiagnosticsSnapshot snapshot = presenter->getDiagnostics();
-        const char* unavailable = snapshot.language == UiLanguageItalian ? "N/D" : "N/A";
 
-        setTextValue(0U,
-                     snapshot.pressureAvailable
-                         ? adminui::valid(snapshot.pressureValid, snapshot.language)
-                         : unavailable);
         if (snapshot.pressureAvailable)
         {
+            setTypedValue(0U, adminui::validText(snapshot.pressureValid));
             setIntValue(1U, snapshot.relativePressureMbar, " mbar");
             setIntValue(6U, snapshot.targetMbar, " mbar");
             setUnsignedValue(7U, snapshot.pumpDutyPercent, " %");
@@ -803,10 +824,11 @@ private:
         }
         else
         {
-            setTextValue(1U, unavailable);
-            setTextValue(6U, unavailable);
-            setTextValue(7U, unavailable);
-            setTextValue(8U, unavailable);
+            setTypedValue(0U, T_TEXT_STATENA);
+            setTypedValue(1U, T_TEXT_STATENA);
+            setTypedValue(6U, T_TEXT_STATENA);
+            setTypedValue(7U, T_TEXT_STATENA);
+            setTypedValue(8U, T_TEXT_STATENA);
         }
 
         if (snapshot.pressureDetailsAvailable)
@@ -818,10 +840,10 @@ private:
         }
         else
         {
-            setTextValue(2U, unavailable);
-            setTextValue(3U, unavailable);
-            setTextValue(4U, unavailable);
-            setTextValue(5U, unavailable);
+            setTypedValue(2U, T_TEXT_STATENA);
+            setTypedValue(3U, T_TEXT_STATENA);
+            setTypedValue(4U, T_TEXT_STATENA);
+            setTypedValue(5U, T_TEXT_STATENA);
         }
     }
 
@@ -870,44 +892,39 @@ private:
     void refresh()
     {
         const AdminDiagnosticsSnapshot snapshot = presenter->getDiagnostics();
-        const char* unavailable = snapshot.language == UiLanguageItalian ? "N/D" : "N/A";
 
-        setTextValue(0U,
-                     snapshot.framAvailable
-                         ? adminui::available(snapshot.framPresent, snapshot.language)
-                         : unavailable);
-        setTextValue(1U,
-                     snapshot.framAvailable && snapshot.framId[0] != 0
-                         ? snapshot.framId
-                         : unavailable);
+        if (snapshot.framAvailable) { setTypedValue(0U, adminui::availableText(snapshot.framPresent)); }
+        else { setTypedValue(0U, T_TEXT_STATENA); }
+
+        if (snapshot.framAvailable && snapshot.framId[0] != 0) { setTextValue(1U, snapshot.framId); }
+        else { setTypedValue(1U, T_TEXT_STATENA); }
+
         if (snapshot.framAvailable)
         {
             setUnsignedValue(2U, snapshot.framSizeBytes / 1024U, " KB");
-            setTextValue(3U, adminui::yesNo(snapshot.sessionRecordValid, snapshot.language));
+            setTypedValue(3U, adminui::yesNoText(snapshot.sessionRecordValid));
         }
         else
         {
-            setTextValue(2U, unavailable);
-            setTextValue(3U, unavailable);
+            setTypedValue(2U, T_TEXT_STATENA);
+            setTypedValue(3U, T_TEXT_STATENA);
         }
 
-        setTextValue(4U,
-                     snapshot.winbondAvailable
-                         ? adminui::available(snapshot.winbondPresent, snapshot.language)
-                         : unavailable);
-        setTextValue(5U,
-                     snapshot.winbondAvailable && snapshot.winbondId[0] != 0
-                         ? snapshot.winbondId
-                         : unavailable);
+        if (snapshot.winbondAvailable) { setTypedValue(4U, adminui::availableText(snapshot.winbondPresent)); }
+        else { setTypedValue(4U, T_TEXT_STATENA); }
+
+        if (snapshot.winbondAvailable && snapshot.winbondId[0] != 0) { setTextValue(5U, snapshot.winbondId); }
+        else { setTypedValue(5U, T_TEXT_STATENA); }
+
         if (snapshot.winbondAvailable)
         {
             setUnsignedValue(6U, snapshot.winbondSizeBytes / (1024U * 1024U), " MB");
-            setTextValue(7U, adminui::valid(snapshot.assetPackageValid, snapshot.language));
+            setTypedValue(7U, adminui::validText(snapshot.assetPackageValid));
         }
         else
         {
-            setTextValue(6U, unavailable);
-            setTextValue(7U, unavailable);
+            setTypedValue(6U, T_TEXT_STATENA);
+            setTypedValue(7U, T_TEXT_STATENA);
         }
     }
 };

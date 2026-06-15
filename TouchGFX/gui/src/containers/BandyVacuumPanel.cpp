@@ -4,7 +4,7 @@
 namespace
 {
 const int32_t kGaugeMaxMbar = 500;
-const int16_t kMeterMaxWidth = 400;
+const int16_t kMeterSpan = 400; // full width of the rounded track
 
 int16_t meterWidthForValue(int32_t vacuumMbar)
 {
@@ -17,7 +17,7 @@ int16_t meterWidthForValue(int32_t vacuumMbar)
         vacuumMbar = kGaugeMaxMbar;
     }
 
-    return static_cast<int16_t>((vacuumMbar * kMeterMaxWidth) / kGaugeMaxMbar);
+    return static_cast<int16_t>((vacuumMbar * kMeterSpan) / kGaugeMaxMbar);
 }
 }
 

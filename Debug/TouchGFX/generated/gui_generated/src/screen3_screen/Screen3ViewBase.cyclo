@@ -48,7 +48,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	3
-../TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.cpp:97:6:void Screen3ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	3
+../TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.cpp:105:6:void Screen3ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	3
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	6
@@ -58,8 +58,9 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:43:5:touchgfx::SVGImage::SVGImage()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	1
 ../TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.cpp:10:1:Screen3ViewBase::Screen3ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.cpp:85:1:Screen3ViewBase::~Screen3ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.cpp:85:1:virtual Screen3ViewBase::~Screen3ViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.cpp:90:6:virtual void Screen3ViewBase::setupScreen()	1
+../TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.cpp:93:1:Screen3ViewBase::~Screen3ViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.cpp:93:1:virtual Screen3ViewBase::~Screen3ViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.cpp:98:6:virtual void Screen3ViewBase::setupScreen()	1

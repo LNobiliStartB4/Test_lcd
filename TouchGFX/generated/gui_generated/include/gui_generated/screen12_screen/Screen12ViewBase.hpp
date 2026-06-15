@@ -12,6 +12,7 @@
 #include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <gui/containers/TouchFeedback.hpp>
 
 class Screen12ViewBase : public touchgfx::View<Screen12Presenter>
@@ -28,11 +29,27 @@ public:
     {
         // Override and implement this function in Screen12
     }
-    virtual void englishClicked()
+    virtual void row0Clicked()
     {
         // Override and implement this function in Screen12
     }
-    virtual void italianClicked()
+    virtual void row1Clicked()
+    {
+        // Override and implement this function in Screen12
+    }
+    virtual void row2Clicked()
+    {
+        // Override and implement this function in Screen12
+    }
+    virtual void row3Clicked()
+    {
+        // Override and implement this function in Screen12
+    }
+    virtual void previousPageClicked()
+    {
+        // Override and implement this function in Screen12
+    }
+    virtual void nextPageClicked()
     {
         // Override and implement this function in Screen12
     }
@@ -51,14 +68,31 @@ protected:
     touchgfx::SVGImage languageBackIcon;
     touchgfx::TextArea languageTitle;
     touchgfx::TextArea languageSubtitle;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  englishButton;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  italianButton;
-    touchgfx::BoxWithBorder englishFrame;
-    touchgfx::BoxWithBorder italianFrame;
-    touchgfx::TextArea englishLabel;
-    touchgfx::TextArea italianLabel;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  langRowButton0;
+    touchgfx::BoxWithBorder langRowFrame0;
+    touchgfx::TextArea langRowLabel0;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  langRowButton1;
+    touchgfx::BoxWithBorder langRowFrame1;
+    touchgfx::TextArea langRowLabel1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  langRowButton2;
+    touchgfx::BoxWithBorder langRowFrame2;
+    touchgfx::TextArea langRowLabel2;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  langRowButton3;
+    touchgfx::BoxWithBorder langRowFrame3;
+    touchgfx::TextArea langRowLabel3;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  langPrevButton;
+    touchgfx::TextArea langPrevLabel;
+    touchgfx::TextAreaWithOneWildcard langPageIndicator;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  langNextButton;
+    touchgfx::TextArea langNextLabel;
     touchgfx::SVGImage svgImage1;
     TouchFeedback touchFeedback;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t LANGPAGEINDICATOR_SIZE = 8;
+    touchgfx::Unicode::UnicodeChar langPageIndicatorBuffer[LANGPAGEINDICATOR_SIZE];
 
 private:
 

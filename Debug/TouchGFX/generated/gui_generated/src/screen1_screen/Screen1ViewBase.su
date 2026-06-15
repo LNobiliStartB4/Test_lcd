@@ -27,7 +27,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:43:5:touchgfx::SVGImage::SVGImage()	8	static
-../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:10:1:Screen1ViewBase::Screen1ViewBase()	96	static
-../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:70:1:Screen1ViewBase::~Screen1ViewBase()	8	static
-../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:70:1:virtual Screen1ViewBase::~Screen1ViewBase()	8	static
-../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:75:6:virtual void Screen1ViewBase::setupScreen()	0	static
+../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:10:1:Screen1ViewBase::Screen1ViewBase()	104	static
+../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:76:1:Screen1ViewBase::~Screen1ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:76:1:virtual Screen1ViewBase::~Screen1ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:81:6:virtual void Screen1ViewBase::setupScreen()	0	static

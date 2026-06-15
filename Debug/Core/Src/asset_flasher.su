@@ -1,0 +1,5 @@
+../Core/Src/asset_flasher.c:118:13:WaitForSequence.constprop	40	static
+../Core/Src/asset_flasher.c:69:13:Tx.isra	0	static
+../Core/Src/asset_flasher.c:80:13:ReplyError	16	static
+../Core/Src/asset_flasher.c:94:13:ReplyProgress	16	static
+../Core/Src/asset_flasher.c:310:6:AssetFlasher_RunAtBoot	72	static,ignoring_inline_asm

@@ -61,10 +61,18 @@ Screen3ViewBase::Screen3ViewBase() :
     screen3StartButton.setBorderSize(3);
     screen3StartButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(22, 22, 20), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     screen3StartButton.setAction(flexButtonCallback);
-    screen3StartButton.setPosition(233, 233, 220, 85);
+    screen3StartButton.setPosition(176, 240, 304, 78);
     add(screen3StartButton);
 
-    screen3StartLabel.setPosition(278, 267, 127, 33);
+    screen3StartIcon.setSVG(SVG_START_PLAY_GOLD_ID);
+    screen3StartIcon.setPosition(289, 261, 32, 32);
+    screen3StartIcon.setScale(1.03f, 1.03f);
+    screen3StartIcon.setImagePosition(0, 0);
+    screen3StartIcon.setRotationCenter(0, 0);
+    screen3StartIcon.setRotation(0.0f);
+    add(screen3StartIcon);
+
+    screen3StartLabel.setPosition(303, 267, 127, 33);
     screen3StartLabel.setColor(touchgfx::Color::getColorFromRGB(242, 247, 250));
     screen3StartLabel.setLinespacing(0);
     screen3StartLabel.setTypedText(touchgfx::TypedText(T_TEXT_START));

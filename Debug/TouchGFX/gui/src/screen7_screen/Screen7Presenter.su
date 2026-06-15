@@ -1,3 +1,4 @@
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:30:18:virtual void ModelListener::pneumaticPretestUpdated(const PneumaticPretestStatus&)	0	static
 ../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp:33:13:Screen7Presenter::~Screen7Presenter()	0	static
 ../TouchGFX/gui/src/screen7_screen/Screen7Presenter.cpp:19:6:virtual void Screen7Presenter::deactivate()	0	static
 ../TouchGFX/gui/include/gui/screen7_screen/Screen7Presenter.hpp:33:13:virtual Screen7Presenter::~Screen7Presenter()	8	static

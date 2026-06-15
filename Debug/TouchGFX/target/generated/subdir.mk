@@ -8,18 +8,21 @@ CPP_SRCS += \
 ../TouchGFX/target/generated/OSWrappers.cpp \
 ../TouchGFX/target/generated/STM32DMA.cpp \
 ../TouchGFX/target/generated/TouchGFXConfiguration.cpp \
+../TouchGFX/target/generated/TouchGFXGeneratedDataReader.cpp \
 ../TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp 
 
 OBJS += \
 ./TouchGFX/target/generated/OSWrappers.o \
 ./TouchGFX/target/generated/STM32DMA.o \
 ./TouchGFX/target/generated/TouchGFXConfiguration.o \
+./TouchGFX/target/generated/TouchGFXGeneratedDataReader.o \
 ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o 
 
 CPP_DEPS += \
 ./TouchGFX/target/generated/OSWrappers.d \
 ./TouchGFX/target/generated/STM32DMA.d \
 ./TouchGFX/target/generated/TouchGFXConfiguration.d \
+./TouchGFX/target/generated/TouchGFXGeneratedDataReader.d \
 ./TouchGFX/target/generated/TouchGFXGeneratedHAL.d 
 
 
@@ -30,7 +33,7 @@ TouchGFX/target/generated/%.o TouchGFX/target/generated/%.su TouchGFX/target/gen
 clean: clean-TouchGFX-2f-target-2f-generated
 
 clean-TouchGFX-2f-target-2f-generated:
-	-$(RM) ./TouchGFX/target/generated/OSWrappers.cyclo ./TouchGFX/target/generated/OSWrappers.d ./TouchGFX/target/generated/OSWrappers.o ./TouchGFX/target/generated/OSWrappers.su ./TouchGFX/target/generated/STM32DMA.cyclo ./TouchGFX/target/generated/STM32DMA.d ./TouchGFX/target/generated/STM32DMA.o ./TouchGFX/target/generated/STM32DMA.su ./TouchGFX/target/generated/TouchGFXConfiguration.cyclo ./TouchGFX/target/generated/TouchGFXConfiguration.d ./TouchGFX/target/generated/TouchGFXConfiguration.o ./TouchGFX/target/generated/TouchGFXConfiguration.su ./TouchGFX/target/generated/TouchGFXGeneratedHAL.cyclo ./TouchGFX/target/generated/TouchGFXGeneratedHAL.d ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o ./TouchGFX/target/generated/TouchGFXGeneratedHAL.su
+	-$(RM) ./TouchGFX/target/generated/OSWrappers.cyclo ./TouchGFX/target/generated/OSWrappers.d ./TouchGFX/target/generated/OSWrappers.o ./TouchGFX/target/generated/OSWrappers.su ./TouchGFX/target/generated/STM32DMA.cyclo ./TouchGFX/target/generated/STM32DMA.d ./TouchGFX/target/generated/STM32DMA.o ./TouchGFX/target/generated/STM32DMA.su ./TouchGFX/target/generated/TouchGFXConfiguration.cyclo ./TouchGFX/target/generated/TouchGFXConfiguration.d ./TouchGFX/target/generated/TouchGFXConfiguration.o ./TouchGFX/target/generated/TouchGFXConfiguration.su ./TouchGFX/target/generated/TouchGFXGeneratedDataReader.cyclo ./TouchGFX/target/generated/TouchGFXGeneratedDataReader.d ./TouchGFX/target/generated/TouchGFXGeneratedDataReader.o ./TouchGFX/target/generated/TouchGFXGeneratedDataReader.su ./TouchGFX/target/generated/TouchGFXGeneratedHAL.cyclo ./TouchGFX/target/generated/TouchGFXGeneratedHAL.d ./TouchGFX/target/generated/TouchGFXGeneratedHAL.o ./TouchGFX/target/generated/TouchGFXGeneratedHAL.su
 
 .PHONY: clean-TouchGFX-2f-target-2f-generated
 

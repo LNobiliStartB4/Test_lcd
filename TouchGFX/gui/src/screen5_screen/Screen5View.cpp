@@ -1,15 +1,6 @@
 #include <gui/screen5_screen/Screen5View.hpp>
+#include <gui/model/BandyCompletion.hpp>
 #include <touchgfx/Unicode.hpp>
-
-namespace
-{
-bool isCompletedBandyCycle(const BandyState& previousState, const BandyState& state)
-{
-    return (previousState.sessionState == BandySessionRunning) &&
-           (state.sessionState == BandySessionWaitRfid) &&
-           (state.remainingSeconds == 0U);
-}
-}
 
 Screen5View::Screen5View()
     : latestState(),
@@ -65,10 +56,10 @@ void Screen5View::applyBandyState(const BandyState& state)
     const BandyState previousState = latestState;
     latestState = state;
 
-    if (!screenTransitionRequested && isCompletedBandyCycle(previousState, state))
+    if (!screenTransitionRequested && isNaturalBandyCompletion(previousState, state))
     {
         screenTransitionRequested = true;
-        application().gotoProductSelectScreenNoTransition();
+        application().gotoBandyCompletedScreenNoTransition();
         return;
     }
 

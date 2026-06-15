@@ -1,0 +1,2 @@
+../Core/Src/asset_flash_layout.c:3:10:asset_flash_page_chunk	3
+../Core/Src/asset_flash_layout.c:16:10:asset_flash_sectors_needed	3

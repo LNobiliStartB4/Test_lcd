@@ -10,7 +10,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	4	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
-../TouchGFX/gui/src/containers/TouchFeedback.cpp:22:6:virtual void TouchFeedback::applyFeedback(bool, int16_t, int16_t, uint8_t)	16	static
+../TouchGFX/gui/src/containers/TouchFeedback.cpp:22:6:virtual void TouchFeedback::applyFeedback(bool, int16_t, int16_t, uint8_t)	24	static
 ../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp:32:37:static touchfeedback::TouchFeedbackController& touchfeedback::TouchFeedbackController::instance()	16	static
 ../TouchGFX/gui/src/containers/TouchFeedback.cpp:8:1:TouchFeedback::~TouchFeedback()	16	static
 ../TouchGFX/gui/src/containers/TouchFeedback.cpp:8:1:virtual TouchFeedback::~TouchFeedback()	8	static

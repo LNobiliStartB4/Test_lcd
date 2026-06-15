@@ -6,16 +6,19 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../TouchGFX/target/STM32TouchController.cpp \
+../TouchGFX/target/TouchGFXDataReader.cpp \
 ../TouchGFX/target/TouchGFXGPIO.cpp \
 ../TouchGFX/target/TouchGFXHAL.cpp 
 
 OBJS += \
 ./TouchGFX/target/STM32TouchController.o \
+./TouchGFX/target/TouchGFXDataReader.o \
 ./TouchGFX/target/TouchGFXGPIO.o \
 ./TouchGFX/target/TouchGFXHAL.o 
 
 CPP_DEPS += \
 ./TouchGFX/target/STM32TouchController.d \
+./TouchGFX/target/TouchGFXDataReader.d \
 ./TouchGFX/target/TouchGFXGPIO.d \
 ./TouchGFX/target/TouchGFXHAL.d 
 
@@ -27,7 +30,7 @@ TouchGFX/target/%.o TouchGFX/target/%.su TouchGFX/target/%.cyclo: ../TouchGFX/ta
 clean: clean-TouchGFX-2f-target
 
 clean-TouchGFX-2f-target:
-	-$(RM) ./TouchGFX/target/STM32TouchController.cyclo ./TouchGFX/target/STM32TouchController.d ./TouchGFX/target/STM32TouchController.o ./TouchGFX/target/STM32TouchController.su ./TouchGFX/target/TouchGFXGPIO.cyclo ./TouchGFX/target/TouchGFXGPIO.d ./TouchGFX/target/TouchGFXGPIO.o ./TouchGFX/target/TouchGFXGPIO.su ./TouchGFX/target/TouchGFXHAL.cyclo ./TouchGFX/target/TouchGFXHAL.d ./TouchGFX/target/TouchGFXHAL.o ./TouchGFX/target/TouchGFXHAL.su
+	-$(RM) ./TouchGFX/target/STM32TouchController.cyclo ./TouchGFX/target/STM32TouchController.d ./TouchGFX/target/STM32TouchController.o ./TouchGFX/target/STM32TouchController.su ./TouchGFX/target/TouchGFXDataReader.cyclo ./TouchGFX/target/TouchGFXDataReader.d ./TouchGFX/target/TouchGFXDataReader.o ./TouchGFX/target/TouchGFXDataReader.su ./TouchGFX/target/TouchGFXGPIO.cyclo ./TouchGFX/target/TouchGFXGPIO.d ./TouchGFX/target/TouchGFXGPIO.o ./TouchGFX/target/TouchGFXGPIO.su ./TouchGFX/target/TouchGFXHAL.cyclo ./TouchGFX/target/TouchGFXHAL.d ./TouchGFX/target/TouchGFXHAL.o ./TouchGFX/target/TouchGFXHAL.su
 
 .PHONY: clean-TouchGFX-2f-target
 

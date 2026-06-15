@@ -19,6 +19,7 @@
 #include <TouchGFXGeneratedHAL.hpp>
 #include <touchgfx/hal/OSWrappers.hpp>
 #include <gui/common/FrontendHeap.hpp>
+#include <TouchGFXDataReader.hpp>
 #include <touchgfx/hal/PaintImpl.hpp>
 #include <touchgfx/hal/PaintRGB565Impl.hpp>
 
@@ -44,7 +45,7 @@ extern "C" void touchgfxDisplayDriverTransmitBlock(const uint8_t* pixels, uint16
 extern "C" void touchgfxSignalVSync(void);
 
 // Block Allocator for Partial Framebuffer strategy
-static ManyBlockAllocator<12800, /* block size: 320 x 20 lines x 2 bpp */
+static ManyBlockAllocator<6400, /* block size */
        2, /* number of blocks */
        2 /* bytes per pixel */
        > blockAllocator;
@@ -132,6 +133,12 @@ void TouchGFXGeneratedHAL::flushFrameBuffer(const touchgfx::Rect& rect)
 
 bool TouchGFXGeneratedHAL::blockCopy(void* RESTRICT dest, const void* RESTRICT src, uint32_t numBytes)
 {
+    // If requested address is addressable use TouchGFXDataReader to retrive the data
+    if (reader != NULL && (static_cast<TouchGFXDataReader*>(reader)->addressIsAddressable(src) == false))
+    {
+        static_cast<TouchGFXDataReader*>(reader)->copyData(src, dest, numBytes);
+        return true;
+    }
     return HAL::blockCopy(dest, src, numBytes);
 }
 

@@ -78,6 +78,7 @@ TouchGFX/gui/src/screen18_screen/Screen18View.o: \
  ../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
+ ../TouchGFX/gui/include/gui/model/BandyCompletion.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp
 ../TouchGFX/gui/include/gui/screen18_screen/Screen18View.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
@@ -157,4 +158,5 @@ TouchGFX/gui/src/screen18_screen/Screen18View.o: \
 ../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
+../TouchGFX/gui/include/gui/model/BandyCompletion.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:

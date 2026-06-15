@@ -129,15 +129,27 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../TouchGFX/gui/include/gui/screen18_screen/Screen18View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen18_screen/Screen18Presenter.hpp \
+ ../TouchGFX/gui/include/gui/screen19_screen/Screen19View.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen19_screen/Screen19ViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen19_screen/Screen19Presenter.hpp \
  ../TouchGFX/gui/include/gui/screen13_screen/Screen13View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen13_screen/Screen13Presenter.hpp \
+ ../TouchGFX/gui/include/gui/screen20_screen/Screen20View.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen20_screen/Screen20ViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen20_screen/Screen20Presenter.hpp \
+ ../TouchGFX/gui/include/gui/screen21_screen/Screen21View.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/screen21_screen/Screen21ViewBase.hpp \
+ ../TouchGFX/gui/include/gui/screen21_screen/Screen21Presenter.hpp \
  ../TouchGFX/gui/include/gui/common/AdminScreens.hpp \
  ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../TouchGFX/generated/images/include/BitmapDatabase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
+ ../TouchGFX/target/TouchGFXDataReader.hpp \
+ ../TouchGFX/target/generated/TouchGFXGeneratedDataReader.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FlashDataReader.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bppSerialFlash.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp \
  ../TouchGFX/target/generated/STM32DMA.hpp \
@@ -305,15 +317,27 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../TouchGFX/gui/include/gui/screen18_screen/Screen18View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen18_screen/Screen18Presenter.hpp:
+../TouchGFX/gui/include/gui/screen19_screen/Screen19View.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen19_screen/Screen19ViewBase.hpp:
+../TouchGFX/gui/include/gui/screen19_screen/Screen19Presenter.hpp:
 ../TouchGFX/gui/include/gui/screen13_screen/Screen13View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen13_screen/Screen13Presenter.hpp:
+../TouchGFX/gui/include/gui/screen20_screen/Screen20View.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen20_screen/Screen20ViewBase.hpp:
+../TouchGFX/gui/include/gui/screen20_screen/Screen20Presenter.hpp:
+../TouchGFX/gui/include/gui/screen21_screen/Screen21View.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/screen21_screen/Screen21ViewBase.hpp:
+../TouchGFX/gui/include/gui/screen21_screen/Screen21Presenter.hpp:
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:
 ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../TouchGFX/generated/images/include/BitmapDatabase.hpp:
-../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
+../TouchGFX/target/TouchGFXDataReader.hpp:
+../TouchGFX/target/generated/TouchGFXGeneratedDataReader.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FlashDataReader.hpp:
+../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bppSerialFlash.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp:
 ../TouchGFX/target/generated/STM32DMA.hpp:

@@ -1,0 +1,5 @@
+../Core/Src/asset_flasher.c:118:13:WaitForSequence.constprop	7
+../Core/Src/asset_flasher.c:69:13:Tx.isra	1
+../Core/Src/asset_flasher.c:80:13:ReplyError	1
+../Core/Src/asset_flasher.c:94:13:ReplyProgress	1
+../Core/Src/asset_flasher.c:310:6:AssetFlasher_RunAtBoot	17

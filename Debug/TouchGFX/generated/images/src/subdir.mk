@@ -9,7 +9,6 @@ CPP_SRCS += \
 ../TouchGFX/generated/images/src/SVGDatabase.cpp \
 ../TouchGFX/generated/images/src/image_A1.cpp \
 ../TouchGFX/generated/images/src/image_TouchDot.cpp \
-../TouchGFX/generated/images/src/image_alert_triangle_white.cpp \
 ../TouchGFX/generated/images/src/image_arrow_left_white.cpp \
 ../TouchGFX/generated/images/src/image_brightness_slider_knob.cpp \
 ../TouchGFX/generated/images/src/image_brightness_slider_track_dim.cpp \
@@ -22,14 +21,14 @@ CPP_SRCS += \
 ../TouchGFX/generated/images/src/image_target_button_ring_white.cpp \
 ../TouchGFX/generated/images/src/image_thd_corner_logo.cpp \
 ../TouchGFX/generated/images/src/image_time_left_icon_white.cpp \
-../TouchGFX/generated/images/src/image_trash_red.cpp 
+../TouchGFX/generated/images/src/image_vacuum_cap_left.cpp \
+../TouchGFX/generated/images/src/image_vacuum_cap_right.cpp 
 
 OBJS += \
 ./TouchGFX/generated/images/src/BitmapDatabase.o \
 ./TouchGFX/generated/images/src/SVGDatabase.o \
 ./TouchGFX/generated/images/src/image_A1.o \
 ./TouchGFX/generated/images/src/image_TouchDot.o \
-./TouchGFX/generated/images/src/image_alert_triangle_white.o \
 ./TouchGFX/generated/images/src/image_arrow_left_white.o \
 ./TouchGFX/generated/images/src/image_brightness_slider_knob.o \
 ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.o \
@@ -42,14 +41,14 @@ OBJS += \
 ./TouchGFX/generated/images/src/image_target_button_ring_white.o \
 ./TouchGFX/generated/images/src/image_thd_corner_logo.o \
 ./TouchGFX/generated/images/src/image_time_left_icon_white.o \
-./TouchGFX/generated/images/src/image_trash_red.o 
+./TouchGFX/generated/images/src/image_vacuum_cap_left.o \
+./TouchGFX/generated/images/src/image_vacuum_cap_right.o 
 
 CPP_DEPS += \
 ./TouchGFX/generated/images/src/BitmapDatabase.d \
 ./TouchGFX/generated/images/src/SVGDatabase.d \
 ./TouchGFX/generated/images/src/image_A1.d \
 ./TouchGFX/generated/images/src/image_TouchDot.d \
-./TouchGFX/generated/images/src/image_alert_triangle_white.d \
 ./TouchGFX/generated/images/src/image_arrow_left_white.d \
 ./TouchGFX/generated/images/src/image_brightness_slider_knob.d \
 ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.d \
@@ -62,7 +61,8 @@ CPP_DEPS += \
 ./TouchGFX/generated/images/src/image_target_button_ring_white.d \
 ./TouchGFX/generated/images/src/image_thd_corner_logo.d \
 ./TouchGFX/generated/images/src/image_time_left_icon_white.d \
-./TouchGFX/generated/images/src/image_trash_red.d 
+./TouchGFX/generated/images/src/image_vacuum_cap_left.d \
+./TouchGFX/generated/images/src/image_vacuum_cap_right.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -72,7 +72,7 @@ TouchGFX/generated/images/src/%.o TouchGFX/generated/images/src/%.su TouchGFX/ge
 clean: clean-TouchGFX-2f-generated-2f-images-2f-src
 
 clean-TouchGFX-2f-generated-2f-images-2f-src:
-	-$(RM) ./TouchGFX/generated/images/src/BitmapDatabase.cyclo ./TouchGFX/generated/images/src/BitmapDatabase.d ./TouchGFX/generated/images/src/BitmapDatabase.o ./TouchGFX/generated/images/src/BitmapDatabase.su ./TouchGFX/generated/images/src/SVGDatabase.cyclo ./TouchGFX/generated/images/src/SVGDatabase.d ./TouchGFX/generated/images/src/SVGDatabase.o ./TouchGFX/generated/images/src/SVGDatabase.su ./TouchGFX/generated/images/src/image_A1.cyclo ./TouchGFX/generated/images/src/image_A1.d ./TouchGFX/generated/images/src/image_A1.o ./TouchGFX/generated/images/src/image_A1.su ./TouchGFX/generated/images/src/image_TouchDot.cyclo ./TouchGFX/generated/images/src/image_TouchDot.d ./TouchGFX/generated/images/src/image_TouchDot.o ./TouchGFX/generated/images/src/image_TouchDot.su ./TouchGFX/generated/images/src/image_alert_triangle_white.cyclo ./TouchGFX/generated/images/src/image_alert_triangle_white.d ./TouchGFX/generated/images/src/image_alert_triangle_white.o ./TouchGFX/generated/images/src/image_alert_triangle_white.su ./TouchGFX/generated/images/src/image_arrow_left_white.cyclo ./TouchGFX/generated/images/src/image_arrow_left_white.d ./TouchGFX/generated/images/src/image_arrow_left_white.o ./TouchGFX/generated/images/src/image_arrow_left_white.su ./TouchGFX/generated/images/src/image_brightness_slider_knob.cyclo ./TouchGFX/generated/images/src/image_brightness_slider_knob.d ./TouchGFX/generated/images/src/image_brightness_slider_knob.o ./TouchGFX/generated/images/src/image_brightness_slider_knob.su ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.cyclo ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.d ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.o ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.su ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.cyclo ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.d ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.o ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.su ./TouchGFX/generated/images/src/image_pc_wait_device.cyclo ./TouchGFX/generated/images/src/image_pc_wait_device.d ./TouchGFX/generated/images/src/image_pc_wait_device.o ./TouchGFX/generated/images/src/image_pc_wait_device.su ./TouchGFX/generated/images/src/image_pill_red.cyclo ./TouchGFX/generated/images/src/image_pill_red.d ./TouchGFX/generated/images/src/image_pill_red.o ./TouchGFX/generated/images/src/image_pill_red.su ./TouchGFX/generated/images/src/image_rfid_contactless.cyclo ./TouchGFX/generated/images/src/image_rfid_contactless.d ./TouchGFX/generated/images/src/image_rfid_contactless.o ./TouchGFX/generated/images/src/image_rfid_contactless.su ./TouchGFX/generated/images/src/image_start_play_icon_white.cyclo ./TouchGFX/generated/images/src/image_start_play_icon_white.d ./TouchGFX/generated/images/src/image_start_play_icon_white.o ./TouchGFX/generated/images/src/image_start_play_icon_white.su ./TouchGFX/generated/images/src/image_start_stop_icon_white.cyclo ./TouchGFX/generated/images/src/image_start_stop_icon_white.d ./TouchGFX/generated/images/src/image_start_stop_icon_white.o ./TouchGFX/generated/images/src/image_start_stop_icon_white.su ./TouchGFX/generated/images/src/image_target_button_ring_white.cyclo ./TouchGFX/generated/images/src/image_target_button_ring_white.d ./TouchGFX/generated/images/src/image_target_button_ring_white.o ./TouchGFX/generated/images/src/image_target_button_ring_white.su ./TouchGFX/generated/images/src/image_thd_corner_logo.cyclo ./TouchGFX/generated/images/src/image_thd_corner_logo.d ./TouchGFX/generated/images/src/image_thd_corner_logo.o ./TouchGFX/generated/images/src/image_thd_corner_logo.su ./TouchGFX/generated/images/src/image_time_left_icon_white.cyclo ./TouchGFX/generated/images/src/image_time_left_icon_white.d ./TouchGFX/generated/images/src/image_time_left_icon_white.o ./TouchGFX/generated/images/src/image_time_left_icon_white.su ./TouchGFX/generated/images/src/image_trash_red.cyclo ./TouchGFX/generated/images/src/image_trash_red.d ./TouchGFX/generated/images/src/image_trash_red.o ./TouchGFX/generated/images/src/image_trash_red.su
+	-$(RM) ./TouchGFX/generated/images/src/BitmapDatabase.cyclo ./TouchGFX/generated/images/src/BitmapDatabase.d ./TouchGFX/generated/images/src/BitmapDatabase.o ./TouchGFX/generated/images/src/BitmapDatabase.su ./TouchGFX/generated/images/src/SVGDatabase.cyclo ./TouchGFX/generated/images/src/SVGDatabase.d ./TouchGFX/generated/images/src/SVGDatabase.o ./TouchGFX/generated/images/src/SVGDatabase.su ./TouchGFX/generated/images/src/image_A1.cyclo ./TouchGFX/generated/images/src/image_A1.d ./TouchGFX/generated/images/src/image_A1.o ./TouchGFX/generated/images/src/image_A1.su ./TouchGFX/generated/images/src/image_TouchDot.cyclo ./TouchGFX/generated/images/src/image_TouchDot.d ./TouchGFX/generated/images/src/image_TouchDot.o ./TouchGFX/generated/images/src/image_TouchDot.su ./TouchGFX/generated/images/src/image_arrow_left_white.cyclo ./TouchGFX/generated/images/src/image_arrow_left_white.d ./TouchGFX/generated/images/src/image_arrow_left_white.o ./TouchGFX/generated/images/src/image_arrow_left_white.su ./TouchGFX/generated/images/src/image_brightness_slider_knob.cyclo ./TouchGFX/generated/images/src/image_brightness_slider_knob.d ./TouchGFX/generated/images/src/image_brightness_slider_knob.o ./TouchGFX/generated/images/src/image_brightness_slider_knob.su ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.cyclo ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.d ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.o ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.su ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.cyclo ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.d ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.o ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.su ./TouchGFX/generated/images/src/image_pc_wait_device.cyclo ./TouchGFX/generated/images/src/image_pc_wait_device.d ./TouchGFX/generated/images/src/image_pc_wait_device.o ./TouchGFX/generated/images/src/image_pc_wait_device.su ./TouchGFX/generated/images/src/image_pill_red.cyclo ./TouchGFX/generated/images/src/image_pill_red.d ./TouchGFX/generated/images/src/image_pill_red.o ./TouchGFX/generated/images/src/image_pill_red.su ./TouchGFX/generated/images/src/image_rfid_contactless.cyclo ./TouchGFX/generated/images/src/image_rfid_contactless.d ./TouchGFX/generated/images/src/image_rfid_contactless.o ./TouchGFX/generated/images/src/image_rfid_contactless.su ./TouchGFX/generated/images/src/image_start_play_icon_white.cyclo ./TouchGFX/generated/images/src/image_start_play_icon_white.d ./TouchGFX/generated/images/src/image_start_play_icon_white.o ./TouchGFX/generated/images/src/image_start_play_icon_white.su ./TouchGFX/generated/images/src/image_start_stop_icon_white.cyclo ./TouchGFX/generated/images/src/image_start_stop_icon_white.d ./TouchGFX/generated/images/src/image_start_stop_icon_white.o ./TouchGFX/generated/images/src/image_start_stop_icon_white.su ./TouchGFX/generated/images/src/image_target_button_ring_white.cyclo ./TouchGFX/generated/images/src/image_target_button_ring_white.d ./TouchGFX/generated/images/src/image_target_button_ring_white.o ./TouchGFX/generated/images/src/image_target_button_ring_white.su ./TouchGFX/generated/images/src/image_thd_corner_logo.cyclo ./TouchGFX/generated/images/src/image_thd_corner_logo.d ./TouchGFX/generated/images/src/image_thd_corner_logo.o ./TouchGFX/generated/images/src/image_thd_corner_logo.su ./TouchGFX/generated/images/src/image_time_left_icon_white.cyclo ./TouchGFX/generated/images/src/image_time_left_icon_white.d ./TouchGFX/generated/images/src/image_time_left_icon_white.o ./TouchGFX/generated/images/src/image_time_left_icon_white.su ./TouchGFX/generated/images/src/image_vacuum_cap_left.cyclo ./TouchGFX/generated/images/src/image_vacuum_cap_left.d ./TouchGFX/generated/images/src/image_vacuum_cap_left.o ./TouchGFX/generated/images/src/image_vacuum_cap_left.su ./TouchGFX/generated/images/src/image_vacuum_cap_right.cyclo ./TouchGFX/generated/images/src/image_vacuum_cap_right.d ./TouchGFX/generated/images/src/image_vacuum_cap_right.o ./TouchGFX/generated/images/src/image_vacuum_cap_right.su
 
 .PHONY: clean-TouchGFX-2f-generated-2f-images-2f-src
 

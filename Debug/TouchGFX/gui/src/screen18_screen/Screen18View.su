@@ -1,26 +1,26 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:44:6:virtual void Screen18View::tearDownScreen()	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:50:6:virtual void Screen18View::cancelClicked()	8	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:39:6:virtual void Screen18View::tearDownScreen()	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:45:6:virtual void Screen18View::cancelClicked()	8	static
 ../TouchGFX/gui/include/gui/screen18_screen/Screen18View.hpp:13:13:Screen18View::~Screen18View()	8	static
 ../TouchGFX/gui/include/gui/screen18_screen/Screen18View.hpp:13:13:virtual Screen18View::~Screen18View()	8	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:21:1:Screen18View::Screen18View()	8	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:201:1:cpp)	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:172:6:void Screen18View::updateValueDisplay()	16	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:105:6:virtual void Screen18View::deleteClicked()	4	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:118:6:virtual void Screen18View::applyClicked()	8	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:154:6:void Screen18View::appendDigit(uint8_t)	4	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:55:6:virtual void Screen18View::digit0Clicked()	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:60:6:virtual void Screen18View::digit1Clicked()	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:65:6:virtual void Screen18View::digit2Clicked()	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:70:6:virtual void Screen18View::digit3Clicked()	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:75:6:virtual void Screen18View::digit4Clicked()	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:80:6:virtual void Screen18View::digit5Clicked()	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:85:6:virtual void Screen18View::digit6Clicked()	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:90:6:virtual void Screen18View::digit7Clicked()	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:95:6:virtual void Screen18View::digit8Clicked()	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:100:6:virtual void Screen18View::digit9Clicked()	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:193:6:void Screen18View::initializeEntry(int32_t)	0	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:136:6:void Screen18View::applyBandyState(const BandyState&)	24	static
-../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:32:6:virtual void Screen18View::setupScreen()	24	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:16:1:Screen18View::Screen18View()	8	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:196:1:cpp)	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:167:6:void Screen18View::updateValueDisplay()	16	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:100:6:virtual void Screen18View::deleteClicked()	4	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:113:6:virtual void Screen18View::applyClicked()	8	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:149:6:void Screen18View::appendDigit(uint8_t)	4	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:50:6:virtual void Screen18View::digit0Clicked()	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:55:6:virtual void Screen18View::digit1Clicked()	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:60:6:virtual void Screen18View::digit2Clicked()	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:65:6:virtual void Screen18View::digit3Clicked()	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:70:6:virtual void Screen18View::digit4Clicked()	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:75:6:virtual void Screen18View::digit5Clicked()	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:80:6:virtual void Screen18View::digit6Clicked()	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:85:6:virtual void Screen18View::digit7Clicked()	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:90:6:virtual void Screen18View::digit8Clicked()	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:95:6:virtual void Screen18View::digit9Clicked()	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:188:6:void Screen18View::initializeEntry(int32_t)	0	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:131:6:void Screen18View::applyBandyState(const BandyState&)	24	static
+../TouchGFX/gui/src/screen18_screen/Screen18View.cpp:27:6:virtual void Screen18View::setupScreen()	24	static

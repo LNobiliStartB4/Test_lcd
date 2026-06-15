@@ -1,3 +1,6 @@
-model_unit_tests 8 0.0019839
-touch_feedback_unit_tests 7 0.00411153
+model_unit_tests 14 0.00290627
+touch_feedback_unit_tests 13 0.00142198
+bandy_completion_unit_tests 5 0.0033928
+asset_manifest_unit_tests 4 0.00983507
+asset_flash_layout_unit_tests 3 0.007702
 ---

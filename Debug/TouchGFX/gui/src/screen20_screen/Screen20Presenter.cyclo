@@ -1,0 +1,10 @@
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	1
+../TouchGFX/gui/include/gui/screen20_screen/Screen20Presenter.hpp:32:13:Screen20Presenter::~Screen20Presenter()	1
+../TouchGFX/gui/src/screen20_screen/Screen20Presenter.cpp:11:6:virtual void Screen20Presenter::activate()	1
+../TouchGFX/gui/include/gui/screen20_screen/Screen20Presenter.hpp:32:13:virtual Screen20Presenter::~Screen20Presenter()	1
+../TouchGFX/gui/src/screen20_screen/Screen20Presenter.cpp:21:6:virtual void Screen20Presenter::pneumaticPretestUpdated(const PneumaticPretestStatus&)	1
+../TouchGFX/gui/include/gui/screen20_screen/Screen20Presenter.hpp:32:13:virtual void* Screen20Presenter::_ZThn4_N17Screen20PresenterD1Ev()	1
+../TouchGFX/gui/src/screen20_screen/Screen20Presenter.cpp:5:1:Screen20Presenter::Screen20Presenter(Screen20View&)	1
+../TouchGFX/gui/src/screen20_screen/Screen20Presenter.cpp:26:24:PneumaticPretestStatus Screen20Presenter::getStatus() const	1
+../TouchGFX/gui/src/screen20_screen/Screen20Presenter.cpp:31:6:void Screen20Presenter::cancelPretest()	1
+../TouchGFX/gui/src/screen20_screen/Screen20Presenter.cpp:36:6:void Screen20Presenter::resetPretest()	1

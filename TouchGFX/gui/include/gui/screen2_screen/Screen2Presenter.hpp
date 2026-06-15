@@ -16,6 +16,7 @@ public:
 
     virtual void activate();
     virtual void deactivate();
+    bool startPneumaticPretest(ActiveProduct product);
 
 private:
     Screen2Presenter();

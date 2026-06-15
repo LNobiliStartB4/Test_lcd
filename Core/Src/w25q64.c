@@ -25,6 +25,7 @@ extern SPI_HandleTypeDef hspi3;
 
 static volatile bool dmaReadActive;
 static bool flashReady;
+static uint8_t jedecId[3];
 
 static uint32_t W25Q64_NormalizeAddress(uint32_t address)
 {
@@ -74,19 +75,21 @@ static bool W25Q64_SendReadHeader(uint32_t address)
 bool W25Q64_Init(void)
 {
   uint8_t command = W25Q64_CMD_JEDEC_ID;
-  uint8_t id[3] = {0U};
 
   dmaReadActive = false;
   flashReady = false;
+  jedecId[0] = 0U;
+  jedecId[1] = 0U;
+  jedecId[2] = 0U;
   W25Q64_Deselect();
 
   W25Q64_Select();
   if ((HAL_SPI_Transmit(&hspi3, &command, 1U, W25Q64_TIMEOUT_MS) == HAL_OK) &&
-      (HAL_SPI_Receive(&hspi3, id, sizeof(id), W25Q64_TIMEOUT_MS) == HAL_OK))
+      (HAL_SPI_Receive(&hspi3, jedecId, sizeof(jedecId), W25Q64_TIMEOUT_MS) == HAL_OK))
   {
-    flashReady = (id[0] == W25Q64_MANUFACTURER_ID) &&
-                 (id[1] == W25Q64_MEMORY_TYPE) &&
-                 (id[2] == W25Q64_CAPACITY_ID);
+    flashReady = (jedecId[0] == W25Q64_MANUFACTURER_ID) &&
+                 (jedecId[1] == W25Q64_MEMORY_TYPE) &&
+                 (jedecId[2] == W25Q64_CAPACITY_ID);
   }
   W25Q64_Deselect();
   return flashReady;
@@ -95,6 +98,16 @@ bool W25Q64_Init(void)
 bool W25Q64_IsReady(void)
 {
   return flashReady;
+}
+
+void W25Q64_GetJedecId(uint8_t outId[3])
+{
+  if (outId != NULL)
+  {
+    outId[0] = jedecId[0];
+    outId[1] = jedecId[1];
+    outId[2] = jedecId[2];
+  }
 }
 
 bool W25Q64_ValidateAssetPackage(void)
@@ -199,8 +212,20 @@ bool W25Q64_IsDmaReadActive(void)
 
 void W25Q64_WaitForDmaRead(void)
 {
+  uint32_t start = HAL_GetTick();
+
   while (dmaReadActive)
   {
+    /* Safety net: if the DMA completion is never signalled (mis-wired IRQ,
+     * unclocked flash, bus error) abort instead of hanging the UI forever. The
+     * timeout is generous versus a real bitmap transfer at ~21 MHz. */
+    if ((HAL_GetTick() - start) > W25Q64_TIMEOUT_MS)
+    {
+      (void)HAL_SPI_Abort(&hspi3);
+      W25Q64_Deselect();
+      dmaReadActive = false;
+      break;
+    }
   }
 }
 

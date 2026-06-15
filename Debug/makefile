@@ -19,7 +19,10 @@ RM := rm -rf
 -include TouchGFX/gui/src/screen4_screen/subdir.mk
 -include TouchGFX/gui/src/screen3_screen/subdir.mk
 -include TouchGFX/gui/src/screen2_screen/subdir.mk
+-include TouchGFX/gui/src/screen21_screen/subdir.mk
+-include TouchGFX/gui/src/screen20_screen/subdir.mk
 -include TouchGFX/gui/src/screen1_screen/subdir.mk
+-include TouchGFX/gui/src/screen19_screen/subdir.mk
 -include TouchGFX/gui/src/screen18_screen/subdir.mk
 -include TouchGFX/gui/src/screen13_screen/subdir.mk
 -include TouchGFX/gui/src/screen12_screen/subdir.mk
@@ -38,7 +41,10 @@ RM := rm -rf
 -include TouchGFX/generated/gui_generated/src/screen4_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen3_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen2_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/screen21_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/screen20_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen1_screen/subdir.mk
+-include TouchGFX/generated/gui_generated/src/screen19_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen18_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen13_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen12_screen/subdir.mk

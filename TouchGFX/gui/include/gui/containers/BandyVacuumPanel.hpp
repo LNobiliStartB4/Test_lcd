@@ -13,7 +13,6 @@ public:
     virtual void initialize();
 
     void setVacuumMbar(int32_t vacuumMbar);
-protected:
 };
 
 #endif // BANDYVACUUMPANEL_HPP

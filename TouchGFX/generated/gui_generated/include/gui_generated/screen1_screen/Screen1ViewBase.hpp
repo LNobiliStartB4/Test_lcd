@@ -34,6 +34,7 @@ protected:
     touchgfx::SVGImage splashDot2;
     touchgfx::SVGImage splashDot3;
     touchgfx::TextArea splashInitText;
+    touchgfx::TextArea splashVersion;
     touchgfx::SVGImage svgImage1;
     TouchFeedback touchFeedback;
 

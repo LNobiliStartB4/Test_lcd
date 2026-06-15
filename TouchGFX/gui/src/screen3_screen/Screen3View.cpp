@@ -1,19 +1,11 @@
 #include <gui/screen3_screen/Screen3View.hpp>
+#include <gui/model/BandyCompletion.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <images/SVGDatabase.hpp>
 #include <touchgfx/Application.hpp>
 #include <touchgfx/Color.hpp>
 #include <touchgfx/Unicode.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-
-namespace
-{
-bool isCompletedBandyCycle(const BandyState& previousState, const BandyState& state)
-{
-    return (previousState.sessionState == BandySessionRunning) &&
-           (state.sessionState == BandySessionWaitRfid) &&
-           (state.remainingSeconds == 0U);
-}
-}
 
 Screen3View::Screen3View()
     : latestState(),
@@ -81,9 +73,9 @@ void Screen3View::applyBandyState(const BandyState& state)
     else if (!screenTransitionRequested && (state.sessionState == BandySessionWaitRfid))
     {
         screenTransitionRequested = true;
-        if (isCompletedBandyCycle(previousState, state))
+        if (isNaturalBandyCompletion(previousState, state))
         {
-            application().gotoProductSelectScreenNoTransition();
+            application().gotoBandyCompletedScreenNoTransition();
         }
         else
         {
@@ -123,9 +115,11 @@ void Screen3View::updateStartControl(BandySessionState sessionState)
 
     screen3StartButton.setPosition(176, 240, 304, 78);
     screen3StartButton.setBoxWithBorderColors(fillColor, pressedFillColor, borderColor, pressedBorderColor);
+    screen3StartIcon.setSVG(running ? SVG_START_PAUSE_GOLD_ID : SVG_START_PLAY_GOLD_ID);
     screen3StartLabel.setTypedText(touchgfx::TypedText(running ? T_TEXT_PAUSE : T_TEXT_START));
 
     screen3StartButton.invalidate();
+    screen3StartIcon.invalidate();
     screen3StartLabel.invalidate();
 
 }

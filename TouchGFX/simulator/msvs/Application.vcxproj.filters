@@ -391,6 +391,42 @@
     <Filter Include="Source Files\generated\gui_generated\screen13_screen">
       <UniqueIdentifier>17CD79BA-FADF-8BF9-49E0-611DBF370763</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\screen19_screen">
+      <UniqueIdentifier>829CFA9A-86D5-9909-9E94-3A1733BA2BA2</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen19_screen">
+      <UniqueIdentifier>160F10DB-86D1-99DB-B976-6B046AD3B2B7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen19_screen">
+      <UniqueIdentifier>F8DE2108-CF6F-2480-627E-09981C602C8F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen19_screen">
+      <UniqueIdentifier>047CA6A3-6E9B-F3D1-10C7-2CDB2C428BDC</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen21_screen">
+      <UniqueIdentifier>6CCB846B-BE89-2FAC-D802-420AF95F9684</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen21_screen">
+      <UniqueIdentifier>5F1DC84E-E56A-7A5B-6323-FCE27D970265</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\screen20_screen">
+      <UniqueIdentifier>78619528-FA87-0FCE-2FC7-5735A8F3B460</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\screen20_screen">
+      <UniqueIdentifier>F041984E-2D16-D66B-FEB6-53D68F0CC0B1</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen21_screen">
+      <UniqueIdentifier>3DAACBE5-4A1E-E62E-AF4E-9F6BFA45B22F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen21_screen">
+      <UniqueIdentifier>77982873-101C-89AE-9801-F0C306B1851C</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\screen20_screen">
+      <UniqueIdentifier>3B0236F0-AA43-5AC2-0AC9-AF06CD4B80B7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\screen20_screen">
+      <UniqueIdentifier>51DA903D-C58F-97FE-7675-B91C612FB30F</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -584,6 +620,33 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\TouchFeedbackBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen19_screen\Screen19Presenter.cpp">
+      <Filter>Source Files\gui\screen19_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen19_screen\Screen19View.cpp">
+      <Filter>Source Files\gui\screen19_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen19_screen\Screen19ViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen19_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen20_screen\Screen20Presenter.cpp">
+      <Filter>Source Files\gui\screen20_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen20_screen\Screen20View.cpp">
+      <Filter>Source Files\gui\screen20_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen20_screen\Screen20ViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen20_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen21_screen\Screen21Presenter.cpp">
+      <Filter>Source Files\gui\screen21_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\screen21_screen\Screen21View.cpp">
+      <Filter>Source Files\gui\screen21_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen21_screen\Screen21ViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\screen21_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1500,6 +1563,36 @@
     </ClInclude>
     <ClInclude Include="..\..\gui\include\gui\common\TouchFeedbackController.hpp">
       <Filter>Header Files\gui\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\model\BandyCompletion.hpp">
+      <Filter>Header Files\gui\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen19_screen\Screen19Presenter.hpp">
+      <Filter>Header Files\gui\screen19_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen19_screen\Screen19View.hpp">
+      <Filter>Header Files\gui\screen19_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen19_screen\Screen19ViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen19_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen20_screen\Screen20Presenter.hpp">
+      <Filter>Header Files\gui\screen20_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen20_screen\Screen20View.hpp">
+      <Filter>Header Files\gui\screen20_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen20_screen\Screen20ViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen20_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen21_screen\Screen21Presenter.hpp">
+      <Filter>Header Files\gui\screen21_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\screen21_screen\Screen21View.hpp">
+      <Filter>Header Files\gui\screen21_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen21_screen\Screen21ViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\screen21_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

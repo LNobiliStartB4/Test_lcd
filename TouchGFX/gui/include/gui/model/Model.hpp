@@ -36,6 +36,10 @@ public:
     void initializeHemorflowMonitor();
     bool canOpenHemorflowMonitor() const;
     bool shouldReturnToHemorflowWait() const;
+    bool startPneumaticPretest(ActiveProduct product);
+    void cancelPneumaticPretest();
+    bool retryPneumaticPretest();
+    void resetPneumaticPretest();
 
     BandyState getBandyState() const
     {
@@ -45,6 +49,11 @@ public:
     HemorflowState getHemorflowState() const
     {
         return hemorflowState;
+    }
+
+    PneumaticPretestStatus getPneumaticPretestStatus() const
+    {
+        return pneumaticPretestStatus;
     }
 
     UiLanguage getUiLanguage() const
@@ -104,16 +113,21 @@ private:
     int32_t clampVacuum(int32_t measuredVacuum) const;
     bool hasBandyStateChanged(const BandyState& previousState) const;
     void updateAdminDiagnostics();
+    void updatePneumaticPretestSimulation();
+    void notifyPneumaticPretest();
 
     ModelListener* modelListener;
     BandyState bandyState;
     HemorflowState hemorflowState;
+    PneumaticPretestStatus pneumaticPretestStatus;
     UiLanguage uiLanguage;
     uint8_t displayBrightnessPercent;
     uint8_t tickDivider;
     uint8_t storeTelemetryDivider;
     bool bandyInitialized;
     bool hemorflowInitialized;
+    bool hemorflowPretestPassed;
+    uint16_t pneumaticPretestTicks;
     bool bridgeSnapshotValid;
     uint8_t bridgeVacuumState;
     uint8_t bridgeActiveProduct;

@@ -3,7 +3,7 @@
 
 namespace
 {
-constexpr uint8_t kSplashDurationTicks = 120;     // ~2.0 s at 60 Hz
+constexpr uint8_t kSplashDurationTicks = 165;     // ~2.75 s at 60 Hz
 constexpr uint8_t kDotCycleTicks       = 20;      // ~333 ms per dot
 }
 

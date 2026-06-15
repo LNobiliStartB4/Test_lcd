@@ -27,6 +27,12 @@
 #include <gui/screen12_screen/Screen12View.hpp>
 #include <gui/screen18_screen/Screen18Presenter.hpp>
 #include <gui/screen18_screen/Screen18View.hpp>
+#include <gui/screen19_screen/Screen19Presenter.hpp>
+#include <gui/screen19_screen/Screen19View.hpp>
+#include <gui/screen20_screen/Screen20Presenter.hpp>
+#include <gui/screen20_screen/Screen20View.hpp>
+#include <gui/screen21_screen/Screen21Presenter.hpp>
+#include <gui/screen21_screen/Screen21View.hpp>
 #include <touchgfx/transitions/NoTransition.hpp>
 #include <touchgfx/events/ClickEvent.hpp>
 #include <touchgfx/events/DragEvent.hpp>
@@ -186,6 +192,24 @@ void FrontendApplication::gotoAdminMemoryScreenNoTransition()
     pendingScreenTransitionCallback = &adminMemoryTransitionCallback;
 }
 
+void FrontendApplication::gotoBandyCompletedScreenNoTransition()
+{
+    bandyCompletedTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoBandyCompletedScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &bandyCompletedTransitionCallback;
+}
+
+void FrontendApplication::gotoPneumaticPretestScreenNoTransition()
+{
+    pneumaticPretestTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoPneumaticPretestScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &pneumaticPretestTransitionCallback;
+}
+
+void FrontendApplication::gotoPneumaticPretestErrorScreenNoTransition()
+{
+    pneumaticPretestErrorTransitionCallback = touchgfx::Callback<FrontendApplication>(this, &FrontendApplication::gotoPneumaticPretestErrorScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &pneumaticPretestErrorTransitionCallback;
+}
+
 void FrontendApplication::gotoProductSelectScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<Screen2View, Screen2Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
@@ -269,4 +293,19 @@ void FrontendApplication::gotoAdminPressureScreenNoTransitionImpl()
 void FrontendApplication::gotoAdminMemoryScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<Screen17View, Screen17Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplication::gotoBandyCompletedScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen19View, Screen19Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplication::gotoPneumaticPretestScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen20View, Screen20Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplication::gotoPneumaticPretestErrorScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<Screen21View, Screen21Presenter, touchgfx::NoTransition, Model>(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

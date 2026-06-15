@@ -1,0 +1,23 @@
+# Additional build products for the external TouchGFX asset flash.
+#
+# The linked ELF intentionally contains ExtFlashSection at the virtual address
+# 0x90000000 so it can be used to build assets.bin and retain full debug
+# symbols. ST-LINK must not try to program that virtual segment, therefore the
+# MCU download uses the Intel HEX file generated below.
+
+secondary-outputs: ../Display_test_prova_internal.hex ../assets.bin
+
+../Display_test_prova_internal.hex: Display_test_prova.elf
+	arm-none-eabi-objcopy -O ihex --remove-section=ExtFlashSection "$<" "$@"
+	@echo 'Generated internal MCU image: $@'
+
+../assets.bin: Display_test_prova.elf
+	arm-none-eabi-objcopy -O binary --only-section=ExtFlashSection "$<" "$@"
+	@echo 'Generated external W25Q64 assets: $@'
+
+clean: clean-external-assets
+
+clean-external-assets:
+	-$(RM) ../Display_test_prova_internal.hex ../assets.bin
+
+.PHONY: clean-external-assets

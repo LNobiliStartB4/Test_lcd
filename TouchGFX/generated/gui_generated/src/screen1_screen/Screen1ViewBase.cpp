@@ -55,6 +55,12 @@ Screen1ViewBase::Screen1ViewBase()
     splashInitText.setTypedText(touchgfx::TypedText(T_TEXT_SPLASHINITIALIZING));
     add(splashInitText);
 
+    splashVersion.setPosition(346, 291, 124, 16);
+    splashVersion.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    splashVersion.setLinespacing(0);
+    splashVersion.setTypedText(touchgfx::TypedText(T_TEXT_FIRMWAREVERSION));
+    add(splashVersion);
+
     svgImage1.setSVG(SVG_LOGO_UFFICIALE_THD_2016_RGB_ID);
     svgImage1.setPosition(144, 40, 180, 180);
     svgImage1.setScale(1.31f, 1.49f);

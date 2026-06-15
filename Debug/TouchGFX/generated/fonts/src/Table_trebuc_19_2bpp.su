@@ -1,2 +1,2 @@
-../TouchGFX/generated/fonts/src/Table_trebuc_19_2bpp.cpp:64:164:void __tcf_0()	0	static
-../TouchGFX/generated/fonts/src/Table_trebuc_19_2bpp.cpp:62:26:touchgfx::GeneratedFont& getFont_trebuc_19_2bpp()	72	static
+../TouchGFX/generated/fonts/src/Table_trebuc_19_2bpp.cpp:69:164:void __tcf_0()	0	static
+../TouchGFX/generated/fonts/src/Table_trebuc_19_2bpp.cpp:67:26:touchgfx::GeneratedFont& getFont_trebuc_19_2bpp()	72	static

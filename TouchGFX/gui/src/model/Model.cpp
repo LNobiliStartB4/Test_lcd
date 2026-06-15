@@ -7,6 +7,10 @@
 #include "display_backlight.h"
 #endif
 
+#ifndef PNEUMATIC_PRETEST_SIMULATION_MODE
+#define PNEUMATIC_PRETEST_SIMULATION_MODE 0
+#endif
+
 namespace
 {
 const int32_t kDefaultTargetMbar = 490;
@@ -21,18 +25,26 @@ const uint8_t kStoreTelemetryDividerLimit = 10; // 10 Hz / 10 = 1 Hz FRAM diagno
 const int32_t kSimulationStepMbar = 8;
 const uint8_t kMinBrightnessPercent = 10U;
 const uint8_t kMaxBrightnessPercent = 100U;
+const uint16_t kPretestPullDownTicks = 150U;
+const uint16_t kPretestSuccessfulPullDownTicks = 120U;
+const uint16_t kPretestHoldTicks = 50U;
+const uint16_t kPretestLeakHoldTicks = 30U;
+const int32_t kPretestReleaseStepMbar = 80;
 }
 
 Model::Model()
     : modelListener(0),
       bandyState(),
       hemorflowState(),
+      pneumaticPretestStatus(),
       uiLanguage(UiLanguageEnglish),
       displayBrightnessPercent(kMaxBrightnessPercent),
       tickDivider(0),
       storeTelemetryDivider(0),
       bandyInitialized(false),
       hemorflowInitialized(false),
+      hemorflowPretestPassed(false),
+      pneumaticPretestTicks(0),
       bridgeSnapshotValid(false),
       bridgeVacuumState(0),
       bridgeActiveProduct(static_cast<uint8_t>(ActiveProductNone)),
@@ -87,6 +99,7 @@ void Model::tick()
     adminAccess.tick100ms();
     ++adminUptimeTicks100ms;
     updateBridgeSnapshot();
+    updatePneumaticPretestSimulation();
     publishBandyStoreTelemetry();
     updateAdminDiagnostics();
 
@@ -217,11 +230,23 @@ void Model::initializeHemorflowMonitor()
     hemorflowState.targetMbar = kDefaultHemorflowTargetMbar;
     hemorflowInitialized = true;
     tickDivider = 0;
-    updateHemorflowFromInput();
+    if (hemorflowPretestPassed)
+    {
+        hemorflowState.running = true;
+    }
+    else
+    {
+        updateHemorflowFromInput();
+    }
 }
 
 bool Model::canOpenHemorflowMonitor() const
 {
+    if (hemorflowPretestPassed)
+    {
+        return true;
+    }
+
     return bridgeSnapshotValid &&
            (bridgeActiveProduct == static_cast<uint8_t>(ActiveProductHemorflow)) &&
            (bridgeVacuumState != 0U);
@@ -229,6 +254,11 @@ bool Model::canOpenHemorflowMonitor() const
 
 bool Model::shouldReturnToHemorflowWait() const
 {
+    if (hemorflowPretestPassed)
+    {
+        return false;
+    }
+
     return hemorflowInitialized &&
            bridgeSnapshotValid &&
            (bridgeActiveProduct != static_cast<uint8_t>(ActiveProductHemorflow));
@@ -280,6 +310,57 @@ void Model::updateBridgeSnapshot()
     {
         targetCommandPending = false;
     }
+}
+
+bool Model::startPneumaticPretest(ActiveProduct product)
+{
+    if (product != ActiveProductBandy && product != ActiveProductHemorflow)
+    {
+        return false;
+    }
+
+    pneumaticPretestStatus = PneumaticPretestStatus();
+    pneumaticPretestStatus.product = product;
+    pneumaticPretestStatus.state = PneumaticPretestPullDown;
+    pneumaticPretestStatus.remainingSeconds = 15U;
+    pneumaticPretestStatus.controlTargetMbar =
+        product == ActiveProductBandy ? 460 : 130;
+    pneumaticPretestStatus.holdMinimumMbar =
+        product == ActiveProductBandy ? 440 : 100;
+    pneumaticPretestTicks = 0U;
+    hemorflowPretestPassed = false;
+    notifyPneumaticPretest();
+    return true;
+}
+
+void Model::cancelPneumaticPretest()
+{
+    if (pneumaticPretestStatus.state == PneumaticPretestPullDown ||
+        pneumaticPretestStatus.state == PneumaticPretestHold)
+    {
+        pneumaticPretestStatus.result = PneumaticPretestResultCancelled;
+        pneumaticPretestStatus.state = PneumaticPretestReleasing;
+        pneumaticPretestStatus.remainingSeconds = 1U;
+        pneumaticPretestTicks = 0U;
+        notifyPneumaticPretest();
+    }
+}
+
+bool Model::retryPneumaticPretest()
+{
+    if (pneumaticPretestStatus.state != PneumaticPretestLeakFailed &&
+        pneumaticPretestStatus.state != PneumaticPretestTechnicalFault)
+    {
+        return false;
+    }
+
+    return startPneumaticPretest(pneumaticPretestStatus.product);
+}
+
+void Model::resetPneumaticPretest()
+{
+    pneumaticPretestStatus = PneumaticPretestStatus();
+    pneumaticPretestTicks = 0U;
 }
 
 void Model::publishBandyStoreTelemetry()
@@ -336,6 +417,20 @@ void Model::updateBandyFromInput()
 
 void Model::updateHemorflowFromInput()
 {
+    if (hemorflowPretestPassed)
+    {
+        if (hemorflowState.currentPressureMbar < hemorflowState.targetMbar)
+        {
+            hemorflowState.currentPressureMbar += 4;
+            if (hemorflowState.currentPressureMbar > hemorflowState.targetMbar)
+            {
+                hemorflowState.currentPressureMbar = hemorflowState.targetMbar;
+            }
+        }
+        hemorflowState.running = true;
+        return;
+    }
+
     if (!bridgeSnapshotValid)
     {
         return;
@@ -462,6 +557,142 @@ bool Model::hasBandyStateChanged(const BandyState& previousState) const
            previousState.targetReached != bandyState.targetReached ||
            previousState.vacuumState != bandyState.vacuumState ||
            previousState.sessionState != bandyState.sessionState;
+}
+
+void Model::updatePneumaticPretestSimulation()
+{
+    PneumaticPretestStatus previous = pneumaticPretestStatus;
+
+    if (pneumaticPretestStatus.state == PneumaticPretestPullDown)
+    {
+        ++pneumaticPretestTicks;
+        pneumaticPretestStatus.remainingSeconds =
+            pneumaticPretestTicks >= kPretestPullDownTicks
+                ? 0U
+                : static_cast<uint16_t>((kPretestPullDownTicks - pneumaticPretestTicks + 9U) / 10U);
+
+#if PNEUMATIC_PRETEST_SIMULATION_MODE == 3
+        if (pneumaticPretestTicks >= 5U)
+        {
+            pneumaticPretestStatus.result = PneumaticPretestResultSensorFault;
+            pneumaticPretestStatus.state = PneumaticPretestReleasing;
+            pneumaticPretestStatus.remainingSeconds = 1U;
+            pneumaticPretestTicks = 0U;
+        }
+#else
+#if PNEUMATIC_PRETEST_SIMULATION_MODE == 1
+        const int32_t timeoutPressure = pneumaticPretestStatus.controlTargetMbar > 20
+                                                ? pneumaticPretestStatus.controlTargetMbar - 20
+                                                : 0;
+        pneumaticPretestStatus.pressureMbar =
+            static_cast<int32_t>((static_cast<int64_t>(timeoutPressure) * pneumaticPretestTicks) /
+                                 kPretestPullDownTicks);
+#else
+        const uint16_t rampTicks =
+            pneumaticPretestTicks < kPretestSuccessfulPullDownTicks
+                ? pneumaticPretestTicks
+                : kPretestSuccessfulPullDownTicks;
+        pneumaticPretestStatus.pressureMbar =
+            static_cast<int32_t>((static_cast<int64_t>(pneumaticPretestStatus.controlTargetMbar) * rampTicks) /
+                                 kPretestSuccessfulPullDownTicks);
+#endif
+
+#if PNEUMATIC_PRETEST_SIMULATION_MODE != 1
+        if (pneumaticPretestTicks >= kPretestSuccessfulPullDownTicks)
+        {
+            pneumaticPretestStatus.pressureMbar = pneumaticPretestStatus.controlTargetMbar;
+            pneumaticPretestStatus.state = PneumaticPretestHold;
+            pneumaticPretestStatus.remainingSeconds = 5U;
+            pneumaticPretestTicks = 0U;
+        }
+        else
+#endif
+        if (pneumaticPretestTicks >= kPretestPullDownTicks)
+        {
+            pneumaticPretestStatus.result = PneumaticPretestResultPullDownTimeout;
+            pneumaticPretestStatus.state = PneumaticPretestReleasing;
+            pneumaticPretestStatus.remainingSeconds = 1U;
+            pneumaticPretestTicks = 0U;
+        }
+#endif
+    }
+    else if (pneumaticPretestStatus.state == PneumaticPretestHold)
+    {
+        ++pneumaticPretestTicks;
+        pneumaticPretestStatus.remainingSeconds =
+            pneumaticPretestTicks >= kPretestHoldTicks
+                ? 0U
+                : static_cast<uint16_t>((kPretestHoldTicks - pneumaticPretestTicks + 9U) / 10U);
+
+#if PNEUMATIC_PRETEST_SIMULATION_MODE == 2
+        if (pneumaticPretestTicks >= kPretestLeakHoldTicks)
+        {
+            pneumaticPretestStatus.pressureMbar = pneumaticPretestStatus.holdMinimumMbar - 1;
+            pneumaticPretestStatus.result = PneumaticPretestResultHoldLeak;
+            pneumaticPretestStatus.state = PneumaticPretestReleasing;
+            pneumaticPretestStatus.remainingSeconds = 1U;
+            pneumaticPretestTicks = 0U;
+        }
+#else
+        if (pneumaticPretestTicks >= kPretestHoldTicks)
+        {
+            pneumaticPretestStatus.result = PneumaticPretestResultPassed;
+            pneumaticPretestStatus.state = PneumaticPretestReleasing;
+            pneumaticPretestStatus.remainingSeconds = 1U;
+            pneumaticPretestTicks = 0U;
+        }
+#endif
+    }
+    else if (pneumaticPretestStatus.state == PneumaticPretestReleasing)
+    {
+        ++pneumaticPretestTicks;
+        pneumaticPretestStatus.pressureMbar -= kPretestReleaseStepMbar;
+        if (pneumaticPretestStatus.pressureMbar < 0)
+        {
+            pneumaticPretestStatus.pressureMbar = 0;
+        }
+
+        if (pneumaticPretestStatus.pressureMbar == 0 || pneumaticPretestTicks >= 50U)
+        {
+            pneumaticPretestStatus.remainingSeconds = 0U;
+            if (pneumaticPretestStatus.result == PneumaticPretestResultPassed)
+            {
+                pneumaticPretestStatus.state = PneumaticPretestPassed;
+                hemorflowPretestPassed =
+                    pneumaticPretestStatus.product == ActiveProductHemorflow;
+            }
+            else if (pneumaticPretestStatus.result == PneumaticPretestResultCancelled)
+            {
+                pneumaticPretestStatus.state = PneumaticPretestCancelled;
+            }
+            else if (pneumaticPretestStatus.result == PneumaticPretestResultSensorFault ||
+                     pneumaticPretestStatus.result == PneumaticPretestResultActuatorFault)
+            {
+                pneumaticPretestStatus.state = PneumaticPretestTechnicalFault;
+            }
+            else
+            {
+                pneumaticPretestStatus.state = PneumaticPretestLeakFailed;
+            }
+        }
+    }
+
+    if (previous.product != pneumaticPretestStatus.product ||
+        previous.state != pneumaticPretestStatus.state ||
+        previous.result != pneumaticPretestStatus.result ||
+        previous.remainingSeconds != pneumaticPretestStatus.remainingSeconds ||
+        previous.pressureMbar != pneumaticPretestStatus.pressureMbar)
+    {
+        notifyPneumaticPretest();
+    }
+}
+
+void Model::notifyPneumaticPretest()
+{
+    if (modelListener != 0)
+    {
+        modelListener->pneumaticPretestUpdated(pneumaticPretestStatus);
+    }
 }
 
 void Model::updateAdminDiagnostics()

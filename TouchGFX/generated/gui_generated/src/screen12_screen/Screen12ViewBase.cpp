@@ -24,66 +24,138 @@ Screen12ViewBase::Screen12ViewBase() :
     languageBackButton.setBorderSize(1);
     languageBackButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     languageBackButton.setAction(flexButtonCallback);
-    languageBackButton.setPosition(0, 15, 120, 72);
+    languageBackButton.setPosition(0, 4, 120, 72);
     add(languageBackButton);
 
     languageBackIcon.setSVG(SVG_ARROW_BACK_UP_ID);
-    languageBackIcon.setPosition(28, 31, 40, 40);
+    languageBackIcon.setPosition(28, 25, 40, 40);
     languageBackIcon.setScale(1.67f, 1.67f);
     languageBackIcon.setImagePosition(0, 0);
     languageBackIcon.setRotationCenter(0, 0);
     languageBackIcon.setRotation(0.0f);
     add(languageBackIcon);
 
-    languageTitle.setPosition(0, 58, 480, 32);
+    languageTitle.setPosition(0, 33, 480, 32);
     languageTitle.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     languageTitle.setLinespacing(0);
     languageTitle.setTypedText(touchgfx::TypedText(T_TEXT_LANGUAGETITLE));
     add(languageTitle);
 
-    languageSubtitle.setPosition(0, 94, 480, 20);
+    languageSubtitle.setPosition(0, 86, 480, 20);
     languageSubtitle.setColor(touchgfx::Color::getColorFromRGB(124, 137, 148));
     languageSubtitle.setLinespacing(0);
     languageSubtitle.setTypedText(touchgfx::TypedText(T_TEXT_LANGUAGESUBTITLE));
     add(languageSubtitle);
 
-    englishButton.setBoxWithBorderPosition(0, 0, 0, 0);
-    englishButton.setBorderSize(2);
-    englishButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(142, 164, 184), touchgfx::Color::getColorFromRGB(245, 242, 232));
-    englishButton.setAction(flexButtonCallback);
-    englishButton.setPosition(48, 142, 184, 96);
-    add(englishButton);
+    langRowButton0.setBoxWithBorderPosition(0, 0, 0, 0);
+    langRowButton0.setBorderSize(2);
+    langRowButton0.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(142, 164, 184), touchgfx::Color::getColorFromRGB(245, 242, 232));
+    langRowButton0.setAction(flexButtonCallback);
+    langRowButton0.setPosition(40, 118, 400, 36);
+    add(langRowButton0);
 
-    italianButton.setBoxWithBorderPosition(0, 0, 0, 0);
-    italianButton.setBorderSize(2);
-    italianButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(142, 164, 184), touchgfx::Color::getColorFromRGB(245, 242, 232));
-    italianButton.setAction(flexButtonCallback);
-    italianButton.setPosition(248, 142, 184, 96);
-    add(italianButton);
+    langRowFrame0.setPosition(40, 118, 400, 36);
+    langRowFrame0.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    langRowFrame0.setBorderColor(touchgfx::Color::getColorFromRGB(86, 104, 116));
+    langRowFrame0.setBorderSize(2);
+    add(langRowFrame0);
 
-    englishFrame.setPosition(48, 142, 184, 96);
-    englishFrame.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    englishFrame.setBorderColor(touchgfx::Color::getColorFromRGB(240, 170, 0));
-    englishFrame.setBorderSize(2);
-    add(englishFrame);
+    langRowLabel0.setPosition(40, 126, 400, 20);
+    langRowLabel0.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
+    langRowLabel0.setLinespacing(0);
+    langRowLabel0.setTypedText(touchgfx::TypedText(T_TEXT_ENGLISH));
+    add(langRowLabel0);
 
-    italianFrame.setPosition(248, 142, 184, 96);
-    italianFrame.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    italianFrame.setBorderColor(touchgfx::Color::getColorFromRGB(86, 104, 116));
-    italianFrame.setBorderSize(2);
-    add(italianFrame);
+    langRowButton1.setBoxWithBorderPosition(0, 0, 0, 0);
+    langRowButton1.setBorderSize(2);
+    langRowButton1.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(142, 164, 184), touchgfx::Color::getColorFromRGB(245, 242, 232));
+    langRowButton1.setAction(flexButtonCallback);
+    langRowButton1.setPosition(40, 158, 400, 36);
+    add(langRowButton1);
 
-    englishLabel.setPosition(48, 176, 184, 28);
-    englishLabel.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
-    englishLabel.setLinespacing(0);
-    englishLabel.setTypedText(touchgfx::TypedText(T_TEXT_ENGLISH));
-    add(englishLabel);
+    langRowFrame1.setPosition(40, 158, 400, 36);
+    langRowFrame1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    langRowFrame1.setBorderColor(touchgfx::Color::getColorFromRGB(86, 104, 116));
+    langRowFrame1.setBorderSize(2);
+    add(langRowFrame1);
 
-    italianLabel.setPosition(248, 176, 184, 28);
-    italianLabel.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
-    italianLabel.setLinespacing(0);
-    italianLabel.setTypedText(touchgfx::TypedText(T_TEXT_ITALIAN));
-    add(italianLabel);
+    langRowLabel1.setPosition(40, 166, 400, 20);
+    langRowLabel1.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
+    langRowLabel1.setLinespacing(0);
+    langRowLabel1.setTypedText(touchgfx::TypedText(T_TEXT_ENGLISH));
+    add(langRowLabel1);
+
+    langRowButton2.setBoxWithBorderPosition(0, 0, 0, 0);
+    langRowButton2.setBorderSize(2);
+    langRowButton2.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(142, 164, 184), touchgfx::Color::getColorFromRGB(245, 242, 232));
+    langRowButton2.setAction(flexButtonCallback);
+    langRowButton2.setPosition(40, 198, 400, 36);
+    add(langRowButton2);
+
+    langRowFrame2.setPosition(40, 198, 400, 36);
+    langRowFrame2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    langRowFrame2.setBorderColor(touchgfx::Color::getColorFromRGB(86, 104, 116));
+    langRowFrame2.setBorderSize(2);
+    add(langRowFrame2);
+
+    langRowLabel2.setPosition(40, 206, 400, 20);
+    langRowLabel2.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
+    langRowLabel2.setLinespacing(0);
+    langRowLabel2.setTypedText(touchgfx::TypedText(T_TEXT_ENGLISH));
+    add(langRowLabel2);
+
+    langRowButton3.setBoxWithBorderPosition(0, 0, 0, 0);
+    langRowButton3.setBorderSize(2);
+    langRowButton3.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(142, 164, 184), touchgfx::Color::getColorFromRGB(245, 242, 232));
+    langRowButton3.setAction(flexButtonCallback);
+    langRowButton3.setPosition(40, 238, 400, 36);
+    add(langRowButton3);
+
+    langRowFrame3.setPosition(40, 238, 400, 36);
+    langRowFrame3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    langRowFrame3.setBorderColor(touchgfx::Color::getColorFromRGB(86, 104, 116));
+    langRowFrame3.setBorderSize(2);
+    add(langRowFrame3);
+
+    langRowLabel3.setPosition(40, 246, 400, 20);
+    langRowLabel3.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
+    langRowLabel3.setLinespacing(0);
+    langRowLabel3.setTypedText(touchgfx::TypedText(T_TEXT_ENGLISH));
+    add(langRowLabel3);
+
+    langPrevButton.setBoxWithBorderPosition(0, 0, 0, 0);
+    langPrevButton.setBorderSize(1);
+    langPrevButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
+    langPrevButton.setAction(flexButtonCallback);
+    langPrevButton.setPosition(40, 280, 120, 36);
+    add(langPrevButton);
+
+    langPrevLabel.setPosition(40, 289, 120, 20);
+    langPrevLabel.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
+    langPrevLabel.setLinespacing(0);
+    langPrevLabel.setTypedText(touchgfx::TypedText(T_TEXT_SETTINGSPREVIOUS));
+    add(langPrevLabel);
+
+    langPageIndicator.setPosition(180, 289, 120, 20);
+    langPageIndicator.setColor(touchgfx::Color::getColorFromRGB(124, 137, 148));
+    langPageIndicator.setLinespacing(0);
+    Unicode::snprintf(langPageIndicatorBuffer, LANGPAGEINDICATOR_SIZE, "%s", touchgfx::TypedText(T_BUFFER_SETTINGSPAGE).getText());
+    langPageIndicator.setWildcard(langPageIndicatorBuffer);
+    langPageIndicator.setTypedText(touchgfx::TypedText(T_TEXT_SETTINGSPAGE));
+    add(langPageIndicator);
+
+    langNextButton.setBoxWithBorderPosition(0, 0, 0, 0);
+    langNextButton.setBorderSize(1);
+    langNextButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(86, 104, 116), touchgfx::Color::getColorFromRGB(245, 242, 232));
+    langNextButton.setAction(flexButtonCallback);
+    langNextButton.setPosition(320, 280, 120, 36);
+    add(langNextButton);
+
+    langNextLabel.setPosition(320, 289, 120, 20);
+    langNextLabel.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
+    langNextLabel.setLinespacing(0);
+    langNextLabel.setTypedText(touchgfx::TypedText(T_TEXT_SETTINGSNEXT));
+    add(langNextLabel);
 
     svgImage1.setSVG(SVG_LOGO_UFFICIALE_THD_2016_RGB_ID);
     svgImage1.setPosition(392, 7, 80, 80);
@@ -116,18 +188,46 @@ void Screen12ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonC
         //Call backClicked
         backClicked();
     }
-    if (&src == &englishButton)
+    if (&src == &langRowButton0)
     {
-        //englishClicked
-        //When englishButton clicked call virtual function
-        //Call englishClicked
-        englishClicked();
+        //langRow0Clicked
+        //When langRowButton0 clicked call virtual function
+        //Call row0Clicked
+        row0Clicked();
     }
-    if (&src == &italianButton)
+    if (&src == &langRowButton1)
     {
-        //italianClicked
-        //When italianButton clicked call virtual function
-        //Call italianClicked
-        italianClicked();
+        //langRow1Clicked
+        //When langRowButton1 clicked call virtual function
+        //Call row1Clicked
+        row1Clicked();
+    }
+    if (&src == &langRowButton2)
+    {
+        //langRow2Clicked
+        //When langRowButton2 clicked call virtual function
+        //Call row2Clicked
+        row2Clicked();
+    }
+    if (&src == &langRowButton3)
+    {
+        //langRow3Clicked
+        //When langRowButton3 clicked call virtual function
+        //Call row3Clicked
+        row3Clicked();
+    }
+    if (&src == &langPrevButton)
+    {
+        //langPrevClicked
+        //When langPrevButton clicked call virtual function
+        //Call previousPageClicked
+        previousPageClicked();
+    }
+    if (&src == &langNextButton)
+    {
+        //langNextClicked
+        //When langNextButton clicked call virtual function
+        //Call nextPageClicked
+        nextPageClicked();
     }
 }

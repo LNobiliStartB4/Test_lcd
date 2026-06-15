@@ -152,6 +152,149 @@ build test_touch_feedback.exe: CXX_EXECUTABLE_LINKER__test_touch_feedback_Debug 
   TARGET_PDB = test_touch_feedback.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\test_touch_feedback.dir
 
+# =============================================================================
+# Object build statements for EXECUTABLE target test_bandy_completion
+
+
+#############################################
+# Order-only phony target for test_bandy_completion
+
+build cmake_object_order_depends_target_test_bandy_completion: phony || .
+
+build CMakeFiles\test_bandy_completion.dir\test_bandy_completion.cpp.obj: CXX_COMPILER__test_bandy_completion_unscanned_Debug C$:\TouchGFXProjects\Display_test_prova\tests\test_bandy_completion.cpp || cmake_object_order_depends_target_test_bandy_completion
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++14 -MDd /W3 /permissive-
+  INCLUDES = -IC:\TouchGFXProjects\Display_test_prova\tests\..\TouchGFX\gui\include -IC:\TouchGFXProjects\Display_test_prova\tests\build\_deps\doctest-src
+  OBJECT_DIR = CMakeFiles\test_bandy_completion.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_bandy_completion.dir
+  TARGET_COMPILE_PDB = CMakeFiles\test_bandy_completion.dir\
+  TARGET_PDB = test_bandy_completion.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_bandy_completion.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_bandy_completion
+
+
+#############################################
+# Link the executable test_bandy_completion.exe
+
+build test_bandy_completion.exe: CXX_EXECUTABLE_LINKER__test_bandy_completion_Debug CMakeFiles\test_bandy_completion.dir\test_bandy_completion.cpp.obj
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\test_bandy_completion.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\test_bandy_completion.dir\
+  TARGET_FILE = test_bandy_completion.exe
+  TARGET_IMPLIB = test_bandy_completion.lib
+  TARGET_PDB = test_bandy_completion.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_bandy_completion.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_asset_manifest
+
+
+#############################################
+# Order-only phony target for test_asset_manifest
+
+build cmake_object_order_depends_target_test_asset_manifest: phony || .
+
+build CMakeFiles\test_asset_manifest.dir\test_asset_manifest.cpp.obj: CXX_COMPILER__test_asset_manifest_unscanned_Debug C$:\TouchGFXProjects\Display_test_prova\tests\test_asset_manifest.cpp || cmake_object_order_depends_target_test_asset_manifest
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++14 -MDd
+  INCLUDES = -IC:\TouchGFXProjects\Display_test_prova\tests\..\Core\Inc -IC:\TouchGFXProjects\Display_test_prova\tests\build\_deps\doctest-src
+  OBJECT_DIR = CMakeFiles\test_asset_manifest.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_asset_manifest.dir
+  TARGET_COMPILE_PDB = CMakeFiles\test_asset_manifest.dir\
+  TARGET_PDB = test_asset_manifest.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_asset_manifest.dir
+
+build CMakeFiles\test_asset_manifest.dir\C_\TouchGFXProjects\Display_test_prova\Core\Src\asset_manifest.c.obj: C_COMPILER__test_asset_manifest_unscanned_Debug C$:\TouchGFXProjects\Display_test_prova\Core\Src\asset_manifest.c || cmake_object_order_depends_target_test_asset_manifest
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd
+  INCLUDES = -IC:\TouchGFXProjects\Display_test_prova\tests\..\Core\Inc -IC:\TouchGFXProjects\Display_test_prova\tests\build\_deps\doctest-src
+  OBJECT_DIR = CMakeFiles\test_asset_manifest.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_asset_manifest.dir\C_\TouchGFXProjects\Display_test_prova\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\test_asset_manifest.dir\
+  TARGET_PDB = test_asset_manifest.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_asset_manifest.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_asset_manifest
+
+
+#############################################
+# Link the executable test_asset_manifest.exe
+
+build test_asset_manifest.exe: CXX_EXECUTABLE_LINKER__test_asset_manifest_Debug CMakeFiles\test_asset_manifest.dir\test_asset_manifest.cpp.obj CMakeFiles\test_asset_manifest.dir\C_\TouchGFXProjects\Display_test_prova\Core\Src\asset_manifest.c.obj
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\test_asset_manifest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\test_asset_manifest.dir\
+  TARGET_FILE = test_asset_manifest.exe
+  TARGET_IMPLIB = test_asset_manifest.lib
+  TARGET_PDB = test_asset_manifest.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_asset_manifest.dir
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_asset_flash_layout
+
+
+#############################################
+# Order-only phony target for test_asset_flash_layout
+
+build cmake_object_order_depends_target_test_asset_flash_layout: phony || .
+
+build CMakeFiles\test_asset_flash_layout.dir\test_asset_flash_layout.cpp.obj: CXX_COMPILER__test_asset_flash_layout_unscanned_Debug C$:\TouchGFXProjects\Display_test_prova\tests\test_asset_flash_layout.cpp || cmake_object_order_depends_target_test_asset_flash_layout
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++14 -MDd
+  INCLUDES = -IC:\TouchGFXProjects\Display_test_prova\tests\..\Core\Inc -IC:\TouchGFXProjects\Display_test_prova\tests\build\_deps\doctest-src
+  OBJECT_DIR = CMakeFiles\test_asset_flash_layout.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_asset_flash_layout.dir
+  TARGET_COMPILE_PDB = CMakeFiles\test_asset_flash_layout.dir\
+  TARGET_PDB = test_asset_flash_layout.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_asset_flash_layout.dir
+
+build CMakeFiles\test_asset_flash_layout.dir\C_\TouchGFXProjects\Display_test_prova\Core\Src\asset_flash_layout.c.obj: C_COMPILER__test_asset_flash_layout_unscanned_Debug C$:\TouchGFXProjects\Display_test_prova\Core\Src\asset_flash_layout.c || cmake_object_order_depends_target_test_asset_flash_layout
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd
+  INCLUDES = -IC:\TouchGFXProjects\Display_test_prova\tests\..\Core\Inc -IC:\TouchGFXProjects\Display_test_prova\tests\build\_deps\doctest-src
+  OBJECT_DIR = CMakeFiles\test_asset_flash_layout.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_asset_flash_layout.dir\C_\TouchGFXProjects\Display_test_prova\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\test_asset_flash_layout.dir\
+  TARGET_PDB = test_asset_flash_layout.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_asset_flash_layout.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_asset_flash_layout
+
+
+#############################################
+# Link the executable test_asset_flash_layout.exe
+
+build test_asset_flash_layout.exe: CXX_EXECUTABLE_LINKER__test_asset_flash_layout_Debug CMakeFiles\test_asset_flash_layout.dir\test_asset_flash_layout.cpp.obj CMakeFiles\test_asset_flash_layout.dir\C_\TouchGFXProjects\Display_test_prova\Core\Src\asset_flash_layout.c.obj
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\test_asset_flash_layout.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\test_asset_flash_layout.dir\
+  TARGET_FILE = test_asset_flash_layout.exe
+  TARGET_IMPLIB = test_asset_flash_layout.lib
+  TARGET_PDB = test_asset_flash_layout.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_asset_flash_layout.dir
+
 
 #############################################
 # Utility command for test
@@ -336,6 +479,12 @@ build doctest_with_main: phony _deps\doctest-build\doctest_with_main.lib
 
 build doctest_with_main.lib: phony _deps\doctest-build\doctest_with_main.lib
 
+build test_asset_flash_layout: phony test_asset_flash_layout.exe
+
+build test_asset_manifest: phony test_asset_manifest.exe
+
+build test_bandy_completion: phony test_bandy_completion.exe
+
 build test_model: phony test_model.exe
 
 build test_touch_feedback: phony test_touch_feedback.exe
@@ -348,7 +497,7 @@ build test_touch_feedback: phony test_touch_feedback.exe
 #############################################
 # Folder: C:/TouchGFXProjects/Display_test_prova/tests/build
 
-build all: phony test_model.exe test_touch_feedback.exe _deps\doctest-build\all
+build all: phony test_model.exe test_touch_feedback.exe test_bandy_completion.exe test_asset_manifest.exe test_asset_flash_layout.exe _deps\doctest-build\all
 
 # =============================================================================
 
@@ -364,14 +513,14 @@ build _deps\doctest-build\all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja C$:\TouchGFXProjects\Display_test_prova\tests\build\cmake_install.cmake C$:\TouchGFXProjects\Display_test_prova\tests\build\_deps\doctest-build\cmake_install.cmake C$:\TouchGFXProjects\Display_test_prova\tests\build\CTestTestfile.cmake: RERUN_CMAKE | C$:\Program$ Files\CMake\share\cmake-4.2\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeRCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\ExternalProject\shared_internal_commands.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FetchContent.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FetchContent\CMakeLists.cmake.in C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FindGit.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Linker\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\WriteBasicConfigVersionFile.cmake C$:\TouchGFXProjects\Display_test_prova\tests\CMakeLists.txt CMakeCache.txt CMakeFiles\4.2.3\CMakeCXXCompiler.cmake CMakeFiles\4.2.3\CMakeRCCompiler.cmake CMakeFiles\4.2.3\CMakeSystem.cmake _deps\doctest-src\CMakeLists.txt _deps\doctest-src\scripts\cmake\Config.cmake.in
+build build.ninja C$:\TouchGFXProjects\Display_test_prova\tests\build\cmake_install.cmake C$:\TouchGFXProjects\Display_test_prova\tests\build\_deps\doctest-build\cmake_install.cmake C$:\TouchGFXProjects\Display_test_prova\tests\build\CTestTestfile.cmake: RERUN_CMAKE | C$:\Program$ Files\CMake\share\cmake-4.2\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeRCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\ExternalProject\shared_internal_commands.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FetchContent.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FetchContent\CMakeLists.cmake.in C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FindGit.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Linker\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Linker\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\WriteBasicConfigVersionFile.cmake C$:\TouchGFXProjects\Display_test_prova\tests\CMakeLists.txt CMakeCache.txt CMakeFiles\4.2.3\CMakeCCompiler.cmake CMakeFiles\4.2.3\CMakeCXXCompiler.cmake CMakeFiles\4.2.3\CMakeRCCompiler.cmake CMakeFiles\4.2.3\CMakeSystem.cmake _deps\doctest-src\CMakeLists.txt _deps\doctest-src\scripts\cmake\Config.cmake.in
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:\Program$ Files\CMake\share\cmake-4.2\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeRCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\ExternalProject\shared_internal_commands.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FetchContent.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FetchContent\CMakeLists.cmake.in C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FindGit.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Linker\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\WriteBasicConfigVersionFile.cmake C$:\TouchGFXProjects\Display_test_prova\tests\CMakeLists.txt CMakeCache.txt CMakeFiles\4.2.3\CMakeCXXCompiler.cmake CMakeFiles\4.2.3\CMakeRCCompiler.cmake CMakeFiles\4.2.3\CMakeSystem.cmake _deps\doctest-src\CMakeLists.txt _deps\doctest-src\scripts\cmake\Config.cmake.in: phony
+build C$:\Program$ Files\CMake\share\cmake-4.2\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeRCInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Compiler\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\ExternalProject\shared_internal_commands.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FetchContent.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FetchContent\CMakeLists.cmake.in C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FindGit.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\FindPackageMessage.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Linker\MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Linker\MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Linker\MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\Windows.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\CMake\share\cmake-4.2\Modules\WriteBasicConfigVersionFile.cmake C$:\TouchGFXProjects\Display_test_prova\tests\CMakeLists.txt CMakeCache.txt CMakeFiles\4.2.3\CMakeCCompiler.cmake CMakeFiles\4.2.3\CMakeCXXCompiler.cmake CMakeFiles\4.2.3\CMakeRCCompiler.cmake CMakeFiles\4.2.3\CMakeSystem.cmake _deps\doctest-src\CMakeLists.txt _deps\doctest-src\scripts\cmake\Config.cmake.in: phony
 
 
 #############################################

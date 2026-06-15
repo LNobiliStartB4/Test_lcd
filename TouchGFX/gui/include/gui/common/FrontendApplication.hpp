@@ -31,6 +31,9 @@ public:
     void gotoAdminSystemInfoScreenNoTransition();
     void gotoAdminPressureScreenNoTransition();
     void gotoAdminMemoryScreenNoTransition();
+    void gotoBandyCompletedScreenNoTransition();
+    void gotoPneumaticPretestScreenNoTransition();
+    void gotoPneumaticPretestErrorScreenNoTransition();
 
     virtual void handleTickEvent()
     {
@@ -63,6 +66,9 @@ private:
     void gotoAdminSystemInfoScreenNoTransitionImpl();
     void gotoAdminPressureScreenNoTransitionImpl();
     void gotoAdminMemoryScreenNoTransitionImpl();
+    void gotoBandyCompletedScreenNoTransitionImpl();
+    void gotoPneumaticPretestScreenNoTransitionImpl();
+    void gotoPneumaticPretestErrorScreenNoTransitionImpl();
 
     touchgfx::Callback<FrontendApplication> productSelectTransitionCallback;
     touchgfx::Callback<FrontendApplication> rfidWaitTransitionCallback;
@@ -81,6 +87,9 @@ private:
     touchgfx::Callback<FrontendApplication> adminSystemInfoTransitionCallback;
     touchgfx::Callback<FrontendApplication> adminPressureTransitionCallback;
     touchgfx::Callback<FrontendApplication> adminMemoryTransitionCallback;
+    touchgfx::Callback<FrontendApplication> bandyCompletedTransitionCallback;
+    touchgfx::Callback<FrontendApplication> pneumaticPretestTransitionCallback;
+    touchgfx::Callback<FrontendApplication> pneumaticPretestErrorTransitionCallback;
 
     // Guards handlePendingScreenTransition so the touch pointer can postpone a
     // transition by at most one frame (clear the dot, then transition), never

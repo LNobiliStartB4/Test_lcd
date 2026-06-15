@@ -4,6 +4,7 @@
 #include <gui_generated/containers/BandyVacuumPanelBase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 #include <touchgfx/Color.hpp>
+#include <images/BitmapDatabase.hpp>
 
 BandyVacuumPanelBase::BandyVacuumPanelBase()
 {
@@ -23,27 +24,37 @@ BandyVacuumPanelBase::BandyVacuumPanelBase()
     vacuumValue.setTypedText(touchgfx::TypedText(T_VALUE_HERO));
     add(vacuumValue);
 
-    vacuumTrack.setPosition(20, 104, 400, 5);
+    vacuumTrack.setPosition(20, 104, 400, 12);
     vacuumTrack.setColor(touchgfx::Color::getColorFromRGB(82, 82, 76));
     vacuumTrack.setBorderColor(touchgfx::Color::getColorFromRGB(82, 82, 76));
     vacuumTrack.setBorderSize(0);
     add(vacuumTrack);
 
-    vacuumFill.setPosition(20, 104, 0, 5);
-    vacuumFill.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
+    vacuumFill.setPosition(20, 104, 0, 12);
+    vacuumFill.setColor(touchgfx::Color::getColorFromRGB(240, 170, 0));
     add(vacuumFill);
 
-    scaleZeroLabel.setPosition(20, 116, 64, 21);
-    scaleZeroLabel.setColor(touchgfx::Color::getColorFromRGB(104, 126, 146));
+    scaleZeroLabel.setPosition(20, 120, 64, 21);
+    scaleZeroLabel.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     scaleZeroLabel.setLinespacing(0);
     scaleZeroLabel.setTypedText(touchgfx::TypedText(T_TEXT_ZEROSCALE));
     add(scaleZeroLabel);
 
-    scaleMaxLabel.setPosition(360, 116, 67, 21);
-    scaleMaxLabel.setColor(touchgfx::Color::getColorFromRGB(104, 126, 146));
+    scaleMaxLabel.setPosition(381, 120, 67, 21);
+    scaleMaxLabel.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     scaleMaxLabel.setLinespacing(0);
     scaleMaxLabel.setTypedText(touchgfx::TypedText(T_TEXT_MAXSCALE));
     add(scaleMaxLabel);
+
+    vacuumCapLeft.setBitmap(touchgfx::Bitmap(BITMAP_VACUUM_CAP_LEFT_ID));
+    vacuumCapLeft.setPosition(20, 104, 6, 12);
+    vacuumCapLeft.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    add(vacuumCapLeft);
+
+    vacuumCapRight.setBitmap(touchgfx::Bitmap(BITMAP_VACUUM_CAP_RIGHT_ID));
+    vacuumCapRight.setPosition(414, 104, 6, 12);
+    vacuumCapRight.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    add(vacuumCapRight);
 }
 
 BandyVacuumPanelBase::~BandyVacuumPanelBase()

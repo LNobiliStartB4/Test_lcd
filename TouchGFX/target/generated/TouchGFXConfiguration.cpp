@@ -20,7 +20,8 @@
 #include <fonts/ApplicationFontProvider.hpp>
 #include <gui/common/FrontendHeap.hpp>
 #include <BitmapDatabase.hpp>
-#include <platform/driver/lcd/LCD16bpp.hpp>
+#include <TouchGFXDataReader.hpp>
+#include <platform/driver/lcd/LCD16bppSerialFlash.hpp>
 #include <touchgfx/hal/OSWrappers.hpp>
 #include <STM32DMA.hpp>
 #include <TouchGFXHAL.hpp>
@@ -33,14 +34,22 @@ extern "C" void touchgfx_components_init();
 
 static STM32TouchController tc;
 static STM32DMA dma;
-static LCD16bpp display;
+static TouchGFXDataReader dataReader;
+static LCD16bppSerialFlash display(dataReader);
 
 static ApplicationFontProvider fontProvider;
 static Texts texts;
-static TouchGFXHAL hal(dma, display, tc, 480, 320);
+static TouchGFXHAL hal(dma, display, tc, 320, 480);
 
 void touchgfx_init()
 {
+    /*
+     * Parse TouchGFXDataReader instance pointer to TouchGFXHAL and ApplicationFontProvider
+     * in order to enable external data access.
+     */
+    hal.setDataReader(&dataReader);
+    fontProvider.setFlashReader(&dataReader);
+
     Bitmap::registerBitmapDatabase(BitmapDatabase::getInstance(), BitmapDatabase::getInstanceSize());
     TypedText::registerTexts(&texts);
     Texts::setLanguage(0);
@@ -69,7 +78,7 @@ void touchgfx_taskEntry()
      * Main event loop will check for VSYNC signal, and then process next frame.
      *
      * Note This function returns immediately if there is no VSYNC signal.
-    */
+     */
     if (OSWrappers::isVSyncAvailable())
     {
         hal.backPorchExited();

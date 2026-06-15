@@ -1,0 +1,6 @@
+../TouchGFX/target/generated/TouchGFXGeneratedDataReader.hpp:36:13:TouchGFXGeneratedDataReader::~TouchGFXGeneratedDataReader()	1
+../TouchGFX/target/generated/TouchGFXGeneratedDataReader.cpp:31:6:virtual bool TouchGFXGeneratedDataReader::addressIsAddressable(const void*)	1
+../TouchGFX/target/generated/TouchGFXGeneratedDataReader.cpp:63:6:virtual void TouchGFXGeneratedDataReader::startFlashLineRead(const void*, uint32_t)	2
+../TouchGFX/target/generated/TouchGFXGeneratedDataReader.cpp:69:16:virtual const uint8_t* TouchGFXGeneratedDataReader::waitFlashReadComplete()	2
+../TouchGFX/target/generated/TouchGFXGeneratedDataReader.hpp:36:13:virtual TouchGFXGeneratedDataReader::~TouchGFXGeneratedDataReader()	1
+../TouchGFX/target/generated/TouchGFXGeneratedDataReader.cpp:41:6:virtual void TouchGFXGeneratedDataReader::copyData(const void*, void*, uint32_t)	2

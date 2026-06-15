@@ -53,6 +53,7 @@ protected:
     touchgfx::TextAreaWithOneWildcard screen3TargetValue;
     touchgfx::TextArea screen3TargetMbarLabel;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  screen3StartButton;
+    touchgfx::SVGImage screen3StartIcon;
     touchgfx::TextArea screen3StartLabel;
     touchgfx::SVGImage svgImage1;
     TouchFeedback touchFeedback;

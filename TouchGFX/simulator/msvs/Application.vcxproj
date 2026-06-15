@@ -75,6 +75,15 @@
     <ClCompile Include="..\..\generated\gui_generated\src\screen13_screen\Screen13ViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\TouchFeedback.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\TouchFeedbackBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen19_screen\Screen19Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen19_screen\Screen19View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen19_screen\Screen19ViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen20_screen\Screen20Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen20_screen\Screen20View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen20_screen\Screen20ViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen21_screen\Screen21Presenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\screen21_screen\Screen21View.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\screen21_screen\Screen21ViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\assets\fonts\verdana.ttf"/>
@@ -383,6 +392,16 @@
     <ClInclude Include="..\..\gui\include\gui\containers\TouchFeedback.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\TouchFeedbackBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\common\TouchFeedbackController.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\model\BandyCompletion.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen19_screen\Screen19Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen19_screen\Screen19View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen19_screen\Screen19ViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen20_screen\Screen20Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen20_screen\Screen20View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen20_screen\Screen20ViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen21_screen\Screen21Presenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\screen21_screen\Screen21View.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen21_screen\Screen21ViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>
