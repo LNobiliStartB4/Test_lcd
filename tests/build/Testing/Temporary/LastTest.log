@@ -1,10 +1,10 @@
-Start testing: Jun 15 09:58 ora legale Europa occidentale
+Start testing: Jun 16 10:41 ora legale Europa occidentale
 ----------------------------------------------------------
-1/5 Testing: model_unit_tests
-1/5 Test: model_unit_tests
+1/6 Testing: model_unit_tests
+1/6 Test: model_unit_tests
 Command: "C:/TouchGFXProjects/Display_test_prova/tests/build/test_model.exe"
-Directory: C:/Users/CodexSandboxOffline/.codex/.sandbox/cwd/7f041845e3bea2ad/tests/build
-"model_unit_tests" start time: Jun 15 09:58 ora legale Europa occidentale
+Directory: C:/TouchGFXProjects/Display_test_prova/tests/build
+"model_unit_tests" start time: Jun 16 10:41 ora legale Europa occidentale
 Output:
 ----------------------------------------------------------
 [doctest] doctest version is "2.4.11"
@@ -14,18 +14,18 @@ Output:
 [doctest] assertions: 62 | 62 passed | 0 failed |
 [doctest] Status: SUCCESS!
 <end of output>
-Test time =   0.04 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"model_unit_tests" end time: Jun 15 09:58 ora legale Europa occidentale
+"model_unit_tests" end time: Jun 16 10:41 ora legale Europa occidentale
 "model_unit_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/5 Testing: touch_feedback_unit_tests
-2/5 Test: touch_feedback_unit_tests
+2/6 Testing: touch_feedback_unit_tests
+2/6 Test: touch_feedback_unit_tests
 Command: "C:/TouchGFXProjects/Display_test_prova/tests/build/test_touch_feedback.exe"
-Directory: C:/Users/CodexSandboxOffline/.codex/.sandbox/cwd/7f041845e3bea2ad/tests/build
-"touch_feedback_unit_tests" start time: Jun 15 09:58 ora legale Europa occidentale
+Directory: C:/TouchGFXProjects/Display_test_prova/tests/build
+"touch_feedback_unit_tests" start time: Jun 16 10:41 ora legale Europa occidentale
 Output:
 ----------------------------------------------------------
 [doctest] doctest version is "2.4.11"
@@ -35,18 +35,18 @@ Output:
 [doctest] assertions: 40 | 40 passed | 0 failed |
 [doctest] Status: SUCCESS!
 <end of output>
-Test time =   0.02 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"touch_feedback_unit_tests" end time: Jun 15 09:58 ora legale Europa occidentale
+"touch_feedback_unit_tests" end time: Jun 16 10:41 ora legale Europa occidentale
 "touch_feedback_unit_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/5 Testing: bandy_completion_unit_tests
-3/5 Test: bandy_completion_unit_tests
+3/6 Testing: bandy_completion_unit_tests
+3/6 Test: bandy_completion_unit_tests
 Command: "C:/TouchGFXProjects/Display_test_prova/tests/build/test_bandy_completion.exe"
-Directory: C:/Users/CodexSandboxOffline/.codex/.sandbox/cwd/7f041845e3bea2ad/tests/build
-"bandy_completion_unit_tests" start time: Jun 15 09:58 ora legale Europa occidentale
+Directory: C:/TouchGFXProjects/Display_test_prova/tests/build
+"bandy_completion_unit_tests" start time: Jun 16 10:41 ora legale Europa occidentale
 Output:
 ----------------------------------------------------------
 [doctest] doctest version is "2.4.11"
@@ -56,39 +56,39 @@ Output:
 [doctest] assertions: 4 | 4 passed | 0 failed |
 [doctest] Status: SUCCESS!
 <end of output>
-Test time =   0.02 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"bandy_completion_unit_tests" end time: Jun 15 09:58 ora legale Europa occidentale
+"bandy_completion_unit_tests" end time: Jun 16 10:41 ora legale Europa occidentale
 "bandy_completion_unit_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/5 Testing: asset_manifest_unit_tests
-4/5 Test: asset_manifest_unit_tests
+4/6 Testing: asset_manifest_unit_tests
+4/6 Test: asset_manifest_unit_tests
 Command: "C:/TouchGFXProjects/Display_test_prova/tests/build/test_asset_manifest.exe"
-Directory: C:/Users/CodexSandboxOffline/.codex/.sandbox/cwd/7f041845e3bea2ad/tests/build
-"asset_manifest_unit_tests" start time: Jun 15 09:58 ora legale Europa occidentale
+Directory: C:/TouchGFXProjects/Display_test_prova/tests/build
+"asset_manifest_unit_tests" start time: Jun 16 10:41 ora legale Europa occidentale
 Output:
 ----------------------------------------------------------
 [doctest] doctest version is "2.4.11"
 [doctest] run with "--help" for options
 ===============================================================================
-[doctest] test cases:  4 |  4 passed | 0 failed | 0 skipped
-[doctest] assertions: 13 | 13 passed | 0 failed |
+[doctest] test cases:  5 |  5 passed | 0 failed | 0 skipped
+[doctest] assertions: 34 | 34 passed | 0 failed |
 [doctest] Status: SUCCESS!
 <end of output>
-Test time =   0.04 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"asset_manifest_unit_tests" end time: Jun 15 09:58 ora legale Europa occidentale
+"asset_manifest_unit_tests" end time: Jun 16 10:41 ora legale Europa occidentale
 "asset_manifest_unit_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/5 Testing: asset_flash_layout_unit_tests
-5/5 Test: asset_flash_layout_unit_tests
+5/6 Testing: asset_flash_layout_unit_tests
+5/6 Test: asset_flash_layout_unit_tests
 Command: "C:/TouchGFXProjects/Display_test_prova/tests/build/test_asset_flash_layout.exe"
-Directory: C:/Users/CodexSandboxOffline/.codex/.sandbox/cwd/7f041845e3bea2ad/tests/build
-"asset_flash_layout_unit_tests" start time: Jun 15 09:58 ora legale Europa occidentale
+Directory: C:/TouchGFXProjects/Display_test_prova/tests/build
+"asset_flash_layout_unit_tests" start time: Jun 16 10:41 ora legale Europa occidentale
 Output:
 ----------------------------------------------------------
 [doctest] doctest version is "2.4.11"
@@ -98,11 +98,32 @@ Output:
 [doctest] assertions: 15 | 15 passed | 0 failed |
 [doctest] Status: SUCCESS!
 <end of output>
-Test time =   0.02 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"asset_flash_layout_unit_tests" end time: Jun 15 09:58 ora legale Europa occidentale
+"asset_flash_layout_unit_tests" end time: Jun 16 10:41 ora legale Europa occidentale
 "asset_flash_layout_unit_tests" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jun 15 09:58 ora legale Europa occidentale
+6/6 Testing: flash_selftest_pattern_unit_tests
+6/6 Test: flash_selftest_pattern_unit_tests
+Command: "C:/TouchGFXProjects/Display_test_prova/tests/build/test_flash_selftest_pattern.exe"
+Directory: C:/TouchGFXProjects/Display_test_prova/tests/build
+"flash_selftest_pattern_unit_tests" start time: Jun 16 10:41 ora legale Europa occidentale
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.4.11"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases:    6 |    6 passed | 0 failed | 0 skipped
+[doctest] assertions: 3115 | 3115 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"flash_selftest_pattern_unit_tests" end time: Jun 16 10:41 ora legale Europa occidentale
+"flash_selftest_pattern_unit_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 16 10:41 ora legale Europa occidentale

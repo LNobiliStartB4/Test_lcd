@@ -22,12 +22,24 @@ volatile uint8_t isTransmittingBlock = 0;
 
 enum
 {
+    DISPLAY_WIDTH = 480,
+    DISPLAY_HEIGHT = 320,
+    DISPLAY_CLEAR_LINE_BYTES = DISPLAY_WIDTH * 3,
+    DISPLAY_RGB666_BUFFER_BYTES = 19200,
     DISPLAY_ADDRESS_MODE_LANDSCAPE = 0x28,
     DISPLAY_ADDRESS_MODE_LANDSCAPE_180 = 0xE8
 };
 
 /* RGB666 conversion buffer: 320 * 20 lines * 3 bytes = 19200 bytes */
-static uint8_t rgb666_buf[19200];
+static uint8_t rgb666_buf[DISPLAY_RGB666_BUFFER_BYTES];
+static uint8_t clearLine[DISPLAY_CLEAR_LINE_BYTES];
+static uint16_t oldX0 = 0xFFFFU;
+static uint16_t oldX1 = 0xFFFFU;
+static uint16_t oldY0 = 0xFFFFU;
+static uint16_t oldY1 = 0xFFFFU;
+
+_Static_assert(DISPLAY_RGB666_BUFFER_BYTES >= (DISPLAY_WIDTH * 13U * 3U),
+               "RGB666 DMA buffer must hold a 13-line partial framebuffer block");
 
 /* Forward declaration - defined in TouchGFXGeneratedHAL.cpp */
 extern void DisplayDriver_TransferCompleteCallback(void);
@@ -79,6 +91,60 @@ static void DisplaySendCommandData(uint8_t command, uint8_t data)
     DisplaySendCommandDataArray(command, &data, 1);
 }
 
+static void DisplayInvalidateCachedArea(void)
+{
+    oldX0 = 0xFFFFU;
+    oldX1 = 0xFFFFU;
+    oldY0 = 0xFFFFU;
+    oldY1 = 0xFFFFU;
+}
+
+static int DisplayAreaIsValid(uint16_t x, uint16_t y, uint16_t w, uint16_t h)
+{
+    return (w > 0U) &&
+           (h > 0U) &&
+           (x < DISPLAY_WIDTH) &&
+           (y < DISPLAY_HEIGHT) &&
+           (w <= (DISPLAY_WIDTH - x)) &&
+           (h <= (DISPLAY_HEIGHT - y));
+}
+
+static int DisplaySetAreaChecked(uint16_t x0, uint16_t y0,
+                                 uint16_t x1, uint16_t y1)
+{
+    uint8_t arguments[4];
+
+    if ((x0 > x1) || (y0 > y1) ||
+        (x1 >= DISPLAY_WIDTH) || (y1 >= DISPLAY_HEIGHT))
+    {
+        return 0;
+    }
+
+    if ((x0 != oldX0) || (x1 != oldX1))
+    {
+        arguments[0] = (uint8_t)(x0 >> 8);
+        arguments[1] = (uint8_t)(x0 & 0xFF);
+        arguments[2] = (uint8_t)(x1 >> 8);
+        arguments[3] = (uint8_t)(x1 & 0xFF);
+        DisplaySendCommandDataArray(DCS_SET_COLUMN_ADDRESS, arguments, 4);
+        oldX0 = x0;
+        oldX1 = x1;
+    }
+
+    if ((y0 != oldY0) || (y1 != oldY1))
+    {
+        arguments[0] = (uint8_t)(y0 >> 8);
+        arguments[1] = (uint8_t)(y0 & 0xFF);
+        arguments[2] = (uint8_t)(y1 >> 8);
+        arguments[3] = (uint8_t)(y1 & 0xFF);
+        DisplaySendCommandDataArray(DCS_SET_PAGE_ADDRESS, arguments, 4);
+        oldY0 = y0;
+        oldY1 = y1;
+    }
+
+    return 1;
+}
+
 /* --------------------------------------------------------------------------
  * Public API
  * -------------------------------------------------------------------------- */
@@ -96,33 +162,7 @@ void Display_OFF(void)
 
 void Display_Set_Area(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1)
 {
-    static uint16_t old_x0 = 0xFFFF;
-    static uint16_t old_x1 = 0xFFFF;
-    static uint16_t old_y0 = 0xFFFF;
-    static uint16_t old_y1 = 0xFFFF;
-    uint8_t arguments[4];
-
-    if (x0 != old_x0 || x1 != old_x1)
-    {
-        arguments[0] = (uint8_t)(x0 >> 8);
-        arguments[1] = (uint8_t)(x0 & 0xFF);
-        arguments[2] = (uint8_t)(x1 >> 8);
-        arguments[3] = (uint8_t)(x1 & 0xFF);
-        DisplaySendCommandDataArray(DCS_SET_COLUMN_ADDRESS, arguments, 4);
-        old_x0 = x0;
-        old_x1 = x1;
-    }
-
-    if (y0 != old_y0 || y1 != old_y1)
-    {
-        arguments[0] = (uint8_t)(y0 >> 8);
-        arguments[1] = (uint8_t)(y0 & 0xFF);
-        arguments[2] = (uint8_t)(y1 >> 8);
-        arguments[3] = (uint8_t)(y1 & 0xFF);
-        DisplaySendCommandDataArray(DCS_SET_PAGE_ADDRESS, arguments, 4);
-        old_y0 = y0;
-        old_y1 = y1;
-    }
+    (void)DisplaySetAreaChecked(x0, y0, x1, y1);
 }
 
 void DisplayDriver_DisplayInit(void)
@@ -199,6 +239,52 @@ void DisplayDriver_DisplayInit(void)
     arguments[9]  = 0x04; arguments[10] = 0x0E; arguments[11] = 0x0D;
     arguments[12] = 0x35; arguments[13] = 0x37; arguments[14] = 0x0F;
     DisplaySendCommandDataArray(ILI9488_NEGATIVE_GAMMA, arguments, 15);
+    DisplayInvalidateCachedArea();
+}
+
+void DisplayDriver_Clear(uint8_t red, uint8_t green, uint8_t blue)
+{
+    uint16_t line;
+    uint16_t pixel;
+    uint8_t command = DCS_WRITE_MEMORY_START;
+
+    if (touchgfxDisplayDriverTransmitActive())
+    {
+        return;
+    }
+
+    for (pixel = 0U; pixel < DISPLAY_WIDTH; pixel++)
+    {
+        clearLine[(pixel * 3U) + 0U] = red;
+        clearLine[(pixel * 3U) + 1U] = green;
+        clearLine[(pixel * 3U) + 2U] = blue;
+    }
+
+    DisplayInvalidateCachedArea();
+    if (!DisplaySetAreaChecked(0U, 0U,
+                               DISPLAY_WIDTH - 1U,
+                               DISPLAY_HEIGHT - 1U))
+    {
+        return;
+    }
+
+    HAL_GPIO_WritePin(DISP_CS_GPIO_Port, DISP_CS_Pin, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(DISP_DC_GPIO_Port, DISP_DC_Pin, GPIO_PIN_RESET);
+    if (HAL_SPI_Transmit(&hspi1, &command, 1U, HAL_MAX_DELAY) == HAL_OK)
+    {
+        HAL_GPIO_WritePin(DISP_DC_GPIO_Port, DISP_DC_Pin, GPIO_PIN_SET);
+        for (line = 0U; line < DISPLAY_HEIGHT; line++)
+        {
+            if (HAL_SPI_Transmit(&hspi1, clearLine,
+                                 DISPLAY_CLEAR_LINE_BYTES,
+                                 HAL_MAX_DELAY) != HAL_OK)
+            {
+                break;
+            }
+        }
+    }
+    HAL_GPIO_WritePin(DISP_CS_GPIO_Port, DISP_CS_Pin, GPIO_PIN_SET);
+    DisplayInvalidateCachedArea();
 }
 
 void DisplayDriver_DisplayReset(void)
@@ -207,6 +293,7 @@ void DisplayDriver_DisplayReset(void)
     HAL_Delay(10);
     HAL_GPIO_WritePin(DISP_RST_GPIO_Port, DISP_RST_Pin, GPIO_PIN_SET);
     HAL_Delay(120);
+    DisplayInvalidateCachedArea();
 }
 
 void DisplayDriver_Init(void)
@@ -226,7 +313,17 @@ void touchgfxDisplayDriverTransmitBlock(const uint8_t *pixels, uint16_t x, uint1
 
     isTransmittingBlock = 1;
 
-    Display_Set_Area(x, y, x + w - 1, y + h - 1);
+    if ((pixels == NULL) ||
+        !DisplayAreaIsValid(x, y, w, h) ||
+        ((pixelCount * 3U) > sizeof(rgb666_buf)) ||
+        !DisplaySetAreaChecked(x, y,
+                               (uint16_t)(x + w - 1U),
+                               (uint16_t)(y + h - 1U)))
+    {
+        isTransmittingBlock = 0;
+        DisplayDriver_TransferCompleteCallback();
+        return;
+    }
 
     /* Convert RGB565 → RGB666 (3 bytes/pixel for ILI9488 SPI mode) */
     convertRGB565toRGB666((const uint16_t *)pixels, rgb666_buf, pixelCount);

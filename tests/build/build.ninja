@@ -295,6 +295,57 @@ build test_asset_flash_layout.exe: CXX_EXECUTABLE_LINKER__test_asset_flash_layou
   TARGET_PDB = test_asset_flash_layout.pdb
   TARGET_SUPPORT_DIR = CMakeFiles\test_asset_flash_layout.dir
 
+# =============================================================================
+# Object build statements for EXECUTABLE target test_flash_selftest_pattern
+
+
+#############################################
+# Order-only phony target for test_flash_selftest_pattern
+
+build cmake_object_order_depends_target_test_flash_selftest_pattern: phony || .
+
+build CMakeFiles\test_flash_selftest_pattern.dir\test_flash_selftest_pattern.cpp.obj: CXX_COMPILER__test_flash_selftest_pattern_unscanned_Debug C$:\TouchGFXProjects\Display_test_prova\tests\test_flash_selftest_pattern.cpp || cmake_object_order_depends_target_test_flash_selftest_pattern
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++14 -MDd
+  INCLUDES = -IC:\TouchGFXProjects\Display_test_prova\tests\..\Core\Inc -IC:\TouchGFXProjects\Display_test_prova\tests\build\_deps\doctest-src
+  OBJECT_DIR = CMakeFiles\test_flash_selftest_pattern.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_flash_selftest_pattern.dir
+  TARGET_COMPILE_PDB = CMakeFiles\test_flash_selftest_pattern.dir\
+  TARGET_PDB = test_flash_selftest_pattern.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_flash_selftest_pattern.dir
+
+build CMakeFiles\test_flash_selftest_pattern.dir\C_\TouchGFXProjects\Display_test_prova\Core\Src\flash_selftest_pattern.c.obj: C_COMPILER__test_flash_selftest_pattern_unscanned_Debug C$:\TouchGFXProjects\Display_test_prova\Core\Src\flash_selftest_pattern.c || cmake_object_order_depends_target_test_flash_selftest_pattern
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd
+  INCLUDES = -IC:\TouchGFXProjects\Display_test_prova\tests\..\Core\Inc -IC:\TouchGFXProjects\Display_test_prova\tests\build\_deps\doctest-src
+  OBJECT_DIR = CMakeFiles\test_flash_selftest_pattern.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_flash_selftest_pattern.dir\C_\TouchGFXProjects\Display_test_prova\Core\Src
+  TARGET_COMPILE_PDB = CMakeFiles\test_flash_selftest_pattern.dir\
+  TARGET_PDB = test_flash_selftest_pattern.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_flash_selftest_pattern.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_flash_selftest_pattern
+
+
+#############################################
+# Link the executable test_flash_selftest_pattern.exe
+
+build test_flash_selftest_pattern.exe: CXX_EXECUTABLE_LINKER__test_flash_selftest_pattern_Debug CMakeFiles\test_flash_selftest_pattern.dir\test_flash_selftest_pattern.cpp.obj CMakeFiles\test_flash_selftest_pattern.dir\C_\TouchGFXProjects\Display_test_prova\Core\Src\flash_selftest_pattern.c.obj
+  CONFIG = Debug
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:X86 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = CMakeFiles\test_flash_selftest_pattern.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\test_flash_selftest_pattern.dir\
+  TARGET_FILE = test_flash_selftest_pattern.exe
+  TARGET_IMPLIB = test_flash_selftest_pattern.lib
+  TARGET_PDB = test_flash_selftest_pattern.pdb
+  TARGET_SUPPORT_DIR = CMakeFiles\test_flash_selftest_pattern.dir
+
 
 #############################################
 # Utility command for test
@@ -485,6 +536,8 @@ build test_asset_manifest: phony test_asset_manifest.exe
 
 build test_bandy_completion: phony test_bandy_completion.exe
 
+build test_flash_selftest_pattern: phony test_flash_selftest_pattern.exe
+
 build test_model: phony test_model.exe
 
 build test_touch_feedback: phony test_touch_feedback.exe
@@ -497,7 +550,7 @@ build test_touch_feedback: phony test_touch_feedback.exe
 #############################################
 # Folder: C:/TouchGFXProjects/Display_test_prova/tests/build
 
-build all: phony test_model.exe test_touch_feedback.exe test_bandy_completion.exe test_asset_manifest.exe test_asset_flash_layout.exe _deps\doctest-build\all
+build all: phony test_model.exe test_touch_feedback.exe test_bandy_completion.exe test_asset_manifest.exe test_asset_flash_layout.exe test_flash_selftest_pattern.exe _deps\doctest-build\all
 
 # =============================================================================
 

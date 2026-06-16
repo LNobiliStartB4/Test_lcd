@@ -3,6 +3,7 @@ C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/test_touch_feedbac
 C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/test_bandy_completion.dir
 C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/test_asset_manifest.dir
 C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/test_asset_flash_layout.dir
+C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/test_flash_selftest_pattern.dir
 C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/test.dir
 C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/edit_cache.dir
 C:/TouchGFXProjects/Display_test_prova/tests/build/CMakeFiles/rebuild_cache.dir

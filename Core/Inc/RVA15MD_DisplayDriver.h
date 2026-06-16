@@ -38,6 +38,7 @@ void     DisplayDriver_Init(void);
 void     DisplayDriver_DisplayOn(void);
 void     DisplayDriver_DisplayReset(void);
 void     DisplayDriver_DisplayInit(void);
+void     DisplayDriver_Clear(uint8_t red, uint8_t green, uint8_t blue);
 void     DisplayDriver_TransferCompleteCallback(void);
 
 #ifdef __cplusplus

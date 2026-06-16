@@ -5564,8 +5564,8 @@
     ],
     "Name": "Display_test_prova",
     "Resolution": {
-      "Width": 320,
-      "Height": 480
+      "Width": 480,
+      "Height": 320
     },
     "SelectedColorDepth": 16,
     "StartupScreenName": "Screen1",
@@ -5584,8 +5584,8 @@
     ],
     "AvailableResolutions": [
       {
-        "Width": 320,
-        "Height": 480
+        "Width": 480,
+        "Height": 320
       }
     ],
     "PhysicalButtons": [],

@@ -99,6 +99,18 @@ SECTIONS
     . = ALIGN(4);
   } >ASSET_FLASH
 
+  /* Patched after the first link with the exact identity of assets.bin.
+   * Keeping this as a fixed-size section lets the debug ELF retain symbols
+   * while the downloadable internal HEX is coupled to one asset package. */
+  AssetExpectedSection :
+  {
+    . = ALIGN(4);
+    KEEP(*(AssetExpectedSection))
+    . = ALIGN(4);
+  } >FLASH
+  ASSERT(SIZEOF(AssetExpectedSection) == 32,
+         "AssetExpectedSection must contain one 32-byte manifest")
+
   IntFlashSection :
   {
     . = ALIGN(4);

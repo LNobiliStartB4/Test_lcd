@@ -31,7 +31,8 @@ Core/Src/w25q64.o: ../Core/Src/w25q64.c ../Core/Inc/w25q64.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../Core/Inc/asset_manifest.h ../Core/Inc/asset_flash_layout.h
+ ../Core/Inc/asset_manifest.h ../Core/Inc/asset_flash_layout.h \
+ ../Core/Inc/flash_selftest_pattern.h
 ../Core/Inc/w25q64.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -68,3 +69,4 @@ Core/Src/w25q64.o: ../Core/Src/w25q64.c ../Core/Inc/w25q64.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 ../Core/Inc/asset_manifest.h:
 ../Core/Inc/asset_flash_layout.h:
+../Core/Inc/flash_selftest_pattern.h:

@@ -1,0 +1,7 @@
+..\Core\Src\asset_flasher.c:129:13:FlushUartRx	3
+..\Core\Src\asset_flasher.c:82:13:Tx.isra	1
+..\Core\Src\asset_flasher.c:264:13:ReplyDiagnosticRecord	1
+..\Core\Src\asset_flasher.c:279:13:RunDiagnosticSession	1
+..\Core\Src\asset_flasher.c:93:13:ReplyError	1
+..\Core\Src\asset_flasher.c:107:13:ReplyProgress	1
+..\Core\Src\asset_flasher.c:520:6:AssetFlasher_RunAtBoot	34

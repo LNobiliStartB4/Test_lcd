@@ -7,6 +7,7 @@
 "./Core/Src/bandy_session_store_core.o"
 "./Core/Src/display_backlight.o"
 "./Core/Src/display_bridge_rx.o"
+"./Core/Src/flash_selftest_pattern.o"
 "./Core/Src/fram_mb85rs256b.o"
 "./Core/Src/main.o"
 "./Core/Src/stm32f4xx_hal_msp.o"
