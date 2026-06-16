@@ -201,15 +201,14 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS; /* 8 MHz from ST-Link MCO */
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLM = 16;
-  RCC_OscInitStruct.PLL.PLLN = 336;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
-  RCC_OscInitStruct.PLL.PLLQ = 7;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLM = 8;   /* 8 MHz / 8 = 1 MHz VCO input */
+  RCC_OscInitStruct.PLL.PLLN = 336; /* 1 MHz * 336 = 336 MHz VCO */
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4; /* 336 / 4 = 84 MHz SYSCLK */
+  RCC_OscInitStruct.PLL.PLLQ = 7;   /* 336 / 7 = 48 MHz (USB) */
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
