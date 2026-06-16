@@ -12,6 +12,8 @@ extern UART_HandleTypeDef huart2;
 #define FLASHER_KNOCK             "ADHTPROG"
 #define FLASHER_KNOCK_LEN         8U
 #define FLASHER_DIAGNOSTIC_KNOCK  "ADHTDIAG"
+#define FLASHER_UART_TEST_KNOCK   "ADHTUART"
+#define FLASHER_UART_TEST_BYTES   65536U
 #define FLASHER_DIAGNOSTIC_VERSION 1U
 #define FLASHER_DIAGNOSTIC_MODE_COUNT 2U
 #define FLASHER_DIAGNOSTIC_HEADER_MAGIC "DGOK"
@@ -24,6 +26,7 @@ extern UART_HandleTypeDef huart2;
 
 #define FLASHER_REPLY_HELLO       'H'
 #define FLASHER_REPLY_DIAGNOSTIC  'Q'
+#define FLASHER_REPLY_UART_TEST   'U'
 #define FLASHER_REPLY_ACCEPTED    'A'
 #define FLASHER_REPLY_PROGRESS    'S'
 #define FLASHER_REPLY_READY       'R'
@@ -47,7 +50,8 @@ extern const asset_manifest_t g_expected_asset_package;
 typedef enum
 {
   FLASHER_COMMAND_PROGRAM,
-  FLASHER_COMMAND_DIAGNOSTIC
+  FLASHER_COMMAND_DIAGNOSTIC,
+  FLASHER_COMMAND_UART_TEST
 } flasher_command_t;
 
 typedef enum
@@ -221,8 +225,11 @@ static flasher_command_t WaitForRecoveryCommand(void)
       (const uint8_t *)FLASHER_KNOCK;
   const uint8_t *diagnostic =
       (const uint8_t *)FLASHER_DIAGNOSTIC_KNOCK;
+  const uint8_t *uartTest =
+      (const uint8_t *)FLASHER_UART_TEST_KNOCK;
   uint16_t programMatched = 0U;
   uint16_t diagnosticMatched = 0U;
+  uint16_t uartMatched = 0U;
 
   for (;;)
   {
@@ -258,6 +265,40 @@ static flasher_command_t WaitForRecoveryCommand(void)
     {
       diagnosticMatched = (byte == diagnostic[0]) ? 1U : 0U;
     }
+
+    if (byte == uartTest[uartMatched])
+    {
+      uartMatched++;
+      if (uartMatched == FLASHER_KNOCK_LEN)
+      {
+        return FLASHER_COMMAND_UART_TEST;
+      }
+    }
+    else
+    {
+      uartMatched = (byte == uartTest[0]) ? 1U : 0U;
+    }
+  }
+}
+
+/* UART-only link test: stream a counter pattern (byte[i] == i & 0xFF)
+ * device->host so the host can measure drops/corruption on the serial path
+ * alone, with no SPI/flash/erase involved. */
+static void RunUartTestSession(void)
+{
+  uint8_t buffer[256];
+  uint32_t i;
+  uint32_t sent;
+
+  for (i = 0U; i < sizeof(buffer); i++)
+  {
+    buffer[i] = (uint8_t)i; /* 0..255; chunks start at 256-byte boundaries */
+  }
+
+  Reply(FLASHER_REPLY_UART_TEST);
+  for (sent = 0U; sent < FLASHER_UART_TEST_BYTES; sent += (uint32_t)sizeof(buffer))
+  {
+    (void)Tx(buffer, sizeof(buffer));
   }
 }
 
@@ -483,6 +524,10 @@ void AssetFlasher_RunAtBoot(bool assetsValid, bool programmingRequested)
     if (command == FLASHER_COMMAND_DIAGNOSTIC)
     {
       RunDiagnosticSession();
+    }
+    else if (command == FLASHER_COMMAND_UART_TEST)
+    {
+      RunUartTestSession();
     }
     else
     {
