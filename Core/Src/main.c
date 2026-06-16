@@ -37,7 +37,14 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+/* Bring-up diagnostic: when 1, the board runs a serial-free W25Q64 self-test at
+ * boot (write+read-back of a known pattern) and shows GREEN=pass / RED=fail,
+ * then halts. Isolates the SPI/flash link from the UART path. Default 0. */
+#ifndef FLASH_SELFTEST_ENABLED
+#define FLASH_SELFTEST_ENABLED 0
+#endif
+/* #bytes for the self-test: matches the real asset blob for a 1:1 comparison. */
+#define FLASH_SELFTEST_BYTES   237616U
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -125,6 +132,27 @@ int main(void)
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   W25Q64_Init();
+#if FLASH_SELFTEST_ENABLED
+  {
+    /* Serial-free SPI/flash isolation test: write+read-back a known pattern,
+     * show GREEN=pass / RED=fail, then halt. No UART, no TouchGFX. */
+    w25q64_selftest_result_t selfTest;
+    DisplayBacklight_Init(&htim1, TIM_CHANNEL_1);
+    DisplayDriver_DisplayReset();
+    DisplayDriver_Init();
+    DisplayDriver_DisplayInit();
+    DisplayDriver_Clear(0U, 0U, 0U);          /* black while testing */
+    DisplayDriver_DisplayOn();
+    (void)W25Q64_SelfTest(FLASH_SELFTEST_BYTES, &selfTest);
+    DisplayDriver_Clear(selfTest.ok ? 0U : 255U,    /* R: red on fail   */
+                        selfTest.ok ? 255U : 0U,    /* G: green on pass */
+                        0U);                          /* B                */
+    for (;;)
+    {
+      /* Leave the PASS/FAIL colour on screen. */
+    }
+  }
+#endif
   AssetFlasher_RunAtBoot(assetProgrammingRequested
                              ? false
                              : W25Q64_ValidateAssetPackage(),
@@ -136,6 +164,7 @@ int main(void)
   DisplayDriver_DisplayReset();
   DisplayDriver_Init();
   DisplayDriver_DisplayInit();
+  DisplayDriver_Clear(0U, 0U, 0U);
   DisplayDriver_DisplayOn();
   DisplayBridgeRx_Init(&huart2);
 
@@ -326,7 +355,7 @@ static void MX_SPI3_Init(void)
   hspi3.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi3.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi3.Init.NSS = SPI_NSS_SOFT;
-  hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
   hspi3.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi3.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi3.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -582,6 +611,14 @@ static void MX_GPIO_Init(void)
    * can release the button immediately after reset. */
   assetProgrammingRequested =
       HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) == GPIO_PIN_RESET;
+
+  /* Keep the external asset flash CS electrically quiet on breadboard wiring. */
+  GPIO_InitStruct.Pin = ASSET_FLASH_CS_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(ASSET_FLASH_CS_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_WritePin(ASSET_FLASH_CS_GPIO_Port, ASSET_FLASH_CS_Pin, GPIO_PIN_SET);
 
   /* Deselect display (CS idle = HIGH) */
   HAL_GPIO_WritePin(DISP_CS_GPIO_Port, DISP_CS_Pin, GPIO_PIN_SET);
