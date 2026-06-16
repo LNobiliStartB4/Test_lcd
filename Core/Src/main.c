@@ -43,6 +43,9 @@
 #ifndef FLASH_SELFTEST_ENABLED
 #define FLASH_SELFTEST_ENABLED 0
 #endif
+#ifndef UART_LINK_DIAG_ONLY
+#define UART_LINK_DIAG_ONLY 0
+#endif
 /* #bytes for the self-test: matches the real asset blob for a 1:1 comparison. */
 #define FLASH_SELFTEST_BYTES   237616U
 /* USER CODE END PD */
@@ -121,6 +124,10 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+#if UART_LINK_DIAG_ONLY
+  MX_USART2_UART_Init();
+  AssetFlasher_RunUartLinkDiagnosticsOnly();
+#else
   MX_DMA_Init();
   MX_CRC_Init();
   MX_I2C1_Init();
@@ -182,6 +189,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
+#endif
 }
 
 /**

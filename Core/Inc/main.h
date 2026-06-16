@@ -95,6 +95,14 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 #define FRAM_CS_Pin GPIO_PIN_6
 #define FRAM_CS_GPIO_Port GPIOB
 
+/* Bring-up switch shared by main.c and asset_flasher.c.
+ * 1 = isolated UART diagnostic on USART1 (PA9 TX, PB7 RX) for C232HD tests.
+ * 0 = normal firmware path using USART2/ST-LINK VCP.
+ */
+#ifndef UART_LINK_DIAG_ONLY
+#define UART_LINK_DIAG_ONLY 0
+#endif
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
