@@ -72,6 +72,16 @@ target_include_directories(test_asset_flash_layout PRIVATE
 )
 target_link_libraries(test_asset_flash_layout PRIVATE doctest::doctest)
 
+# Pure (HAL-free) deterministic self-test pattern generator.
+add_executable(test_flash_selftest_pattern
+  test_flash_selftest_pattern.cpp
+  ${DISPLAY_ROOT}/Core/Src/flash_selftest_pattern.c
+)
+target_include_directories(test_flash_selftest_pattern PRIVATE
+  ${DISPLAY_ROOT}/Core/Inc
+)
+target_link_libraries(test_flash_selftest_pattern PRIVATE doctest::doctest)
+
 # MSVC: silence "non-standard extension" warnings on uninitialized POD fields
 if (MSVC)
   target_compile_options(test_model PRIVATE /W3 /permissive-)
@@ -102,5 +112,9 @@ set_tests_properties(asset_manifest_unit_tests PROPERTIES
 )
 add_test(NAME asset_flash_layout_unit_tests COMMAND test_asset_flash_layout)
 set_tests_properties(asset_flash_layout_unit_tests PROPERTIES
+  TIMEOUT 30
+)
+add_test(NAME flash_selftest_pattern_unit_tests COMMAND test_flash_selftest_pattern)
+set_tests_properties(flash_selftest_pattern_unit_tests PROPERTIES
   TIMEOUT 30
 )
