@@ -39,6 +39,11 @@ extern UART_HandleTypeDef huart2;
 
 #define FLASHER_HEADER_MAGIC       "ADHTHEAD"
 #define FLASHER_HEADER_MAGIC_LEN   8U
+
+/* Robust streaming frame: SYNC + offset(4) + len(2) + data + crc32(4). */
+#define FLASHER_STREAM_SYNC        "ADCK"
+#define FLASHER_STREAM_SYNC_LEN    4U
+#define FLASHER_REPLY_CHUNK_NAK    'C'  /* reuse ERROR+'C' to request a resend */
 #define FLASHER_HEADER_TAIL_LEN    (8U + ASSET_PACKAGE_ID_SIZE)
 
 #define FLASHER_IO_TIMEOUT_MS      5000U
@@ -176,15 +181,6 @@ static void ReplyHello(void)
   uint8_t reply[4] = {FLASHER_REPLY_HELLO, 0U, 0U, 0U};
 
   W25Q64_GetJedecId(&reply[1]);
-  (void)Tx(reply, sizeof(reply));
-}
-
-static void ReplyChunkOk(uint32_t nextOffset)
-{
-  uint8_t reply[5] = {FLASHER_REPLY_CHUNK_OK, 0U, 0U, 0U, 0U};
-
-  WriteU32Le(&reply[1], nextOffset);
-
   (void)Tx(reply, sizeof(reply));
 }
 
@@ -584,38 +580,132 @@ static bool WriteManifest(uint32_t dataLength,
                       sizeof(manifest));
 }
 
+/* Scan the UART for the chunk-frame marker so a garbled/extra byte cannot
+ * permanently desync the stream: any junk is skipped until "ADCK" appears. */
+static bool WaitForStreamSync(uint32_t timeoutMs)
+{
+  const uint8_t *sync = (const uint8_t *)FLASHER_STREAM_SYNC;
+  uint16_t matched = 0U;
+  uint32_t start = HAL_GetTick();
+
+  while ((HAL_GetTick() - start) < timeoutMs)
+  {
+    uint8_t byte;
+    uint32_t elapsed = HAL_GetTick() - start;
+    uint32_t remaining = (elapsed < timeoutMs) ? (timeoutMs - elapsed) : 0U;
+    uint32_t receiveTimeout = 50U;
+
+    if (remaining == 0U)
+    {
+      break;
+    }
+    if (receiveTimeout > remaining)
+    {
+      receiveTimeout = remaining;
+    }
+
+    if (HAL_UART_Receive(&FLASHER_UART_HANDLE, &byte, 1U, receiveTimeout) != HAL_OK)
+    {
+      ClearUartErrors();
+      continue;
+    }
+
+    if (byte == sync[matched])
+    {
+      matched++;
+      if (matched == FLASHER_STREAM_SYNC_LEN)
+      {
+        return true;
+      }
+    }
+    else
+    {
+      matched = (byte == sync[0]) ? 1U : 0U;
+    }
+  }
+
+  return false;
+}
+
+/* Robust streaming: each chunk is SYNC + offset(4) + len(2) + data + crc32(4).
+ * A single 'K' acks a good chunk (minimal device->host traffic on a lossy VCP);
+ * a CRC/frame error or a lost ack just makes the host retransmit that chunk,
+ * which we resync on (SYNC) and deduplicate (offset). The transfer therefore
+ * completes even when the link drops/garbles bytes. */
 static flasher_transfer_result_t ReceiveAndProgram(uint32_t dataLength,
                                                    uint32_t *outCrc)
 {
-  uint32_t offset = 0U;
+  uint32_t expected = 0U;
   uint32_t crc = ASSET_CRC32_INIT;
+  uint8_t header[6];
+  uint8_t crcBytes[4];
 
-  while (offset < dataLength)
+  while (expected < dataLength)
   {
-    uint32_t chunk = dataLength - offset;
+    uint32_t offset;
+    uint16_t len;
+    uint32_t gotCrc;
+    uint32_t calcCrc;
 
-    if (chunk > sizeof(pageBuffer))
-    {
-      chunk = sizeof(pageBuffer);
-    }
-
-    if (!RxExact(pageBuffer, (uint16_t)chunk, FLASHER_IO_TIMEOUT_MS))
+    if (!WaitForStreamSync(FLASHER_IO_TIMEOUT_MS))
     {
       ReplyError(FLASHER_ERROR_TIMEOUT);
       return FLASHER_TRANSFER_FAILED;
     }
 
-    if (!W25Q64_Write(offset, pageBuffer, chunk))
+    if (!RxExact(header, sizeof(header), FLASHER_IO_TIMEOUT_MS))
     {
-      ReplyError(FLASHER_ERROR_PROGRAM);
-      return FLASHER_TRANSFER_FAILED;
+      ReplyError(FLASHER_ERROR_TIMEOUT);
+      continue;
     }
 
-    crc = asset_crc32_update(crc, pageBuffer, chunk);
+    offset = ReadU32Le(&header[0]);
+    len = (uint16_t)((uint16_t)header[4] | ((uint16_t)header[5] << 8));
 
-    offset += chunk;
+    if ((len == 0U) || (len > sizeof(pageBuffer)))
+    {
+      ReplyError(FLASHER_ERROR_HEADER);
+      continue;
+    }
 
-    ReplyChunkOk(offset);
+    if (!RxExact(pageBuffer, len, FLASHER_IO_TIMEOUT_MS) ||
+        !RxExact(crcBytes, sizeof(crcBytes), FLASHER_IO_TIMEOUT_MS))
+    {
+      ReplyError(FLASHER_ERROR_TIMEOUT);
+      continue;
+    }
+
+    gotCrc = ReadU32Le(crcBytes);
+    calcCrc = asset_crc32_final(
+        asset_crc32_update(ASSET_CRC32_INIT, pageBuffer, len));
+
+    if (calcCrc != gotCrc)
+    {
+      ReplyError(FLASHER_ERROR_CRC); /* host retransmits this chunk */
+      continue;
+    }
+
+    if (offset == expected)
+    {
+      if (!W25Q64_Write(offset, pageBuffer, len))
+      {
+        ReplyError(FLASHER_ERROR_PROGRAM);
+        return FLASHER_TRANSFER_FAILED;
+      }
+      crc = asset_crc32_update(crc, pageBuffer, len);
+      expected += len;
+      Reply(FLASHER_REPLY_CHUNK_OK);
+    }
+    else if (offset < expected)
+    {
+      /* Duplicate (host missed our ack): re-ack without rewriting. */
+      Reply(FLASHER_REPLY_CHUNK_OK);
+    }
+    else
+    {
+      /* Gap: a sequential host should never skip ahead. */
+      ReplyError(FLASHER_ERROR_HEADER);
+    }
   }
 
   *outCrc = asset_crc32_final(crc);

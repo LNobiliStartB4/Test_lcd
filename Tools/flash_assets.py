@@ -61,6 +61,13 @@ HEADER_MAGIC = b"ADHTHEAD"
 CHUNK = 256
 PACKAGE_ID_SIZE = 16
 
+# Robust streaming: each chunk is self-describing (sync + offset + len + data +
+# crc32) so a dropped/garbled device->host ACK only costs a retransmit of that
+# one chunk, not the whole transfer. The device replies a single 'K' on success
+# (minimises fragile device->host bytes) or 'E'+'C' to request a resend.
+STREAM_SYNC = b"ADCK"
+MAX_CHUNK_RETRIES = 20
+
 DIAGNOSTIC_SAMPLE_COUNT = 32
 DIAGNOSTIC_VERSION = 1
 DIAGNOSTIC_HEADER_MAGIC = b"DGOK"
@@ -617,41 +624,64 @@ def _wait_for_erase(ser, output: Callable[[str], None]) -> None:
     output("erase complete")
 
 
+def _frame_chunk(offset: int, data: bytes) -> bytes:
+    """Self-describing chunk: SYNC + offset(4) + len(2) + data + crc32(4).
+
+    The sync marker lets the device resync after any garbage, the offset lets it
+    deduplicate a retransmitted chunk (host missed our ACK), and the crc32 lets
+    it detect a corrupted chunk and ask for a resend."""
+    crc = zlib.crc32(data) & 0xFFFFFFFF
+    return (STREAM_SYNC
+            + struct.pack("<IH", offset, len(data))
+            + data
+            + struct.pack("<I", crc))
+
+
 def _stream_data(
     ser,
     data: bytes,
     output: Callable[[str], None],
     delay_after_chunk_s: float = 0.0,
+    max_retries: int = MAX_CHUNK_RETRIES,
 ) -> None:
     sent = 0
+    total = len(data)
 
-    while sent < len(data):
+    while sent < total:
         chunk = data[sent:sent + CHUNK]
-        _write_all(ser, chunk, f"chunk at offset {sent}")
+        frame = _frame_chunk(sent, chunk)
 
-        reply = _read_code(ser, CHUNK_TIMEOUT, f"chunk at offset {sent}")
+        acked = False
+        for _attempt in range(max_retries):
+            _write_all(ser, frame, f"chunk at offset {sent}")
 
-        if reply == ERROR:
-            _raise_device_error(ser, f"chunk at offset {sent}")
+            try:
+                reply = _read_code(ser, CHUNK_TIMEOUT, f"chunk ack at {sent}")
+            except FlashProtocolError:
+                continue  # lost ACK -> retransmit this chunk
 
-        if reply != CHUNK_OK:
+            if reply == CHUNK_OK:
+                acked = True
+                break
+
+            if reply == ERROR:
+                # NAK (e.g. CRC mismatch) or a device error: drain the reason
+                # byte to stay framed, then retransmit.
+                try:
+                    _read_device_error_reason(ser, f"chunk at offset {sent}")
+                except FlashProtocolError:
+                    pass
+                continue
+
+            # Unexpected/garbled reply byte -> retransmit.
+
+        if not acked:
             raise FlashProtocolError(
-                f"chunk at offset {sent}: expected {CHUNK_OK!r}, got {reply!r}"
+                f"chunk at offset {sent}: no ACK after {max_retries} attempts"
             )
 
-        next_offset = struct.unpack(
-            "<I", _read_exact(ser, 4, CHUNK_TIMEOUT, "chunk ACK offset")
-        )[0]
-
-        expected_offset = sent + len(chunk)
-
-        if next_offset != expected_offset:
-            raise FlashProtocolError(
-                f"device acknowledged offset {next_offset}, expected {expected_offset}"
-            )
-
-        sent = next_offset
-        output(f"programming: {sent}/{len(data)} bytes")
+        sent += len(chunk)
+        output(f"programming: {sent}/{total} bytes")
 
         if delay_after_chunk_s > 0.0:
             time.sleep(delay_after_chunk_s)

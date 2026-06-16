@@ -121,8 +121,8 @@ class FlashAssetsProtocolTests(unittest.TestCase):
             flash_assets.EXPECTED_JEDEC_ID,
             flash_assets.HEADER_ACCEPTED,
             flash_assets.READY,
-            ack(256),
-            ack(len(data)),
+            flash_assets.CHUNK_OK,
+            flash_assets.CHUNK_OK,
             flash_assets.VERIFYING,
             flash_assets.DONE_OK,
         ])
@@ -149,25 +149,33 @@ class FlashAssetsProtocolTests(unittest.TestCase):
         )
         self.assertEqual(serial_port.reset_count, 1)
 
-    def test_rejects_wrong_chunk_ack_offset(self):
+    def test_chunk_retransmitted_after_nak(self):
+        # data = 2 chunks (256 + 44). Chunk 1 is NAKed once (E+C), then ok.
         data = b"x" * 300
         serial_port = FakeSerial([
             flash_assets.HELLO,
             flash_assets.EXPECTED_JEDEC_ID,
             flash_assets.HEADER_ACCEPTED,
             flash_assets.READY,
-            ack(255),
+            flash_assets.ERROR, flash_assets.ERROR_CRC,  # chunk 1 -> resend
+            flash_assets.CHUNK_OK,                         # chunk 1 retransmit ok
+            flash_assets.CHUNK_OK,                         # chunk 2 ok
+            flash_assets.VERIFYING,
+            flash_assets.DONE_OK,
         ])
 
-        with self.assertRaisesRegex(
-            flash_assets.FlashProtocolError,
-            "offset 255.*expected 256",
-        ):
-            flash_assets.program_assets(
-                serial_port,
-                data,
-                output=lambda _message: None,
-            )
+        flash_assets.program_assets(
+            serial_port,
+            data,
+            output=lambda _message: None,
+        )
+
+        chunk_frames = [
+            write for write in serial_port.writes
+            if write.startswith(flash_assets.STREAM_SYNC)
+        ]
+        # chunk 1, chunk 1 retransmit, chunk 2
+        self.assertEqual(len(chunk_frames), 3)
 
     def test_reports_crc_error_distinctly(self):
         data = b"asset-data"
@@ -176,7 +184,7 @@ class FlashAssetsProtocolTests(unittest.TestCase):
             flash_assets.EXPECTED_JEDEC_ID,
             flash_assets.HEADER_ACCEPTED,
             flash_assets.READY,
-            ack(len(data)),
+            flash_assets.CHUNK_OK,
             flash_assets.ERROR,
             flash_assets.ERROR_CRC,
         ])
@@ -221,7 +229,7 @@ class FlashAssetsProtocolTests(unittest.TestCase):
             flash_assets.EXPECTED_JEDEC_ID,
             flash_assets.HEADER_ACCEPTED,
             flash_assets.READY,
-            ack(len(data)),
+            flash_assets.CHUNK_OK,
             flash_assets.VERIFYING,
             flash_assets.DONE_OK,
         ])
