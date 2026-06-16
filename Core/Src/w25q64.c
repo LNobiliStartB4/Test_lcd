@@ -3,11 +3,20 @@
 #include "main.h"
 #include "asset_manifest.h"
 #include "asset_flash_layout.h"
+#include "flash_selftest_pattern.h"
 
 #include <stddef.h>
+#include <string.h>
 
 #define W25Q64_CMD_READ          0x03U
 #define W25Q64_CMD_JEDEC_ID      0x9FU
+#define W25Q64_CMD_DEVICE_ID     0x90U
+#define W25Q64_CMD_RELEASE_POWER_DOWN 0xABU
+#define W25Q64_CMD_READ_STATUS2  0x35U
+#define W25Q64_CMD_READ_STATUS3  0x15U
+#define W25Q64_CMD_READ_SFDP     0x5AU
+#define W25Q64_CMD_ENABLE_RESET  0x66U
+#define W25Q64_CMD_RESET_DEVICE  0x99U
 #define W25Q64_CMD_WRITE_ENABLE  0x06U
 #define W25Q64_CMD_READ_STATUS1  0x05U
 #define W25Q64_CMD_PAGE_PROGRAM  0x02U
@@ -27,6 +36,19 @@ static volatile bool dmaReadActive;
 static bool flashReady;
 static uint8_t jedecId[3];
 
+/* The post-link asset packager replaces this exact section in the programming
+ * ELF/HEX. If an unpatched ELF is loaded, data_length remains zero and boot
+ * safely enters asset recovery instead of rendering from incompatible offsets. */
+const asset_manifest_t g_expected_asset_package
+    __attribute__((used, section("AssetExpectedSection"))) =
+{
+  ASSET_MANIFEST_MAGIC,
+  ASSET_MANIFEST_VERSION,
+  0U,
+  0U,
+  {0U}
+};
+
 static uint32_t W25Q64_NormalizeAddress(uint32_t address)
 {
   if (address >= W25Q64_VIRTUAL_BASE)
@@ -45,6 +67,101 @@ static void W25Q64_Select(void)
 static void W25Q64_Deselect(void)
 {
   HAL_GPIO_WritePin(ASSET_FLASH_CS_GPIO_Port, ASSET_FLASH_CS_Pin, GPIO_PIN_SET);
+}
+
+static bool W25Q64_SetSpiMode(uint8_t spiMode)
+{
+  uint32_t modeBits;
+
+  if (spiMode == 0U)
+  {
+    modeBits = SPI_POLARITY_LOW | SPI_PHASE_1EDGE;
+    hspi3.Init.CLKPolarity = SPI_POLARITY_LOW;
+    hspi3.Init.CLKPhase = SPI_PHASE_1EDGE;
+  }
+  else if (spiMode == 3U)
+  {
+    modeBits = SPI_POLARITY_HIGH | SPI_PHASE_2EDGE;
+    hspi3.Init.CLKPolarity = SPI_POLARITY_HIGH;
+    hspi3.Init.CLKPhase = SPI_PHASE_2EDGE;
+  }
+  else
+  {
+    return false;
+  }
+
+  W25Q64_WaitForDmaRead();
+  W25Q64_Deselect();
+  (void)HAL_SPI_Abort(&hspi3);
+  __HAL_SPI_DISABLE(&hspi3);
+  MODIFY_REG(hspi3.Instance->CR1, SPI_CR1_CPOL | SPI_CR1_CPHA, modeBits);
+  __HAL_SPI_ENABLE(&hspi3);
+  HAL_Delay(1U);
+  return true;
+}
+
+static bool W25Q64_CommandRead(const uint8_t *command, uint16_t commandLength,
+                               uint8_t *data, uint16_t dataLength)
+{
+  HAL_StatusTypeDef status;
+
+  if ((command == NULL) || (commandLength == 0U) ||
+      ((dataLength > 0U) && (data == NULL)))
+  {
+    return false;
+  }
+
+  W25Q64_Select();
+  status = HAL_SPI_Transmit(&hspi3, (uint8_t *)command, commandLength,
+                            W25Q64_TIMEOUT_MS);
+  if ((status == HAL_OK) && (dataLength > 0U))
+  {
+    status = HAL_SPI_Receive(&hspi3, data, dataLength, W25Q64_TIMEOUT_MS);
+  }
+  W25Q64_Deselect();
+  return status == HAL_OK;
+}
+
+static bool W25Q64_SendCommand(uint8_t command)
+{
+  return W25Q64_CommandRead(&command, 1U, NULL, 0U);
+}
+
+static bool W25Q64_ResetDevice(void)
+{
+  W25Q64_Deselect();
+  if (!W25Q64_SendCommand(W25Q64_CMD_ENABLE_RESET) ||
+      !W25Q64_SendCommand(W25Q64_CMD_RESET_DEVICE))
+  {
+    return false;
+  }
+  HAL_Delay(1U);
+  return true;
+}
+
+static bool W25Q64_ReadJedecId(uint8_t id[3])
+{
+  uint8_t command = W25Q64_CMD_JEDEC_ID;
+  return W25Q64_CommandRead(&command, 1U, id, 3U);
+}
+
+static bool W25Q64_ReleasePowerDown(uint8_t *deviceId)
+{
+  uint8_t command[4] = {W25Q64_CMD_RELEASE_POWER_DOWN, 0U, 0U, 0U};
+
+  if (!W25Q64_CommandRead(command, sizeof(command), deviceId, 1U))
+  {
+    return false;
+  }
+  HAL_Delay(1U);
+  return true;
+}
+
+static bool W25Q64_IdIsExpected(const uint8_t id[3])
+{
+  return (id[0] == W25Q64_MANUFACTURER_ID) &&
+         (id[1] == W25Q64_MEMORY_TYPE) &&
+         (id[2] == W25Q64_CAPACITY_ID);
 }
 
 static bool W25Q64_SendReadHeader(uint32_t address)
@@ -74,7 +191,7 @@ static bool W25Q64_SendReadHeader(uint32_t address)
 
 bool W25Q64_Init(void)
 {
-  uint8_t command = W25Q64_CMD_JEDEC_ID;
+  uint8_t releaseId = 0U;
 
   dmaReadActive = false;
   flashReady = false;
@@ -83,15 +200,13 @@ bool W25Q64_Init(void)
   jedecId[2] = 0U;
   W25Q64_Deselect();
 
-  W25Q64_Select();
-  if ((HAL_SPI_Transmit(&hspi3, &command, 1U, W25Q64_TIMEOUT_MS) == HAL_OK) &&
-      (HAL_SPI_Receive(&hspi3, jedecId, sizeof(jedecId), W25Q64_TIMEOUT_MS) == HAL_OK))
+  if (W25Q64_SetSpiMode(0U) &&
+      W25Q64_ResetDevice() &&
+      W25Q64_ReleasePowerDown(&releaseId) &&
+      W25Q64_ReadJedecId(jedecId))
   {
-    flashReady = (jedecId[0] == W25Q64_MANUFACTURER_ID) &&
-                 (jedecId[1] == W25Q64_MEMORY_TYPE) &&
-                 (jedecId[2] == W25Q64_CAPACITY_ID);
+    flashReady = W25Q64_IdIsExpected(jedecId);
   }
-  W25Q64_Deselect();
   return flashReady;
 }
 
@@ -110,6 +225,112 @@ void W25Q64_GetJedecId(uint8_t outId[3])
   }
 }
 
+bool W25Q64_ProbeStable(uint8_t sampleCount)
+{
+  uint8_t sample[3] = {0U};
+  uint8_t releaseId = 0U;
+  uint8_t index;
+
+  flashReady = false;
+  if ((sampleCount == 0U) || !W25Q64_SetSpiMode(0U) ||
+      !W25Q64_ResetDevice() ||
+      !W25Q64_ReleasePowerDown(&releaseId))
+  {
+    return false;
+  }
+
+  for (index = 0U; index < sampleCount; index++)
+  {
+    if (!W25Q64_ReadJedecId(sample) || !W25Q64_IdIsExpected(sample))
+    {
+      memcpy(jedecId, sample, sizeof(jedecId));
+      return false;
+    }
+  }
+
+  memcpy(jedecId, sample, sizeof(jedecId));
+  flashReady = true;
+  return true;
+}
+
+bool W25Q64_RunDiagnostic(uint8_t spiMode,
+                          w25q64_diagnostic_report_t *report)
+{
+  uint8_t command;
+  uint8_t commandWithAddress[5];
+  uint8_t index;
+  bool ok = true;
+
+  if (report == NULL)
+  {
+    return false;
+  }
+
+  memset(report, 0, sizeof(*report));
+  report->spi_mode = spiMode;
+  if (!W25Q64_SetSpiMode(spiMode) || !W25Q64_ResetDevice() ||
+      !W25Q64_ReleasePowerDown(&report->release_device_id))
+  {
+    ok = false;
+  }
+
+  for (index = 0U; index < W25Q64_DIAGNOSTIC_SAMPLE_COUNT; index++)
+  {
+    if (!W25Q64_ReadJedecId(report->jedec_samples[index]))
+    {
+      ok = false;
+    }
+    else if (W25Q64_IdIsExpected(report->jedec_samples[index]))
+    {
+      report->stable_count++;
+    }
+  }
+
+  commandWithAddress[0] = W25Q64_CMD_DEVICE_ID;
+  commandWithAddress[1] = 0U;
+  commandWithAddress[2] = 0U;
+  commandWithAddress[3] = 0U;
+  if (!W25Q64_CommandRead(commandWithAddress, 4U,
+                          report->manufacturer_device_id, 2U))
+  {
+    ok = false;
+  }
+
+  command = W25Q64_CMD_READ_STATUS1;
+  if (!W25Q64_CommandRead(&command, 1U, &report->status_registers[0], 1U))
+  {
+    ok = false;
+  }
+  command = W25Q64_CMD_READ_STATUS2;
+  if (!W25Q64_CommandRead(&command, 1U, &report->status_registers[1], 1U))
+  {
+    ok = false;
+  }
+  command = W25Q64_CMD_READ_STATUS3;
+  if (!W25Q64_CommandRead(&command, 1U, &report->status_registers[2], 1U))
+  {
+    ok = false;
+  }
+
+  commandWithAddress[0] = W25Q64_CMD_READ_SFDP;
+  commandWithAddress[1] = 0U;
+  commandWithAddress[2] = 0U;
+  commandWithAddress[3] = 0U;
+  commandWithAddress[4] = 0U;
+  if (!W25Q64_CommandRead(commandWithAddress, sizeof(commandWithAddress),
+                          report->sfdp_signature,
+                          sizeof(report->sfdp_signature)))
+  {
+    ok = false;
+  }
+
+  if (spiMode != 0U)
+  {
+    (void)W25Q64_SetSpiMode(0U);
+  }
+  return ok;
+}
+
 bool W25Q64_ValidateAssetPackage(void)
 {
   uint8_t manifestRaw[ASSET_MANIFEST_SIZE];
@@ -125,7 +346,10 @@ bool W25Q64_ValidateAssetPackage(void)
   }
 
   if (!asset_manifest_parse(manifestRaw, &manifest) ||
-      !asset_manifest_header_ok(&manifest, W25Q64_ASSET_MANIFEST_OFFSET))
+      !asset_manifest_header_ok(&manifest, W25Q64_ASSET_MANIFEST_OFFSET) ||
+      !asset_manifest_header_ok(&g_expected_asset_package,
+                                W25Q64_ASSET_MANIFEST_OFFSET) ||
+      !asset_manifest_matches_expected(&manifest, &g_expected_asset_package))
   {
     return false;
   }
@@ -148,6 +372,88 @@ bool W25Q64_ValidateAssetPackage(void)
   }
 
   return asset_crc32_final(crc) == manifest.expected_crc;
+}
+
+bool W25Q64_SelfTest(uint32_t volumeBytes, w25q64_selftest_result_t *result)
+{
+  uint8_t buffer[256];
+  uint32_t offset;
+  uint32_t sectors;
+  uint32_t i;
+
+  if (result == NULL)
+  {
+    return false;
+  }
+  result->bytes_tested = 0U;
+  result->errors = 0U;
+  result->first_bad_offset = 0U;
+  result->expected_byte = 0U;
+  result->got_byte = 0U;
+  result->ok = false;
+
+  if (!flashReady || (volumeBytes == 0U) ||
+      (volumeBytes > W25Q64_ASSET_MANIFEST_OFFSET))
+  {
+    return false;
+  }
+
+  /* Erase every 4 KB sector covering the test region. */
+  sectors = asset_flash_sectors_needed(volumeBytes, ASSET_FLASH_SECTOR_SIZE);
+  for (i = 0U; i < sectors; i++)
+  {
+    if (!W25Q64_EraseSector(i * ASSET_FLASH_SECTOR_SIZE))
+    {
+      return false;
+    }
+  }
+
+  /* Write pass: page-aligned chunks of the deterministic pattern. */
+  for (offset = 0U; offset < volumeBytes; offset += (uint32_t)sizeof(buffer))
+  {
+    uint32_t chunk = volumeBytes - offset;
+    if (chunk > sizeof(buffer))
+    {
+      chunk = sizeof(buffer);
+    }
+    flash_selftest_pattern_fill(buffer, offset, chunk);
+    if (!W25Q64_Write(offset, buffer, chunk))
+    {
+      return false;
+    }
+  }
+
+  /* Read-back + verify pass against the same deterministic pattern. */
+  for (offset = 0U; offset < volumeBytes; offset += (uint32_t)sizeof(buffer))
+  {
+    uint32_t chunk = volumeBytes - offset;
+    if (chunk > sizeof(buffer))
+    {
+      chunk = sizeof(buffer);
+    }
+    if (!W25Q64_Read(offset, buffer, chunk))
+    {
+      return false;
+    }
+    for (i = 0U; i < chunk; i++)
+    {
+      uint8_t expected = flash_selftest_pattern_byte(offset + i);
+      if (buffer[i] != expected)
+      {
+        if (result->errors == 0U)
+        {
+          result->first_bad_offset = offset + i;
+          result->expected_byte = expected;
+          result->got_byte = buffer[i];
+        }
+        result->errors++;
+      }
+    }
+  }
+
+  result->bytes_tested = volumeBytes;
+  result->ok = (result->errors == 0U);
+  return result->ok;
 }
 
 bool W25Q64_Read(uint32_t address, uint8_t *data, uint32_t length)
