@@ -11,20 +11,19 @@ extern UART_HandleTypeDef huart2;
 
 #define FLASHER_KNOCK             "ADHTPROG"
 #define FLASHER_KNOCK_LEN         8U
+#define FLASHER_DIAGNOSTIC_KNOCK  "ADHTDIAG"
+#define FLASHER_DIAGNOSTIC_VERSION 1U
+#define FLASHER_DIAGNOSTIC_MODE_COUNT 2U
+#define FLASHER_DIAGNOSTIC_HEADER_MAGIC "DGOK"
+#define FLASHER_DIAGNOSTIC_RECORD_MAGIC "DREC"
 #define FLASHER_HEADER_MAGIC      "ADHTHEAD"
 #define FLASHER_HEADER_MAGIC_LEN  8U
-#define FLASHER_HEADER_TAIL_LEN   8U
+#define FLASHER_HEADER_TAIL_LEN   (8U + ASSET_PACKAGE_ID_SIZE)
 #define FLASHER_IO_TIMEOUT_MS     5000U
 #define FLASHER_RESET_DELAY_MS    100U
 
-/* Bounded knock windows: the board must always proceed to boot the UI. A short
- * window lets a host attach right after reset; holding USER asks for a longer,
- * deliberate flashing window. Never wait forever (that bricks to a black screen
- * because the display is initialised only after this returns). */
-#define FLASHER_KNOCK_WINDOW_MS       3000U
-#define FLASHER_KNOCK_WINDOW_LONG_MS  30000U
-
 #define FLASHER_REPLY_HELLO       'H'
+#define FLASHER_REPLY_DIAGNOSTIC  'Q'
 #define FLASHER_REPLY_ACCEPTED    'A'
 #define FLASHER_REPLY_PROGRESS    'S'
 #define FLASHER_REPLY_READY       'R'
@@ -43,6 +42,20 @@ extern UART_HandleTypeDef huart2;
 #define FLASHER_ERROR_VERIFY      'V'
 
 static uint8_t pageBuffer[ASSET_FLASH_PAGE_SIZE];
+extern const asset_manifest_t g_expected_asset_package;
+
+typedef enum
+{
+  FLASHER_COMMAND_PROGRAM,
+  FLASHER_COMMAND_DIAGNOSTIC
+} flasher_command_t;
+
+typedef enum
+{
+  FLASHER_TRANSFER_FAILED,
+  FLASHER_TRANSFER_OK,
+  FLASHER_TRANSFER_DIAGNOSTIC_REQUEST
+} flasher_transfer_result_t;
 
 static uint32_t ReadU32Le(const uint8_t *data)
 {
@@ -113,12 +126,32 @@ static bool RxExact(uint8_t *buffer, uint16_t length, uint32_t timeoutMs)
   return HAL_UART_Receive(&huart2, buffer, length, timeoutMs) == HAL_OK;
 }
 
+static void FlushUartRx(void)
+{
+  uint8_t byte;
+  uint16_t guard = 0U;
+
+  __HAL_UART_CLEAR_OREFLAG(&huart2);
+  while (guard < 512U)
+  {
+    if (HAL_UART_Receive(&huart2, &byte, 1U, 0U) != HAL_OK)
+    {
+      __HAL_UART_CLEAR_OREFLAG(&huart2);
+      break;
+    }
+    guard++;
+  }
+}
+
 /* Scan instead of reading a fixed block so repeated knocks or stale UART bytes
  * cannot be mistaken for the package header. */
-static bool WaitForSequence(const uint8_t *sequence, uint16_t length,
-                            uint32_t timeoutMs)
+static flasher_transfer_result_t WaitForSequenceOrDiagnostic(
+    const uint8_t *sequence, uint16_t length, uint32_t timeoutMs)
 {
+  const uint8_t *diagnostic =
+      (const uint8_t *)FLASHER_DIAGNOSTIC_KNOCK;
   uint16_t matched = 0U;
+  uint16_t diagnosticMatched = 0U;
   uint32_t start = HAL_GetTick();
 
   while ((timeoutMs == HAL_MAX_DELAY) ||
@@ -157,16 +190,111 @@ static bool WaitForSequence(const uint8_t *sequence, uint16_t length,
       matched++;
       if (matched == length)
       {
-        return true;
+        return FLASHER_TRANSFER_OK;
       }
     }
     else
     {
       matched = (byte == sequence[0]) ? 1U : 0U;
     }
+
+    if (byte == diagnostic[diagnosticMatched])
+    {
+      diagnosticMatched++;
+      if (diagnosticMatched == FLASHER_KNOCK_LEN)
+      {
+        return FLASHER_TRANSFER_DIAGNOSTIC_REQUEST;
+      }
+    }
+    else
+    {
+      diagnosticMatched = (byte == diagnostic[0]) ? 1U : 0U;
+    }
   }
 
-  return false;
+  return FLASHER_TRANSFER_FAILED;
+}
+
+static flasher_command_t WaitForRecoveryCommand(void)
+{
+  const uint8_t *program =
+      (const uint8_t *)FLASHER_KNOCK;
+  const uint8_t *diagnostic =
+      (const uint8_t *)FLASHER_DIAGNOSTIC_KNOCK;
+  uint16_t programMatched = 0U;
+  uint16_t diagnosticMatched = 0U;
+
+  for (;;)
+  {
+    uint8_t byte;
+    if (HAL_UART_Receive(&huart2, &byte, 1U, 50U) != HAL_OK)
+    {
+      __HAL_UART_CLEAR_OREFLAG(&huart2);
+      continue;
+    }
+
+    if (byte == program[programMatched])
+    {
+      programMatched++;
+      if (programMatched == FLASHER_KNOCK_LEN)
+      {
+        return FLASHER_COMMAND_PROGRAM;
+      }
+    }
+    else
+    {
+      programMatched = (byte == program[0]) ? 1U : 0U;
+    }
+
+    if (byte == diagnostic[diagnosticMatched])
+    {
+      diagnosticMatched++;
+      if (diagnosticMatched == FLASHER_KNOCK_LEN)
+      {
+        return FLASHER_COMMAND_DIAGNOSTIC;
+      }
+    }
+    else
+    {
+      diagnosticMatched = (byte == diagnostic[0]) ? 1U : 0U;
+    }
+  }
+}
+
+static void ReplyDiagnosticRecord(const w25q64_diagnostic_report_t *report)
+{
+  uint8_t header[2] = {report->spi_mode, report->stable_count};
+
+  (void)Tx((const uint8_t *)FLASHER_DIAGNOSTIC_RECORD_MAGIC, 4U);
+  (void)Tx(header, sizeof(header));
+  (void)Tx(&report->jedec_samples[0][0],
+           W25Q64_DIAGNOSTIC_SAMPLE_COUNT * 3U);
+  (void)Tx(report->manufacturer_device_id,
+           sizeof(report->manufacturer_device_id));
+  (void)Tx(&report->release_device_id, 1U);
+  (void)Tx(report->status_registers, sizeof(report->status_registers));
+  (void)Tx(report->sfdp_signature, sizeof(report->sfdp_signature));
+}
+
+static void RunDiagnosticSession(void)
+{
+  uint8_t header[3] =
+  {
+    FLASHER_REPLY_DIAGNOSTIC,
+    FLASHER_DIAGNOSTIC_VERSION,
+    FLASHER_DIAGNOSTIC_MODE_COUNT
+  };
+  w25q64_diagnostic_report_t report;
+
+  (void)Tx(&header[0], 1U);
+  (void)Tx((const uint8_t *)FLASHER_DIAGNOSTIC_HEADER_MAGIC, 4U);
+  (void)Tx(&header[1], 2U);
+  (void)W25Q64_RunDiagnostic(0U, &report);
+  ReplyDiagnosticRecord(&report);
+  (void)W25Q64_RunDiagnostic(3U, &report);
+  ReplyDiagnosticRecord(&report);
+  (void)W25Q64_Init();
+  FlushUartRx();
 }
 
 static bool EraseForLength(uint32_t dataLength)
@@ -193,7 +321,8 @@ static bool EraseForLength(uint32_t dataLength)
   return true;
 }
 
-static bool WriteManifest(uint32_t dataLength, uint32_t crc)
+static bool WriteManifest(uint32_t dataLength, uint32_t crc,
+                          const uint8_t packageId[ASSET_PACKAGE_ID_SIZE])
 {
   uint8_t manifest[ASSET_MANIFEST_SIZE];
 
@@ -202,12 +331,14 @@ static bool WriteManifest(uint32_t dataLength, uint32_t crc)
   WriteU32Le(&manifest[4], ASSET_MANIFEST_VERSION);
   WriteU32Le(&manifest[8], dataLength);
   WriteU32Le(&manifest[12], crc);
+  memcpy(&manifest[16], packageId, ASSET_PACKAGE_ID_SIZE);
 
   return W25Q64_Write(W25Q64_ASSET_MANIFEST_OFFSET, manifest,
                       sizeof(manifest));
 }
 
-static bool ReceiveAndProgram(uint32_t dataLength, uint32_t *outCrc)
+static flasher_transfer_result_t ReceiveAndProgram(uint32_t dataLength,
+                                                   uint32_t *outCrc)
 {
   uint32_t offset = 0U;
   uint32_t crc = ASSET_CRC32_INIT;
@@ -215,20 +346,26 @@ static bool ReceiveAndProgram(uint32_t dataLength, uint32_t *outCrc)
   while (offset < dataLength)
   {
     uint32_t chunk = dataLength - offset;
+
     if (chunk > sizeof(pageBuffer))
     {
       chunk = sizeof(pageBuffer);
     }
 
+    /* Receive the whole chunk in ONE tight HAL call. Reading byte-by-byte with
+     * per-byte work (the previous diagnostic-matching loop) is slow enough to
+     * miss bytes during a 115200 burst -> RX overrun -> dropped byte. The
+     * serial-free self-test proved the SPI/flash path is clean, so the glitch
+     * is here. The diagnostic command is still reachable at the knock stage. */
     if (!RxExact(pageBuffer, (uint16_t)chunk, FLASHER_IO_TIMEOUT_MS))
     {
       ReplyError(FLASHER_ERROR_TIMEOUT);
-      return false;
+      return FLASHER_TRANSFER_FAILED;
     }
     if (!W25Q64_Write(offset, pageBuffer, chunk))
     {
       ReplyError(FLASHER_ERROR_PROGRAM);
-      return false;
+      return FLASHER_TRANSFER_FAILED;
     }
 
     crc = asset_crc32_update(crc, pageBuffer, chunk);
@@ -237,100 +374,127 @@ static bool ReceiveAndProgram(uint32_t dataLength, uint32_t *outCrc)
   }
 
   *outCrc = asset_crc32_final(crc);
-  return true;
+  return FLASHER_TRANSFER_OK;
 }
 
-static bool RunProgrammingSession(void)
+static flasher_transfer_result_t RunProgrammingSession(void)
 {
   uint8_t tail[FLASHER_HEADER_TAIL_LEN];
   uint32_t dataLength;
   uint32_t expectedCrc;
   uint32_t actualCrc;
+  asset_manifest_t receivedPackage;
+  flasher_transfer_result_t waitResult;
+  flasher_transfer_result_t programResult;
+
+  /* Never erase on a lucky single read from a marginal SPI connection. */
+  (void)W25Q64_ProbeStable(W25Q64_DIAGNOSTIC_SAMPLE_COUNT);
 
   ReplyHello();
   if (!W25Q64_IsReady())
   {
     ReplyError(FLASHER_ERROR_FLASH_ID);
-    return false;
+    return FLASHER_TRANSFER_FAILED;
   }
 
-  if (!WaitForSequence((const uint8_t *)FLASHER_HEADER_MAGIC,
-                       FLASHER_HEADER_MAGIC_LEN, FLASHER_IO_TIMEOUT_MS) ||
+  waitResult = WaitForSequenceOrDiagnostic(
+      (const uint8_t *)FLASHER_HEADER_MAGIC,
+      FLASHER_HEADER_MAGIC_LEN, FLASHER_IO_TIMEOUT_MS);
+  if (waitResult == FLASHER_TRANSFER_DIAGNOSTIC_REQUEST)
+  {
+    return FLASHER_TRANSFER_DIAGNOSTIC_REQUEST;
+  }
+  if ((waitResult != FLASHER_TRANSFER_OK) ||
       !RxExact(tail, sizeof(tail), FLASHER_IO_TIMEOUT_MS))
   {
     ReplyError(FLASHER_ERROR_TIMEOUT);
-    return false;
+    return FLASHER_TRANSFER_FAILED;
   }
 
   dataLength = ReadU32Le(&tail[0]);
   expectedCrc = ReadU32Le(&tail[4]);
-  if ((dataLength == 0U) || (dataLength > W25Q64_ASSET_MANIFEST_OFFSET))
+  receivedPackage.magic = ASSET_MANIFEST_MAGIC;
+  receivedPackage.version = ASSET_MANIFEST_VERSION;
+  receivedPackage.data_length = dataLength;
+  receivedPackage.expected_crc = expectedCrc;
+  memcpy(receivedPackage.package_id, &tail[8], ASSET_PACKAGE_ID_SIZE);
+
+  if (!asset_manifest_header_ok(&receivedPackage,
+                                W25Q64_ASSET_MANIFEST_OFFSET) ||
+      !asset_manifest_matches_expected(&receivedPackage,
+                                       &g_expected_asset_package))
   {
     ReplyError(FLASHER_ERROR_HEADER);
-    return false;
+    return FLASHER_TRANSFER_FAILED;
   }
 
   Reply(FLASHER_REPLY_ACCEPTED);
   if (!EraseForLength(dataLength))
   {
     ReplyError(FLASHER_ERROR_ERASE);
-    return false;
+    return FLASHER_TRANSFER_FAILED;
   }
 
   Reply(FLASHER_REPLY_READY);
-  if (!ReceiveAndProgram(dataLength, &actualCrc))
+  programResult = ReceiveAndProgram(dataLength, &actualCrc);
+  if (programResult != FLASHER_TRANSFER_OK)
   {
-    return false;
+    return programResult;
   }
 
   if (actualCrc != expectedCrc)
   {
     ReplyError(FLASHER_ERROR_CRC);
-    return false;
+    return FLASHER_TRANSFER_FAILED;
   }
-  if (!WriteManifest(dataLength, expectedCrc))
+  if (!WriteManifest(dataLength, expectedCrc, receivedPackage.package_id))
   {
     ReplyError(FLASHER_ERROR_MANIFEST);
-    return false;
+    return FLASHER_TRANSFER_FAILED;
   }
 
   Reply(FLASHER_REPLY_VERIFYING);
   if (!W25Q64_ValidateAssetPackage())
   {
     ReplyError(FLASHER_ERROR_VERIFY);
-    return false;
+    return FLASHER_TRANSFER_FAILED;
   }
 
   Reply(FLASHER_REPLY_DONE_OK);
   HAL_Delay(FLASHER_RESET_DELAY_MS);
   NVIC_SystemReset();
-  return true;
+  return FLASHER_TRANSFER_OK;
 }
 
 void AssetFlasher_RunAtBoot(bool assetsValid, bool programmingRequested)
 {
-  /* The board must ALWAYS reach the display init that runs after this call.
-   * A bounded knock window replaces the previous infinite recovery loop, which
-   * stranded the device on a black screen whenever the external flash held no
-   * valid asset package. */
-  uint32_t windowMs = programmingRequested ? FLASHER_KNOCK_WINDOW_LONG_MS
-                                           : FLASHER_KNOCK_WINDOW_MS;
-
   if (assetsValid && !programmingRequested)
   {
     return;
   }
 
-  if (WaitForSequence((const uint8_t *)FLASHER_KNOCK,
-                      FLASHER_KNOCK_LEN, windowMs))
+  /* Invalid or deliberately reprogrammed assets must never reach TouchGFX.
+   * Stay in recovery until one complete package matching this MCU firmware has
+   * been written and verified. Development uses USART2; production will use
+   * the SWD external loader and therefore boots directly with valid assets. */
+  for (;;)
   {
-    /* Host attached: run one session. On success the device resets inside
-     * RunProgrammingSession; on failure we fall through and boot so a bad
-     * attempt can never strand the board. */
-    (void)RunProgrammingSession();
+    flasher_command_t command = WaitForRecoveryCommand();
+    if (command == FLASHER_COMMAND_DIAGNOSTIC)
+    {
+      RunDiagnosticSession();
+    }
+    else
+    {
+      flasher_transfer_result_t result = RunProgrammingSession();
+      if (result == FLASHER_TRANSFER_DIAGNOSTIC_REQUEST)
+      {
+        RunDiagnosticSession();
+      }
+      else if (result == FLASHER_TRANSFER_FAILED)
+      {
+        FlushUartRx();
+      }
+    }
   }
-
-  /* No knock within the window (or a failed session): boot the UI. With an
-   * invalid/empty package the images render from whatever is in flash; the
-   * manifest check is integrity-only and does not gate rendering. */
 }
