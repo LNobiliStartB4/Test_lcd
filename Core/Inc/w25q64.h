@@ -14,6 +14,22 @@
 #include <stdbool.h>
 #include <stdint.h>
 
+/*
+ * Build-time switch for the external asset flash (W25Q64 on SPI3).
+ *   1 (default): images may live in ExtFlashSection and are fetched from the
+ *                W25Q64 at runtime; the boot-time asset flasher/validation runs.
+ *   0          : the external flash is ignored at boot (no SPI3 probe, no asset
+ *                validation/recovery) and the DataReader bridge becomes a no-op,
+ *                so the firmware is a single internal-only HEX. In this mode
+ *                EVERY drawn image MUST be internal (IntFlashSection) — set
+ *                application.config image section to IntFlashSection so no asset
+ *                ends up in ExtFlashSection. Unused functions are dropped by
+ *                --gc-sections.
+ */
+#ifndef USE_EXTERNAL_FLASH
+#define USE_EXTERNAL_FLASH 1
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif

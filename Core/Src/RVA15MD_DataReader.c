@@ -11,6 +11,8 @@
 
 #include "w25q64.h"
 
+#if USE_EXTERNAL_FLASH
+
 uint32_t DataReader_IsReceivingData(void)
 {
   return W25Q64_IsDmaReadActive() ? 1U : 0U;
@@ -40,3 +42,21 @@ void DataReader_DMACallback(void)
 {
   W25Q64_DmaCompleteCallback();
 }
+
+#else /* !USE_EXTERNAL_FLASH */
+
+/* External flash disabled at build time: the bridge is a no-op. All drawn
+ * images must be internal (IntFlashSection), so these are never exercised. */
+uint32_t DataReader_IsReceivingData(void) { return 0U; }
+void DataReader_WaitForReceiveDone(void) {}
+void DataReader_ReadData(uint32_t address24, uint8_t *buffer, uint32_t length)
+{
+  (void)address24; (void)buffer; (void)length;
+}
+void DataReader_StartDMAReadData(uint32_t address24, uint8_t *buffer, uint32_t length)
+{
+  (void)address24; (void)buffer; (void)length;
+}
+void DataReader_DMACallback(void) {}
+
+#endif /* USE_EXTERNAL_FLASH */

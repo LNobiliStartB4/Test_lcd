@@ -72,7 +72,9 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 DMA_HandleTypeDef hdma_spi1_tx;
+#if USE_EXTERNAL_FLASH
 static bool assetProgrammingRequested;
+#endif
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -132,12 +134,15 @@ int main(void)
   MX_CRC_Init();
   MX_I2C1_Init();
   MX_SPI1_Init();
+#if USE_EXTERNAL_FLASH
   MX_SPI3_Init();
+#endif
   MX_TIM1_Init();
   MX_TIM11_Init();
   MX_USART2_UART_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
+#if USE_EXTERNAL_FLASH
   W25Q64_Init();
 #if FLASH_SELFTEST_ENABLED
   {
@@ -164,6 +169,7 @@ int main(void)
                              ? false
                              : W25Q64_ValidateAssetPackage(),
                          assetProgrammingRequested);
+#endif /* USE_EXTERNAL_FLASH */
 
   DisplayBacklight_Init(&htim1, TIM_CHANNEL_1);
 
@@ -616,8 +622,10 @@ static void MX_GPIO_Init(void)
   /* USER CODE BEGIN MX_GPIO_Init_2 */
   /* B1 is active-low on the Nucleo board. Sample it once at boot so the user
    * can release the button immediately after reset. */
+#if USE_EXTERNAL_FLASH
   assetProgrammingRequested =
       HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin) == GPIO_PIN_RESET;
+#endif
 
   /* Keep the external asset flash CS electrically quiet on breadboard wiring. */
   GPIO_InitStruct.Pin = ASSET_FLASH_CS_Pin;
