@@ -47,6 +47,19 @@ def main() -> int:
     args = parser.parse_args()
 
     data = args.assets.read_bytes()
+    if not data:
+        # No external assets (e.g. USE_EXTERNAL_FLASH=0, or every image is
+        # internal): emit a zeroed manifest so the build chain still completes.
+        # The firmware does not validate it in this configuration; if it ever
+        # ran with flag=1, a zero manifest correctly forces asset recovery.
+        args.manifest.write_bytes(bytes(MANIFEST_SIZE))
+        args.metadata.write_text(
+            json.dumps({"data_length": 0, "note": "no external assets"}, indent=2)
+            + "\n",
+            encoding="ascii",
+        )
+        print("Asset package: empty (no external assets) -> zeroed manifest")
+        return 0
     manifest, metadata = build_manifest(data)
     args.manifest.write_bytes(manifest)
     args.metadata.write_text(json.dumps(metadata, indent=2) + "\n", encoding="ascii")

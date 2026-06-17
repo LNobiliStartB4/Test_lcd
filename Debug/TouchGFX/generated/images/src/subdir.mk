@@ -13,8 +13,7 @@ CPP_SRCS += \
 ../TouchGFX/generated/images/src/image_brightness_slider_track_dim.cpp \
 ../TouchGFX/generated/images/src/image_brightness_slider_track_gold.cpp \
 ../TouchGFX/generated/images/src/image_start_play_icon_white.cpp \
-../TouchGFX/generated/images/src/image_start_stop_icon_white.cpp \
-../TouchGFX/generated/images/src/image_target_button_ring_white.cpp 
+../TouchGFX/generated/images/src/image_start_stop_icon_white.cpp 
 
 OBJS += \
 ./TouchGFX/generated/images/src/BitmapDatabase.o \
@@ -25,8 +24,7 @@ OBJS += \
 ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.o \
 ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.o \
 ./TouchGFX/generated/images/src/image_start_play_icon_white.o \
-./TouchGFX/generated/images/src/image_start_stop_icon_white.o \
-./TouchGFX/generated/images/src/image_target_button_ring_white.o 
+./TouchGFX/generated/images/src/image_start_stop_icon_white.o 
 
 CPP_DEPS += \
 ./TouchGFX/generated/images/src/BitmapDatabase.d \
@@ -37,8 +35,7 @@ CPP_DEPS += \
 ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.d \
 ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.d \
 ./TouchGFX/generated/images/src/image_start_play_icon_white.d \
-./TouchGFX/generated/images/src/image_start_stop_icon_white.d \
-./TouchGFX/generated/images/src/image_target_button_ring_white.d 
+./TouchGFX/generated/images/src/image_start_stop_icon_white.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -48,7 +45,7 @@ TouchGFX/generated/images/src/%.o TouchGFX/generated/images/src/%.su TouchGFX/ge
 clean: clean-TouchGFX-2f-generated-2f-images-2f-src
 
 clean-TouchGFX-2f-generated-2f-images-2f-src:
-	-$(RM) ./TouchGFX/generated/images/src/BitmapDatabase.cyclo ./TouchGFX/generated/images/src/BitmapDatabase.d ./TouchGFX/generated/images/src/BitmapDatabase.o ./TouchGFX/generated/images/src/BitmapDatabase.su ./TouchGFX/generated/images/src/SVGDatabase.cyclo ./TouchGFX/generated/images/src/SVGDatabase.d ./TouchGFX/generated/images/src/SVGDatabase.o ./TouchGFX/generated/images/src/SVGDatabase.su ./TouchGFX/generated/images/src/image_TouchDot.cyclo ./TouchGFX/generated/images/src/image_TouchDot.d ./TouchGFX/generated/images/src/image_TouchDot.o ./TouchGFX/generated/images/src/image_TouchDot.su ./TouchGFX/generated/images/src/image_arrow_left_white.cyclo ./TouchGFX/generated/images/src/image_arrow_left_white.d ./TouchGFX/generated/images/src/image_arrow_left_white.o ./TouchGFX/generated/images/src/image_arrow_left_white.su ./TouchGFX/generated/images/src/image_brightness_slider_knob.cyclo ./TouchGFX/generated/images/src/image_brightness_slider_knob.d ./TouchGFX/generated/images/src/image_brightness_slider_knob.o ./TouchGFX/generated/images/src/image_brightness_slider_knob.su ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.cyclo ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.d ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.o ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.su ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.cyclo ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.d ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.o ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.su ./TouchGFX/generated/images/src/image_start_play_icon_white.cyclo ./TouchGFX/generated/images/src/image_start_play_icon_white.d ./TouchGFX/generated/images/src/image_start_play_icon_white.o ./TouchGFX/generated/images/src/image_start_play_icon_white.su ./TouchGFX/generated/images/src/image_start_stop_icon_white.cyclo ./TouchGFX/generated/images/src/image_start_stop_icon_white.d ./TouchGFX/generated/images/src/image_start_stop_icon_white.o ./TouchGFX/generated/images/src/image_start_stop_icon_white.su ./TouchGFX/generated/images/src/image_target_button_ring_white.cyclo ./TouchGFX/generated/images/src/image_target_button_ring_white.d ./TouchGFX/generated/images/src/image_target_button_ring_white.o ./TouchGFX/generated/images/src/image_target_button_ring_white.su
+	-$(RM) ./TouchGFX/generated/images/src/BitmapDatabase.cyclo ./TouchGFX/generated/images/src/BitmapDatabase.d ./TouchGFX/generated/images/src/BitmapDatabase.o ./TouchGFX/generated/images/src/BitmapDatabase.su ./TouchGFX/generated/images/src/SVGDatabase.cyclo ./TouchGFX/generated/images/src/SVGDatabase.d ./TouchGFX/generated/images/src/SVGDatabase.o ./TouchGFX/generated/images/src/SVGDatabase.su ./TouchGFX/generated/images/src/image_TouchDot.cyclo ./TouchGFX/generated/images/src/image_TouchDot.d ./TouchGFX/generated/images/src/image_TouchDot.o ./TouchGFX/generated/images/src/image_TouchDot.su ./TouchGFX/generated/images/src/image_arrow_left_white.cyclo ./TouchGFX/generated/images/src/image_arrow_left_white.d ./TouchGFX/generated/images/src/image_arrow_left_white.o ./TouchGFX/generated/images/src/image_arrow_left_white.su ./TouchGFX/generated/images/src/image_brightness_slider_knob.cyclo ./TouchGFX/generated/images/src/image_brightness_slider_knob.d ./TouchGFX/generated/images/src/image_brightness_slider_knob.o ./TouchGFX/generated/images/src/image_brightness_slider_knob.su ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.cyclo ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.d ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.o ./TouchGFX/generated/images/src/image_brightness_slider_track_dim.su ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.cyclo ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.d ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.o ./TouchGFX/generated/images/src/image_brightness_slider_track_gold.su ./TouchGFX/generated/images/src/image_start_play_icon_white.cyclo ./TouchGFX/generated/images/src/image_start_play_icon_white.d ./TouchGFX/generated/images/src/image_start_play_icon_white.o ./TouchGFX/generated/images/src/image_start_play_icon_white.su ./TouchGFX/generated/images/src/image_start_stop_icon_white.cyclo ./TouchGFX/generated/images/src/image_start_stop_icon_white.d ./TouchGFX/generated/images/src/image_start_stop_icon_white.o ./TouchGFX/generated/images/src/image_start_stop_icon_white.su
 
 .PHONY: clean-TouchGFX-2f-generated-2f-images-2f-src
 

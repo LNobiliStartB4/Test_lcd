@@ -49,7 +49,6 @@ protected:
     touchgfx::Box progressFill;
     touchgfx::SVGImage progressFillLeftCap;
     touchgfx::SVGImage progressFillRightCap;
-    touchgfx::SVGImage successIcon;
     touchgfx::TextArea phaseLabel;
     touchgfx::TextArea countdownCaption;
     touchgfx::TextAreaWithOneWildcard timeRemaining;

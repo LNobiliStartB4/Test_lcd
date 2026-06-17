@@ -27,7 +27,7 @@
  *                --gc-sections.
  */
 #ifndef USE_EXTERNAL_FLASH
-#define USE_EXTERNAL_FLASH 1
+#define USE_EXTERNAL_FLASH 0
 #endif
 
 #ifdef __cplusplus

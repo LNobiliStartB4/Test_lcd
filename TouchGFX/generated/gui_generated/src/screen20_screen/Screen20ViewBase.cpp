@@ -93,15 +93,7 @@ Screen20ViewBase::Screen20ViewBase() :
     progressFillRightCap.setRotation(0.0f);
     add(progressFillRightCap);
 
-    successIcon.setSVG(SVG_PRETEST_CHECK_GOLD_ID);
-    successIcon.setPosition(48, 222, 32, 32);
-    successIcon.setScale(1.07f, 1.07f);
-    successIcon.setImagePosition(0, 0);
-    successIcon.setRotationCenter(0, 0);
-    successIcon.setRotation(0.0f);
-    add(successIcon);
-
-    phaseLabel.setPosition(58, 228, 230, 26);
+    phaseLabel.setPosition(58, 228, 249, 26);
     phaseLabel.setColor(touchgfx::Color::getColorFromRGB(240, 170, 0));
     phaseLabel.setLinespacing(0);
     phaseLabel.setTypedText(touchgfx::TypedText(T_TEXT_PRETESTPULLDOWN));

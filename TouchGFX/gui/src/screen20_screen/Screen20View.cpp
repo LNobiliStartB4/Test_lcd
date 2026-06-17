@@ -21,7 +21,7 @@ void Screen20View::setupScreen()
     successReadyToContinue = false;
     successDisplayTicks = 0U;
     successfulProduct = ActiveProductNone;
-    successIcon.setVisible(false);
+
     applyStatus(presenter->getStatus());
     touchgfx::Application::getInstance()->invalidateArea(touchgfx::Rect(0, 0, 480, 320));
 }
@@ -160,14 +160,14 @@ void Screen20View::applyStatus(const PneumaticPretestStatus& status)
         progressFillRightCap.setX(static_cast<int16_t>(40U + roundedPixels - 12U));
     }
 
-    successIcon.setVisible(success);
+
     countdownCaption.setVisible(!success);
     timeRemaining.setVisible(!success);
 
     progressFill.invalidate();
     progressFillLeftCap.invalidate();
     progressFillRightCap.invalidate();
-    successIcon.invalidate();
+
     phaseLabel.invalidate();
     countdownCaption.invalidate();
     timeRemaining.invalidate();

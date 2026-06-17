@@ -4728,23 +4728,11 @@
             "ImageVerticalScale": 1.0
           },
           {
-            "Type": "SvgImage",
-            "Name": "successIcon",
-            "X": 48,
-            "Y": 222,
-            "Width": 32,
-            "Height": 32,
-            "Image": "pretest_check_gold.svg",
-            "FitImageToSize": true,
-            "ImageHorizontalScale": 1.07,
-            "ImageVerticalScale": 1.07
-          },
-          {
             "Type": "TextArea",
             "Name": "phaseLabel",
             "X": 58,
             "Y": 228,
-            "Width": 230,
+            "Width": 249,
             "Height": 26,
             "TextId": "Text_PretestPullDown",
             "TextRotation": "0",

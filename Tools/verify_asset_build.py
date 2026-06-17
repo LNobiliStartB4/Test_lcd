@@ -38,7 +38,22 @@ def main() -> int:
     parser.add_argument("--embedded-manifest", type=Path)
     args = parser.parse_args()
 
-    expected, metadata = build_manifest(args.assets.read_bytes())
+    assets = args.assets.read_bytes()
+    if not assets:
+        # No external assets (USE_EXTERNAL_FLASH=0 or all images internal):
+        # only ensure the internal HEX stays free of external-flash records.
+        external_records = [
+            address for address in hex_addresses(args.internal_hex)
+            if address >= EXTERNAL_BASE
+        ]
+        if external_records:
+            raise SystemExit(
+                f"internal HEX contains external address 0x{external_records[0]:08X}"
+            )
+        print("Asset build verified: no external assets; internal HEX contains MCU flash only")
+        return 0
+
+    expected, metadata = build_manifest(assets)
     actual = args.manifest.read_bytes()
     if actual != expected:
         raise SystemExit("asset manifest does not match assets.bin")
