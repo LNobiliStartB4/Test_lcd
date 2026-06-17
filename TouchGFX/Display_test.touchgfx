@@ -4556,10 +4556,10 @@
           {
             "Type": "FlexButton",
             "Name": "backButton",
-            "X": 12,
-            "Y": 14,
-            "Width": 96,
-            "Height": 48,
+            "X": 2,
+            "Y": 3,
+            "Width": 93,
+            "Height": 84,
             "ButtonTrigger": {
               "Type": "ClickButtonTrigger"
             },
@@ -4788,7 +4788,7 @@
             "Type": "SvgImage",
             "Name": "svgImage1",
             "X": 28,
-            "Y": 30,
+            "Y": 26,
             "Width": 40,
             "Height": 40,
             "Image": "arrow-back-up.svg",

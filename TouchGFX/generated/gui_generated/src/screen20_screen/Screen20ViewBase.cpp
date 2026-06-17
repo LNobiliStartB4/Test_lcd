@@ -24,7 +24,7 @@ Screen20ViewBase::Screen20ViewBase() :
     backButton.setBorderSize(1);
     backButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 0, 0), touchgfx::Color::getColorFromRGB(14, 14, 12), touchgfx::Color::getColorFromRGB(245, 242, 232), touchgfx::Color::getColorFromRGB(255, 255, 248));
     backButton.setAction(flexButtonCallback);
-    backButton.setPosition(12, 14, 96, 48);
+    backButton.setPosition(2, 3, 93, 84);
     add(backButton);
 
     titleLabel.setPosition(95, 34, 280, 32);
@@ -122,7 +122,7 @@ Screen20ViewBase::Screen20ViewBase() :
     add(timeRemaining);
 
     svgImage1.setSVG(SVG_ARROW_BACK_UP_ID);
-    svgImage1.setPosition(28, 30, 40, 40);
+    svgImage1.setPosition(28, 26, 40, 40);
     svgImage1.setScale(1.67f, 1.82f);
     svgImage1.setImagePosition(0, 0);
     svgImage1.setRotationCenter(0, 0);

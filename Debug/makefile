@@ -131,7 +131,7 @@ MAP_FILES += \
 Display_test_prova.map \
 
 SIZE_OUTPUT += \
-default.size.stdout \
+Display_test_prova_programming.size.stdout \
 
 OBJDUMP_LIST += \
 Display_test_prova.list \
@@ -149,7 +149,7 @@ Display_test_prova.elf Display_test_prova.map: $(OBJS) $(USER_OBJS) C:\TouchGFXP
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+Display_test_prova_programming.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-size  $(EXECUTABLES)
 	@echo 'Finished building: $@'
 	@echo ' '
@@ -161,7 +161,7 @@ Display_test_prova.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DE
 
 # Other Targets
 clean:
-	-$(RM) Display_test_prova.elf Display_test_prova.list Display_test_prova.map default.size.stdout
+	-$(RM) Display_test_prova.elf Display_test_prova.list Display_test_prova.map Display_test_prova_programming.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
