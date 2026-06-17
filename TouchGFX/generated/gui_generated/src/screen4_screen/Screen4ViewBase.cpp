@@ -5,7 +5,6 @@
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
 #include<images/SVGDatabase.hpp>
-#include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
 Screen4ViewBase::Screen4ViewBase() :
@@ -42,9 +41,12 @@ Screen4ViewBase::Screen4ViewBase() :
     rfidCard.setBorderSize(0);
     add(rfidCard);
 
-    rfidIcon.setBitmap(touchgfx::Bitmap(BITMAP_RFID_CONTACTLESS_ID));
-    rfidIcon.setPosition(168, 103, 144, 68);
-    rfidIcon.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    rfidIcon.setSVG(SVG_NOUN_RFID_7376130_ID);
+    rfidIcon.setPosition(180, 93, 106, 106);
+    rfidIcon.setScale(1.01f, 0.85f);
+    rfidIcon.setImagePosition(0, 0);
+    rfidIcon.setRotationCenter(0, 0);
+    rfidIcon.setRotation(0.0f);
     add(rfidIcon);
 
     rfidInstruction.setPosition(86, 188, 308, 22);

@@ -11,7 +11,6 @@
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <gui/containers/TouchFeedback.hpp>
 
@@ -43,7 +42,7 @@ protected:
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  backButton;
     touchgfx::SVGImage backIcon;
     touchgfx::BoxWithBorder rfidCard;
-    touchgfx::ScalableImage rfidIcon;
+    touchgfx::SVGImage rfidIcon;
     touchgfx::TextArea rfidInstruction;
     touchgfx::TextArea rfidStatus;
     touchgfx::SVGImage svgImage1;

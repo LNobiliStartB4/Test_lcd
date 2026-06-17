@@ -4,7 +4,6 @@
 #include <gui_generated/containers/BandyVacuumPanelBase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 #include <touchgfx/Color.hpp>
-#include <images/BitmapDatabase.hpp>
 
 BandyVacuumPanelBase::BandyVacuumPanelBase()
 {
@@ -45,16 +44,6 @@ BandyVacuumPanelBase::BandyVacuumPanelBase()
     scaleMaxLabel.setLinespacing(0);
     scaleMaxLabel.setTypedText(touchgfx::TypedText(T_TEXT_MAXSCALE));
     add(scaleMaxLabel);
-
-    vacuumCapLeft.setBitmap(touchgfx::Bitmap(BITMAP_VACUUM_CAP_LEFT_ID));
-    vacuumCapLeft.setPosition(20, 104, 6, 12);
-    vacuumCapLeft.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(vacuumCapLeft);
-
-    vacuumCapRight.setBitmap(touchgfx::Bitmap(BITMAP_VACUUM_CAP_RIGHT_ID));
-    vacuumCapRight.setPosition(414, 104, 6, 12);
-    vacuumCapRight.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
-    add(vacuumCapRight);
 }
 
 BandyVacuumPanelBase::~BandyVacuumPanelBase()

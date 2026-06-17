@@ -20,7 +20,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:119:18:virtual void touchgfx::AbstractButtonContainer::handleAlphaUpdated()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:34:7:touchgfx::AbstractButtonContainer::~AbstractButtonContainer()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
-../TouchGFX/generated/gui_generated/include/gui_generated/screen8_screen/Screen8ViewBase.hpp:28:18:virtual void Screen8ViewBase::backClicked()	0	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen8_screen/Screen8ViewBase.hpp:27:18:virtual void Screen8ViewBase::backClicked()	0	static
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen8Presenter>::~View()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:41:7:touchgfx::BoxWithBorderButtonStyle<touchgfx::ClickButtonTrigger>::~BoxWithBorderButtonStyle()	0	static
@@ -37,7 +37,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<Screen8ViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
-../TouchGFX/generated/gui_generated/src/screen8_screen/Screen8ViewBase.cpp:94:6:void Screen8ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	0	static
+../TouchGFX/generated/gui_generated/src/screen8_screen/Screen8ViewBase.cpp:96:6:void Screen8ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
@@ -46,7 +46,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:43:5:touchgfx::SVGImage::SVGImage()	8	static
-../TouchGFX/generated/gui_generated/src/screen8_screen/Screen8ViewBase.cpp:11:1:Screen8ViewBase::Screen8ViewBase()	112	static
-../TouchGFX/generated/gui_generated/src/screen8_screen/Screen8ViewBase.cpp:84:1:Screen8ViewBase::~Screen8ViewBase()	8	static
-../TouchGFX/generated/gui_generated/src/screen8_screen/Screen8ViewBase.cpp:84:1:virtual Screen8ViewBase::~Screen8ViewBase()	8	static
-../TouchGFX/generated/gui_generated/src/screen8_screen/Screen8ViewBase.cpp:89:6:virtual void Screen8ViewBase::setupScreen()	0	static
+../TouchGFX/generated/gui_generated/src/screen8_screen/Screen8ViewBase.cpp:10:1:Screen8ViewBase::Screen8ViewBase()	104	static
+../TouchGFX/generated/gui_generated/src/screen8_screen/Screen8ViewBase.cpp:86:1:Screen8ViewBase::~Screen8ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen8_screen/Screen8ViewBase.cpp:86:1:virtual Screen8ViewBase::~Screen8ViewBase()	8	static
+../TouchGFX/generated/gui_generated/src/screen8_screen/Screen8ViewBase.cpp:91:6:virtual void Screen8ViewBase::setupScreen()	0	static

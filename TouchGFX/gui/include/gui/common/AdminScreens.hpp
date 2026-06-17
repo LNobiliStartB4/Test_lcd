@@ -5,6 +5,7 @@
 #include <gui/model/DashboardTypes.hpp>
 #include <gui/model/ModelListener.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <images/SVGDatabase.hpp>
 #include <stdio.h>
 #include <mvp/Presenter.hpp>
 #include <mvp/View.hpp>
@@ -17,6 +18,7 @@
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
@@ -222,8 +224,12 @@ public:
         title.setTypedText(touchgfx::TypedText(titleId));
         this->add(title);
 
-        logo.setBitmap(touchgfx::Bitmap(BITMAP_THD_CORNER_LOGO_ID));
-        logo.setXY(428, 8);
+        logo.setSVG(SVG_LOGO_UFFICIALE_THD_2016_RGB_ID);
+        logo.setPosition(426, 8, 50, 44);
+        logo.setScale(0.384f, 0.384f);
+        logo.setImagePosition(0, 0);
+        logo.setRotationCenter(0, 0);
+        logo.setRotation(0.0f);
         this->add(logo);
     }
 
@@ -245,7 +251,7 @@ private:
     OutlineButton backButton;
     touchgfx::TextArea backLabel;
     touchgfx::TextArea title;
-    touchgfx::Image logo;
+    touchgfx::SVGImage logo;
     touchgfx::Callback<AdminViewBase, const touchgfx::AbstractButtonContainer&> backCallback;
 };
 

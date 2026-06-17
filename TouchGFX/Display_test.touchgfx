@@ -393,14 +393,16 @@
             }
           },
           {
-            "Type": "ScalableImage",
+            "Type": "SvgImage",
             "Name": "rfidIcon",
-            "X": 168,
-            "Y": 103,
-            "Width": 144,
-            "Height": 68,
-            "Filename": "rfid_contactless.png",
-            "ScalingAlgorithm": "BilinearInterpolation"
+            "X": 180,
+            "Y": 93,
+            "Width": 106,
+            "Height": 106,
+            "Image": "noun-rfid-7376130.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 1.01,
+            "ImageVerticalScale": 0.85
           },
           {
             "Type": "TextArea",
@@ -1562,14 +1564,16 @@
             "BorderSize": 2
           },
           {
-            "Type": "ScalableImage",
+            "Type": "SvgImage",
             "Name": "hemorflowPcIcon",
-            "X": 204,
-            "Y": 104,
-            "Width": 72,
-            "Height": 72,
-            "Filename": "pc_wait_device.png",
-            "ScalingAlgorithm": "BilinearInterpolation"
+            "X": 186,
+            "Y": 98,
+            "Width": 91,
+            "Height": 92,
+            "Image": "device-desktop.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 3.79,
+            "ImageVerticalScale": 3.83
           },
           {
             "Type": "TextArea",
@@ -5268,26 +5272,6 @@
               "Green": 255,
               "Blue": 255
             }
-          },
-          {
-            "Type": "ScalableImage",
-            "Name": "vacuumCapLeft",
-            "X": 20,
-            "Y": 104,
-            "Width": 6,
-            "Height": 12,
-            "Filename": "vacuum_cap_left.png",
-            "ScalingAlgorithm": "BilinearInterpolation"
-          },
-          {
-            "Type": "ScalableImage",
-            "Name": "vacuumCapRight",
-            "X": 414,
-            "Y": 104,
-            "Width": 6,
-            "Height": 12,
-            "Filename": "vacuum_cap_right.png",
-            "ScalingAlgorithm": "BilinearInterpolation"
           }
         ],
         "Interactions": []

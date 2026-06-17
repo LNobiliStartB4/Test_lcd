@@ -6,7 +6,6 @@
 #include <touchgfx/Color.hpp>
 #include<images/SVGDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
-#include <images/BitmapDatabase.hpp>
 
 Screen8ViewBase::Screen8ViewBase() :
     flexButtonCallback(this, &Screen8ViewBase::flexButtonCallbackHandler)
@@ -52,9 +51,12 @@ Screen8ViewBase::Screen8ViewBase() :
     hemorflowWaitCard.setBorderSize(2);
     add(hemorflowWaitCard);
 
-    hemorflowPcIcon.setBitmap(touchgfx::Bitmap(BITMAP_PC_WAIT_DEVICE_ID));
-    hemorflowPcIcon.setPosition(204, 104, 72, 72);
-    hemorflowPcIcon.setScalingAlgorithm(touchgfx::ScalableImage::BILINEAR_INTERPOLATION);
+    hemorflowPcIcon.setSVG(SVG_DEVICE_DESKTOP_ID);
+    hemorflowPcIcon.setPosition(186, 98, 91, 92);
+    hemorflowPcIcon.setScale(3.79f, 3.83f);
+    hemorflowPcIcon.setImagePosition(0, 0);
+    hemorflowPcIcon.setRotationCenter(0, 0);
+    hemorflowPcIcon.setRotation(0.0f);
     add(hemorflowPcIcon);
 
     hemorflowWaitLabel.setPosition(86, 190, 308, 24);

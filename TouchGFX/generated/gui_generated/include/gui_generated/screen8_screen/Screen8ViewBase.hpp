@@ -12,7 +12,6 @@
 #include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
 #include <gui/containers/TouchFeedback.hpp>
 
 class Screen8ViewBase : public touchgfx::View<Screen8Presenter>
@@ -45,7 +44,7 @@ protected:
     touchgfx::Box hemorflowWaitAccent;
     touchgfx::TextArea hemorflowWaitTitle;
     touchgfx::BoxWithBorder hemorflowWaitCard;
-    touchgfx::ScalableImage hemorflowPcIcon;
+    touchgfx::SVGImage hemorflowPcIcon;
     touchgfx::TextArea hemorflowWaitLabel;
     touchgfx::TextArea hemorflowWaitSubtitle;
     touchgfx::SVGImage svgImage1;

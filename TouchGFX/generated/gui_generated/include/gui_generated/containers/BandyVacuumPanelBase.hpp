@@ -10,7 +10,6 @@
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
 
 class BandyVacuumPanelBase : public touchgfx::Container
 {
@@ -33,8 +32,6 @@ protected:
     touchgfx::Box vacuumFill;
     touchgfx::TextArea scaleZeroLabel;
     touchgfx::TextArea scaleMaxLabel;
-    touchgfx::ScalableImage vacuumCapLeft;
-    touchgfx::ScalableImage vacuumCapRight;
 
     /*
      * Wildcard Buffers

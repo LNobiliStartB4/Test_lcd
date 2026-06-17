@@ -140,6 +140,7 @@ TouchGFX/gui/src/common/FrontendApplication.o: \
  ../TouchGFX/gui/include/gui/screen21_screen/Screen21Presenter.hpp \
  ../TouchGFX/gui/include/gui/common/AdminScreens.hpp \
  ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
+ ../TouchGFX/generated/images/include/images/SVGDatabase.hpp \
  ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -282,5 +283,6 @@ TouchGFX/gui/src/common/FrontendApplication.o: \
 ../TouchGFX/gui/include/gui/screen21_screen/Screen21Presenter.hpp:
 ../TouchGFX/gui/include/gui/common/AdminScreens.hpp:
 ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
+../TouchGFX/generated/images/include/images/SVGDatabase.hpp:
 ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:

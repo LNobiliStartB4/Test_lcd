@@ -20,11 +20,11 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:403:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextArea::getWildcard2() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:84:41:virtual const touchgfx::Unicode::UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
-../TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cpp:60:1:BandyVacuumPanelBase::~BandyVacuumPanelBase()	0	static
-../TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cpp:65:6:virtual void BandyVacuumPanelBase::initialize()	0	static
+../TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cpp:49:1:BandyVacuumPanelBase::~BandyVacuumPanelBase()	0	static
+../TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cpp:54:6:virtual void BandyVacuumPanelBase::initialize()	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
-../TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cpp:60:1:virtual BandyVacuumPanelBase::~BandyVacuumPanelBase()	8	static
+../TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cpp:49:1:virtual BandyVacuumPanelBase::~BandyVacuumPanelBase()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
@@ -34,4 +34,4 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	8	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	8	static
-../TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cpp:9:1:BandyVacuumPanelBase::BandyVacuumPanelBase()	88	static
+../TouchGFX/generated/gui_generated/src/containers/BandyVacuumPanelBase.cpp:8:1:BandyVacuumPanelBase::BandyVacuumPanelBase()	80	static

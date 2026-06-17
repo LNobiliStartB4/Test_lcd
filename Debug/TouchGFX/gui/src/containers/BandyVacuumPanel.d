@@ -53,9 +53,7 @@ TouchGFX/gui/src/containers/BandyVacuumPanel.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp
 ../TouchGFX/gui/include/gui/containers/BandyVacuumPanel.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyVacuumPanelBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -110,5 +108,3 @@ TouchGFX/gui/src/containers/BandyVacuumPanel.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:

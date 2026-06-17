@@ -59,11 +59,11 @@ TouchGFX/gui/src/screen9_screen/Screen9Presenter.o: \
  ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyVacuumPanelBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
  ../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp
 ../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
@@ -123,8 +123,8 @@ TouchGFX/gui/src/screen9_screen/Screen9Presenter.o: \
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/BandyVacuumPanelBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/BoxWithBorder.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
 ../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:

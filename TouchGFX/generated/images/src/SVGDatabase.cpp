@@ -70,6 +70,140 @@ static const VGShape svg_arrow_back_up_shape_0 = {
     &svg_arrow_back_up_shape_1                                // next
 };
 
+static const uint8_t svg_device_desktop_shape_3_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_VLINE
+};
+
+static const float svg_device_desktop_shape_3_points[] = {
+    15.0000f, 16.0000f, 20.0000f
+};
+
+static const VGFixedColor svg_device_desktop_shape_3_stroke = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_device_desktop_shape_3 = {
+    2, 3,                                                     // numCommands, numPoints
+    svg_device_desktop_shape_3_commands,                      // commands
+    svg_device_desktop_shape_3_points,                        // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_NONE,                                                  // fillMode
+    VG_FIXED_COLOR,                                           // strokeMode
+    0,                                                        // fillPaint
+    &svg_device_desktop_shape_3_stroke,                       // strokePaint
+    1.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_ROUND,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_ROUND,                                  // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 15.0000f, 16.0000f, 15.0000f, 20.0000f },               // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
+};
+
+static const uint8_t svg_device_desktop_shape_2_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_VLINE
+};
+
+static const float svg_device_desktop_shape_2_points[] = {
+    9.0000f, 16.0000f, 20.0000f
+};
+
+static const VGFixedColor svg_device_desktop_shape_2_stroke = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_device_desktop_shape_2 = {
+    2, 3,                                                     // numCommands, numPoints
+    svg_device_desktop_shape_2_commands,                      // commands
+    svg_device_desktop_shape_2_points,                        // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_NONE,                                                  // fillMode
+    VG_FIXED_COLOR,                                           // strokeMode
+    0,                                                        // fillPaint
+    &svg_device_desktop_shape_2_stroke,                       // strokePaint
+    1.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_ROUND,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_ROUND,                                  // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 9.0000f, 16.0000f, 9.0000f, 20.0000f },                 // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    &svg_device_desktop_shape_3                               // next
+};
+
+static const uint8_t svg_device_desktop_shape_1_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_HLINE
+};
+
+static const float svg_device_desktop_shape_1_points[] = {
+    7.0000f, 20.0000f, 17.0000f
+};
+
+static const VGFixedColor svg_device_desktop_shape_1_stroke = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_device_desktop_shape_1 = {
+    2, 3,                                                     // numCommands, numPoints
+    svg_device_desktop_shape_1_commands,                      // commands
+    svg_device_desktop_shape_1_points,                        // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_NONE,                                                  // fillMode
+    VG_FIXED_COLOR,                                           // strokeMode
+    0,                                                        // fillPaint
+    &svg_device_desktop_shape_1_stroke,                       // strokePaint
+    1.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_ROUND,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_ROUND,                                  // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 7.0000f, 20.0000f, 17.0000f, 20.0000f },                // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    &svg_device_desktop_shape_2                               // next
+};
+
+static const uint8_t svg_device_desktop_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_VLINE
+};
+
+static const float svg_device_desktop_shape_0_points[] = {
+    3.0000f, 5.0000f, 3.0000f, 4.7348f, 3.1054f, 4.4804f, 3.2929f, 4.2929f, 3.4804f, 4.1054f, 3.7348f, 4.0000f, 4.0000f, 4.0000f, 20.0000f,
+    20.2652f, 4.0000f, 20.5196f, 4.1054f, 20.7071f, 4.2929f, 20.8946f, 4.4804f, 21.0000f, 4.7348f, 21.0000f, 5.0000f, 15.0000f, 21.0000f, 15.2652f, 20.8946f, 15.5196f, 20.7071f, 15.7071f,
+    20.5196f, 15.8946f, 20.2652f, 16.0000f, 20.0000f, 16.0000f, 4.0000f, 3.7348f, 16.0000f, 3.4804f, 15.8946f, 3.2929f, 15.7071f, 3.1054f, 15.5196f, 3.0000f, 15.2652f, 3.0000f, 15.0000f,
+    5.0000f
+};
+
+static const VGFixedColor svg_device_desktop_shape_0_stroke = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_device_desktop_shape_0 = {
+    13, 54,                                                   // numCommands, numPoints
+    svg_device_desktop_shape_0_commands,                      // commands
+    svg_device_desktop_shape_0_points,                        // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_NONE,                                                  // fillMode
+    VG_FIXED_COLOR,                                           // strokeMode
+    0,                                                        // fillPaint
+    &svg_device_desktop_shape_0_stroke,                       // strokePaint
+    1.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_ROUND,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_ROUND,                                  // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 3.0000f, 4.0000f, 21.0000f, 16.0000f },                 // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    &svg_device_desktop_shape_1                               // next
+};
+
 static const uint8_t svg_dot_active_shape_0_commands[] = {
     VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
     VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE
@@ -1243,6 +1377,107 @@ static const VGShape svg_logo_ufficiale_thd_2016_rgb_shape_0 = {
     { 0.0000f, 0.0006f, 129.7185f, 114.6294f },               // boundingbox[4]
     { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
     &svg_logo_ufficiale_thd_2016_rgb_shape_1                  // next
+};
+
+static const uint8_t svg_noun_rfid_7376130_shape_0_commands[] = {
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_HLINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE, VECTOR_PRIM_LINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_CLOSE,
+    VECTOR_PRIM_MOVE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_VLINE, VECTOR_PRIM_LINE, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_VLINE, VECTOR_PRIM_BEZIER_CUBIC,
+    VECTOR_PRIM_HLINE, VECTOR_PRIM_LINE, VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_HLINE,
+    VECTOR_PRIM_BEZIER_CUBIC, VECTOR_PRIM_CLOSE
+};
+
+static const float svg_noun_rfid_7376130_shape_0_points[] = {
+    57.3830f, 29.9410f, 56.9885f, 30.3355f, 56.3518f, 30.3355f, 55.9572f, 29.9410f, 55.5627f, 29.5465f, 55.5627f, 28.9098f, 55.9572f, 28.5152f, 63.4572f, 21.0152f, 75.6602f, 21.0152f, 83.1602f, 28.5152f,
+    83.5547f, 28.9097f, 83.5547f, 29.5464f, 83.1602f, 29.9410f, 82.9649f, 30.1363f, 82.7071f, 30.2340f, 82.4493f, 30.2340f, 82.1915f, 30.2340f, 81.9336f, 30.1363f, 81.7383f, 29.9410f, 75.0195f, 23.2262f, 64.0933f, 23.2262f, 57.3833f, 29.9410f,
+    77.0820f, 34.5933f, 77.2773f, 34.7886f, 77.5351f, 34.8863f, 77.7929f, 34.8863f, 78.0508f, 34.8863f, 78.3086f, 34.7886f, 78.5039f, 34.5933f, 78.8984f, 34.1988f, 78.8984f, 33.5621f, 78.5039f, 33.1675f,
+    76.1133f, 30.7769f, 72.9375f, 29.4605f, 69.5586f, 29.4605f, 66.1797f, 29.4605f, 63.0039f, 30.7769f, 60.6133f, 33.1675f, 60.2187f, 33.5620f, 60.2187f, 34.1987f, 60.6133f, 34.5933f, 61.0078f, 34.9879f, 61.6445f, 34.9878f, 62.0391f, 34.5933f,
+    64.0469f, 32.5855f, 66.7188f, 31.4761f, 69.5625f, 31.4761f, 72.3984f, 31.4800f, 75.0703f, 32.5855f, 77.0820f, 34.5933f,
+    69.5586f, 43.8316f, 67.3320f, 43.8316f, 65.5195f, 42.0191f, 65.5195f, 39.7925f, 65.5195f, 37.5659f, 67.3320f, 35.7534f, 69.5586f, 35.7534f, 71.7852f, 35.7534f, 73.5977f, 37.5659f, 73.5977f, 39.7925f,
+    73.5938f, 42.0191f, 71.7852f, 43.8316f, 69.5586f, 43.8316f,
+    71.5820f, 39.7925f, 71.5820f, 38.6753f, 70.6758f, 37.7691f, 69.5586f, 37.7691f, 68.4414f, 37.7691f, 67.5352f, 38.6754f, 67.5352f, 39.7925f, 67.5352f, 40.9097f, 68.4415f, 41.8159f, 69.5586f, 41.8159f,
+    70.6758f, 41.8159f, 71.5820f, 40.9096f, 71.5820f, 39.7925f,
+    96.3160f, 13.9055f, 68.7175f, 96.3160f, 73.0886f, 92.7613f, 76.6433f, 88.3902f, 76.6433f, 50.7262f, 76.6394f,
+    49.1676f, 76.6394f, 47.6364f, 76.1706f, 46.3395f, 75.3035f, 45.2536f, 75.9832f, 46.1481f, 77.8582f, 46.1208f, 80.4402f, 44.4841f, 82.4285f, 40.4138f, 87.3660f, 34.3431f, 87.3855f, 29.4681f, 87.4051f,
+    28.1634f, 87.4090f, 26.9251f, 87.4129f, 25.8275f, 87.5066f, 16.6986f, 93.8386f, 16.5306f, 93.9558f, 16.3275f, 94.0183f, 16.1244f, 94.0183f, 16.0619f, 94.0183f, 15.9994f, 94.0144f, 15.9369f, 93.9988f,
+    15.6712f, 93.9480f, 15.4369f, 93.7918f, 15.2884f, 93.5691f, 3.8544f, 76.4561f, 3.7021f, 76.2295f, 3.6513f, 75.9522f, 3.7060f, 75.6866f, 3.7646f, 75.4210f, 3.9247f, 75.1866f, 4.1591f, 75.0460f,
+    11.9403f, 70.1944f, 13.5770f, 63.0811f, 17.2255f, 60.7491f, 22.6703f, 57.5774f, 22.6351f, 57.5188f, 21.7015f, 56.0266f, 22.1547f, 54.0540f, 23.6429f, 53.1204f,
+    42.8029f, 41.1084f, 42.7990f, 13.9054f, 42.7990f, 9.5343f, 46.3537f, 5.9796f, 50.7248f, 5.9796f, 88.3888f,
+    92.7560f, 5.9796f, 96.3146f, 9.5343f, 96.3146f, 13.9054f,
+    24.3390f, 56.4445f, 36.5970f, 75.9915f, 37.1048f, 75.6790f, 37.5970f, 75.3235f, 38.0853f, 74.9759f, 38.5423f, 74.6478f, 38.9759f, 74.3353f, 39.4056f, 74.0775f,
+    41.0189f, 73.1009f, 42.7494f, 73.2259f, 44.0501f, 74.3665f, 68.1631f, 59.2455f, 68.4287f, 59.0815f, 68.6123f, 58.8197f, 68.6826f, 58.5111f, 68.7530f, 58.2026f, 68.7022f, 57.8901f, 68.5342f, 57.6244f,
+    55.5342f, 36.8864f, 55.3701f, 36.6208f, 55.1084f, 36.4372f, 54.7998f, 36.3669f, 54.4912f, 36.2966f, 54.1748f, 36.3474f, 53.9131f, 36.5153f, 24.7101f, 54.8243f,
+    24.1632f, 55.1681f, 23.9953f, 55.8985f, 24.3390f, 56.4454f,
+    70.6440f, 58.9601f, 70.4526f, 59.7921f, 69.9526f, 60.4992f, 69.2299f, 60.9523f, 61.5463f, 65.7726f, 83.5543f,
+    85.8355f, 65.7726f, 87.6910f, 63.9171f, 87.6910f, 61.6359f, 20.9839f, 87.6910f, 18.7027f, 85.8355f, 16.8472f, 83.5543f, 16.8472f, 55.5623f, 16.8511f,
+    53.2811f, 16.8511f, 51.4256f, 18.7066f, 51.4256f, 20.9878f, 35.6988f, 52.8436f, 34.8121f, 53.5624f, 34.3590f, 54.4178f, 34.2183f, 55.2498f, 34.4097f,
+    56.0818f, 34.6012f, 56.7889f, 35.1012f, 57.2420f, 35.8238f, 70.2420f, 56.5538f, 70.6951f, 57.2726f, 70.8358f, 58.1280f, 70.6443f, 58.9600f,
+    31.3820f, 76.5811f, 32.6398f, 77.1514f, 33.7414f, 77.1553f, 34.7570f, 76.8545f, 31.5070f, 71.6709f, 30.8664f, 72.9873f, 30.6437f, 74.7803f, 31.3820f, 76.5811f,
+    42.9760f, 76.1319f, 42.4955f, 75.5733f, 41.6635f, 75.0655f, 40.4448f, 75.7999f, 40.0854f, 76.0186f, 39.6831f, 76.3038f, 39.2573f, 76.6124f, 37.2221f, 78.0732f, 34.1440f, 80.2842f, 30.1479f, 78.2178f,
+    29.9526f, 78.1163f, 29.7963f, 77.9561f, 29.6987f, 77.7569f, 28.2573f, 74.7217f, 28.9213f, 71.6866f, 30.3081f, 69.7608f, 23.7378f, 59.2808f, 18.4448f, 62.3628f, 15.2261f, 64.4175f, 13.8120f, 71.0308f,
+    13.7534f, 71.2964f, 13.5932f, 71.5308f, 13.3588f, 71.6753f, 6.1010f, 76.1987f, 16.3900f, 91.6007f, 24.8939f, 85.7023f,
+    25.0346f, 85.6047f, 25.1947f, 85.5461f, 25.3666f, 85.5266f, 26.6244f, 85.3977f, 27.9994f, 85.3937f, 29.4604f, 85.3898f, 34.1479f, 85.3742f, 39.4565f, 85.3586f, 42.9294f, 81.1476f, 44.2536f, 79.5460f, 43.9841f, 77.2960f, 42.9763f, 76.1320f,
+    94.3000f, 13.9049f, 94.3000f, 10.6471f, 91.6477f, 7.9947f, 88.3898f, 7.9947f, 50.7258f, 7.9908f, 47.4680f, 7.9908f, 44.8156f, 10.6431f, 44.8156f, 13.9010f,
+    39.8390f, 49.4133f, 36.9562f, 20.9832f, 49.4133f, 17.5926f, 52.1711f, 14.8348f, 55.5617f, 14.8348f,
+    83.5537f, 86.9443f, 14.8348f, 89.7021f, 17.5926f, 89.7021f, 20.9832f, 61.6312f, 89.7021f, 65.0218f, 86.9443f, 67.7796f, 83.5537f, 67.7796f,
+    58.3347f, 48.2757f, 74.0843f, 49.0413f, 74.4358f, 49.8773f, 74.6233f, 50.7210f, 74.6233f, 88.3850f,
+    91.6428f, 74.6233f, 94.2952f, 71.9710f, 94.2952f, 68.7131f,
+};
+
+static const VGFixedColor svg_noun_rfid_7376130_shape_0_fill = {
+    0xffffffff // ARGB
+};
+
+static const VGShape svg_noun_rfid_7376130_shape_0 = {
+    128, 517,                                                 // numCommands, numPoints
+    svg_noun_rfid_7376130_shape_0_commands,                   // commands
+    svg_noun_rfid_7376130_shape_0_points,                     // points
+    VG_FILL_NON_ZERO,                                         // drawingMode
+    VG_FIXED_COLOR,                                           // fillMode
+    VG_NONE,                                                  // strokeMode
+    &svg_noun_rfid_7376130_shape_0_fill,                      // fillPaint
+    0,                                                        // strokePaint
+    0.0000f,                                                  // strokeWidth
+    VG_STROKE_LINEJOIN_MITER,                                 // strokeLineJoin
+    VG_STROKE_LINECAP_BUTT,                                   // strokeLineCap
+    4.0000,                                                   // strokeMiterLimit
+    255,                                                      // fillAlpha
+    255,                                                      // strokeAlpha
+    { 3.6846f, 5.9796f, 96.3160f, 94.0183f },                 // boundingbox[4]
+    { 1.0000f, 0.0000f, 0.0000f, 1.0000f, 0.0000f, 0.0000f }, // transformation[6]
+    0                                                         // next
 };
 
 static const uint8_t svg_pretest_bar_cap_dim_shape_0_commands[] = {
@@ -2918,12 +3153,14 @@ static const VGShape svg_start_play_gold_shape_0 = {
 
 static const touchgfx::VGObject svg_database[] = {
     { 4.0000f, 5.0000f, 17.0000f, 14.0000f, 24.0000f, 24.0000f, &svg_arrow_back_up_shape_0 },
+    { 0.0000f, 0.0000f, 24.0000f, 24.0000f, 24.0000f, 24.0000f, &svg_device_desktop_shape_0 },
     { 0.5000f, 0.5000f, 11.0000f, 11.0000f, 12.0000f, 12.0000f, &svg_dot_active_shape_0 },
     { 0.5000f, 0.5000f, 11.0000f, 11.0000f, 12.0000f, 12.0000f, &svg_dot_dim_shape_0 },
     { 5.5000f, 5.5000f, 61.0000f, 61.0000f, 72.0000f, 72.0000f, &svg_exam_complete_gold_shape_0 },
     { 1.5800f, 6.8300f, 19.2220f, 1.9500f, 19.6000f, 2.4000f, &svg_hemorflow_shape_0 },
     { 1.8200f, 6.5700f, 18.8616f, 2.2900f, 22.5000f, 15.6000f, &svg_hemorflow_v2_shape_0 },
     { 0.0000f, 0.0006f, 129.7184f, 114.6288f, 129.7300f, 114.6300f, &svg_logo_ufficiale_thd_2016_rgb_shape_0 },
+    { 3.6846f, 5.9796f, 92.6314f, 88.0388f, 110.0000f, 135.0000f, &svg_noun_rfid_7376130_shape_0 },
     { 0.0000f, 0.0000f, 12.0000f, 12.0000f, 12.0000f, 12.0000f, &svg_pretest_bar_cap_dim_shape_0 },
     { 0.0000f, 0.0000f, 12.0000f, 12.0000f, 12.0000f, 12.0000f, &svg_pretest_bar_cap_gold_shape_0 },
     { 2.0000f, 2.0000f, 28.0000f, 28.0000f, 32.0000f, 32.0000f, &svg_pretest_check_gold_shape_0 },
@@ -2948,6 +3185,6 @@ const touchgfx::VGObject* getInstance()
 
 uint16_t getInstanceSize()
 {
-    return 20;
+    return 22;
 }
 } // namespace SVGDatabase
