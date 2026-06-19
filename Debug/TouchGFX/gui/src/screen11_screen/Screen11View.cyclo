@@ -1,11 +1,32 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:147:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:368:18:virtual void touchgfx::Drawable::setHeight(int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:378:18:virtual void touchgfx::Drawable::childGeometryChanged()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:389:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:401:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:703:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:20:6:virtual void Screen11View::tearDownScreen()	1
-../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:25:6:virtual void Screen11View::backClicked()	1
-../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp:12:13:Screen11View::~Screen11View()	1
-../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp:12:13:virtual Screen11View::~Screen11View()	1
-../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:4:1:Screen11View::Screen11View()	1
-../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:42:6:void Screen11View::updateBrightnessValue(uint8_t)	1
-../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:8:6:virtual void Screen11View::setupScreen()	2
-../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:30:6:virtual void Screen11View::brightnessChanged(int)	2
+../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:55:6:virtual void Screen11View::tearDownScreen()	1
+../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:60:6:virtual void Screen11View::backClicked()	1
+../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp:15:13:Screen11View::~Screen11View()	1
+../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp:15:13:virtual Screen11View::~Screen11View()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	1
+../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:24:1:Screen11View::Screen11View()	1
+../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:78:6:void Screen11View::updateBrightnessValue(uint8_t)	1
+../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:123:6:void Screen11View::updateBrightnessBar(uint8_t)	1
+../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:65:6:virtual void Screen11View::brightnessChanged(int)	2
+../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:146:6:bool Screen11View::isBrightnessTouchArea(int16_t, int16_t) const	2
+../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:105:6:void Screen11View::updateBrightnessFromX(int16_t)	1
+../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:28:6:virtual void Screen11View::setupScreen()	2
+../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:84:6:virtual void Screen11View::handleClickEvent(const touchgfx::ClickEvent&)	3
+../TouchGFX/gui/src/screen11_screen/Screen11View.cpp:95:6:virtual void Screen11View::handleDragEvent(const touchgfx::DragEvent&)	2
