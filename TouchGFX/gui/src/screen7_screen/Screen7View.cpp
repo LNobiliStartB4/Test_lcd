@@ -1,5 +1,4 @@
 #include <gui/screen7_screen/Screen7View.hpp>
-#include <gui/model/BandyCompletion.hpp>
 #include <touchgfx/Application.hpp>
 #include <touchgfx/Unicode.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
@@ -15,17 +14,12 @@ void formatSeconds(touchgfx::Unicode::UnicodeChar* buffer, uint16_t bufferSize, 
 }
 
 Screen7View::Screen7View()
-    : latestState(),
-      transitionRequested(false),
-      manualEndRequested(false)
 {
 }
 
 void Screen7View::setupScreen()
 {
     Screen7ViewBase::setupScreen();
-    transitionRequested = false;
-    manualEndRequested = false;
     subtitleText.setLinespacing(2);
 
     if (presenter != 0)
@@ -38,7 +32,6 @@ void Screen7View::setupScreen()
 
 void Screen7View::tearDownScreen()
 {
-    transitionRequested = false;
     Screen7ViewBase::tearDownScreen();
 }
 
@@ -51,34 +44,22 @@ void Screen7View::confirmClicked()
 {
     if (presenter != 0)
     {
-        manualEndRequested = true;
         presenter->endDemo();
     }
 }
 
 void Screen7View::applyBandyState(const BandyState& state)
 {
-    const BandyState previousState = latestState;
-    latestState = state;
     updateTimeValue(state.remainingSeconds);
 
-    if (!transitionRequested && (state.sessionState == BandySessionWaitRfid))
+    if (state.sessionState == BandySessionWaitRfid)
     {
-        transitionRequested = true;
-        if (!manualEndRequested && isNaturalBandyCompletion(previousState, state))
-        {
-            application().gotoBandyCompletedScreenNoTransition();
-        }
-        else
-        {
-            application().gotoProductSelectScreenNoTransition();
-        }
+        application().gotoProductSelectScreenNoTransition();
         return;
     }
 
-    if (!transitionRequested && (state.sessionState == BandySessionRunning))
+    if (state.sessionState == BandySessionRunning)
     {
-        transitionRequested = true;
         application().gotoBandyScreenNoTransition();
     }
 }

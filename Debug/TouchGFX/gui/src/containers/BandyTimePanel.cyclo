@@ -1,3 +1,4 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	1
@@ -11,7 +12,6 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	1
 ../TouchGFX/gui/include/gui/containers/BandyTimePanel.hpp:11:13:BandyTimePanel::~BandyTimePanel()	1
 ../TouchGFX/gui/include/gui/containers/BandyTimePanel.hpp:11:13:virtual BandyTimePanel::~BandyTimePanel()	1
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../TouchGFX/gui/src/containers/BandyTimePanel.cpp:4:1:BandyTimePanel::BandyTimePanel()	1
-../TouchGFX/gui/src/containers/BandyTimePanel.cpp:15:6:void BandyTimePanel::setRemainingSeconds(uint16_t)	1
 ../TouchGFX/gui/src/containers/BandyTimePanel.cpp:9:6:virtual void BandyTimePanel::initialize()	1
+../TouchGFX/gui/src/containers/BandyTimePanel.cpp:15:6:void BandyTimePanel::setRemainingSeconds(uint16_t)	1

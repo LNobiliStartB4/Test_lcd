@@ -1,9 +1,0 @@
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	1
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:30:18:virtual void ModelListener::pneumaticPretestUpdated(const PneumaticPretestStatus&)	1
-../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp:32:13:Screen11Presenter::~Screen11Presenter()	1
-../TouchGFX/gui/src/screen11_screen/Screen11Presenter.cpp:10:6:virtual void Screen11Presenter::activate()	1
-../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp:32:13:virtual Screen11Presenter::~Screen11Presenter()	1
-../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp:32:13:virtual void* Screen11Presenter::_ZThn4_N17Screen11PresenterD1Ev()	1
-../TouchGFX/gui/src/screen11_screen/Screen11Presenter.cpp:4:1:Screen11Presenter::Screen11Presenter(Screen11View&)	1
-../TouchGFX/gui/src/screen11_screen/Screen11Presenter.cpp:20:9:uint8_t Screen11Presenter::getBrightnessPercent() const	2
-../TouchGFX/gui/src/screen11_screen/Screen11Presenter.cpp:25:6:void Screen11Presenter::setBrightnessPercent(uint8_t)	2

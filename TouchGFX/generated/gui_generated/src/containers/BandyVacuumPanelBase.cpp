@@ -7,8 +7,8 @@
 
 BandyVacuumPanelBase::BandyVacuumPanelBase()
 {
-    setWidth(451);
-    setHeight(154);
+    setWidth(440);
+    setHeight(140);
     vacuumLabel.setPosition(42, 70, 356, 20);
     vacuumLabel.setColor(touchgfx::Color::getColorFromRGB(196, 192, 184));
     vacuumLabel.setLinespacing(0);
@@ -23,24 +23,24 @@ BandyVacuumPanelBase::BandyVacuumPanelBase()
     vacuumValue.setTypedText(touchgfx::TypedText(T_VALUE_HERO));
     add(vacuumValue);
 
-    vacuumTrack.setPosition(20, 104, 400, 12);
+    vacuumTrack.setPosition(20, 104, 400, 5);
     vacuumTrack.setColor(touchgfx::Color::getColorFromRGB(82, 82, 76));
     vacuumTrack.setBorderColor(touchgfx::Color::getColorFromRGB(82, 82, 76));
     vacuumTrack.setBorderSize(0);
     add(vacuumTrack);
 
-    vacuumFill.setPosition(20, 104, 0, 12);
-    vacuumFill.setColor(touchgfx::Color::getColorFromRGB(240, 170, 0));
+    vacuumFill.setPosition(20, 104, 0, 5);
+    vacuumFill.setColor(touchgfx::Color::getColorFromRGB(245, 242, 232));
     add(vacuumFill);
 
-    scaleZeroLabel.setPosition(20, 120, 64, 21);
-    scaleZeroLabel.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    scaleZeroLabel.setPosition(20, 116, 60, 15);
+    scaleZeroLabel.setColor(touchgfx::Color::getColorFromRGB(104, 126, 146));
     scaleZeroLabel.setLinespacing(0);
     scaleZeroLabel.setTypedText(touchgfx::TypedText(T_TEXT_ZEROSCALE));
     add(scaleZeroLabel);
 
-    scaleMaxLabel.setPosition(381, 120, 67, 21);
-    scaleMaxLabel.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    scaleMaxLabel.setPosition(360, 116, 60, 13);
+    scaleMaxLabel.setColor(touchgfx::Color::getColorFromRGB(104, 126, 146));
     scaleMaxLabel.setLinespacing(0);
     scaleMaxLabel.setTypedText(touchgfx::TypedText(T_TEXT_MAXSCALE));
     add(scaleMaxLabel);

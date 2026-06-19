@@ -1,4 +1,7 @@
+../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:30:13:touchgfx::TouchController::~TouchController()	1
+../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp:30:13:virtual touchgfx::TouchController::~TouchController()	1
+../TouchGFX/target/STM32TouchController.cpp:42:6:bool {anonymous}::coordinatesAreValid(int32_t, int32_t)	5
+../TouchGFX/target/STM32TouchController.cpp:48:6:virtual void STM32TouchController::init()	1
+../TouchGFX/target/STM32TouchController.cpp:56:6:virtual bool STM32TouchController::sampleTouch(int32_t&, int32_t&)	8
 ../TouchGFX/target/STM32TouchController.hpp:38:7:STM32TouchController::~STM32TouchController()	1
-../TouchGFX/target/STM32TouchController.cpp:49:6:virtual void STM32TouchController::init()	1
-../TouchGFX/target/STM32TouchController.cpp:57:6:virtual bool STM32TouchController::sampleTouch(int32_t&, int32_t&)	9
 ../TouchGFX/target/STM32TouchController.hpp:38:7:virtual STM32TouchController::~STM32TouchController()	1

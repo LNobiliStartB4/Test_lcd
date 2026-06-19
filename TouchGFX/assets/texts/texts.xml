@@ -2,1372 +2,198 @@
 <TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.26.0">
   <Languages>
     <Language Id="GB" />
-    <Language Id="IT" />
-    <Language Id="FR" />
-    <Language Id="DE" />
-    <Language Id="ES" />
   </Languages>
   <Texts>
     <TextGroup Id="Dashboard">
       <Text Id="Text_SplashTitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">THD</Translation>
-        <Translation Language="IT">THD</Translation>
-        <Translation Language="FR">THD</Translation>
-        <Translation Language="DE">THD</Translation>
-        <Translation Language="ES">THD</Translation>
       </Text>
-      <Text Id="Text_SplashSubtitle" Alignment="Center" TypographyId="Title">
+      <Text Id="Text_SplashSubtitle" Alignment="Center" TypographyId="Subtitle">
         <Translation Language="GB">PRESSURE STABILIZER</Translation>
-        <Translation Language="IT">PRESSURE STABILISER</Translation>
-        <Translation Language="FR">STABILISATEUR DE PRESSION</Translation>
-        <Translation Language="DE">DRUCKSTABILISATOR</Translation>
-        <Translation Language="ES">ESTABILIZADOR DE PRESION</Translation>
       </Text>
       <Text Id="Text_SplashInitializing" Alignment="Center" TypographyId="Subtitle">
         <Translation Language="GB">Initializing the system...</Translation>
-        <Translation Language="IT">Avvio sistema...</Translation>
-        <Translation Language="FR">Initialisation du système...</Translation>
-        <Translation Language="DE">System wird initialisiert...</Translation>
-        <Translation Language="ES">Inicializando el sistema...</Translation>
       </Text>
       <Text Id="Text_ProductTitle" Alignment="Left" TypographyId="Title">
-        <Translation Language="GB">S E L E C T   A P P</Translation>
-        <Translation Language="IT">S E L E Z I O N A   A P P</Translation>
-        <Translation Language="FR">C H O I S I R   A P P</Translation>
-        <Translation Language="DE">A P P   W A H L E N</Translation>
-        <Translation Language="ES">E L E G I R   A P P</Translation>
+        <Translation Language="GB">SELECT PRODUCT</Translation>
       </Text>
       <Text Id="Text_ProductSubtitle" Alignment="Left" TypographyId="Subtitle">
         <Translation Language="GB">Choose the connected prototype</Translation>
-        <Translation Language="IT">Scegli prototipo collegato</Translation>
-        <Translation Language="FR">Choisir le prototype connecté</Translation>
-        <Translation Language="DE">Verbundenen Prototyp wählen</Translation>
-        <Translation Language="ES">Elija el prototipo conectado</Translation>
-      </Text>
-      <Text Id="Text_Settings" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">SETTINGS</Translation>
-        <Translation Language="IT">IMPOSTAZIONI</Translation>
-        <Translation Language="FR">PARAMETRES</Translation>
-        <Translation Language="DE">EINSTELLUNGEN</Translation>
-        <Translation Language="ES">AJUSTES</Translation>
-      </Text>
-      <Text Id="Text_SettingsTitle" Alignment="Center" TypographyId="Title">
-        <Translation Language="GB">SETTINGS</Translation>
-        <Translation Language="IT">IMPOSTAZIONI</Translation>
-        <Translation Language="FR">PARAMETRES</Translation>
-        <Translation Language="DE">EINSTELLUNGEN</Translation>
-        <Translation Language="ES">AJUSTES</Translation>
-      </Text>
-      <Text Id="Text_SettingsSubtitle" Alignment="Center" TypographyId="Subtitle">
-        <Translation Language="GB">Choose an option</Translation>
-        <Translation Language="IT">Scegli un'opzione</Translation>
-        <Translation Language="FR">Choisir une option</Translation>
-        <Translation Language="DE">Option wählen</Translation>
-        <Translation Language="ES">Elija una opción</Translation>
-      </Text>
-      <Text Id="Text_SettingsLanguageItem" Alignment="Left" TypographyId="SettingsItem">
-        <Translation Language="GB">LANGUAGE</Translation>
-        <Translation Language="IT">LINGUA</Translation>
-        <Translation Language="FR">LANGUE</Translation>
-        <Translation Language="DE">SPRACHE</Translation>
-        <Translation Language="ES">IDIOMA</Translation>
-      </Text>
-      <Text Id="Text_SettingsLanguageDescription" Alignment="Left" TypographyId="SettingsDescription">
-        <Translation Language="GB">Choose display language</Translation>
-        <Translation Language="IT">Scegli lingua display</Translation>
-        <Translation Language="FR">Choisir la langue d'affichage</Translation>
-        <Translation Language="DE">Anzeigesprache wählen</Translation>
-        <Translation Language="ES">Elegir idioma de pantalla</Translation>
-      </Text>
-      <Text Id="Text_SettingsBrightnessItem" Alignment="Left" TypographyId="SettingsItem">
-        <Translation Language="GB">BRIGHTNESS</Translation>
-        <Translation Language="IT">LUMINOSITA</Translation>
-        <Translation Language="FR">LUMINOSITE</Translation>
-        <Translation Language="DE">HELLIGKEIT</Translation>
-        <Translation Language="ES">BRILLO</Translation>
-      </Text>
-      <Text Id="Text_SettingsBrightnessDescription" Alignment="Left" TypographyId="SettingsDescription">
-        <Translation Language="GB">Adjust display brightness</Translation>
-        <Translation Language="IT">Regola luminosita display</Translation>
-        <Translation Language="FR">Régler la luminosité de l'écran</Translation>
-        <Translation Language="DE">Anzeigehelligkeit anpassen</Translation>
-        <Translation Language="ES">Ajustar el brillo de la pantalla</Translation>
-      </Text>
-      <Text Id="Text_SettingsAdminItem" Alignment="Left" TypographyId="SettingsItem">
-        <Translation Language="GB">ADMIN ACCESS</Translation>
-        <Translation Language="IT">ACCESSO ADMIN</Translation>
-        <Translation Language="FR">ACCES ADMIN</Translation>
-        <Translation Language="DE">ADMIN-ZUGANG</Translation>
-        <Translation Language="ES">ACCESO ADMIN</Translation>
-      </Text>
-      <Text Id="Text_SettingsAdminDescription" Alignment="Left" TypographyId="SettingsDescription">
-        <Translation Language="GB">Technical diagnostics</Translation>
-        <Translation Language="IT">Diagnostica tecnica</Translation>
-        <Translation Language="FR">Diagnostic technique</Translation>
-        <Translation Language="DE">Technische Diagnose</Translation>
-        <Translation Language="ES">Diagnóstico técnico</Translation>
-      </Text>
-      <Text Id="Text_SettingsPrevious" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">PREV</Translation>
-        <Translation Language="IT">PREC</Translation>
-        <Translation Language="FR">PREC</Translation>
-        <Translation Language="DE">ZURUCK</Translation>
-        <Translation Language="ES">ATRAS</Translation>
-      </Text>
-      <Text Id="Text_SettingsNext" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">NEXT</Translation>
-        <Translation Language="IT">SUCC</Translation>
-        <Translation Language="FR">SUIV</Translation>
-        <Translation Language="DE">WEITER</Translation>
-        <Translation Language="ES">SIG</Translation>
-      </Text>
-      <Text Id="Text_SettingsPage" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="IT">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-        <Translation Language="DE">&lt;&gt;</Translation>
-        <Translation Language="ES">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="Buffer_SettingsPage" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">1/1</Translation>
-        <Translation Language="IT">1/1</Translation>
-        <Translation Language="FR">1/1</Translation>
-        <Translation Language="DE">1/1</Translation>
-        <Translation Language="ES">1/1</Translation>
-      </Text>
-      <Text Id="Text_AdminPinTitle" Alignment="Center" TypographyId="Title">
-        <Translation Language="GB">ADMIN ACCESS</Translation>
-        <Translation Language="IT">ACCESSO ADMIN</Translation>
-        <Translation Language="FR">ACCES ADMIN</Translation>
-        <Translation Language="DE">ADMIN-ZUGANG</Translation>
-        <Translation Language="ES">ACCESO ADMIN</Translation>
-      </Text>
-      <Text Id="Text_AdminPinSubtitle" Alignment="Center" TypographyId="Subtitle">
-        <Translation Language="GB">Enter the 4-digit PIN</Translation>
-        <Translation Language="IT">Inserisci il PIN di 4 cifre</Translation>
-        <Translation Language="FR">Entrez le code PIN à 4 chiffres</Translation>
-        <Translation Language="DE">4-stelligen PIN eingeben</Translation>
-        <Translation Language="ES">Introduzca el PIN de 4 dígitos</Translation>
-      </Text>
-      <Text Id="Text_AdminPinValue" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="IT">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-        <Translation Language="DE">&lt;&gt;</Translation>
-        <Translation Language="ES">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="Buffer_AdminPinValue" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">----</Translation>
-        <Translation Language="IT">----</Translation>
-        <Translation Language="FR">----</Translation>
-        <Translation Language="DE">----</Translation>
-        <Translation Language="ES">----</Translation>
-      </Text>
-      <Text Id="Text_AdminPinPromptStatus" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">ENTER PIN</Translation>
-        <Translation Language="IT">INSERISCI PIN</Translation>
-        <Translation Language="FR">SAISIR PIN</Translation>
-        <Translation Language="DE">PIN EINGEBEN</Translation>
-        <Translation Language="ES">INTRODUCIR PIN</Translation>
-      </Text>
-      <Text Id="Text_AdminPinInvalidStatus" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">INVALID PIN</Translation>
-        <Translation Language="IT">PIN ERRATO</Translation>
-        <Translation Language="FR">PIN INVALIDE</Translation>
-        <Translation Language="DE">PIN UNGULTIG</Translation>
-        <Translation Language="ES">PIN INVALIDO</Translation>
-      </Text>
-      <Text Id="Text_AdminPinLockedStatus" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">LOCKED &lt;&gt; S</Translation>
-        <Translation Language="IT">BLOCCATO &lt;&gt; S</Translation>
-        <Translation Language="FR">BLOQUE &lt;&gt; S</Translation>
-        <Translation Language="DE">GESPERRT &lt;&gt; S</Translation>
-        <Translation Language="ES">BLOQUEADO &lt;&gt; S</Translation>
-      </Text>
-      <Text Id="Buffer_AdminPinLockedStatus" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">30</Translation>
-        <Translation Language="IT">30</Translation>
-        <Translation Language="FR">30</Translation>
-        <Translation Language="DE">30</Translation>
-        <Translation Language="ES">30</Translation>
-      </Text>
-      <Text Id="Text_AdminUnlock" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">UNLOCK</Translation>
-        <Translation Language="IT">SBLOCCA</Translation>
-        <Translation Language="FR">OUVRIR</Translation>
-        <Translation Language="DE">OFFNEN</Translation>
-        <Translation Language="ES">ABRIR</Translation>
-      </Text>
-      <Text Id="Text_AdminDelete" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">DEL</Translation>
-        <Translation Language="IT">CANC</Translation>
-        <Translation Language="FR">SUPPR</Translation>
-        <Translation Language="DE">ENTF</Translation>
-        <Translation Language="ES">SUPR</Translation>
-      </Text>
-      <Text Id="Text_KeypadDigit0" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">0</Translation>
-        <Translation Language="IT">0</Translation>
-        <Translation Language="FR">0</Translation>
-        <Translation Language="DE">0</Translation>
-        <Translation Language="ES">0</Translation>
-      </Text>
-      <Text Id="Text_KeypadDigit1" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">1</Translation>
-        <Translation Language="IT">1</Translation>
-        <Translation Language="FR">1</Translation>
-        <Translation Language="DE">1</Translation>
-        <Translation Language="ES">1</Translation>
-      </Text>
-      <Text Id="Text_KeypadDigit2" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">2</Translation>
-        <Translation Language="IT">2</Translation>
-        <Translation Language="FR">2</Translation>
-        <Translation Language="DE">2</Translation>
-        <Translation Language="ES">2</Translation>
-      </Text>
-      <Text Id="Text_KeypadDigit3" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">3</Translation>
-        <Translation Language="IT">3</Translation>
-        <Translation Language="FR">3</Translation>
-        <Translation Language="DE">3</Translation>
-        <Translation Language="ES">3</Translation>
-      </Text>
-      <Text Id="Text_KeypadDigit4" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">4</Translation>
-        <Translation Language="IT">4</Translation>
-        <Translation Language="FR">4</Translation>
-        <Translation Language="DE">4</Translation>
-        <Translation Language="ES">4</Translation>
-      </Text>
-      <Text Id="Text_KeypadDigit5" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">5</Translation>
-        <Translation Language="IT">5</Translation>
-        <Translation Language="FR">5</Translation>
-        <Translation Language="DE">5</Translation>
-        <Translation Language="ES">5</Translation>
-      </Text>
-      <Text Id="Text_KeypadDigit6" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">6</Translation>
-        <Translation Language="IT">6</Translation>
-        <Translation Language="FR">6</Translation>
-        <Translation Language="DE">6</Translation>
-        <Translation Language="ES">6</Translation>
-      </Text>
-      <Text Id="Text_KeypadDigit7" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">7</Translation>
-        <Translation Language="IT">7</Translation>
-        <Translation Language="FR">7</Translation>
-        <Translation Language="DE">7</Translation>
-        <Translation Language="ES">7</Translation>
-      </Text>
-      <Text Id="Text_KeypadDigit8" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">8</Translation>
-        <Translation Language="IT">8</Translation>
-        <Translation Language="FR">8</Translation>
-        <Translation Language="DE">8</Translation>
-        <Translation Language="ES">8</Translation>
-      </Text>
-      <Text Id="Text_KeypadDigit9" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">9</Translation>
-        <Translation Language="IT">9</Translation>
-        <Translation Language="FR">9</Translation>
-        <Translation Language="DE">9</Translation>
-        <Translation Language="ES">9</Translation>
-      </Text>
-      <Text Id="Text_Digit0" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">0</Translation>
-        <Translation Language="IT">0</Translation>
-        <Translation Language="FR">0</Translation>
-        <Translation Language="DE">0</Translation>
-        <Translation Language="ES">0</Translation>
-      </Text>
-      <Text Id="Text_Digit1" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">1</Translation>
-        <Translation Language="IT">1</Translation>
-        <Translation Language="FR">1</Translation>
-        <Translation Language="DE">1</Translation>
-        <Translation Language="ES">1</Translation>
-      </Text>
-      <Text Id="Text_Digit2" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">2</Translation>
-        <Translation Language="IT">2</Translation>
-        <Translation Language="FR">2</Translation>
-        <Translation Language="DE">2</Translation>
-        <Translation Language="ES">2</Translation>
-      </Text>
-      <Text Id="Text_Digit3" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">3</Translation>
-        <Translation Language="IT">3</Translation>
-        <Translation Language="FR">3</Translation>
-        <Translation Language="DE">3</Translation>
-        <Translation Language="ES">3</Translation>
-      </Text>
-      <Text Id="Text_Digit4" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">4</Translation>
-        <Translation Language="IT">4</Translation>
-        <Translation Language="FR">4</Translation>
-        <Translation Language="DE">4</Translation>
-        <Translation Language="ES">4</Translation>
-      </Text>
-      <Text Id="Text_Digit5" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">5</Translation>
-        <Translation Language="IT">5</Translation>
-        <Translation Language="FR">5</Translation>
-        <Translation Language="DE">5</Translation>
-        <Translation Language="ES">5</Translation>
-      </Text>
-      <Text Id="Text_Digit6" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">6</Translation>
-        <Translation Language="IT">6</Translation>
-        <Translation Language="FR">6</Translation>
-        <Translation Language="DE">6</Translation>
-        <Translation Language="ES">6</Translation>
-      </Text>
-      <Text Id="Text_Digit7" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">7</Translation>
-        <Translation Language="IT">7</Translation>
-        <Translation Language="FR">7</Translation>
-        <Translation Language="DE">7</Translation>
-        <Translation Language="ES">7</Translation>
-      </Text>
-      <Text Id="Text_Digit8" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">8</Translation>
-        <Translation Language="IT">8</Translation>
-        <Translation Language="FR">8</Translation>
-        <Translation Language="DE">8</Translation>
-        <Translation Language="ES">8</Translation>
-      </Text>
-      <Text Id="Text_Digit9" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">9</Translation>
-        <Translation Language="IT">9</Translation>
-        <Translation Language="FR">9</Translation>
-        <Translation Language="DE">9</Translation>
-        <Translation Language="ES">9</Translation>
-      </Text>
-      <Text Id="Text_AdminMenuTitle" Alignment="Center" TypographyId="Title">
-        <Translation Language="GB">ADMIN DIAGNOSTICS</Translation>
-        <Translation Language="IT">DIAGNOSTICA ADMIN</Translation>
-        <Translation Language="FR">DIAGNOSTIC ADMIN</Translation>
-        <Translation Language="DE">ADMIN-DIAGNOSE</Translation>
-        <Translation Language="ES">DIAGNOSTICO ADMIN</Translation>
-      </Text>
-      <Text Id="Text_AdminMenuSubtitle" Alignment="Center" TypographyId="Subtitle">
-        <Translation Language="GB">Read-only technical information</Translation>
-        <Translation Language="IT">Informazioni tecniche in sola lettura</Translation>
-        <Translation Language="FR">Informations techniques en lecture seule</Translation>
-        <Translation Language="DE">Schreibgeschützte technische Infos</Translation>
-        <Translation Language="ES">Información técnica de solo lectura</Translation>
-      </Text>
-      <Text Id="Text_AdminSystemItem" Alignment="Left" TypographyId="Button">
-        <Translation Language="GB">SYSTEM INFO</Translation>
-        <Translation Language="IT">INFO SISTEMA</Translation>
-        <Translation Language="FR">INFO SYSTEME</Translation>
-        <Translation Language="DE">SYSTEMINFO</Translation>
-        <Translation Language="ES">INFO SISTEMA</Translation>
-      </Text>
-      <Text Id="Text_AdminSystemDescription" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">Device, firmware and uptime</Translation>
-        <Translation Language="IT">Dispositivo, firmware e uptime</Translation>
-        <Translation Language="FR">Appareil, firmware et durée de fonctionnement</Translation>
-        <Translation Language="DE">Gerät, Firmware und Laufzeit</Translation>
-        <Translation Language="ES">Dispositivo, firmware y tiempo activo</Translation>
-      </Text>
-      <Text Id="Text_AdminPressureItem" Alignment="Left" TypographyId="Button">
-        <Translation Language="GB">PRESSURE DIAGNOSTICS</Translation>
-        <Translation Language="IT">DIAGNOSTICA PRESSIONE</Translation>
-        <Translation Language="FR">DIAGNOSTIC PRESSION</Translation>
-        <Translation Language="DE">DRUCKDIAGNOSE</Translation>
-        <Translation Language="ES">DIAGNOSTICO PRESION</Translation>
-      </Text>
-      <Text Id="Text_AdminPressureDescription" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">Sensor, target, duty and faults</Translation>
-        <Translation Language="IT">Sensore, target, duty e guasti</Translation>
-        <Translation Language="FR">Capteur, cible, duty et défauts</Translation>
-        <Translation Language="DE">Sensor, Sollwert, Duty und Fehler</Translation>
-        <Translation Language="ES">Sensor, objetivo, duty y fallos</Translation>
-      </Text>
-      <Text Id="Text_AdminMemoryItem" Alignment="Left" TypographyId="Button">
-        <Translation Language="GB">MEMORY STATUS</Translation>
-        <Translation Language="IT">STATO MEMORIE</Translation>
-        <Translation Language="FR">ETAT MEMOIRE</Translation>
-        <Translation Language="DE">SPEICHERSTATUS</Translation>
-        <Translation Language="ES">ESTADO MEMORIA</Translation>
-      </Text>
-      <Text Id="Text_AdminMemoryDescription" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">FRAM, Winbond and asset package</Translation>
-        <Translation Language="IT">FRAM, Winbond e pacchetto asset</Translation>
-        <Translation Language="FR">FRAM, Winbond et pack d'assets</Translation>
-        <Translation Language="DE">FRAM, Winbond und Asset-Paket</Translation>
-        <Translation Language="ES">FRAM, Winbond y paquete de assets</Translation>
-      </Text>
-      <Text Id="Text_AdminChevron" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">&gt;</Translation>
-        <Translation Language="IT">&gt;</Translation>
-        <Translation Language="FR">&gt;</Translation>
-        <Translation Language="DE">&gt;</Translation>
-        <Translation Language="ES">&gt;</Translation>
-      </Text>
-      <Text Id="Text_AdminSystemTitle" Alignment="Center" TypographyId="Title">
-        <Translation Language="GB">SYSTEM INFO</Translation>
-        <Translation Language="IT">INFO SISTEMA</Translation>
-        <Translation Language="FR">INFO SYSTEME</Translation>
-        <Translation Language="DE">SYSTEMINFO</Translation>
-        <Translation Language="ES">INFO SISTEMA</Translation>
-      </Text>
-      <Text Id="Text_AdminPressureTitle" Alignment="Center" TypographyId="Title">
-        <Translation Language="GB">PRESSURE DIAGNOSTICS</Translation>
-        <Translation Language="IT">DIAGNOSTICA PRESSIONE</Translation>
-        <Translation Language="FR">DIAGNOSTIC PRESSION</Translation>
-        <Translation Language="DE">DRUCKDIAGNOSE</Translation>
-        <Translation Language="ES">DIAGNOSTICO PRESION</Translation>
-      </Text>
-      <Text Id="Text_AdminMemoryTitle" Alignment="Center" TypographyId="Title">
-        <Translation Language="GB">MEMORY STATUS</Translation>
-        <Translation Language="IT">STATO MEMORIE</Translation>
-        <Translation Language="FR">ETAT MEMOIRE</Translation>
-        <Translation Language="DE">SPEICHERSTATUS</Translation>
-        <Translation Language="ES">ESTADO MEMORIA</Translation>
-      </Text>
-      <Text Id="Text_AdminValue" Alignment="Right" TypographyId="Step">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="IT">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-        <Translation Language="DE">&lt;&gt;</Translation>
-        <Translation Language="ES">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="Buffer_AdminValue" Alignment="Right" TypographyId="Step">
-        <Translation Language="GB">N/A</Translation>
-        <Translation Language="IT">N/D</Translation>
-        <Translation Language="FR">N/D</Translation>
-        <Translation Language="DE">N/V</Translation>
-        <Translation Language="ES">N/D</Translation>
-      </Text>
-      <Text Id="Text_FieldDevice" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">DEVICE</Translation>
-        <Translation Language="IT">DISPOSITIVO</Translation>
-        <Translation Language="FR">APPAREIL</Translation>
-        <Translation Language="DE">GERAET</Translation>
-        <Translation Language="ES">DISPOSITIVO</Translation>
-      </Text>
-      <Text Id="Text_FieldFirmware" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">FIRMWARE</Translation>
-        <Translation Language="IT">FIRMWARE</Translation>
-        <Translation Language="FR">FIRMWARE</Translation>
-        <Translation Language="DE">FIRMWARE</Translation>
-        <Translation Language="ES">FIRMWARE</Translation>
-      </Text>
-      <Text Id="Text_FieldUptime" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">UPTIME</Translation>
-        <Translation Language="IT">TEMPO ATTIVO</Translation>
-        <Translation Language="FR">DUREE ACTIVE</Translation>
-        <Translation Language="DE">LAUFZEIT</Translation>
-        <Translation Language="ES">TIEMPO ACTIVO</Translation>
-      </Text>
-      <Text Id="Text_FieldLanguage" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">LANGUAGE</Translation>
-        <Translation Language="IT">LINGUA</Translation>
-        <Translation Language="FR">LANGUE</Translation>
-        <Translation Language="DE">SPRACHE</Translation>
-        <Translation Language="ES">IDIOMA</Translation>
-      </Text>
-      <Text Id="Text_FieldBrightness" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">BRIGHTNESS</Translation>
-        <Translation Language="IT">LUMINOSITA</Translation>
-        <Translation Language="FR">LUMINOSITE</Translation>
-        <Translation Language="DE">HELLIGKEIT</Translation>
-        <Translation Language="ES">BRILLO</Translation>
-      </Text>
-      <Text Id="Text_FieldSensor" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">SENSOR</Translation>
-        <Translation Language="IT">SENSORE</Translation>
-        <Translation Language="FR">CAPTEUR</Translation>
-        <Translation Language="DE">SENSOR</Translation>
-        <Translation Language="ES">SENSOR</Translation>
-      </Text>
-      <Text Id="Text_FieldRelativePressure" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">RELATIVE PRESSURE</Translation>
-        <Translation Language="IT">PRESSIONE RELATIVA</Translation>
-        <Translation Language="FR">PRESSION RELATIVE</Translation>
-        <Translation Language="DE">RELATIVDRUCK</Translation>
-        <Translation Language="ES">PRESION RELATIVA</Translation>
-      </Text>
-      <Text Id="Text_FieldRawPressure" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">RAW PRESSURE</Translation>
-        <Translation Language="IT">PRESSIONE RAW</Translation>
-        <Translation Language="FR">PRESSION BRUTE</Translation>
-        <Translation Language="DE">ROHDRUCK</Translation>
-        <Translation Language="ES">PRESION BRUTA</Translation>
-      </Text>
-      <Text Id="Text_FieldZeroOffset" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">ZERO OFFSET</Translation>
-        <Translation Language="IT">OFFSET ZERO</Translation>
-        <Translation Language="FR">OFFSET ZERO</Translation>
-        <Translation Language="DE">NULLOFFSET</Translation>
-        <Translation Language="ES">OFFSET CERO</Translation>
-      </Text>
-      <Text Id="Text_FieldAmbientAdc" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">AMBIENT ADC</Translation>
-        <Translation Language="IT">ADC AMBIENTE</Translation>
-        <Translation Language="FR">ADC AMBIANT</Translation>
-        <Translation Language="DE">ADC UMGEBUNG</Translation>
-        <Translation Language="ES">ADC AMBIENTE</Translation>
-      </Text>
-      <Text Id="Text_FieldChamberAdc" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">CHAMBER ADC</Translation>
-        <Translation Language="IT">ADC CAMERA</Translation>
-        <Translation Language="FR">ADC CHAMBRE</Translation>
-        <Translation Language="DE">ADC KAMMER</Translation>
-        <Translation Language="ES">ADC CAMARA</Translation>
-      </Text>
-      <Text Id="Text_FieldTarget" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">TARGET</Translation>
-        <Translation Language="IT">TARGET</Translation>
-        <Translation Language="FR">CIBLE</Translation>
-        <Translation Language="DE">SOLLWERT</Translation>
-        <Translation Language="ES">OBJETIVO</Translation>
-      </Text>
-      <Text Id="Text_FieldDuty" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">PUMP DUTY</Translation>
-        <Translation Language="IT">DUTY POMPA</Translation>
-        <Translation Language="FR">DUTY POMPE</Translation>
-        <Translation Language="DE">PUMPEN-DUTY</Translation>
-        <Translation Language="ES">DUTY BOMBA</Translation>
-      </Text>
-      <Text Id="Text_FieldState" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">STATE</Translation>
-        <Translation Language="IT">STATO</Translation>
-        <Translation Language="FR">ETAT</Translation>
-        <Translation Language="DE">STATUS</Translation>
-        <Translation Language="ES">ESTADO</Translation>
-      </Text>
-      <Text Id="Text_FieldFault" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">FAULT</Translation>
-        <Translation Language="IT">GUASTO</Translation>
-        <Translation Language="FR">DEFAUT</Translation>
-        <Translation Language="DE">FEHLER</Translation>
-        <Translation Language="ES">FALLO</Translation>
-      </Text>
-      <Text Id="Text_FieldFram" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">FRAM</Translation>
-        <Translation Language="IT">FRAM</Translation>
-        <Translation Language="FR">FRAM</Translation>
-        <Translation Language="DE">FRAM</Translation>
-        <Translation Language="ES">FRAM</Translation>
-      </Text>
-      <Text Id="Text_FieldFramId" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">FRAM ID</Translation>
-        <Translation Language="IT">ID FRAM</Translation>
-        <Translation Language="FR">ID FRAM</Translation>
-        <Translation Language="DE">FRAM-ID</Translation>
-        <Translation Language="ES">ID FRAM</Translation>
-      </Text>
-      <Text Id="Text_FieldFramSize" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">FRAM SIZE</Translation>
-        <Translation Language="IT">DIM. FRAM</Translation>
-        <Translation Language="FR">TAILLE FRAM</Translation>
-        <Translation Language="DE">FRAM-GROESSE</Translation>
-        <Translation Language="ES">TAM. FRAM</Translation>
-      </Text>
-      <Text Id="Text_FieldSession" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">SAVED SESSION</Translation>
-        <Translation Language="IT">SESSIONE SALVATA</Translation>
-        <Translation Language="FR">SESSION SAUVEE</Translation>
-        <Translation Language="DE">GESP. SITZUNG</Translation>
-        <Translation Language="ES">SESION GUARDADA</Translation>
-      </Text>
-      <Text Id="Text_FieldWinbond" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">WINBOND</Translation>
-        <Translation Language="IT">WINBOND</Translation>
-        <Translation Language="FR">WINBOND</Translation>
-        <Translation Language="DE">WINBOND</Translation>
-        <Translation Language="ES">WINBOND</Translation>
-      </Text>
-      <Text Id="Text_FieldWinbondId" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">WINBOND ID</Translation>
-        <Translation Language="IT">ID WINBOND</Translation>
-        <Translation Language="FR">ID WINBOND</Translation>
-        <Translation Language="DE">WINBOND-ID</Translation>
-        <Translation Language="ES">ID WINBOND</Translation>
-      </Text>
-      <Text Id="Text_FieldWinbondSize" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">WINBOND SIZE</Translation>
-        <Translation Language="IT">DIM. WINBOND</Translation>
-        <Translation Language="FR">TAILLE WINBOND</Translation>
-        <Translation Language="DE">WINBOND-GROESSE</Translation>
-        <Translation Language="ES">TAM. WINBOND</Translation>
-      </Text>
-      <Text Id="Text_FieldAssetPackage" Alignment="Left" TypographyId="Step">
-        <Translation Language="GB">ASSET PACKAGE</Translation>
-        <Translation Language="IT">PACCHETTO ASSET</Translation>
-        <Translation Language="FR">PACK D'ASSETS</Translation>
-        <Translation Language="DE">ASSET-PAKET</Translation>
-        <Translation Language="ES">PAQUETE ASSETS</Translation>
-      </Text>
-      <Text Id="Text_Brightness" Alignment="Center" TypographyId="Title">
-        <Translation Language="GB">BRIGHTNESS</Translation>
-        <Translation Language="IT">LUMINOSITA</Translation>
-        <Translation Language="FR">LUMINOSITE</Translation>
-        <Translation Language="DE">HELLIGKEIT</Translation>
-        <Translation Language="ES">BRILLO</Translation>
-      </Text>
-      <Text Id="Text_BrightnessSubtitle" Alignment="Center" TypographyId="Subtitle">
-        <Translation Language="GB">Adjust display brightness</Translation>
-        <Translation Language="IT">Regola luminosita display</Translation>
-        <Translation Language="FR">Régler la luminosité de l'écran</Translation>
-        <Translation Language="DE">Anzeigehelligkeit anpassen</Translation>
-        <Translation Language="ES">Ajustar el brillo de la pantalla</Translation>
-      </Text>
-      <Text Id="Text_BrightnessHint" Alignment="Center" TypographyId="Caption">
-        <Translation Language="GB">Drag the slider to adjust</Translation>
-        <Translation Language="IT">Trascina la barra per regolare</Translation>
-        <Translation Language="FR">Glissez le curseur pour régler</Translation>
-        <Translation Language="DE">Schieberegler zum Anpassen ziehen</Translation>
-        <Translation Language="ES">Arrastre el control para ajustar</Translation>
-      </Text>
-      <Text Id="Text_BrightnessPercent" Alignment="Center" TypographyId="Hero">
-        <Translation Language="GB">&lt;&gt;%</Translation>
-        <Translation Language="IT">&lt;&gt;%</Translation>
-        <Translation Language="FR">&lt;&gt;%</Translation>
-        <Translation Language="DE">&lt;&gt;%</Translation>
-        <Translation Language="ES">&lt;&gt;%</Translation>
-      </Text>
-      <Text Id="Buffer_BrightnessPercent" Alignment="Center" TypographyId="Hero">
-        <Translation Language="GB">100</Translation>
-        <Translation Language="IT">100</Translation>
-        <Translation Language="FR">100</Translation>
-        <Translation Language="DE">100</Translation>
-        <Translation Language="ES">100</Translation>
-      </Text>
-      <Text Id="Text_BrightnessMin" Alignment="Left" TypographyId="Caption">
-        <Translation Language="GB">10%</Translation>
-        <Translation Language="IT">10%</Translation>
-        <Translation Language="FR">10%</Translation>
-        <Translation Language="DE">10%</Translation>
-        <Translation Language="ES">10%</Translation>
-      </Text>
-      <Text Id="Text_BrightnessMax" Alignment="Right" TypographyId="Caption">
-        <Translation Language="GB">100%</Translation>
-        <Translation Language="IT">100%</Translation>
-        <Translation Language="FR">100%</Translation>
-        <Translation Language="DE">100%</Translation>
-        <Translation Language="ES">100%</Translation>
-      </Text>
-      <Text Id="Text_LanguageTitle" Alignment="Center" TypographyId="Title">
-        <Translation Language="GB">LANGUAGE</Translation>
-        <Translation Language="IT">LINGUA</Translation>
-        <Translation Language="FR">LANGUE</Translation>
-        <Translation Language="DE">SPRACHE</Translation>
-        <Translation Language="ES">IDIOMA</Translation>
-      </Text>
-      <Text Id="Text_LanguageSubtitle" Alignment="Center" TypographyId="Subtitle">
-        <Translation Language="GB">Choose display language</Translation>
-        <Translation Language="IT">Scegli lingua display</Translation>
-        <Translation Language="FR">Choisir la langue d'affichage</Translation>
-        <Translation Language="DE">Anzeigesprache wählen</Translation>
-        <Translation Language="ES">Elegir idioma de pantalla</Translation>
-      </Text>
-      <Text Id="Text_English" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">ENGLISH</Translation>
-        <Translation Language="IT">ENGLISH</Translation>
-        <Translation Language="FR">ENGLISH</Translation>
-        <Translation Language="DE">ENGLISH</Translation>
-        <Translation Language="ES">ENGLISH</Translation>
-      </Text>
-      <Text Id="Text_Italian" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">ITALIANO</Translation>
-        <Translation Language="IT">ITALIANO</Translation>
-        <Translation Language="FR">ITALIANO</Translation>
-        <Translation Language="DE">ITALIANO</Translation>
-        <Translation Language="ES">ITALIANO</Translation>
       </Text>
       <Text Id="Text_ProductBandy" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">BANDY</Translation>
-        <Translation Language="IT">BANDY</Translation>
-        <Translation Language="FR">BANDY</Translation>
-        <Translation Language="DE">BANDY</Translation>
-        <Translation Language="ES">BANDY</Translation>
       </Text>
       <Text Id="Text_ProductBandyDesc" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">Vacuum control prototype</Translation>
-        <Translation Language="IT">Prototipo controllo vuoto</Translation>
-        <Translation Language="FR">Prototype de contrôle du vide</Translation>
-        <Translation Language="DE">Vakuumsteuerungs-Prototyp</Translation>
-        <Translation Language="ES">Prototipo de control de vacío</Translation>
       </Text>
       <Text Id="Text_ProductAvailable" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">AVAILABLE</Translation>
-        <Translation Language="IT">DISPONIBILE</Translation>
-        <Translation Language="FR">DISPONIBLE</Translation>
-        <Translation Language="DE">VERFUEGBAR</Translation>
-        <Translation Language="ES">DISPONIBLE</Translation>
       </Text>
       <Text Id="Text_ProductEmerflow" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">HEMORFLOW</Translation>
-        <Translation Language="IT">HEMORFLOW</Translation>
-        <Translation Language="FR">HEMORFLOW</Translation>
-        <Translation Language="DE">HEMORFLOW</Translation>
-        <Translation Language="ES">HEMORFLOW</Translation>
       </Text>
       <Text Id="Text_ProductEmerflowDesc" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">Not implemented on this PCB</Translation>
-        <Translation Language="IT">Non implementato su questa PCB</Translation>
-        <Translation Language="FR">Non implémenté sur ce PCB</Translation>
-        <Translation Language="DE">Auf dieser Platine nicht verfügbar</Translation>
-        <Translation Language="ES">No implementado en esta PCB</Translation>
       </Text>
       <Text Id="Text_ProductUnavailable" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">NOT AVAILABLE</Translation>
-        <Translation Language="IT">NON DISPONIBILE</Translation>
-        <Translation Language="FR">INDISPONIBLE</Translation>
-        <Translation Language="DE">NICHT VERFUEGBAR</Translation>
-        <Translation Language="ES">NO DISPONIBLE</Translation>
       </Text>
       <Text Id="Text_ProductHint" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">Touch BANDY to open the vacuum monitor</Translation>
-        <Translation Language="IT">Tocca BANDY per aprire monitor vuoto</Translation>
-        <Translation Language="FR">Touchez BANDY pour ouvrir le moniteur de vide</Translation>
-        <Translation Language="DE">BANDY berühren um den Vakuummonitor zu öffnen</Translation>
-        <Translation Language="ES">Toque BANDY para abrir el monitor de vacío</Translation>
       </Text>
       <Text Id="Text_Back" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">BACK</Translation>
-        <Translation Language="IT">INDIETRO</Translation>
-        <Translation Language="FR">RETOUR</Translation>
-        <Translation Language="DE">ZURUCK</Translation>
-        <Translation Language="ES">ATRAS</Translation>
       </Text>
       <Text Id="Text_BandyTitle" Alignment="Left" TypographyId="Title">
         <Translation Language="GB">BANDY VACUUM</Translation>
-        <Translation Language="IT">VUOTO BANDY</Translation>
-        <Translation Language="FR">VIDE BANDY</Translation>
-        <Translation Language="DE">BANDY VAKUUM</Translation>
-        <Translation Language="ES">VACIO BANDY</Translation>
       </Text>
       <Text Id="Text_VacuumLabel" Alignment="Left" TypographyId="Caption">
-        <Translation Language="GB">MBAR - CURRENT VACUUM</Translation>
-        <Translation Language="IT">MBAR - VUOTO ATTUALE</Translation>
-        <Translation Language="FR">MBAR - VIDE ACTUEL</Translation>
-        <Translation Language="DE">MBAR - AKTUELLES VAKUUM</Translation>
-        <Translation Language="ES">MBAR - VACIO ACTUAL</Translation>
+        <Translation Language="GB">MBAR · CURRENT VACUUM</Translation>
       </Text>
       <Text Id="Text_TargetLabel" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">TARGET</Translation>
-        <Translation Language="IT">TARGET</Translation>
-        <Translation Language="FR">CIBLE</Translation>
-        <Translation Language="DE">SOLLWERT</Translation>
-        <Translation Language="ES">OBJETIVO</Translation>
       </Text>
       <Text Id="Text_SetpointTitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">SETPOINT</Translation>
-        <Translation Language="IT">SETPOINT</Translation>
-        <Translation Language="FR">CONSIGNE</Translation>
-        <Translation Language="DE">SOLLWERT</Translation>
-        <Translation Language="ES">CONSIGNA</Translation>
-      </Text>
-      <Text Id="Text_SetpointKeypadRange" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">VALID RANGE 290 - 490 MBAR</Translation>
-        <Translation Language="IT">INTERVALLO 290 - 490 MBAR</Translation>
-        <Translation Language="FR">PLAGE 290 - 490 MBAR</Translation>
-        <Translation Language="DE">BEREICH 290 - 490 MBAR</Translation>
-        <Translation Language="ES">RANGO 290 - 490 MBAR</Translation>
       </Text>
       <Text Id="Text_SetpointMinus" Alignment="Center" TypographyId="Hero">
         <Translation Language="GB">-</Translation>
-        <Translation Language="IT">-</Translation>
-        <Translation Language="FR">-</Translation>
-        <Translation Language="DE">-</Translation>
-        <Translation Language="ES">-</Translation>
       </Text>
       <Text Id="Text_SetpointPlus" Alignment="Center" TypographyId="Hero">
         <Translation Language="GB">+</Translation>
-        <Translation Language="IT">+</Translation>
-        <Translation Language="FR">+</Translation>
-        <Translation Language="DE">+</Translation>
-        <Translation Language="ES">+</Translation>
       </Text>
       <Text Id="Text_SetTargetButton" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">SET TARGET</Translation>
-        <Translation Language="IT">IMPOSTA TARGET</Translation>
-        <Translation Language="FR">DEFINIR CIBLE</Translation>
-        <Translation Language="DE">SOLLWERT SETZEN</Translation>
-        <Translation Language="ES">FIJAR OBJETIVO</Translation>
       </Text>
       <Text Id="Text_Mbar" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">mbar</Translation>
-        <Translation Language="IT">mbar</Translation>
-        <Translation Language="FR">mbar</Translation>
-        <Translation Language="DE">mbar</Translation>
-        <Translation Language="ES">mbar</Translation>
       </Text>
       <Text Id="Text_ZeroScale" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">0</Translation>
-        <Translation Language="IT">0</Translation>
-        <Translation Language="FR">0</Translation>
-        <Translation Language="DE">0</Translation>
-        <Translation Language="ES">0</Translation>
       </Text>
       <Text Id="Text_MaxScale" Alignment="Right" TypographyId="Caption">
-        <Translation Language="GB">490&#10;</Translation>
-        <Translation Language="IT">500</Translation>
-        <Translation Language="FR">500</Translation>
-        <Translation Language="DE">500</Translation>
-        <Translation Language="ES">500</Translation>
+        <Translation Language="GB">500</Translation>
       </Text>
       <Text Id="Text_Minus" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">-</Translation>
-        <Translation Language="IT">-</Translation>
-        <Translation Language="FR">-</Translation>
-        <Translation Language="DE">-</Translation>
-        <Translation Language="ES">-</Translation>
       </Text>
       <Text Id="Text_Plus" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">+</Translation>
-        <Translation Language="IT">+</Translation>
-        <Translation Language="FR">+</Translation>
-        <Translation Language="DE">+</Translation>
-        <Translation Language="ES">+</Translation>
       </Text>
       <Text Id="Text_Start" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">START</Translation>
-        <Translation Language="IT">START</Translation>
-        <Translation Language="FR">START</Translation>
-        <Translation Language="DE">START</Translation>
-        <Translation Language="ES">START</Translation>
       </Text>
       <Text Id="Text_Stop" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">STOP</Translation>
-        <Translation Language="IT">STOP</Translation>
-        <Translation Language="FR">STOP</Translation>
-        <Translation Language="DE">STOP</Translation>
-        <Translation Language="ES">STOP</Translation>
       </Text>
       <Text Id="Text_Pause" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">PAUSE</Translation>
-        <Translation Language="IT">PAUSA</Translation>
-        <Translation Language="FR">PAUSE</Translation>
-        <Translation Language="DE">PAUSE</Translation>
-        <Translation Language="ES">PAUSA</Translation>
       </Text>
       <Text Id="Text_Resume" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">RESUME</Translation>
-        <Translation Language="IT">RIPRENDI</Translation>
-        <Translation Language="FR">REPRENDRE</Translation>
-        <Translation Language="DE">FORTSETZEN</Translation>
-        <Translation Language="ES">REANUDAR</Translation>
       </Text>
       <Text Id="Text_End" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">END</Translation>
-        <Translation Language="IT">FINE</Translation>
-        <Translation Language="FR">FIN</Translation>
-        <Translation Language="DE">ENDE</Translation>
-        <Translation Language="ES">FIN</Translation>
       </Text>
       <Text Id="Text_No" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">NO</Translation>
-        <Translation Language="IT">NO</Translation>
-        <Translation Language="FR">NON</Translation>
-        <Translation Language="DE">NEIN</Translation>
-        <Translation Language="ES">NO</Translation>
       </Text>
       <Text Id="Text_Yes" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">YES</Translation>
-        <Translation Language="IT">SI</Translation>
-        <Translation Language="FR">OUI</Translation>
-        <Translation Language="DE">JA</Translation>
-        <Translation Language="ES">SI</Translation>
       </Text>
       <Text Id="Text_EndConfirmTitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">END SESSION?</Translation>
-        <Translation Language="IT">TERMINARE?</Translation>
-        <Translation Language="FR">TERMINER ?</Translation>
-        <Translation Language="DE">BEENDEN?</Translation>
-        <Translation Language="ES">FINALIZAR?</Translation>
       </Text>
       <Text Id="Text_EndConfirmSubtitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">Remaining time will be lost</Translation>
-        <Translation Language="IT">Tempo residuo perso</Translation>
-        <Translation Language="FR">Le temps restant sera perdu</Translation>
-        <Translation Language="DE">Verbleibende Zeit geht verloren</Translation>
-        <Translation Language="ES">El tiempo restante se perderá</Translation>
       </Text>
       <Text Id="Text_EndConfirmWarning" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">CONFIRM END</Translation>
-        <Translation Language="IT">CONFERMA FINE</Translation>
-        <Translation Language="FR">CONFIRMER FIN</Translation>
-        <Translation Language="DE">ENDE BESTAETIGEN</Translation>
-        <Translation Language="ES">CONFIRMAR FIN</Translation>
       </Text>
       <Text Id="Text_PauseTitle" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">PAUSED</Translation>
-        <Translation Language="IT">IN PAUSA</Translation>
-        <Translation Language="FR">EN PAUSE</Translation>
-        <Translation Language="DE">PAUSIERT</Translation>
-        <Translation Language="ES">EN PAUSA</Translation>
       </Text>
       <Text Id="Text_PauseSubtitle" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">Resume before pause time expires</Translation>
-        <Translation Language="IT">Riprendi prima della fine pausa</Translation>
-        <Translation Language="FR">Reprendre avant la fin de la pause</Translation>
-        <Translation Language="DE">Vor Ablauf der Pause fortsetzen</Translation>
-        <Translation Language="ES">Reanude antes de que acabe la pausa</Translation>
       </Text>
       <Text Id="Text_PauseRemaining" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">PAUSE TIME</Translation>
-        <Translation Language="IT">TEMPO PAUSA</Translation>
-        <Translation Language="FR">TEMPS PAUSE</Translation>
-        <Translation Language="DE">PAUSENZEIT</Translation>
-        <Translation Language="ES">TIEMPO PAUSA</Translation>
       </Text>
       <Text Id="Text_RfidInsertCard" Alignment="Center" TypographyId="Status">
         <Translation Language="GB">INSERT RFID CARD</Translation>
-        <Translation Language="IT">INSERIRE CARD RFID</Translation>
-        <Translation Language="FR">INSEREZ CARTE RFID</Translation>
-        <Translation Language="DE">RFID-KARTE EINLEGEN</Translation>
-        <Translation Language="ES">INSERTE TARJETA RFID</Translation>
       </Text>
       <Text Id="Text_RfidWaiting" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">WAITING RFID</Translation>
-        <Translation Language="IT">ATTESA RFID</Translation>
-        <Translation Language="FR">ATTENTE RFID</Translation>
-        <Translation Language="DE">WARTE AUF RFID</Translation>
-        <Translation Language="ES">ESPERANDO RFID</Translation>
       </Text>
-      <Text Id="Text_TimeLeft" Alignment="Center" TypographyId="Caption">
+      <Text Id="Text_TimeLeft" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">TIME LEFT</Translation>
-        <Translation Language="IT">TEMPO RESIDUO</Translation>
-        <Translation Language="FR">TEMPS RESTANT</Translation>
-        <Translation Language="DE">RESTZEIT</Translation>
-        <Translation Language="ES">TIEMPO RESTANTE</Translation>
       </Text>
       <Text Id="Value_TimeRemaining" Alignment="Center" TypographyId="TimeValue">
         <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="IT">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-        <Translation Language="DE">&lt;&gt;</Translation>
-        <Translation Language="ES">&lt;&gt;</Translation>
       </Text>
       <Text Id="Buffer_TimeRemaining" Alignment="Center" TypographyId="TimeValue">
         <Translation Language="GB">00:00</Translation>
-        <Translation Language="IT">00:00</Translation>
-        <Translation Language="FR">00:00</Translation>
-        <Translation Language="DE">00:00</Translation>
-        <Translation Language="ES">00:00</Translation>
       </Text>
       <Text Id="Value_Hero" Alignment="Center" TypographyId="Hero">
         <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="IT">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-        <Translation Language="DE">&lt;&gt;</Translation>
-        <Translation Language="ES">&lt;&gt;</Translation>
       </Text>
       <Text Id="Buffer_Hero" Alignment="Center" TypographyId="Hero">
         <Translation Language="GB">0</Translation>
-        <Translation Language="IT">0</Translation>
-        <Translation Language="FR">0</Translation>
-        <Translation Language="DE">0</Translation>
-        <Translation Language="ES">0</Translation>
       </Text>
       <Text Id="Value_Metric" Alignment="Left" TypographyId="Metric">
         <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="IT">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-        <Translation Language="DE">&lt;&gt;</Translation>
-        <Translation Language="ES">&lt;&gt;</Translation>
       </Text>
       <Text Id="Buffer_Metric" Alignment="Left" TypographyId="Metric">
         <Translation Language="GB">450</Translation>
-        <Translation Language="IT">450</Translation>
-        <Translation Language="FR">450</Translation>
-        <Translation Language="DE">450</Translation>
-        <Translation Language="ES">450</Translation>
       </Text>
       <Text Id="Value_Status" Alignment="Center" TypographyId="Status">
         <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="IT">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-        <Translation Language="DE">&lt;&gt;</Translation>
-        <Translation Language="ES">&lt;&gt;</Translation>
       </Text>
       <Text Id="Buffer_Status" Alignment="Center" TypographyId="Status">
         <Translation Language="GB">READY</Translation>
-        <Translation Language="IT">PRONTO</Translation>
-        <Translation Language="FR">PRET</Translation>
-        <Translation Language="DE">BEREIT</Translation>
-        <Translation Language="ES">LISTO</Translation>
       </Text>
       <Text Id="Text_PillIrreversible" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">IRREVERSIBLE ACTION</Translation>
-        <Translation Language="IT">AZIONE IRREVERSIBILE</Translation>
-        <Translation Language="FR">ACTION IRREVERSIBLE</Translation>
-        <Translation Language="DE">UNUMKEHRBARE AKTION</Translation>
-        <Translation Language="ES">ACCION IRREVERSIBLE</Translation>
       </Text>
       <Text Id="Text_EndSessionQuestion" Alignment="Center" TypographyId="Title">
         <Translation Language="GB">End session?</Translation>
-        <Translation Language="IT">Terminare sessione?</Translation>
-        <Translation Language="FR">Terminer la session ?</Translation>
-        <Translation Language="DE">Sitzung beenden?</Translation>
-        <Translation Language="ES">Finalizar sesión?</Translation>
       </Text>
       <Text Id="Text_EndSessionSubtitle" Alignment="Center" TypographyId="Subtitle">
         <Translation Language="GB">Remaining time will be lost</Translation>
-        <Translation Language="IT">Il tempo residuo andra perso</Translation>
-        <Translation Language="FR">Le temps restant sera perdu</Translation>
-        <Translation Language="DE">Verbleibende Zeit geht verloren</Translation>
-        <Translation Language="ES">El tiempo restante se perderá</Translation>
       </Text>
       <Text Id="Text_TimeYoullLose" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">TIME YOU'LL LOSE</Translation>
-        <Translation Language="IT">TEMPO PERSO</Translation>
-        <Translation Language="FR">TEMPS PERDU</Translation>
-        <Translation Language="DE">VERLORENE ZEIT</Translation>
-        <Translation Language="ES">TIEMPO PERDIDO</Translation>
       </Text>
       <Text Id="Text_ButtonContinue" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">Continue</Translation>
-        <Translation Language="IT">Continua</Translation>
-        <Translation Language="FR">Continuer</Translation>
-        <Translation Language="DE">Weiter</Translation>
-        <Translation Language="ES">Continuar</Translation>
-      </Text>
-      <Text Id="Text_ExamCompletedTitle" Alignment="Center" TypographyId="Title">
-        <Translation Language="GB">EXAM COMPLETED</Translation>
-        <Translation Language="IT">ESAME COMPLETATO</Translation>
-        <Translation Language="FR">EXAMEN TERMINE</Translation>
-        <Translation Language="DE">PRUEFUNG ABGESCHLOSSEN</Translation>
-        <Translation Language="ES">EXAMEN COMPLETADO</Translation>
-      </Text>
-      <Text Id="Text_ExamCompletedSubtitle" Alignment="Center" TypographyId="Subtitle">
-        <Translation Language="GB">The Bandy exam has finished successfully</Translation>
-        <Translation Language="IT">L'esame Bandy e terminato correttamente</Translation>
-        <Translation Language="FR">L'examen Bandy s'est terminé avec succès</Translation>
-        <Translation Language="DE">Die Bandy-Prüfung wurde erfolgreich beendet</Translation>
-        <Translation Language="ES">El examen Bandy ha finalizado correctamente</Translation>
-      </Text>
-      <Text Id="Text_ExamCompletedContinue" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">CONTINUE</Translation>
-        <Translation Language="IT">CONTINUA</Translation>
-        <Translation Language="FR">CONTINUER</Translation>
-        <Translation Language="DE">WEITER</Translation>
-        <Translation Language="ES">CONTINUAR</Translation>
       </Text>
       <Text Id="Text_ButtonEnd" Alignment="Center" TypographyId="Button">
         <Translation Language="GB">End</Translation>
-        <Translation Language="IT">Termina</Translation>
-        <Translation Language="FR">Terminer</Translation>
-        <Translation Language="DE">Beenden</Translation>
-        <Translation Language="ES">Finalizar</Translation>
       </Text>
       <Text Id="Text_HemorflowTitle" Alignment="Left" TypographyId="Title">
         <Translation Language="GB">HEMORFLOW</Translation>
-        <Translation Language="IT">HEMORFLOW</Translation>
-        <Translation Language="FR">HEMORFLOW</Translation>
-        <Translation Language="DE">HEMORFLOW</Translation>
-        <Translation Language="ES">HEMORFLOW</Translation>
       </Text>
       <Text Id="Text_HemorflowWaitingPc" Alignment="Center" TypographyId="Status">
         <Translation Language="GB">WAITING PC START</Translation>
-        <Translation Language="IT">ATTESA START PC</Translation>
-        <Translation Language="FR">ATTENTE DEMARRAGE PC</Translation>
-        <Translation Language="DE">WARTE AUF PC-START</Translation>
-        <Translation Language="ES">ESPERANDO INICIO PC</Translation>
       </Text>
       <Text Id="Text_HemorflowPcSubtitle" Alignment="Center" TypographyId="Caption">
         <Translation Language="GB">Start Hemorflow from PC</Translation>
-        <Translation Language="IT">Avvia Hemorflow da PC</Translation>
-        <Translation Language="FR">Démarrer Hemorflow depuis le PC</Translation>
-        <Translation Language="DE">Hemorflow vom PC starten</Translation>
-        <Translation Language="ES">Inicie Hemorflow desde el PC</Translation>
       </Text>
       <Text Id="Text_HemorflowStatusLabel" Alignment="Left" TypographyId="Caption">
         <Translation Language="GB">STATUS</Translation>
-        <Translation Language="IT">STATO</Translation>
-        <Translation Language="FR">STATUT</Translation>
-        <Translation Language="DE">STATUS</Translation>
-        <Translation Language="ES">ESTADO</Translation>
-      </Text>
-      <Text Id="Text_French" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">FRANÇAIS</Translation>
-        <Translation Language="IT">FRANÇAIS</Translation>
-        <Translation Language="FR">FRANÇAIS</Translation>
-        <Translation Language="DE">FRANÇAIS</Translation>
-        <Translation Language="ES">FRANÇAIS</Translation>
-      </Text>
-      <Text Id="Text_German" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">DEUTSCH</Translation>
-        <Translation Language="IT">DEUTSCH</Translation>
-        <Translation Language="FR">DEUTSCH</Translation>
-        <Translation Language="DE">DEUTSCH</Translation>
-        <Translation Language="ES">DEUTSCH</Translation>
-      </Text>
-      <Text Id="Text_Spanish" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">ESPAÑOL</Translation>
-        <Translation Language="IT">ESPAÑOL</Translation>
-        <Translation Language="FR">ESPAÑOL</Translation>
-        <Translation Language="DE">ESPAÑOL</Translation>
-        <Translation Language="ES">ESPAÑOL</Translation>
-      </Text>
-      <Text Id="Text_StatePresent" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">PRESENT</Translation>
-        <Translation Language="IT">PRESENTE</Translation>
-        <Translation Language="FR">PRESENT</Translation>
-        <Translation Language="DE">VORHANDEN</Translation>
-        <Translation Language="ES">PRESENTE</Translation>
-      </Text>
-      <Text Id="Text_StateAbsent" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">MISSING</Translation>
-        <Translation Language="IT">ASSENTE</Translation>
-        <Translation Language="FR">ABSENT</Translation>
-        <Translation Language="DE">FEHLT</Translation>
-        <Translation Language="ES">AUSENTE</Translation>
-      </Text>
-      <Text Id="Text_StateValid" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">VALID</Translation>
-        <Translation Language="IT">VALIDO</Translation>
-        <Translation Language="FR">VALIDE</Translation>
-        <Translation Language="DE">GUELTIG</Translation>
-        <Translation Language="ES">VALIDO</Translation>
-      </Text>
-      <Text Id="Text_StateInvalid" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">INVALID</Translation>
-        <Translation Language="IT">NON VALIDO</Translation>
-        <Translation Language="FR">INVALIDE</Translation>
-        <Translation Language="DE">UNGUELTIG</Translation>
-        <Translation Language="ES">INVALIDO</Translation>
-      </Text>
-      <Text Id="Text_StateYes" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">YES</Translation>
-        <Translation Language="IT">SI</Translation>
-        <Translation Language="FR">OUI</Translation>
-        <Translation Language="DE">JA</Translation>
-        <Translation Language="ES">SI</Translation>
-      </Text>
-      <Text Id="Text_StateNo" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">NO</Translation>
-        <Translation Language="IT">NO</Translation>
-        <Translation Language="FR">NON</Translation>
-        <Translation Language="DE">NEIN</Translation>
-        <Translation Language="ES">NO</Translation>
-      </Text>
-      <Text Id="Text_StateNA" Alignment="Center" TypographyId="Step">
-        <Translation Language="GB">N/A</Translation>
-        <Translation Language="IT">N/D</Translation>
-        <Translation Language="FR">N/D</Translation>
-        <Translation Language="DE">N/V</Translation>
-        <Translation Language="ES">N/D</Translation>
-      </Text>
-      <Text Id="Text_FirmwareVersion" Alignment="Right" TypographyId="Step">
-        <Translation Language="GB">v1.0.0</Translation>
-        <Translation Language="IT">v1.0.0</Translation>
-        <Translation Language="FR">v1.0.0</Translation>
-        <Translation Language="DE">v1.0.0</Translation>
-        <Translation Language="ES">v1.0.0</Translation>
-      </Text>
-      <Text Id="Text_PretestTitle" Alignment="Center" TypographyId="Title">
-        <Translation Language="GB">CHECKING CONNECTION</Translation>
-        <Translation Language="IT">CONTROLLO COLLEGAMENTO</Translation>
-        <Translation Language="FR">CONTROLE CONNEXION</Translation>
-        <Translation Language="DE">VERBINDUNG PRUEFEN</Translation>
-        <Translation Language="ES">COMPROBANDO CONEXION</Translation>
-      </Text>
-      <Text Id="Text_PretestPullDown" Alignment="Center" TypographyId="Status">
-        <Translation Language="GB">CREATING VACUUM</Translation>
-        <Translation Language="IT">CREAZIONE VUOTO</Translation>
-        <Translation Language="FR">CREATION DU VIDE</Translation>
-        <Translation Language="DE">VAKUUM ERZEUGEN</Translation>
-        <Translation Language="ES">CREANDO VACIO</Translation>
-      </Text>
-      <Text Id="Text_PretestHold" Alignment="Center" TypographyId="Status">
-        <Translation Language="GB">CHECKING SEAL</Translation>
-        <Translation Language="IT">CONTROLLO TENUTA</Translation>
-        <Translation Language="FR">CONTROLE ETANCHEITE</Translation>
-        <Translation Language="DE">DICHTHEIT PRUEFEN</Translation>
-        <Translation Language="ES">COMPROBANDO SELLADO</Translation>
-      </Text>
-      <Text Id="Text_PretestReleasing" Alignment="Center" TypographyId="Status">
-        <Translation Language="GB">RELEASING PRESSURE</Translation>
-        <Translation Language="IT">RILASCIO PRESSIONE</Translation>
-        <Translation Language="FR">RELACHEMENT PRESSION</Translation>
-        <Translation Language="DE">DRUCK ABLASSEN</Translation>
-        <Translation Language="ES">LIBERANDO PRESION</Translation>
-      </Text>
-      <Text Id="Text_PretestPressure" Alignment="Center" TypographyId="Hero">
-        <Translation Language="GB">&lt;&gt;</Translation>
-        <Translation Language="IT">&lt;&gt;</Translation>
-        <Translation Language="FR">&lt;&gt;</Translation>
-        <Translation Language="DE">&lt;&gt;</Translation>
-        <Translation Language="ES">&lt;&gt;</Translation>
-      </Text>
-      <Text Id="Buffer_PretestPressure" Alignment="Center" TypographyId="Hero">
-        <Translation Language="GB">000</Translation>
-        <Translation Language="IT">000</Translation>
-        <Translation Language="FR">000</Translation>
-        <Translation Language="DE">000</Translation>
-        <Translation Language="ES">000</Translation>
-      </Text>
-      <Text Id="Text_PretestMbar" Alignment="Center" TypographyId="Caption">
-        <Translation Language="GB">mbar</Translation>
-        <Translation Language="IT">mbar</Translation>
-        <Translation Language="FR">mbar</Translation>
-        <Translation Language="DE">mbar</Translation>
-        <Translation Language="ES">mbar</Translation>
-      </Text>
-      <Text Id="Text_PretestTime" Alignment="Center" TypographyId="Caption">
-        <Translation Language="GB">&lt;&gt; s</Translation>
-        <Translation Language="IT">&lt;&gt; s</Translation>
-        <Translation Language="FR">&lt;&gt; s</Translation>
-        <Translation Language="DE">&lt;&gt; s</Translation>
-        <Translation Language="ES">&lt;&gt; s</Translation>
-      </Text>
-      <Text Id="Buffer_PretestTime" Alignment="Center" TypographyId="Caption">
-        <Translation Language="GB">15</Translation>
-        <Translation Language="IT">15</Translation>
-        <Translation Language="FR">15</Translation>
-        <Translation Language="DE">15</Translation>
-        <Translation Language="ES">15</Translation>
-      </Text>
-      <Text Id="Text_PretestStep1" Alignment="Left" TypographyId="PretestStep">
-        <Translation Language="GB">STEP 1/2  CREATE VACUUM</Translation>
-        <Translation Language="IT">FASE 1/2  CREA VUOTO</Translation>
-        <Translation Language="FR">ETAPE 1/2  CREER LE VIDE</Translation>
-        <Translation Language="DE">SCHRITT 1/2  VAKUUM</Translation>
-        <Translation Language="ES">PASO 1/2  CREAR VACIO</Translation>
-      </Text>
-      <Text Id="Text_PretestStep2" Alignment="Right" TypographyId="PretestStep">
-        <Translation Language="GB">STEP 2/2  CHECK SEAL</Translation>
-        <Translation Language="IT">FASE 2/2  CONTROLLA TENUTA</Translation>
-        <Translation Language="FR">ETAPE 2/2  ETANCHEITE</Translation>
-        <Translation Language="DE">SCHRITT 2/2  DICHTHEIT</Translation>
-        <Translation Language="ES">PASO 2/2  COMPROBAR SELLADO</Translation>
-      </Text>
-      <Text Id="Text_PretestCurrentVacuum" Alignment="Center" TypographyId="Caption">
-        <Translation Language="GB">CURRENT VACUUM</Translation>
-        <Translation Language="IT">VUOTO ATTUALE</Translation>
-        <Translation Language="FR">VIDE ACTUEL</Translation>
-        <Translation Language="DE">AKTUELLES VAKUUM</Translation>
-        <Translation Language="ES">VACIO ACTUAL</Translation>
-      </Text>
-      <Text Id="Text_PretestTargetCaption" Alignment="Left" TypographyId="Caption">
-        <Translation Language="GB">TEST TARGET</Translation>
-        <Translation Language="IT">TARGET TEST</Translation>
-        <Translation Language="FR">CIBLE TEST</Translation>
-        <Translation Language="DE">TESTZIEL</Translation>
-        <Translation Language="ES">OBJETIVO TEST</Translation>
-      </Text>
-      <Text Id="Text_PretestTargetValue" Alignment="Left" TypographyId="Status">
-        <Translation Language="GB">&lt;&gt; mbar</Translation>
-        <Translation Language="IT">&lt;&gt; mbar</Translation>
-        <Translation Language="FR">&lt;&gt; mbar</Translation>
-        <Translation Language="DE">&lt;&gt; mbar</Translation>
-        <Translation Language="ES">&lt;&gt; mbar</Translation>
-      </Text>
-      <Text Id="Buffer_PretestTarget" Alignment="Left" TypographyId="Status">
-        <Translation Language="GB">460</Translation>
-        <Translation Language="IT">460</Translation>
-        <Translation Language="FR">460</Translation>
-        <Translation Language="DE">460</Translation>
-        <Translation Language="ES">460</Translation>
-      </Text>
-      <Text Id="Text_PretestTimeout" Alignment="Center" TypographyId="PretestStep">
-        <Translation Language="GB">TIMEOUT</Translation>
-        <Translation Language="IT">TEMPO MASSIMO</Translation>
-        <Translation Language="FR">TEMPS MAXIMUM</Translation>
-        <Translation Language="DE">ZEITLIMIT</Translation>
-        <Translation Language="ES">TIEMPO MAXIMO</Translation>
-      </Text>
-      <Text Id="Text_PretestSealCountdown" Alignment="Center" TypographyId="PretestStep">
-        <Translation Language="GB">SEAL CHECK</Translation>
-        <Translation Language="IT">CONTROLLO TENUTA</Translation>
-        <Translation Language="FR">CONTROLE ETANCHEITE</Translation>
-        <Translation Language="DE">DICHTHEITSPRUEFUNG</Translation>
-        <Translation Language="ES">CONTROL SELLADO</Translation>
-      </Text>
-      <Text Id="Text_PretestCountdown" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">00:&lt;&gt;</Translation>
-        <Translation Language="IT">00:&lt;&gt;</Translation>
-        <Translation Language="FR">00:&lt;&gt;</Translation>
-        <Translation Language="DE">00:&lt;&gt;</Translation>
-        <Translation Language="ES">00:&lt;&gt;</Translation>
-      </Text>
-      <Text Id="Buffer_PretestCountdown" Alignment="Center" TypographyId="TimeValue">
-        <Translation Language="GB">15</Translation>
-        <Translation Language="IT">15</Translation>
-        <Translation Language="FR">15</Translation>
-        <Translation Language="DE">15</Translation>
-        <Translation Language="ES">15</Translation>
-      </Text>
-      <Text Id="Text_PretestSuccess" Alignment="Left" TypographyId="Status">
-        <Translation Language="GB">CONNECTION OK</Translation>
-        <Translation Language="IT">COLLEGAMENTO OK</Translation>
-        <Translation Language="FR">CONNEXION OK</Translation>
-        <Translation Language="DE">VERBINDUNG OK</Translation>
-        <Translation Language="ES">CONEXION OK</Translation>
-      </Text>
-      <Text Id="Text_PretestErrorPressure" Alignment="Left" TypographyId="Status">
-        <Translation Language="GB">&lt;&gt; mbar</Translation>
-        <Translation Language="IT">&lt;&gt; mbar</Translation>
-        <Translation Language="FR">&lt;&gt; mbar</Translation>
-        <Translation Language="DE">&lt;&gt; mbar</Translation>
-        <Translation Language="ES">&lt;&gt; mbar</Translation>
-      </Text>
-      <Text Id="Buffer_PretestErrorPressure" Alignment="Left" TypographyId="Status">
-        <Translation Language="GB">000</Translation>
-        <Translation Language="IT">000</Translation>
-        <Translation Language="FR">000</Translation>
-        <Translation Language="DE">000</Translation>
-        <Translation Language="ES">000</Translation>
-      </Text>
-      <Text Id="Text_PretestLeakTitle" Alignment="Center" TypographyId="Title">
-        <Translation Language="GB">LEAK DETECTED</Translation>
-        <Translation Language="IT">PERDITA RILEVATA</Translation>
-        <Translation Language="FR">FUITE DETECTEE</Translation>
-        <Translation Language="DE">LECK ERKANNT</Translation>
-        <Translation Language="ES">FUGA DETECTADA</Translation>
-      </Text>
-      <Text Id="Text_PretestLeakMessage" Alignment="Center" TypographyId="Subtitle">
-        <Translation Language="GB">CHECK THE APPLICATOR AND HOSE CONNECTION&#10;</Translation>
-        <Translation Language="IT">Controlla il collegamento di applicatore e tubo</Translation>
-        <Translation Language="FR">Verifier la connexion applicateur et tuyau</Translation>
-        <Translation Language="DE">Applikator und Schlauchverbindung pruefen</Translation>
-        <Translation Language="ES">Compruebe la conexion del aplicador y tubo</Translation>
-      </Text>
-      <Text Id="Text_PretestTechnicalTitle" Alignment="Center" TypographyId="Title">
-        <Translation Language="GB">SYSTEM CHECK FAILED</Translation>
-        <Translation Language="IT">CONTROLLO SISTEMA FALLITO</Translation>
-        <Translation Language="FR">CONTROLE SYSTEME ECHEC</Translation>
-        <Translation Language="DE">SYSTEMPRUEFUNG FEHLER</Translation>
-        <Translation Language="ES">FALLO CONTROL SISTEMA</Translation>
-      </Text>
-      <Text Id="Text_PretestTechnicalMessage" Alignment="Center" TypographyId="Body">
-        <Translation Language="GB">Technical assistance is required</Translation>
-        <Translation Language="IT">E richiesta assistenza tecnica</Translation>
-        <Translation Language="FR">Assistance technique requise</Translation>
-        <Translation Language="DE">Technischer Service erforderlich</Translation>
-        <Translation Language="ES">Se requiere asistencia tecnica</Translation>
-      </Text>
-      <Text Id="Text_PretestRetry" Alignment="Center" TypographyId="Button">
-        <Translation Language="GB">RETRY</Translation>
-        <Translation Language="IT">RIPROVA</Translation>
-        <Translation Language="FR">REESSAYER</Translation>
-        <Translation Language="DE">ERNEUT</Translation>
-        <Translation Language="ES">REINTENTAR</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Title" Font="trebucbd.ttf" Size="23" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Subtitle" Font="verdana.ttf" Size="18" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Body" Font="trebucit.ttf" Size="20" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Caption" Font="verdana.ttf" Size="16" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x41-0x5A" />
-    <Typography Id="Step" Font="verdana.ttf" Size="15" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7E" />
-    <Typography Id="Button" Font="verdana.ttf" Size="15" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2B-0x2D,0x30-0x39,0x41-0x5A" />
-    <Typography Id="Status" Font="trebuc.ttf" Size="19" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x3A,0x41-0x5A" />
-    <Typography Id="TimeValue" Font="verdana.ttf" Size="32" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2A,0x2D,0x30-0x39,0x3A" />
-    <Typography Id="Metric" Font="verdana.ttf" Size="34" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
-    <Typography Id="Hero" Font="verdana.ttf" Size="45" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
-    <Typography Id="SettingsItem" Font="verdana.ttf" Size="20" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="SettingsDescription" Font="verdana.ttf" Size="15" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="PretestStep" Font="verdana.ttf" Size="12" Bpp="2" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20-0x7E" />
+    <Typography Id="Title" Font="verdana.ttf" Size="24" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Subtitle" Font="verdana.ttf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Body" Font="verdana.ttf" Size="16" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Caption" Font="verdana.ttf" Size="13" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x41-0x5A" />
+    <Typography Id="Step" Font="verdana.ttf" Size="11" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Button" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2B-0x2D,0x30-0x39,0x41-0x5A" />
+    <Typography Id="Status" Font="verdana.ttf" Size="15" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D-0x2E,0x30-0x39,0x3A,0x41-0x5A" />
+    <Typography Id="TimeValue" Font="verdana.ttf" Size="32" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x30-0x39,0x3A" />
+    <Typography Id="Metric" Font="verdana.ttf" Size="34" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
+    <Typography Id="Hero" Font="verdana.ttf" Size="54" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0x20,0x2D,0x30-0x39" />
   </Typographies>
 </TextDatabase>

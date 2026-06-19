@@ -32,9 +32,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../TouchGFX/App/app_touchgfx.h ../Core/Inc/RVA15MD_DisplayDriver.h \
- ../Core/Inc/bandy_session_store.h ../Core/Inc/bandy_session_store_core.h \
- ../Core/Inc/display_backlight.h ../Core/Inc/display_bridge_rx.h \
- ../Core/Inc/w25q64.h ../Core/Inc/asset_flasher.h
+ ../Core/Inc/display_bridge_rx.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -70,9 +68,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 ../TouchGFX/App/app_touchgfx.h:
 ../Core/Inc/RVA15MD_DisplayDriver.h:
-../Core/Inc/bandy_session_store.h:
-../Core/Inc/bandy_session_store_core.h:
-../Core/Inc/display_backlight.h:
 ../Core/Inc/display_bridge_rx.h:
-../Core/Inc/w25q64.h:
-../Core/Inc/asset_flasher.h:

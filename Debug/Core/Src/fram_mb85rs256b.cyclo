@@ -1,7 +1,0 @@
-../Core/Src/fram_mb85rs256b.c:18:33:fram_validate	3
-../Core/Src/fram_mb85rs256b.c:8:13:fram_select	1
-../Core/Src/fram_mb85rs256b.c:13:13:fram_deselect	1
-../Core/Src/fram_mb85rs256b.c:47:26:fram_mb85rs256b_read_id_raw	5
-../Core/Src/fram_mb85rs256b.c:39:26:fram_mb85rs256b_read_id	1
-../Core/Src/fram_mb85rs256b.c:85:26:fram_mb85rs256b_read	6
-../Core/Src/fram_mb85rs256b.c:124:26:fram_mb85rs256b_write	7

@@ -12,8 +12,6 @@
 #include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
-#include <gui/containers/TouchFeedback.hpp>
 
 class Screen6ViewBase : public touchgfx::View<Screen6Presenter>
 {
@@ -55,8 +53,6 @@ protected:
     touchgfx::TextArea pauseResumeLabel;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  pauseEndButton;
     touchgfx::TextArea pauseEndLabel;
-    touchgfx::SVGImage svgImage1;
-    TouchFeedback touchFeedback;
 
     /*
      * Wildcard Buffers
@@ -67,12 +63,6 @@ protected:
     touchgfx::Unicode::UnicodeChar pauseVisitValueBuffer[PAUSEVISITVALUE_SIZE];
 
 private:
-
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

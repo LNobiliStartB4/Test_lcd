@@ -1,9 +1,16 @@
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:5:ModelListener::ModelListener()	1
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:ModelListener::~ModelListener()	1
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:virtual ModelListener::~ModelListener()	1
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	1
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:30:18:virtual void ModelListener::pneumaticPretestUpdated(const PneumaticPretestStatus&)	1
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	1
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	1
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	1
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	1
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	1
 ../TouchGFX/gui/include/gui/screen8_screen/Screen8Presenter.hpp:25:13:Screen8Presenter::~Screen8Presenter()	1
-../TouchGFX/gui/src/screen8_screen/Screen8Presenter.cpp:19:6:virtual void Screen8Presenter::activate()	1
 ../TouchGFX/gui/include/gui/screen8_screen/Screen8Presenter.hpp:25:13:virtual Screen8Presenter::~Screen8Presenter()	1
-../TouchGFX/gui/include/gui/screen8_screen/Screen8Presenter.hpp:25:13:virtual void* Screen8Presenter::_ZThn4_N16Screen8PresenterD1Ev()	1
 ../TouchGFX/gui/src/screen8_screen/Screen8Presenter.cpp:9:1:Screen8Presenter::Screen8Presenter(Screen8View&)	1
+../TouchGFX/gui/src/screen8_screen/Screen8Presenter.cpp:19:6:virtual void Screen8Presenter::activate()	1
+../TouchGFX/gui/src/screen8_screen/Screen8Presenter.cpp:27:6:virtual void Screen8Presenter::deactivate()	1
 ../TouchGFX/gui/src/screen8_screen/Screen8Presenter.cpp:35:6:void Screen8Presenter::initializeHemorflowMonitor()	1
 ../TouchGFX/gui/src/screen8_screen/Screen8Presenter.cpp:45:6:bool Screen8Presenter::canOpenHemorflowMonitor() const	1

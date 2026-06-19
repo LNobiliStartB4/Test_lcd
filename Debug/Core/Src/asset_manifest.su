@@ -1,6 +1,0 @@
-../Core/Src/asset_manifest.c:6:17:read_u32_le	0	static
-../Core/Src/asset_manifest.c:14:10:asset_crc32_update	12	static
-../Core/Src/asset_manifest.c:36:10:asset_crc32_final	0	static
-../Core/Src/asset_manifest.c:41:6:asset_manifest_parse	8	static
-../Core/Src/asset_manifest.c:56:6:asset_manifest_header_ok	0	static
-../Core/Src/asset_manifest.c:89:6:asset_manifest_matches_expected	8	static

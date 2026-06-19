@@ -1,3 +1,0 @@
-../Core/Src/display_backlight.c:40:6:DisplayBacklight_SetPercent	0	static
-../Core/Src/display_backlight.c:25:6:DisplayBacklight_Init	16	static
-../Core/Src/display_backlight.c:57:9:DisplayBacklight_GetPercent	0	static

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(display_test_prova_unit_tests CXX C)
+project(display_test_prova_unit_tests CXX)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -34,87 +34,15 @@ target_include_directories(test_model PRIVATE
 
 target_link_libraries(test_model PRIVATE doctest::doctest)
 
-# Touch-feedback logic is framework-free (header-only), so it links against
-# nothing but doctest.
-add_executable(test_touch_feedback
-  test_touch_feedback.cpp
-)
-target_include_directories(test_touch_feedback PRIVATE
-  ${DISPLAY_ROOT}/TouchGFX/gui/include
-)
-target_link_libraries(test_touch_feedback PRIVATE doctest::doctest)
-
-add_executable(test_bandy_completion
-  test_bandy_completion.cpp
-)
-target_include_directories(test_bandy_completion PRIVATE
-  ${DISPLAY_ROOT}/TouchGFX/gui/include
-)
-target_link_libraries(test_bandy_completion PRIVATE doctest::doctest)
-
-# Pure (HAL-free) external-flash asset validation logic.
-add_executable(test_asset_manifest
-  test_asset_manifest.cpp
-  ${DISPLAY_ROOT}/Core/Src/asset_manifest.c
-)
-target_include_directories(test_asset_manifest PRIVATE
-  ${DISPLAY_ROOT}/Core/Inc
-)
-target_link_libraries(test_asset_manifest PRIVATE doctest::doctest)
-
-# Pure (HAL-free) external-flash programming arithmetic (page/sector math).
-add_executable(test_asset_flash_layout
-  test_asset_flash_layout.cpp
-  ${DISPLAY_ROOT}/Core/Src/asset_flash_layout.c
-)
-target_include_directories(test_asset_flash_layout PRIVATE
-  ${DISPLAY_ROOT}/Core/Inc
-)
-target_link_libraries(test_asset_flash_layout PRIVATE doctest::doctest)
-
-# Pure (HAL-free) deterministic self-test pattern generator.
-add_executable(test_flash_selftest_pattern
-  test_flash_selftest_pattern.cpp
-  ${DISPLAY_ROOT}/Core/Src/flash_selftest_pattern.c
-)
-target_include_directories(test_flash_selftest_pattern PRIVATE
-  ${DISPLAY_ROOT}/Core/Inc
-)
-target_link_libraries(test_flash_selftest_pattern PRIVATE doctest::doctest)
-
 # MSVC: silence "non-standard extension" warnings on uninitialized POD fields
 if (MSVC)
   target_compile_options(test_model PRIVATE /W3 /permissive-)
-  target_compile_options(test_touch_feedback PRIVATE /W3 /permissive-)
-  target_compile_options(test_bandy_completion PRIVATE /W3 /permissive-)
 else()
   target_compile_options(test_model PRIVATE -Wall -Wextra)
-  target_compile_options(test_touch_feedback PRIVATE -Wall -Wextra)
-  target_compile_options(test_bandy_completion PRIVATE -Wall -Wextra)
 endif()
 
 enable_testing()
 add_test(NAME model_unit_tests COMMAND test_model)
 set_tests_properties(model_unit_tests PROPERTIES
-  TIMEOUT 30
-)
-add_test(NAME touch_feedback_unit_tests COMMAND test_touch_feedback)
-set_tests_properties(touch_feedback_unit_tests PROPERTIES
-  TIMEOUT 30
-)
-add_test(NAME bandy_completion_unit_tests COMMAND test_bandy_completion)
-set_tests_properties(bandy_completion_unit_tests PROPERTIES
-  TIMEOUT 30
-)
-add_test(NAME asset_manifest_unit_tests COMMAND test_asset_manifest)
-set_tests_properties(asset_manifest_unit_tests PROPERTIES
-  TIMEOUT 30
-)
-add_test(NAME asset_flash_layout_unit_tests COMMAND test_asset_flash_layout)
-set_tests_properties(asset_flash_layout_unit_tests PROPERTIES
-  TIMEOUT 30
-)
-add_test(NAME flash_selftest_pattern_unit_tests COMMAND test_flash_selftest_pattern)
-set_tests_properties(flash_selftest_pattern_unit_tests PROPERTIES
   TIMEOUT 30
 )

@@ -6,6 +6,7 @@
 
 #include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/containers/Container.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
@@ -24,6 +25,7 @@ protected:
     /*
      * Member Declarations
      */
+    touchgfx::ScalableImage timeIcon;
     touchgfx::TextArea timeLeftLabel;
     touchgfx::TextAreaWithOneWildcard timeRemainingValue;
 

@@ -31,7 +31,6 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FlashDataReader.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp \
  ../TouchGFX/gui/include/gui/common/FrontendHeap.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp \
@@ -50,24 +49,18 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
- ../TouchGFX/gui/include/gui/model/AdminAccessController.hpp \
  ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp \
- ../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp \
- ../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp \
  ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
  ../TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp \
  ../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
- ../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp \
@@ -114,43 +107,10 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../TouchGFX/gui/include/gui/screen9_screen/Screen9View.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/screen9_screen/Screen9ViewBase.hpp \
  ../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp \
- ../TouchGFX/gui/include/gui/screen10_screen/Screen10View.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/screen10_screen/Screen10ViewBase.hpp \
- ../TouchGFX/gui/include/gui/screen10_screen/Screen10Presenter.hpp \
- ../TouchGFX/gui/include/gui/containers/SettingsMenuRow.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/containers/SettingsMenuRowBase.hpp \
- ../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/screen11_screen/Screen11ViewBase.hpp \
- ../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
- ../TouchGFX/gui/include/gui/screen12_screen/Screen12View.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/screen12_screen/Screen12ViewBase.hpp \
- ../TouchGFX/gui/include/gui/screen12_screen/Screen12Presenter.hpp \
- ../TouchGFX/gui/include/gui/screen18_screen/Screen18View.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp \
- ../TouchGFX/gui/include/gui/screen18_screen/Screen18Presenter.hpp \
- ../TouchGFX/gui/include/gui/screen19_screen/Screen19View.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/screen19_screen/Screen19ViewBase.hpp \
- ../TouchGFX/gui/include/gui/screen19_screen/Screen19Presenter.hpp \
- ../TouchGFX/gui/include/gui/screen13_screen/Screen13View.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp \
- ../TouchGFX/gui/include/gui/screen13_screen/Screen13Presenter.hpp \
- ../TouchGFX/gui/include/gui/screen20_screen/Screen20View.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/screen20_screen/Screen20ViewBase.hpp \
- ../TouchGFX/gui/include/gui/screen20_screen/Screen20Presenter.hpp \
- ../TouchGFX/gui/include/gui/screen21_screen/Screen21View.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/screen21_screen/Screen21ViewBase.hpp \
- ../TouchGFX/gui/include/gui/screen21_screen/Screen21Presenter.hpp \
- ../TouchGFX/gui/include/gui/common/AdminScreens.hpp \
- ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
- ../TouchGFX/generated/images/include/images/SVGDatabase.hpp \
- ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
- ../TouchGFX/target/TouchGFXDataReader.hpp \
- ../TouchGFX/target/generated/TouchGFXGeneratedDataReader.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h \
  ../Drivers/CMSIS/Include/core_cm4.h \
@@ -214,7 +174,6 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/VGData.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FlashDataReader.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/OSWrappers.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendHeap.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendHeapBase.hpp:
@@ -233,24 +192,18 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
 ../TouchGFX/gui/include/gui/model/Model.hpp:
-../TouchGFX/gui/include/gui/model/AdminAccessController.hpp:
 ../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:
-../TouchGFX/gui/include/gui/common/TouchFeedbackController.hpp:
-../TouchGFX/gui/include/gui/common/TouchFeedbackModel.hpp:
 ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 ../TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp:
 ../TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
-../TouchGFX/gui/include/gui/containers/TouchFeedback.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/containers/TouchFeedbackBase.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:
@@ -297,43 +250,10 @@ TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../TouchGFX/gui/include/gui/screen9_screen/Screen9View.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/screen9_screen/Screen9ViewBase.hpp:
 ../TouchGFX/gui/include/gui/screen9_screen/Screen9Presenter.hpp:
-../TouchGFX/gui/include/gui/screen10_screen/Screen10View.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/screen10_screen/Screen10ViewBase.hpp:
-../TouchGFX/gui/include/gui/screen10_screen/Screen10Presenter.hpp:
-../TouchGFX/gui/include/gui/containers/SettingsMenuRow.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/containers/SettingsMenuRowBase.hpp:
-../TouchGFX/gui/include/gui/screen11_screen/Screen11View.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/screen11_screen/Screen11ViewBase.hpp:
-../TouchGFX/gui/include/gui/screen11_screen/Screen11Presenter.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
-../TouchGFX/gui/include/gui/screen12_screen/Screen12View.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/screen12_screen/Screen12ViewBase.hpp:
-../TouchGFX/gui/include/gui/screen12_screen/Screen12Presenter.hpp:
-../TouchGFX/gui/include/gui/screen18_screen/Screen18View.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/screen18_screen/Screen18ViewBase.hpp:
-../TouchGFX/gui/include/gui/screen18_screen/Screen18Presenter.hpp:
-../TouchGFX/gui/include/gui/screen19_screen/Screen19View.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/screen19_screen/Screen19ViewBase.hpp:
-../TouchGFX/gui/include/gui/screen19_screen/Screen19Presenter.hpp:
-../TouchGFX/gui/include/gui/screen13_screen/Screen13View.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/screen13_screen/Screen13ViewBase.hpp:
-../TouchGFX/gui/include/gui/screen13_screen/Screen13Presenter.hpp:
-../TouchGFX/gui/include/gui/screen20_screen/Screen20View.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/screen20_screen/Screen20ViewBase.hpp:
-../TouchGFX/gui/include/gui/screen20_screen/Screen20Presenter.hpp:
-../TouchGFX/gui/include/gui/screen21_screen/Screen21View.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/screen21_screen/Screen21ViewBase.hpp:
-../TouchGFX/gui/include/gui/screen21_screen/Screen21Presenter.hpp:
-../TouchGFX/gui/include/gui/common/AdminScreens.hpp:
-../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
-../TouchGFX/generated/images/include/images/SVGDatabase.hpp:
-../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
-../TouchGFX/target/TouchGFXDataReader.hpp:
-../TouchGFX/target/generated/TouchGFXGeneratedDataReader.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintImpl.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h:
 ../Drivers/CMSIS/Include/core_cm4.h:

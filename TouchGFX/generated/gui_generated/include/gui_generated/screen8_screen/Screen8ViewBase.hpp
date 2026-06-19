@@ -9,10 +9,9 @@
 #include <gui/screen8_screen/Screen8Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/BoxWithBorder.hpp>
-#include <gui/containers/TouchFeedback.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
 
 class Screen8ViewBase : public touchgfx::View<Screen8Presenter>
 {
@@ -40,23 +39,15 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box hemorflowWaitBackground;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  backButton;
-    touchgfx::SVGImage backIcon;
+    touchgfx::TextArea backLabel;
     touchgfx::Box hemorflowWaitAccent;
     touchgfx::TextArea hemorflowWaitTitle;
     touchgfx::BoxWithBorder hemorflowWaitCard;
-    touchgfx::SVGImage hemorflowPcIcon;
+    touchgfx::ScalableImage hemorflowPcIcon;
     touchgfx::TextArea hemorflowWaitLabel;
     touchgfx::TextArea hemorflowWaitSubtitle;
-    touchgfx::SVGImage svgImage1;
-    TouchFeedback touchFeedback;
 
 private:
-
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

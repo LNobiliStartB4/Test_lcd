@@ -1,12 +1,15 @@
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:29:6:virtual void Screen6View::tearDownScreen()	0	static
-../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:34:6:virtual void Screen6View::resumeClicked()	0	static
-../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:42:6:virtual void Screen6View::endClicked()	8	static
-../TouchGFX/gui/include/gui/screen6_screen/Screen6View.hpp:12:13:Screen6View::~Screen6View()	8	static
-../TouchGFX/gui/include/gui/screen6_screen/Screen6View.hpp:12:13:virtual Screen6View::~Screen6View()	8	static
-../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:14:1:Screen6View::Screen6View()	8	static
-../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:61:6:void Screen6View::updateTimeValues(const BandyState&)	32	static
-../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:47:6:void Screen6View::applyBandyState(const BandyState&)	8	static
-../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:19:6:virtual void Screen6View::setupScreen()	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	16	static
+../TouchGFX/generated/gui_generated/include/gui_generated/screen6_screen/Screen6ViewBase.hpp:36:26:FrontendApplication& Screen6ViewBase::application()	16	static
+../TouchGFX/gui/include/gui/screen6_screen/Screen6View.hpp:12:13:Screen6View::~Screen6View()	16	static
+../TouchGFX/gui/include/gui/screen6_screen/Screen6View.hpp:12:13:virtual Screen6View::~Screen6View()	16	static
+../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:6:6:void {anonymous}::formatSeconds(touchgfx::Unicode::UnicodeChar*, uint16_t, uint16_t)	32	static
+../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:14:1:Screen6View::Screen6View()	16	static
+../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:19:6:virtual void Screen6View::setupScreen()	32	static
+../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:29:6:virtual void Screen6View::tearDownScreen()	16	static
+../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:34:6:virtual void Screen6View::resumeClicked()	16	static
+../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:42:6:virtual void Screen6View::endClicked()	16	static
+../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:47:6:void Screen6View::applyBandyState(const BandyState&)	16	static
+../TouchGFX/gui/src/screen6_screen/Screen6View.cpp:61:6:void Screen6View::updateTimeValues(const BandyState&)	16	static

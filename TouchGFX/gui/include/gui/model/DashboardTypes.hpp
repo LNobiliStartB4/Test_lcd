@@ -10,17 +10,6 @@ enum ActiveProduct
     ActiveProductHemorflow = 2
 };
 
-// Values MUST match the order of <Language Id> in texts.xml (GB, IT, FR, DE, ES),
-// because touchgfx::LANGUAGES is enumerated in that order and the mapping is a cast.
-enum UiLanguage
-{
-    UiLanguageEnglish = 0,
-    UiLanguageItalian = 1,
-    UiLanguageFrench  = 2,
-    UiLanguageGerman  = 3,
-    UiLanguageSpanish = 4
-};
-
 enum BandyVacuumState
 {
     BandyVacuumStateReady = 0,
@@ -34,51 +23,6 @@ enum BandySessionState
     BandySessionAuthorized = 1,
     BandySessionRunning = 2,
     BandySessionPaused = 3
-};
-
-enum PneumaticPretestState
-{
-    PneumaticPretestIdle = 0,
-    PneumaticPretestPullDown,
-    PneumaticPretestHold,
-    PneumaticPretestReleasing,
-    PneumaticPretestPassed,
-    PneumaticPretestLeakFailed,
-    PneumaticPretestTechnicalFault,
-    PneumaticPretestCancelled
-};
-
-enum PneumaticPretestResult
-{
-    PneumaticPretestResultNone = 0,
-    PneumaticPretestResultPassed,
-    PneumaticPretestResultPullDownTimeout,
-    PneumaticPretestResultHoldLeak,
-    PneumaticPretestResultSensorFault,
-    PneumaticPretestResultActuatorFault,
-    PneumaticPretestResultCancelled
-};
-
-struct PneumaticPretestStatus
-{
-    PneumaticPretestStatus()
-        : product(ActiveProductNone),
-          state(PneumaticPretestIdle),
-          result(PneumaticPretestResultNone),
-          remainingSeconds(0),
-          pressureMbar(0),
-          controlTargetMbar(0),
-          holdMinimumMbar(0)
-    {
-    }
-
-    ActiveProduct product;
-    PneumaticPretestState state;
-    PneumaticPretestResult result;
-    uint16_t remainingSeconds;
-    int32_t pressureMbar;
-    int32_t controlTargetMbar;
-    int32_t holdMinimumMbar;
 };
 
 struct BandyState
@@ -117,75 +61,6 @@ struct HemorflowState
     int32_t currentPressureMbar;
     int32_t targetMbar;
     bool running;
-};
-
-struct AdminDiagnosticsSnapshot
-{
-    AdminDiagnosticsSnapshot()
-        : uptimeSeconds(0U),
-          language(UiLanguageEnglish),
-          brightnessPercent(100U),
-          pressureAvailable(false),
-          pressureDetailsAvailable(false),
-          pressureValid(false),
-          relativePressureMbar(0),
-          rawRelativePressureMbar(0),
-          zeroOffsetMbar(0),
-          ambientRawAdc(0U),
-          chamberRawAdc(0U),
-          ambientAbsMbar(0U),
-          chamberAbsMbar(0U),
-          targetMbar(0),
-          pumpDutyPercent(0U),
-          pressureState(0U),
-          pressureFault(0U),
-          framAvailable(false),
-          framPresent(false),
-          framSizeBytes(0U),
-          sessionRecordValid(false),
-          winbondAvailable(false),
-          winbondPresent(false),
-          winbondSizeBytes(0U),
-          assetPackageValid(false)
-    {
-        deviceName[0] = 0;
-        firmwareVersion[0] = 0;
-        framId[0] = 0;
-        winbondId[0] = 0;
-    }
-
-    char deviceName[24];
-    char firmwareVersion[16];
-    uint32_t uptimeSeconds;
-    UiLanguage language;
-    uint8_t brightnessPercent;
-
-    bool pressureAvailable;
-    bool pressureDetailsAvailable;
-    bool pressureValid;
-    int32_t relativePressureMbar;
-    int32_t rawRelativePressureMbar;
-    int32_t zeroOffsetMbar;
-    uint16_t ambientRawAdc;
-    uint16_t chamberRawAdc;
-    uint16_t ambientAbsMbar;
-    uint16_t chamberAbsMbar;
-    int32_t targetMbar;
-    uint8_t pumpDutyPercent;
-    uint8_t pressureState;
-    uint8_t pressureFault;
-
-    bool framAvailable;
-    bool framPresent;
-    uint32_t framSizeBytes;
-    bool sessionRecordValid;
-    char framId[16];
-
-    bool winbondAvailable;
-    bool winbondPresent;
-    uint32_t winbondSizeBytes;
-    bool assetPackageValid;
-    char winbondId[16];
 };
 
 #endif // DASHBOARDTYPES_HPP

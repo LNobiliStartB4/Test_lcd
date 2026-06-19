@@ -10,11 +10,12 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:461:45:virtual const touchgfx::FontContextualFormsTable* touchgfx::Font::getContextualFormsTable() const	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:471:18:virtual bool touchgfx::Font::isVectorBasedFont() const	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:481:19:virtual float touchgfx::Font::getScaleFactor() const	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:158:17:static void touchgfx::TypedText::registerTypedTextDatabase(const TypedTextData*, const touchgfx::Font* const*, uint16_t)	1
 ../TouchGFX/generated/texts/src/Texts.cpp:13:10:) const	1
 ../TouchGFX/generated/texts/src/Texts.cpp:22:10:) const	1
-../TouchGFX/generated/texts/src/Texts.cpp:31:32:touchgfx::Unicode::UnicodeChar touchgfx::TextProvider::getNextLigature(touchgfx::TextDirection)	5
+../TouchGFX/generated/texts/src/Texts.cpp:31:32:touchgfx::Unicode::UnicodeChar touchgfx::TextProvider::getNextLigature(touchgfx::TextDirection)	7
 ../TouchGFX/generated/texts/src/Texts.cpp:45:6:void touchgfx::TextProvider::initializeInternal()	1
 ../TouchGFX/generated/texts/src/Texts.cpp:50:6:)	1
-../TouchGFX/generated/texts/src/Texts.cpp:602:6:static void touchgfx::Texts::setLanguage(touchgfx::LanguageId)	4
-../TouchGFX/generated/texts/src/Texts.cpp:632:6:static void touchgfx::Texts::setTranslation(touchgfx::LanguageId, const void*)	1
-../TouchGFX/generated/texts/src/Texts.cpp:637:39:const touchgfx::Unicode::UnicodeChar* touchgfx::Texts::getText(touchgfx::TypedTextId) const	1
+../TouchGFX/generated/texts/src/Texts.cpp:132:6:static void touchgfx::Texts::setLanguage(touchgfx::LanguageId)	4
+../TouchGFX/generated/texts/src/Texts.cpp:162:6:static void touchgfx::Texts::setTranslation(touchgfx::LanguageId, const void*)	1
+../TouchGFX/generated/texts/src/Texts.cpp:167:39:const touchgfx::Unicode::UnicodeChar* touchgfx::Texts::getText(touchgfx::TypedTextId) const	1

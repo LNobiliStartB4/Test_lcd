@@ -11,8 +11,6 @@
 #include <touchgfx/widgets/TextArea.hpp>
 #include <gui/containers/BandyVacuumPanel.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
-#include <gui/containers/TouchFeedback.hpp>
 
 class Screen9ViewBase : public touchgfx::View<Screen9Presenter>
 {
@@ -39,8 +37,6 @@ protected:
     touchgfx::TextArea hemorflowTargetMbarLabel;
     touchgfx::TextArea hemorflowStatusLabel;
     touchgfx::TextAreaWithOneWildcard hemorflowStatusValue;
-    touchgfx::SVGImage svgImage1;
-    TouchFeedback touchFeedback;
 
     /*
      * Wildcard Buffers
@@ -51,12 +47,6 @@ protected:
     touchgfx::Unicode::UnicodeChar hemorflowStatusValueBuffer[HEMORFLOWSTATUSVALUE_SIZE];
 
 private:
-
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };
 

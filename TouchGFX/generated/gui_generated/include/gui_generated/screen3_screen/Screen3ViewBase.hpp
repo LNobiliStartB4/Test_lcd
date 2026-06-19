@@ -10,11 +10,10 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <gui/containers/BandyVacuumPanel.hpp>
 #include <gui/containers/BandyTimePanel.hpp>
-#include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
-#include <gui/containers/TouchFeedback.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
 
 class Screen3ViewBase : public touchgfx::View<Screen3Presenter>
 {
@@ -48,15 +47,14 @@ protected:
     BandyVacuumPanel vacuumPanel;
     BandyTimePanel timePanel;
     touchgfx::Box lowerDivider;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setTargetButton;
     touchgfx::TextArea screen3TargetLabel;
     touchgfx::TextAreaWithOneWildcard screen3TargetValue;
     touchgfx::TextArea screen3TargetMbarLabel;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setTargetButton;
+    touchgfx::TextArea setTargetButtonLabel;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  screen3StartButton;
-    touchgfx::SVGImage screen3StartIcon;
+    touchgfx::ScalableImage screen3StartIcon;
     touchgfx::TextArea screen3StartLabel;
-    touchgfx::SVGImage svgImage1;
-    TouchFeedback touchFeedback;
 
     /*
      * Wildcard Buffers
@@ -65,12 +63,6 @@ protected:
     touchgfx::Unicode::UnicodeChar screen3TargetValueBuffer[SCREEN3TARGETVALUE_SIZE];
 
 private:
-
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

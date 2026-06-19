@@ -19,11 +19,6 @@ public:
 
 protected:
     void updateTimeValue(uint16_t seconds);
-
-private:
-    BandyState latestState;
-    bool transitionRequested;
-    bool manualEndRequested;
 };
 
 #endif // SCREEN7VIEW_HPP

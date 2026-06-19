@@ -1,7 +1,0 @@
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	0	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:30:18:virtual void ModelListener::pneumaticPretestUpdated(const PneumaticPretestStatus&)	0	static
-../TouchGFX/gui/include/gui/screen19_screen/Screen19Presenter.hpp:28:13:Screen19Presenter::~Screen19Presenter()	0	static
-../TouchGFX/gui/src/screen19_screen/Screen19Presenter.cpp:10:6:virtual void Screen19Presenter::activate()	0	static
-../TouchGFX/gui/include/gui/screen19_screen/Screen19Presenter.hpp:28:13:virtual Screen19Presenter::~Screen19Presenter()	8	static
-../TouchGFX/gui/include/gui/screen19_screen/Screen19Presenter.hpp:28:13:virtual void* Screen19Presenter::_ZThn4_N17Screen19PresenterD1Ev()	0	static
-../TouchGFX/gui/src/screen19_screen/Screen19Presenter.cpp:4:1:Screen19Presenter::Screen19Presenter(Screen19View&)	0	static

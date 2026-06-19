@@ -1,2 +1,0 @@
-../Core/Src/flash_selftest_pattern.c:5:9:flash_selftest_pattern_byte	0	static
-../Core/Src/flash_selftest_pattern.c:22:6:flash_selftest_pattern_fill	8	static

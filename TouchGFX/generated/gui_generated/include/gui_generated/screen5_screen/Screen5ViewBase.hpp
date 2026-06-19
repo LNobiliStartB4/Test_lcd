@@ -9,10 +9,8 @@
 #include <gui/screen5_screen/Screen5Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <gui/containers/TouchFeedback.hpp>
 
 class Screen5ViewBase : public touchgfx::View<Screen5Presenter>
 {
@@ -36,10 +34,6 @@ public:
     {
         // Override and implement this function in Screen5
     }
-    virtual void openKeypadClicked()
-    {
-        // Override and implement this function in Screen5
-    }
 
 protected:
     FrontendApplication& application() {
@@ -52,7 +46,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box setpointBackground;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setpointBackButton;
-    touchgfx::SVGImage setpointBackIcon;
+    touchgfx::TextArea setpointBackLabel;
     touchgfx::TextArea setpointTitle;
     touchgfx::TextAreaWithOneWildcard setpointValue;
     touchgfx::TextArea setpointMbarLabel;
@@ -60,10 +54,6 @@ protected:
     touchgfx::TextArea setpointMinusLabel;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setpointPlusButton;
     touchgfx::TextArea setpointPlusLabel;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  setpointKeypadButton;
-    touchgfx::SVGImage setpointKeypadIcon;
-    touchgfx::SVGImage svgImage1;
-    TouchFeedback touchFeedback;
 
     /*
      * Wildcard Buffers
@@ -72,12 +62,6 @@ protected:
     touchgfx::Unicode::UnicodeChar setpointValueBuffer[SETPOINTVALUE_SIZE];
 
 private:
-
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

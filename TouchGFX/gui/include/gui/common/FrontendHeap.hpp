@@ -2,26 +2,19 @@
 #define FRONTENDHEAP_HPP
 
 #include <gui_generated/common/FrontendHeapBase.hpp>
-#include <gui/common/AdminScreens.hpp>
 
 class FrontendHeap : public FrontendHeapBase
 {
 public:
     /* List any user-defined view types here*/
-    typedef touchgfx::meta::TypeList< Screen14View,
-            touchgfx::meta::TypeList< Screen15View,
-            touchgfx::meta::TypeList< Screen16View,
-            touchgfx::meta::TypeList< Screen17View,
-                            touchgfx::meta::Nil > > > >
-                            UserDefinedViewTypes;
+    typedef touchgfx::meta::TypeList< touchgfx::meta::Nil, //Replace this with first user-defined type
+                            touchgfx::meta::Nil  //List must always end with meta::Nil !
+                            > UserDefinedViewTypes;
 
     /* List any user-defined presenter types here*/
-    typedef touchgfx::meta::TypeList< Screen14Presenter,
-            touchgfx::meta::TypeList< Screen15Presenter,
-            touchgfx::meta::TypeList< Screen16Presenter,
-            touchgfx::meta::TypeList< Screen17Presenter,
-                            touchgfx::meta::Nil > > > >
-                            UserDefinedPresenterTypes;
+    typedef touchgfx::meta::TypeList< touchgfx::meta::Nil, //Replace this with first user-defined type
+                            touchgfx::meta::Nil  //List must always end with meta::Nil !
+                            > UserDefinedPresenterTypes;
 
     /* List any user-defined transition types here*/
     typedef touchgfx::meta::TypeList< touchgfx::meta::Nil, //Replace this with first user-defined type

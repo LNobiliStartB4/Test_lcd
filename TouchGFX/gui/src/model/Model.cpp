@@ -1,15 +1,6 @@
 #include <gui/model/Model.hpp>
 #include <gui/model/ModelListener.hpp>
-#include "bandy_session_store.h"
 #include "display_bridge_rx.h"
-#include <string.h>
-#ifndef WIN32
-#include "display_backlight.h"
-#endif
-
-#ifndef PNEUMATIC_PRETEST_SIMULATION_MODE
-#define PNEUMATIC_PRETEST_SIMULATION_MODE 0
-#endif
 
 namespace
 {
@@ -21,30 +12,16 @@ const int32_t kMinVacuumMbar = 0;
 const int32_t kMaxVacuumMbar = 500;
 const int32_t kTargetStepMbar = 10;
 const uint8_t kTickDividerLimit = 6; // 60 Hz / 6 = 10 Hz UI updates
-const uint8_t kStoreTelemetryDividerLimit = 10; // 10 Hz / 10 = 1 Hz FRAM diagnostic
 const int32_t kSimulationStepMbar = 8;
-const uint8_t kMinBrightnessPercent = 10U;
-const uint8_t kMaxBrightnessPercent = 100U;
-const uint16_t kPretestPullDownTicks = 150U;
-const uint16_t kPretestSuccessfulPullDownTicks = 120U;
-const uint16_t kPretestHoldTicks = 50U;
-const uint16_t kPretestLeakHoldTicks = 30U;
-const int32_t kPretestReleaseStepMbar = 80;
 }
 
 Model::Model()
     : modelListener(0),
       bandyState(),
       hemorflowState(),
-      pneumaticPretestStatus(),
-      uiLanguage(UiLanguageEnglish),
-      displayBrightnessPercent(kMaxBrightnessPercent),
       tickDivider(0),
-      storeTelemetryDivider(0),
       bandyInitialized(false),
       hemorflowInitialized(false),
-      hemorflowPretestPassed(false),
-      pneumaticPretestTicks(0),
       bridgeSnapshotValid(false),
       bridgeVacuumState(0),
       bridgeActiveProduct(static_cast<uint8_t>(ActiveProductNone)),
@@ -54,38 +31,11 @@ Model::Model()
       bridgeDurationMinutes(15),
       bridgeRemainingSeconds(0),
       bridgePauseRemainingSeconds(0),
-      bridgePausesUsed(0),
-      bridgePausesMax(3),
       bridgeTargetMbar(kDefaultTargetMbar),
       bridgePressureMbar(0),
       targetCommandPending(false),
-      pendingTargetMbar(kDefaultTargetMbar),
-      adminAccess(),
-      adminDiagnostics(),
-      adminUptimeTicks100ms(0U)
+      pendingTargetMbar(kDefaultTargetMbar)
 {
-    strncpy(adminDiagnostics.deviceName, "DISPLAY PROTOTYPE", sizeof(adminDiagnostics.deviceName) - 1U);
-    strncpy(adminDiagnostics.firmwareVersion, "SIMULATION", sizeof(adminDiagnostics.firmwareVersion) - 1U);
-    adminDiagnostics.framAvailable = true;
-    adminDiagnostics.framSizeBytes = 32768U;
-}
-
-void Model::setDisplayBrightnessPercent(uint8_t percent)
-{
-    if (percent < kMinBrightnessPercent)
-    {
-        percent = kMinBrightnessPercent;
-    }
-    else if (percent > kMaxBrightnessPercent)
-    {
-        percent = kMaxBrightnessPercent;
-    }
-
-    displayBrightnessPercent = percent;
-
-#ifndef WIN32
-    DisplayBacklight_SetPercent(displayBrightnessPercent);
-#endif
 }
 
 void Model::tick()
@@ -96,12 +46,7 @@ void Model::tick()
     }
 
     tickDivider = 0;
-    adminAccess.tick100ms();
-    ++adminUptimeTicks100ms;
     updateBridgeSnapshot();
-    updatePneumaticPretestSimulation();
-    publishBandyStoreTelemetry();
-    updateAdminDiagnostics();
 
     if (hemorflowInitialized)
     {
@@ -197,11 +142,6 @@ void Model::decreaseBandyTarget()
     requestBandyTarget(bandyState.targetVacuumMbar - kTargetStepMbar);
 }
 
-void Model::setBandyTarget(int32_t targetMbar)
-{
-    requestBandyTarget(targetMbar);
-}
-
 bool Model::isVacuumCycleRunning() const
 {
     return bridgeSnapshotValid && (bridgeBandyState == static_cast<uint8_t>(BandySessionRunning));
@@ -230,23 +170,11 @@ void Model::initializeHemorflowMonitor()
     hemorflowState.targetMbar = kDefaultHemorflowTargetMbar;
     hemorflowInitialized = true;
     tickDivider = 0;
-    if (hemorflowPretestPassed)
-    {
-        hemorflowState.running = true;
-    }
-    else
-    {
-        updateHemorflowFromInput();
-    }
+    updateHemorflowFromInput();
 }
 
 bool Model::canOpenHemorflowMonitor() const
 {
-    if (hemorflowPretestPassed)
-    {
-        return true;
-    }
-
     return bridgeSnapshotValid &&
            (bridgeActiveProduct == static_cast<uint8_t>(ActiveProductHemorflow)) &&
            (bridgeVacuumState != 0U);
@@ -254,11 +182,6 @@ bool Model::canOpenHemorflowMonitor() const
 
 bool Model::shouldReturnToHemorflowWait() const
 {
-    if (hemorflowPretestPassed)
-    {
-        return false;
-    }
-
     return hemorflowInitialized &&
            bridgeSnapshotValid &&
            (bridgeActiveProduct != static_cast<uint8_t>(ActiveProductHemorflow));
@@ -290,100 +213,13 @@ void Model::updateBridgeSnapshot()
     bridgeDurationMinutes = snapshot.durationMinutes;
     bridgeRemainingSeconds = snapshot.remainingSeconds;
     bridgePauseRemainingSeconds = snapshot.pauseRemainingSeconds;
-    bridgePausesUsed = snapshot.pausesUsed;
-    bridgePausesMax = snapshot.pausesMax;
     bridgeTargetMbar = snapshot.targetMbar;
     bridgePressureMbar = snapshot.pressureMbar;
-
-    bandy_session_store_snapshot_t storeSnapshot;
-    storeSnapshot.valid = snapshot.valid;
-    storeSnapshot.bandy_state = snapshot.bandyState;
-    storeSnapshot.remaining_seconds = snapshot.remainingSeconds;
-    storeSnapshot.duration_minutes = snapshot.durationMinutes;
-    storeSnapshot.pause_remaining_seconds = snapshot.pauseRemainingSeconds;
-    storeSnapshot.pauses_used = snapshot.pausesUsed;
-    storeSnapshot.pauses_max = snapshot.pausesMax;
-    storeSnapshot.target_mbar = snapshot.targetMbar;
-    (void)BandySessionStore_ProcessSnapshot(&storeSnapshot);
 
     if (targetCommandPending && (clampTarget(bridgeTargetMbar) == pendingTargetMbar))
     {
         targetCommandPending = false;
     }
-}
-
-bool Model::startPneumaticPretest(ActiveProduct product)
-{
-    if (product != ActiveProductBandy && product != ActiveProductHemorflow)
-    {
-        return false;
-    }
-
-    pneumaticPretestStatus = PneumaticPretestStatus();
-    pneumaticPretestStatus.product = product;
-    pneumaticPretestStatus.state = PneumaticPretestPullDown;
-    pneumaticPretestStatus.remainingSeconds = 15U;
-    pneumaticPretestStatus.controlTargetMbar =
-        product == ActiveProductBandy ? 460 : 130;
-    pneumaticPretestStatus.holdMinimumMbar =
-        product == ActiveProductBandy ? 440 : 100;
-    pneumaticPretestTicks = 0U;
-    hemorflowPretestPassed = false;
-    notifyPneumaticPretest();
-    return true;
-}
-
-void Model::cancelPneumaticPretest()
-{
-    if (pneumaticPretestStatus.state == PneumaticPretestPullDown ||
-        pneumaticPretestStatus.state == PneumaticPretestHold)
-    {
-        pneumaticPretestStatus.result = PneumaticPretestResultCancelled;
-        pneumaticPretestStatus.state = PneumaticPretestReleasing;
-        pneumaticPretestStatus.remainingSeconds = 1U;
-        pneumaticPretestTicks = 0U;
-        notifyPneumaticPretest();
-    }
-}
-
-bool Model::retryPneumaticPretest()
-{
-    if (pneumaticPretestStatus.state != PneumaticPretestLeakFailed &&
-        pneumaticPretestStatus.state != PneumaticPretestTechnicalFault)
-    {
-        return false;
-    }
-
-    return startPneumaticPretest(pneumaticPretestStatus.product);
-}
-
-void Model::resetPneumaticPretest()
-{
-    pneumaticPretestStatus = PneumaticPretestStatus();
-    pneumaticPretestTicks = 0U;
-}
-
-void Model::publishBandyStoreTelemetry()
-{
-    if (++storeTelemetryDivider < kStoreTelemetryDividerLimit)
-    {
-        return;
-    }
-
-    storeTelemetryDivider = 0;
-
-    bandy_session_store_record_t record = {};
-    const bandy_session_store_status_t status = BandySessionStore_Read(&record);
-    const bool recordValid = (status == BANDY_SESSION_STORE_OK) && record.valid;
-
-    (void)DisplayBridgeRx_SendFramStatus(static_cast<int32_t>(status),
-                                         recordValid,
-                                         recordValid ? record.remaining_seconds : 0U,
-                                         recordValid ? record.duration_minutes : 0U,
-                                         recordValid ? record.bandy_state : 0U,
-                                         recordValid ? record.pauses_used : 0U,
-                                         recordValid ? record.pauses_max : 0U,
-                                         record.sequence);
 }
 
 void Model::updateBandyFromInput()
@@ -417,20 +253,6 @@ void Model::updateBandyFromInput()
 
 void Model::updateHemorflowFromInput()
 {
-    if (hemorflowPretestPassed)
-    {
-        if (hemorflowState.currentPressureMbar < hemorflowState.targetMbar)
-        {
-            hemorflowState.currentPressureMbar += 4;
-            if (hemorflowState.currentPressureMbar > hemorflowState.targetMbar)
-            {
-                hemorflowState.currentPressureMbar = hemorflowState.targetMbar;
-            }
-        }
-        hemorflowState.running = true;
-        return;
-    }
-
     if (!bridgeSnapshotValid)
     {
         return;
@@ -557,175 +379,4 @@ bool Model::hasBandyStateChanged(const BandyState& previousState) const
            previousState.targetReached != bandyState.targetReached ||
            previousState.vacuumState != bandyState.vacuumState ||
            previousState.sessionState != bandyState.sessionState;
-}
-
-void Model::updatePneumaticPretestSimulation()
-{
-    PneumaticPretestStatus previous = pneumaticPretestStatus;
-
-    if (pneumaticPretestStatus.state == PneumaticPretestPullDown)
-    {
-        ++pneumaticPretestTicks;
-        pneumaticPretestStatus.remainingSeconds =
-            pneumaticPretestTicks >= kPretestPullDownTicks
-                ? 0U
-                : static_cast<uint16_t>((kPretestPullDownTicks - pneumaticPretestTicks + 9U) / 10U);
-
-#if PNEUMATIC_PRETEST_SIMULATION_MODE == 3
-        if (pneumaticPretestTicks >= 5U)
-        {
-            pneumaticPretestStatus.result = PneumaticPretestResultSensorFault;
-            pneumaticPretestStatus.state = PneumaticPretestReleasing;
-            pneumaticPretestStatus.remainingSeconds = 1U;
-            pneumaticPretestTicks = 0U;
-        }
-#else
-#if PNEUMATIC_PRETEST_SIMULATION_MODE == 1
-        const int32_t timeoutPressure = pneumaticPretestStatus.controlTargetMbar > 20
-                                                ? pneumaticPretestStatus.controlTargetMbar - 20
-                                                : 0;
-        pneumaticPretestStatus.pressureMbar =
-            static_cast<int32_t>((static_cast<int64_t>(timeoutPressure) * pneumaticPretestTicks) /
-                                 kPretestPullDownTicks);
-#else
-        const uint16_t rampTicks =
-            pneumaticPretestTicks < kPretestSuccessfulPullDownTicks
-                ? pneumaticPretestTicks
-                : kPretestSuccessfulPullDownTicks;
-        pneumaticPretestStatus.pressureMbar =
-            static_cast<int32_t>((static_cast<int64_t>(pneumaticPretestStatus.controlTargetMbar) * rampTicks) /
-                                 kPretestSuccessfulPullDownTicks);
-#endif
-
-#if PNEUMATIC_PRETEST_SIMULATION_MODE != 1
-        if (pneumaticPretestTicks >= kPretestSuccessfulPullDownTicks)
-        {
-            pneumaticPretestStatus.pressureMbar = pneumaticPretestStatus.controlTargetMbar;
-            pneumaticPretestStatus.state = PneumaticPretestHold;
-            pneumaticPretestStatus.remainingSeconds = 5U;
-            pneumaticPretestTicks = 0U;
-        }
-        else
-#endif
-        if (pneumaticPretestTicks >= kPretestPullDownTicks)
-        {
-            pneumaticPretestStatus.result = PneumaticPretestResultPullDownTimeout;
-            pneumaticPretestStatus.state = PneumaticPretestReleasing;
-            pneumaticPretestStatus.remainingSeconds = 1U;
-            pneumaticPretestTicks = 0U;
-        }
-#endif
-    }
-    else if (pneumaticPretestStatus.state == PneumaticPretestHold)
-    {
-        ++pneumaticPretestTicks;
-        pneumaticPretestStatus.remainingSeconds =
-            pneumaticPretestTicks >= kPretestHoldTicks
-                ? 0U
-                : static_cast<uint16_t>((kPretestHoldTicks - pneumaticPretestTicks + 9U) / 10U);
-
-#if PNEUMATIC_PRETEST_SIMULATION_MODE == 2
-        if (pneumaticPretestTicks >= kPretestLeakHoldTicks)
-        {
-            pneumaticPretestStatus.pressureMbar = pneumaticPretestStatus.holdMinimumMbar - 1;
-            pneumaticPretestStatus.result = PneumaticPretestResultHoldLeak;
-            pneumaticPretestStatus.state = PneumaticPretestReleasing;
-            pneumaticPretestStatus.remainingSeconds = 1U;
-            pneumaticPretestTicks = 0U;
-        }
-#else
-        if (pneumaticPretestTicks >= kPretestHoldTicks)
-        {
-            pneumaticPretestStatus.result = PneumaticPretestResultPassed;
-            pneumaticPretestStatus.state = PneumaticPretestReleasing;
-            pneumaticPretestStatus.remainingSeconds = 1U;
-            pneumaticPretestTicks = 0U;
-        }
-#endif
-    }
-    else if (pneumaticPretestStatus.state == PneumaticPretestReleasing)
-    {
-        ++pneumaticPretestTicks;
-        pneumaticPretestStatus.pressureMbar -= kPretestReleaseStepMbar;
-        if (pneumaticPretestStatus.pressureMbar < 0)
-        {
-            pneumaticPretestStatus.pressureMbar = 0;
-        }
-
-        if (pneumaticPretestStatus.pressureMbar == 0 || pneumaticPretestTicks >= 50U)
-        {
-            pneumaticPretestStatus.remainingSeconds = 0U;
-            if (pneumaticPretestStatus.result == PneumaticPretestResultPassed)
-            {
-                pneumaticPretestStatus.state = PneumaticPretestPassed;
-                hemorflowPretestPassed =
-                    pneumaticPretestStatus.product == ActiveProductHemorflow;
-            }
-            else if (pneumaticPretestStatus.result == PneumaticPretestResultCancelled)
-            {
-                pneumaticPretestStatus.state = PneumaticPretestCancelled;
-            }
-            else if (pneumaticPretestStatus.result == PneumaticPretestResultSensorFault ||
-                     pneumaticPretestStatus.result == PneumaticPretestResultActuatorFault)
-            {
-                pneumaticPretestStatus.state = PneumaticPretestTechnicalFault;
-            }
-            else
-            {
-                pneumaticPretestStatus.state = PneumaticPretestLeakFailed;
-            }
-        }
-    }
-
-    if (previous.product != pneumaticPretestStatus.product ||
-        previous.state != pneumaticPretestStatus.state ||
-        previous.result != pneumaticPretestStatus.result ||
-        previous.remainingSeconds != pneumaticPretestStatus.remainingSeconds ||
-        previous.pressureMbar != pneumaticPretestStatus.pressureMbar)
-    {
-        notifyPneumaticPretest();
-    }
-}
-
-void Model::notifyPneumaticPretest()
-{
-    if (modelListener != 0)
-    {
-        modelListener->pneumaticPretestUpdated(pneumaticPretestStatus);
-    }
-}
-
-void Model::updateAdminDiagnostics()
-{
-    adminDiagnostics.uptimeSeconds = adminUptimeTicks100ms / 10U;
-    adminDiagnostics.language = uiLanguage;
-    adminDiagnostics.brightnessPercent = displayBrightnessPercent;
-    adminDiagnostics.pressureAvailable = bridgeSnapshotValid;
-    adminDiagnostics.pressureValid = bridgeSnapshotValid;
-    adminDiagnostics.relativePressureMbar = bridgePressureMbar;
-    adminDiagnostics.targetMbar = bridgeTargetMbar;
-    adminDiagnostics.pressureState = bridgeVacuumState;
-    adminDiagnostics.pressureFault = bridgeFault;
-}
-
-void Model::refreshAdminMemoryDiagnostics()
-{
-    bandy_session_store_record_t record = {};
-    const bandy_session_store_status_t status = BandySessionStore_Read(&record);
-
-    adminDiagnostics.framPresent =
-        (status == BANDY_SESSION_STORE_OK) ||
-        (status == BANDY_SESSION_STORE_EMPTY) ||
-        (status == BANDY_SESSION_STORE_INVALID);
-    adminDiagnostics.sessionRecordValid =
-        (status == BANDY_SESSION_STORE_OK) && record.valid;
-    strncpy(adminDiagnostics.framId,
-            adminDiagnostics.framPresent ? "MB85RS256B" : "N/A",
-            sizeof(adminDiagnostics.framId) - 1U);
-
-    adminDiagnostics.winbondAvailable = false;
-    adminDiagnostics.winbondPresent = false;
-    adminDiagnostics.winbondSizeBytes = 0U;
-    adminDiagnostics.assetPackageValid = false;
-    strncpy(adminDiagnostics.winbondId, "N/A", sizeof(adminDiagnostics.winbondId) - 1U);
 }

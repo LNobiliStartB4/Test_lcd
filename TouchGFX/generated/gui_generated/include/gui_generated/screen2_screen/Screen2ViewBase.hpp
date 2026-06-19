@@ -8,9 +8,9 @@
 #include <mvp/View.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
-#include <gui/containers/TouchFeedback.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
 {
@@ -30,10 +30,6 @@ public:
     {
         // Override and implement this function in Screen2
     }
-    virtual void settingsClicked()
-    {
-        // Override and implement this function in Screen2
-    }
 
 protected:
     FrontendApplication& application() {
@@ -45,27 +41,19 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box productBackground;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  settingsButton;
+    touchgfx::Box productAccent;
+    touchgfx::TextArea productTitle;
+    touchgfx::TextArea productSubtitle;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  bandyButton;
-    touchgfx::Box bandyRowAccent;
-    touchgfx::Box bandyRowDivider;
+    touchgfx::BoxWithBorder bandyVisibleFrame;
+    touchgfx::TextArea bandyName;
+    touchgfx::TextArea bandyStatus;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  emerflowButton;
-    touchgfx::Box emerflowRowAccent;
-    touchgfx::SVGImage settingsIcon;
-    touchgfx::SVGImage bandyChevron;
-    touchgfx::SVGImage emerflowChevron;
-    touchgfx::SVGImage svgImage1;
-    touchgfx::SVGImage svgImage2;
-    touchgfx::SVGImage svgImage3;
-    TouchFeedback touchFeedback;
+    touchgfx::BoxWithBorder emerflowCard;
+    touchgfx::TextArea emerflowName;
+    touchgfx::TextArea emerflowStatus;
 
 private:
-
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

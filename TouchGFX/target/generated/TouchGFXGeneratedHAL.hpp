@@ -20,7 +20,6 @@
 
 #include <touchgfx/hal/HAL.hpp>
 
-#include <touchgfx/hal/FlashDataReader.hpp>
 /**
  * @class TouchGFXGeneratedHAL
  *
@@ -45,8 +44,7 @@ public:
      * @param height           Height of the display.
      */
     TouchGFXGeneratedHAL(touchgfx::DMA_Interface& dma, touchgfx::LCD& display, touchgfx::TouchController& tc, uint16_t width, uint16_t height) :
-        touchgfx::HAL(dma, display, tc, width, height),
-        reader(0)
+        touchgfx::HAL(dma, display, tc, width, height)
     {
     }
 
@@ -124,32 +122,6 @@ public:
     virtual void flushFrameBuffer(const touchgfx::Rect& rect);
 
     /**
-     * @fn virtual void TouchGFXGeneratedHAL::setDataReader(touchgfx::FlashDataReader* datareader)
-     *
-     * @brief This function is used to store the pointer to the object of FlashDataReader.
-     *
-     * @param datareader The pointer to the FlashDataReader object used for accessing unmapped data.
-     *
-     */
-    virtual void setDataReader(touchgfx::FlashDataReader* datareader)
-    {
-        reader = datareader;
-    }
-
-    /**
-     * @fn virtual void TouchGFXGeneratedHAL::getDataReader()
-     *
-     * @brief This function is used to store the pointer to the object of FlashDataReader.
-     *
-     * @return pointer to the FlashDataReader object used for accessing unmapped data.
-     *
-     */
-    virtual touchgfx::FlashDataReader* getDataReader()
-    {
-        return reader;
-    }
-
-    /**
      *
      * @fn virtual void TouchGFXGeneratedHAL::blockCopy();
      *
@@ -223,8 +195,6 @@ protected:
      * @param [in,out] adr New frame buffer address.
      */
     virtual void setTFTFrameBuffer(uint16_t* adr);
-
-    touchgfx::FlashDataReader* reader;
 
 };
 #endif // TouchGFXGeneratedHAL_HPP

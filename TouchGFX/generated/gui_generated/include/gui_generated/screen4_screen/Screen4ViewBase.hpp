@@ -9,10 +9,9 @@
 #include <gui/screen4_screen/Screen4Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
-#include <touchgfx/widgets/BoxWithBorder.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <gui/containers/TouchFeedback.hpp>
+#include <touchgfx/widgets/BoxWithBorder.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
 
 class Screen4ViewBase : public touchgfx::View<Screen4Presenter>
 {
@@ -40,21 +39,15 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box rfidBackground;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  backButton;
-    touchgfx::SVGImage backIcon;
+    touchgfx::TextArea backLabel;
+    touchgfx::Box rfidAccent;
+    touchgfx::TextArea rfidTitle;
     touchgfx::BoxWithBorder rfidCard;
-    touchgfx::SVGImage rfidIcon;
+    touchgfx::ScalableImage rfidIcon;
     touchgfx::TextArea rfidInstruction;
     touchgfx::TextArea rfidStatus;
-    touchgfx::SVGImage svgImage1;
-    TouchFeedback touchFeedback;
 
 private:
-
-    /*
-     * Canvas Buffer Size
-     */
-    static const uint32_t CANVAS_BUFFER_SIZE = 7200;
-    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
     /*
      * Callback Declarations

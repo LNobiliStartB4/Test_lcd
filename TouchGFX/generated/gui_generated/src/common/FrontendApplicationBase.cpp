@@ -8,12 +8,7 @@
 #include <texts/TextKeysAndLanguages.hpp>
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
-#ifndef SIMULATOR
-#include <platform/driver/lcd/LCD16bppSerialFlash.hpp>
-#endif
-#ifdef SIMULATOR
 #include <platform/driver/lcd/LCD16bpp.hpp>
-#endif
 #include <gui/screen1_screen/Screen1View.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <gui/screen2_screen/Screen2View.hpp>
@@ -32,22 +27,6 @@
 #include <gui/screen8_screen/Screen8Presenter.hpp>
 #include <gui/screen9_screen/Screen9View.hpp>
 #include <gui/screen9_screen/Screen9Presenter.hpp>
-#include <gui/screen10_screen/Screen10View.hpp>
-#include <gui/screen10_screen/Screen10Presenter.hpp>
-#include <gui/screen11_screen/Screen11View.hpp>
-#include <gui/screen11_screen/Screen11Presenter.hpp>
-#include <gui/screen12_screen/Screen12View.hpp>
-#include <gui/screen12_screen/Screen12Presenter.hpp>
-#include <gui/screen18_screen/Screen18View.hpp>
-#include <gui/screen18_screen/Screen18Presenter.hpp>
-#include <gui/screen19_screen/Screen19View.hpp>
-#include <gui/screen19_screen/Screen19Presenter.hpp>
-#include <gui/screen13_screen/Screen13View.hpp>
-#include <gui/screen13_screen/Screen13Presenter.hpp>
-#include <gui/screen20_screen/Screen20View.hpp>
-#include <gui/screen20_screen/Screen20Presenter.hpp>
-#include <gui/screen21_screen/Screen21View.hpp>
-#include <gui/screen21_screen/Screen21Presenter.hpp>
 
 using namespace touchgfx;
 
@@ -59,16 +38,9 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
 {
     touchgfx::HAL::getInstance()->setDisplayOrientation(touchgfx::ORIENTATION_LANDSCAPE);
     touchgfx::Texts::setLanguage(GB);
-#ifndef SIMULATOR
-    reinterpret_cast<touchgfx::LCD16bppSerialFlash&>(touchgfx::HAL::lcd()).enableTextureMapperAll();
-    reinterpret_cast<touchgfx::LCD16bppSerialFlash&>(touchgfx::HAL::lcd()).enableDecompressorL8_All();
-    reinterpret_cast<touchgfx::LCD16bppSerialFlash&>(touchgfx::HAL::lcd()).enableDecompressorRGB();
-#endif
-#ifdef SIMULATOR
     reinterpret_cast<touchgfx::LCD16bpp&>(touchgfx::HAL::lcd()).enableTextureMapperAll();
     reinterpret_cast<touchgfx::LCD16bpp&>(touchgfx::HAL::lcd()).enableDecompressorL8_All();
     reinterpret_cast<touchgfx::LCD16bpp&>(touchgfx::HAL::lcd()).enableDecompressorRGB();
-#endif
 }
 
 /*

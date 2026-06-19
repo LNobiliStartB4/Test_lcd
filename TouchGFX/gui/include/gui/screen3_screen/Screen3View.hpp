@@ -24,8 +24,6 @@ private:
 
     BandyState latestState;
     bool screenTransitionRequested;
-    bool startControlInitialized;
-    bool startControlRunning;
 };
 
 #endif // SCREEN3VIEW_HPP

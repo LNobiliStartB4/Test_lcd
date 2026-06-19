@@ -1,9 +1,0 @@
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	0	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:30:18:virtual void ModelListener::pneumaticPretestUpdated(const PneumaticPretestStatus&)	0	static
-../TouchGFX/gui/include/gui/screen12_screen/Screen12Presenter.hpp:32:13:Screen12Presenter::~Screen12Presenter()	0	static
-../TouchGFX/gui/src/screen12_screen/Screen12Presenter.cpp:10:6:virtual void Screen12Presenter::activate()	0	static
-../TouchGFX/gui/include/gui/screen12_screen/Screen12Presenter.hpp:32:13:virtual Screen12Presenter::~Screen12Presenter()	8	static
-../TouchGFX/gui/include/gui/screen12_screen/Screen12Presenter.hpp:32:13:virtual void* Screen12Presenter::_ZThn4_N17Screen12PresenterD1Ev()	0	static
-../TouchGFX/gui/src/screen12_screen/Screen12Presenter.cpp:4:1:Screen12Presenter::Screen12Presenter(Screen12View&)	0	static
-../TouchGFX/gui/src/screen12_screen/Screen12Presenter.cpp:20:12:UiLanguage Screen12Presenter::getUiLanguage() const	0	static
-../TouchGFX/gui/src/screen12_screen/Screen12Presenter.cpp:25:6:void Screen12Presenter::setUiLanguage(UiLanguage)	0	static

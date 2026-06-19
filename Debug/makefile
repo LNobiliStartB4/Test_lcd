@@ -19,15 +19,7 @@ RM := rm -rf
 -include TouchGFX/gui/src/screen4_screen/subdir.mk
 -include TouchGFX/gui/src/screen3_screen/subdir.mk
 -include TouchGFX/gui/src/screen2_screen/subdir.mk
--include TouchGFX/gui/src/screen21_screen/subdir.mk
--include TouchGFX/gui/src/screen20_screen/subdir.mk
 -include TouchGFX/gui/src/screen1_screen/subdir.mk
--include TouchGFX/gui/src/screen19_screen/subdir.mk
--include TouchGFX/gui/src/screen18_screen/subdir.mk
--include TouchGFX/gui/src/screen13_screen/subdir.mk
--include TouchGFX/gui/src/screen12_screen/subdir.mk
--include TouchGFX/gui/src/screen11_screen/subdir.mk
--include TouchGFX/gui/src/screen10_screen/subdir.mk
 -include TouchGFX/gui/src/model/subdir.mk
 -include TouchGFX/gui/src/containers/subdir.mk
 -include TouchGFX/gui/src/common/subdir.mk
@@ -41,20 +33,10 @@ RM := rm -rf
 -include TouchGFX/generated/gui_generated/src/screen4_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen3_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen2_screen/subdir.mk
--include TouchGFX/generated/gui_generated/src/screen21_screen/subdir.mk
--include TouchGFX/generated/gui_generated/src/screen20_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/screen1_screen/subdir.mk
--include TouchGFX/generated/gui_generated/src/screen19_screen/subdir.mk
--include TouchGFX/generated/gui_generated/src/screen18_screen/subdir.mk
--include TouchGFX/generated/gui_generated/src/screen13_screen/subdir.mk
--include TouchGFX/generated/gui_generated/src/screen12_screen/subdir.mk
--include TouchGFX/generated/gui_generated/src/screen11_screen/subdir.mk
--include TouchGFX/generated/gui_generated/src/screen10_screen/subdir.mk
 -include TouchGFX/generated/gui_generated/src/containers/subdir.mk
 -include TouchGFX/generated/gui_generated/src/common/subdir.mk
 -include TouchGFX/generated/fonts/src/subdir.mk
--include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen9_screen/subdir.mk
--include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen8_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen7_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen6_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen5_screen/subdir.mk
@@ -62,8 +44,6 @@ RM := rm -rf
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen3_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen2_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen1_screen/subdir.mk
--include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen12_screen/subdir.mk
--include TouchGFX/build/MINGW32_NT-6.2/gui/src/screen11_screen/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/containers/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/gui/src/common/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/screen5_screen/subdir.mk
@@ -131,7 +111,7 @@ MAP_FILES += \
 Display_test_prova.map \
 
 SIZE_OUTPUT += \
-Display_test_prova_internal.size.stdout \
+default.size.stdout \
 
 OBJDUMP_LIST += \
 Display_test_prova.list \
@@ -149,7 +129,7 @@ Display_test_prova.elf Display_test_prova.map: $(OBJS) $(USER_OBJS) C:\TouchGFXP
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-Display_test_prova_internal.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-size  $(EXECUTABLES)
 	@echo 'Finished building: $@'
 	@echo ' '
@@ -161,7 +141,7 @@ Display_test_prova.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DE
 
 # Other Targets
 clean:
-	-$(RM) Display_test_prova.elf Display_test_prova.list Display_test_prova.map Display_test_prova_internal.size.stdout
+	-$(RM) Display_test_prova.elf Display_test_prova.list Display_test_prova.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

@@ -2,7 +2,6 @@
 #define MODEL_HPP
 
 #include <stdint.h>
-#include <gui/model/AdminAccessController.hpp>
 #include <gui/model/DashboardTypes.hpp>
 
 class ModelListener;
@@ -28,7 +27,6 @@ public:
     void stopRfidScan();
     void increaseBandyTarget();
     void decreaseBandyTarget();
-    void setBandyTarget(int32_t targetMbar);
     bool isVacuumCycleRunning() const;
     bool isRfidApproved() const;
     bool canOpenBandyScreen() const;
@@ -36,10 +34,6 @@ public:
     void initializeHemorflowMonitor();
     bool canOpenHemorflowMonitor() const;
     bool shouldReturnToHemorflowWait() const;
-    bool startPneumaticPretest(ActiveProduct product);
-    void cancelPneumaticPretest();
-    bool retryPneumaticPretest();
-    void resetPneumaticPretest();
 
     BandyState getBandyState() const
     {
@@ -51,55 +45,6 @@ public:
         return hemorflowState;
     }
 
-    PneumaticPretestStatus getPneumaticPretestStatus() const
-    {
-        return pneumaticPretestStatus;
-    }
-
-    UiLanguage getUiLanguage() const
-    {
-        return uiLanguage;
-    }
-
-    void setUiLanguage(UiLanguage language)
-    {
-        uiLanguage = language;
-    }
-
-    uint8_t getDisplayBrightnessPercent() const
-    {
-        return displayBrightnessPercent;
-    }
-
-    void setDisplayBrightnessPercent(uint8_t percent);
-
-    AdminAuthResult authenticateAdminPin(uint16_t pin)
-    {
-        return adminAccess.authenticate(pin);
-    }
-
-    bool isAdminAuthenticated() const
-    {
-        return adminAccess.isAuthenticated();
-    }
-
-    void logoutAdmin()
-    {
-        adminAccess.logout();
-    }
-
-    uint8_t getAdminLockoutRemainingSeconds() const
-    {
-        return adminAccess.getLockoutRemainingSeconds();
-    }
-
-    AdminDiagnosticsSnapshot getAdminDiagnosticsSnapshot() const
-    {
-        return adminDiagnostics;
-    }
-
-    void refreshAdminMemoryDiagnostics();
-
 private:
     void notifyBandyState();
     void updateBridgeSnapshot();
@@ -107,27 +52,17 @@ private:
     void updateHemorflowFromInput();
     void updateBandyDerivedState();
     void updateSimulatedVacuum();
-    void publishBandyStoreTelemetry();
     void requestBandyTarget(int32_t targetMbar);
     int32_t clampTarget(int32_t requestedTarget) const;
     int32_t clampVacuum(int32_t measuredVacuum) const;
     bool hasBandyStateChanged(const BandyState& previousState) const;
-    void updateAdminDiagnostics();
-    void updatePneumaticPretestSimulation();
-    void notifyPneumaticPretest();
 
     ModelListener* modelListener;
     BandyState bandyState;
     HemorflowState hemorflowState;
-    PneumaticPretestStatus pneumaticPretestStatus;
-    UiLanguage uiLanguage;
-    uint8_t displayBrightnessPercent;
     uint8_t tickDivider;
-    uint8_t storeTelemetryDivider;
     bool bandyInitialized;
     bool hemorflowInitialized;
-    bool hemorflowPretestPassed;
-    uint16_t pneumaticPretestTicks;
     bool bridgeSnapshotValid;
     uint8_t bridgeVacuumState;
     uint8_t bridgeActiveProduct;
@@ -137,15 +72,10 @@ private:
     uint16_t bridgeDurationMinutes;
     uint16_t bridgeRemainingSeconds;
     uint16_t bridgePauseRemainingSeconds;
-    uint8_t bridgePausesUsed;
-    uint8_t bridgePausesMax;
     int32_t bridgeTargetMbar;
     int32_t bridgePressureMbar;
     bool targetCommandPending;
     int32_t pendingTargetMbar;
-    AdminAccessController adminAccess;
-    AdminDiagnosticsSnapshot adminDiagnostics;
-    uint32_t adminUptimeTicks100ms;
 };
 
 #endif // MODEL_HPP

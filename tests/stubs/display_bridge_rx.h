@@ -21,8 +21,6 @@ typedef struct
   uint16_t durationMinutes;
   uint16_t remainingSeconds;
   uint16_t pauseRemainingSeconds;
-  uint8_t pausesUsed;
-  uint8_t pausesMax;
   int32_t targetMbar;
   int32_t pressureMbar;
   bool valid;
@@ -38,14 +36,6 @@ bool DisplayBridgeRx_SendVacuumStopCommand(void);
 bool DisplayBridgeRx_SendBandyTargetCommand(int32_t targetMbar);
 bool DisplayBridgeRx_SendRfidScanStartCommand(void);
 bool DisplayBridgeRx_SendRfidScanStopCommand(void);
-bool DisplayBridgeRx_SendFramStatus(int32_t status,
-                                    bool valid,
-                                    uint16_t remainingSeconds,
-                                    uint16_t durationMinutes,
-                                    uint8_t bandyState,
-                                    uint8_t pausesUsed,
-                                    uint8_t pausesMax,
-                                    uint32_t sequence);
 
 /* Test-only helpers (not present in production header). */
 void TestStub_Reset(void);

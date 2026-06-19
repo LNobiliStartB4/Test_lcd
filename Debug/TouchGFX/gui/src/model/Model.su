@@ -1,39 +1,30 @@
-../TouchGFX/gui/src/model/Model.cpp:35:1:Model::Model()	16	static
-../TouchGFX/gui/src/model/Model.cpp:73:6:void Model::setDisplayBrightnessPercent(uint8_t)	0	static
-../TouchGFX/gui/src/model/Model.cpp:155:6:void Model::stopBandyDemo()	0	static
-../TouchGFX/gui/src/model/Model.cpp:160:6:void Model::resumeBandyDemo()	0	static
-../TouchGFX/gui/src/model/Model.cpp:165:6:void Model::endBandyDemo()	0	static
-../TouchGFX/gui/src/model/Model.cpp:170:6:void Model::startRfidScan()	0	static
-../TouchGFX/gui/src/model/Model.cpp:175:6:void Model::stopRfidScan()	0	static
-../TouchGFX/gui/src/model/Model.cpp:205:6:bool Model::isVacuumCycleRunning() const	0	static
-../TouchGFX/gui/src/model/Model.cpp:210:6:bool Model::isRfidApproved() const	0	static
-../TouchGFX/gui/src/model/Model.cpp:215:6:bool Model::canOpenBandyScreen() const	0	static
-../TouchGFX/gui/src/model/Model.cpp:222:6:bool Model::canOpenPauseScreen() const	0	static
-../TouchGFX/gui/src/model/Model.cpp:243:6:bool Model::canOpenHemorflowMonitor() const	0	static
-../TouchGFX/gui/src/model/Model.cpp:255:6:bool Model::shouldReturnToHemorflowWait() const	0	static
-../TouchGFX/gui/src/model/Model.cpp:267:6:void Model::notifyBandyState()	0	static
-../TouchGFX/gui/src/model/Model.cpp:275:6:void Model::updateBridgeSnapshot()	72	static
-../TouchGFX/gui/src/model/Model.cpp:360:6:void Model::resetPneumaticPretest()	0	static
-../TouchGFX/gui/src/model/Model.cpp:366:6:void Model::publishBandyStoreTelemetry()	64	static
-../TouchGFX/gui/src/model/Model.cpp:418:6:void Model::updateHemorflowFromInput()	0	static
-../TouchGFX/gui/src/model/Model.cpp:227:6:void Model::initializeHemorflowMonitor()	0	static
-../TouchGFX/gui/src/model/Model.cpp:446:6:void Model::updateBandyDerivedState()	0	static
-../TouchGFX/gui/src/model/Model.cpp:495:9:int32_t Model::clampTarget(int32_t) const	0	static
-../TouchGFX/gui/src/model/Model.cpp:510:9:int32_t Model::clampVacuum(int32_t) const	0	static
-../TouchGFX/gui/src/model/Model.cpp:525:6:void Model::updateSimulatedVacuum()	0	static
-../TouchGFX/gui/src/model/Model.cpp:389:6:void Model::updateBandyFromInput()	8	static
-../TouchGFX/gui/src/model/Model.cpp:126:6:void Model::initializeBandyDemo()	8	static
-../TouchGFX/gui/src/model/Model.cpp:145:6:void Model::startBandyDemo()	8	static
-../TouchGFX/gui/src/model/Model.cpp:550:6:bool Model::hasBandyStateChanged(const BandyState&) const	0	static
-../TouchGFX/gui/src/model/Model.cpp:464:6:void Model::requestBandyTarget(int32_t)	32	static
-../TouchGFX/gui/src/model/Model.cpp:180:6:void Model::increaseBandyTarget()	8	static
-../TouchGFX/gui/src/model/Model.cpp:190:6:void Model::decreaseBandyTarget()	8	static
-../TouchGFX/gui/src/model/Model.cpp:200:6:void Model::setBandyTarget(int32_t)	0	static
-../TouchGFX/gui/src/model/Model.cpp:690:6:void Model::notifyPneumaticPretest()	0	static
-../TouchGFX/gui/src/model/Model.cpp:315:6:bool Model::startPneumaticPretest(ActiveProduct)	16	static
-../TouchGFX/gui/src/model/Model.cpp:349:6:bool Model::retryPneumaticPretest()	0	static
-../TouchGFX/gui/src/model/Model.cpp:336:6:void Model::cancelPneumaticPretest()	0	static
-../TouchGFX/gui/src/model/Model.cpp:562:6:void Model::updatePneumaticPretestSimulation()	40	static
-../TouchGFX/gui/src/model/Model.cpp:698:6:void Model::updateAdminDiagnostics()	0	static
-../TouchGFX/gui/src/model/Model.cpp:91:6:void Model::tick()	32	static
-../TouchGFX/gui/src/model/Model.cpp:711:6:void Model::refreshAdminMemoryDiagnostics()	40	static
+../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:30:5:BandyState::BandyState()	16	static
+../TouchGFX/gui/include/gui/model/DashboardTypes.hpp:54:5:HemorflowState::HemorflowState()	16	static
+../TouchGFX/gui/src/model/Model.cpp:18:1:Model::Model()	16	static
+../TouchGFX/gui/src/model/Model.cpp:41:6:void Model::tick()	40	static
+../TouchGFX/gui/src/model/Model.cpp:71:6:void Model::initializeBandyDemo()	40	static
+../TouchGFX/gui/src/model/Model.cpp:90:6:void Model::startBandyDemo()	16	static
+../TouchGFX/gui/src/model/Model.cpp:100:6:void Model::stopBandyDemo()	16	static
+../TouchGFX/gui/src/model/Model.cpp:105:6:void Model::resumeBandyDemo()	16	static
+../TouchGFX/gui/src/model/Model.cpp:110:6:void Model::endBandyDemo()	16	static
+../TouchGFX/gui/src/model/Model.cpp:115:6:void Model::startRfidScan()	16	static
+../TouchGFX/gui/src/model/Model.cpp:120:6:void Model::stopRfidScan()	16	static
+../TouchGFX/gui/src/model/Model.cpp:125:6:void Model::increaseBandyTarget()	16	static
+../TouchGFX/gui/src/model/Model.cpp:135:6:void Model::decreaseBandyTarget()	16	static
+../TouchGFX/gui/src/model/Model.cpp:145:6:bool Model::isVacuumCycleRunning() const	16	static
+../TouchGFX/gui/src/model/Model.cpp:150:6:bool Model::isRfidApproved() const	16	static
+../TouchGFX/gui/src/model/Model.cpp:155:6:bool Model::canOpenBandyScreen() const	16	static
+../TouchGFX/gui/src/model/Model.cpp:162:6:bool Model::canOpenPauseScreen() const	16	static
+../TouchGFX/gui/src/model/Model.cpp:167:6:void Model::initializeHemorflowMonitor()	32	static
+../TouchGFX/gui/src/model/Model.cpp:176:6:bool Model::canOpenHemorflowMonitor() const	16	static
+../TouchGFX/gui/src/model/Model.cpp:183:6:bool Model::shouldReturnToHemorflowWait() const	16	static
+../TouchGFX/gui/src/model/Model.cpp:190:6:void Model::notifyBandyState()	16	static
+../TouchGFX/gui/src/model/Model.cpp:198:6:void Model::updateBridgeSnapshot()	40	static
+../TouchGFX/gui/src/model/Model.cpp:225:6:void Model::updateBandyFromInput()	24	static
+../TouchGFX/gui/src/model/Model.cpp:254:6:void Model::updateHemorflowFromInput()	16	static
+../TouchGFX/gui/src/model/Model.cpp:268:6:void Model::updateBandyDerivedState()	16	static
+../TouchGFX/gui/src/model/Model.cpp:286:6:void Model::requestBandyTarget(int32_t)	48	static
+../TouchGFX/gui/src/model/Model.cpp:317:9:int32_t Model::clampTarget(int32_t) const	16	static
+../TouchGFX/gui/src/model/Model.cpp:332:9:int32_t Model::clampVacuum(int32_t) const	16	static
+../TouchGFX/gui/src/model/Model.cpp:347:6:void Model::updateSimulatedVacuum()	16	static
+../TouchGFX/gui/src/model/Model.cpp:372:6:bool Model::hasBandyStateChanged(const BandyState&) const	16	static

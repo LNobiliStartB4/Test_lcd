@@ -1,7 +1,5 @@
 #include <gui/screen3_screen/Screen3View.hpp>
-#include <gui/model/BandyCompletion.hpp>
 #include <images/BitmapDatabase.hpp>
-#include <images/SVGDatabase.hpp>
 #include <touchgfx/Application.hpp>
 #include <touchgfx/Color.hpp>
 #include <touchgfx/Unicode.hpp>
@@ -9,9 +7,7 @@
 
 Screen3View::Screen3View()
     : latestState(),
-      screenTransitionRequested(false),
-      startControlInitialized(false),
-      startControlRunning(false)
+      screenTransitionRequested(false)
 {
 }
 
@@ -19,7 +15,6 @@ void Screen3View::setupScreen()
 {
     Screen3ViewBase::setupScreen();
     screenTransitionRequested = false;
-    startControlInitialized = false;
 
     touchgfx::Application::getInstance()->invalidateArea(touchgfx::Rect(0, 0, 480, 320));
 
@@ -57,7 +52,6 @@ void Screen3View::startClicked()
 
 void Screen3View::applyBandyState(const BandyState& state)
 {
-    const BandyState previousState = latestState;
     latestState = state;
 
     vacuumPanel.setVacuumMbar(state.currentVacuumMbar);
@@ -73,14 +67,7 @@ void Screen3View::applyBandyState(const BandyState& state)
     else if (!screenTransitionRequested && (state.sessionState == BandySessionWaitRfid))
     {
         screenTransitionRequested = true;
-        if (isNaturalBandyCompletion(previousState, state))
-        {
-            application().gotoBandyCompletedScreenNoTransition();
-        }
-        else
-        {
-            application().gotoRfidWaitScreenNoTransition();
-        }
+        application().gotoRfidWaitScreenNoTransition();
     }
 }
 
@@ -93,15 +80,6 @@ void Screen3View::updateTargetDisplay(int32_t targetMbar)
 void Screen3View::updateStartControl(BandySessionState sessionState)
 {
     const bool running = sessionState == BandySessionRunning;
-
-    if (startControlInitialized && (running == startControlRunning))
-    {
-        return;
-    }
-
-    startControlInitialized = true;
-    startControlRunning = running;
-
     const touchgfx::colortype fillColor = touchgfx::Color::getColorFromRGB(0, 0, 0);
     const touchgfx::colortype pressedFillColor = running
                                                ? touchgfx::Color::getColorFromRGB(35, 15, 18)
@@ -113,13 +91,11 @@ void Screen3View::updateStartControl(BandySessionState sessionState)
                                                     ? touchgfx::Color::getColorFromRGB(255, 92, 104)
                                                     : touchgfx::Color::getColorFromRGB(255, 255, 248);
 
-    screen3StartButton.setPosition(176, 240, 304, 78);
     screen3StartButton.setBoxWithBorderColors(fillColor, pressedFillColor, borderColor, pressedBorderColor);
-    screen3StartIcon.setSVG(running ? SVG_START_PAUSE_GOLD_ID : SVG_START_PLAY_GOLD_ID);
     screen3StartLabel.setTypedText(touchgfx::TypedText(running ? T_TEXT_PAUSE : T_TEXT_START));
+    screen3StartIcon.setBitmap(touchgfx::Bitmap(running ? BITMAP_START_STOP_ICON_WHITE_ID : BITMAP_START_PLAY_ICON_WHITE_ID));
 
     screen3StartButton.invalidate();
-    screen3StartIcon.invalidate();
     screen3StartLabel.invalidate();
-
+    screen3StartIcon.invalidate();
 }

@@ -1,8 +1,14 @@
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	0	static
-../TouchGFX/gui/include/gui/model/ModelListener.hpp:30:18:virtual void ModelListener::pneumaticPretestUpdated(const PneumaticPretestStatus&)	0	static
-../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:15:13:Screen2Presenter::~Screen2Presenter()	0	static
-../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:10:6:virtual void Screen2Presenter::activate()	0	static
-../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:15:13:virtual Screen2Presenter::~Screen2Presenter()	8	static
-../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:15:13:virtual void* Screen2Presenter::_ZThn4_N16Screen2PresenterD1Ev()	0	static
-../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:5:1:Screen2Presenter::Screen2Presenter(Screen2View&)	0	static
-../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:18:6:bool Screen2Presenter::startPneumaticPretest(ActiveProduct)	0	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:11:5:ModelListener::ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:ModelListener::~ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:16:13:virtual ModelListener::~ModelListener()	16	static
+../TouchGFX/gui/include/gui/model/ModelListener.hpp:25:18:virtual void ModelListener::bandyStateUpdated(const BandyState&)	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:37:18:virtual void touchgfx::Presenter::activate()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:47:18:virtual void touchgfx::Presenter::deactivate()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:touchgfx::Presenter::~Presenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:52:13:virtual touchgfx::Presenter::~Presenter()	16	static
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:58:5:touchgfx::Presenter::Presenter()	16	static
+../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:15:13:Screen2Presenter::~Screen2Presenter()	16	static
+../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:15:13:virtual Screen2Presenter::~Screen2Presenter()	16	static
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:4:1:Screen2Presenter::Screen2Presenter(Screen2View&)	16	static
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:9:6:virtual void Screen2Presenter::activate()	16	static
+../TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp:13:6:virtual void Screen2Presenter::deactivate()	16	static

@@ -24,7 +24,6 @@
 
 #include <STM32TouchController.hpp>
 #include "main.h"
-#include "RVA15MD_DisplayDriver.h"
 
 volatile uint32_t newTouch = 0;
 extern "C" I2C_HandleTypeDef hi2c1;
@@ -80,16 +79,8 @@ bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
                 continue;
             }
 
-            const int32_t rawX = static_cast<int32_t>((static_cast<uint16_t>(report[offset + 2]) << 8) | report[offset + 1]);
-            const int32_t rawY = static_cast<int32_t>((static_cast<uint16_t>(report[offset + 4]) << 8) | report[offset + 3]);
-
-#if DISPLAY_ROTATE_180
-            const int32_t touchX = kTouchMaxX - rawX;
-            const int32_t touchY = kTouchMaxY - rawY;
-#else
-            const int32_t touchX = rawX;
-            const int32_t touchY = rawY;
-#endif
+            const int32_t touchX = static_cast<int32_t>((static_cast<uint16_t>(report[offset + 2]) << 8) | report[offset + 1]);
+            const int32_t touchY = static_cast<int32_t>((static_cast<uint16_t>(report[offset + 4]) << 8) | report[offset + 3]);
 
             if (coordinatesAreValid(touchX, touchY))
             {

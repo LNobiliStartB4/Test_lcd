@@ -49,34 +49,23 @@ extern "C" {
 
 /* USER CODE END EM */
 
-void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
-
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 extern DMA_HandleTypeDef hdma_spi1_tx;
-void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
 #define B1_Pin GPIO_PIN_13
 #define B1_GPIO_Port GPIOC
 #define B1_EXTI_IRQn EXTI15_10_IRQn
-#define ASSET_FLASH_CS_Pin GPIO_PIN_3
-#define ASSET_FLASH_CS_GPIO_Port GPIOC
 #define DISP_RST_Pin GPIO_PIN_1
 #define DISP_RST_GPIO_Port GPIOA
 #define USART_TX_Pin GPIO_PIN_2
 #define USART_TX_GPIO_Port GPIOA
 #define USART_RX_Pin GPIO_PIN_3
 #define USART_RX_GPIO_Port GPIOA
-#define DISP_DC_Pin GPIO_PIN_10
-#define DISP_DC_GPIO_Port GPIOB
-#define LED2_Pin GPIO_PIN_6
-#define LED2_GPIO_Port GPIOC
-#define LED_Pin GPIO_PIN_8
-#define LED_GPIO_Port GPIOC
 #define LCD_BACKLIGHT_Pin GPIO_PIN_8
 #define LCD_BACKLIGHT_GPIO_Port GPIOA
 #define DISP_CS_Pin GPIO_PIN_9
@@ -90,18 +79,14 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 #define TCK_GPIO_Port GPIOA
 #define TOUCH_RST_Pin GPIO_PIN_5
 #define TOUCH_RST_GPIO_Port GPIOB
+#define DISP_DC_Pin GPIO_PIN_10
+#define DISP_DC_GPIO_Port GPIOB
+#define LED_Pin GPIO_PIN_8
+#define LED_GPIO_Port GPIOC
+#define LED2_Pin GPIO_PIN_6
+#define LED2_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
-#define FRAM_CS_Pin GPIO_PIN_6
-#define FRAM_CS_GPIO_Port GPIOB
-
-/* Bring-up switch shared by main.c and asset_flasher.c.
- * 1 = isolated UART diagnostic on USART1 (PA9 TX, PB7 RX) for C232HD tests.
- * 0 = normal firmware path using USART2/ST-LINK VCP.
- */
-#ifndef UART_LINK_DIAG_ONLY
-#define UART_LINK_DIAG_ONLY 0
-#endif
 
 /* USER CODE END Private defines */
 

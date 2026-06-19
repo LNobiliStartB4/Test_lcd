@@ -1,17 +1,14 @@
 #include <gui/screen5_screen/Screen5View.hpp>
-#include <gui/model/BandyCompletion.hpp>
 #include <touchgfx/Unicode.hpp>
 
 Screen5View::Screen5View()
-    : latestState(),
-      screenTransitionRequested(false)
 {
+
 }
 
 void Screen5View::setupScreen()
 {
     Screen5ViewBase::setupScreen();
-    screenTransitionRequested = false;
 
     if (presenter != 0)
     {
@@ -21,7 +18,6 @@ void Screen5View::setupScreen()
 
 void Screen5View::tearDownScreen()
 {
-    screenTransitionRequested = false;
     Screen5ViewBase::tearDownScreen();
 }
 
@@ -46,26 +42,8 @@ void Screen5View::increaseTargetClicked()
     }
 }
 
-void Screen5View::openKeypadClicked()
-{
-    application().gotoSetpointKeypadScreenNoTransition();
-}
-
 void Screen5View::applyBandyState(const BandyState& state)
 {
-    const BandyState previousState = latestState;
-    latestState = state;
-
-    if (!screenTransitionRequested && isNaturalBandyCompletion(previousState, state))
-    {
-        screenTransitionRequested = true;
-        application().gotoBandyCompletedScreenNoTransition();
-        return;
-    }
-
-    touchgfx::Unicode::snprintf(setpointValueBuffer,
-                               SETPOINTVALUE_SIZE,
-                               "%d",
-                               static_cast<int>(state.targetVacuumMbar));
+    touchgfx::Unicode::snprintf(setpointValueBuffer, SETPOINTVALUE_SIZE, "%d", static_cast<int>(state.targetVacuumMbar));
     setpointValue.invalidate();
 }

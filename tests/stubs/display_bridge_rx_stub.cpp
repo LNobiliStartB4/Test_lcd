@@ -1,5 +1,4 @@
 #include "display_bridge_rx.h"
-#include "bandy_session_store.h"
 
 #include <cstring>
 
@@ -46,33 +45,6 @@ bool DisplayBridgeRx_SendVacuumStopCommand(void)         { return true; }
 bool DisplayBridgeRx_SendBandyTargetCommand(int32_t t)   { g_sendBandyTarget++; g_lastBandyTarget = t; return true; }
 bool DisplayBridgeRx_SendRfidScanStartCommand(void)      { g_sendRfidScanStart++; return true; }
 bool DisplayBridgeRx_SendRfidScanStopCommand(void)       { g_sendRfidScanStop++; return true; }
-bool DisplayBridgeRx_SendFramStatus(int32_t,
-                                    bool,
-                                    uint16_t,
-                                    uint16_t,
-                                    uint8_t,
-                                    uint8_t,
-                                    uint8_t,
-                                    uint32_t)
-{
-    return true;
-}
-
-bandy_session_store_status_t BandySessionStore_ProcessSnapshot(
-    const bandy_session_store_snapshot_t*)
-{
-    return BANDY_SESSION_STORE_OK;
-}
-
-bandy_session_store_status_t BandySessionStore_Read(
-    bandy_session_store_record_t* record)
-{
-    if (record != nullptr)
-    {
-        std::memset(record, 0, sizeof(*record));
-    }
-    return BANDY_SESSION_STORE_EMPTY;
-}
 
 void TestStub_Reset(void)
 {

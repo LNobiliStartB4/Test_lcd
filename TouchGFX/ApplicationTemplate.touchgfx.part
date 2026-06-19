@@ -6,12 +6,12 @@
     "AvailableColorDepths": [ 16 ],
     "AvailableLCDs":
     {
-      "16": "LCD16bppSerialFlash"
+      "16": "LCD16bpp"
     },
     "AvailableResolutions": [
       {
-        "Width": 480,
-        "Height": 320
+        "Width": 320,
+        "Height": 480
       }
     ],
     "PostGenerateTargetCommand": "touchgfx update_project",
